@@ -3,7 +3,7 @@
   "info": {
     "title": "forms API",
     "version": "0.0.0",
-    "description": "CRUD endpoints for models owned by the `forms` module."
+    "description": "Dynamic form definitions and field configurations tied to any Enterprise model."
   },
   "paths": {
     "/api/forms/forms": {

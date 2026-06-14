@@ -3,7 +3,7 @@
   "info": {
     "title": "customerSuccess API",
     "version": "0.0.0",
-    "description": "CRUD endpoints for models owned by the `customerSuccess` module."
+    "description": "Post-sale customer relationship management: renewals, health scores, success plans, and escalation tracking."
   },
   "paths": {
     "/api/customerSuccess/renewals": {

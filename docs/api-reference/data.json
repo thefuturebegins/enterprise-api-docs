@@ -3,7 +3,7 @@
   "info": {
     "title": "data API",
     "version": "1.0.38",
-    "description": "OpenAPI 3.1 document for the `data` module, generated from Enterprise module interface specifications."
+    "description": "Foundation of the platform \u2014 model registry, auto-CRUD for all registered models, avatar generation, image preview, and real-time change streaming.\n\n## Sections\n\n- Avatar\n- Data\n- Features\n- Field Types\n- Icons\n- Model Fields\n- Model Files\n- Model Layouts\n- Model Notes\n- Model Tasks\n- Models\n- Navigation Items\n- Previewimage\n- Query"
   },
   "tags": [
     {

@@ -3,7 +3,7 @@
   "info": {
     "title": "cache API",
     "version": "1.0.7",
-    "description": "OpenAPI 3.1 document for the `cache` module, generated from Enterprise module interface specifications."
+    "description": "Shared caching layer \u2014 read, write, invalidate, and configure TTLs for cached entries across the platform.\n\n## Sections\n\n- Cache"
   },
   "tags": [
     {

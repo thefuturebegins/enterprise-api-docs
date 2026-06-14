@@ -3,7 +3,7 @@
   "info": {
     "title": "system API",
     "version": "1.0.13",
-    "description": "OpenAPI 3.1 document for the `system` module, generated from Enterprise module interface specifications."
+    "description": "Operational backbone: tenant resolution, settings, background jobs, multi-tenant database provisioning, record history, and PDF generation.\n\n## Sections\n\n- Job Histories\n- Job Types\n- Jobs\n- Multi Tenant Database\n- Settings\n- Tenant Resolution"
   },
   "tags": [
     {

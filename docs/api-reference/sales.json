@@ -3,7 +3,7 @@
   "info": {
     "title": "sales API",
     "version": "1.0.7",
-    "description": "OpenAPI 3.1 document for the `sales` module, generated from Enterprise module interface specifications."
+    "description": "Primary CRM surface \u2014 contacts, accounts, leads, opportunities, quotes, orders, products, and the complete revenue lifecycle.\n\n## Sections\n\n- Account Files\n- Account Management\n- Account Notes\n- Account Ownerships\n- Account Products\n- Account Sources\n- Account Statuses\n- Account Tasks\n- Account Types\n- Accounts\n- Campaigns\n- Contact Files\n- Contact Notes\n- Contact Statuses\n- Contact Tasks\n- Contacts\n- Files\n- Google Business Profiles\n- Industries\n- Insight Files\n- Insight Filter Files\n- Insight Filter Notes\n- Insight Filter Tasks\n- Insight Filters\n- Insight Notes\n- Insight Tasks\n- Insights\n- Lead Management\n- Lead Nurturing\n- Leads\n- Linkedin Profiles\n- Notes\n- Opportunities\n- Opportunity Files\n- Opportunity Notes\n- Opportunity Products\n- Opportunity Statuses\n- Opportunity Tasks\n- Orders\n- Organization Board Meetings\n- Organization Contacts\n- Organization News\n- Organization Types\n- Organizations\n- Product Files\n- Product Notes\n- Product Statuses\n- Product Tasks\n- Products\n- Quote Statuses\n- Quotes\n- Regions\n- Sales Targets\n- Sla Types\n- Student History\n- Tasks\n- Workspace Management"
   },
   "tags": [
     {

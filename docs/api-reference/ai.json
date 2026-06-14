@@ -3,7 +3,7 @@
   "info": {
     "title": "ai API",
     "version": "1.0.7",
-    "description": "OpenAPI 3.1 document for the `ai` module, generated from Enterprise module interface specifications."
+    "description": "Language model completions, streaming chat, image generation, and image search across OpenAI, Anthropic, and Gemini providers."
   },
   "tags": [],
   "paths": {},

@@ -3,7 +3,7 @@
   "info": {
     "title": "permissions API",
     "version": "1.0.6",
-    "description": "OpenAPI 3.1 document for the `permissions` module, generated from Enterprise module interface specifications."
+    "description": "Authorisation layer \u2014 check and enforce permission rules based on user roles and explicit grants.\n\n## Sections\n\n- Authorization"
   },
   "tags": [
     {

@@ -3,7 +3,7 @@
   "info": {
     "title": "marketing API",
     "version": "1.0.12",
-    "description": "OpenAPI 3.1 document for the `marketing` module, generated from Enterprise module interface specifications."
+    "description": "Multi-channel campaign execution: email drip sequences, social publishing, web content, audience segmentation, and workflow automation.\n\n## Sections\n\n- Campaign Channel Ads\n- Campaign Channel Ads Files\n- Campaign Channel Ads Notes\n- Campaign Channel Ads Tasks\n- Campaign Channel Emails\n- Campaign Channel Emails Files\n- Campaign Channel Emails Notes\n- Campaign Channel Emails Tasks\n- Campaign Channel Ppc\n- Campaign Channel Ppc Files\n- Campaign Channel Ppc Notes\n- Campaign Channel Ppc Tasks\n- Campaign Channel Sms\n- Campaign Channel Sms Files\n- Campaign Channel Sms Notes\n- Campaign Channel Sms Tasks\n- Campaign Channel Social\n- Campaign Channel Social Files\n- Campaign Channel Social Notes\n- Campaign Channel Social Tasks\n- Campaign Channel Web Content\n- Campaign Channel Web Content Files\n- Campaign Channel Web Content Notes\n- Campaign Channel Web Content Tasks\n- Campaign Sequence Snapshot Contacts\n- Campaign Sequence Snapshots\n- Campaign Sequences\n- Campaign Stakeholder Users\n- Email Drip Campaign Notes\n- Email Drip Campaigns\n- Email Sequence Workflows\n- Segment Files\n- Segment Notes\n- Segments\n- Send Marketing Email\n- Social Analytics\n- Social Connection\n- Social Inbox\n- Social Publish Job\n- Social Publishing\n- Web Pages\n- Web Publishing\n- Website Statuses\n- Website Types\n- Websites\n- Workflow Enrollments\n- Workflow Steps\n- Workflows"
   },
   "tags": [
     {

@@ -3,7 +3,7 @@
   "info": {
     "title": "workflow API",
     "version": "1.0.10",
-    "description": "OpenAPI 3.1 document for the `workflow` module, generated from Enterprise module interface specifications."
+    "description": "Automation infrastructure: scheduled events, status pipeline management, and rule-based workflow execution.\n\n## Sections\n\n- Scheduled Events\n- Workflow Status Pipeline Record States\n- Workflow Status Pipelines"
   },
   "tags": [
     {

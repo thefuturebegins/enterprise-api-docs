@@ -3,7 +3,7 @@
   "info": {
     "title": "identity API",
     "version": "1.0.38",
-    "description": "OpenAPI 3.1 document for the `identity` module, generated from Enterprise module interface specifications."
+    "description": "Authentication, OAuth 2.0, user management, roles, teams, departments, and multi-tenant account provisioning.\n\n## Sections\n\n- Authentication\n- Contractors\n- Department Users\n- Departments\n- Employees\n- Oauthhandlers\n- Roles\n- Team Users\n- Teams\n- User Management\n- Users"
   },
   "tags": [
     {

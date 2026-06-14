@@ -3,7 +3,7 @@
   "info": {
     "title": "communications API",
     "version": "1.0.19",
-    "description": "OpenAPI 3.1 document for the `communications` module, generated from Enterprise module interface specifications."
+    "description": "All outbound and inbound messaging: transactional email, bulk sends, campaign email, Gmail integration, conversations, and file uploads.\n\n## Sections\n\n- Bulk Email\n- Campaign Email\n- Campaign Emails\n- Campaign Files\n- Campaign Notes\n- Campaign Tasks\n- Campaigns\n- Comments\n- Conversation\n- Conversations\n- Email Analytics\n- Email Files\n- Email Lists\n- Email Scheduling\n- Email Snapshot\n- Email Snapshot Contacts\n- Email Snapshots\n- Email Templates\n- Emails\n- File Upload\n- Gmail Connection\n- Gmail Send\n- Gmail Sync\n- Referrals\n- Send Email"
   },
   "tags": [
     {

@@ -3,7 +3,7 @@
   "info": {
     "title": "finance API",
     "version": "1.0.6",
-    "description": "OpenAPI 3.1 document for the `finance` module, generated from Enterprise module interface specifications."
+    "description": "Monetary transactions and accounting: invoices, payments, bills, credit memos, Stripe integration, and contractor payouts.\n\n## Sections\n\n- Contractor Payment Processing\n- Customer Payment Processing\n- Customer Payments\n- Finance Accounts\n- Finance Bills\n- Finance Credit Memos\n- Finance Customers\n- Finance Employees\n- Finance Estimates\n- Finance Invoices\n- Finance Journal Entries\n- Finance Payments\n- Finance Product Services\n- Finance Sales Receipts\n- Finance Vendors\n- Stripe Integration"
   },
   "tags": [
     {

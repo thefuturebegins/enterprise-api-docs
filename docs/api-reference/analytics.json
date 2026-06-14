@@ -3,7 +3,7 @@
   "info": {
     "title": "analytics API",
     "version": "1.0.12",
-    "description": "OpenAPI 3.1 document for the `analytics` module, generated from Enterprise module interface specifications."
+    "description": "Configurable reporting engine for surfacing business metrics \u2014 saved report definitions, categories, shares, and result execution.\n\n## Sections\n\n- Components Allowed In Reports Selection\n- Report Category\n- Report Share\n- Reporting\n- Reports"
   },
   "tags": [
     {

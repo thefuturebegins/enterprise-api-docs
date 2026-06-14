@@ -3,7 +3,7 @@
   "info": {
     "title": "integrations API",
     "version": "1.0.9",
-    "description": "OpenAPI 3.1 document for the `integrations` module, generated from Enterprise module interface specifications."
+    "description": "Unified data exchange: bidirectional sync with external systems, import/export pipelines, field mapping, and conflict resolution.\n\n## Sections\n\n- Conflict Resolution\n- Data Sync\n- Export Field Mappings\n- Export Profiles\n- Export Schedules\n- Exports\n- Field Mapping\n- Import Field Mappings\n- Import Management\n- Import Profiles\n- Import Schedules\n- Imports\n- Sync Engine\n- Sync Vendor Model Field Mappings\n- Sync Vendors\n- Synchronizations"
   },
   "tags": [
     {

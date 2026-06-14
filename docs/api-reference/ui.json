@@ -3,7 +3,7 @@
   "info": {
     "title": "ui API",
     "version": "1.0.8",
-    "description": "OpenAPI 3.1 document for the `ui` module, generated from Enterprise module interface specifications."
+    "description": "Application shell management: screens, workspaces, dashboards, components, support tickets, and product announcements.\n\n## Sections\n\n- Components\n- Dashboards\n- Drafts\n- Enterprise Product Announcement Files\n- Enterprise Product Announcement Notes\n- Enterprise Product Announcement Tasks\n- Enterprise Product Announcements\n- Record Recent Views\n- Registered Components\n- Screen Actions\n- Screen Components\n- Screen Files\n- Screen Notes\n- Screen Statuses\n- Screen Tasks\n- Screens\n- Settings\n- Support Ticket Files\n- Support Ticket Notes\n- Support Ticket Resolutions\n- Support Ticket Tasks\n- Support Tickets\n- User Screens\n- Workspaces"
   },
   "tags": [
     {
