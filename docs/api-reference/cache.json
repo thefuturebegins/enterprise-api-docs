@@ -7,7 +7,7 @@
   },
   "tags": [
     {
-      "name": "Cache: Cache"
+      "name": "Cache"
     }
   ],
   "paths": {
@@ -15,7 +15,7 @@
       "post": {
         "operationId": "cache.cache.initialize",
         "tags": [
-          "Cache: Cache"
+          "Cache"
         ],
         "summary": "Initialize the cache service",
         "responses": {
@@ -48,7 +48,7 @@
       "get": {
         "operationId": "cache.cache.checkUrlContentInCache",
         "tags": [
-          "Cache: Cache"
+          "Cache"
         ],
         "summary": "Check if URL exists in raw content cache",
         "responses": {
@@ -93,7 +93,7 @@
       "post": {
         "operationId": "cache.cache.saveContentToCache",
         "tags": [
-          "Cache: Cache"
+          "Cache"
         ],
         "summary": "Save raw content to cache (from /extract-content endpoint)",
         "responses": {
@@ -153,7 +153,7 @@
       "get": {
         "operationId": "cache.cache.checkUrlDataInCache",
         "tags": [
-          "Cache: Cache"
+          "Cache"
         ],
         "summary": "Check if URL + dataType exists in extracted data cache",
         "responses": {
@@ -206,7 +206,7 @@
       "post": {
         "operationId": "cache.cache.saveDataToCache",
         "tags": [
-          "Cache: Cache"
+          "Cache"
         ],
         "summary": "Save extracted data to cache (from /extract-ai endpoint)",
         "responses": {
@@ -279,7 +279,7 @@
       "post": {
         "operationId": "cache.cache.batchCheckUrlsContent",
         "tags": [
-          "Cache: Cache"
+          "Cache"
         ],
         "summary": "Batch check multiple URLs for raw content",
         "responses": {
@@ -322,7 +322,7 @@
       "post": {
         "operationId": "cache.cache.batchCheckUrlsData",
         "tags": [
-          "Cache: Cache"
+          "Cache"
         ],
         "summary": "Batch check multiple URLs for extracted data by dataType",
         "responses": {
@@ -375,7 +375,7 @@
       "post": {
         "operationId": "cache.cache.checkCacheAndFilterUrls",
         "tags": [
-          "Cache: Cache"
+          "Cache"
         ],
         "summary": "Check cache and filter URLs (main function)",
         "responses": {
@@ -421,7 +421,7 @@
       "delete": {
         "operationId": "cache.cache.invalidateUrl",
         "tags": [
-          "Cache: Cache"
+          "Cache"
         ],
         "summary": "Invalidate cache for specific URL",
         "responses": {
@@ -462,7 +462,7 @@
       "post": {
         "operationId": "cache.cache.invalidateByPattern",
         "tags": [
-          "Cache: Cache"
+          "Cache"
         ],
         "summary": "Invalidate cache by URL pattern (regex)",
         "responses": {
@@ -520,7 +520,7 @@
       "delete": {
         "operationId": "cache.cache.invalidateByDataType",
         "tags": [
-          "Cache: Cache"
+          "Cache"
         ],
         "summary": "Invalidate cache by data type",
         "responses": {
@@ -560,7 +560,7 @@
       "post": {
         "operationId": "cache.cache.cleanupExpired",
         "tags": [
-          "Cache: Cache"
+          "Cache"
         ],
         "summary": "Cleanup expired cache entries",
         "responses": {
@@ -590,7 +590,7 @@
       "get": {
         "operationId": "cache.cache.getCacheStats",
         "tags": [
-          "Cache: Cache"
+          "Cache"
         ],
         "summary": "Get cache statistics",
         "responses": {

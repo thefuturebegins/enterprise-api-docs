@@ -7,79 +7,79 @@
   },
   "tags": [
     {
-      "name": "Communications: Bulk Email"
+      "name": "Bulk Email"
     },
     {
-      "name": "Communications: Campaign Email"
+      "name": "Campaign Email"
     },
     {
-      "name": "Communications: Campaign Emails"
+      "name": "Campaign Emails"
     },
     {
-      "name": "Communications: Campaign Files"
+      "name": "Campaign Files"
     },
     {
-      "name": "Communications: Campaign Notes"
+      "name": "Campaign Notes"
     },
     {
-      "name": "Communications: Campaign Tasks"
+      "name": "Campaign Tasks"
     },
     {
-      "name": "Communications: Campaigns"
+      "name": "Campaigns"
     },
     {
-      "name": "Communications: Comments"
+      "name": "Comments"
     },
     {
-      "name": "Communications: Conversation"
+      "name": "Conversation"
     },
     {
-      "name": "Communications: Conversations"
+      "name": "Conversations"
     },
     {
-      "name": "Communications: Email Analytics"
+      "name": "Email Analytics"
     },
     {
-      "name": "Communications: Email Files"
+      "name": "Email Files"
     },
     {
-      "name": "Communications: Email Lists"
+      "name": "Email Lists"
     },
     {
-      "name": "Communications: Email Scheduling"
+      "name": "Email Scheduling"
     },
     {
-      "name": "Communications: Email Snapshot"
+      "name": "Email Snapshot"
     },
     {
-      "name": "Communications: Email Snapshot Contacts"
+      "name": "Email Snapshot Contacts"
     },
     {
-      "name": "Communications: Email Snapshots"
+      "name": "Email Snapshots"
     },
     {
-      "name": "Communications: Email Templates"
+      "name": "Email Templates"
     },
     {
-      "name": "Communications: Emails"
+      "name": "Emails"
     },
     {
-      "name": "Communications: File Upload"
+      "name": "File Upload"
     },
     {
-      "name": "Communications: Gmail Connection"
+      "name": "Gmail Connection"
     },
     {
-      "name": "Communications: Gmail Send"
+      "name": "Gmail Send"
     },
     {
-      "name": "Communications: Gmail Sync"
+      "name": "Gmail Sync"
     },
     {
-      "name": "Communications: Referrals"
+      "name": "Referrals"
     },
     {
-      "name": "Communications: Send Email"
+      "name": "Send Email"
     }
   ],
   "paths": {
@@ -87,7 +87,7 @@
       "get": {
         "operationId": "communications.emailanalytics.getCampaignAnalytics",
         "tags": [
-          "Communications: Email Analytics"
+          "Email Analytics"
         ],
         "summary": "Get Campaign Analytics",
         "responses": {
@@ -124,7 +124,7 @@
       "get": {
         "operationId": "communications.emailanalytics.getEmailAnalytics",
         "tags": [
-          "Communications: Email Analytics"
+          "Email Analytics"
         ],
         "summary": "Get Email Analytics",
         "responses": {
@@ -161,7 +161,7 @@
       "get": {
         "operationId": "communications.emailanalytics.getEmailSendInstance",
         "tags": [
-          "Communications: Email Analytics"
+          "Email Analytics"
         ],
         "summary": "Get Email Send Instance",
         "responses": {
@@ -198,7 +198,7 @@
       "get": {
         "operationId": "communications.emailanalytics.getPerformanceMetrics",
         "tags": [
-          "Communications: Email Analytics"
+          "Email Analytics"
         ],
         "summary": "Get Performance Metrics",
         "responses": {
@@ -235,7 +235,7 @@
       "get": {
         "operationId": "communications.emailanalytics.getEngagementAnalytics",
         "tags": [
-          "Communications: Email Analytics"
+          "Email Analytics"
         ],
         "summary": "Get Engagement Analytics",
         "responses": {
@@ -272,7 +272,7 @@
       "post": {
         "operationId": "communications.bulkemail.sendBulkEmail",
         "tags": [
-          "Communications: Bulk Email"
+          "Bulk Email"
         ],
         "summary": "Send Bulk Email",
         "responses": {
@@ -311,7 +311,7 @@
       "get": {
         "operationId": "communications.bulkemail.getBulkEmailStatus",
         "tags": [
-          "Communications: Bulk Email"
+          "Bulk Email"
         ],
         "summary": "Get Bulk Email Status",
         "responses": {
@@ -351,7 +351,7 @@
       "post": {
         "operationId": "communications.bulkemail.sendBulkEmailOptimized",
         "tags": [
-          "Communications: Bulk Email"
+          "Bulk Email"
         ],
         "summary": "Send bulk email using Mailgun batch API with personalization",
         "responses": {
@@ -418,7 +418,7 @@
       "post": {
         "operationId": "communications.campaignemail.sendCampaignEmailOptimized",
         "tags": [
-          "Communications: Campaign Email"
+          "Campaign Email"
         ],
         "summary": "Send campaign email using batch API",
         "responses": {
@@ -485,7 +485,7 @@
       "post": {
         "operationId": "communications.campaignemail.saveCampaignEmail",
         "tags": [
-          "Communications: Campaign Email"
+          "Campaign Email"
         ],
         "summary": "Save campaign email as draft",
         "responses": {
@@ -531,7 +531,7 @@
       "put": {
         "operationId": "communications.campaignemail.updateCampaignEmail",
         "tags": [
-          "Communications: Campaign Email"
+          "Campaign Email"
         ],
         "summary": "Update existing campaign email draft",
         "responses": {
@@ -585,7 +585,7 @@
       "post": {
         "operationId": "communications.campaignemail.updateAndSendCampaignEmail",
         "tags": [
-          "Communications: Campaign Email"
+          "Campaign Email"
         ],
         "summary": "Update and send campaign email immediately",
         "responses": {
@@ -639,7 +639,7 @@
       "post": {
         "operationId": "communications.campaignemail.createAndSendCampaignEmail",
         "tags": [
-          "Communications: Campaign Email"
+          "Campaign Email"
         ],
         "summary": "Create and send campaign email immediately",
         "responses": {
@@ -685,7 +685,7 @@
       "post": {
         "operationId": "communications.campaignemail.createAndScheduleCampaignEmail",
         "tags": [
-          "Communications: Campaign Email"
+          "Campaign Email"
         ],
         "summary": "Create and schedule campaign email for future delivery",
         "responses": {
@@ -740,7 +740,7 @@
       "post": {
         "operationId": "communications.campaignemail.updateAndScheduleCampaignEmail",
         "tags": [
-          "Communications: Campaign Email"
+          "Campaign Email"
         ],
         "summary": "Update and schedule existing campaign email",
         "responses": {
@@ -803,7 +803,7 @@
       "post": {
         "operationId": "communications.emailsnapshot.createEmailSnapshot",
         "tags": [
-          "Communications: Email Snapshot"
+          "Email Snapshot"
         ],
         "summary": "Create email snapshot record",
         "responses": {
@@ -871,7 +871,7 @@
       "post": {
         "operationId": "communications.emailsnapshot.createCampaignEmailSnapshot",
         "tags": [
-          "Communications: Email Snapshot"
+          "Email Snapshot"
         ],
         "summary": "Create campaign email snapshot",
         "responses": {
@@ -939,7 +939,7 @@
       "get": {
         "operationId": "communications.emailsnapshot.getSnapshot",
         "tags": [
-          "Communications: Email Snapshot"
+          "Email Snapshot"
         ],
         "summary": "Get snapshot by ID",
         "responses": {
@@ -985,7 +985,7 @@
       "put": {
         "operationId": "communications.emailsnapshot.markSnapshotInUse",
         "tags": [
-          "Communications: Email Snapshot"
+          "Email Snapshot"
         ],
         "summary": "Mark snapshot as in use",
         "responses": {
@@ -1041,7 +1041,7 @@
       "put": {
         "operationId": "communications.emailsnapshot.markSnapshotCompleted",
         "tags": [
-          "Communications: Email Snapshot"
+          "Email Snapshot"
         ],
         "summary": "Mark snapshot as completed",
         "responses": {
@@ -1097,7 +1097,7 @@
       "post": {
         "operationId": "communications.sendemail.sendEmail",
         "tags": [
-          "Communications: Send Email"
+          "Send Email"
         ],
         "summary": "Send email through Gmail and log locally",
         "responses": {
@@ -1137,7 +1137,7 @@
       "get": {
         "operationId": "communications.sendemail.getEmailStatus",
         "tags": [
-          "Communications: Send Email"
+          "Send Email"
         ],
         "summary": "Get Email Status",
         "responses": {
@@ -1176,7 +1176,7 @@
       "post": {
         "operationId": "communications.sendemail.validateEmail",
         "tags": [
-          "Communications: Send Email"
+          "Send Email"
         ],
         "summary": "Validate Email",
         "responses": {
@@ -1224,7 +1224,7 @@
       "post": {
         "operationId": "communications.emailscheduling.initialize",
         "tags": [
-          "Communications: Email Scheduling"
+          "Email Scheduling"
         ],
         "summary": "Initialize scheduling service with Agenda",
         "responses": {
@@ -1255,7 +1255,7 @@
       "post": {
         "operationId": "communications.emailscheduling.start",
         "tags": [
-          "Communications: Email Scheduling"
+          "Email Scheduling"
         ],
         "summary": "Start Agenda scheduler",
         "responses": {
@@ -1278,7 +1278,7 @@
       "post": {
         "operationId": "communications.emailscheduling.stop",
         "tags": [
-          "Communications: Email Scheduling"
+          "Email Scheduling"
         ],
         "summary": "Stop Agenda scheduler",
         "responses": {
@@ -1301,7 +1301,7 @@
       "post": {
         "operationId": "communications.emailscheduling.scheduleEmail",
         "tags": [
-          "Communications: Email Scheduling"
+          "Email Scheduling"
         ],
         "summary": "Schedule email for future delivery",
         "responses": {
@@ -1356,7 +1356,7 @@
       "post": {
         "operationId": "communications.emailscheduling.cancelScheduledEmail",
         "tags": [
-          "Communications: Email Scheduling"
+          "Email Scheduling"
         ],
         "summary": "Cancel scheduled email",
         "responses": {
@@ -1414,7 +1414,7 @@
       "post": {
         "operationId": "communications.emailscheduling.processScheduledCampaignEmail",
         "tags": [
-          "Communications: Email Scheduling"
+          "Email Scheduling"
         ],
         "summary": "Process scheduled campaign email",
         "responses": {
@@ -1470,7 +1470,7 @@
       "get": {
         "operationId": "communications.emailscheduling.getScheduledJobs",
         "tags": [
-          "Communications: Email Scheduling"
+          "Email Scheduling"
         ],
         "summary": "Get scheduled jobs for tenant",
         "responses": {
@@ -1511,7 +1511,7 @@
       "post": {
         "operationId": "communications.conversation.saveConversation",
         "tags": [
-          "Communications: Conversation"
+          "Conversation"
         ],
         "summary": "Save a new internal conversation (first message creates the thread)",
         "responses": {
@@ -1559,7 +1559,7 @@
       "post": {
         "operationId": "communications.conversation.appendMessage",
         "tags": [
-          "Communications: Conversation"
+          "Conversation"
         ],
         "summary": "Append a message to an existing conversation",
         "responses": {
@@ -1631,7 +1631,7 @@
       "get": {
         "operationId": "communications.conversation.getConversationsByEntity",
         "tags": [
-          "Communications: Conversation"
+          "Conversation"
         ],
         "summary": "Get conversations for a specific entity (contact, account, opportunity)",
         "responses": {
@@ -1688,7 +1688,7 @@
       "post": {
         "operationId": "communications.fileupload.uploadFile",
         "tags": [
-          "Communications: File Upload"
+          "File Upload"
         ],
         "summary": "Upload a file and save a record to the files collection",
         "responses": {
@@ -1730,7 +1730,7 @@
       "get": {
         "operationId": "communications.fileupload.downloadFile",
         "tags": [
-          "Communications: File Upload"
+          "File Upload"
         ],
         "summary": "Download a file by its record ID",
         "responses": {
@@ -1780,7 +1780,7 @@
       "post": {
         "operationId": "communications.gmailconnection.getAuthUrl",
         "tags": [
-          "Communications: Gmail Connection"
+          "Gmail Connection"
         ],
         "summary": "Get OAuth authorization URL",
         "responses": {
@@ -1822,7 +1822,7 @@
       "get": {
         "operationId": "communications.gmailconnection.gmailCallbackHandler",
         "tags": [
-          "Communications: Gmail Connection"
+          "Gmail Connection"
         ],
         "summary": "Handle OAuth callback \u2014 stores tokens in syncVendors",
         "responses": {
@@ -1845,7 +1845,7 @@
       "post": {
         "operationId": "communications.gmailconnection.disconnect",
         "tags": [
-          "Communications: Gmail Connection"
+          "Gmail Connection"
         ],
         "summary": "Disconnect Gmail \u2014 clears syncVendors record",
         "responses": {
@@ -1887,7 +1887,7 @@
       "get": {
         "operationId": "communications.gmailconnection.getConnectionStatus",
         "tags": [
-          "Communications: Gmail Connection"
+          "Gmail Connection"
         ],
         "summary": "Get connection status from syncVendors",
         "responses": {
@@ -1929,7 +1929,7 @@
       "post": {
         "operationId": "communications.gmailsend.sendEmail",
         "tags": [
-          "Communications: Gmail Send"
+          "Gmail Send"
         ],
         "summary": "Send email through Gmail and log locally",
         "responses": {
@@ -1971,7 +1971,7 @@
       "post": {
         "operationId": "communications.gmailsync.syncUserEmails",
         "tags": [
-          "Communications: Gmail Sync"
+          "Gmail Sync"
         ],
         "summary": "Sync user's Gmail messages",
         "responses": {
@@ -2013,7 +2013,7 @@
       "post": {
         "operationId": "communications.gmailsync.modifyMessage",
         "tags": [
-          "Communications: Gmail Sync"
+          "Gmail Sync"
         ],
         "summary": "Modify message in Gmail to reflect local action (labels/read/trash)",
         "responses": {
@@ -2055,7 +2055,7 @@
       "post": {
         "operationId": "communications.gmailsync.downloadMessageAttachments",
         "tags": [
-          "Communications: Gmail Sync"
+          "Gmail Sync"
         ],
         "summary": "Download attachments for a single message",
         "responses": {
@@ -2097,7 +2097,7 @@
       "get": {
         "operationId": "communications.conversations.query",
         "tags": [
-          "Communications: Conversations"
+          "Conversations"
         ],
         "summary": "Query",
         "responses": {
@@ -2137,7 +2137,7 @@
       "post": {
         "operationId": "communications.conversations.create",
         "tags": [
-          "Communications: Conversations"
+          "Conversations"
         ],
         "summary": "Create",
         "responses": {
@@ -2176,7 +2176,7 @@
       "get": {
         "operationId": "communications.conversations.getById",
         "tags": [
-          "Communications: Conversations"
+          "Conversations"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2213,7 +2213,7 @@
       "put": {
         "operationId": "communications.conversations.update",
         "tags": [
-          "Communications: Conversations"
+          "Conversations"
         ],
         "summary": "Update",
         "responses": {
@@ -2260,7 +2260,7 @@
       "delete": {
         "operationId": "communications.conversations.delete",
         "tags": [
-          "Communications: Conversations"
+          "Conversations"
         ],
         "summary": "Delete",
         "responses": {
@@ -2292,7 +2292,7 @@
       "get": {
         "operationId": "communications.comments.query",
         "tags": [
-          "Communications: Comments"
+          "Comments"
         ],
         "summary": "Query",
         "responses": {
@@ -2332,7 +2332,7 @@
       "post": {
         "operationId": "communications.comments.create",
         "tags": [
-          "Communications: Comments"
+          "Comments"
         ],
         "summary": "Create",
         "responses": {
@@ -2371,7 +2371,7 @@
       "get": {
         "operationId": "communications.comments.getById",
         "tags": [
-          "Communications: Comments"
+          "Comments"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2408,7 +2408,7 @@
       "put": {
         "operationId": "communications.comments.update",
         "tags": [
-          "Communications: Comments"
+          "Comments"
         ],
         "summary": "Update",
         "responses": {
@@ -2455,7 +2455,7 @@
       "delete": {
         "operationId": "communications.comments.delete",
         "tags": [
-          "Communications: Comments"
+          "Comments"
         ],
         "summary": "Delete",
         "responses": {
@@ -2487,7 +2487,7 @@
       "get": {
         "operationId": "communications.campaigns.query",
         "tags": [
-          "Communications: Campaigns"
+          "Campaigns"
         ],
         "summary": "Query",
         "responses": {
@@ -2527,7 +2527,7 @@
       "post": {
         "operationId": "communications.campaigns.create",
         "tags": [
-          "Communications: Campaigns"
+          "Campaigns"
         ],
         "summary": "Create",
         "responses": {
@@ -2566,7 +2566,7 @@
       "get": {
         "operationId": "communications.campaigns.getById",
         "tags": [
-          "Communications: Campaigns"
+          "Campaigns"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2603,7 +2603,7 @@
       "put": {
         "operationId": "communications.campaigns.update",
         "tags": [
-          "Communications: Campaigns"
+          "Campaigns"
         ],
         "summary": "Update",
         "responses": {
@@ -2650,7 +2650,7 @@
       "delete": {
         "operationId": "communications.campaigns.delete",
         "tags": [
-          "Communications: Campaigns"
+          "Campaigns"
         ],
         "summary": "Delete",
         "responses": {
@@ -2682,7 +2682,7 @@
       "get": {
         "operationId": "communications.emailLists.query",
         "tags": [
-          "Communications: Email Lists"
+          "Email Lists"
         ],
         "summary": "Query",
         "responses": {
@@ -2722,7 +2722,7 @@
       "post": {
         "operationId": "communications.emailLists.create",
         "tags": [
-          "Communications: Email Lists"
+          "Email Lists"
         ],
         "summary": "Create",
         "responses": {
@@ -2761,7 +2761,7 @@
       "get": {
         "operationId": "communications.emailLists.getById",
         "tags": [
-          "Communications: Email Lists"
+          "Email Lists"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2798,7 +2798,7 @@
       "put": {
         "operationId": "communications.emailLists.update",
         "tags": [
-          "Communications: Email Lists"
+          "Email Lists"
         ],
         "summary": "Update",
         "responses": {
@@ -2845,7 +2845,7 @@
       "delete": {
         "operationId": "communications.emailLists.delete",
         "tags": [
-          "Communications: Email Lists"
+          "Email Lists"
         ],
         "summary": "Delete",
         "responses": {
@@ -2877,7 +2877,7 @@
       "get": {
         "operationId": "communications.emailTemplates.query",
         "tags": [
-          "Communications: Email Templates"
+          "Email Templates"
         ],
         "summary": "Query",
         "responses": {
@@ -2917,7 +2917,7 @@
       "post": {
         "operationId": "communications.emailTemplates.create",
         "tags": [
-          "Communications: Email Templates"
+          "Email Templates"
         ],
         "summary": "Create",
         "responses": {
@@ -2956,7 +2956,7 @@
       "get": {
         "operationId": "communications.emailTemplates.getById",
         "tags": [
-          "Communications: Email Templates"
+          "Email Templates"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2993,7 +2993,7 @@
       "put": {
         "operationId": "communications.emailTemplates.update",
         "tags": [
-          "Communications: Email Templates"
+          "Email Templates"
         ],
         "summary": "Update",
         "responses": {
@@ -3040,7 +3040,7 @@
       "delete": {
         "operationId": "communications.emailTemplates.delete",
         "tags": [
-          "Communications: Email Templates"
+          "Email Templates"
         ],
         "summary": "Delete",
         "responses": {
@@ -3072,7 +3072,7 @@
       "get": {
         "operationId": "communications.referrals.query",
         "tags": [
-          "Communications: Referrals"
+          "Referrals"
         ],
         "summary": "Query",
         "responses": {
@@ -3112,7 +3112,7 @@
       "post": {
         "operationId": "communications.referrals.create",
         "tags": [
-          "Communications: Referrals"
+          "Referrals"
         ],
         "summary": "Create",
         "responses": {
@@ -3151,7 +3151,7 @@
       "get": {
         "operationId": "communications.referrals.getById",
         "tags": [
-          "Communications: Referrals"
+          "Referrals"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -3188,7 +3188,7 @@
       "put": {
         "operationId": "communications.referrals.update",
         "tags": [
-          "Communications: Referrals"
+          "Referrals"
         ],
         "summary": "Update",
         "responses": {
@@ -3235,7 +3235,7 @@
       "delete": {
         "operationId": "communications.referrals.delete",
         "tags": [
-          "Communications: Referrals"
+          "Referrals"
         ],
         "summary": "Delete",
         "responses": {
@@ -3267,7 +3267,7 @@
       "get": {
         "operationId": "communications.campaignEmails.query",
         "tags": [
-          "Communications: Campaign Emails"
+          "Campaign Emails"
         ],
         "summary": "Query",
         "responses": {
@@ -3307,7 +3307,7 @@
       "post": {
         "operationId": "communications.campaignEmails.create",
         "tags": [
-          "Communications: Campaign Emails"
+          "Campaign Emails"
         ],
         "summary": "Create",
         "responses": {
@@ -3346,7 +3346,7 @@
       "get": {
         "operationId": "communications.campaignEmails.getById",
         "tags": [
-          "Communications: Campaign Emails"
+          "Campaign Emails"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -3383,7 +3383,7 @@
       "put": {
         "operationId": "communications.campaignEmails.update",
         "tags": [
-          "Communications: Campaign Emails"
+          "Campaign Emails"
         ],
         "summary": "Update",
         "responses": {
@@ -3430,7 +3430,7 @@
       "delete": {
         "operationId": "communications.campaignEmails.delete",
         "tags": [
-          "Communications: Campaign Emails"
+          "Campaign Emails"
         ],
         "summary": "Delete",
         "responses": {
@@ -3462,7 +3462,7 @@
       "get": {
         "operationId": "communications.emails.query",
         "tags": [
-          "Communications: Emails"
+          "Emails"
         ],
         "summary": "Query",
         "responses": {
@@ -3502,7 +3502,7 @@
       "post": {
         "operationId": "communications.emails.create",
         "tags": [
-          "Communications: Emails"
+          "Emails"
         ],
         "summary": "Create",
         "responses": {
@@ -3541,7 +3541,7 @@
       "get": {
         "operationId": "communications.emails.getById",
         "tags": [
-          "Communications: Emails"
+          "Emails"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -3578,7 +3578,7 @@
       "put": {
         "operationId": "communications.emails.update",
         "tags": [
-          "Communications: Emails"
+          "Emails"
         ],
         "summary": "Update",
         "responses": {
@@ -3625,7 +3625,7 @@
       "delete": {
         "operationId": "communications.emails.delete",
         "tags": [
-          "Communications: Emails"
+          "Emails"
         ],
         "summary": "Delete",
         "responses": {
@@ -3657,7 +3657,7 @@
       "get": {
         "operationId": "communications.emailFiles.query",
         "tags": [
-          "Communications: Email Files"
+          "Email Files"
         ],
         "summary": "Query",
         "responses": {
@@ -3697,7 +3697,7 @@
       "post": {
         "operationId": "communications.emailFiles.create",
         "tags": [
-          "Communications: Email Files"
+          "Email Files"
         ],
         "summary": "Create",
         "responses": {
@@ -3736,7 +3736,7 @@
       "get": {
         "operationId": "communications.emailFiles.getById",
         "tags": [
-          "Communications: Email Files"
+          "Email Files"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -3773,7 +3773,7 @@
       "put": {
         "operationId": "communications.emailFiles.update",
         "tags": [
-          "Communications: Email Files"
+          "Email Files"
         ],
         "summary": "Update",
         "responses": {
@@ -3820,7 +3820,7 @@
       "delete": {
         "operationId": "communications.emailFiles.delete",
         "tags": [
-          "Communications: Email Files"
+          "Email Files"
         ],
         "summary": "Delete",
         "responses": {
@@ -3852,7 +3852,7 @@
       "get": {
         "operationId": "communications.emailSnapshots.query",
         "tags": [
-          "Communications: Email Snapshots"
+          "Email Snapshots"
         ],
         "summary": "Query",
         "responses": {
@@ -3892,7 +3892,7 @@
       "post": {
         "operationId": "communications.emailSnapshots.create",
         "tags": [
-          "Communications: Email Snapshots"
+          "Email Snapshots"
         ],
         "summary": "Create",
         "responses": {
@@ -3931,7 +3931,7 @@
       "get": {
         "operationId": "communications.emailSnapshots.getById",
         "tags": [
-          "Communications: Email Snapshots"
+          "Email Snapshots"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -3968,7 +3968,7 @@
       "put": {
         "operationId": "communications.emailSnapshots.update",
         "tags": [
-          "Communications: Email Snapshots"
+          "Email Snapshots"
         ],
         "summary": "Update",
         "responses": {
@@ -4015,7 +4015,7 @@
       "delete": {
         "operationId": "communications.emailSnapshots.delete",
         "tags": [
-          "Communications: Email Snapshots"
+          "Email Snapshots"
         ],
         "summary": "Delete",
         "responses": {
@@ -4047,7 +4047,7 @@
       "get": {
         "operationId": "communications.emailSnapshotContacts.query",
         "tags": [
-          "Communications: Email Snapshot Contacts"
+          "Email Snapshot Contacts"
         ],
         "summary": "Query",
         "responses": {
@@ -4087,7 +4087,7 @@
       "post": {
         "operationId": "communications.emailSnapshotContacts.create",
         "tags": [
-          "Communications: Email Snapshot Contacts"
+          "Email Snapshot Contacts"
         ],
         "summary": "Create",
         "responses": {
@@ -4126,7 +4126,7 @@
       "get": {
         "operationId": "communications.emailSnapshotContacts.getById",
         "tags": [
-          "Communications: Email Snapshot Contacts"
+          "Email Snapshot Contacts"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -4163,7 +4163,7 @@
       "put": {
         "operationId": "communications.emailSnapshotContacts.update",
         "tags": [
-          "Communications: Email Snapshot Contacts"
+          "Email Snapshot Contacts"
         ],
         "summary": "Update",
         "responses": {
@@ -4210,7 +4210,7 @@
       "delete": {
         "operationId": "communications.emailSnapshotContacts.delete",
         "tags": [
-          "Communications: Email Snapshot Contacts"
+          "Email Snapshot Contacts"
         ],
         "summary": "Delete",
         "responses": {
@@ -4242,7 +4242,7 @@
       "get": {
         "operationId": "communications.campaignNotes.query",
         "tags": [
-          "Communications: Campaign Notes"
+          "Campaign Notes"
         ],
         "summary": "Query",
         "responses": {
@@ -4282,7 +4282,7 @@
       "post": {
         "operationId": "communications.campaignNotes.create",
         "tags": [
-          "Communications: Campaign Notes"
+          "Campaign Notes"
         ],
         "summary": "Create",
         "responses": {
@@ -4321,7 +4321,7 @@
       "get": {
         "operationId": "communications.campaignNotes.getById",
         "tags": [
-          "Communications: Campaign Notes"
+          "Campaign Notes"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -4358,7 +4358,7 @@
       "put": {
         "operationId": "communications.campaignNotes.update",
         "tags": [
-          "Communications: Campaign Notes"
+          "Campaign Notes"
         ],
         "summary": "Update",
         "responses": {
@@ -4405,7 +4405,7 @@
       "delete": {
         "operationId": "communications.campaignNotes.delete",
         "tags": [
-          "Communications: Campaign Notes"
+          "Campaign Notes"
         ],
         "summary": "Delete",
         "responses": {
@@ -4437,7 +4437,7 @@
       "get": {
         "operationId": "communications.campaignFiles.query",
         "tags": [
-          "Communications: Campaign Files"
+          "Campaign Files"
         ],
         "summary": "Query",
         "responses": {
@@ -4477,7 +4477,7 @@
       "post": {
         "operationId": "communications.campaignFiles.create",
         "tags": [
-          "Communications: Campaign Files"
+          "Campaign Files"
         ],
         "summary": "Create",
         "responses": {
@@ -4516,7 +4516,7 @@
       "get": {
         "operationId": "communications.campaignFiles.getById",
         "tags": [
-          "Communications: Campaign Files"
+          "Campaign Files"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -4553,7 +4553,7 @@
       "put": {
         "operationId": "communications.campaignFiles.update",
         "tags": [
-          "Communications: Campaign Files"
+          "Campaign Files"
         ],
         "summary": "Update",
         "responses": {
@@ -4600,7 +4600,7 @@
       "delete": {
         "operationId": "communications.campaignFiles.delete",
         "tags": [
-          "Communications: Campaign Files"
+          "Campaign Files"
         ],
         "summary": "Delete",
         "responses": {
@@ -4632,7 +4632,7 @@
       "get": {
         "operationId": "communications.campaignTasks.query",
         "tags": [
-          "Communications: Campaign Tasks"
+          "Campaign Tasks"
         ],
         "summary": "Query",
         "responses": {
@@ -4672,7 +4672,7 @@
       "post": {
         "operationId": "communications.campaignTasks.create",
         "tags": [
-          "Communications: Campaign Tasks"
+          "Campaign Tasks"
         ],
         "summary": "Create",
         "responses": {
@@ -4711,7 +4711,7 @@
       "get": {
         "operationId": "communications.campaignTasks.getById",
         "tags": [
-          "Communications: Campaign Tasks"
+          "Campaign Tasks"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -4748,7 +4748,7 @@
       "put": {
         "operationId": "communications.campaignTasks.update",
         "tags": [
-          "Communications: Campaign Tasks"
+          "Campaign Tasks"
         ],
         "summary": "Update",
         "responses": {
@@ -4795,7 +4795,7 @@
       "delete": {
         "operationId": "communications.campaignTasks.delete",
         "tags": [
-          "Communications: Campaign Tasks"
+          "Campaign Tasks"
         ],
         "summary": "Delete",
         "responses": {

@@ -7,19 +7,19 @@
   },
   "tags": [
     {
-      "name": "Analytics: Components Allowed In Reports Selection"
+      "name": "Components Allowed In Reports Selection"
     },
     {
-      "name": "Analytics: Report Category"
+      "name": "Report Category"
     },
     {
-      "name": "Analytics: Report Share"
+      "name": "Report Share"
     },
     {
-      "name": "Analytics: Reporting"
+      "name": "Reporting"
     },
     {
-      "name": "Analytics: Reports"
+      "name": "Reports"
     }
   ],
   "paths": {
@@ -27,7 +27,7 @@
       "get": {
         "operationId": "analytics.reporting.getData",
         "tags": [
-          "Analytics: Reporting"
+          "Reporting"
         ],
         "summary": "Get Data",
         "responses": {
@@ -66,7 +66,7 @@
       "get": {
         "operationId": "analytics.reporting.getAllReports",
         "tags": [
-          "Analytics: Reporting"
+          "Reporting"
         ],
         "summary": "Get All Reports",
         "responses": {
@@ -118,7 +118,7 @@
       "get": {
         "operationId": "analytics.reporting.getReportsByCategory",
         "tags": [
-          "Analytics: Reporting"
+          "Reporting"
         ],
         "summary": "Get Reports By Category",
         "responses": {
@@ -174,7 +174,7 @@
       "get": {
         "operationId": "analytics.reporting.getCategories",
         "tags": [
-          "Analytics: Reporting"
+          "Reporting"
         ],
         "summary": "Get Categories",
         "responses": {
@@ -213,7 +213,7 @@
       "get": {
         "operationId": "analytics.reporting.healthCheck",
         "tags": [
-          "Analytics: Reporting"
+          "Reporting"
         ],
         "summary": "Health Check",
         "responses": {
@@ -242,7 +242,7 @@
       "get": {
         "operationId": "analytics.reports.query",
         "tags": [
-          "Analytics: Reports"
+          "Reports"
         ],
         "summary": "Query",
         "responses": {
@@ -282,7 +282,7 @@
       "post": {
         "operationId": "analytics.reports.create",
         "tags": [
-          "Analytics: Reports"
+          "Reports"
         ],
         "summary": "Create",
         "responses": {
@@ -321,7 +321,7 @@
       "get": {
         "operationId": "analytics.reports.getById",
         "tags": [
-          "Analytics: Reports"
+          "Reports"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -358,7 +358,7 @@
       "put": {
         "operationId": "analytics.reports.update",
         "tags": [
-          "Analytics: Reports"
+          "Reports"
         ],
         "summary": "Update",
         "responses": {
@@ -405,7 +405,7 @@
       "delete": {
         "operationId": "analytics.reports.delete",
         "tags": [
-          "Analytics: Reports"
+          "Reports"
         ],
         "summary": "Delete",
         "responses": {
@@ -437,7 +437,7 @@
       "get": {
         "operationId": "analytics.reportCategory.query",
         "tags": [
-          "Analytics: Report Category"
+          "Report Category"
         ],
         "summary": "Query",
         "responses": {
@@ -477,7 +477,7 @@
       "post": {
         "operationId": "analytics.reportCategory.create",
         "tags": [
-          "Analytics: Report Category"
+          "Report Category"
         ],
         "summary": "Create",
         "responses": {
@@ -516,7 +516,7 @@
       "get": {
         "operationId": "analytics.reportCategory.getById",
         "tags": [
-          "Analytics: Report Category"
+          "Report Category"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -553,7 +553,7 @@
       "put": {
         "operationId": "analytics.reportCategory.update",
         "tags": [
-          "Analytics: Report Category"
+          "Report Category"
         ],
         "summary": "Update",
         "responses": {
@@ -600,7 +600,7 @@
       "delete": {
         "operationId": "analytics.reportCategory.delete",
         "tags": [
-          "Analytics: Report Category"
+          "Report Category"
         ],
         "summary": "Delete",
         "responses": {
@@ -632,7 +632,7 @@
       "get": {
         "operationId": "analytics.reportShare.query",
         "tags": [
-          "Analytics: Report Share"
+          "Report Share"
         ],
         "summary": "Query",
         "responses": {
@@ -672,7 +672,7 @@
       "post": {
         "operationId": "analytics.reportShare.create",
         "tags": [
-          "Analytics: Report Share"
+          "Report Share"
         ],
         "summary": "Create",
         "responses": {
@@ -711,7 +711,7 @@
       "get": {
         "operationId": "analytics.reportShare.getById",
         "tags": [
-          "Analytics: Report Share"
+          "Report Share"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -748,7 +748,7 @@
       "put": {
         "operationId": "analytics.reportShare.update",
         "tags": [
-          "Analytics: Report Share"
+          "Report Share"
         ],
         "summary": "Update",
         "responses": {
@@ -795,7 +795,7 @@
       "delete": {
         "operationId": "analytics.reportShare.delete",
         "tags": [
-          "Analytics: Report Share"
+          "Report Share"
         ],
         "summary": "Delete",
         "responses": {
@@ -827,7 +827,7 @@
       "get": {
         "operationId": "analytics.componentsAllowedInReportsSelection.query",
         "tags": [
-          "Analytics: Components Allowed In Reports Selection"
+          "Components Allowed In Reports Selection"
         ],
         "summary": "Query",
         "responses": {
@@ -867,7 +867,7 @@
       "post": {
         "operationId": "analytics.componentsAllowedInReportsSelection.create",
         "tags": [
-          "Analytics: Components Allowed In Reports Selection"
+          "Components Allowed In Reports Selection"
         ],
         "summary": "Create",
         "responses": {
@@ -906,7 +906,7 @@
       "get": {
         "operationId": "analytics.componentsAllowedInReportsSelection.getById",
         "tags": [
-          "Analytics: Components Allowed In Reports Selection"
+          "Components Allowed In Reports Selection"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -943,7 +943,7 @@
       "put": {
         "operationId": "analytics.componentsAllowedInReportsSelection.update",
         "tags": [
-          "Analytics: Components Allowed In Reports Selection"
+          "Components Allowed In Reports Selection"
         ],
         "summary": "Update",
         "responses": {
@@ -990,7 +990,7 @@
       "delete": {
         "operationId": "analytics.componentsAllowedInReportsSelection.delete",
         "tags": [
-          "Analytics: Components Allowed In Reports Selection"
+          "Components Allowed In Reports Selection"
         ],
         "summary": "Delete",
         "responses": {

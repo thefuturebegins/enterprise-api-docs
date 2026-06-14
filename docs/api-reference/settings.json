@@ -10,7 +10,7 @@
       "get": {
         "operationId": "settings.notificationSettings.query",
         "tags": [
-          "Settings: Notification Settings"
+          "Notification Settings"
         ],
         "summary": "Query",
         "responses": {
@@ -50,7 +50,7 @@
       "post": {
         "operationId": "settings.notificationSettings.create",
         "tags": [
-          "Settings: Notification Settings"
+          "Notification Settings"
         ],
         "summary": "Create",
         "responses": {
@@ -89,7 +89,7 @@
       "get": {
         "operationId": "settings.notificationSettings.getById",
         "tags": [
-          "Settings: Notification Settings"
+          "Notification Settings"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -126,7 +126,7 @@
       "put": {
         "operationId": "settings.notificationSettings.update",
         "tags": [
-          "Settings: Notification Settings"
+          "Notification Settings"
         ],
         "summary": "Update",
         "responses": {
@@ -173,7 +173,7 @@
       "delete": {
         "operationId": "settings.notificationSettings.delete",
         "tags": [
-          "Settings: Notification Settings"
+          "Notification Settings"
         ],
         "summary": "Delete",
         "responses": {
@@ -205,7 +205,7 @@
       "get": {
         "operationId": "settings.securitySettings.query",
         "tags": [
-          "Settings: Security Settings"
+          "Security Settings"
         ],
         "summary": "Query",
         "responses": {
@@ -245,7 +245,7 @@
       "post": {
         "operationId": "settings.securitySettings.create",
         "tags": [
-          "Settings: Security Settings"
+          "Security Settings"
         ],
         "summary": "Create",
         "responses": {
@@ -284,7 +284,7 @@
       "get": {
         "operationId": "settings.securitySettings.getById",
         "tags": [
-          "Settings: Security Settings"
+          "Security Settings"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -321,7 +321,7 @@
       "put": {
         "operationId": "settings.securitySettings.update",
         "tags": [
-          "Settings: Security Settings"
+          "Security Settings"
         ],
         "summary": "Update",
         "responses": {
@@ -368,7 +368,7 @@
       "delete": {
         "operationId": "settings.securitySettings.delete",
         "tags": [
-          "Settings: Security Settings"
+          "Security Settings"
         ],
         "summary": "Delete",
         "responses": {
@@ -400,7 +400,7 @@
       "get": {
         "operationId": "settings.settingsScopes.query",
         "tags": [
-          "Settings: Settings Scopes"
+          "Settings Scopes"
         ],
         "summary": "Query",
         "responses": {
@@ -440,7 +440,7 @@
       "post": {
         "operationId": "settings.settingsScopes.create",
         "tags": [
-          "Settings: Settings Scopes"
+          "Settings Scopes"
         ],
         "summary": "Create",
         "responses": {
@@ -479,7 +479,7 @@
       "get": {
         "operationId": "settings.settingsScopes.getById",
         "tags": [
-          "Settings: Settings Scopes"
+          "Settings Scopes"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -516,7 +516,7 @@
       "put": {
         "operationId": "settings.settingsScopes.update",
         "tags": [
-          "Settings: Settings Scopes"
+          "Settings Scopes"
         ],
         "summary": "Update",
         "responses": {
@@ -563,7 +563,7 @@
       "delete": {
         "operationId": "settings.settingsScopes.delete",
         "tags": [
-          "Settings: Settings Scopes"
+          "Settings Scopes"
         ],
         "summary": "Delete",
         "responses": {

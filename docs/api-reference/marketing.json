@@ -7,148 +7,148 @@
   },
   "tags": [
     {
-      "name": "Marketing: Campaign Channel Ads"
+      "name": "Campaign Channel Ads"
     },
     {
-      "name": "Marketing: Campaign Channel Ads Files"
+      "name": "Campaign Channel Ads Files"
     },
     {
-      "name": "Marketing: Campaign Channel Ads Notes"
+      "name": "Campaign Channel Ads Notes"
     },
     {
-      "name": "Marketing: Campaign Channel Ads Tasks"
+      "name": "Campaign Channel Ads Tasks"
     },
     {
-      "name": "Marketing: Campaign Channel Emails"
+      "name": "Campaign Channel Emails"
     },
     {
-      "name": "Marketing: Campaign Channel Emails Files"
+      "name": "Campaign Channel Emails Files"
     },
     {
-      "name": "Marketing: Campaign Channel Emails Notes"
+      "name": "Campaign Channel Emails Notes"
     },
     {
-      "name": "Marketing: Campaign Channel Emails Tasks"
+      "name": "Campaign Channel Emails Tasks"
     },
     {
-      "name": "Marketing: Campaign Channel Ppc"
+      "name": "Campaign Channel Ppc"
     },
     {
-      "name": "Marketing: Campaign Channel Ppc Files"
+      "name": "Campaign Channel Ppc Files"
     },
     {
-      "name": "Marketing: Campaign Channel Ppc Notes"
+      "name": "Campaign Channel Ppc Notes"
     },
     {
-      "name": "Marketing: Campaign Channel Ppc Tasks"
+      "name": "Campaign Channel Ppc Tasks"
     },
     {
-      "name": "Marketing: Campaign Channel Sms"
+      "name": "Campaign Channel Sms"
     },
     {
-      "name": "Marketing: Campaign Channel Sms Files"
+      "name": "Campaign Channel Sms Files"
     },
     {
-      "name": "Marketing: Campaign Channel Sms Notes"
+      "name": "Campaign Channel Sms Notes"
     },
     {
-      "name": "Marketing: Campaign Channel Sms Tasks"
+      "name": "Campaign Channel Sms Tasks"
     },
     {
-      "name": "Marketing: Campaign Channel Social"
+      "name": "Campaign Channel Social"
     },
     {
-      "name": "Marketing: Campaign Channel Social Files"
+      "name": "Campaign Channel Social Files"
     },
     {
-      "name": "Marketing: Campaign Channel Social Notes"
+      "name": "Campaign Channel Social Notes"
     },
     {
-      "name": "Marketing: Campaign Channel Social Tasks"
+      "name": "Campaign Channel Social Tasks"
     },
     {
-      "name": "Marketing: Campaign Channel Web Content"
+      "name": "Campaign Channel Web Content"
     },
     {
-      "name": "Marketing: Campaign Channel Web Content Files"
+      "name": "Campaign Channel Web Content Files"
     },
     {
-      "name": "Marketing: Campaign Channel Web Content Notes"
+      "name": "Campaign Channel Web Content Notes"
     },
     {
-      "name": "Marketing: Campaign Channel Web Content Tasks"
+      "name": "Campaign Channel Web Content Tasks"
     },
     {
-      "name": "Marketing: Campaign Sequence Snapshot Contacts"
+      "name": "Campaign Sequence Snapshot Contacts"
     },
     {
-      "name": "Marketing: Campaign Sequence Snapshots"
+      "name": "Campaign Sequence Snapshots"
     },
     {
-      "name": "Marketing: Campaign Sequences"
+      "name": "Campaign Sequences"
     },
     {
-      "name": "Marketing: Campaign Stakeholder Users"
+      "name": "Campaign Stakeholder Users"
     },
     {
-      "name": "Marketing: Email Drip Campaign Notes"
+      "name": "Email Drip Campaign Notes"
     },
     {
-      "name": "Marketing: Email Drip Campaigns"
+      "name": "Email Drip Campaigns"
     },
     {
-      "name": "Marketing: Email Sequence Workflows"
+      "name": "Email Sequence Workflows"
     },
     {
-      "name": "Marketing: Segment Files"
+      "name": "Segment Files"
     },
     {
-      "name": "Marketing: Segment Notes"
+      "name": "Segment Notes"
     },
     {
-      "name": "Marketing: Segments"
+      "name": "Segments"
     },
     {
-      "name": "Marketing: Send Marketing Email"
+      "name": "Send Marketing Email"
     },
     {
-      "name": "Marketing: Social Analytics"
+      "name": "Social Analytics"
     },
     {
-      "name": "Marketing: Social Connection"
+      "name": "Social Connection"
     },
     {
-      "name": "Marketing: Social Inbox"
+      "name": "Social Inbox"
     },
     {
-      "name": "Marketing: Social Publish Job"
+      "name": "Social Publish Job"
     },
     {
-      "name": "Marketing: Social Publishing"
+      "name": "Social Publishing"
     },
     {
-      "name": "Marketing: Web Pages"
+      "name": "Web Pages"
     },
     {
-      "name": "Marketing: Web Publishing"
+      "name": "Web Publishing"
     },
     {
-      "name": "Marketing: Website Statuses"
+      "name": "Website Statuses"
     },
     {
-      "name": "Marketing: Website Types"
+      "name": "Website Types"
     },
     {
-      "name": "Marketing: Websites"
+      "name": "Websites"
     },
     {
-      "name": "Marketing: Workflow Enrollments"
+      "name": "Workflow Enrollments"
     },
     {
-      "name": "Marketing: Workflow Steps"
+      "name": "Workflow Steps"
     },
     {
-      "name": "Marketing: Workflows"
+      "name": "Workflows"
     }
   ],
   "paths": {
@@ -156,7 +156,7 @@
       "get": {
         "operationId": "marketing.webpublishing.getPreview",
         "tags": [
-          "Marketing: Web Publishing"
+          "Web Publishing"
         ],
         "summary": "Get Preview",
         "responses": {
@@ -217,7 +217,7 @@
       "post": {
         "operationId": "marketing.webpublishing.submitForm",
         "tags": [
-          "Marketing: Web Publishing"
+          "Web Publishing"
         ],
         "summary": "Public form submission \u2192 create a Lead",
         "responses": {
@@ -279,7 +279,7 @@
       "post": {
         "operationId": "marketing.socialconnection.getAuthUrl",
         "tags": [
-          "Marketing: Social Connection"
+          "Social Connection"
         ],
         "summary": "Get Auth Url",
         "responses": {
@@ -334,7 +334,7 @@
       "post": {
         "operationId": "marketing.socialconnection.completeOAuth",
         "tags": [
-          "Marketing: Social Connection"
+          "Social Connection"
         ],
         "summary": "OAuth completion. Called by the SPA popup-callback page (`/auth/social-callback`),",
         "responses": {
@@ -383,7 +383,7 @@
       "post": {
         "operationId": "marketing.socialconnection.syncProfiles",
         "tags": [
-          "Marketing: Social Connection"
+          "Social Connection"
         ],
         "summary": "Sync Profiles",
         "responses": {
@@ -430,7 +430,7 @@
       "post": {
         "operationId": "marketing.socialconnection.disconnect",
         "tags": [
-          "Marketing: Social Connection"
+          "Social Connection"
         ],
         "summary": "Disconnect",
         "responses": {
@@ -478,7 +478,7 @@
       "get": {
         "operationId": "marketing.socialconnection.getConnectionStatus",
         "tags": [
-          "Marketing: Social Connection"
+          "Social Connection"
         ],
         "summary": "Get Connection Status",
         "responses": {
@@ -523,7 +523,7 @@
       "post": {
         "operationId": "marketing.socialpublishing.createPost",
         "tags": [
-          "Marketing: Social Publishing"
+          "Social Publishing"
         ],
         "summary": "Create Post",
         "responses": {
@@ -581,7 +581,7 @@
       "put": {
         "operationId": "marketing.socialpublishing.updatePost",
         "tags": [
-          "Marketing: Social Publishing"
+          "Social Publishing"
         ],
         "summary": "Update Post",
         "responses": {
@@ -637,7 +637,7 @@
       "delete": {
         "operationId": "marketing.socialpublishing.deletePost",
         "tags": [
-          "Marketing: Social Publishing"
+          "Social Publishing"
         ],
         "summary": "Delete Post",
         "responses": {
@@ -677,7 +677,7 @@
       "post": {
         "operationId": "marketing.socialpublishing.upsertVariant",
         "tags": [
-          "Marketing: Social Publishing"
+          "Social Publishing"
         ],
         "summary": "Upsert Variant",
         "responses": {
@@ -741,7 +741,7 @@
       "delete": {
         "operationId": "marketing.socialpublishing.deleteVariant",
         "tags": [
-          "Marketing: Social Publishing"
+          "Social Publishing"
         ],
         "summary": "Delete Variant",
         "responses": {
@@ -781,7 +781,7 @@
       "post": {
         "operationId": "marketing.socialpublishing.uploadMediaToProvider",
         "tags": [
-          "Marketing: Social Publishing"
+          "Social Publishing"
         ],
         "summary": "Upload Media To Provider",
         "responses": {
@@ -847,7 +847,7 @@
       "post": {
         "operationId": "marketing.socialpublishing.validatePost",
         "tags": [
-          "Marketing: Social Publishing"
+          "Social Publishing"
         ],
         "summary": "Validate Post",
         "responses": {
@@ -904,7 +904,7 @@
       "post": {
         "operationId": "marketing.socialpublishing.schedulePost",
         "tags": [
-          "Marketing: Social Publishing"
+          "Social Publishing"
         ],
         "summary": "Schedule Post",
         "responses": {
@@ -960,7 +960,7 @@
       "post": {
         "operationId": "marketing.socialpublishing.publishNow",
         "tags": [
-          "Marketing: Social Publishing"
+          "Social Publishing"
         ],
         "summary": "Publish Now",
         "responses": {
@@ -1016,7 +1016,7 @@
       "post": {
         "operationId": "marketing.socialpublishing.cancelScheduledPost",
         "tags": [
-          "Marketing: Social Publishing"
+          "Social Publishing"
         ],
         "summary": "Cancel Scheduled Post",
         "responses": {
@@ -1073,7 +1073,7 @@
       "post": {
         "operationId": "marketing.socialpublishing.retryFailedJobs",
         "tags": [
-          "Marketing: Social Publishing"
+          "Social Publishing"
         ],
         "summary": "Retry Failed Jobs",
         "responses": {
@@ -1130,7 +1130,7 @@
       "post": {
         "operationId": "marketing.socialpublishing.approvePost",
         "tags": [
-          "Marketing: Social Publishing"
+          "Social Publishing"
         ],
         "summary": "Approve Post",
         "responses": {
@@ -1188,7 +1188,7 @@
       "post": {
         "operationId": "marketing.socialpublishjob.claimDueJobs",
         "tags": [
-          "Marketing: Social Publish Job"
+          "Social Publish Job"
         ],
         "summary": "Claim Due Jobs",
         "responses": {
@@ -1231,7 +1231,7 @@
       "post": {
         "operationId": "marketing.socialpublishjob.processJob",
         "tags": [
-          "Marketing: Social Publish Job"
+          "Social Publish Job"
         ],
         "summary": "Process Job",
         "responses": {
@@ -1281,7 +1281,7 @@
       "post": {
         "operationId": "marketing.socialanalytics.syncPostAnalytics",
         "tags": [
-          "Marketing: Social Analytics"
+          "Social Analytics"
         ],
         "summary": "Sync Post Analytics",
         "responses": {
@@ -1331,7 +1331,7 @@
       "post": {
         "operationId": "marketing.socialanalytics.syncProfileAnalytics",
         "tags": [
-          "Marketing: Social Analytics"
+          "Social Analytics"
         ],
         "summary": "Sync Profile Analytics",
         "responses": {
@@ -1381,7 +1381,7 @@
       "post": {
         "operationId": "marketing.socialanalytics.syncAllDueAnalytics",
         "tags": [
-          "Marketing: Social Analytics"
+          "Social Analytics"
         ],
         "summary": "Sync All Due Analytics",
         "responses": {
@@ -1422,7 +1422,7 @@
       "get": {
         "operationId": "marketing.socialanalytics.getCampaignSocialPerformance",
         "tags": [
-          "Marketing: Social Analytics"
+          "Social Analytics"
         ],
         "summary": "Get Campaign Social Performance",
         "responses": {
@@ -1470,7 +1470,7 @@
       "get": {
         "operationId": "marketing.socialanalytics.getPostPerformance",
         "tags": [
-          "Marketing: Social Analytics"
+          "Social Analytics"
         ],
         "summary": "Get Post Performance",
         "responses": {
@@ -1524,7 +1524,7 @@
       "post": {
         "operationId": "marketing.socialinbox.syncInboundMessages",
         "tags": [
-          "Marketing: Social Inbox"
+          "Social Inbox"
         ],
         "summary": "Sync Inbound Messages",
         "responses": {
@@ -1574,7 +1574,7 @@
       "post": {
         "operationId": "marketing.socialinbox.syncAllInboundMessages",
         "tags": [
-          "Marketing: Social Inbox"
+          "Social Inbox"
         ],
         "summary": "Sync All Inbound Messages",
         "responses": {
@@ -1617,7 +1617,7 @@
       "post": {
         "operationId": "marketing.socialinbox.handleWebhook",
         "tags": [
-          "Marketing: Social Inbox"
+          "Social Inbox"
         ],
         "summary": "Handle Webhook",
         "responses": {
@@ -1668,7 +1668,7 @@
       "post": {
         "operationId": "marketing.socialinbox.assignMessage",
         "tags": [
-          "Marketing: Social Inbox"
+          "Social Inbox"
         ],
         "summary": "Assign Message",
         "responses": {
@@ -1708,7 +1708,7 @@
       "post": {
         "operationId": "marketing.socialinbox.resolveMessage",
         "tags": [
-          "Marketing: Social Inbox"
+          "Social Inbox"
         ],
         "summary": "Resolve Message",
         "responses": {
@@ -1748,7 +1748,7 @@
       "post": {
         "operationId": "marketing.socialinbox.markRead",
         "tags": [
-          "Marketing: Social Inbox"
+          "Social Inbox"
         ],
         "summary": "Mark Read",
         "responses": {
@@ -1791,7 +1791,7 @@
       "post": {
         "operationId": "marketing.socialinbox.markSpam",
         "tags": [
-          "Marketing: Social Inbox"
+          "Social Inbox"
         ],
         "summary": "Mark Spam",
         "responses": {
@@ -1834,7 +1834,7 @@
       "post": {
         "operationId": "marketing.socialinbox.linkIdentityToContact",
         "tags": [
-          "Marketing: Social Inbox"
+          "Social Inbox"
         ],
         "summary": "Link Identity To Contact",
         "responses": {
@@ -1882,7 +1882,7 @@
       "post": {
         "operationId": "marketing.socialinbox.createCrmActivityFromMessage",
         "tags": [
-          "Marketing: Social Inbox"
+          "Social Inbox"
         ],
         "summary": "Create Crm Activity From Message",
         "responses": {
@@ -1949,7 +1949,7 @@
       "post": {
         "operationId": "marketing.sendmarketingemail.sendMarketingEmail",
         "tags": [
-          "Marketing: Send Marketing Email"
+          "Send Marketing Email"
         ],
         "summary": "Send Marketing Email",
         "responses": {
@@ -1998,7 +1998,7 @@
       "get": {
         "operationId": "marketing.campaignChannelEmails.query",
         "tags": [
-          "Marketing: Campaign Channel Emails"
+          "Campaign Channel Emails"
         ],
         "summary": "Query",
         "responses": {
@@ -2038,7 +2038,7 @@
       "post": {
         "operationId": "marketing.campaignChannelEmails.create",
         "tags": [
-          "Marketing: Campaign Channel Emails"
+          "Campaign Channel Emails"
         ],
         "summary": "Create",
         "responses": {
@@ -2077,7 +2077,7 @@
       "get": {
         "operationId": "marketing.campaignChannelEmails.getById",
         "tags": [
-          "Marketing: Campaign Channel Emails"
+          "Campaign Channel Emails"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2114,7 +2114,7 @@
       "put": {
         "operationId": "marketing.campaignChannelEmails.update",
         "tags": [
-          "Marketing: Campaign Channel Emails"
+          "Campaign Channel Emails"
         ],
         "summary": "Update",
         "responses": {
@@ -2161,7 +2161,7 @@
       "delete": {
         "operationId": "marketing.campaignChannelEmails.delete",
         "tags": [
-          "Marketing: Campaign Channel Emails"
+          "Campaign Channel Emails"
         ],
         "summary": "Delete",
         "responses": {
@@ -2193,7 +2193,7 @@
       "get": {
         "operationId": "marketing.campaignChannelSms.query",
         "tags": [
-          "Marketing: Campaign Channel Sms"
+          "Campaign Channel Sms"
         ],
         "summary": "Query",
         "responses": {
@@ -2233,7 +2233,7 @@
       "post": {
         "operationId": "marketing.campaignChannelSms.create",
         "tags": [
-          "Marketing: Campaign Channel Sms"
+          "Campaign Channel Sms"
         ],
         "summary": "Create",
         "responses": {
@@ -2272,7 +2272,7 @@
       "get": {
         "operationId": "marketing.campaignChannelSms.getById",
         "tags": [
-          "Marketing: Campaign Channel Sms"
+          "Campaign Channel Sms"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2309,7 +2309,7 @@
       "put": {
         "operationId": "marketing.campaignChannelSms.update",
         "tags": [
-          "Marketing: Campaign Channel Sms"
+          "Campaign Channel Sms"
         ],
         "summary": "Update",
         "responses": {
@@ -2356,7 +2356,7 @@
       "delete": {
         "operationId": "marketing.campaignChannelSms.delete",
         "tags": [
-          "Marketing: Campaign Channel Sms"
+          "Campaign Channel Sms"
         ],
         "summary": "Delete",
         "responses": {
@@ -2388,7 +2388,7 @@
       "get": {
         "operationId": "marketing.campaignChannelSocial.query",
         "tags": [
-          "Marketing: Campaign Channel Social"
+          "Campaign Channel Social"
         ],
         "summary": "Query",
         "responses": {
@@ -2428,7 +2428,7 @@
       "post": {
         "operationId": "marketing.campaignChannelSocial.create",
         "tags": [
-          "Marketing: Campaign Channel Social"
+          "Campaign Channel Social"
         ],
         "summary": "Create",
         "responses": {
@@ -2467,7 +2467,7 @@
       "get": {
         "operationId": "marketing.campaignChannelSocial.getById",
         "tags": [
-          "Marketing: Campaign Channel Social"
+          "Campaign Channel Social"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2504,7 +2504,7 @@
       "put": {
         "operationId": "marketing.campaignChannelSocial.update",
         "tags": [
-          "Marketing: Campaign Channel Social"
+          "Campaign Channel Social"
         ],
         "summary": "Update",
         "responses": {
@@ -2551,7 +2551,7 @@
       "delete": {
         "operationId": "marketing.campaignChannelSocial.delete",
         "tags": [
-          "Marketing: Campaign Channel Social"
+          "Campaign Channel Social"
         ],
         "summary": "Delete",
         "responses": {
@@ -2583,7 +2583,7 @@
       "get": {
         "operationId": "marketing.campaignChannelWebContent.query",
         "tags": [
-          "Marketing: Campaign Channel Web Content"
+          "Campaign Channel Web Content"
         ],
         "summary": "Query",
         "responses": {
@@ -2623,7 +2623,7 @@
       "post": {
         "operationId": "marketing.campaignChannelWebContent.create",
         "tags": [
-          "Marketing: Campaign Channel Web Content"
+          "Campaign Channel Web Content"
         ],
         "summary": "Create",
         "responses": {
@@ -2662,7 +2662,7 @@
       "get": {
         "operationId": "marketing.campaignChannelWebContent.getById",
         "tags": [
-          "Marketing: Campaign Channel Web Content"
+          "Campaign Channel Web Content"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2699,7 +2699,7 @@
       "put": {
         "operationId": "marketing.campaignChannelWebContent.update",
         "tags": [
-          "Marketing: Campaign Channel Web Content"
+          "Campaign Channel Web Content"
         ],
         "summary": "Update",
         "responses": {
@@ -2746,7 +2746,7 @@
       "delete": {
         "operationId": "marketing.campaignChannelWebContent.delete",
         "tags": [
-          "Marketing: Campaign Channel Web Content"
+          "Campaign Channel Web Content"
         ],
         "summary": "Delete",
         "responses": {
@@ -2778,7 +2778,7 @@
       "get": {
         "operationId": "marketing.campaignChannelPpc.query",
         "tags": [
-          "Marketing: Campaign Channel Ppc"
+          "Campaign Channel Ppc"
         ],
         "summary": "Query",
         "responses": {
@@ -2818,7 +2818,7 @@
       "post": {
         "operationId": "marketing.campaignChannelPpc.create",
         "tags": [
-          "Marketing: Campaign Channel Ppc"
+          "Campaign Channel Ppc"
         ],
         "summary": "Create",
         "responses": {
@@ -2857,7 +2857,7 @@
       "get": {
         "operationId": "marketing.campaignChannelPpc.getById",
         "tags": [
-          "Marketing: Campaign Channel Ppc"
+          "Campaign Channel Ppc"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2894,7 +2894,7 @@
       "put": {
         "operationId": "marketing.campaignChannelPpc.update",
         "tags": [
-          "Marketing: Campaign Channel Ppc"
+          "Campaign Channel Ppc"
         ],
         "summary": "Update",
         "responses": {
@@ -2941,7 +2941,7 @@
       "delete": {
         "operationId": "marketing.campaignChannelPpc.delete",
         "tags": [
-          "Marketing: Campaign Channel Ppc"
+          "Campaign Channel Ppc"
         ],
         "summary": "Delete",
         "responses": {
@@ -2973,7 +2973,7 @@
       "get": {
         "operationId": "marketing.campaignChannelAds.query",
         "tags": [
-          "Marketing: Campaign Channel Ads"
+          "Campaign Channel Ads"
         ],
         "summary": "Query",
         "responses": {
@@ -3013,7 +3013,7 @@
       "post": {
         "operationId": "marketing.campaignChannelAds.create",
         "tags": [
-          "Marketing: Campaign Channel Ads"
+          "Campaign Channel Ads"
         ],
         "summary": "Create",
         "responses": {
@@ -3052,7 +3052,7 @@
       "get": {
         "operationId": "marketing.campaignChannelAds.getById",
         "tags": [
-          "Marketing: Campaign Channel Ads"
+          "Campaign Channel Ads"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -3089,7 +3089,7 @@
       "put": {
         "operationId": "marketing.campaignChannelAds.update",
         "tags": [
-          "Marketing: Campaign Channel Ads"
+          "Campaign Channel Ads"
         ],
         "summary": "Update",
         "responses": {
@@ -3136,7 +3136,7 @@
       "delete": {
         "operationId": "marketing.campaignChannelAds.delete",
         "tags": [
-          "Marketing: Campaign Channel Ads"
+          "Campaign Channel Ads"
         ],
         "summary": "Delete",
         "responses": {
@@ -3168,7 +3168,7 @@
       "get": {
         "operationId": "marketing.segments.query",
         "tags": [
-          "Marketing: Segments"
+          "Segments"
         ],
         "summary": "Query",
         "responses": {
@@ -3208,7 +3208,7 @@
       "post": {
         "operationId": "marketing.segments.create",
         "tags": [
-          "Marketing: Segments"
+          "Segments"
         ],
         "summary": "Create",
         "responses": {
@@ -3247,7 +3247,7 @@
       "get": {
         "operationId": "marketing.segments.getById",
         "tags": [
-          "Marketing: Segments"
+          "Segments"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -3284,7 +3284,7 @@
       "put": {
         "operationId": "marketing.segments.update",
         "tags": [
-          "Marketing: Segments"
+          "Segments"
         ],
         "summary": "Update",
         "responses": {
@@ -3331,7 +3331,7 @@
       "delete": {
         "operationId": "marketing.segments.delete",
         "tags": [
-          "Marketing: Segments"
+          "Segments"
         ],
         "summary": "Delete",
         "responses": {
@@ -3363,7 +3363,7 @@
       "get": {
         "operationId": "marketing.webPages.query",
         "tags": [
-          "Marketing: Web Pages"
+          "Web Pages"
         ],
         "summary": "Query",
         "responses": {
@@ -3403,7 +3403,7 @@
       "post": {
         "operationId": "marketing.webPages.create",
         "tags": [
-          "Marketing: Web Pages"
+          "Web Pages"
         ],
         "summary": "Create",
         "responses": {
@@ -3442,7 +3442,7 @@
       "get": {
         "operationId": "marketing.webPages.getById",
         "tags": [
-          "Marketing: Web Pages"
+          "Web Pages"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -3479,7 +3479,7 @@
       "put": {
         "operationId": "marketing.webPages.update",
         "tags": [
-          "Marketing: Web Pages"
+          "Web Pages"
         ],
         "summary": "Update",
         "responses": {
@@ -3526,7 +3526,7 @@
       "delete": {
         "operationId": "marketing.webPages.delete",
         "tags": [
-          "Marketing: Web Pages"
+          "Web Pages"
         ],
         "summary": "Delete",
         "responses": {
@@ -3558,7 +3558,7 @@
       "get": {
         "operationId": "marketing.campaignSequences.query",
         "tags": [
-          "Marketing: Campaign Sequences"
+          "Campaign Sequences"
         ],
         "summary": "Query",
         "responses": {
@@ -3598,7 +3598,7 @@
       "post": {
         "operationId": "marketing.campaignSequences.create",
         "tags": [
-          "Marketing: Campaign Sequences"
+          "Campaign Sequences"
         ],
         "summary": "Create",
         "responses": {
@@ -3637,7 +3637,7 @@
       "get": {
         "operationId": "marketing.campaignSequences.getById",
         "tags": [
-          "Marketing: Campaign Sequences"
+          "Campaign Sequences"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -3674,7 +3674,7 @@
       "put": {
         "operationId": "marketing.campaignSequences.update",
         "tags": [
-          "Marketing: Campaign Sequences"
+          "Campaign Sequences"
         ],
         "summary": "Update",
         "responses": {
@@ -3721,7 +3721,7 @@
       "delete": {
         "operationId": "marketing.campaignSequences.delete",
         "tags": [
-          "Marketing: Campaign Sequences"
+          "Campaign Sequences"
         ],
         "summary": "Delete",
         "responses": {
@@ -3753,7 +3753,7 @@
       "get": {
         "operationId": "marketing.workflows.query",
         "tags": [
-          "Marketing: Workflows"
+          "Workflows"
         ],
         "summary": "Query",
         "responses": {
@@ -3793,7 +3793,7 @@
       "post": {
         "operationId": "marketing.workflows.create",
         "tags": [
-          "Marketing: Workflows"
+          "Workflows"
         ],
         "summary": "Create",
         "responses": {
@@ -3832,7 +3832,7 @@
       "get": {
         "operationId": "marketing.workflows.getById",
         "tags": [
-          "Marketing: Workflows"
+          "Workflows"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -3869,7 +3869,7 @@
       "put": {
         "operationId": "marketing.workflows.update",
         "tags": [
-          "Marketing: Workflows"
+          "Workflows"
         ],
         "summary": "Update",
         "responses": {
@@ -3916,7 +3916,7 @@
       "delete": {
         "operationId": "marketing.workflows.delete",
         "tags": [
-          "Marketing: Workflows"
+          "Workflows"
         ],
         "summary": "Delete",
         "responses": {
@@ -3948,7 +3948,7 @@
       "get": {
         "operationId": "marketing.workflowSteps.query",
         "tags": [
-          "Marketing: Workflow Steps"
+          "Workflow Steps"
         ],
         "summary": "Query",
         "responses": {
@@ -3988,7 +3988,7 @@
       "post": {
         "operationId": "marketing.workflowSteps.create",
         "tags": [
-          "Marketing: Workflow Steps"
+          "Workflow Steps"
         ],
         "summary": "Create",
         "responses": {
@@ -4027,7 +4027,7 @@
       "get": {
         "operationId": "marketing.workflowSteps.getById",
         "tags": [
-          "Marketing: Workflow Steps"
+          "Workflow Steps"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -4064,7 +4064,7 @@
       "put": {
         "operationId": "marketing.workflowSteps.update",
         "tags": [
-          "Marketing: Workflow Steps"
+          "Workflow Steps"
         ],
         "summary": "Update",
         "responses": {
@@ -4111,7 +4111,7 @@
       "delete": {
         "operationId": "marketing.workflowSteps.delete",
         "tags": [
-          "Marketing: Workflow Steps"
+          "Workflow Steps"
         ],
         "summary": "Delete",
         "responses": {
@@ -4143,7 +4143,7 @@
       "get": {
         "operationId": "marketing.emailSequenceWorkflows.query",
         "tags": [
-          "Marketing: Email Sequence Workflows"
+          "Email Sequence Workflows"
         ],
         "summary": "Query",
         "responses": {
@@ -4183,7 +4183,7 @@
       "post": {
         "operationId": "marketing.emailSequenceWorkflows.create",
         "tags": [
-          "Marketing: Email Sequence Workflows"
+          "Email Sequence Workflows"
         ],
         "summary": "Create",
         "responses": {
@@ -4222,7 +4222,7 @@
       "get": {
         "operationId": "marketing.emailSequenceWorkflows.getById",
         "tags": [
-          "Marketing: Email Sequence Workflows"
+          "Email Sequence Workflows"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -4259,7 +4259,7 @@
       "put": {
         "operationId": "marketing.emailSequenceWorkflows.update",
         "tags": [
-          "Marketing: Email Sequence Workflows"
+          "Email Sequence Workflows"
         ],
         "summary": "Update",
         "responses": {
@@ -4306,7 +4306,7 @@
       "delete": {
         "operationId": "marketing.emailSequenceWorkflows.delete",
         "tags": [
-          "Marketing: Email Sequence Workflows"
+          "Email Sequence Workflows"
         ],
         "summary": "Delete",
         "responses": {
@@ -4338,7 +4338,7 @@
       "get": {
         "operationId": "marketing.emailDripCampaigns.query",
         "tags": [
-          "Marketing: Email Drip Campaigns"
+          "Email Drip Campaigns"
         ],
         "summary": "Query",
         "responses": {
@@ -4378,7 +4378,7 @@
       "post": {
         "operationId": "marketing.emailDripCampaigns.create",
         "tags": [
-          "Marketing: Email Drip Campaigns"
+          "Email Drip Campaigns"
         ],
         "summary": "Create",
         "responses": {
@@ -4417,7 +4417,7 @@
       "get": {
         "operationId": "marketing.emailDripCampaigns.getById",
         "tags": [
-          "Marketing: Email Drip Campaigns"
+          "Email Drip Campaigns"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -4454,7 +4454,7 @@
       "put": {
         "operationId": "marketing.emailDripCampaigns.update",
         "tags": [
-          "Marketing: Email Drip Campaigns"
+          "Email Drip Campaigns"
         ],
         "summary": "Update",
         "responses": {
@@ -4501,7 +4501,7 @@
       "delete": {
         "operationId": "marketing.emailDripCampaigns.delete",
         "tags": [
-          "Marketing: Email Drip Campaigns"
+          "Email Drip Campaigns"
         ],
         "summary": "Delete",
         "responses": {
@@ -4533,7 +4533,7 @@
       "get": {
         "operationId": "marketing.workflowEnrollments.query",
         "tags": [
-          "Marketing: Workflow Enrollments"
+          "Workflow Enrollments"
         ],
         "summary": "Query",
         "responses": {
@@ -4573,7 +4573,7 @@
       "post": {
         "operationId": "marketing.workflowEnrollments.create",
         "tags": [
-          "Marketing: Workflow Enrollments"
+          "Workflow Enrollments"
         ],
         "summary": "Create",
         "responses": {
@@ -4612,7 +4612,7 @@
       "get": {
         "operationId": "marketing.workflowEnrollments.getById",
         "tags": [
-          "Marketing: Workflow Enrollments"
+          "Workflow Enrollments"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -4649,7 +4649,7 @@
       "put": {
         "operationId": "marketing.workflowEnrollments.update",
         "tags": [
-          "Marketing: Workflow Enrollments"
+          "Workflow Enrollments"
         ],
         "summary": "Update",
         "responses": {
@@ -4696,7 +4696,7 @@
       "delete": {
         "operationId": "marketing.workflowEnrollments.delete",
         "tags": [
-          "Marketing: Workflow Enrollments"
+          "Workflow Enrollments"
         ],
         "summary": "Delete",
         "responses": {
@@ -4728,7 +4728,7 @@
       "get": {
         "operationId": "marketing.websiteStatuses.query",
         "tags": [
-          "Marketing: Website Statuses"
+          "Website Statuses"
         ],
         "summary": "Query",
         "responses": {
@@ -4768,7 +4768,7 @@
       "post": {
         "operationId": "marketing.websiteStatuses.create",
         "tags": [
-          "Marketing: Website Statuses"
+          "Website Statuses"
         ],
         "summary": "Create",
         "responses": {
@@ -4807,7 +4807,7 @@
       "get": {
         "operationId": "marketing.websiteStatuses.getById",
         "tags": [
-          "Marketing: Website Statuses"
+          "Website Statuses"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -4844,7 +4844,7 @@
       "put": {
         "operationId": "marketing.websiteStatuses.update",
         "tags": [
-          "Marketing: Website Statuses"
+          "Website Statuses"
         ],
         "summary": "Update",
         "responses": {
@@ -4891,7 +4891,7 @@
       "delete": {
         "operationId": "marketing.websiteStatuses.delete",
         "tags": [
-          "Marketing: Website Statuses"
+          "Website Statuses"
         ],
         "summary": "Delete",
         "responses": {
@@ -4923,7 +4923,7 @@
       "get": {
         "operationId": "marketing.websiteTypes.query",
         "tags": [
-          "Marketing: Website Types"
+          "Website Types"
         ],
         "summary": "Query",
         "responses": {
@@ -4963,7 +4963,7 @@
       "post": {
         "operationId": "marketing.websiteTypes.create",
         "tags": [
-          "Marketing: Website Types"
+          "Website Types"
         ],
         "summary": "Create",
         "responses": {
@@ -5002,7 +5002,7 @@
       "get": {
         "operationId": "marketing.websiteTypes.getById",
         "tags": [
-          "Marketing: Website Types"
+          "Website Types"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -5039,7 +5039,7 @@
       "put": {
         "operationId": "marketing.websiteTypes.update",
         "tags": [
-          "Marketing: Website Types"
+          "Website Types"
         ],
         "summary": "Update",
         "responses": {
@@ -5086,7 +5086,7 @@
       "delete": {
         "operationId": "marketing.websiteTypes.delete",
         "tags": [
-          "Marketing: Website Types"
+          "Website Types"
         ],
         "summary": "Delete",
         "responses": {
@@ -5118,7 +5118,7 @@
       "get": {
         "operationId": "marketing.websites.query",
         "tags": [
-          "Marketing: Websites"
+          "Websites"
         ],
         "summary": "Query",
         "responses": {
@@ -5158,7 +5158,7 @@
       "post": {
         "operationId": "marketing.websites.create",
         "tags": [
-          "Marketing: Websites"
+          "Websites"
         ],
         "summary": "Create",
         "responses": {
@@ -5197,7 +5197,7 @@
       "get": {
         "operationId": "marketing.websites.getById",
         "tags": [
-          "Marketing: Websites"
+          "Websites"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -5234,7 +5234,7 @@
       "put": {
         "operationId": "marketing.websites.update",
         "tags": [
-          "Marketing: Websites"
+          "Websites"
         ],
         "summary": "Update",
         "responses": {
@@ -5281,7 +5281,7 @@
       "delete": {
         "operationId": "marketing.websites.delete",
         "tags": [
-          "Marketing: Websites"
+          "Websites"
         ],
         "summary": "Delete",
         "responses": {
@@ -5313,7 +5313,7 @@
       "get": {
         "operationId": "marketing.campaignSequenceSnapshots.query",
         "tags": [
-          "Marketing: Campaign Sequence Snapshots"
+          "Campaign Sequence Snapshots"
         ],
         "summary": "Query",
         "responses": {
@@ -5353,7 +5353,7 @@
       "post": {
         "operationId": "marketing.campaignSequenceSnapshots.create",
         "tags": [
-          "Marketing: Campaign Sequence Snapshots"
+          "Campaign Sequence Snapshots"
         ],
         "summary": "Create",
         "responses": {
@@ -5392,7 +5392,7 @@
       "get": {
         "operationId": "marketing.campaignSequenceSnapshots.getById",
         "tags": [
-          "Marketing: Campaign Sequence Snapshots"
+          "Campaign Sequence Snapshots"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -5429,7 +5429,7 @@
       "put": {
         "operationId": "marketing.campaignSequenceSnapshots.update",
         "tags": [
-          "Marketing: Campaign Sequence Snapshots"
+          "Campaign Sequence Snapshots"
         ],
         "summary": "Update",
         "responses": {
@@ -5476,7 +5476,7 @@
       "delete": {
         "operationId": "marketing.campaignSequenceSnapshots.delete",
         "tags": [
-          "Marketing: Campaign Sequence Snapshots"
+          "Campaign Sequence Snapshots"
         ],
         "summary": "Delete",
         "responses": {
@@ -5508,7 +5508,7 @@
       "get": {
         "operationId": "marketing.campaignSequenceSnapshotContacts.query",
         "tags": [
-          "Marketing: Campaign Sequence Snapshot Contacts"
+          "Campaign Sequence Snapshot Contacts"
         ],
         "summary": "Query",
         "responses": {
@@ -5548,7 +5548,7 @@
       "post": {
         "operationId": "marketing.campaignSequenceSnapshotContacts.create",
         "tags": [
-          "Marketing: Campaign Sequence Snapshot Contacts"
+          "Campaign Sequence Snapshot Contacts"
         ],
         "summary": "Create",
         "responses": {
@@ -5587,7 +5587,7 @@
       "get": {
         "operationId": "marketing.campaignSequenceSnapshotContacts.getById",
         "tags": [
-          "Marketing: Campaign Sequence Snapshot Contacts"
+          "Campaign Sequence Snapshot Contacts"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -5624,7 +5624,7 @@
       "put": {
         "operationId": "marketing.campaignSequenceSnapshotContacts.update",
         "tags": [
-          "Marketing: Campaign Sequence Snapshot Contacts"
+          "Campaign Sequence Snapshot Contacts"
         ],
         "summary": "Update",
         "responses": {
@@ -5671,7 +5671,7 @@
       "delete": {
         "operationId": "marketing.campaignSequenceSnapshotContacts.delete",
         "tags": [
-          "Marketing: Campaign Sequence Snapshot Contacts"
+          "Campaign Sequence Snapshot Contacts"
         ],
         "summary": "Delete",
         "responses": {
@@ -5703,7 +5703,7 @@
       "get": {
         "operationId": "marketing.campaignChannelEmailsNotes.query",
         "tags": [
-          "Marketing: Campaign Channel Emails Notes"
+          "Campaign Channel Emails Notes"
         ],
         "summary": "Query",
         "responses": {
@@ -5743,7 +5743,7 @@
       "post": {
         "operationId": "marketing.campaignChannelEmailsNotes.create",
         "tags": [
-          "Marketing: Campaign Channel Emails Notes"
+          "Campaign Channel Emails Notes"
         ],
         "summary": "Create",
         "responses": {
@@ -5782,7 +5782,7 @@
       "get": {
         "operationId": "marketing.campaignChannelEmailsNotes.getById",
         "tags": [
-          "Marketing: Campaign Channel Emails Notes"
+          "Campaign Channel Emails Notes"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -5819,7 +5819,7 @@
       "put": {
         "operationId": "marketing.campaignChannelEmailsNotes.update",
         "tags": [
-          "Marketing: Campaign Channel Emails Notes"
+          "Campaign Channel Emails Notes"
         ],
         "summary": "Update",
         "responses": {
@@ -5866,7 +5866,7 @@
       "delete": {
         "operationId": "marketing.campaignChannelEmailsNotes.delete",
         "tags": [
-          "Marketing: Campaign Channel Emails Notes"
+          "Campaign Channel Emails Notes"
         ],
         "summary": "Delete",
         "responses": {
@@ -5898,7 +5898,7 @@
       "get": {
         "operationId": "marketing.campaignChannelEmailsFiles.query",
         "tags": [
-          "Marketing: Campaign Channel Emails Files"
+          "Campaign Channel Emails Files"
         ],
         "summary": "Query",
         "responses": {
@@ -5938,7 +5938,7 @@
       "post": {
         "operationId": "marketing.campaignChannelEmailsFiles.create",
         "tags": [
-          "Marketing: Campaign Channel Emails Files"
+          "Campaign Channel Emails Files"
         ],
         "summary": "Create",
         "responses": {
@@ -5977,7 +5977,7 @@
       "get": {
         "operationId": "marketing.campaignChannelEmailsFiles.getById",
         "tags": [
-          "Marketing: Campaign Channel Emails Files"
+          "Campaign Channel Emails Files"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -6014,7 +6014,7 @@
       "put": {
         "operationId": "marketing.campaignChannelEmailsFiles.update",
         "tags": [
-          "Marketing: Campaign Channel Emails Files"
+          "Campaign Channel Emails Files"
         ],
         "summary": "Update",
         "responses": {
@@ -6061,7 +6061,7 @@
       "delete": {
         "operationId": "marketing.campaignChannelEmailsFiles.delete",
         "tags": [
-          "Marketing: Campaign Channel Emails Files"
+          "Campaign Channel Emails Files"
         ],
         "summary": "Delete",
         "responses": {
@@ -6093,7 +6093,7 @@
       "get": {
         "operationId": "marketing.campaignChannelEmailsTasks.query",
         "tags": [
-          "Marketing: Campaign Channel Emails Tasks"
+          "Campaign Channel Emails Tasks"
         ],
         "summary": "Query",
         "responses": {
@@ -6133,7 +6133,7 @@
       "post": {
         "operationId": "marketing.campaignChannelEmailsTasks.create",
         "tags": [
-          "Marketing: Campaign Channel Emails Tasks"
+          "Campaign Channel Emails Tasks"
         ],
         "summary": "Create",
         "responses": {
@@ -6172,7 +6172,7 @@
       "get": {
         "operationId": "marketing.campaignChannelEmailsTasks.getById",
         "tags": [
-          "Marketing: Campaign Channel Emails Tasks"
+          "Campaign Channel Emails Tasks"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -6209,7 +6209,7 @@
       "put": {
         "operationId": "marketing.campaignChannelEmailsTasks.update",
         "tags": [
-          "Marketing: Campaign Channel Emails Tasks"
+          "Campaign Channel Emails Tasks"
         ],
         "summary": "Update",
         "responses": {
@@ -6256,7 +6256,7 @@
       "delete": {
         "operationId": "marketing.campaignChannelEmailsTasks.delete",
         "tags": [
-          "Marketing: Campaign Channel Emails Tasks"
+          "Campaign Channel Emails Tasks"
         ],
         "summary": "Delete",
         "responses": {
@@ -6288,7 +6288,7 @@
       "get": {
         "operationId": "marketing.campaignChannelSmsNotes.query",
         "tags": [
-          "Marketing: Campaign Channel Sms Notes"
+          "Campaign Channel Sms Notes"
         ],
         "summary": "Query",
         "responses": {
@@ -6328,7 +6328,7 @@
       "post": {
         "operationId": "marketing.campaignChannelSmsNotes.create",
         "tags": [
-          "Marketing: Campaign Channel Sms Notes"
+          "Campaign Channel Sms Notes"
         ],
         "summary": "Create",
         "responses": {
@@ -6367,7 +6367,7 @@
       "get": {
         "operationId": "marketing.campaignChannelSmsNotes.getById",
         "tags": [
-          "Marketing: Campaign Channel Sms Notes"
+          "Campaign Channel Sms Notes"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -6404,7 +6404,7 @@
       "put": {
         "operationId": "marketing.campaignChannelSmsNotes.update",
         "tags": [
-          "Marketing: Campaign Channel Sms Notes"
+          "Campaign Channel Sms Notes"
         ],
         "summary": "Update",
         "responses": {
@@ -6451,7 +6451,7 @@
       "delete": {
         "operationId": "marketing.campaignChannelSmsNotes.delete",
         "tags": [
-          "Marketing: Campaign Channel Sms Notes"
+          "Campaign Channel Sms Notes"
         ],
         "summary": "Delete",
         "responses": {
@@ -6483,7 +6483,7 @@
       "get": {
         "operationId": "marketing.campaignChannelSmsFiles.query",
         "tags": [
-          "Marketing: Campaign Channel Sms Files"
+          "Campaign Channel Sms Files"
         ],
         "summary": "Query",
         "responses": {
@@ -6523,7 +6523,7 @@
       "post": {
         "operationId": "marketing.campaignChannelSmsFiles.create",
         "tags": [
-          "Marketing: Campaign Channel Sms Files"
+          "Campaign Channel Sms Files"
         ],
         "summary": "Create",
         "responses": {
@@ -6562,7 +6562,7 @@
       "get": {
         "operationId": "marketing.campaignChannelSmsFiles.getById",
         "tags": [
-          "Marketing: Campaign Channel Sms Files"
+          "Campaign Channel Sms Files"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -6599,7 +6599,7 @@
       "put": {
         "operationId": "marketing.campaignChannelSmsFiles.update",
         "tags": [
-          "Marketing: Campaign Channel Sms Files"
+          "Campaign Channel Sms Files"
         ],
         "summary": "Update",
         "responses": {
@@ -6646,7 +6646,7 @@
       "delete": {
         "operationId": "marketing.campaignChannelSmsFiles.delete",
         "tags": [
-          "Marketing: Campaign Channel Sms Files"
+          "Campaign Channel Sms Files"
         ],
         "summary": "Delete",
         "responses": {
@@ -6678,7 +6678,7 @@
       "get": {
         "operationId": "marketing.campaignChannelSmsTasks.query",
         "tags": [
-          "Marketing: Campaign Channel Sms Tasks"
+          "Campaign Channel Sms Tasks"
         ],
         "summary": "Query",
         "responses": {
@@ -6718,7 +6718,7 @@
       "post": {
         "operationId": "marketing.campaignChannelSmsTasks.create",
         "tags": [
-          "Marketing: Campaign Channel Sms Tasks"
+          "Campaign Channel Sms Tasks"
         ],
         "summary": "Create",
         "responses": {
@@ -6757,7 +6757,7 @@
       "get": {
         "operationId": "marketing.campaignChannelSmsTasks.getById",
         "tags": [
-          "Marketing: Campaign Channel Sms Tasks"
+          "Campaign Channel Sms Tasks"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -6794,7 +6794,7 @@
       "put": {
         "operationId": "marketing.campaignChannelSmsTasks.update",
         "tags": [
-          "Marketing: Campaign Channel Sms Tasks"
+          "Campaign Channel Sms Tasks"
         ],
         "summary": "Update",
         "responses": {
@@ -6841,7 +6841,7 @@
       "delete": {
         "operationId": "marketing.campaignChannelSmsTasks.delete",
         "tags": [
-          "Marketing: Campaign Channel Sms Tasks"
+          "Campaign Channel Sms Tasks"
         ],
         "summary": "Delete",
         "responses": {
@@ -6873,7 +6873,7 @@
       "get": {
         "operationId": "marketing.campaignChannelSocialNotes.query",
         "tags": [
-          "Marketing: Campaign Channel Social Notes"
+          "Campaign Channel Social Notes"
         ],
         "summary": "Query",
         "responses": {
@@ -6913,7 +6913,7 @@
       "post": {
         "operationId": "marketing.campaignChannelSocialNotes.create",
         "tags": [
-          "Marketing: Campaign Channel Social Notes"
+          "Campaign Channel Social Notes"
         ],
         "summary": "Create",
         "responses": {
@@ -6952,7 +6952,7 @@
       "get": {
         "operationId": "marketing.campaignChannelSocialNotes.getById",
         "tags": [
-          "Marketing: Campaign Channel Social Notes"
+          "Campaign Channel Social Notes"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -6989,7 +6989,7 @@
       "put": {
         "operationId": "marketing.campaignChannelSocialNotes.update",
         "tags": [
-          "Marketing: Campaign Channel Social Notes"
+          "Campaign Channel Social Notes"
         ],
         "summary": "Update",
         "responses": {
@@ -7036,7 +7036,7 @@
       "delete": {
         "operationId": "marketing.campaignChannelSocialNotes.delete",
         "tags": [
-          "Marketing: Campaign Channel Social Notes"
+          "Campaign Channel Social Notes"
         ],
         "summary": "Delete",
         "responses": {
@@ -7068,7 +7068,7 @@
       "get": {
         "operationId": "marketing.campaignChannelSocialFiles.query",
         "tags": [
-          "Marketing: Campaign Channel Social Files"
+          "Campaign Channel Social Files"
         ],
         "summary": "Query",
         "responses": {
@@ -7108,7 +7108,7 @@
       "post": {
         "operationId": "marketing.campaignChannelSocialFiles.create",
         "tags": [
-          "Marketing: Campaign Channel Social Files"
+          "Campaign Channel Social Files"
         ],
         "summary": "Create",
         "responses": {
@@ -7147,7 +7147,7 @@
       "get": {
         "operationId": "marketing.campaignChannelSocialFiles.getById",
         "tags": [
-          "Marketing: Campaign Channel Social Files"
+          "Campaign Channel Social Files"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -7184,7 +7184,7 @@
       "put": {
         "operationId": "marketing.campaignChannelSocialFiles.update",
         "tags": [
-          "Marketing: Campaign Channel Social Files"
+          "Campaign Channel Social Files"
         ],
         "summary": "Update",
         "responses": {
@@ -7231,7 +7231,7 @@
       "delete": {
         "operationId": "marketing.campaignChannelSocialFiles.delete",
         "tags": [
-          "Marketing: Campaign Channel Social Files"
+          "Campaign Channel Social Files"
         ],
         "summary": "Delete",
         "responses": {
@@ -7263,7 +7263,7 @@
       "get": {
         "operationId": "marketing.campaignChannelSocialTasks.query",
         "tags": [
-          "Marketing: Campaign Channel Social Tasks"
+          "Campaign Channel Social Tasks"
         ],
         "summary": "Query",
         "responses": {
@@ -7303,7 +7303,7 @@
       "post": {
         "operationId": "marketing.campaignChannelSocialTasks.create",
         "tags": [
-          "Marketing: Campaign Channel Social Tasks"
+          "Campaign Channel Social Tasks"
         ],
         "summary": "Create",
         "responses": {
@@ -7342,7 +7342,7 @@
       "get": {
         "operationId": "marketing.campaignChannelSocialTasks.getById",
         "tags": [
-          "Marketing: Campaign Channel Social Tasks"
+          "Campaign Channel Social Tasks"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -7379,7 +7379,7 @@
       "put": {
         "operationId": "marketing.campaignChannelSocialTasks.update",
         "tags": [
-          "Marketing: Campaign Channel Social Tasks"
+          "Campaign Channel Social Tasks"
         ],
         "summary": "Update",
         "responses": {
@@ -7426,7 +7426,7 @@
       "delete": {
         "operationId": "marketing.campaignChannelSocialTasks.delete",
         "tags": [
-          "Marketing: Campaign Channel Social Tasks"
+          "Campaign Channel Social Tasks"
         ],
         "summary": "Delete",
         "responses": {
@@ -7458,7 +7458,7 @@
       "get": {
         "operationId": "marketing.campaignChannelWebContentNotes.query",
         "tags": [
-          "Marketing: Campaign Channel Web Content Notes"
+          "Campaign Channel Web Content Notes"
         ],
         "summary": "Query",
         "responses": {
@@ -7498,7 +7498,7 @@
       "post": {
         "operationId": "marketing.campaignChannelWebContentNotes.create",
         "tags": [
-          "Marketing: Campaign Channel Web Content Notes"
+          "Campaign Channel Web Content Notes"
         ],
         "summary": "Create",
         "responses": {
@@ -7537,7 +7537,7 @@
       "get": {
         "operationId": "marketing.campaignChannelWebContentNotes.getById",
         "tags": [
-          "Marketing: Campaign Channel Web Content Notes"
+          "Campaign Channel Web Content Notes"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -7574,7 +7574,7 @@
       "put": {
         "operationId": "marketing.campaignChannelWebContentNotes.update",
         "tags": [
-          "Marketing: Campaign Channel Web Content Notes"
+          "Campaign Channel Web Content Notes"
         ],
         "summary": "Update",
         "responses": {
@@ -7621,7 +7621,7 @@
       "delete": {
         "operationId": "marketing.campaignChannelWebContentNotes.delete",
         "tags": [
-          "Marketing: Campaign Channel Web Content Notes"
+          "Campaign Channel Web Content Notes"
         ],
         "summary": "Delete",
         "responses": {
@@ -7653,7 +7653,7 @@
       "get": {
         "operationId": "marketing.campaignChannelWebContentFiles.query",
         "tags": [
-          "Marketing: Campaign Channel Web Content Files"
+          "Campaign Channel Web Content Files"
         ],
         "summary": "Query",
         "responses": {
@@ -7693,7 +7693,7 @@
       "post": {
         "operationId": "marketing.campaignChannelWebContentFiles.create",
         "tags": [
-          "Marketing: Campaign Channel Web Content Files"
+          "Campaign Channel Web Content Files"
         ],
         "summary": "Create",
         "responses": {
@@ -7732,7 +7732,7 @@
       "get": {
         "operationId": "marketing.campaignChannelWebContentFiles.getById",
         "tags": [
-          "Marketing: Campaign Channel Web Content Files"
+          "Campaign Channel Web Content Files"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -7769,7 +7769,7 @@
       "put": {
         "operationId": "marketing.campaignChannelWebContentFiles.update",
         "tags": [
-          "Marketing: Campaign Channel Web Content Files"
+          "Campaign Channel Web Content Files"
         ],
         "summary": "Update",
         "responses": {
@@ -7816,7 +7816,7 @@
       "delete": {
         "operationId": "marketing.campaignChannelWebContentFiles.delete",
         "tags": [
-          "Marketing: Campaign Channel Web Content Files"
+          "Campaign Channel Web Content Files"
         ],
         "summary": "Delete",
         "responses": {
@@ -7848,7 +7848,7 @@
       "get": {
         "operationId": "marketing.campaignChannelWebContentTasks.query",
         "tags": [
-          "Marketing: Campaign Channel Web Content Tasks"
+          "Campaign Channel Web Content Tasks"
         ],
         "summary": "Query",
         "responses": {
@@ -7888,7 +7888,7 @@
       "post": {
         "operationId": "marketing.campaignChannelWebContentTasks.create",
         "tags": [
-          "Marketing: Campaign Channel Web Content Tasks"
+          "Campaign Channel Web Content Tasks"
         ],
         "summary": "Create",
         "responses": {
@@ -7927,7 +7927,7 @@
       "get": {
         "operationId": "marketing.campaignChannelWebContentTasks.getById",
         "tags": [
-          "Marketing: Campaign Channel Web Content Tasks"
+          "Campaign Channel Web Content Tasks"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -7964,7 +7964,7 @@
       "put": {
         "operationId": "marketing.campaignChannelWebContentTasks.update",
         "tags": [
-          "Marketing: Campaign Channel Web Content Tasks"
+          "Campaign Channel Web Content Tasks"
         ],
         "summary": "Update",
         "responses": {
@@ -8011,7 +8011,7 @@
       "delete": {
         "operationId": "marketing.campaignChannelWebContentTasks.delete",
         "tags": [
-          "Marketing: Campaign Channel Web Content Tasks"
+          "Campaign Channel Web Content Tasks"
         ],
         "summary": "Delete",
         "responses": {
@@ -8043,7 +8043,7 @@
       "get": {
         "operationId": "marketing.campaignChannelPpcNotes.query",
         "tags": [
-          "Marketing: Campaign Channel Ppc Notes"
+          "Campaign Channel Ppc Notes"
         ],
         "summary": "Query",
         "responses": {
@@ -8083,7 +8083,7 @@
       "post": {
         "operationId": "marketing.campaignChannelPpcNotes.create",
         "tags": [
-          "Marketing: Campaign Channel Ppc Notes"
+          "Campaign Channel Ppc Notes"
         ],
         "summary": "Create",
         "responses": {
@@ -8122,7 +8122,7 @@
       "get": {
         "operationId": "marketing.campaignChannelPpcNotes.getById",
         "tags": [
-          "Marketing: Campaign Channel Ppc Notes"
+          "Campaign Channel Ppc Notes"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -8159,7 +8159,7 @@
       "put": {
         "operationId": "marketing.campaignChannelPpcNotes.update",
         "tags": [
-          "Marketing: Campaign Channel Ppc Notes"
+          "Campaign Channel Ppc Notes"
         ],
         "summary": "Update",
         "responses": {
@@ -8206,7 +8206,7 @@
       "delete": {
         "operationId": "marketing.campaignChannelPpcNotes.delete",
         "tags": [
-          "Marketing: Campaign Channel Ppc Notes"
+          "Campaign Channel Ppc Notes"
         ],
         "summary": "Delete",
         "responses": {
@@ -8238,7 +8238,7 @@
       "get": {
         "operationId": "marketing.campaignChannelPpcFiles.query",
         "tags": [
-          "Marketing: Campaign Channel Ppc Files"
+          "Campaign Channel Ppc Files"
         ],
         "summary": "Query",
         "responses": {
@@ -8278,7 +8278,7 @@
       "post": {
         "operationId": "marketing.campaignChannelPpcFiles.create",
         "tags": [
-          "Marketing: Campaign Channel Ppc Files"
+          "Campaign Channel Ppc Files"
         ],
         "summary": "Create",
         "responses": {
@@ -8317,7 +8317,7 @@
       "get": {
         "operationId": "marketing.campaignChannelPpcFiles.getById",
         "tags": [
-          "Marketing: Campaign Channel Ppc Files"
+          "Campaign Channel Ppc Files"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -8354,7 +8354,7 @@
       "put": {
         "operationId": "marketing.campaignChannelPpcFiles.update",
         "tags": [
-          "Marketing: Campaign Channel Ppc Files"
+          "Campaign Channel Ppc Files"
         ],
         "summary": "Update",
         "responses": {
@@ -8401,7 +8401,7 @@
       "delete": {
         "operationId": "marketing.campaignChannelPpcFiles.delete",
         "tags": [
-          "Marketing: Campaign Channel Ppc Files"
+          "Campaign Channel Ppc Files"
         ],
         "summary": "Delete",
         "responses": {
@@ -8433,7 +8433,7 @@
       "get": {
         "operationId": "marketing.campaignChannelPpcTasks.query",
         "tags": [
-          "Marketing: Campaign Channel Ppc Tasks"
+          "Campaign Channel Ppc Tasks"
         ],
         "summary": "Query",
         "responses": {
@@ -8473,7 +8473,7 @@
       "post": {
         "operationId": "marketing.campaignChannelPpcTasks.create",
         "tags": [
-          "Marketing: Campaign Channel Ppc Tasks"
+          "Campaign Channel Ppc Tasks"
         ],
         "summary": "Create",
         "responses": {
@@ -8512,7 +8512,7 @@
       "get": {
         "operationId": "marketing.campaignChannelPpcTasks.getById",
         "tags": [
-          "Marketing: Campaign Channel Ppc Tasks"
+          "Campaign Channel Ppc Tasks"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -8549,7 +8549,7 @@
       "put": {
         "operationId": "marketing.campaignChannelPpcTasks.update",
         "tags": [
-          "Marketing: Campaign Channel Ppc Tasks"
+          "Campaign Channel Ppc Tasks"
         ],
         "summary": "Update",
         "responses": {
@@ -8596,7 +8596,7 @@
       "delete": {
         "operationId": "marketing.campaignChannelPpcTasks.delete",
         "tags": [
-          "Marketing: Campaign Channel Ppc Tasks"
+          "Campaign Channel Ppc Tasks"
         ],
         "summary": "Delete",
         "responses": {
@@ -8628,7 +8628,7 @@
       "get": {
         "operationId": "marketing.campaignChannelAdsNotes.query",
         "tags": [
-          "Marketing: Campaign Channel Ads Notes"
+          "Campaign Channel Ads Notes"
         ],
         "summary": "Query",
         "responses": {
@@ -8668,7 +8668,7 @@
       "post": {
         "operationId": "marketing.campaignChannelAdsNotes.create",
         "tags": [
-          "Marketing: Campaign Channel Ads Notes"
+          "Campaign Channel Ads Notes"
         ],
         "summary": "Create",
         "responses": {
@@ -8707,7 +8707,7 @@
       "get": {
         "operationId": "marketing.campaignChannelAdsNotes.getById",
         "tags": [
-          "Marketing: Campaign Channel Ads Notes"
+          "Campaign Channel Ads Notes"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -8744,7 +8744,7 @@
       "put": {
         "operationId": "marketing.campaignChannelAdsNotes.update",
         "tags": [
-          "Marketing: Campaign Channel Ads Notes"
+          "Campaign Channel Ads Notes"
         ],
         "summary": "Update",
         "responses": {
@@ -8791,7 +8791,7 @@
       "delete": {
         "operationId": "marketing.campaignChannelAdsNotes.delete",
         "tags": [
-          "Marketing: Campaign Channel Ads Notes"
+          "Campaign Channel Ads Notes"
         ],
         "summary": "Delete",
         "responses": {
@@ -8823,7 +8823,7 @@
       "get": {
         "operationId": "marketing.campaignChannelAdsFiles.query",
         "tags": [
-          "Marketing: Campaign Channel Ads Files"
+          "Campaign Channel Ads Files"
         ],
         "summary": "Query",
         "responses": {
@@ -8863,7 +8863,7 @@
       "post": {
         "operationId": "marketing.campaignChannelAdsFiles.create",
         "tags": [
-          "Marketing: Campaign Channel Ads Files"
+          "Campaign Channel Ads Files"
         ],
         "summary": "Create",
         "responses": {
@@ -8902,7 +8902,7 @@
       "get": {
         "operationId": "marketing.campaignChannelAdsFiles.getById",
         "tags": [
-          "Marketing: Campaign Channel Ads Files"
+          "Campaign Channel Ads Files"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -8939,7 +8939,7 @@
       "put": {
         "operationId": "marketing.campaignChannelAdsFiles.update",
         "tags": [
-          "Marketing: Campaign Channel Ads Files"
+          "Campaign Channel Ads Files"
         ],
         "summary": "Update",
         "responses": {
@@ -8986,7 +8986,7 @@
       "delete": {
         "operationId": "marketing.campaignChannelAdsFiles.delete",
         "tags": [
-          "Marketing: Campaign Channel Ads Files"
+          "Campaign Channel Ads Files"
         ],
         "summary": "Delete",
         "responses": {
@@ -9018,7 +9018,7 @@
       "get": {
         "operationId": "marketing.campaignChannelAdsTasks.query",
         "tags": [
-          "Marketing: Campaign Channel Ads Tasks"
+          "Campaign Channel Ads Tasks"
         ],
         "summary": "Query",
         "responses": {
@@ -9058,7 +9058,7 @@
       "post": {
         "operationId": "marketing.campaignChannelAdsTasks.create",
         "tags": [
-          "Marketing: Campaign Channel Ads Tasks"
+          "Campaign Channel Ads Tasks"
         ],
         "summary": "Create",
         "responses": {
@@ -9097,7 +9097,7 @@
       "get": {
         "operationId": "marketing.campaignChannelAdsTasks.getById",
         "tags": [
-          "Marketing: Campaign Channel Ads Tasks"
+          "Campaign Channel Ads Tasks"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -9134,7 +9134,7 @@
       "put": {
         "operationId": "marketing.campaignChannelAdsTasks.update",
         "tags": [
-          "Marketing: Campaign Channel Ads Tasks"
+          "Campaign Channel Ads Tasks"
         ],
         "summary": "Update",
         "responses": {
@@ -9181,7 +9181,7 @@
       "delete": {
         "operationId": "marketing.campaignChannelAdsTasks.delete",
         "tags": [
-          "Marketing: Campaign Channel Ads Tasks"
+          "Campaign Channel Ads Tasks"
         ],
         "summary": "Delete",
         "responses": {
@@ -9213,7 +9213,7 @@
       "get": {
         "operationId": "marketing.segmentNotes.query",
         "tags": [
-          "Marketing: Segment Notes"
+          "Segment Notes"
         ],
         "summary": "Query",
         "responses": {
@@ -9253,7 +9253,7 @@
       "post": {
         "operationId": "marketing.segmentNotes.create",
         "tags": [
-          "Marketing: Segment Notes"
+          "Segment Notes"
         ],
         "summary": "Create",
         "responses": {
@@ -9292,7 +9292,7 @@
       "get": {
         "operationId": "marketing.segmentNotes.getById",
         "tags": [
-          "Marketing: Segment Notes"
+          "Segment Notes"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -9329,7 +9329,7 @@
       "put": {
         "operationId": "marketing.segmentNotes.update",
         "tags": [
-          "Marketing: Segment Notes"
+          "Segment Notes"
         ],
         "summary": "Update",
         "responses": {
@@ -9376,7 +9376,7 @@
       "delete": {
         "operationId": "marketing.segmentNotes.delete",
         "tags": [
-          "Marketing: Segment Notes"
+          "Segment Notes"
         ],
         "summary": "Delete",
         "responses": {
@@ -9408,7 +9408,7 @@
       "get": {
         "operationId": "marketing.segmentFiles.query",
         "tags": [
-          "Marketing: Segment Files"
+          "Segment Files"
         ],
         "summary": "Query",
         "responses": {
@@ -9448,7 +9448,7 @@
       "post": {
         "operationId": "marketing.segmentFiles.create",
         "tags": [
-          "Marketing: Segment Files"
+          "Segment Files"
         ],
         "summary": "Create",
         "responses": {
@@ -9487,7 +9487,7 @@
       "get": {
         "operationId": "marketing.segmentFiles.getById",
         "tags": [
-          "Marketing: Segment Files"
+          "Segment Files"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -9524,7 +9524,7 @@
       "put": {
         "operationId": "marketing.segmentFiles.update",
         "tags": [
-          "Marketing: Segment Files"
+          "Segment Files"
         ],
         "summary": "Update",
         "responses": {
@@ -9571,7 +9571,7 @@
       "delete": {
         "operationId": "marketing.segmentFiles.delete",
         "tags": [
-          "Marketing: Segment Files"
+          "Segment Files"
         ],
         "summary": "Delete",
         "responses": {
@@ -9603,7 +9603,7 @@
       "get": {
         "operationId": "marketing.emailDripCampaignNotes.query",
         "tags": [
-          "Marketing: Email Drip Campaign Notes"
+          "Email Drip Campaign Notes"
         ],
         "summary": "Query",
         "responses": {
@@ -9643,7 +9643,7 @@
       "post": {
         "operationId": "marketing.emailDripCampaignNotes.create",
         "tags": [
-          "Marketing: Email Drip Campaign Notes"
+          "Email Drip Campaign Notes"
         ],
         "summary": "Create",
         "responses": {
@@ -9682,7 +9682,7 @@
       "get": {
         "operationId": "marketing.emailDripCampaignNotes.getById",
         "tags": [
-          "Marketing: Email Drip Campaign Notes"
+          "Email Drip Campaign Notes"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -9719,7 +9719,7 @@
       "put": {
         "operationId": "marketing.emailDripCampaignNotes.update",
         "tags": [
-          "Marketing: Email Drip Campaign Notes"
+          "Email Drip Campaign Notes"
         ],
         "summary": "Update",
         "responses": {
@@ -9766,7 +9766,7 @@
       "delete": {
         "operationId": "marketing.emailDripCampaignNotes.delete",
         "tags": [
-          "Marketing: Email Drip Campaign Notes"
+          "Email Drip Campaign Notes"
         ],
         "summary": "Delete",
         "responses": {
@@ -9798,7 +9798,7 @@
       "get": {
         "operationId": "marketing.campaignStakeholderUsers.query",
         "tags": [
-          "Marketing: Campaign Stakeholder Users"
+          "Campaign Stakeholder Users"
         ],
         "summary": "Query",
         "responses": {
@@ -9838,7 +9838,7 @@
       "post": {
         "operationId": "marketing.campaignStakeholderUsers.create",
         "tags": [
-          "Marketing: Campaign Stakeholder Users"
+          "Campaign Stakeholder Users"
         ],
         "summary": "Create",
         "responses": {
@@ -9877,7 +9877,7 @@
       "get": {
         "operationId": "marketing.campaignStakeholderUsers.getById",
         "tags": [
-          "Marketing: Campaign Stakeholder Users"
+          "Campaign Stakeholder Users"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -9914,7 +9914,7 @@
       "put": {
         "operationId": "marketing.campaignStakeholderUsers.update",
         "tags": [
-          "Marketing: Campaign Stakeholder Users"
+          "Campaign Stakeholder Users"
         ],
         "summary": "Update",
         "responses": {
@@ -9961,7 +9961,7 @@
       "delete": {
         "operationId": "marketing.campaignStakeholderUsers.delete",
         "tags": [
-          "Marketing: Campaign Stakeholder Users"
+          "Campaign Stakeholder Users"
         ],
         "summary": "Delete",
         "responses": {

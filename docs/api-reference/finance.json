@@ -7,52 +7,52 @@
   },
   "tags": [
     {
-      "name": "Finance: Contractor Payment Processing"
+      "name": "Contractor Payment Processing"
     },
     {
-      "name": "Finance: Customer Payment Processing"
+      "name": "Customer Payment Processing"
     },
     {
-      "name": "Finance: Customer Payments"
+      "name": "Customer Payments"
     },
     {
-      "name": "Finance: Finance Accounts"
+      "name": "Finance Accounts"
     },
     {
-      "name": "Finance: Finance Bills"
+      "name": "Finance Bills"
     },
     {
-      "name": "Finance: Finance Credit Memos"
+      "name": "Finance Credit Memos"
     },
     {
-      "name": "Finance: Finance Customers"
+      "name": "Finance Customers"
     },
     {
-      "name": "Finance: Finance Employees"
+      "name": "Finance Employees"
     },
     {
-      "name": "Finance: Finance Estimates"
+      "name": "Finance Estimates"
     },
     {
-      "name": "Finance: Finance Invoices"
+      "name": "Finance Invoices"
     },
     {
-      "name": "Finance: Finance Journal Entries"
+      "name": "Finance Journal Entries"
     },
     {
-      "name": "Finance: Finance Payments"
+      "name": "Finance Payments"
     },
     {
-      "name": "Finance: Finance Product Services"
+      "name": "Finance Product Services"
     },
     {
-      "name": "Finance: Finance Sales Receipts"
+      "name": "Finance Sales Receipts"
     },
     {
-      "name": "Finance: Finance Vendors"
+      "name": "Finance Vendors"
     },
     {
-      "name": "Finance: Stripe Integration"
+      "name": "Stripe Integration"
     }
   ],
   "paths": {
@@ -60,7 +60,7 @@
       "post": {
         "operationId": "finance.contractorpaymentprocessing.processContractorPayment",
         "tags": [
-          "Finance: Contractor Payment Processing"
+          "Contractor Payment Processing"
         ],
         "summary": "Process contractor payment",
         "responses": {
@@ -110,7 +110,7 @@
       "post": {
         "operationId": "finance.contractorpaymentprocessing.syncContractorPaymentMethod",
         "tags": [
-          "Finance: Contractor Payment Processing"
+          "Contractor Payment Processing"
         ],
         "summary": "Sync payment method with payment provider",
         "responses": {
@@ -176,7 +176,7 @@
       "post": {
         "operationId": "finance.contractorpaymentprocessing.updateContractorPaymentStatus",
         "tags": [
-          "Finance: Contractor Payment Processing"
+          "Contractor Payment Processing"
         ],
         "summary": "Update contractor payment status",
         "responses": {
@@ -242,7 +242,7 @@
       "post": {
         "operationId": "finance.stripeintegration.createPaymentIntent",
         "tags": [
-          "Finance: Stripe Integration"
+          "Stripe Integration"
         ],
         "summary": "Create Stripe payment intent with automatic payment methods",
         "responses": {
@@ -308,7 +308,7 @@
       "post": {
         "operationId": "finance.stripeintegration.createSetupIntent",
         "tags": [
-          "Finance: Stripe Integration"
+          "Stripe Integration"
         ],
         "summary": "Create Stripe setup intent for saving payment methods",
         "responses": {
@@ -366,7 +366,7 @@
       "post": {
         "operationId": "finance.stripeintegration.getAllPaymentMethods",
         "tags": [
-          "Finance: Stripe Integration"
+          "Stripe Integration"
         ],
         "summary": "List all payment methods for a Stripe customer",
         "responses": {
@@ -427,7 +427,7 @@
       "get": {
         "operationId": "finance.stripeintegration.getPaymentMethod",
         "tags": [
-          "Finance: Stripe Integration"
+          "Stripe Integration"
         ],
         "summary": "Retrieve specific payment method from Stripe",
         "responses": {
@@ -475,7 +475,7 @@
       "post": {
         "operationId": "finance.stripeintegration.deletePaymentMethod",
         "tags": [
-          "Finance: Stripe Integration"
+          "Stripe Integration"
         ],
         "summary": "Detach payment method from Stripe customer",
         "responses": {
@@ -533,7 +533,7 @@
       "get": {
         "operationId": "finance.stripeintegration.getIntegrationCustomerRecord",
         "tags": [
-          "Finance: Stripe Integration"
+          "Stripe Integration"
         ],
         "summary": "Retrieve Stripe customer record",
         "responses": {
@@ -581,7 +581,7 @@
       "post": {
         "operationId": "finance.stripeintegration.createCheckoutSession",
         "tags": [
-          "Finance: Stripe Integration"
+          "Stripe Integration"
         ],
         "summary": "Create embedded checkout session with line items",
         "responses": {
@@ -639,7 +639,7 @@
       "post": {
         "operationId": "finance.stripeintegration.createStripeCustomer",
         "tags": [
-          "Finance: Stripe Integration"
+          "Stripe Integration"
         ],
         "summary": "Create new Stripe customer",
         "responses": {
@@ -687,7 +687,7 @@
       "post": {
         "operationId": "finance.customerpaymentprocessing.processCustomerPayment",
         "tags": [
-          "Finance: Customer Payment Processing"
+          "Customer Payment Processing"
         ],
         "summary": "Process customer payment with Stripe",
         "responses": {
@@ -737,7 +737,7 @@
       "post": {
         "operationId": "finance.customerpaymentprocessing.syncCustomerPaymentMethod",
         "tags": [
-          "Finance: Customer Payment Processing"
+          "Customer Payment Processing"
         ],
         "summary": "Sync payment method with Stripe",
         "responses": {
@@ -803,7 +803,7 @@
       "post": {
         "operationId": "finance.customerpaymentprocessing.updatePaymentStatusFromWebhook",
         "tags": [
-          "Finance: Customer Payment Processing"
+          "Customer Payment Processing"
         ],
         "summary": "Update payment status from Stripe webhook",
         "responses": {
@@ -853,7 +853,7 @@
       "post": {
         "operationId": "finance.customerpaymentprocessing.linkPaymentToStripeIntent",
         "tags": [
-          "Finance: Customer Payment Processing"
+          "Customer Payment Processing"
         ],
         "summary": "Link payment record to Stripe payment intent",
         "responses": {
@@ -919,7 +919,7 @@
       "get": {
         "operationId": "finance.customerPayments.query",
         "tags": [
-          "Finance: Customer Payments"
+          "Customer Payments"
         ],
         "summary": "Query",
         "responses": {
@@ -959,7 +959,7 @@
       "post": {
         "operationId": "finance.customerPayments.create",
         "tags": [
-          "Finance: Customer Payments"
+          "Customer Payments"
         ],
         "summary": "Create",
         "responses": {
@@ -998,7 +998,7 @@
       "get": {
         "operationId": "finance.customerPayments.getById",
         "tags": [
-          "Finance: Customer Payments"
+          "Customer Payments"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -1035,7 +1035,7 @@
       "put": {
         "operationId": "finance.customerPayments.update",
         "tags": [
-          "Finance: Customer Payments"
+          "Customer Payments"
         ],
         "summary": "Update",
         "responses": {
@@ -1082,7 +1082,7 @@
       "delete": {
         "operationId": "finance.customerPayments.delete",
         "tags": [
-          "Finance: Customer Payments"
+          "Customer Payments"
         ],
         "summary": "Delete",
         "responses": {
@@ -1114,7 +1114,7 @@
       "get": {
         "operationId": "finance.financeAccounts.query",
         "tags": [
-          "Finance: Finance Accounts"
+          "Finance Accounts"
         ],
         "summary": "Query",
         "responses": {
@@ -1154,7 +1154,7 @@
       "post": {
         "operationId": "finance.financeAccounts.create",
         "tags": [
-          "Finance: Finance Accounts"
+          "Finance Accounts"
         ],
         "summary": "Create",
         "responses": {
@@ -1193,7 +1193,7 @@
       "get": {
         "operationId": "finance.financeAccounts.getById",
         "tags": [
-          "Finance: Finance Accounts"
+          "Finance Accounts"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -1230,7 +1230,7 @@
       "put": {
         "operationId": "finance.financeAccounts.update",
         "tags": [
-          "Finance: Finance Accounts"
+          "Finance Accounts"
         ],
         "summary": "Update",
         "responses": {
@@ -1277,7 +1277,7 @@
       "delete": {
         "operationId": "finance.financeAccounts.delete",
         "tags": [
-          "Finance: Finance Accounts"
+          "Finance Accounts"
         ],
         "summary": "Delete",
         "responses": {
@@ -1309,7 +1309,7 @@
       "get": {
         "operationId": "finance.financeCustomers.query",
         "tags": [
-          "Finance: Finance Customers"
+          "Finance Customers"
         ],
         "summary": "Query",
         "responses": {
@@ -1349,7 +1349,7 @@
       "post": {
         "operationId": "finance.financeCustomers.create",
         "tags": [
-          "Finance: Finance Customers"
+          "Finance Customers"
         ],
         "summary": "Create",
         "responses": {
@@ -1388,7 +1388,7 @@
       "get": {
         "operationId": "finance.financeCustomers.getById",
         "tags": [
-          "Finance: Finance Customers"
+          "Finance Customers"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -1425,7 +1425,7 @@
       "put": {
         "operationId": "finance.financeCustomers.update",
         "tags": [
-          "Finance: Finance Customers"
+          "Finance Customers"
         ],
         "summary": "Update",
         "responses": {
@@ -1472,7 +1472,7 @@
       "delete": {
         "operationId": "finance.financeCustomers.delete",
         "tags": [
-          "Finance: Finance Customers"
+          "Finance Customers"
         ],
         "summary": "Delete",
         "responses": {
@@ -1504,7 +1504,7 @@
       "get": {
         "operationId": "finance.financeEmployees.query",
         "tags": [
-          "Finance: Finance Employees"
+          "Finance Employees"
         ],
         "summary": "Query",
         "responses": {
@@ -1544,7 +1544,7 @@
       "post": {
         "operationId": "finance.financeEmployees.create",
         "tags": [
-          "Finance: Finance Employees"
+          "Finance Employees"
         ],
         "summary": "Create",
         "responses": {
@@ -1583,7 +1583,7 @@
       "get": {
         "operationId": "finance.financeEmployees.getById",
         "tags": [
-          "Finance: Finance Employees"
+          "Finance Employees"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -1620,7 +1620,7 @@
       "put": {
         "operationId": "finance.financeEmployees.update",
         "tags": [
-          "Finance: Finance Employees"
+          "Finance Employees"
         ],
         "summary": "Update",
         "responses": {
@@ -1667,7 +1667,7 @@
       "delete": {
         "operationId": "finance.financeEmployees.delete",
         "tags": [
-          "Finance: Finance Employees"
+          "Finance Employees"
         ],
         "summary": "Delete",
         "responses": {
@@ -1699,7 +1699,7 @@
       "get": {
         "operationId": "finance.financeVendors.query",
         "tags": [
-          "Finance: Finance Vendors"
+          "Finance Vendors"
         ],
         "summary": "Query",
         "responses": {
@@ -1739,7 +1739,7 @@
       "post": {
         "operationId": "finance.financeVendors.create",
         "tags": [
-          "Finance: Finance Vendors"
+          "Finance Vendors"
         ],
         "summary": "Create",
         "responses": {
@@ -1778,7 +1778,7 @@
       "get": {
         "operationId": "finance.financeVendors.getById",
         "tags": [
-          "Finance: Finance Vendors"
+          "Finance Vendors"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -1815,7 +1815,7 @@
       "put": {
         "operationId": "finance.financeVendors.update",
         "tags": [
-          "Finance: Finance Vendors"
+          "Finance Vendors"
         ],
         "summary": "Update",
         "responses": {
@@ -1862,7 +1862,7 @@
       "delete": {
         "operationId": "finance.financeVendors.delete",
         "tags": [
-          "Finance: Finance Vendors"
+          "Finance Vendors"
         ],
         "summary": "Delete",
         "responses": {
@@ -1894,7 +1894,7 @@
       "get": {
         "operationId": "finance.financeProductServices.query",
         "tags": [
-          "Finance: Finance Product Services"
+          "Finance Product Services"
         ],
         "summary": "Query",
         "responses": {
@@ -1934,7 +1934,7 @@
       "post": {
         "operationId": "finance.financeProductServices.create",
         "tags": [
-          "Finance: Finance Product Services"
+          "Finance Product Services"
         ],
         "summary": "Create",
         "responses": {
@@ -1973,7 +1973,7 @@
       "get": {
         "operationId": "finance.financeProductServices.getById",
         "tags": [
-          "Finance: Finance Product Services"
+          "Finance Product Services"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2010,7 +2010,7 @@
       "put": {
         "operationId": "finance.financeProductServices.update",
         "tags": [
-          "Finance: Finance Product Services"
+          "Finance Product Services"
         ],
         "summary": "Update",
         "responses": {
@@ -2057,7 +2057,7 @@
       "delete": {
         "operationId": "finance.financeProductServices.delete",
         "tags": [
-          "Finance: Finance Product Services"
+          "Finance Product Services"
         ],
         "summary": "Delete",
         "responses": {
@@ -2089,7 +2089,7 @@
       "get": {
         "operationId": "finance.financeBills.query",
         "tags": [
-          "Finance: Finance Bills"
+          "Finance Bills"
         ],
         "summary": "Query",
         "responses": {
@@ -2129,7 +2129,7 @@
       "post": {
         "operationId": "finance.financeBills.create",
         "tags": [
-          "Finance: Finance Bills"
+          "Finance Bills"
         ],
         "summary": "Create",
         "responses": {
@@ -2168,7 +2168,7 @@
       "get": {
         "operationId": "finance.financeBills.getById",
         "tags": [
-          "Finance: Finance Bills"
+          "Finance Bills"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2205,7 +2205,7 @@
       "put": {
         "operationId": "finance.financeBills.update",
         "tags": [
-          "Finance: Finance Bills"
+          "Finance Bills"
         ],
         "summary": "Update",
         "responses": {
@@ -2252,7 +2252,7 @@
       "delete": {
         "operationId": "finance.financeBills.delete",
         "tags": [
-          "Finance: Finance Bills"
+          "Finance Bills"
         ],
         "summary": "Delete",
         "responses": {
@@ -2284,7 +2284,7 @@
       "get": {
         "operationId": "finance.financeCreditMemos.query",
         "tags": [
-          "Finance: Finance Credit Memos"
+          "Finance Credit Memos"
         ],
         "summary": "Query",
         "responses": {
@@ -2324,7 +2324,7 @@
       "post": {
         "operationId": "finance.financeCreditMemos.create",
         "tags": [
-          "Finance: Finance Credit Memos"
+          "Finance Credit Memos"
         ],
         "summary": "Create",
         "responses": {
@@ -2363,7 +2363,7 @@
       "get": {
         "operationId": "finance.financeCreditMemos.getById",
         "tags": [
-          "Finance: Finance Credit Memos"
+          "Finance Credit Memos"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2400,7 +2400,7 @@
       "put": {
         "operationId": "finance.financeCreditMemos.update",
         "tags": [
-          "Finance: Finance Credit Memos"
+          "Finance Credit Memos"
         ],
         "summary": "Update",
         "responses": {
@@ -2447,7 +2447,7 @@
       "delete": {
         "operationId": "finance.financeCreditMemos.delete",
         "tags": [
-          "Finance: Finance Credit Memos"
+          "Finance Credit Memos"
         ],
         "summary": "Delete",
         "responses": {
@@ -2479,7 +2479,7 @@
       "get": {
         "operationId": "finance.financeEstimates.query",
         "tags": [
-          "Finance: Finance Estimates"
+          "Finance Estimates"
         ],
         "summary": "Query",
         "responses": {
@@ -2519,7 +2519,7 @@
       "post": {
         "operationId": "finance.financeEstimates.create",
         "tags": [
-          "Finance: Finance Estimates"
+          "Finance Estimates"
         ],
         "summary": "Create",
         "responses": {
@@ -2558,7 +2558,7 @@
       "get": {
         "operationId": "finance.financeEstimates.getById",
         "tags": [
-          "Finance: Finance Estimates"
+          "Finance Estimates"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2595,7 +2595,7 @@
       "put": {
         "operationId": "finance.financeEstimates.update",
         "tags": [
-          "Finance: Finance Estimates"
+          "Finance Estimates"
         ],
         "summary": "Update",
         "responses": {
@@ -2642,7 +2642,7 @@
       "delete": {
         "operationId": "finance.financeEstimates.delete",
         "tags": [
-          "Finance: Finance Estimates"
+          "Finance Estimates"
         ],
         "summary": "Delete",
         "responses": {
@@ -2674,7 +2674,7 @@
       "get": {
         "operationId": "finance.financeInvoices.query",
         "tags": [
-          "Finance: Finance Invoices"
+          "Finance Invoices"
         ],
         "summary": "Query",
         "responses": {
@@ -2714,7 +2714,7 @@
       "post": {
         "operationId": "finance.financeInvoices.create",
         "tags": [
-          "Finance: Finance Invoices"
+          "Finance Invoices"
         ],
         "summary": "Create",
         "responses": {
@@ -2753,7 +2753,7 @@
       "get": {
         "operationId": "finance.financeInvoices.getById",
         "tags": [
-          "Finance: Finance Invoices"
+          "Finance Invoices"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2790,7 +2790,7 @@
       "put": {
         "operationId": "finance.financeInvoices.update",
         "tags": [
-          "Finance: Finance Invoices"
+          "Finance Invoices"
         ],
         "summary": "Update",
         "responses": {
@@ -2837,7 +2837,7 @@
       "delete": {
         "operationId": "finance.financeInvoices.delete",
         "tags": [
-          "Finance: Finance Invoices"
+          "Finance Invoices"
         ],
         "summary": "Delete",
         "responses": {
@@ -2869,7 +2869,7 @@
       "get": {
         "operationId": "finance.financeJournalEntries.query",
         "tags": [
-          "Finance: Finance Journal Entries"
+          "Finance Journal Entries"
         ],
         "summary": "Query",
         "responses": {
@@ -2909,7 +2909,7 @@
       "post": {
         "operationId": "finance.financeJournalEntries.create",
         "tags": [
-          "Finance: Finance Journal Entries"
+          "Finance Journal Entries"
         ],
         "summary": "Create",
         "responses": {
@@ -2948,7 +2948,7 @@
       "get": {
         "operationId": "finance.financeJournalEntries.getById",
         "tags": [
-          "Finance: Finance Journal Entries"
+          "Finance Journal Entries"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2985,7 +2985,7 @@
       "put": {
         "operationId": "finance.financeJournalEntries.update",
         "tags": [
-          "Finance: Finance Journal Entries"
+          "Finance Journal Entries"
         ],
         "summary": "Update",
         "responses": {
@@ -3032,7 +3032,7 @@
       "delete": {
         "operationId": "finance.financeJournalEntries.delete",
         "tags": [
-          "Finance: Finance Journal Entries"
+          "Finance Journal Entries"
         ],
         "summary": "Delete",
         "responses": {
@@ -3064,7 +3064,7 @@
       "get": {
         "operationId": "finance.financePayments.query",
         "tags": [
-          "Finance: Finance Payments"
+          "Finance Payments"
         ],
         "summary": "Query",
         "responses": {
@@ -3104,7 +3104,7 @@
       "post": {
         "operationId": "finance.financePayments.create",
         "tags": [
-          "Finance: Finance Payments"
+          "Finance Payments"
         ],
         "summary": "Create",
         "responses": {
@@ -3143,7 +3143,7 @@
       "get": {
         "operationId": "finance.financePayments.getById",
         "tags": [
-          "Finance: Finance Payments"
+          "Finance Payments"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -3180,7 +3180,7 @@
       "put": {
         "operationId": "finance.financePayments.update",
         "tags": [
-          "Finance: Finance Payments"
+          "Finance Payments"
         ],
         "summary": "Update",
         "responses": {
@@ -3227,7 +3227,7 @@
       "delete": {
         "operationId": "finance.financePayments.delete",
         "tags": [
-          "Finance: Finance Payments"
+          "Finance Payments"
         ],
         "summary": "Delete",
         "responses": {
@@ -3259,7 +3259,7 @@
       "get": {
         "operationId": "finance.financeSalesReceipts.query",
         "tags": [
-          "Finance: Finance Sales Receipts"
+          "Finance Sales Receipts"
         ],
         "summary": "Query",
         "responses": {
@@ -3299,7 +3299,7 @@
       "post": {
         "operationId": "finance.financeSalesReceipts.create",
         "tags": [
-          "Finance: Finance Sales Receipts"
+          "Finance Sales Receipts"
         ],
         "summary": "Create",
         "responses": {
@@ -3338,7 +3338,7 @@
       "get": {
         "operationId": "finance.financeSalesReceipts.getById",
         "tags": [
-          "Finance: Finance Sales Receipts"
+          "Finance Sales Receipts"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -3375,7 +3375,7 @@
       "put": {
         "operationId": "finance.financeSalesReceipts.update",
         "tags": [
-          "Finance: Finance Sales Receipts"
+          "Finance Sales Receipts"
         ],
         "summary": "Update",
         "responses": {
@@ -3422,7 +3422,7 @@
       "delete": {
         "operationId": "finance.financeSalesReceipts.delete",
         "tags": [
-          "Finance: Finance Sales Receipts"
+          "Finance Sales Receipts"
         ],
         "summary": "Delete",
         "responses": {

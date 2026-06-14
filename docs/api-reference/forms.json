@@ -10,7 +10,7 @@
       "get": {
         "operationId": "forms.forms.query",
         "tags": [
-          "Forms: Forms"
+          "Forms"
         ],
         "summary": "Query",
         "responses": {
@@ -50,7 +50,7 @@
       "post": {
         "operationId": "forms.forms.create",
         "tags": [
-          "Forms: Forms"
+          "Forms"
         ],
         "summary": "Create",
         "responses": {
@@ -89,7 +89,7 @@
       "get": {
         "operationId": "forms.forms.getById",
         "tags": [
-          "Forms: Forms"
+          "Forms"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -126,7 +126,7 @@
       "put": {
         "operationId": "forms.forms.update",
         "tags": [
-          "Forms: Forms"
+          "Forms"
         ],
         "summary": "Update",
         "responses": {
@@ -173,7 +173,7 @@
       "delete": {
         "operationId": "forms.forms.delete",
         "tags": [
-          "Forms: Forms"
+          "Forms"
         ],
         "summary": "Delete",
         "responses": {
@@ -205,7 +205,7 @@
       "get": {
         "operationId": "forms.formFields.query",
         "tags": [
-          "Forms: Form Fields"
+          "Form Fields"
         ],
         "summary": "Query",
         "responses": {
@@ -245,7 +245,7 @@
       "post": {
         "operationId": "forms.formFields.create",
         "tags": [
-          "Forms: Form Fields"
+          "Form Fields"
         ],
         "summary": "Create",
         "responses": {
@@ -284,7 +284,7 @@
       "get": {
         "operationId": "forms.formFields.getById",
         "tags": [
-          "Forms: Form Fields"
+          "Form Fields"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -321,7 +321,7 @@
       "put": {
         "operationId": "forms.formFields.update",
         "tags": [
-          "Forms: Form Fields"
+          "Form Fields"
         ],
         "summary": "Update",
         "responses": {
@@ -368,7 +368,7 @@
       "delete": {
         "operationId": "forms.formFields.delete",
         "tags": [
-          "Forms: Form Fields"
+          "Form Fields"
         ],
         "summary": "Delete",
         "responses": {

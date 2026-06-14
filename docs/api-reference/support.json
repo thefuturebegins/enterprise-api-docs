@@ -10,7 +10,7 @@
       "get": {
         "operationId": "support.supportDocumentationPages.query",
         "tags": [
-          "Support: Support Documentation Pages"
+          "Support Documentation Pages"
         ],
         "summary": "Query",
         "responses": {
@@ -50,7 +50,7 @@
       "post": {
         "operationId": "support.supportDocumentationPages.create",
         "tags": [
-          "Support: Support Documentation Pages"
+          "Support Documentation Pages"
         ],
         "summary": "Create",
         "responses": {
@@ -89,7 +89,7 @@
       "get": {
         "operationId": "support.supportDocumentationPages.getById",
         "tags": [
-          "Support: Support Documentation Pages"
+          "Support Documentation Pages"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -126,7 +126,7 @@
       "put": {
         "operationId": "support.supportDocumentationPages.update",
         "tags": [
-          "Support: Support Documentation Pages"
+          "Support Documentation Pages"
         ],
         "summary": "Update",
         "responses": {
@@ -173,7 +173,7 @@
       "delete": {
         "operationId": "support.supportDocumentationPages.delete",
         "tags": [
-          "Support: Support Documentation Pages"
+          "Support Documentation Pages"
         ],
         "summary": "Delete",
         "responses": {
