@@ -1,19 +1,13 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Permissions API",
-    "version": "0.0.0",
-    "description": "Aggregate OpenAPI 3.1 document for all enterprise modules, generated from FCG InterfaceSpecs."
+    "title": "permissions API",
+    "version": "1.0.6",
+    "description": "OpenAPI 3.1 document for the `permissions` module, generated from FCG InterfaceSpecs."
   },
-  "servers": [
-    {
-      "url": "/",
-      "description": "Current host"
-    }
-  ],
   "tags": [
     {
-      "name": "authorization"
+      "name": "permissions.authorization"
     }
   ],
   "paths": {
@@ -21,7 +15,7 @@
       "get": {
         "operationId": "permissions.authorization.hasPermission",
         "tags": [
-          "authorization"
+          "permissions.authorization"
         ],
         "summary": "Check if user has a specific permission",
         "responses": {
@@ -70,14 +64,14 @@
         ],
         "x-scope": "clientServer",
         "x-permission": "permissions:authorization:read",
-        "description": "Check if user has a specific permission\n\nCustom logic: Resolves user \u2192 roles \u2192 permissions chain"
+        "description": "Check if user has a specific permission\n\nCustom logic: Resolves user → roles → permissions chain"
       }
     },
     "/api/permissions/user/{userId}": {
       "get": {
         "operationId": "permissions.authorization.getEffectivePermissionsForUser",
         "tags": [
-          "authorization"
+          "permissions.authorization"
         ],
         "summary": "Get effective permissions for a user",
         "responses": {
@@ -128,7 +122,7 @@
       "get": {
         "operationId": "permissions.authorization.getPermissionsCatalog",
         "tags": [
-          "authorization"
+          "permissions.authorization"
         ],
         "summary": "Get complete permissions catalog",
         "responses": {
@@ -137,7 +131,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/permissions.PermissionsCatalog"
+                  "$ref": "#/components/schemas/PermissionsCatalog"
                 }
               }
             }
@@ -167,122 +161,43 @@
   },
   "components": {
     "schemas": {
-      "permissions.RolePermissionSelection": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "roleId": {
-            "type": "string"
-          },
-          "permissionId": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "id",
-          "roleId",
-          "permissionId"
-        ]
-      },
-      "permissions.Role": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "key": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "isSystem": {
-            "type": "boolean"
-          }
-        },
-        "required": [
-          "id",
-          "key",
-          "name"
-        ]
-      },
-      "permissions.Permission": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "key": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "moduleId": {
-            "type": "string"
-          },
-          "moduleKey": {
-            "type": "string"
-          },
-          "featureId": {
-            "type": "string"
-          },
-          "featureKey": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "id",
-          "key",
-          "name",
-          "moduleId",
-          "moduleKey",
-          "featureId",
-          "featureKey"
-        ]
-      },
-      "permissions.PermissionsCatalog": {
+      "PermissionsCatalog": {
         "type": "object",
         "properties": {
           "modules": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/permissions.Module"
+              "$ref": "#/components/schemas/Module"
             }
           },
           "features": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/permissions.Feature"
+              "$ref": "#/components/schemas/Feature"
             }
           },
           "permissions": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/permissions.Permission"
+              "$ref": "#/components/schemas/Permission"
             }
           },
           "roles": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/permissions.Role"
+              "$ref": "#/components/schemas/Role"
             }
           },
           "rolePermissionSelections": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/permissions.RolePermissionSelection"
+              "$ref": "#/components/schemas/RolePermissionSelection"
             }
           },
           "userRoleSelections": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/permissions.UserRoleSelection"
+              "$ref": "#/components/schemas/UserRoleSelection"
             }
           },
           "summary": {
@@ -318,7 +233,29 @@
           "userRoleSelections"
         ]
       },
-      "permissions.Feature": {
+      "Module": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "key": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "key",
+          "name"
+        ]
+      },
+      "Feature": {
         "type": "object",
         "properties": {
           "id": {
@@ -345,7 +282,42 @@
           "moduleKey"
         ]
       },
-      "permissions.Module": {
+      "Permission": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "key": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "moduleId": {
+            "type": "string"
+          },
+          "moduleKey": {
+            "type": "string"
+          },
+          "featureId": {
+            "type": "string"
+          },
+          "featureKey": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "key",
+          "name",
+          "moduleId",
+          "moduleKey",
+          "featureId",
+          "featureKey"
+        ]
+      },
+      "Role": {
         "type": "object",
         "properties": {
           "id": {
@@ -359,6 +331,9 @@
           },
           "description": {
             "type": "string"
+          },
+          "isSystem": {
+            "type": "boolean"
           }
         },
         "required": [
@@ -367,7 +342,26 @@
           "name"
         ]
       },
-      "permissions.UserRoleSelection": {
+      "RolePermissionSelection": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "roleId": {
+            "type": "string"
+          },
+          "permissionId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "roleId",
+          "permissionId"
+        ]
+      },
+      "UserRoleSelection": {
         "type": "object",
         "properties": {
           "id": {

@@ -1,30 +1,16 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Inventory API",
+    "title": "inventory API",
     "version": "0.0.0",
-    "description": "Aggregate OpenAPI 3.1 document for all enterprise modules, generated from FCG InterfaceSpecs."
+    "description": "CRUD endpoints for models owned by the inventory module."
   },
-  "servers": [
-    {
-      "url": "/",
-      "description": "Current host"
-    }
-  ],
-  "tags": [
-    {
-      "name": "equipment"
-    },
-    {
-      "name": "inventoryLocations"
-    }
-  ],
   "paths": {
     "/api/inventory/equipment": {
       "get": {
         "operationId": "inventory.equipment.query",
         "tags": [
-          "equipment"
+          "inventory.equipment"
         ],
         "summary": "Query",
         "responses": {
@@ -35,7 +21,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/data.Equipment"
+                    "$ref": "#/components/schemas/inventory.Equipment"
                   }
                 }
               }
@@ -54,7 +40,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "$ref": "#/components/schemas/data.EquipmentFilter"
+              "$ref": "#/components/schemas/inventory.EquipmentFilter"
             }
           }
         ],
@@ -64,7 +50,7 @@
       "post": {
         "operationId": "inventory.equipment.create",
         "tags": [
-          "equipment"
+          "inventory.equipment"
         ],
         "summary": "Create",
         "responses": {
@@ -73,7 +59,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.Equipment"
+                  "$ref": "#/components/schemas/inventory.Equipment"
                 }
               }
             }
@@ -90,7 +76,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.CreateEquipmentInput"
+                "$ref": "#/components/schemas/inventory.CreateEquipmentInput"
               }
             }
           }
@@ -103,7 +89,7 @@
       "get": {
         "operationId": "inventory.equipment.getById",
         "tags": [
-          "equipment"
+          "inventory.equipment"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -112,7 +98,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.Equipment"
+                  "$ref": "#/components/schemas/inventory.Equipment"
                 }
               }
             }
@@ -140,7 +126,7 @@
       "put": {
         "operationId": "inventory.equipment.update",
         "tags": [
-          "equipment"
+          "inventory.equipment"
         ],
         "summary": "Update",
         "responses": {
@@ -149,7 +135,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.Equipment"
+                  "$ref": "#/components/schemas/inventory.Equipment"
                 }
               }
             }
@@ -176,7 +162,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.UpdateEquipmentInput"
+                "$ref": "#/components/schemas/inventory.UpdateEquipmentInput"
               }
             }
           }
@@ -187,7 +173,7 @@
       "delete": {
         "operationId": "inventory.equipment.delete",
         "tags": [
-          "equipment"
+          "inventory.equipment"
         ],
         "summary": "Delete",
         "responses": {
@@ -219,7 +205,7 @@
       "get": {
         "operationId": "inventory.inventoryLocations.query",
         "tags": [
-          "inventoryLocations"
+          "inventory.inventoryLocations"
         ],
         "summary": "Query",
         "responses": {
@@ -230,7 +216,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/data.InventoryLocation"
+                    "$ref": "#/components/schemas/inventory.InventoryLocation"
                   }
                 }
               }
@@ -249,7 +235,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "$ref": "#/components/schemas/data.InventoryLocationFilter"
+              "$ref": "#/components/schemas/inventory.InventoryLocationFilter"
             }
           }
         ],
@@ -259,7 +245,7 @@
       "post": {
         "operationId": "inventory.inventoryLocations.create",
         "tags": [
-          "inventoryLocations"
+          "inventory.inventoryLocations"
         ],
         "summary": "Create",
         "responses": {
@@ -268,7 +254,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.InventoryLocation"
+                  "$ref": "#/components/schemas/inventory.InventoryLocation"
                 }
               }
             }
@@ -285,7 +271,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.CreateInventoryLocationInput"
+                "$ref": "#/components/schemas/inventory.CreateInventoryLocationInput"
               }
             }
           }
@@ -298,7 +284,7 @@
       "get": {
         "operationId": "inventory.inventoryLocations.getById",
         "tags": [
-          "inventoryLocations"
+          "inventory.inventoryLocations"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -307,7 +293,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.InventoryLocation"
+                  "$ref": "#/components/schemas/inventory.InventoryLocation"
                 }
               }
             }
@@ -335,7 +321,7 @@
       "put": {
         "operationId": "inventory.inventoryLocations.update",
         "tags": [
-          "inventoryLocations"
+          "inventory.inventoryLocations"
         ],
         "summary": "Update",
         "responses": {
@@ -344,7 +330,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.InventoryLocation"
+                  "$ref": "#/components/schemas/inventory.InventoryLocation"
                 }
               }
             }
@@ -371,7 +357,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.UpdateInventoryLocationInput"
+                "$ref": "#/components/schemas/inventory.UpdateInventoryLocationInput"
               }
             }
           }
@@ -382,7 +368,7 @@
       "delete": {
         "operationId": "inventory.inventoryLocations.delete",
         "tags": [
-          "inventoryLocations"
+          "inventory.inventoryLocations"
         ],
         "summary": "Delete",
         "responses": {
@@ -413,7 +399,7 @@
   },
   "components": {
     "schemas": {
-      "data.Equipment": {
+      "Equipment": {
         "type": "object",
         "properties": {
           "name": {
@@ -483,7 +469,77 @@
           "summary"
         ]
       },
-      "data.CreateEquipmentInput": {
+      "EquipmentFilter": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "modelNumber": {
+            "type": "string"
+          },
+          "serialNumber": {
+            "type": "string"
+          },
+          "equipmentType": {
+            "type": "string"
+          },
+          "manufacturer": {
+            "type": "string"
+          },
+          "purchaseDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "purchasePrice": {
+            "type": "number"
+          },
+          "warrantyExpiration": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string"
+          },
+          "currentLocation": {
+            "type": "string"
+          },
+          "images": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "maintenanceRecords": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "searchString": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "modelNumber",
+          "serialNumber",
+          "equipmentType",
+          "manufacturer",
+          "purchaseDate",
+          "purchasePrice",
+          "status",
+          "currentLocation",
+          "images",
+          "maintenanceRecords",
+          "searchString",
+          "summary"
+        ]
+      },
+      "CreateEquipmentInput": {
         "type": "object",
         "properties": {
           "name": {
@@ -554,69 +610,7 @@
         ],
         "description": "Auto-generated createInput for Equipment"
       },
-      "data.InventoryLocationFilter": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "code": {
-            "type": "string"
-          },
-          "locationType": {
-            "type": "string"
-          },
-          "status": {
-            "type": "string"
-          },
-          "address": {
-            "type": "string"
-          },
-          "manager": {
-            "type": "string"
-          },
-          "contactPhone": {
-            "type": "string"
-          },
-          "contactEmail": {
-            "type": "string"
-          },
-          "storageCapacity": {
-            "type": "number"
-          },
-          "currentUtilization": {
-            "type": "number"
-          },
-          "images": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "searchString": {
-            "type": "string"
-          },
-          "summary": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "name",
-          "code",
-          "locationType",
-          "status",
-          "address",
-          "manager",
-          "contactPhone",
-          "contactEmail",
-          "storageCapacity",
-          "currentUtilization",
-          "images",
-          "searchString",
-          "summary"
-        ]
-      },
-      "data.UpdateEquipmentInput": {
+      "UpdateEquipmentInput": {
         "type": "object",
         "properties": {
           "name": {
@@ -687,70 +681,7 @@
         ],
         "description": "Auto-generated updateInput for Equipment"
       },
-      "data.UpdateInventoryLocationInput": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "code": {
-            "type": "string"
-          },
-          "locationType": {
-            "type": "string"
-          },
-          "status": {
-            "type": "string"
-          },
-          "address": {
-            "type": "string"
-          },
-          "manager": {
-            "type": "string"
-          },
-          "contactPhone": {
-            "type": "string"
-          },
-          "contactEmail": {
-            "type": "string"
-          },
-          "storageCapacity": {
-            "type": "number"
-          },
-          "currentUtilization": {
-            "type": "number"
-          },
-          "images": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "searchString": {
-            "type": "string"
-          },
-          "summary": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "name",
-          "code",
-          "locationType",
-          "status",
-          "address",
-          "manager",
-          "contactPhone",
-          "contactEmail",
-          "storageCapacity",
-          "currentUtilization",
-          "images",
-          "searchString",
-          "summary"
-        ],
-        "description": "Auto-generated updateInput for InventoryLocation"
-      },
-      "data.InventoryLocation": {
+      "InventoryLocation": {
         "type": "object",
         "properties": {
           "name": {
@@ -812,48 +743,40 @@
           "summary"
         ]
       },
-      "data.EquipmentFilter": {
+      "InventoryLocationFilter": {
         "type": "object",
         "properties": {
           "name": {
             "type": "string"
           },
-          "modelNumber": {
+          "code": {
             "type": "string"
           },
-          "serialNumber": {
+          "locationType": {
             "type": "string"
-          },
-          "equipmentType": {
-            "type": "string"
-          },
-          "manufacturer": {
-            "type": "string"
-          },
-          "purchaseDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "purchasePrice": {
-            "type": "number"
-          },
-          "warrantyExpiration": {
-            "type": "string",
-            "format": "date-time"
           },
           "status": {
             "type": "string"
           },
-          "currentLocation": {
+          "address": {
             "type": "string"
           },
-          "images": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "manager": {
+            "type": "string"
           },
-          "maintenanceRecords": {
+          "contactPhone": {
+            "type": "string"
+          },
+          "contactEmail": {
+            "type": "string"
+          },
+          "storageCapacity": {
+            "type": "number"
+          },
+          "currentUtilization": {
+            "type": "number"
+          },
+          "images": {
             "type": "array",
             "items": {
               "type": "string"
@@ -868,21 +791,21 @@
         },
         "required": [
           "name",
-          "modelNumber",
-          "serialNumber",
-          "equipmentType",
-          "manufacturer",
-          "purchaseDate",
-          "purchasePrice",
+          "code",
+          "locationType",
           "status",
-          "currentLocation",
+          "address",
+          "manager",
+          "contactPhone",
+          "contactEmail",
+          "storageCapacity",
+          "currentUtilization",
           "images",
-          "maintenanceRecords",
           "searchString",
           "summary"
         ]
       },
-      "data.CreateInventoryLocationInput": {
+      "CreateInventoryLocationInput": {
         "type": "object",
         "properties": {
           "name": {
@@ -944,6 +867,69 @@
           "summary"
         ],
         "description": "Auto-generated createInput for InventoryLocation"
+      },
+      "UpdateInventoryLocationInput": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          },
+          "locationType": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "manager": {
+            "type": "string"
+          },
+          "contactPhone": {
+            "type": "string"
+          },
+          "contactEmail": {
+            "type": "string"
+          },
+          "storageCapacity": {
+            "type": "number"
+          },
+          "currentUtilization": {
+            "type": "number"
+          },
+          "images": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "searchString": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "code",
+          "locationType",
+          "status",
+          "address",
+          "manager",
+          "contactPhone",
+          "contactEmail",
+          "storageCapacity",
+          "currentUtilization",
+          "images",
+          "searchString",
+          "summary"
+        ],
+        "description": "Auto-generated updateInput for InventoryLocation"
       }
     }
   }

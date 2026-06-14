@@ -1,33 +1,16 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Settings API",
+    "title": "settings API",
     "version": "0.0.0",
-    "description": "Aggregate OpenAPI 3.1 document for all enterprise modules, generated from FCG InterfaceSpecs."
+    "description": "CRUD endpoints for models owned by the settings module."
   },
-  "servers": [
-    {
-      "url": "/",
-      "description": "Current host"
-    }
-  ],
-  "tags": [
-    {
-      "name": "notificationSettings"
-    },
-    {
-      "name": "securitySettings"
-    },
-    {
-      "name": "settingsScopes"
-    }
-  ],
   "paths": {
     "/api/settings/notificationSettings": {
       "get": {
         "operationId": "settings.notificationSettings.query",
         "tags": [
-          "notificationSettings"
+          "settings.notificationSettings"
         ],
         "summary": "Query",
         "responses": {
@@ -38,7 +21,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/data.NotificationSetting"
+                    "$ref": "#/components/schemas/settings.NotificationSetting"
                   }
                 }
               }
@@ -57,7 +40,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "$ref": "#/components/schemas/data.NotificationSettingFilter"
+              "$ref": "#/components/schemas/settings.NotificationSettingFilter"
             }
           }
         ],
@@ -67,7 +50,7 @@
       "post": {
         "operationId": "settings.notificationSettings.create",
         "tags": [
-          "notificationSettings"
+          "settings.notificationSettings"
         ],
         "summary": "Create",
         "responses": {
@@ -76,7 +59,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.NotificationSetting"
+                  "$ref": "#/components/schemas/settings.NotificationSetting"
                 }
               }
             }
@@ -93,7 +76,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.CreateNotificationSettingInput"
+                "$ref": "#/components/schemas/settings.CreateNotificationSettingInput"
               }
             }
           }
@@ -106,7 +89,7 @@
       "get": {
         "operationId": "settings.notificationSettings.getById",
         "tags": [
-          "notificationSettings"
+          "settings.notificationSettings"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -115,7 +98,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.NotificationSetting"
+                  "$ref": "#/components/schemas/settings.NotificationSetting"
                 }
               }
             }
@@ -143,7 +126,7 @@
       "put": {
         "operationId": "settings.notificationSettings.update",
         "tags": [
-          "notificationSettings"
+          "settings.notificationSettings"
         ],
         "summary": "Update",
         "responses": {
@@ -152,7 +135,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.NotificationSetting"
+                  "$ref": "#/components/schemas/settings.NotificationSetting"
                 }
               }
             }
@@ -179,7 +162,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.UpdateNotificationSettingInput"
+                "$ref": "#/components/schemas/settings.UpdateNotificationSettingInput"
               }
             }
           }
@@ -190,7 +173,7 @@
       "delete": {
         "operationId": "settings.notificationSettings.delete",
         "tags": [
-          "notificationSettings"
+          "settings.notificationSettings"
         ],
         "summary": "Delete",
         "responses": {
@@ -222,7 +205,7 @@
       "get": {
         "operationId": "settings.securitySettings.query",
         "tags": [
-          "securitySettings"
+          "settings.securitySettings"
         ],
         "summary": "Query",
         "responses": {
@@ -233,7 +216,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/data.SecuritySetting"
+                    "$ref": "#/components/schemas/settings.SecuritySetting"
                   }
                 }
               }
@@ -252,7 +235,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "$ref": "#/components/schemas/data.SecuritySettingFilter"
+              "$ref": "#/components/schemas/settings.SecuritySettingFilter"
             }
           }
         ],
@@ -262,7 +245,7 @@
       "post": {
         "operationId": "settings.securitySettings.create",
         "tags": [
-          "securitySettings"
+          "settings.securitySettings"
         ],
         "summary": "Create",
         "responses": {
@@ -271,7 +254,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.SecuritySetting"
+                  "$ref": "#/components/schemas/settings.SecuritySetting"
                 }
               }
             }
@@ -288,7 +271,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.CreateSecuritySettingInput"
+                "$ref": "#/components/schemas/settings.CreateSecuritySettingInput"
               }
             }
           }
@@ -301,7 +284,7 @@
       "get": {
         "operationId": "settings.securitySettings.getById",
         "tags": [
-          "securitySettings"
+          "settings.securitySettings"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -310,7 +293,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.SecuritySetting"
+                  "$ref": "#/components/schemas/settings.SecuritySetting"
                 }
               }
             }
@@ -338,7 +321,7 @@
       "put": {
         "operationId": "settings.securitySettings.update",
         "tags": [
-          "securitySettings"
+          "settings.securitySettings"
         ],
         "summary": "Update",
         "responses": {
@@ -347,7 +330,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.SecuritySetting"
+                  "$ref": "#/components/schemas/settings.SecuritySetting"
                 }
               }
             }
@@ -374,7 +357,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.UpdateSecuritySettingInput"
+                "$ref": "#/components/schemas/settings.UpdateSecuritySettingInput"
               }
             }
           }
@@ -385,7 +368,7 @@
       "delete": {
         "operationId": "settings.securitySettings.delete",
         "tags": [
-          "securitySettings"
+          "settings.securitySettings"
         ],
         "summary": "Delete",
         "responses": {
@@ -417,7 +400,7 @@
       "get": {
         "operationId": "settings.settingsScopes.query",
         "tags": [
-          "settingsScopes"
+          "settings.settingsScopes"
         ],
         "summary": "Query",
         "responses": {
@@ -428,7 +411,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/data.SettingScope"
+                    "$ref": "#/components/schemas/settings.SettingScope"
                   }
                 }
               }
@@ -447,7 +430,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "$ref": "#/components/schemas/data.SettingScopeFilter"
+              "$ref": "#/components/schemas/settings.SettingScopeFilter"
             }
           }
         ],
@@ -457,7 +440,7 @@
       "post": {
         "operationId": "settings.settingsScopes.create",
         "tags": [
-          "settingsScopes"
+          "settings.settingsScopes"
         ],
         "summary": "Create",
         "responses": {
@@ -466,7 +449,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.SettingScope"
+                  "$ref": "#/components/schemas/settings.SettingScope"
                 }
               }
             }
@@ -483,7 +466,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.CreateSettingScopeInput"
+                "$ref": "#/components/schemas/settings.CreateSettingScopeInput"
               }
             }
           }
@@ -496,7 +479,7 @@
       "get": {
         "operationId": "settings.settingsScopes.getById",
         "tags": [
-          "settingsScopes"
+          "settings.settingsScopes"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -505,7 +488,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.SettingScope"
+                  "$ref": "#/components/schemas/settings.SettingScope"
                 }
               }
             }
@@ -533,7 +516,7 @@
       "put": {
         "operationId": "settings.settingsScopes.update",
         "tags": [
-          "settingsScopes"
+          "settings.settingsScopes"
         ],
         "summary": "Update",
         "responses": {
@@ -542,7 +525,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.SettingScope"
+                  "$ref": "#/components/schemas/settings.SettingScope"
                 }
               }
             }
@@ -569,7 +552,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.UpdateSettingScopeInput"
+                "$ref": "#/components/schemas/settings.UpdateSettingScopeInput"
               }
             }
           }
@@ -580,7 +563,7 @@
       "delete": {
         "operationId": "settings.settingsScopes.delete",
         "tags": [
-          "settingsScopes"
+          "settings.settingsScopes"
         ],
         "summary": "Delete",
         "responses": {
@@ -611,85 +594,7 @@
   },
   "components": {
     "schemas": {
-      "data.SecuritySetting": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "group": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string"
-          },
-          "status": {
-            "type": "string"
-          },
-          "defaultValue": {
-            "type": "boolean"
-          },
-          "userConfigurable": {
-            "type": "boolean"
-          },
-          "order": {
-            "type": "number"
-          },
-          "accessLevel": {
-            "type": "string"
-          },
-          "enforcementLevel": {
-            "type": "string"
-          },
-          "searchString": {
-            "type": "string"
-          },
-          "summary": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "name",
-          "description",
-          "group",
-          "type",
-          "status",
-          "defaultValue",
-          "userConfigurable",
-          "order",
-          "accessLevel",
-          "enforcementLevel",
-          "searchString",
-          "summary"
-        ]
-      },
-      "data.SettingScopeFilter": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "key": {
-            "type": "string"
-          },
-          "searchString": {
-            "type": "string"
-          },
-          "summary": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "name",
-          "key",
-          "searchString",
-          "summary"
-        ]
-      },
-      "data.NotificationSettingFilter": {
+      "NotificationSetting": {
         "type": "object",
         "properties": {
           "name": {
@@ -740,7 +645,7 @@
           "summary"
         ]
       },
-      "data.UpdateNotificationSettingInput": {
+      "NotificationSettingFilter": {
         "type": "object",
         "properties": {
           "name": {
@@ -789,113 +694,9 @@
           "order",
           "searchString",
           "summary"
-        ],
-        "description": "Auto-generated updateInput for NotificationSetting"
-      },
-      "data.UpdateSecuritySettingInput": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "group": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string"
-          },
-          "status": {
-            "type": "string"
-          },
-          "defaultValue": {
-            "type": "boolean"
-          },
-          "userConfigurable": {
-            "type": "boolean"
-          },
-          "order": {
-            "type": "number"
-          },
-          "accessLevel": {
-            "type": "string"
-          },
-          "enforcementLevel": {
-            "type": "string"
-          },
-          "searchString": {
-            "type": "string"
-          },
-          "summary": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "name",
-          "description",
-          "group",
-          "type",
-          "status",
-          "defaultValue",
-          "userConfigurable",
-          "order",
-          "accessLevel",
-          "enforcementLevel",
-          "searchString",
-          "summary"
-        ],
-        "description": "Auto-generated updateInput for SecuritySetting"
-      },
-      "data.SettingScope": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "key": {
-            "type": "string"
-          },
-          "searchString": {
-            "type": "string"
-          },
-          "summary": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "name",
-          "key",
-          "searchString",
-          "summary"
         ]
       },
-      "data.CreateSettingScopeInput": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "key": {
-            "type": "string"
-          },
-          "searchString": {
-            "type": "string"
-          },
-          "summary": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "name",
-          "key",
-          "searchString",
-          "summary"
-        ],
-        "description": "Auto-generated createInput for SettingScope"
-      },
-      "data.CreateNotificationSettingInput": {
+      "CreateNotificationSettingInput": {
         "type": "object",
         "properties": {
           "name": {
@@ -947,13 +748,89 @@
         ],
         "description": "Auto-generated createInput for NotificationSetting"
       },
-      "data.UpdateSettingScopeInput": {
+      "UpdateNotificationSettingInput": {
         "type": "object",
         "properties": {
           "name": {
             "type": "string"
           },
-          "key": {
+          "description": {
+            "type": "string"
+          },
+          "group": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "channel": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "defaultValue": {
+            "type": "boolean"
+          },
+          "userConfigurable": {
+            "type": "boolean"
+          },
+          "order": {
+            "type": "number"
+          },
+          "searchString": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "description",
+          "group",
+          "type",
+          "channel",
+          "status",
+          "defaultValue",
+          "userConfigurable",
+          "order",
+          "searchString",
+          "summary"
+        ],
+        "description": "Auto-generated updateInput for NotificationSetting"
+      },
+      "SecuritySetting": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "group": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "defaultValue": {
+            "type": "boolean"
+          },
+          "userConfigurable": {
+            "type": "boolean"
+          },
+          "order": {
+            "type": "number"
+          },
+          "accessLevel": {
+            "type": "string"
+          },
+          "enforcementLevel": {
             "type": "string"
           },
           "searchString": {
@@ -965,13 +842,75 @@
         },
         "required": [
           "name",
-          "key",
+          "description",
+          "group",
+          "type",
+          "status",
+          "defaultValue",
+          "userConfigurable",
+          "order",
+          "accessLevel",
+          "enforcementLevel",
           "searchString",
           "summary"
-        ],
-        "description": "Auto-generated updateInput for SettingScope"
+        ]
       },
-      "data.CreateSecuritySettingInput": {
+      "SecuritySettingFilter": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "group": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "defaultValue": {
+            "type": "boolean"
+          },
+          "userConfigurable": {
+            "type": "boolean"
+          },
+          "order": {
+            "type": "number"
+          },
+          "accessLevel": {
+            "type": "string"
+          },
+          "enforcementLevel": {
+            "type": "string"
+          },
+          "searchString": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "description",
+          "group",
+          "type",
+          "status",
+          "defaultValue",
+          "userConfigurable",
+          "order",
+          "accessLevel",
+          "enforcementLevel",
+          "searchString",
+          "summary"
+        ]
+      },
+      "CreateSecuritySettingInput": {
         "type": "object",
         "properties": {
           "name": {
@@ -1027,58 +966,7 @@
         ],
         "description": "Auto-generated createInput for SecuritySetting"
       },
-      "data.NotificationSetting": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "group": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string"
-          },
-          "channel": {
-            "type": "string"
-          },
-          "status": {
-            "type": "string"
-          },
-          "defaultValue": {
-            "type": "boolean"
-          },
-          "userConfigurable": {
-            "type": "boolean"
-          },
-          "order": {
-            "type": "number"
-          },
-          "searchString": {
-            "type": "string"
-          },
-          "summary": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "name",
-          "description",
-          "group",
-          "type",
-          "channel",
-          "status",
-          "defaultValue",
-          "userConfigurable",
-          "order",
-          "searchString",
-          "summary"
-        ]
-      },
-      "data.SecuritySettingFilter": {
+      "UpdateSecuritySettingInput": {
         "type": "object",
         "properties": {
           "name": {
@@ -1131,7 +1019,102 @@
           "enforcementLevel",
           "searchString",
           "summary"
+        ],
+        "description": "Auto-generated updateInput for SecuritySetting"
+      },
+      "SettingScope": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "key": {
+            "type": "string"
+          },
+          "searchString": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "key",
+          "searchString",
+          "summary"
         ]
+      },
+      "SettingScopeFilter": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "key": {
+            "type": "string"
+          },
+          "searchString": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "key",
+          "searchString",
+          "summary"
+        ]
+      },
+      "CreateSettingScopeInput": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "key": {
+            "type": "string"
+          },
+          "searchString": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "key",
+          "searchString",
+          "summary"
+        ],
+        "description": "Auto-generated createInput for SettingScope"
+      },
+      "UpdateSettingScopeInput": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "key": {
+            "type": "string"
+          },
+          "searchString": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "key",
+          "searchString",
+          "summary"
+        ],
+        "description": "Auto-generated updateInput for SettingScope"
       }
     }
   }

@@ -1,27 +1,16 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Support API",
+    "title": "support API",
     "version": "0.0.0",
-    "description": "Aggregate OpenAPI 3.1 document for all enterprise modules, generated from FCG InterfaceSpecs."
+    "description": "CRUD endpoints for models owned by the support module."
   },
-  "servers": [
-    {
-      "url": "/",
-      "description": "Current host"
-    }
-  ],
-  "tags": [
-    {
-      "name": "supportDocumentationPages"
-    }
-  ],
   "paths": {
     "/api/support/supportDocumentationPages": {
       "get": {
         "operationId": "support.supportDocumentationPages.query",
         "tags": [
-          "supportDocumentationPages"
+          "support.supportDocumentationPages"
         ],
         "summary": "Query",
         "responses": {
@@ -32,7 +21,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/data.SupportDocumentationPage"
+                    "$ref": "#/components/schemas/support.SupportDocumentationPage"
                   }
                 }
               }
@@ -51,7 +40,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "$ref": "#/components/schemas/data.SupportDocumentationPageFilter"
+              "$ref": "#/components/schemas/support.SupportDocumentationPageFilter"
             }
           }
         ],
@@ -61,7 +50,7 @@
       "post": {
         "operationId": "support.supportDocumentationPages.create",
         "tags": [
-          "supportDocumentationPages"
+          "support.supportDocumentationPages"
         ],
         "summary": "Create",
         "responses": {
@@ -70,7 +59,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.SupportDocumentationPage"
+                  "$ref": "#/components/schemas/support.SupportDocumentationPage"
                 }
               }
             }
@@ -87,7 +76,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.CreateSupportDocumentationPageInput"
+                "$ref": "#/components/schemas/support.CreateSupportDocumentationPageInput"
               }
             }
           }
@@ -100,7 +89,7 @@
       "get": {
         "operationId": "support.supportDocumentationPages.getById",
         "tags": [
-          "supportDocumentationPages"
+          "support.supportDocumentationPages"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -109,7 +98,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.SupportDocumentationPage"
+                  "$ref": "#/components/schemas/support.SupportDocumentationPage"
                 }
               }
             }
@@ -137,7 +126,7 @@
       "put": {
         "operationId": "support.supportDocumentationPages.update",
         "tags": [
-          "supportDocumentationPages"
+          "support.supportDocumentationPages"
         ],
         "summary": "Update",
         "responses": {
@@ -146,7 +135,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.SupportDocumentationPage"
+                  "$ref": "#/components/schemas/support.SupportDocumentationPage"
                 }
               }
             }
@@ -173,7 +162,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.UpdateSupportDocumentationPageInput"
+                "$ref": "#/components/schemas/support.UpdateSupportDocumentationPageInput"
               }
             }
           }
@@ -184,7 +173,7 @@
       "delete": {
         "operationId": "support.supportDocumentationPages.delete",
         "tags": [
-          "supportDocumentationPages"
+          "support.supportDocumentationPages"
         ],
         "summary": "Delete",
         "responses": {
@@ -215,7 +204,157 @@
   },
   "components": {
     "schemas": {
-      "data.CreateSupportDocumentationPageInput": {
+      "SupportDocumentationPage": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Display name of the documentation page"
+          },
+          "slug": {
+            "type": "string",
+            "description": "Short URL / slug for this page (auto-generated from name)"
+          },
+          "url": {
+            "type": "string",
+            "description": "Relative URL used by the Help & Support viewer to look up this page (e.g. \"/getting-started/welcome\"). Must be unique per workspace."
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "draft-pending",
+              "review",
+              "published",
+              "archived"
+            ],
+            "description": "Publication status of the documentation page"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "guide",
+              "tutorial",
+              "reference",
+              "faq",
+              "release-notes",
+              "troubleshooting"
+            ],
+            "description": "Category type of this documentation page"
+          },
+          "description": {
+            "description": "Short summary or meta description for this page"
+          },
+          "parentPage": {
+            "type": "string",
+            "description": "Parent documentation page (for nested/hierarchical docs)"
+          },
+          "previewImage": {
+            "type": "string",
+            "description": "Preview image or thumbnail for this documentation page"
+          },
+          "content": {
+            "description": "Full content of the documentation page"
+          },
+          "relatedArticles": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": true
+            },
+            "description": "Hand-curated cards shown in the \"Related articles\" section at the bottom of the page. Each entry links to another doc page by its relative URL."
+          },
+          "createdByDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedByDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "name",
+          "status",
+          "createdByDate",
+          "updatedByDate"
+        ]
+      },
+      "SupportDocumentationPageFilter": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Display name of the documentation page"
+          },
+          "slug": {
+            "type": "string",
+            "description": "Short URL / slug for this page (auto-generated from name)"
+          },
+          "url": {
+            "type": "string",
+            "description": "Relative URL used by the Help & Support viewer to look up this page (e.g. \"/getting-started/welcome\"). Must be unique per workspace."
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "draft-pending",
+              "review",
+              "published",
+              "archived"
+            ],
+            "description": "Publication status of the documentation page"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "guide",
+              "tutorial",
+              "reference",
+              "faq",
+              "release-notes",
+              "troubleshooting"
+            ],
+            "description": "Category type of this documentation page"
+          },
+          "description": {
+            "description": "Short summary or meta description for this page"
+          },
+          "parentPage": {
+            "type": "string",
+            "description": "Parent documentation page (for nested/hierarchical docs)"
+          },
+          "previewImage": {
+            "type": "string",
+            "description": "Preview image or thumbnail for this documentation page"
+          },
+          "content": {
+            "description": "Full content of the documentation page"
+          },
+          "relatedArticles": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": true
+            },
+            "description": "Hand-curated cards shown in the \"Related articles\" section at the bottom of the page. Each entry links to another doc page by its relative URL."
+          },
+          "createdByDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedByDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "name",
+          "status",
+          "createdByDate",
+          "updatedByDate"
+        ]
+      },
+      "CreateSupportDocumentationPageInput": {
         "type": "object",
         "properties": {
           "name": {
@@ -291,7 +430,7 @@
         ],
         "description": "Auto-generated createInput for SupportDocumentationPage"
       },
-      "data.UpdateSupportDocumentationPageInput": {
+      "UpdateSupportDocumentationPageInput": {
         "type": "object",
         "properties": {
           "name": {
@@ -366,156 +505,6 @@
           "updatedByDate"
         ],
         "description": "Auto-generated updateInput for SupportDocumentationPage"
-      },
-      "data.SupportDocumentationPage": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "Display name of the documentation page"
-          },
-          "slug": {
-            "type": "string",
-            "description": "Short URL / slug for this page (auto-generated from name)"
-          },
-          "url": {
-            "type": "string",
-            "description": "Relative URL used by the Help & Support viewer to look up this page (e.g. \"/getting-started/welcome\"). Must be unique per workspace."
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "draft-pending",
-              "review",
-              "published",
-              "archived"
-            ],
-            "description": "Publication status of the documentation page"
-          },
-          "type": {
-            "type": "string",
-            "enum": [
-              "guide",
-              "tutorial",
-              "reference",
-              "faq",
-              "release-notes",
-              "troubleshooting"
-            ],
-            "description": "Category type of this documentation page"
-          },
-          "description": {
-            "description": "Short summary or meta description for this page"
-          },
-          "parentPage": {
-            "type": "string",
-            "description": "Parent documentation page (for nested/hierarchical docs)"
-          },
-          "previewImage": {
-            "type": "string",
-            "description": "Preview image or thumbnail for this documentation page"
-          },
-          "content": {
-            "description": "Full content of the documentation page"
-          },
-          "relatedArticles": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "additionalProperties": true
-            },
-            "description": "Hand-curated cards shown in the \"Related articles\" section at the bottom of the page. Each entry links to another doc page by its relative URL."
-          },
-          "createdByDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updatedByDate": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "required": [
-          "name",
-          "status",
-          "createdByDate",
-          "updatedByDate"
-        ]
-      },
-      "data.SupportDocumentationPageFilter": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "Display name of the documentation page"
-          },
-          "slug": {
-            "type": "string",
-            "description": "Short URL / slug for this page (auto-generated from name)"
-          },
-          "url": {
-            "type": "string",
-            "description": "Relative URL used by the Help & Support viewer to look up this page (e.g. \"/getting-started/welcome\"). Must be unique per workspace."
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "draft-pending",
-              "review",
-              "published",
-              "archived"
-            ],
-            "description": "Publication status of the documentation page"
-          },
-          "type": {
-            "type": "string",
-            "enum": [
-              "guide",
-              "tutorial",
-              "reference",
-              "faq",
-              "release-notes",
-              "troubleshooting"
-            ],
-            "description": "Category type of this documentation page"
-          },
-          "description": {
-            "description": "Short summary or meta description for this page"
-          },
-          "parentPage": {
-            "type": "string",
-            "description": "Parent documentation page (for nested/hierarchical docs)"
-          },
-          "previewImage": {
-            "type": "string",
-            "description": "Preview image or thumbnail for this documentation page"
-          },
-          "content": {
-            "description": "Full content of the documentation page"
-          },
-          "relatedArticles": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "additionalProperties": true
-            },
-            "description": "Hand-curated cards shown in the \"Related articles\" section at the bottom of the page. Each entry links to another doc page by its relative URL."
-          },
-          "createdByDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updatedByDate": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "required": [
-          "name",
-          "status",
-          "createdByDate",
-          "updatedByDate"
-        ]
       }
     }
   }

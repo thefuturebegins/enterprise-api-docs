@@ -1,39 +1,248 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Analytics API",
-    "version": "0.0.0",
-    "description": "Aggregate OpenAPI 3.1 document for all enterprise modules, generated from FCG InterfaceSpecs."
+    "title": "analytics API",
+    "version": "1.0.12",
+    "description": "OpenAPI 3.1 document for the `analytics` module, generated from FCG InterfaceSpecs."
   },
-  "servers": [
-    {
-      "url": "/",
-      "description": "Current host"
-    }
-  ],
   "tags": [
     {
-      "name": "componentsAllowedInReportsSelection"
+      "name": "analytics.reporting"
     },
     {
-      "name": "reportCategory"
+      "name": "analytics.componentsAllowedInReportsSelection"
     },
     {
-      "name": "reportShare"
+      "name": "analytics.reportCategory"
     },
     {
-      "name": "reporting"
+      "name": "analytics.reportShare"
     },
     {
-      "name": "reports"
+      "name": "analytics.reports"
     }
   ],
   "paths": {
+    "/api/analytics/reporting/data": {
+      "get": {
+        "operationId": "analytics.reporting.getData",
+        "tags": [
+          "analytics.reporting"
+        ],
+        "summary": "Get Data",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReportDataResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "queryParams",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/ReportDataQueryParams"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "analytics:reporting:read"
+      }
+    },
+    "/api/analytics/reporting/list": {
+      "get": {
+        "operationId": "analytics.reporting.getAllReports",
+        "tags": [
+          "analytics.reporting"
+        ],
+        "summary": "Get All Reports",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Report"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "queryParams",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/AccountScopedQueryParams"
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "analytics:reporting:read"
+      }
+    },
+    "/api/analytics/reporting/by-category/{category}": {
+      "get": {
+        "operationId": "analytics.reporting.getReportsByCategory",
+        "tags": [
+          "analytics.reporting"
+        ],
+        "summary": "Get Reports By Category",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReportsByCategoryResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "params",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "additionalProperties": true
+            }
+          },
+          {
+            "name": "queryParams",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/AccountScopedQueryParams"
+            }
+          },
+          {
+            "name": "category",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "analytics:reporting:read"
+      }
+    },
+    "/api/analytics/reporting/categories": {
+      "get": {
+        "operationId": "analytics.reporting.getCategories",
+        "tags": [
+          "analytics.reporting"
+        ],
+        "summary": "Get Categories",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CategoriesResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "queryParams",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/AccountScopedQueryParams"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "analytics:reporting:read"
+      }
+    },
+    "/api/analytics/reporting/health": {
+      "get": {
+        "operationId": "analytics.reporting.healthCheck",
+        "tags": [
+          "analytics.reporting"
+        ],
+        "summary": "Health Check",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthCheckResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "analytics:reporting:read"
+      }
+    },
     "/api/analytics/reports": {
       "get": {
         "operationId": "analytics.reports.query",
         "tags": [
-          "reports"
+          "analytics.reports"
         ],
         "summary": "Query",
         "responses": {
@@ -44,7 +253,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/data.Report"
+                    "$ref": "#/components/schemas/Report"
                   }
                 }
               }
@@ -63,7 +272,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "$ref": "#/components/schemas/data.ReportFilter"
+              "$ref": "#/components/schemas/ReportFilter"
             }
           }
         ],
@@ -73,7 +282,7 @@
       "post": {
         "operationId": "analytics.reports.create",
         "tags": [
-          "reports"
+          "analytics.reports"
         ],
         "summary": "Create",
         "responses": {
@@ -82,7 +291,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.Report"
+                  "$ref": "#/components/schemas/Report"
                 }
               }
             }
@@ -99,7 +308,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.CreateReportInput"
+                "$ref": "#/components/schemas/CreateReportInput"
               }
             }
           }
@@ -112,7 +321,7 @@
       "get": {
         "operationId": "analytics.reports.getById",
         "tags": [
-          "reports"
+          "analytics.reports"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -121,7 +330,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.Report"
+                  "$ref": "#/components/schemas/Report"
                 }
               }
             }
@@ -149,7 +358,7 @@
       "put": {
         "operationId": "analytics.reports.update",
         "tags": [
-          "reports"
+          "analytics.reports"
         ],
         "summary": "Update",
         "responses": {
@@ -158,7 +367,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.Report"
+                  "$ref": "#/components/schemas/Report"
                 }
               }
             }
@@ -185,7 +394,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.UpdateReportInput"
+                "$ref": "#/components/schemas/UpdateReportInput"
               }
             }
           }
@@ -196,7 +405,7 @@
       "delete": {
         "operationId": "analytics.reports.delete",
         "tags": [
-          "reports"
+          "analytics.reports"
         ],
         "summary": "Delete",
         "responses": {
@@ -228,7 +437,7 @@
       "get": {
         "operationId": "analytics.reportCategory.query",
         "tags": [
-          "reportCategory"
+          "analytics.reportCategory"
         ],
         "summary": "Query",
         "responses": {
@@ -239,7 +448,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/data.ReportCategory"
+                    "$ref": "#/components/schemas/ReportCategory"
                   }
                 }
               }
@@ -258,7 +467,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "$ref": "#/components/schemas/data.ReportCategoryFilter"
+              "$ref": "#/components/schemas/ReportCategoryFilter"
             }
           }
         ],
@@ -268,7 +477,7 @@
       "post": {
         "operationId": "analytics.reportCategory.create",
         "tags": [
-          "reportCategory"
+          "analytics.reportCategory"
         ],
         "summary": "Create",
         "responses": {
@@ -277,7 +486,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.ReportCategory"
+                  "$ref": "#/components/schemas/ReportCategory"
                 }
               }
             }
@@ -294,7 +503,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.CreateReportCategoryInput"
+                "$ref": "#/components/schemas/CreateReportCategoryInput"
               }
             }
           }
@@ -307,7 +516,7 @@
       "get": {
         "operationId": "analytics.reportCategory.getById",
         "tags": [
-          "reportCategory"
+          "analytics.reportCategory"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -316,7 +525,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.ReportCategory"
+                  "$ref": "#/components/schemas/ReportCategory"
                 }
               }
             }
@@ -344,7 +553,7 @@
       "put": {
         "operationId": "analytics.reportCategory.update",
         "tags": [
-          "reportCategory"
+          "analytics.reportCategory"
         ],
         "summary": "Update",
         "responses": {
@@ -353,7 +562,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.ReportCategory"
+                  "$ref": "#/components/schemas/ReportCategory"
                 }
               }
             }
@@ -380,7 +589,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.UpdateReportCategoryInput"
+                "$ref": "#/components/schemas/UpdateReportCategoryInput"
               }
             }
           }
@@ -391,7 +600,7 @@
       "delete": {
         "operationId": "analytics.reportCategory.delete",
         "tags": [
-          "reportCategory"
+          "analytics.reportCategory"
         ],
         "summary": "Delete",
         "responses": {
@@ -423,7 +632,7 @@
       "get": {
         "operationId": "analytics.reportShare.query",
         "tags": [
-          "reportShare"
+          "analytics.reportShare"
         ],
         "summary": "Query",
         "responses": {
@@ -434,7 +643,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/data.ReportShare"
+                    "$ref": "#/components/schemas/ReportShare"
                   }
                 }
               }
@@ -453,7 +662,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "$ref": "#/components/schemas/data.ReportShareFilter"
+              "$ref": "#/components/schemas/ReportShareFilter"
             }
           }
         ],
@@ -463,7 +672,7 @@
       "post": {
         "operationId": "analytics.reportShare.create",
         "tags": [
-          "reportShare"
+          "analytics.reportShare"
         ],
         "summary": "Create",
         "responses": {
@@ -472,7 +681,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.ReportShare"
+                  "$ref": "#/components/schemas/ReportShare"
                 }
               }
             }
@@ -489,7 +698,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.CreateReportShareInput"
+                "$ref": "#/components/schemas/CreateReportShareInput"
               }
             }
           }
@@ -502,7 +711,7 @@
       "get": {
         "operationId": "analytics.reportShare.getById",
         "tags": [
-          "reportShare"
+          "analytics.reportShare"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -511,7 +720,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.ReportShare"
+                  "$ref": "#/components/schemas/ReportShare"
                 }
               }
             }
@@ -539,7 +748,7 @@
       "put": {
         "operationId": "analytics.reportShare.update",
         "tags": [
-          "reportShare"
+          "analytics.reportShare"
         ],
         "summary": "Update",
         "responses": {
@@ -548,7 +757,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.ReportShare"
+                  "$ref": "#/components/schemas/ReportShare"
                 }
               }
             }
@@ -575,7 +784,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.UpdateReportShareInput"
+                "$ref": "#/components/schemas/UpdateReportShareInput"
               }
             }
           }
@@ -586,7 +795,7 @@
       "delete": {
         "operationId": "analytics.reportShare.delete",
         "tags": [
-          "reportShare"
+          "analytics.reportShare"
         ],
         "summary": "Delete",
         "responses": {
@@ -618,7 +827,7 @@
       "get": {
         "operationId": "analytics.componentsAllowedInReportsSelection.query",
         "tags": [
-          "componentsAllowedInReportsSelection"
+          "analytics.componentsAllowedInReportsSelection"
         ],
         "summary": "Query",
         "responses": {
@@ -629,7 +838,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/data.ComponentsAllowedInReportsSelection"
+                    "$ref": "#/components/schemas/ComponentsAllowedInReportsSelection"
                   }
                 }
               }
@@ -648,7 +857,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "$ref": "#/components/schemas/data.ComponentsAllowedInReportsSelectionFilter"
+              "$ref": "#/components/schemas/ComponentsAllowedInReportsSelectionFilter"
             }
           }
         ],
@@ -658,7 +867,7 @@
       "post": {
         "operationId": "analytics.componentsAllowedInReportsSelection.create",
         "tags": [
-          "componentsAllowedInReportsSelection"
+          "analytics.componentsAllowedInReportsSelection"
         ],
         "summary": "Create",
         "responses": {
@@ -667,7 +876,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.ComponentsAllowedInReportsSelection"
+                  "$ref": "#/components/schemas/ComponentsAllowedInReportsSelection"
                 }
               }
             }
@@ -684,7 +893,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.CreateComponentsAllowedInReportsSelectionInput"
+                "$ref": "#/components/schemas/CreateComponentsAllowedInReportsSelectionInput"
               }
             }
           }
@@ -697,7 +906,7 @@
       "get": {
         "operationId": "analytics.componentsAllowedInReportsSelection.getById",
         "tags": [
-          "componentsAllowedInReportsSelection"
+          "analytics.componentsAllowedInReportsSelection"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -706,7 +915,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.ComponentsAllowedInReportsSelection"
+                  "$ref": "#/components/schemas/ComponentsAllowedInReportsSelection"
                 }
               }
             }
@@ -734,7 +943,7 @@
       "put": {
         "operationId": "analytics.componentsAllowedInReportsSelection.update",
         "tags": [
-          "componentsAllowedInReportsSelection"
+          "analytics.componentsAllowedInReportsSelection"
         ],
         "summary": "Update",
         "responses": {
@@ -743,7 +952,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.ComponentsAllowedInReportsSelection"
+                  "$ref": "#/components/schemas/ComponentsAllowedInReportsSelection"
                 }
               }
             }
@@ -770,7 +979,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.UpdateComponentsAllowedInReportsSelectionInput"
+                "$ref": "#/components/schemas/UpdateComponentsAllowedInReportsSelectionInput"
               }
             }
           }
@@ -781,7 +990,7 @@
       "delete": {
         "operationId": "analytics.componentsAllowedInReportsSelection.delete",
         "tags": [
-          "componentsAllowedInReportsSelection"
+          "analytics.componentsAllowedInReportsSelection"
         ],
         "summary": "Delete",
         "responses": {
@@ -808,490 +1017,81 @@
         "x-scope": "clientServer",
         "x-permission": "analytics:componentsAllowedInReportsSelection:delete"
       }
-    },
-    "/api/analytics/reporting/data": {
-      "get": {
-        "operationId": "analytics.reporting.getData",
-        "tags": [
-          "reporting"
-        ],
-        "summary": "Get Data",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/analytics.ReportDataResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "queryParams",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/analytics.ReportDataQueryParams"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "analytics:reporting:read"
-      }
-    },
-    "/api/analytics/reporting/list": {
-      "get": {
-        "operationId": "analytics.reporting.getAllReports",
-        "tags": [
-          "reporting"
-        ],
-        "summary": "Get All Reports",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/analytics.Report"
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "queryParams",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/analytics.AccountScopedQueryParams"
-                },
-                {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "string"
-                  }
-                }
-              ]
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "analytics:reporting:read"
-      }
-    },
-    "/api/analytics/reporting/by-category/{category}": {
-      "get": {
-        "operationId": "analytics.reporting.getReportsByCategory",
-        "tags": [
-          "reporting"
-        ],
-        "summary": "Get Reports By Category",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/analytics.ReportsByCategoryResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "params",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "additionalProperties": true
-            }
-          },
-          {
-            "name": "queryParams",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/analytics.AccountScopedQueryParams"
-            }
-          },
-          {
-            "name": "category",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "analytics:reporting:read"
-      }
-    },
-    "/api/analytics/reporting/categories": {
-      "get": {
-        "operationId": "analytics.reporting.getCategories",
-        "tags": [
-          "reporting"
-        ],
-        "summary": "Get Categories",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/analytics.CategoriesResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "queryParams",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/analytics.AccountScopedQueryParams"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "analytics:reporting:read"
-      }
-    },
-    "/api/analytics/reporting/health": {
-      "get": {
-        "operationId": "analytics.reporting.healthCheck",
-        "tags": [
-          "reporting"
-        ],
-        "summary": "Health Check",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/analytics.HealthCheckResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "analytics:reporting:read"
-      }
     }
   },
   "components": {
     "schemas": {
-      "data.ComponentsAllowedInReportsSelectionFilter": {
+      "ReportDataResponse": {
         "type": "object",
         "properties": {
-          "componentId": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
             "type": "string"
           },
-          "componentKey": {
-            "type": "string"
+          "count": {
+            "type": "number"
           },
-          "reportId": {
-            "type": "string"
-          },
-          "reportKey": {
-            "type": "string"
-          }
+          "data": {}
         },
         "required": [
-          "componentId",
-          "componentKey",
-          "reportId",
-          "reportKey"
+          "success",
+          "data"
         ]
       },
-      "data.ReportFilter": {
+      "ReportDataQueryParams": {
         "type": "object",
         "properties": {
           "dataId": {
             "type": "string"
           },
-          "type": {
-            "type": "string"
-          },
-          "data": {
-            "type": "string"
-          },
-          "moduleId": {
-            "type": "string"
-          },
-          "moduleKey": {
-            "type": "string"
-          },
-          "featureId": {
-            "type": "string"
-          },
-          "featureKey": {
-            "type": "string"
-          },
-          "title": {
-            "type": "string"
-          },
-          "slug": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "subtitle": {
-            "type": "string"
-          },
-          "account": {
-            "type": "string"
-          },
-          "owner": {
-            "type": "string"
-          },
-          "ownerName": {
-            "type": "string"
-          },
-          "ownerAvatarUrl": {
-            "type": "string"
-          },
-          "thumbnailUrl": {
-            "type": "string"
-          },
-          "emoji": {
-            "type": "string"
-          },
-          "screenRef": {
-            "type": "string"
-          },
-          "parameters": {
-            "type": "string"
-          },
-          "themeRef": {
-            "type": "string"
-          },
-          "layout": {
-            "type": "string"
-          },
-          "visibility": {
-            "type": "string"
-          },
-          "status": {
-            "type": "string"
-          },
-          "version": {
-            "type": "string"
-          },
           "category": {
-            "type": "string",
-            "enum": [
-              "marketing",
-              "sales",
-              "customer-success",
-              "finance",
-              "product",
-              "operations"
-            ]
-          },
-          "avatarFile": {
-            "type": "string"
-          },
-          "previewImageFile": {
-            "type": "string"
-          },
-          "updatedByDate": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "required": [
-          "title"
-        ]
-      },
-      "data.ReportShareFilter": {
-        "type": "object",
-        "properties": {
-          "moduleId": {
-            "type": "string"
-          },
-          "moduleKey": {
-            "type": "string"
-          },
-          "featureId": {
-            "type": "string"
-          },
-          "featureKey": {
-            "type": "string"
-          },
-          "reportId": {
-            "type": "string"
-          },
-          "userId": {
-            "type": "string"
-          },
-          "permission": {
-            "type": "string"
-          },
-          "expiresAt": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "required": [
-          "moduleId",
-          "moduleKey",
-          "featureId",
-          "featureKey",
-          "reportId",
-          "userId",
-          "permission"
-        ]
-      },
-      "data.Report": {
-        "type": "object",
-        "properties": {
-          "dataId": {
             "type": "string"
           },
           "type": {
             "type": "string"
           },
-          "data": {
+          "accountId": {
             "type": "string"
-          },
-          "moduleId": {
+          }
+        }
+      },
+      "Report": {},
+      "AccountScopedQueryParams": {
+        "type": "object",
+        "properties": {
+          "accountId": {
             "type": "string"
+          }
+        }
+      },
+      "ReportsByCategoryResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
           },
-          "moduleKey": {
-            "type": "string"
-          },
-          "featureId": {
-            "type": "string"
-          },
-          "featureKey": {
-            "type": "string"
-          },
-          "title": {
-            "type": "string"
-          },
-          "slug": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "subtitle": {
-            "type": "string"
-          },
-          "account": {
-            "type": "string"
-          },
-          "owner": {
-            "type": "string"
-          },
-          "ownerName": {
-            "type": "string"
-          },
-          "ownerAvatarUrl": {
-            "type": "string"
-          },
-          "thumbnailUrl": {
-            "type": "string"
-          },
-          "emoji": {
-            "type": "string"
-          },
-          "screenRef": {
-            "type": "string"
-          },
-          "parameters": {
-            "type": "string"
-          },
-          "themeRef": {
-            "type": "string"
-          },
-          "layout": {
-            "type": "string"
-          },
-          "visibility": {
-            "type": "string"
-          },
-          "status": {
-            "type": "string"
-          },
-          "version": {
+          "message": {
             "type": "string"
           },
           "category": {
-            "type": "string",
-            "enum": [
-              "marketing",
-              "sales",
-              "customer-success",
-              "finance",
-              "product",
-              "operations"
-            ]
-          },
-          "avatarFile": {
             "type": "string"
           },
-          "previewImageFile": {
-            "type": "string"
+          "count": {
+            "type": "number"
           },
-          "updatedByDate": {
-            "type": "string",
-            "format": "date-time"
+          "data": {
+            "type": "array",
+            "items": {}
           }
         },
         "required": [
-          "title"
+          "success",
+          "data"
         ]
       },
-      "analytics.CategoriesResponse": {
+      "CategoriesResponse": {
         "type": "object",
         "properties": {
           "success": {
@@ -1312,7 +1112,124 @@
           "data"
         ]
       },
-      "data.CreateReportInput": {
+      "HealthCheckResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {}
+        },
+        "required": [
+          "success",
+          "data"
+        ]
+      },
+      "ReportFilter": {
+        "type": "object",
+        "properties": {
+          "dataId": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          },
+          "moduleId": {
+            "type": "string"
+          },
+          "moduleKey": {
+            "type": "string"
+          },
+          "featureId": {
+            "type": "string"
+          },
+          "featureKey": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "subtitle": {
+            "type": "string"
+          },
+          "account": {
+            "type": "string"
+          },
+          "owner": {
+            "type": "string"
+          },
+          "ownerName": {
+            "type": "string"
+          },
+          "ownerAvatarUrl": {
+            "type": "string"
+          },
+          "thumbnailUrl": {
+            "type": "string"
+          },
+          "emoji": {
+            "type": "string"
+          },
+          "screenRef": {
+            "type": "string"
+          },
+          "parameters": {
+            "type": "string"
+          },
+          "themeRef": {
+            "type": "string"
+          },
+          "layout": {
+            "type": "string"
+          },
+          "visibility": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "marketing",
+              "sales",
+              "customer-success",
+              "finance",
+              "product",
+              "operations"
+            ]
+          },
+          "avatarFile": {
+            "type": "string"
+          },
+          "previewImageFile": {
+            "type": "string"
+          },
+          "updatedByDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "title"
+        ]
+      },
+      "CreateReportInput": {
         "type": "object",
         "properties": {
           "dataId": {
@@ -1414,7 +1331,7 @@
         ],
         "description": "Auto-generated createInput for Report"
       },
-      "data.UpdateReportInput": {
+      "UpdateReportInput": {
         "type": "object",
         "properties": {
           "dataId": {
@@ -1516,75 +1433,7 @@
         ],
         "description": "Auto-generated updateInput for Report"
       },
-      "data.CreateComponentsAllowedInReportsSelectionInput": {
-        "type": "object",
-        "properties": {
-          "componentId": {
-            "type": "string"
-          },
-          "componentKey": {
-            "type": "string"
-          },
-          "reportId": {
-            "type": "string"
-          },
-          "reportKey": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "componentId",
-          "componentKey",
-          "reportId",
-          "reportKey"
-        ],
-        "description": "Auto-generated createInput for ComponentsAllowedInReportsSelection"
-      },
-      "analytics.ReportDataResponse": {
-        "type": "object",
-        "properties": {
-          "success": {
-            "type": "boolean"
-          },
-          "message": {
-            "type": "string"
-          },
-          "count": {
-            "type": "number"
-          },
-          "data": {}
-        },
-        "required": [
-          "success",
-          "data"
-        ]
-      },
-      "analytics.ReportsByCategoryResponse": {
-        "type": "object",
-        "properties": {
-          "success": {
-            "type": "boolean"
-          },
-          "message": {
-            "type": "string"
-          },
-          "category": {
-            "type": "string"
-          },
-          "count": {
-            "type": "number"
-          },
-          "data": {
-            "type": "array",
-            "items": {}
-          }
-        },
-        "required": [
-          "success",
-          "data"
-        ]
-      },
-      "data.ReportCategory": {
+      "ReportCategory": {
         "type": "object",
         "properties": {
           "key": {
@@ -1618,7 +1467,189 @@
           "name"
         ]
       },
-      "data.CreateReportShareInput": {
+      "ReportCategoryFilter": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "moduleId": {
+            "type": "string"
+          },
+          "moduleKey": {
+            "type": "string"
+          },
+          "featureId": {
+            "type": "string"
+          },
+          "featureKey": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "key",
+          "moduleId",
+          "moduleKey",
+          "featureId",
+          "featureKey",
+          "name"
+        ]
+      },
+      "CreateReportCategoryInput": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "moduleId": {
+            "type": "string"
+          },
+          "moduleKey": {
+            "type": "string"
+          },
+          "featureId": {
+            "type": "string"
+          },
+          "featureKey": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "key",
+          "moduleId",
+          "moduleKey",
+          "featureId",
+          "featureKey",
+          "name"
+        ],
+        "description": "Auto-generated createInput for ReportCategory"
+      },
+      "UpdateReportCategoryInput": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "moduleId": {
+            "type": "string"
+          },
+          "moduleKey": {
+            "type": "string"
+          },
+          "featureId": {
+            "type": "string"
+          },
+          "featureKey": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "key",
+          "moduleId",
+          "moduleKey",
+          "featureId",
+          "featureKey",
+          "name"
+        ],
+        "description": "Auto-generated updateInput for ReportCategory"
+      },
+      "ReportShare": {
+        "type": "object",
+        "properties": {
+          "moduleId": {
+            "type": "string"
+          },
+          "moduleKey": {
+            "type": "string"
+          },
+          "featureId": {
+            "type": "string"
+          },
+          "featureKey": {
+            "type": "string"
+          },
+          "reportId": {
+            "type": "string"
+          },
+          "userId": {
+            "type": "string"
+          },
+          "permission": {
+            "type": "string"
+          },
+          "expiresAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "moduleId",
+          "moduleKey",
+          "featureId",
+          "featureKey",
+          "reportId",
+          "userId",
+          "permission"
+        ]
+      },
+      "ReportShareFilter": {
+        "type": "object",
+        "properties": {
+          "moduleId": {
+            "type": "string"
+          },
+          "moduleKey": {
+            "type": "string"
+          },
+          "featureId": {
+            "type": "string"
+          },
+          "featureKey": {
+            "type": "string"
+          },
+          "reportId": {
+            "type": "string"
+          },
+          "userId": {
+            "type": "string"
+          },
+          "permission": {
+            "type": "string"
+          },
+          "expiresAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "moduleId",
+          "moduleKey",
+          "featureId",
+          "featureKey",
+          "reportId",
+          "userId",
+          "permission"
+        ]
+      },
+      "CreateReportShareInput": {
         "type": "object",
         "properties": {
           "moduleId": {
@@ -1658,198 +1689,7 @@
         ],
         "description": "Auto-generated createInput for ReportShare"
       },
-      "analytics.HealthCheckResponse": {
-        "type": "object",
-        "properties": {
-          "success": {
-            "type": "boolean"
-          },
-          "message": {
-            "type": "string"
-          },
-          "data": {}
-        },
-        "required": [
-          "success",
-          "data"
-        ]
-      },
-      "data.ComponentsAllowedInReportsSelection": {
-        "type": "object",
-        "properties": {
-          "componentId": {
-            "type": "string"
-          },
-          "componentKey": {
-            "type": "string"
-          },
-          "reportId": {
-            "type": "string"
-          },
-          "reportKey": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "componentId",
-          "componentKey",
-          "reportId",
-          "reportKey"
-        ]
-      },
-      "analytics.AccountScopedQueryParams": {
-        "type": "object",
-        "properties": {
-          "accountId": {
-            "type": "string"
-          }
-        }
-      },
-      "data.ReportShare": {
-        "type": "object",
-        "properties": {
-          "moduleId": {
-            "type": "string"
-          },
-          "moduleKey": {
-            "type": "string"
-          },
-          "featureId": {
-            "type": "string"
-          },
-          "featureKey": {
-            "type": "string"
-          },
-          "reportId": {
-            "type": "string"
-          },
-          "userId": {
-            "type": "string"
-          },
-          "permission": {
-            "type": "string"
-          },
-          "expiresAt": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "required": [
-          "moduleId",
-          "moduleKey",
-          "featureId",
-          "featureKey",
-          "reportId",
-          "userId",
-          "permission"
-        ]
-      },
-      "data.CreateReportCategoryInput": {
-        "type": "object",
-        "properties": {
-          "key": {
-            "type": "string"
-          },
-          "moduleId": {
-            "type": "string"
-          },
-          "moduleKey": {
-            "type": "string"
-          },
-          "featureId": {
-            "type": "string"
-          },
-          "featureKey": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "key",
-          "moduleId",
-          "moduleKey",
-          "featureId",
-          "featureKey",
-          "name"
-        ],
-        "description": "Auto-generated createInput for ReportCategory"
-      },
-      "data.ReportCategoryFilter": {
-        "type": "object",
-        "properties": {
-          "key": {
-            "type": "string"
-          },
-          "moduleId": {
-            "type": "string"
-          },
-          "moduleKey": {
-            "type": "string"
-          },
-          "featureId": {
-            "type": "string"
-          },
-          "featureKey": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "key",
-          "moduleId",
-          "moduleKey",
-          "featureId",
-          "featureKey",
-          "name"
-        ]
-      },
-      "analytics.Report": {},
-      "data.UpdateReportCategoryInput": {
-        "type": "object",
-        "properties": {
-          "key": {
-            "type": "string"
-          },
-          "moduleId": {
-            "type": "string"
-          },
-          "moduleKey": {
-            "type": "string"
-          },
-          "featureId": {
-            "type": "string"
-          },
-          "featureKey": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "key",
-          "moduleId",
-          "moduleKey",
-          "featureId",
-          "featureKey",
-          "name"
-        ],
-        "description": "Auto-generated updateInput for ReportCategory"
-      },
-      "data.UpdateReportShareInput": {
+      "UpdateReportShareInput": {
         "type": "object",
         "properties": {
           "moduleId": {
@@ -1889,24 +1729,77 @@
         ],
         "description": "Auto-generated updateInput for ReportShare"
       },
-      "analytics.ReportDataQueryParams": {
+      "ComponentsAllowedInReportsSelection": {
         "type": "object",
         "properties": {
-          "dataId": {
+          "componentId": {
             "type": "string"
           },
-          "category": {
+          "componentKey": {
             "type": "string"
           },
-          "type": {
+          "reportId": {
             "type": "string"
           },
-          "accountId": {
+          "reportKey": {
             "type": "string"
           }
-        }
+        },
+        "required": [
+          "componentId",
+          "componentKey",
+          "reportId",
+          "reportKey"
+        ]
       },
-      "data.UpdateComponentsAllowedInReportsSelectionInput": {
+      "ComponentsAllowedInReportsSelectionFilter": {
+        "type": "object",
+        "properties": {
+          "componentId": {
+            "type": "string"
+          },
+          "componentKey": {
+            "type": "string"
+          },
+          "reportId": {
+            "type": "string"
+          },
+          "reportKey": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "componentId",
+          "componentKey",
+          "reportId",
+          "reportKey"
+        ]
+      },
+      "CreateComponentsAllowedInReportsSelectionInput": {
+        "type": "object",
+        "properties": {
+          "componentId": {
+            "type": "string"
+          },
+          "componentKey": {
+            "type": "string"
+          },
+          "reportId": {
+            "type": "string"
+          },
+          "reportKey": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "componentId",
+          "componentKey",
+          "reportId",
+          "reportKey"
+        ],
+        "description": "Auto-generated createInput for ComponentsAllowedInReportsSelection"
+      },
+      "UpdateComponentsAllowedInReportsSelectionInput": {
         "type": "object",
         "properties": {
           "componentId": {
@@ -1931,5 +1824,8 @@
         "description": "Auto-generated updateInput for ComponentsAllowedInReportsSelection"
       }
     }
-  }
+  },
+  "x-fcg-warnings": [
+    "Unresolved type 'Report' → emitted permissive schema {}"
+  ]
 }

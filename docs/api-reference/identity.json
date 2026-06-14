@@ -1,1617 +1,51 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Identity API",
-    "version": "0.0.0",
-    "description": "Aggregate OpenAPI 3.1 document for all enterprise modules, generated from FCG InterfaceSpecs."
+    "title": "identity API",
+    "version": "1.0.38",
+    "description": "OpenAPI 3.1 document for the `identity` module, generated from FCG InterfaceSpecs."
   },
-  "servers": [
-    {
-      "url": "/",
-      "description": "Current host"
-    }
-  ],
   "tags": [
     {
-      "name": "authentication"
+      "name": "identity.authentication"
     },
     {
-      "name": "contractors"
+      "name": "identity.oauthhandlers"
     },
     {
-      "name": "departmentUsers"
+      "name": "identity.usermanagement"
     },
     {
-      "name": "departments"
+      "name": "identity.contractors"
     },
     {
-      "name": "employees"
+      "name": "identity.departmentUsers"
     },
     {
-      "name": "oauthhandlers"
+      "name": "identity.departments"
     },
     {
-      "name": "roles"
+      "name": "identity.employees"
     },
     {
-      "name": "teamUsers"
+      "name": "identity.roles"
     },
     {
-      "name": "teams"
+      "name": "identity.teamUsers"
     },
     {
-      "name": "usermanagement"
+      "name": "identity.teams"
     },
     {
-      "name": "users"
+      "name": "identity.users"
     }
   ],
   "paths": {
-    "/api/identity/users": {
-      "get": {
-        "operationId": "identity.users.query",
-        "tags": [
-          "users"
-        ],
-        "summary": "Query",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/data.User"
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "filter",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/data.UserFilter"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "identity:users:read"
-      },
-      "post": {
-        "operationId": "identity.users.create",
-        "tags": [
-          "users"
-        ],
-        "summary": "Create",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.User"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/data.CreateUserInput"
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "identity:users:write"
-      }
-    },
-    "/api/identity/users/{id}": {
-      "get": {
-        "operationId": "identity.users.getById",
-        "tags": [
-          "users"
-        ],
-        "summary": "Get By Id",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.User"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "identity:users:read"
-      },
-      "put": {
-        "operationId": "identity.users.update",
-        "tags": [
-          "users"
-        ],
-        "summary": "Update",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.User"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/data.UpdateUserInput"
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "identity:users:write"
-      },
-      "delete": {
-        "operationId": "identity.users.delete",
-        "tags": [
-          "users"
-        ],
-        "summary": "Delete",
-        "responses": {
-          "204": {
-            "description": "No content"
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "identity:users:delete"
-      }
-    },
-    "/api/identity/employees": {
-      "get": {
-        "operationId": "identity.employees.query",
-        "tags": [
-          "employees"
-        ],
-        "summary": "Query",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/data.Employee"
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "filter",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/data.EmployeeFilter"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "identity:employees:read"
-      },
-      "post": {
-        "operationId": "identity.employees.create",
-        "tags": [
-          "employees"
-        ],
-        "summary": "Create",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.Employee"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/data.CreateEmployeeInput"
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "identity:employees:write"
-      }
-    },
-    "/api/identity/employees/{id}": {
-      "get": {
-        "operationId": "identity.employees.getById",
-        "tags": [
-          "employees"
-        ],
-        "summary": "Get By Id",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.Employee"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "identity:employees:read"
-      },
-      "put": {
-        "operationId": "identity.employees.update",
-        "tags": [
-          "employees"
-        ],
-        "summary": "Update",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.Employee"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/data.UpdateEmployeeInput"
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "identity:employees:write"
-      },
-      "delete": {
-        "operationId": "identity.employees.delete",
-        "tags": [
-          "employees"
-        ],
-        "summary": "Delete",
-        "responses": {
-          "204": {
-            "description": "No content"
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "identity:employees:delete"
-      }
-    },
-    "/api/identity/contractors": {
-      "get": {
-        "operationId": "identity.contractors.query",
-        "tags": [
-          "contractors"
-        ],
-        "summary": "Query",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/data.Contractor"
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "filter",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/data.ContractorFilter"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "identity:contractors:read"
-      },
-      "post": {
-        "operationId": "identity.contractors.create",
-        "tags": [
-          "contractors"
-        ],
-        "summary": "Create",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.Contractor"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/data.CreateContractorInput"
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "identity:contractors:write"
-      }
-    },
-    "/api/identity/contractors/{id}": {
-      "get": {
-        "operationId": "identity.contractors.getById",
-        "tags": [
-          "contractors"
-        ],
-        "summary": "Get By Id",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.Contractor"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "identity:contractors:read"
-      },
-      "put": {
-        "operationId": "identity.contractors.update",
-        "tags": [
-          "contractors"
-        ],
-        "summary": "Update",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.Contractor"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/data.UpdateContractorInput"
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "identity:contractors:write"
-      },
-      "delete": {
-        "operationId": "identity.contractors.delete",
-        "tags": [
-          "contractors"
-        ],
-        "summary": "Delete",
-        "responses": {
-          "204": {
-            "description": "No content"
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "identity:contractors:delete"
-      }
-    },
-    "/api/identity/roles": {
-      "get": {
-        "operationId": "identity.roles.query",
-        "tags": [
-          "roles"
-        ],
-        "summary": "Query",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/data.Role"
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "filter",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/data.RoleFilter"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "identity:roles:read"
-      },
-      "post": {
-        "operationId": "identity.roles.create",
-        "tags": [
-          "roles"
-        ],
-        "summary": "Create",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.Role"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/data.CreateRoleInput"
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "identity:roles:write"
-      }
-    },
-    "/api/identity/roles/{id}": {
-      "get": {
-        "operationId": "identity.roles.getById",
-        "tags": [
-          "roles"
-        ],
-        "summary": "Get By Id",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.Role"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "identity:roles:read"
-      },
-      "put": {
-        "operationId": "identity.roles.update",
-        "tags": [
-          "roles"
-        ],
-        "summary": "Update",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.Role"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/data.UpdateRoleInput"
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "identity:roles:write"
-      },
-      "delete": {
-        "operationId": "identity.roles.delete",
-        "tags": [
-          "roles"
-        ],
-        "summary": "Delete",
-        "responses": {
-          "204": {
-            "description": "No content"
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "identity:roles:delete"
-      }
-    },
-    "/api/identity/departments": {
-      "get": {
-        "operationId": "identity.departments.query",
-        "tags": [
-          "departments"
-        ],
-        "summary": "Query",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/data.Department"
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "filter",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/data.DepartmentFilter"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "identity:departments:read"
-      },
-      "post": {
-        "operationId": "identity.departments.create",
-        "tags": [
-          "departments"
-        ],
-        "summary": "Create",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.Department"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/data.CreateDepartmentInput"
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "identity:departments:write"
-      }
-    },
-    "/api/identity/departments/{id}": {
-      "get": {
-        "operationId": "identity.departments.getById",
-        "tags": [
-          "departments"
-        ],
-        "summary": "Get By Id",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.Department"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "identity:departments:read"
-      },
-      "put": {
-        "operationId": "identity.departments.update",
-        "tags": [
-          "departments"
-        ],
-        "summary": "Update",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.Department"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/data.UpdateDepartmentInput"
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "identity:departments:write"
-      },
-      "delete": {
-        "operationId": "identity.departments.delete",
-        "tags": [
-          "departments"
-        ],
-        "summary": "Delete",
-        "responses": {
-          "204": {
-            "description": "No content"
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "identity:departments:delete"
-      }
-    },
-    "/api/identity/teams": {
-      "get": {
-        "operationId": "identity.teams.query",
-        "tags": [
-          "teams"
-        ],
-        "summary": "Query",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/data.Team"
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "filter",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/data.TeamFilter"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "identity:teams:read"
-      },
-      "post": {
-        "operationId": "identity.teams.create",
-        "tags": [
-          "teams"
-        ],
-        "summary": "Create",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.Team"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/data.CreateTeamInput"
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "identity:teams:write"
-      }
-    },
-    "/api/identity/teams/{id}": {
-      "get": {
-        "operationId": "identity.teams.getById",
-        "tags": [
-          "teams"
-        ],
-        "summary": "Get By Id",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.Team"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "identity:teams:read"
-      },
-      "put": {
-        "operationId": "identity.teams.update",
-        "tags": [
-          "teams"
-        ],
-        "summary": "Update",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.Team"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/data.UpdateTeamInput"
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "identity:teams:write"
-      },
-      "delete": {
-        "operationId": "identity.teams.delete",
-        "tags": [
-          "teams"
-        ],
-        "summary": "Delete",
-        "responses": {
-          "204": {
-            "description": "No content"
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "identity:teams:delete"
-      }
-    },
-    "/api/identity/teamUsers": {
-      "get": {
-        "operationId": "identity.teamUsers.query",
-        "tags": [
-          "teamUsers"
-        ],
-        "summary": "Query",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/data.TeamUser"
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "filter",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/data.TeamUserFilter"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "identity:teamUsers:read"
-      },
-      "post": {
-        "operationId": "identity.teamUsers.create",
-        "tags": [
-          "teamUsers"
-        ],
-        "summary": "Create",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.TeamUser"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/data.CreateTeamUserInput"
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "identity:teamUsers:write"
-      }
-    },
-    "/api/identity/teamUsers/{id}": {
-      "get": {
-        "operationId": "identity.teamUsers.getById",
-        "tags": [
-          "teamUsers"
-        ],
-        "summary": "Get By Id",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.TeamUser"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "identity:teamUsers:read"
-      },
-      "put": {
-        "operationId": "identity.teamUsers.update",
-        "tags": [
-          "teamUsers"
-        ],
-        "summary": "Update",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.TeamUser"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/data.UpdateTeamUserInput"
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "identity:teamUsers:write"
-      },
-      "delete": {
-        "operationId": "identity.teamUsers.delete",
-        "tags": [
-          "teamUsers"
-        ],
-        "summary": "Delete",
-        "responses": {
-          "204": {
-            "description": "No content"
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "identity:teamUsers:delete"
-      }
-    },
-    "/api/identity/departmentUsers": {
-      "get": {
-        "operationId": "identity.departmentUsers.query",
-        "tags": [
-          "departmentUsers"
-        ],
-        "summary": "Query",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/data.DepartmentUser"
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "filter",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/data.DepartmentUserFilter"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "identity:departmentUsers:read"
-      },
-      "post": {
-        "operationId": "identity.departmentUsers.create",
-        "tags": [
-          "departmentUsers"
-        ],
-        "summary": "Create",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.DepartmentUser"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/data.CreateDepartmentUserInput"
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "identity:departmentUsers:write"
-      }
-    },
-    "/api/identity/departmentUsers/{id}": {
-      "get": {
-        "operationId": "identity.departmentUsers.getById",
-        "tags": [
-          "departmentUsers"
-        ],
-        "summary": "Get By Id",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.DepartmentUser"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "identity:departmentUsers:read"
-      },
-      "put": {
-        "operationId": "identity.departmentUsers.update",
-        "tags": [
-          "departmentUsers"
-        ],
-        "summary": "Update",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.DepartmentUser"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/data.UpdateDepartmentUserInput"
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "identity:departmentUsers:write"
-      },
-      "delete": {
-        "operationId": "identity.departmentUsers.delete",
-        "tags": [
-          "departmentUsers"
-        ],
-        "summary": "Delete",
-        "responses": {
-          "204": {
-            "description": "No content"
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "identity:departmentUsers:delete"
-      }
-    },
     "/api/identity/users/{userId}/avatar": {
       "post": {
         "operationId": "identity.usermanagement.uploadUserAvatar",
         "tags": [
-          "usermanagement"
+          "identity.usermanagement"
         ],
         "summary": "Upload or update user avatar",
         "responses": {
@@ -1620,7 +54,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/identity.AvatarUploadResult"
+                  "$ref": "#/components/schemas/AvatarUploadResult"
                 }
               }
             }
@@ -1655,7 +89,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/identity.AvatarUploadData"
+                "$ref": "#/components/schemas/AvatarUploadData"
               }
             }
           }
@@ -1667,7 +101,7 @@
       "delete": {
         "operationId": "identity.usermanagement.deleteUserAvatar",
         "tags": [
-          "usermanagement"
+          "identity.usermanagement"
         ],
         "summary": "Delete user avatar and clean up files",
         "responses": {
@@ -1676,7 +110,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/identity.MessageResult"
+                  "$ref": "#/components/schemas/MessageResult"
                 }
               }
             }
@@ -1715,7 +149,7 @@
       "post": {
         "operationId": "identity.authentication.register",
         "tags": [
-          "authentication"
+          "identity.authentication"
         ],
         "summary": "Register",
         "responses": {
@@ -1724,7 +158,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/identity.AuthResult"
+                  "$ref": "#/components/schemas/AuthResult"
                 }
               }
             }
@@ -1773,7 +207,7 @@
       "post": {
         "operationId": "identity.authentication.login",
         "tags": [
-          "authentication"
+          "identity.authentication"
         ],
         "summary": "Login",
         "responses": {
@@ -1782,7 +216,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/identity.AuthResult"
+                  "$ref": "#/components/schemas/AuthResult"
                 }
               }
             }
@@ -1827,7 +261,7 @@
       "post": {
         "operationId": "identity.authentication.logout",
         "tags": [
-          "authentication"
+          "identity.authentication"
         ],
         "summary": "Logout",
         "responses": {
@@ -1868,7 +302,7 @@
       "get": {
         "operationId": "identity.authentication.verifyEmail",
         "tags": [
-          "authentication"
+          "identity.authentication"
         ],
         "summary": "Verify Email",
         "responses": {
@@ -1916,7 +350,7 @@
       "post": {
         "operationId": "identity.authentication.resendVerificationEmail",
         "tags": [
-          "authentication"
+          "identity.authentication"
         ],
         "summary": "Resend Verification Email",
         "responses": {
@@ -1964,7 +398,7 @@
       "post": {
         "operationId": "identity.authentication.requestPasswordReset",
         "tags": [
-          "authentication"
+          "identity.authentication"
         ],
         "summary": "Request Password Reset",
         "responses": {
@@ -2012,7 +446,7 @@
       "post": {
         "operationId": "identity.authentication.resetPassword",
         "tags": [
-          "authentication"
+          "identity.authentication"
         ],
         "summary": "Reset Password",
         "responses": {
@@ -2070,7 +504,7 @@
       "get": {
         "operationId": "identity.authentication.verifyJWT",
         "tags": [
-          "authentication"
+          "identity.authentication"
         ],
         "summary": "Verify JWT",
         "responses": {
@@ -2110,7 +544,7 @@
       "post": {
         "operationId": "identity.authentication.discoverAccounts",
         "tags": [
-          "authentication"
+          "identity.authentication"
         ],
         "summary": "Discover Accounts",
         "responses": {
@@ -2151,7 +585,7 @@
       "get": {
         "operationId": "identity.authentication.getCurrentUser",
         "tags": [
-          "authentication"
+          "identity.authentication"
         ],
         "summary": "Get Current User",
         "responses": {
@@ -2191,7 +625,7 @@
       "post": {
         "operationId": "identity.authentication.exchangeBrokerOAuth",
         "tags": [
-          "authentication"
+          "identity.authentication"
         ],
         "summary": "Exchange Broker OAuth",
         "responses": {
@@ -2202,7 +636,7 @@
                 "schema": {
                   "allOf": [
                     {
-                      "$ref": "#/components/schemas/identity.AuthResult"
+                      "$ref": "#/components/schemas/AuthResult"
                     },
                     {
                       "type": "object",
@@ -2225,7 +659,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/identity.BrokerOAuthExchangeRequest"
+                "$ref": "#/components/schemas/BrokerOAuthExchangeRequest"
               }
             }
           }
@@ -2238,7 +672,7 @@
       "post": {
         "operationId": "identity.authentication.refreshSession",
         "tags": [
-          "authentication"
+          "identity.authentication"
         ],
         "summary": "Refresh Session",
         "responses": {
@@ -2276,7 +710,7 @@
       "post": {
         "operationId": "identity.authentication.completeOAuth",
         "tags": [
-          "authentication"
+          "identity.authentication"
         ],
         "summary": "Complete OAuth",
         "responses": {
@@ -2314,7 +748,7 @@
       "post": {
         "operationId": "identity.authentication.revokeSessions",
         "tags": [
-          "authentication"
+          "identity.authentication"
         ],
         "summary": "Revoke Sessions",
         "responses": {
@@ -2355,7 +789,7 @@
       "get": {
         "operationId": "identity.authentication.listSessions",
         "tags": [
-          "authentication"
+          "identity.authentication"
         ],
         "summary": "List Sessions",
         "responses": {
@@ -2395,7 +829,7 @@
       "get": {
         "operationId": "identity.oauthhandlers.googleAuthHandler",
         "tags": [
-          "oauthhandlers"
+          "identity.oauthhandlers"
         ],
         "summary": "Google Auth Handler",
         "responses": {
@@ -2417,7 +851,7 @@
       "get": {
         "operationId": "identity.oauthhandlers.googleCallbackHandler",
         "tags": [
-          "oauthhandlers"
+          "identity.oauthhandlers"
         ],
         "summary": "Google Callback Handler",
         "responses": {
@@ -2439,7 +873,7 @@
       "get": {
         "operationId": "identity.oauthhandlers.facebookAuthHandler",
         "tags": [
-          "oauthhandlers"
+          "identity.oauthhandlers"
         ],
         "summary": "Facebook Auth Handler",
         "responses": {
@@ -2461,7 +895,7 @@
       "get": {
         "operationId": "identity.oauthhandlers.facebookCallbackHandler",
         "tags": [
-          "oauthhandlers"
+          "identity.oauthhandlers"
         ],
         "summary": "Facebook Callback Handler",
         "responses": {
@@ -2483,7 +917,7 @@
       "get": {
         "operationId": "identity.oauthhandlers.twitterAuthHandler",
         "tags": [
-          "oauthhandlers"
+          "identity.oauthhandlers"
         ],
         "summary": "Twitter Auth Handler",
         "responses": {
@@ -2505,7 +939,7 @@
       "get": {
         "operationId": "identity.oauthhandlers.twitterCallbackHandler",
         "tags": [
-          "oauthhandlers"
+          "identity.oauthhandlers"
         ],
         "summary": "Twitter Callback Handler",
         "responses": {
@@ -2527,7 +961,7 @@
       "get": {
         "operationId": "identity.oauthhandlers.appleAuthHandler",
         "tags": [
-          "oauthhandlers"
+          "identity.oauthhandlers"
         ],
         "summary": "Apple Auth Handler",
         "responses": {
@@ -2549,7 +983,7 @@
       "post": {
         "operationId": "identity.oauthhandlers.appleOAuthPostHandler",
         "tags": [
-          "oauthhandlers"
+          "identity.oauthhandlers"
         ],
         "summary": "Apple sends the OAuth response as POST (form-urlencoded) to the redirect URI",
         "responses": {
@@ -2570,7 +1004,7 @@
       "get": {
         "operationId": "identity.oauthhandlers.appleCallbackHandler",
         "tags": [
-          "oauthhandlers"
+          "identity.oauthhandlers"
         ],
         "summary": "Apple Callback Handler",
         "responses": {
@@ -2592,7 +1026,7 @@
       "get": {
         "operationId": "identity.oauthhandlers.microsoftAuthHandler",
         "tags": [
-          "oauthhandlers"
+          "identity.oauthhandlers"
         ],
         "summary": "Microsoft Auth Handler",
         "responses": {
@@ -2614,7 +1048,7 @@
       "get": {
         "operationId": "identity.oauthhandlers.microsoftCallbackHandler",
         "tags": [
-          "oauthhandlers"
+          "identity.oauthhandlers"
         ],
         "summary": "Microsoft Callback Handler",
         "responses": {
@@ -2631,39 +1065,1943 @@
         "x-scope": "clientServer",
         "x-permission": "identity:oauthhandlers:read"
       }
+    },
+    "/api/identity/users": {
+      "get": {
+        "operationId": "identity.users.query",
+        "tags": [
+          "identity.users"
+        ],
+        "summary": "Query",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/User"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/UserFilter"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "identity:users:read"
+      },
+      "post": {
+        "operationId": "identity.users.create",
+        "tags": [
+          "identity.users"
+        ],
+        "summary": "Create",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUserInput"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "identity:users:write"
+      }
+    },
+    "/api/identity/users/{id}": {
+      "get": {
+        "operationId": "identity.users.getById",
+        "tags": [
+          "identity.users"
+        ],
+        "summary": "Get By Id",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "identity:users:read"
+      },
+      "put": {
+        "operationId": "identity.users.update",
+        "tags": [
+          "identity.users"
+        ],
+        "summary": "Update",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateUserInput"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "identity:users:write"
+      },
+      "delete": {
+        "operationId": "identity.users.delete",
+        "tags": [
+          "identity.users"
+        ],
+        "summary": "Delete",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "identity:users:delete"
+      }
+    },
+    "/api/identity/employees": {
+      "get": {
+        "operationId": "identity.employees.query",
+        "tags": [
+          "identity.employees"
+        ],
+        "summary": "Query",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Employee"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/EmployeeFilter"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "identity:employees:read"
+      },
+      "post": {
+        "operationId": "identity.employees.create",
+        "tags": [
+          "identity.employees"
+        ],
+        "summary": "Create",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Employee"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateEmployeeInput"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "identity:employees:write"
+      }
+    },
+    "/api/identity/employees/{id}": {
+      "get": {
+        "operationId": "identity.employees.getById",
+        "tags": [
+          "identity.employees"
+        ],
+        "summary": "Get By Id",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Employee"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "identity:employees:read"
+      },
+      "put": {
+        "operationId": "identity.employees.update",
+        "tags": [
+          "identity.employees"
+        ],
+        "summary": "Update",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Employee"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateEmployeeInput"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "identity:employees:write"
+      },
+      "delete": {
+        "operationId": "identity.employees.delete",
+        "tags": [
+          "identity.employees"
+        ],
+        "summary": "Delete",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "identity:employees:delete"
+      }
+    },
+    "/api/identity/contractors": {
+      "get": {
+        "operationId": "identity.contractors.query",
+        "tags": [
+          "identity.contractors"
+        ],
+        "summary": "Query",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Contractor"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/ContractorFilter"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "identity:contractors:read"
+      },
+      "post": {
+        "operationId": "identity.contractors.create",
+        "tags": [
+          "identity.contractors"
+        ],
+        "summary": "Create",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Contractor"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateContractorInput"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "identity:contractors:write"
+      }
+    },
+    "/api/identity/contractors/{id}": {
+      "get": {
+        "operationId": "identity.contractors.getById",
+        "tags": [
+          "identity.contractors"
+        ],
+        "summary": "Get By Id",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Contractor"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "identity:contractors:read"
+      },
+      "put": {
+        "operationId": "identity.contractors.update",
+        "tags": [
+          "identity.contractors"
+        ],
+        "summary": "Update",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Contractor"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateContractorInput"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "identity:contractors:write"
+      },
+      "delete": {
+        "operationId": "identity.contractors.delete",
+        "tags": [
+          "identity.contractors"
+        ],
+        "summary": "Delete",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "identity:contractors:delete"
+      }
+    },
+    "/api/identity/roles": {
+      "get": {
+        "operationId": "identity.roles.query",
+        "tags": [
+          "identity.roles"
+        ],
+        "summary": "Query",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Role"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/RoleFilter"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "identity:roles:read"
+      },
+      "post": {
+        "operationId": "identity.roles.create",
+        "tags": [
+          "identity.roles"
+        ],
+        "summary": "Create",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Role"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateRoleInput"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "identity:roles:write"
+      }
+    },
+    "/api/identity/roles/{id}": {
+      "get": {
+        "operationId": "identity.roles.getById",
+        "tags": [
+          "identity.roles"
+        ],
+        "summary": "Get By Id",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Role"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "identity:roles:read"
+      },
+      "put": {
+        "operationId": "identity.roles.update",
+        "tags": [
+          "identity.roles"
+        ],
+        "summary": "Update",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Role"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRoleInput"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "identity:roles:write"
+      },
+      "delete": {
+        "operationId": "identity.roles.delete",
+        "tags": [
+          "identity.roles"
+        ],
+        "summary": "Delete",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "identity:roles:delete"
+      }
+    },
+    "/api/identity/departments": {
+      "get": {
+        "operationId": "identity.departments.query",
+        "tags": [
+          "identity.departments"
+        ],
+        "summary": "Query",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Department"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/DepartmentFilter"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "identity:departments:read"
+      },
+      "post": {
+        "operationId": "identity.departments.create",
+        "tags": [
+          "identity.departments"
+        ],
+        "summary": "Create",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Department"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateDepartmentInput"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "identity:departments:write"
+      }
+    },
+    "/api/identity/departments/{id}": {
+      "get": {
+        "operationId": "identity.departments.getById",
+        "tags": [
+          "identity.departments"
+        ],
+        "summary": "Get By Id",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Department"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "identity:departments:read"
+      },
+      "put": {
+        "operationId": "identity.departments.update",
+        "tags": [
+          "identity.departments"
+        ],
+        "summary": "Update",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Department"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateDepartmentInput"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "identity:departments:write"
+      },
+      "delete": {
+        "operationId": "identity.departments.delete",
+        "tags": [
+          "identity.departments"
+        ],
+        "summary": "Delete",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "identity:departments:delete"
+      }
+    },
+    "/api/identity/teams": {
+      "get": {
+        "operationId": "identity.teams.query",
+        "tags": [
+          "identity.teams"
+        ],
+        "summary": "Query",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Team"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/TeamFilter"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "identity:teams:read"
+      },
+      "post": {
+        "operationId": "identity.teams.create",
+        "tags": [
+          "identity.teams"
+        ],
+        "summary": "Create",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Team"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateTeamInput"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "identity:teams:write"
+      }
+    },
+    "/api/identity/teams/{id}": {
+      "get": {
+        "operationId": "identity.teams.getById",
+        "tags": [
+          "identity.teams"
+        ],
+        "summary": "Get By Id",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Team"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "identity:teams:read"
+      },
+      "put": {
+        "operationId": "identity.teams.update",
+        "tags": [
+          "identity.teams"
+        ],
+        "summary": "Update",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Team"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTeamInput"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "identity:teams:write"
+      },
+      "delete": {
+        "operationId": "identity.teams.delete",
+        "tags": [
+          "identity.teams"
+        ],
+        "summary": "Delete",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "identity:teams:delete"
+      }
+    },
+    "/api/identity/teamUsers": {
+      "get": {
+        "operationId": "identity.teamUsers.query",
+        "tags": [
+          "identity.teamUsers"
+        ],
+        "summary": "Query",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TeamUser"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/TeamUserFilter"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "identity:teamUsers:read"
+      },
+      "post": {
+        "operationId": "identity.teamUsers.create",
+        "tags": [
+          "identity.teamUsers"
+        ],
+        "summary": "Create",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TeamUser"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateTeamUserInput"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "identity:teamUsers:write"
+      }
+    },
+    "/api/identity/teamUsers/{id}": {
+      "get": {
+        "operationId": "identity.teamUsers.getById",
+        "tags": [
+          "identity.teamUsers"
+        ],
+        "summary": "Get By Id",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TeamUser"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "identity:teamUsers:read"
+      },
+      "put": {
+        "operationId": "identity.teamUsers.update",
+        "tags": [
+          "identity.teamUsers"
+        ],
+        "summary": "Update",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TeamUser"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTeamUserInput"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "identity:teamUsers:write"
+      },
+      "delete": {
+        "operationId": "identity.teamUsers.delete",
+        "tags": [
+          "identity.teamUsers"
+        ],
+        "summary": "Delete",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "identity:teamUsers:delete"
+      }
+    },
+    "/api/identity/departmentUsers": {
+      "get": {
+        "operationId": "identity.departmentUsers.query",
+        "tags": [
+          "identity.departmentUsers"
+        ],
+        "summary": "Query",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DepartmentUser"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/DepartmentUserFilter"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "identity:departmentUsers:read"
+      },
+      "post": {
+        "operationId": "identity.departmentUsers.create",
+        "tags": [
+          "identity.departmentUsers"
+        ],
+        "summary": "Create",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DepartmentUser"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateDepartmentUserInput"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "identity:departmentUsers:write"
+      }
+    },
+    "/api/identity/departmentUsers/{id}": {
+      "get": {
+        "operationId": "identity.departmentUsers.getById",
+        "tags": [
+          "identity.departmentUsers"
+        ],
+        "summary": "Get By Id",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DepartmentUser"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "identity:departmentUsers:read"
+      },
+      "put": {
+        "operationId": "identity.departmentUsers.update",
+        "tags": [
+          "identity.departmentUsers"
+        ],
+        "summary": "Update",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DepartmentUser"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateDepartmentUserInput"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "identity:departmentUsers:write"
+      },
+      "delete": {
+        "operationId": "identity.departmentUsers.delete",
+        "tags": [
+          "identity.departmentUsers"
+        ],
+        "summary": "Delete",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "identity:departmentUsers:delete"
+      }
     }
   },
   "components": {
     "schemas": {
-      "data.UpdateRoleInput": {
+      "AvatarUploadResult": {
         "type": "object",
         "properties": {
-          "originId": {
+          "avatarUrl": {
             "type": "string"
           },
-          "key": {
+          "user": {
+            "$ref": "#/components/schemas/SafeUser"
+          }
+        },
+        "required": [
+          "avatarUrl",
+          "user"
+        ]
+      },
+      "SafeUser": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "_id": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "avatar": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "phone": {
+            "type": "string"
+          },
+          "emailVerified": {
+            "type": "boolean"
+          },
+          "authProvider": {
+            "type": "string"
+          },
+          "lastLogin": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "created": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updated": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isActive": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "email"
+        ]
+      },
+      "AvatarUploadData": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "string",
+                "format": "binary"
+              }
+            ]
+          },
+          "mimetype": {
+            "type": "string"
+          },
+          "filename": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "data",
+          "mimetype",
+          "filename"
+        ]
+      },
+      "MessageResult": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "message"
+        ]
+      },
+      "AuthResult": {
+        "type": "object",
+        "properties": {
+          "user": {
+            "$ref": "#/components/schemas/SafeUser"
+          },
+          "token": {
+            "type": "string"
+          },
+          "refreshToken": {
+            "type": "string"
+          },
+          "expiresIn": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "number"
+              }
+            ]
+          }
+        },
+        "required": [
+          "user",
+          "token"
+        ]
+      },
+      "BrokerOAuthExchangeRequest": {
+        "type": "object",
+        "properties": {
+          "provider": {
+            "$ref": "#/components/schemas/OAuthProvider"
+          },
+          "profile": {
+            "$ref": "#/components/schemas/OAuthProfile"
+          },
+          "timestamp": {
+            "type": "number",
+            "description": "Unix epoch milliseconds when the broker built the payload"
+          },
+          "signature": {
+            "type": "string",
+            "description": "hex-encoded HMAC-SHA256 of `${timestamp}.${canonicalPayload}` using OAUTH_BROKER_SHARED_SECRET; canonicalPayload = provider,id,email,name,given_name,family_name,picture joined with newline (see AuthenticationService)"
+          }
+        },
+        "required": [
+          "provider",
+          "profile",
+          "timestamp",
+          "signature"
+        ]
+      },
+      "OAuthProvider": {
+        "type": "string",
+        "enum": [
+          "google",
+          "facebook",
+          "twitter",
+          "apple",
+          "microsoft"
+        ]
+      },
+      "OAuthProfile": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "email": {
             "type": "string"
           },
           "name": {
             "type": "string"
           },
-          "defaultWorkspaceId": {
-            "type": "string",
-            "description": "Default workspace for users with this role"
+          "given_name": {
+            "type": "string"
           },
-          "defaultWorkspaceKey": {
-            "type": "string",
-            "description": "Default workspace key for users with this role"
+          "family_name": {
+            "type": "string"
+          },
+          "picture": {
+            "type": [
+              "string",
+              "null"
+            ]
           }
         },
         "required": [
-          "originId",
-          "key",
-          "name"
-        ],
-        "description": "Auto-generated updateInput for Role"
+          "id",
+          "email",
+          "name",
+          "given_name",
+          "family_name"
+        ]
       },
-      "data.UpdateUserInput": {
+      "User": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "avatar": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "primaryRole": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "active",
+              "draft-pending"
+            ]
+          },
+          "website": {
+            "type": "string"
+          },
+          "avatarFile": {
+            "type": "string"
+          },
+          "previewImageFile": {
+            "type": "string"
+          },
+          "lastActiveWorkspaceId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "key",
+          "firstName",
+          "lastName",
+          "avatar",
+          "phone",
+          "email",
+          "primaryRole",
+          "status"
+        ]
+      },
+      "UserFilter": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "avatar": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "primaryRole": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "active",
+              "draft-pending"
+            ]
+          },
+          "website": {
+            "type": "string"
+          },
+          "avatarFile": {
+            "type": "string"
+          },
+          "previewImageFile": {
+            "type": "string"
+          },
+          "lastActiveWorkspaceId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "key",
+          "firstName",
+          "lastName",
+          "avatar",
+          "phone",
+          "email",
+          "primaryRole",
+          "status"
+        ]
+      },
+      "CreateUserInput": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "avatar": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "primaryRole": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "active",
+              "draft-pending"
+            ]
+          },
+          "website": {
+            "type": "string"
+          },
+          "avatarFile": {
+            "type": "string"
+          },
+          "previewImageFile": {
+            "type": "string"
+          },
+          "lastActiveWorkspaceId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "key",
+          "firstName",
+          "lastName",
+          "avatar",
+          "phone",
+          "email",
+          "primaryRole",
+          "status"
+        ],
+        "description": "Auto-generated createInput for User"
+      },
+      "UpdateUserInput": {
         "type": "object",
         "properties": {
           "key": {
@@ -2719,53 +3057,53 @@
         ],
         "description": "Auto-generated updateInput for User"
       },
-      "data.UpdateContractorInput": {
+      "Employee": {
         "type": "object",
         "properties": {
           "user": {
             "type": "string"
           },
-          "contractorPaymentMethods": {
+          "assignedSupportTickets": {
             "type": "array",
             "items": {
               "type": "string"
             }
           },
-          "contractorPayments": {
+          "kbArticles": {
             "type": "array",
             "items": {
               "type": "string"
             }
           },
-          "contractorPaymentHistory": {
+          "faqs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "employeePaymentMethods": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "employeePayments": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "employeePaymentHistory": {
             "type": "string"
           },
-          "contractorReferralCode": {
+          "employeeReferralCode": {
             "type": "string"
           },
-          "contractorReferrals": {
+          "employeeReferrals": {
             "type": "array",
             "items": {
               "type": "string"
             }
-          },
-          "activeLocations": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "rangeOfTravel": {
-            "type": "string"
-          },
-          "productions": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "contractorType": {
-            "type": "string"
           },
           "searchString": {
             "type": "string"
@@ -2782,150 +3120,94 @@
         },
         "required": [
           "user",
-          "contractorPaymentMethods",
-          "contractorPayments",
-          "contractorPaymentHistory",
-          "contractorReferralCode",
-          "contractorReferrals",
-          "activeLocations",
-          "rangeOfTravel",
-          "productions",
-          "contractorType",
+          "assignedSupportTickets",
+          "kbArticles",
+          "faqs",
+          "employeePaymentMethods",
+          "employeePayments",
+          "employeePaymentHistory",
+          "employeeReferralCode",
+          "employeeReferrals",
           "searchString",
           "summary"
-        ],
-        "description": "Auto-generated updateInput for Contractor"
-      },
-      "identity.OAuthProvider": {
-        "type": "string",
-        "enum": [
-          "google",
-          "facebook",
-          "twitter",
-          "apple",
-          "microsoft"
         ]
       },
-      "data.CreateRoleInput": {
+      "EmployeeFilter": {
         "type": "object",
         "properties": {
-          "originId": {
-            "type": "string"
-          },
-          "key": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "defaultWorkspaceId": {
-            "type": "string",
-            "description": "Default workspace for users with this role"
-          },
-          "defaultWorkspaceKey": {
-            "type": "string",
-            "description": "Default workspace key for users with this role"
-          }
-        },
-        "required": [
-          "originId",
-          "key",
-          "name"
-        ],
-        "description": "Auto-generated createInput for Role"
-      },
-      "data.TeamUser": {
-        "type": "object",
-        "properties": {
-          "team": {
-            "type": "string",
-            "description": "Parent team this membership belongs to"
-          },
           "user": {
-            "type": "string",
-            "description": "User who is a member of this team"
+            "type": "string"
           },
-          "createdByDate": {
-            "type": "string",
-            "format": "date-time"
+          "assignedSupportTickets": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
-          "updatedByDate": {
-            "type": "string",
-            "format": "date-time"
+          "kbArticles": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "faqs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "employeePaymentMethods": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "employeePayments": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "employeePaymentHistory": {
+            "type": "string"
+          },
+          "employeeReferralCode": {
+            "type": "string"
+          },
+          "employeeReferrals": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "searchString": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "avatarFile": {
+            "type": "string"
+          },
+          "previewImageFile": {
+            "type": "string"
           }
         },
         "required": [
-          "team",
           "user",
-          "createdByDate",
-          "updatedByDate"
+          "assignedSupportTickets",
+          "kbArticles",
+          "faqs",
+          "employeePaymentMethods",
+          "employeePayments",
+          "employeePaymentHistory",
+          "employeeReferralCode",
+          "employeeReferrals",
+          "searchString",
+          "summary"
         ]
       },
-      "data.DepartmentFilter": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "key": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "active",
-              "pending"
-            ]
-          },
-          "created": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updated": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "required": [
-          "name",
-          "key",
-          "status",
-          "created",
-          "updated"
-        ]
-      },
-      "data.CreateDepartmentUserInput": {
-        "type": "object",
-        "properties": {
-          "department": {
-            "type": "string",
-            "description": "Parent department this membership belongs to"
-          },
-          "user": {
-            "type": "string",
-            "description": "User who is a member of this department"
-          },
-          "createdByDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updatedByDate": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "required": [
-          "department",
-          "user",
-          "createdByDate",
-          "updatedByDate"
-        ],
-        "description": "Auto-generated createInput for DepartmentUser"
-      },
-      "data.CreateEmployeeInput": {
+      "CreateEmployeeInput": {
         "type": "object",
         "properties": {
           "user": {
@@ -3001,80 +3283,7 @@
         ],
         "description": "Auto-generated createInput for Employee"
       },
-      "identity.AuthResult": {
-        "type": "object",
-        "properties": {
-          "user": {
-            "$ref": "#/components/schemas/identity.SafeUser"
-          },
-          "token": {
-            "type": "string"
-          },
-          "refreshToken": {
-            "type": "string"
-          },
-          "expiresIn": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "number"
-              }
-            ]
-          }
-        },
-        "required": [
-          "user",
-          "token"
-        ]
-      },
-      "data.CreateTeamInput": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "key": {
-            "type": "string"
-          },
-          "department": {
-            "type": "string",
-            "description": "Optional department this team belongs to"
-          },
-          "departmentName": {
-            "type": "string",
-            "description": "Denormalized name of the linked department \u2014 do not edit directly"
-          },
-          "description": {
-            "type": "string"
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "active",
-              "pending"
-            ]
-          },
-          "created": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updated": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "required": [
-          "name",
-          "key",
-          "status",
-          "created",
-          "updated"
-        ],
-        "description": "Auto-generated createInput for Team"
-      },
-      "data.EmployeeFilter": {
+      "UpdateEmployeeInput": {
         "type": "object",
         "properties": {
           "user": {
@@ -3147,215 +3356,61 @@
           "employeeReferrals",
           "searchString",
           "summary"
-        ]
-      },
-      "data.TeamFilter": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "key": {
-            "type": "string"
-          },
-          "department": {
-            "type": "string",
-            "description": "Optional department this team belongs to"
-          },
-          "departmentName": {
-            "type": "string",
-            "description": "Denormalized name of the linked department \u2014 do not edit directly"
-          },
-          "description": {
-            "type": "string"
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "active",
-              "pending"
-            ]
-          },
-          "created": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updated": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "required": [
-          "name",
-          "key",
-          "status",
-          "created",
-          "updated"
-        ]
-      },
-      "identity.OAuthProfile": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "email": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "given_name": {
-            "type": "string"
-          },
-          "family_name": {
-            "type": "string"
-          },
-          "picture": {
-            "type": [
-              "string",
-              "null"
-            ]
-          }
-        },
-        "required": [
-          "id",
-          "email",
-          "name",
-          "given_name",
-          "family_name"
-        ]
-      },
-      "data.Department": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "key": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "active",
-              "pending"
-            ]
-          },
-          "created": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updated": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "required": [
-          "name",
-          "key",
-          "status",
-          "created",
-          "updated"
-        ]
-      },
-      "data.UpdateDepartmentInput": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "key": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "active",
-              "pending"
-            ]
-          },
-          "created": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updated": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "required": [
-          "name",
-          "key",
-          "status",
-          "created",
-          "updated"
         ],
-        "description": "Auto-generated updateInput for Department"
+        "description": "Auto-generated updateInput for Employee"
       },
-      "identity.BrokerOAuthExchangeRequest": {
+      "Contractor": {
         "type": "object",
         "properties": {
-          "provider": {
-            "$ref": "#/components/schemas/identity.OAuthProvider"
-          },
-          "profile": {
-            "$ref": "#/components/schemas/identity.OAuthProfile"
-          },
-          "timestamp": {
-            "type": "number",
-            "description": "Unix epoch milliseconds when the broker built the payload"
-          },
-          "signature": {
-            "type": "string",
-            "description": "hex-encoded HMAC-SHA256 of `${timestamp}.${canonicalPayload}` using OAUTH_BROKER_SHARED_SECRET; canonicalPayload = provider,id,email,name,given_name,family_name,picture joined with newline (see AuthenticationService)"
-          }
-        },
-        "required": [
-          "provider",
-          "profile",
-          "timestamp",
-          "signature"
-        ]
-      },
-      "data.CreateUserInput": {
-        "type": "object",
-        "properties": {
-          "key": {
+          "user": {
             "type": "string"
           },
-          "firstName": {
+          "contractorPaymentMethods": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "contractorPayments": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "contractorPaymentHistory": {
             "type": "string"
           },
-          "lastName": {
+          "contractorReferralCode": {
             "type": "string"
           },
-          "avatar": {
+          "contractorReferrals": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "activeLocations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "rangeOfTravel": {
             "type": "string"
           },
-          "phone": {
+          "productions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "contractorType": {
             "type": "string"
           },
-          "email": {
+          "searchString": {
             "type": "string"
           },
-          "primaryRole": {
-            "type": "string"
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "active",
-              "draft-pending"
-            ]
-          },
-          "website": {
+          "summary": {
             "type": "string"
           },
           "avatarFile": {
@@ -3363,79 +3418,100 @@
           },
           "previewImageFile": {
             "type": "string"
+          }
+        },
+        "required": [
+          "user",
+          "contractorPaymentMethods",
+          "contractorPayments",
+          "contractorPaymentHistory",
+          "contractorReferralCode",
+          "contractorReferrals",
+          "activeLocations",
+          "rangeOfTravel",
+          "productions",
+          "contractorType",
+          "searchString",
+          "summary"
+        ]
+      },
+      "ContractorFilter": {
+        "type": "object",
+        "properties": {
+          "user": {
+            "type": "string"
           },
-          "lastActiveWorkspaceId": {
+          "contractorPaymentMethods": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "contractorPayments": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "contractorPaymentHistory": {
+            "type": "string"
+          },
+          "contractorReferralCode": {
+            "type": "string"
+          },
+          "contractorReferrals": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "activeLocations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "rangeOfTravel": {
+            "type": "string"
+          },
+          "productions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "contractorType": {
+            "type": "string"
+          },
+          "searchString": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "avatarFile": {
+            "type": "string"
+          },
+          "previewImageFile": {
             "type": "string"
           }
         },
         "required": [
-          "key",
-          "firstName",
-          "lastName",
-          "avatar",
-          "phone",
-          "email",
-          "primaryRole",
-          "status"
-        ],
-        "description": "Auto-generated createInput for User"
-      },
-      "data.CreateTeamUserInput": {
-        "type": "object",
-        "properties": {
-          "team": {
-            "type": "string",
-            "description": "Parent team this membership belongs to"
-          },
-          "user": {
-            "type": "string",
-            "description": "User who is a member of this team"
-          },
-          "createdByDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updatedByDate": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "required": [
-          "team",
           "user",
-          "createdByDate",
-          "updatedByDate"
-        ],
-        "description": "Auto-generated createInput for TeamUser"
-      },
-      "data.TeamUserFilter": {
-        "type": "object",
-        "properties": {
-          "team": {
-            "type": "string",
-            "description": "Parent team this membership belongs to"
-          },
-          "user": {
-            "type": "string",
-            "description": "User who is a member of this team"
-          },
-          "createdByDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updatedByDate": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "required": [
-          "team",
-          "user",
-          "createdByDate",
-          "updatedByDate"
+          "contractorPaymentMethods",
+          "contractorPayments",
+          "contractorPaymentHistory",
+          "contractorReferralCode",
+          "contractorReferrals",
+          "activeLocations",
+          "rangeOfTravel",
+          "productions",
+          "contractorType",
+          "searchString",
+          "summary"
         ]
       },
-      "data.CreateContractorInput": {
+      "CreateContractorInput": {
         "type": "object",
         "properties": {
           "user": {
@@ -3512,35 +3588,7 @@
         ],
         "description": "Auto-generated createInput for Contractor"
       },
-      "data.UpdateDepartmentUserInput": {
-        "type": "object",
-        "properties": {
-          "department": {
-            "type": "string",
-            "description": "Parent department this membership belongs to"
-          },
-          "user": {
-            "type": "string",
-            "description": "User who is a member of this department"
-          },
-          "createdByDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updatedByDate": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "required": [
-          "department",
-          "user",
-          "createdByDate",
-          "updatedByDate"
-        ],
-        "description": "Auto-generated updateInput for DepartmentUser"
-      },
-      "data.ContractorFilter": {
+      "UpdateContractorInput": {
         "type": "object",
         "properties": {
           "user": {
@@ -3614,350 +3662,10 @@
           "contractorType",
           "searchString",
           "summary"
-        ]
-      },
-      "data.UpdateTeamUserInput": {
-        "type": "object",
-        "properties": {
-          "team": {
-            "type": "string",
-            "description": "Parent team this membership belongs to"
-          },
-          "user": {
-            "type": "string",
-            "description": "User who is a member of this team"
-          },
-          "createdByDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updatedByDate": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "required": [
-          "team",
-          "user",
-          "createdByDate",
-          "updatedByDate"
         ],
-        "description": "Auto-generated updateInput for TeamUser"
+        "description": "Auto-generated updateInput for Contractor"
       },
-      "data.DepartmentUserFilter": {
-        "type": "object",
-        "properties": {
-          "department": {
-            "type": "string",
-            "description": "Parent department this membership belongs to"
-          },
-          "user": {
-            "type": "string",
-            "description": "User who is a member of this department"
-          },
-          "createdByDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updatedByDate": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "required": [
-          "department",
-          "user",
-          "createdByDate",
-          "updatedByDate"
-        ]
-      },
-      "identity.AvatarUploadResult": {
-        "type": "object",
-        "properties": {
-          "avatarUrl": {
-            "type": "string"
-          },
-          "user": {
-            "$ref": "#/components/schemas/identity.SafeUser"
-          }
-        },
-        "required": [
-          "avatarUrl",
-          "user"
-        ]
-      },
-      "data.UpdateTeamInput": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "key": {
-            "type": "string"
-          },
-          "department": {
-            "type": "string",
-            "description": "Optional department this team belongs to"
-          },
-          "departmentName": {
-            "type": "string",
-            "description": "Denormalized name of the linked department \u2014 do not edit directly"
-          },
-          "description": {
-            "type": "string"
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "active",
-              "pending"
-            ]
-          },
-          "created": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updated": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "required": [
-          "name",
-          "key",
-          "status",
-          "created",
-          "updated"
-        ],
-        "description": "Auto-generated updateInput for Team"
-      },
-      "data.UserFilter": {
-        "type": "object",
-        "properties": {
-          "key": {
-            "type": "string"
-          },
-          "firstName": {
-            "type": "string"
-          },
-          "lastName": {
-            "type": "string"
-          },
-          "avatar": {
-            "type": "string"
-          },
-          "phone": {
-            "type": "string"
-          },
-          "email": {
-            "type": "string"
-          },
-          "primaryRole": {
-            "type": "string"
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "active",
-              "draft-pending"
-            ]
-          },
-          "website": {
-            "type": "string"
-          },
-          "avatarFile": {
-            "type": "string"
-          },
-          "previewImageFile": {
-            "type": "string"
-          },
-          "lastActiveWorkspaceId": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "key",
-          "firstName",
-          "lastName",
-          "avatar",
-          "phone",
-          "email",
-          "primaryRole",
-          "status"
-        ]
-      },
-      "identity.AvatarUploadData": {
-        "type": "object",
-        "properties": {
-          "data": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "string",
-                "format": "binary"
-              }
-            ]
-          },
-          "mimetype": {
-            "type": "string"
-          },
-          "filename": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "data",
-          "mimetype",
-          "filename"
-        ]
-      },
-      "data.Contractor": {
-        "type": "object",
-        "properties": {
-          "user": {
-            "type": "string"
-          },
-          "contractorPaymentMethods": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "contractorPayments": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "contractorPaymentHistory": {
-            "type": "string"
-          },
-          "contractorReferralCode": {
-            "type": "string"
-          },
-          "contractorReferrals": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "activeLocations": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "rangeOfTravel": {
-            "type": "string"
-          },
-          "productions": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "contractorType": {
-            "type": "string"
-          },
-          "searchString": {
-            "type": "string"
-          },
-          "summary": {
-            "type": "string"
-          },
-          "avatarFile": {
-            "type": "string"
-          },
-          "previewImageFile": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "user",
-          "contractorPaymentMethods",
-          "contractorPayments",
-          "contractorPaymentHistory",
-          "contractorReferralCode",
-          "contractorReferrals",
-          "activeLocations",
-          "rangeOfTravel",
-          "productions",
-          "contractorType",
-          "searchString",
-          "summary"
-        ]
-      },
-      "identity.SafeUser": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "_id": {
-            "type": "string"
-          },
-          "email": {
-            "type": "string"
-          },
-          "firstName": {
-            "type": "string"
-          },
-          "lastName": {
-            "type": "string"
-          },
-          "fullName": {
-            "type": "string"
-          },
-          "avatar": {
-            "type": [
-              "string",
-              "null"
-            ]
-          },
-          "phone": {
-            "type": "string"
-          },
-          "emailVerified": {
-            "type": "boolean"
-          },
-          "authProvider": {
-            "type": "string"
-          },
-          "lastLogin": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "created": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updated": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "isActive": {
-            "type": "boolean"
-          }
-        },
-        "required": [
-          "id",
-          "email"
-        ]
-      },
-      "identity.MessageResult": {
-        "type": "object",
-        "properties": {
-          "message": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "message"
-        ]
-      },
-      "data.Role": {
+      "Role": {
         "type": "object",
         "properties": {
           "originId": {
@@ -3984,7 +3692,162 @@
           "name"
         ]
       },
-      "data.CreateDepartmentInput": {
+      "RoleFilter": {
+        "type": "object",
+        "properties": {
+          "originId": {
+            "type": "string"
+          },
+          "key": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "defaultWorkspaceId": {
+            "type": "string",
+            "description": "Default workspace for users with this role"
+          },
+          "defaultWorkspaceKey": {
+            "type": "string",
+            "description": "Default workspace key for users with this role"
+          }
+        },
+        "required": [
+          "originId",
+          "key",
+          "name"
+        ]
+      },
+      "CreateRoleInput": {
+        "type": "object",
+        "properties": {
+          "originId": {
+            "type": "string"
+          },
+          "key": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "defaultWorkspaceId": {
+            "type": "string",
+            "description": "Default workspace for users with this role"
+          },
+          "defaultWorkspaceKey": {
+            "type": "string",
+            "description": "Default workspace key for users with this role"
+          }
+        },
+        "required": [
+          "originId",
+          "key",
+          "name"
+        ],
+        "description": "Auto-generated createInput for Role"
+      },
+      "UpdateRoleInput": {
+        "type": "object",
+        "properties": {
+          "originId": {
+            "type": "string"
+          },
+          "key": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "defaultWorkspaceId": {
+            "type": "string",
+            "description": "Default workspace for users with this role"
+          },
+          "defaultWorkspaceKey": {
+            "type": "string",
+            "description": "Default workspace key for users with this role"
+          }
+        },
+        "required": [
+          "originId",
+          "key",
+          "name"
+        ],
+        "description": "Auto-generated updateInput for Role"
+      },
+      "Department": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "key": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "active",
+              "pending"
+            ]
+          },
+          "created": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updated": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "name",
+          "key",
+          "status",
+          "created",
+          "updated"
+        ]
+      },
+      "DepartmentFilter": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "key": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "active",
+              "pending"
+            ]
+          },
+          "created": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updated": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "name",
+          "key",
+          "status",
+          "created",
+          "updated"
+        ]
+      },
+      "CreateDepartmentInput": {
         "type": "object",
         "properties": {
           "name": {
@@ -4021,267 +3884,44 @@
         ],
         "description": "Auto-generated createInput for Department"
       },
-      "data.UpdateEmployeeInput": {
+      "UpdateDepartmentInput": {
         "type": "object",
         "properties": {
-          "user": {
-            "type": "string"
-          },
-          "assignedSupportTickets": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "kbArticles": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "faqs": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "employeePaymentMethods": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "employeePayments": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "employeePaymentHistory": {
-            "type": "string"
-          },
-          "employeeReferralCode": {
-            "type": "string"
-          },
-          "employeeReferrals": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "searchString": {
-            "type": "string"
-          },
-          "summary": {
-            "type": "string"
-          },
-          "avatarFile": {
-            "type": "string"
-          },
-          "previewImageFile": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "user",
-          "assignedSupportTickets",
-          "kbArticles",
-          "faqs",
-          "employeePaymentMethods",
-          "employeePayments",
-          "employeePaymentHistory",
-          "employeeReferralCode",
-          "employeeReferrals",
-          "searchString",
-          "summary"
-        ],
-        "description": "Auto-generated updateInput for Employee"
-      },
-      "data.RoleFilter": {
-        "type": "object",
-        "properties": {
-          "originId": {
-            "type": "string"
-          },
-          "key": {
-            "type": "string"
-          },
           "name": {
             "type": "string"
           },
-          "defaultWorkspaceId": {
-            "type": "string",
-            "description": "Default workspace for users with this role"
-          },
-          "defaultWorkspaceKey": {
-            "type": "string",
-            "description": "Default workspace key for users with this role"
-          }
-        },
-        "required": [
-          "originId",
-          "key",
-          "name"
-        ]
-      },
-      "data.User": {
-        "type": "object",
-        "properties": {
           "key": {
             "type": "string"
           },
-          "firstName": {
-            "type": "string"
-          },
-          "lastName": {
-            "type": "string"
-          },
-          "avatar": {
-            "type": "string"
-          },
-          "phone": {
-            "type": "string"
-          },
-          "email": {
-            "type": "string"
-          },
-          "primaryRole": {
+          "description": {
             "type": "string"
           },
           "status": {
             "type": "string",
             "enum": [
               "active",
-              "draft-pending"
+              "pending"
             ]
           },
-          "website": {
-            "type": "string"
+          "created": {
+            "type": "string",
+            "format": "date-time"
           },
-          "avatarFile": {
-            "type": "string"
-          },
-          "previewImageFile": {
-            "type": "string"
-          },
-          "lastActiveWorkspaceId": {
-            "type": "string"
+          "updated": {
+            "type": "string",
+            "format": "date-time"
           }
         },
         "required": [
+          "name",
           "key",
-          "firstName",
-          "lastName",
-          "avatar",
-          "phone",
-          "email",
-          "primaryRole",
-          "status"
-        ]
+          "status",
+          "created",
+          "updated"
+        ],
+        "description": "Auto-generated updateInput for Department"
       },
-      "data.Employee": {
-        "type": "object",
-        "properties": {
-          "user": {
-            "type": "string"
-          },
-          "assignedSupportTickets": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "kbArticles": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "faqs": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "employeePaymentMethods": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "employeePayments": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "employeePaymentHistory": {
-            "type": "string"
-          },
-          "employeeReferralCode": {
-            "type": "string"
-          },
-          "employeeReferrals": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "searchString": {
-            "type": "string"
-          },
-          "summary": {
-            "type": "string"
-          },
-          "avatarFile": {
-            "type": "string"
-          },
-          "previewImageFile": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "user",
-          "assignedSupportTickets",
-          "kbArticles",
-          "faqs",
-          "employeePaymentMethods",
-          "employeePayments",
-          "employeePaymentHistory",
-          "employeeReferralCode",
-          "employeeReferrals",
-          "searchString",
-          "summary"
-        ]
-      },
-      "data.DepartmentUser": {
-        "type": "object",
-        "properties": {
-          "department": {
-            "type": "string",
-            "description": "Parent department this membership belongs to"
-          },
-          "user": {
-            "type": "string",
-            "description": "User who is a member of this department"
-          },
-          "createdByDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updatedByDate": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "required": [
-          "department",
-          "user",
-          "createdByDate",
-          "updatedByDate"
-        ]
-      },
-      "data.Team": {
+      "Team": {
         "type": "object",
         "properties": {
           "name": {
@@ -4296,7 +3936,7 @@
           },
           "departmentName": {
             "type": "string",
-            "description": "Denormalized name of the linked department \u2014 do not edit directly"
+            "description": "Denormalized name of the linked department — do not edit directly"
           },
           "description": {
             "type": "string"
@@ -4324,6 +3964,360 @@
           "created",
           "updated"
         ]
+      },
+      "TeamFilter": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "key": {
+            "type": "string"
+          },
+          "department": {
+            "type": "string",
+            "description": "Optional department this team belongs to"
+          },
+          "departmentName": {
+            "type": "string",
+            "description": "Denormalized name of the linked department — do not edit directly"
+          },
+          "description": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "active",
+              "pending"
+            ]
+          },
+          "created": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updated": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "name",
+          "key",
+          "status",
+          "created",
+          "updated"
+        ]
+      },
+      "CreateTeamInput": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "key": {
+            "type": "string"
+          },
+          "department": {
+            "type": "string",
+            "description": "Optional department this team belongs to"
+          },
+          "departmentName": {
+            "type": "string",
+            "description": "Denormalized name of the linked department — do not edit directly"
+          },
+          "description": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "active",
+              "pending"
+            ]
+          },
+          "created": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updated": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "name",
+          "key",
+          "status",
+          "created",
+          "updated"
+        ],
+        "description": "Auto-generated createInput for Team"
+      },
+      "UpdateTeamInput": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "key": {
+            "type": "string"
+          },
+          "department": {
+            "type": "string",
+            "description": "Optional department this team belongs to"
+          },
+          "departmentName": {
+            "type": "string",
+            "description": "Denormalized name of the linked department — do not edit directly"
+          },
+          "description": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "active",
+              "pending"
+            ]
+          },
+          "created": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updated": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "name",
+          "key",
+          "status",
+          "created",
+          "updated"
+        ],
+        "description": "Auto-generated updateInput for Team"
+      },
+      "TeamUser": {
+        "type": "object",
+        "properties": {
+          "team": {
+            "type": "string",
+            "description": "Parent team this membership belongs to"
+          },
+          "user": {
+            "type": "string",
+            "description": "User who is a member of this team"
+          },
+          "createdByDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedByDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "team",
+          "user",
+          "createdByDate",
+          "updatedByDate"
+        ]
+      },
+      "TeamUserFilter": {
+        "type": "object",
+        "properties": {
+          "team": {
+            "type": "string",
+            "description": "Parent team this membership belongs to"
+          },
+          "user": {
+            "type": "string",
+            "description": "User who is a member of this team"
+          },
+          "createdByDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedByDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "team",
+          "user",
+          "createdByDate",
+          "updatedByDate"
+        ]
+      },
+      "CreateTeamUserInput": {
+        "type": "object",
+        "properties": {
+          "team": {
+            "type": "string",
+            "description": "Parent team this membership belongs to"
+          },
+          "user": {
+            "type": "string",
+            "description": "User who is a member of this team"
+          },
+          "createdByDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedByDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "team",
+          "user",
+          "createdByDate",
+          "updatedByDate"
+        ],
+        "description": "Auto-generated createInput for TeamUser"
+      },
+      "UpdateTeamUserInput": {
+        "type": "object",
+        "properties": {
+          "team": {
+            "type": "string",
+            "description": "Parent team this membership belongs to"
+          },
+          "user": {
+            "type": "string",
+            "description": "User who is a member of this team"
+          },
+          "createdByDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedByDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "team",
+          "user",
+          "createdByDate",
+          "updatedByDate"
+        ],
+        "description": "Auto-generated updateInput for TeamUser"
+      },
+      "DepartmentUser": {
+        "type": "object",
+        "properties": {
+          "department": {
+            "type": "string",
+            "description": "Parent department this membership belongs to"
+          },
+          "user": {
+            "type": "string",
+            "description": "User who is a member of this department"
+          },
+          "createdByDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedByDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "department",
+          "user",
+          "createdByDate",
+          "updatedByDate"
+        ]
+      },
+      "DepartmentUserFilter": {
+        "type": "object",
+        "properties": {
+          "department": {
+            "type": "string",
+            "description": "Parent department this membership belongs to"
+          },
+          "user": {
+            "type": "string",
+            "description": "User who is a member of this department"
+          },
+          "createdByDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedByDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "department",
+          "user",
+          "createdByDate",
+          "updatedByDate"
+        ]
+      },
+      "CreateDepartmentUserInput": {
+        "type": "object",
+        "properties": {
+          "department": {
+            "type": "string",
+            "description": "Parent department this membership belongs to"
+          },
+          "user": {
+            "type": "string",
+            "description": "User who is a member of this department"
+          },
+          "createdByDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedByDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "department",
+          "user",
+          "createdByDate",
+          "updatedByDate"
+        ],
+        "description": "Auto-generated createInput for DepartmentUser"
+      },
+      "UpdateDepartmentUserInput": {
+        "type": "object",
+        "properties": {
+          "department": {
+            "type": "string",
+            "description": "Parent department this membership belongs to"
+          },
+          "user": {
+            "type": "string",
+            "description": "User who is a member of this department"
+          },
+          "createdByDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedByDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "department",
+          "user",
+          "createdByDate",
+          "updatedByDate"
+        ],
+        "description": "Auto-generated updateInput for DepartmentUser"
       }
     }
   }

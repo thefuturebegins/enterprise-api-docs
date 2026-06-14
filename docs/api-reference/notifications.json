@@ -1,228 +1,27 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Notifications API",
-    "version": "0.0.0",
-    "description": "Aggregate OpenAPI 3.1 document for all enterprise modules, generated from FCG InterfaceSpecs."
+    "title": "notifications API",
+    "version": "1.0.7",
+    "description": "OpenAPI 3.1 document for the `notifications` module, generated from FCG InterfaceSpecs."
   },
-  "servers": [
-    {
-      "url": "/",
-      "description": "Current host"
-    }
-  ],
   "tags": [
     {
-      "name": "notifications"
+      "name": "notifications.notificationscheduling"
     },
     {
-      "name": "notificationscheduling"
+      "name": "notifications.sendnotification"
     },
     {
-      "name": "sendnotification"
+      "name": "notifications.notifications"
     }
   ],
   "paths": {
-    "/api/notifications/notifications": {
-      "get": {
-        "operationId": "notifications.notifications.query",
-        "tags": [
-          "notifications"
-        ],
-        "summary": "Query",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/data.Notification"
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "filter",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/data.NotificationFilter"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "notifications:notifications:read"
-      },
-      "post": {
-        "operationId": "notifications.notifications.create",
-        "tags": [
-          "notifications"
-        ],
-        "summary": "Create",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.Notification"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/data.CreateNotificationInput"
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "notifications:notifications:write"
-      }
-    },
-    "/api/notifications/notifications/{id}": {
-      "get": {
-        "operationId": "notifications.notifications.getById",
-        "tags": [
-          "notifications"
-        ],
-        "summary": "Get By Id",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.Notification"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "notifications:notifications:read"
-      },
-      "put": {
-        "operationId": "notifications.notifications.update",
-        "tags": [
-          "notifications"
-        ],
-        "summary": "Update",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.Notification"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/data.UpdateNotificationInput"
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "notifications:notifications:write"
-      },
-      "delete": {
-        "operationId": "notifications.notifications.delete",
-        "tags": [
-          "notifications"
-        ],
-        "summary": "Delete",
-        "responses": {
-          "204": {
-            "description": "No content"
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "notifications:notifications:delete"
-      }
-    },
     "/api/notifications/send": {
       "post": {
         "operationId": "notifications.sendnotification.sendNotification",
         "tags": [
-          "sendnotification"
+          "notifications.sendnotification"
         ],
         "summary": "Send notification to user with channel routing",
         "responses": {
@@ -256,7 +55,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/notifications.Notification"
+                "$ref": "#/components/schemas/Notification"
               }
             }
           }
@@ -270,7 +69,7 @@
       "post": {
         "operationId": "notifications.sendnotification.sendBulkNotifications",
         "tags": [
-          "sendnotification"
+          "notifications.sendnotification"
         ],
         "summary": "Send multiple notifications in batch",
         "responses": {
@@ -309,7 +108,7 @@
               "schema": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/notifications.Notification"
+                  "$ref": "#/components/schemas/Notification"
                 }
               }
             }
@@ -324,7 +123,7 @@
       "post": {
         "operationId": "notifications.sendnotification.determineRecipients",
         "tags": [
-          "sendnotification"
+          "notifications.sendnotification"
         ],
         "summary": "Resolve recipients from criteria (role, group, filter)",
         "responses": {
@@ -363,7 +162,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/notifications.RecipientCriteria"
+                "$ref": "#/components/schemas/RecipientCriteria"
               }
             }
           }
@@ -377,7 +176,7 @@
       "post": {
         "operationId": "notifications.sendnotification.trackDeliveryStatus",
         "tags": [
-          "sendnotification"
+          "notifications.sendnotification"
         ],
         "summary": "Update delivery status for specific channel",
         "responses": {
@@ -397,7 +196,7 @@
             "in": "query",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/notifications.NotificationChannel"
+              "$ref": "#/components/schemas/NotificationChannel"
             }
           },
           {
@@ -405,7 +204,7 @@
             "in": "query",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/notifications.NotificationDeliveryStatus"
+              "$ref": "#/components/schemas/NotificationDeliveryStatus"
             }
           },
           {
@@ -452,7 +251,7 @@
       "post": {
         "operationId": "notifications.sendnotification.retryFailedNotification",
         "tags": [
-          "sendnotification"
+          "notifications.sendnotification"
         ],
         "summary": "Retry failed notification delivery",
         "responses": {
@@ -496,7 +295,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/notifications.NotificationChannel"
+                "$ref": "#/components/schemas/NotificationChannel"
               }
             }
           }
@@ -510,7 +309,7 @@
       "put": {
         "operationId": "notifications.sendnotification.dismissNotification",
         "tags": [
-          "sendnotification"
+          "notifications.sendnotification"
         ],
         "summary": "Mark notification as dismissed",
         "responses": {
@@ -569,7 +368,7 @@
       "put": {
         "operationId": "notifications.sendnotification.markAsRead",
         "tags": [
-          "sendnotification"
+          "notifications.sendnotification"
         ],
         "summary": "Mark notification as read with timestamp",
         "responses": {
@@ -628,7 +427,7 @@
       "post": {
         "operationId": "notifications.sendnotification.executeNotificationAction",
         "tags": [
-          "sendnotification"
+          "notifications.sendnotification"
         ],
         "summary": "Handle action button clicks",
         "responses": {
@@ -692,7 +491,7 @@
       "get": {
         "operationId": "notifications.sendnotification.getUnreadCount",
         "tags": [
-          "sendnotification"
+          "notifications.sendnotification"
         ],
         "summary": "Get count of unread notifications for user",
         "responses": {
@@ -749,7 +548,7 @@
       "post": {
         "operationId": "notifications.sendnotification.cleanupExpiredNotifications",
         "tags": [
-          "sendnotification"
+          "notifications.sendnotification"
         ],
         "summary": "Remove expired notifications based on expiry date",
         "responses": {
@@ -797,7 +596,7 @@
       "post": {
         "operationId": "notifications.sendnotification.generateNotificationFromTemplate",
         "tags": [
-          "sendnotification"
+          "notifications.sendnotification"
         ],
         "summary": "Create notification from template with variable substitution",
         "responses": {
@@ -806,7 +605,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/notifications.Notification"
+                  "$ref": "#/components/schemas/Notification"
                 }
               }
             }
@@ -864,7 +663,7 @@
       "post": {
         "operationId": "notifications.notificationscheduling.scheduleNotification",
         "tags": [
-          "notificationscheduling"
+          "notifications.notificationscheduling"
         ],
         "summary": "Schedule notification for specific time",
         "responses": {
@@ -873,7 +672,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/notifications.ScheduledNotification"
+                  "$ref": "#/components/schemas/ScheduledNotification"
                 }
               }
             }
@@ -900,7 +699,7 @@
             "in": "query",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/notifications.ScheduledNotification"
+              "$ref": "#/components/schemas/ScheduledNotification"
             }
           },
           {
@@ -917,7 +716,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/notifications.Notification"
+                "$ref": "#/components/schemas/Notification"
               }
             }
           }
@@ -931,7 +730,7 @@
       "post": {
         "operationId": "notifications.notificationscheduling.scheduleRecurringNotification",
         "tags": [
-          "notificationscheduling"
+          "notifications.notificationscheduling"
         ],
         "summary": "Set up recurring notification schedule",
         "responses": {
@@ -940,7 +739,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/notifications.ScheduledNotification"
+                  "$ref": "#/components/schemas/ScheduledNotification"
                 }
               }
             }
@@ -988,7 +787,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/notifications.Notification"
+                "$ref": "#/components/schemas/Notification"
               }
             }
           }
@@ -1002,7 +801,7 @@
       "post": {
         "operationId": "notifications.notificationscheduling.optimizeDeliveryTime",
         "tags": [
-          "notificationscheduling"
+          "notifications.notificationscheduling"
         ],
         "summary": "Determine optimal delivery time based on user engagement",
         "responses": {
@@ -1069,7 +868,7 @@
       "get": {
         "operationId": "notifications.notificationscheduling.batchScheduledNotifications",
         "tags": [
-          "notificationscheduling"
+          "notifications.notificationscheduling"
         ],
         "summary": "Group scheduled notifications for efficient processing",
         "responses": {
@@ -1080,7 +879,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/notifications.ScheduledNotification"
+                    "$ref": "#/components/schemas/ScheduledNotification"
                   }
                 }
               }
@@ -1121,7 +920,7 @@
       "post": {
         "operationId": "notifications.notificationscheduling.convertToUserTimezone",
         "tags": [
-          "notificationscheduling"
+          "notifications.notificationscheduling"
         ],
         "summary": "Convert scheduled time to user's timezone",
         "responses": {
@@ -1189,7 +988,7 @@
       "delete": {
         "operationId": "notifications.notificationscheduling.cancelScheduledNotification",
         "tags": [
-          "notificationscheduling"
+          "notifications.notificationscheduling"
         ],
         "summary": "Cancel scheduled notification before delivery",
         "responses": {
@@ -1228,7 +1027,7 @@
       "put": {
         "operationId": "notifications.notificationscheduling.updateScheduledNotification",
         "tags": [
-          "notificationscheduling"
+          "notifications.notificationscheduling"
         ],
         "summary": "Modify scheduled notification",
         "responses": {
@@ -1237,7 +1036,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/notifications.ScheduledNotification"
+                  "$ref": "#/components/schemas/ScheduledNotification"
                 }
               }
             }
@@ -1272,7 +1071,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/notifications.ScheduledNotification"
+                "$ref": "#/components/schemas/ScheduledNotification"
               }
             }
           }
@@ -1286,7 +1085,7 @@
       "get": {
         "operationId": "notifications.notificationscheduling.getScheduledNotifications",
         "tags": [
-          "notificationscheduling"
+          "notifications.notificationscheduling"
         ],
         "summary": "Get user's scheduled notifications",
         "responses": {
@@ -1297,7 +1096,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/notifications.ScheduledNotification"
+                    "$ref": "#/components/schemas/ScheduledNotification"
                   }
                 }
               }
@@ -1346,7 +1145,7 @@
       "post": {
         "operationId": "notifications.notificationscheduling.processScheduledNotifications",
         "tags": [
-          "notificationscheduling"
+          "notifications.notificationscheduling"
         ],
         "summary": "Process and send due notifications",
         "responses": {
@@ -1405,7 +1204,7 @@
       "get": {
         "operationId": "notifications.notificationscheduling.previewScheduledNotification",
         "tags": [
-          "notificationscheduling"
+          "notifications.notificationscheduling"
         ],
         "summary": "Generate preview of scheduled notification",
         "responses": {
@@ -1446,28 +1245,284 @@
         "x-permission": "notifications:notificationscheduling:read",
         "description": "Generate preview of scheduled notification"
       }
+    },
+    "/api/notifications/notifications": {
+      "get": {
+        "operationId": "notifications.notifications.query",
+        "tags": [
+          "notifications.notifications"
+        ],
+        "summary": "Query",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Notification"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/NotificationFilter"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "notifications:notifications:read"
+      },
+      "post": {
+        "operationId": "notifications.notifications.create",
+        "tags": [
+          "notifications.notifications"
+        ],
+        "summary": "Create",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Notification"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateNotificationInput"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "notifications:notifications:write"
+      }
+    },
+    "/api/notifications/notifications/{id}": {
+      "get": {
+        "operationId": "notifications.notifications.getById",
+        "tags": [
+          "notifications.notifications"
+        ],
+        "summary": "Get By Id",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Notification"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "notifications:notifications:read"
+      },
+      "put": {
+        "operationId": "notifications.notifications.update",
+        "tags": [
+          "notifications.notifications"
+        ],
+        "summary": "Update",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Notification"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateNotificationInput"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "notifications:notifications:write"
+      },
+      "delete": {
+        "operationId": "notifications.notifications.delete",
+        "tags": [
+          "notifications.notifications"
+        ],
+        "summary": "Delete",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "notifications:notifications:delete"
+      }
     }
   },
   "components": {
     "schemas": {
-      "notifications.ScheduledNotification": {
+      "Notification": {
+        "allOf": [
+          {},
+          {
+            "type": "object",
+            "properties": {
+              "user": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "message": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "priority": {
+                "type": "string"
+              },
+              "id": {
+                "type": "string"
+              },
+              "_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "user",
+              "name",
+              "message",
+              "type",
+              "priority"
+            ]
+          }
+        ]
+      },
+      "RecipientCriteria": {
+        "type": "object",
+        "properties": {
+          "role": {
+            "type": "string"
+          },
+          "group": {
+            "type": "string"
+          },
+          "userIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "filters": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        }
+      },
+      "NotificationChannel": {},
+      "NotificationDeliveryStatus": {},
+      "ScheduledNotification": {
         "type": "object",
         "properties": {
           "id": {
             "type": "string"
           },
           "notification": {
-            "$ref": "#/components/schemas/notifications.Notification"
+            "$ref": "#/components/schemas/Notification"
           },
           "deliveryTime": {
             "type": "string",
             "format": "date-time"
           },
           "status": {
-            "$ref": "#/components/schemas/notifications.ScheduledNotificationStatus"
+            "$ref": "#/components/schemas/ScheduledNotificationStatus"
           },
           "frequency": {
-            "$ref": "#/components/schemas/notifications.ScheduleFrequency"
+            "$ref": "#/components/schemas/ScheduleFrequency"
           },
           "endDate": {
             "type": "string",
@@ -1508,46 +1563,9 @@
           "status"
         ]
       },
-      "notifications.Notification": {
-        "allOf": [
-          {},
-          {
-            "type": "object",
-            "properties": {
-              "user": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "message": {
-                "type": "string"
-              },
-              "type": {
-                "type": "string"
-              },
-              "priority": {
-                "type": "string"
-              },
-              "id": {
-                "type": "string"
-              },
-              "_id": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "user",
-              "name",
-              "message",
-              "type",
-              "priority"
-            ]
-          }
-        ]
-      },
-      "notifications.ScheduledNotificationStatus": {},
-      "data.NotificationFilter": {
+      "ScheduledNotificationStatus": {},
+      "ScheduleFrequency": {},
+      "NotificationFilter": {
         "type": "object",
         "properties": {
           "user": {
@@ -1627,192 +1645,7 @@
           "updatedByDate"
         ]
       },
-      "notifications.NotificationChannel": {},
-      "data.Notification": {
-        "type": "object",
-        "properties": {
-          "user": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "message": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string"
-          },
-          "priority": {
-            "type": "string"
-          },
-          "isRead": {
-            "type": "boolean"
-          },
-          "isDismissed": {
-            "type": "boolean"
-          },
-          "readDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "dismissedDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "actionRequired": {
-            "type": "boolean"
-          },
-          "actionUrl": {
-            "type": "string"
-          },
-          "actionLabel": {
-            "type": "string"
-          },
-          "relatedEntityType": {
-            "type": "string",
-            "description": "e.g., \"customer\", \"opportunity\", \"task\""
-          },
-          "relatedEntityId": {
-            "type": "string"
-          },
-          "expiryDate": {
-            "type": "string",
-            "format": "date-time",
-            "description": "Date when notification expires"
-          },
-          "searchString": {
-            "type": "string"
-          },
-          "summary": {
-            "type": "string"
-          },
-          "createdByDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updatedByDate": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "required": [
-          "user",
-          "name",
-          "message",
-          "type",
-          "priority",
-          "searchString",
-          "summary",
-          "createdByDate",
-          "updatedByDate"
-        ]
-      },
-      "notifications.ScheduleFrequency": {},
-      "notifications.RecipientCriteria": {
-        "type": "object",
-        "properties": {
-          "role": {
-            "type": "string"
-          },
-          "group": {
-            "type": "string"
-          },
-          "userIds": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "filters": {
-            "type": "object",
-            "additionalProperties": true
-          }
-        }
-      },
-      "data.UpdateNotificationInput": {
-        "type": "object",
-        "properties": {
-          "user": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "message": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string"
-          },
-          "priority": {
-            "type": "string"
-          },
-          "isRead": {
-            "type": "boolean"
-          },
-          "isDismissed": {
-            "type": "boolean"
-          },
-          "readDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "dismissedDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "actionRequired": {
-            "type": "boolean"
-          },
-          "actionUrl": {
-            "type": "string"
-          },
-          "actionLabel": {
-            "type": "string"
-          },
-          "relatedEntityType": {
-            "type": "string",
-            "description": "e.g., \"customer\", \"opportunity\", \"task\""
-          },
-          "relatedEntityId": {
-            "type": "string"
-          },
-          "expiryDate": {
-            "type": "string",
-            "format": "date-time",
-            "description": "Date when notification expires"
-          },
-          "searchString": {
-            "type": "string"
-          },
-          "summary": {
-            "type": "string"
-          },
-          "createdByDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updatedByDate": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "required": [
-          "user",
-          "name",
-          "message",
-          "type",
-          "priority",
-          "searchString",
-          "summary",
-          "createdByDate",
-          "updatedByDate"
-        ],
-        "description": "Auto-generated updateInput for Notification"
-      },
-      "notifications.NotificationDeliveryStatus": {},
-      "data.CreateNotificationInput": {
+      "CreateNotificationInput": {
         "type": "object",
         "properties": {
           "user": {
@@ -1892,7 +1725,94 @@
           "updatedByDate"
         ],
         "description": "Auto-generated createInput for Notification"
+      },
+      "UpdateNotificationInput": {
+        "type": "object",
+        "properties": {
+          "user": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "priority": {
+            "type": "string"
+          },
+          "isRead": {
+            "type": "boolean"
+          },
+          "isDismissed": {
+            "type": "boolean"
+          },
+          "readDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dismissedDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "actionRequired": {
+            "type": "boolean"
+          },
+          "actionUrl": {
+            "type": "string"
+          },
+          "actionLabel": {
+            "type": "string"
+          },
+          "relatedEntityType": {
+            "type": "string",
+            "description": "e.g., \"customer\", \"opportunity\", \"task\""
+          },
+          "relatedEntityId": {
+            "type": "string"
+          },
+          "expiryDate": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Date when notification expires"
+          },
+          "searchString": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "createdByDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedByDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "user",
+          "name",
+          "message",
+          "type",
+          "priority",
+          "searchString",
+          "summary",
+          "createdByDate",
+          "updatedByDate"
+        ],
+        "description": "Auto-generated updateInput for Notification"
       }
     }
-  }
+  },
+  "x-fcg-warnings": [
+    "Unresolved type 'NotificationChannel' → emitted permissive schema {}",
+    "Unresolved type 'NotificationDeliveryStatus' → emitted permissive schema {}",
+    "Unresolved type 'ScheduledNotificationStatus' → emitted permissive schema {}",
+    "Unresolved type 'ScheduleFrequency' → emitted permissive schema {}"
+  ]
 }

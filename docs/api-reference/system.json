@@ -1,627 +1,36 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "System API",
-    "version": "0.0.0",
-    "description": "Aggregate OpenAPI 3.1 document for all enterprise modules, generated from FCG InterfaceSpecs."
+    "title": "system API",
+    "version": "1.0.13",
+    "description": "OpenAPI 3.1 document for the `system` module, generated from FCG InterfaceSpecs."
   },
-  "servers": [
-    {
-      "url": "/",
-      "description": "Current host"
-    }
-  ],
   "tags": [
     {
-      "name": "jobHistories"
+      "name": "system.multitenantdatabase"
     },
     {
-      "name": "jobTypes"
+      "name": "system.settings"
     },
     {
-      "name": "jobs"
+      "name": "system.tenantresolution"
     },
     {
-      "name": "multitenantdatabase"
+      "name": "system.jobHistories"
     },
     {
-      "name": "settings"
+      "name": "system.jobTypes"
     },
     {
-      "name": "tenantresolution"
+      "name": "system.jobs"
     }
   ],
   "paths": {
-    "/api/system/jobs": {
-      "get": {
-        "operationId": "system.jobs.query",
-        "tags": [
-          "jobs"
-        ],
-        "summary": "Query",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/data.Job"
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "filter",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/data.JobFilter"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "system:jobs:read"
-      },
-      "post": {
-        "operationId": "system.jobs.create",
-        "tags": [
-          "jobs"
-        ],
-        "summary": "Create",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.Job"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/data.CreateJobInput"
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "system:jobs:write"
-      }
-    },
-    "/api/system/jobs/{id}": {
-      "get": {
-        "operationId": "system.jobs.getById",
-        "tags": [
-          "jobs"
-        ],
-        "summary": "Get By Id",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.Job"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "system:jobs:read"
-      },
-      "put": {
-        "operationId": "system.jobs.update",
-        "tags": [
-          "jobs"
-        ],
-        "summary": "Update",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.Job"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/data.UpdateJobInput"
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "system:jobs:write"
-      },
-      "delete": {
-        "operationId": "system.jobs.delete",
-        "tags": [
-          "jobs"
-        ],
-        "summary": "Delete",
-        "responses": {
-          "204": {
-            "description": "No content"
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "system:jobs:delete"
-      }
-    },
-    "/api/system/jobTypes": {
-      "get": {
-        "operationId": "system.jobTypes.query",
-        "tags": [
-          "jobTypes"
-        ],
-        "summary": "Query",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/data.JobType"
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "filter",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/data.JobTypeFilter"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "system:jobTypes:read"
-      },
-      "post": {
-        "operationId": "system.jobTypes.create",
-        "tags": [
-          "jobTypes"
-        ],
-        "summary": "Create",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.JobType"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/data.CreateJobTypeInput"
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "system:jobTypes:write"
-      }
-    },
-    "/api/system/jobTypes/{id}": {
-      "get": {
-        "operationId": "system.jobTypes.getById",
-        "tags": [
-          "jobTypes"
-        ],
-        "summary": "Get By Id",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.JobType"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "system:jobTypes:read"
-      },
-      "put": {
-        "operationId": "system.jobTypes.update",
-        "tags": [
-          "jobTypes"
-        ],
-        "summary": "Update",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.JobType"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/data.UpdateJobTypeInput"
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "system:jobTypes:write"
-      },
-      "delete": {
-        "operationId": "system.jobTypes.delete",
-        "tags": [
-          "jobTypes"
-        ],
-        "summary": "Delete",
-        "responses": {
-          "204": {
-            "description": "No content"
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "system:jobTypes:delete"
-      }
-    },
-    "/api/system/jobHistories": {
-      "get": {
-        "operationId": "system.jobHistories.query",
-        "tags": [
-          "jobHistories"
-        ],
-        "summary": "Query",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/data.JobRun"
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "filter",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/data.JobRunFilter"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "system:jobHistories:read"
-      },
-      "post": {
-        "operationId": "system.jobHistories.create",
-        "tags": [
-          "jobHistories"
-        ],
-        "summary": "Create",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.JobRun"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/data.CreateJobRunInput"
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "system:jobHistories:write"
-      }
-    },
-    "/api/system/jobHistories/{id}": {
-      "get": {
-        "operationId": "system.jobHistories.getById",
-        "tags": [
-          "jobHistories"
-        ],
-        "summary": "Get By Id",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.JobRun"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "system:jobHistories:read"
-      },
-      "put": {
-        "operationId": "system.jobHistories.update",
-        "tags": [
-          "jobHistories"
-        ],
-        "summary": "Update",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/data.JobRun"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/data.UpdateJobRunInput"
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "system:jobHistories:write"
-      },
-      "delete": {
-        "operationId": "system.jobHistories.delete",
-        "tags": [
-          "jobHistories"
-        ],
-        "summary": "Delete",
-        "responses": {
-          "204": {
-            "description": "No content"
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "system:jobHistories:delete"
-      }
-    },
     "/api/system/health/multi-tenant": {
       "get": {
         "operationId": "system.tenantresolution.healthCheckHandler",
         "tags": [
-          "tenantresolution"
+          "system.tenantresolution"
         ],
         "summary": "Health check endpoint handler",
         "responses": {
@@ -649,7 +58,7 @@
       "post": {
         "operationId": "system.tenantresolution.clearCacheHandler",
         "tags": [
-          "tenantresolution"
+          "system.tenantresolution"
         ],
         "summary": "Admin endpoint to clear caches",
         "responses": {
@@ -677,7 +86,7 @@
       "get": {
         "operationId": "system.multitenantdatabase.getConnectionStatus",
         "tags": [
-          "multitenantdatabase"
+          "system.multitenantdatabase"
         ],
         "summary": "Get connection status for health checks",
         "responses": {
@@ -705,7 +114,7 @@
       "get": {
         "operationId": "system.settings.getUserSettings",
         "tags": [
-          "settings"
+          "system.settings"
         ],
         "summary": "Get User Settings",
         "responses": {
@@ -744,7 +153,7 @@
       "put": {
         "operationId": "system.settings.saveUserSettings",
         "tags": [
-          "settings"
+          "system.settings"
         ],
         "summary": "Save User Settings",
         "responses": {
@@ -785,7 +194,7 @@
       "get": {
         "operationId": "system.settings.getAccountSettings",
         "tags": [
-          "settings"
+          "system.settings"
         ],
         "summary": "Get Account Settings",
         "responses": {
@@ -824,7 +233,7 @@
       "put": {
         "operationId": "system.settings.saveAccountSettings",
         "tags": [
-          "settings"
+          "system.settings"
         ],
         "summary": "Save Account Settings",
         "responses": {
@@ -865,7 +274,7 @@
       "get": {
         "operationId": "system.settings.getScopedSettings",
         "tags": [
-          "settings"
+          "system.settings"
         ],
         "summary": "Get Scoped Settings",
         "responses": {
@@ -904,7 +313,7 @@
       "put": {
         "operationId": "system.settings.saveScopedSettings",
         "tags": [
-          "settings"
+          "system.settings"
         ],
         "summary": "Save Scoped Settings",
         "responses": {
@@ -945,7 +354,7 @@
       "get": {
         "operationId": "system.settings.getUserFieldValue",
         "tags": [
-          "settings"
+          "system.settings"
         ],
         "summary": "Get User Field Value",
         "responses": {
@@ -981,96 +390,596 @@
         "x-scope": "clientServer",
         "x-permission": "system:settings:read"
       }
+    },
+    "/api/system/jobs": {
+      "get": {
+        "operationId": "system.jobs.query",
+        "tags": [
+          "system.jobs"
+        ],
+        "summary": "Query",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Job"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/JobFilter"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "system:jobs:read"
+      },
+      "post": {
+        "operationId": "system.jobs.create",
+        "tags": [
+          "system.jobs"
+        ],
+        "summary": "Create",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Job"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateJobInput"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "system:jobs:write"
+      }
+    },
+    "/api/system/jobs/{id}": {
+      "get": {
+        "operationId": "system.jobs.getById",
+        "tags": [
+          "system.jobs"
+        ],
+        "summary": "Get By Id",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Job"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "system:jobs:read"
+      },
+      "put": {
+        "operationId": "system.jobs.update",
+        "tags": [
+          "system.jobs"
+        ],
+        "summary": "Update",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Job"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateJobInput"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "system:jobs:write"
+      },
+      "delete": {
+        "operationId": "system.jobs.delete",
+        "tags": [
+          "system.jobs"
+        ],
+        "summary": "Delete",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "system:jobs:delete"
+      }
+    },
+    "/api/system/jobTypes": {
+      "get": {
+        "operationId": "system.jobTypes.query",
+        "tags": [
+          "system.jobTypes"
+        ],
+        "summary": "Query",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/JobType"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/JobTypeFilter"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "system:jobTypes:read"
+      },
+      "post": {
+        "operationId": "system.jobTypes.create",
+        "tags": [
+          "system.jobTypes"
+        ],
+        "summary": "Create",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JobType"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateJobTypeInput"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "system:jobTypes:write"
+      }
+    },
+    "/api/system/jobTypes/{id}": {
+      "get": {
+        "operationId": "system.jobTypes.getById",
+        "tags": [
+          "system.jobTypes"
+        ],
+        "summary": "Get By Id",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JobType"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "system:jobTypes:read"
+      },
+      "put": {
+        "operationId": "system.jobTypes.update",
+        "tags": [
+          "system.jobTypes"
+        ],
+        "summary": "Update",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JobType"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateJobTypeInput"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "system:jobTypes:write"
+      },
+      "delete": {
+        "operationId": "system.jobTypes.delete",
+        "tags": [
+          "system.jobTypes"
+        ],
+        "summary": "Delete",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "system:jobTypes:delete"
+      }
+    },
+    "/api/system/jobHistories": {
+      "get": {
+        "operationId": "system.jobHistories.query",
+        "tags": [
+          "system.jobHistories"
+        ],
+        "summary": "Query",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/JobRun"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/JobRunFilter"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "system:jobHistories:read"
+      },
+      "post": {
+        "operationId": "system.jobHistories.create",
+        "tags": [
+          "system.jobHistories"
+        ],
+        "summary": "Create",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JobRun"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateJobRunInput"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "system:jobHistories:write"
+      }
+    },
+    "/api/system/jobHistories/{id}": {
+      "get": {
+        "operationId": "system.jobHistories.getById",
+        "tags": [
+          "system.jobHistories"
+        ],
+        "summary": "Get By Id",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JobRun"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "system:jobHistories:read"
+      },
+      "put": {
+        "operationId": "system.jobHistories.update",
+        "tags": [
+          "system.jobHistories"
+        ],
+        "summary": "Update",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JobRun"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateJobRunInput"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "system:jobHistories:write"
+      },
+      "delete": {
+        "operationId": "system.jobHistories.delete",
+        "tags": [
+          "system.jobHistories"
+        ],
+        "summary": "Delete",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "system:jobHistories:delete"
+      }
     }
   },
   "components": {
     "schemas": {
-      "data.CreateJobTypeInput": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "key": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "handlerFunction": {
-            "type": "string"
-          },
-          "defaultSchedule": {
-            "type": "string",
-            "description": "Default cron expression"
-          },
-          "timeoutMinutes": {
-            "type": "number"
-          },
-          "maxRetries": {
-            "type": "number"
-          },
-          "isActive": {
-            "type": "boolean"
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "active",
-              "inactive"
-            ]
-          }
-        },
-        "required": [
-          "name",
-          "key",
-          "handlerFunction"
-        ],
-        "description": "Auto-generated createInput for JobType"
-      },
-      "data.JobType": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "key": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "handlerFunction": {
-            "type": "string"
-          },
-          "defaultSchedule": {
-            "type": "string",
-            "description": "Default cron expression"
-          },
-          "timeoutMinutes": {
-            "type": "number"
-          },
-          "maxRetries": {
-            "type": "number"
-          },
-          "isActive": {
-            "type": "boolean"
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "active",
-              "inactive"
-            ]
-          }
-        },
-        "required": [
-          "name",
-          "key",
-          "handlerFunction"
-        ]
-      },
-      "data.JobFilter": {
+      "Job": {
         "type": "object",
         "properties": {
           "name": {
@@ -1132,143 +1041,7 @@
           "status"
         ]
       },
-      "data.JobRun": {
-        "type": "object",
-        "properties": {
-          "jobId": {
-            "type": "string"
-          },
-          "jobTypeId": {
-            "type": "string"
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "running",
-              "completed",
-              "failed",
-              "cancelled"
-            ]
-          },
-          "startedAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "completedAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "durationSeconds": {
-            "type": "number"
-          },
-          "result": {
-            "type": "object",
-            "additionalProperties": true
-          },
-          "error": {
-            "type": "string"
-          },
-          "workerNodeId": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "jobId",
-          "status"
-        ]
-      },
-      "data.JobRunFilter": {
-        "type": "object",
-        "properties": {
-          "jobId": {
-            "type": "string"
-          },
-          "jobTypeId": {
-            "type": "string"
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "running",
-              "completed",
-              "failed",
-              "cancelled"
-            ]
-          },
-          "startedAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "completedAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "durationSeconds": {
-            "type": "number"
-          },
-          "result": {
-            "type": "object",
-            "additionalProperties": true
-          },
-          "error": {
-            "type": "string"
-          },
-          "workerNodeId": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "jobId",
-          "status"
-        ]
-      },
-      "data.CreateJobRunInput": {
-        "type": "object",
-        "properties": {
-          "jobId": {
-            "type": "string"
-          },
-          "jobTypeId": {
-            "type": "string"
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "running",
-              "completed",
-              "failed",
-              "cancelled"
-            ]
-          },
-          "startedAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "completedAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "durationSeconds": {
-            "type": "number"
-          },
-          "result": {
-            "type": "object",
-            "additionalProperties": true
-          },
-          "error": {
-            "type": "string"
-          },
-          "workerNodeId": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "jobId",
-          "status"
-        ],
-        "description": "Auto-generated createInput for JobRun"
-      },
-      "data.Job": {
+      "JobFilter": {
         "type": "object",
         "properties": {
           "name": {
@@ -1330,49 +1103,7 @@
           "status"
         ]
       },
-      "data.JobTypeFilter": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "key": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "handlerFunction": {
-            "type": "string"
-          },
-          "defaultSchedule": {
-            "type": "string",
-            "description": "Default cron expression"
-          },
-          "timeoutMinutes": {
-            "type": "number"
-          },
-          "maxRetries": {
-            "type": "number"
-          },
-          "isActive": {
-            "type": "boolean"
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "active",
-              "inactive"
-            ]
-          }
-        },
-        "required": [
-          "name",
-          "key",
-          "handlerFunction"
-        ]
-      },
-      "data.CreateJobInput": {
+      "CreateJobInput": {
         "type": "object",
         "properties": {
           "name": {
@@ -1435,96 +1166,7 @@
         ],
         "description": "Auto-generated createInput for Job"
       },
-      "data.UpdateJobRunInput": {
-        "type": "object",
-        "properties": {
-          "jobId": {
-            "type": "string"
-          },
-          "jobTypeId": {
-            "type": "string"
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "running",
-              "completed",
-              "failed",
-              "cancelled"
-            ]
-          },
-          "startedAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "completedAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "durationSeconds": {
-            "type": "number"
-          },
-          "result": {
-            "type": "object",
-            "additionalProperties": true
-          },
-          "error": {
-            "type": "string"
-          },
-          "workerNodeId": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "jobId",
-          "status"
-        ],
-        "description": "Auto-generated updateInput for JobRun"
-      },
-      "data.UpdateJobTypeInput": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "key": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "handlerFunction": {
-            "type": "string"
-          },
-          "defaultSchedule": {
-            "type": "string",
-            "description": "Default cron expression"
-          },
-          "timeoutMinutes": {
-            "type": "number"
-          },
-          "maxRetries": {
-            "type": "number"
-          },
-          "isActive": {
-            "type": "boolean"
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "active",
-              "inactive"
-            ]
-          }
-        },
-        "required": [
-          "name",
-          "key",
-          "handlerFunction"
-        ],
-        "description": "Auto-generated updateInput for JobType"
-      },
-      "data.UpdateJobInput": {
+      "UpdateJobInput": {
         "type": "object",
         "properties": {
           "name": {
@@ -1586,7 +1228,362 @@
           "status"
         ],
         "description": "Auto-generated updateInput for Job"
+      },
+      "JobType": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "key": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "handlerFunction": {
+            "type": "string"
+          },
+          "defaultSchedule": {
+            "type": "string",
+            "description": "Default cron expression"
+          },
+          "timeoutMinutes": {
+            "type": "number"
+          },
+          "maxRetries": {
+            "type": "number"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "active",
+              "inactive"
+            ]
+          }
+        },
+        "required": [
+          "name",
+          "key",
+          "handlerFunction"
+        ]
+      },
+      "JobTypeFilter": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "key": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "handlerFunction": {
+            "type": "string"
+          },
+          "defaultSchedule": {
+            "type": "string",
+            "description": "Default cron expression"
+          },
+          "timeoutMinutes": {
+            "type": "number"
+          },
+          "maxRetries": {
+            "type": "number"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "active",
+              "inactive"
+            ]
+          }
+        },
+        "required": [
+          "name",
+          "key",
+          "handlerFunction"
+        ]
+      },
+      "CreateJobTypeInput": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "key": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "handlerFunction": {
+            "type": "string"
+          },
+          "defaultSchedule": {
+            "type": "string",
+            "description": "Default cron expression"
+          },
+          "timeoutMinutes": {
+            "type": "number"
+          },
+          "maxRetries": {
+            "type": "number"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "active",
+              "inactive"
+            ]
+          }
+        },
+        "required": [
+          "name",
+          "key",
+          "handlerFunction"
+        ],
+        "description": "Auto-generated createInput for JobType"
+      },
+      "UpdateJobTypeInput": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "key": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "handlerFunction": {
+            "type": "string"
+          },
+          "defaultSchedule": {
+            "type": "string",
+            "description": "Default cron expression"
+          },
+          "timeoutMinutes": {
+            "type": "number"
+          },
+          "maxRetries": {
+            "type": "number"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "active",
+              "inactive"
+            ]
+          }
+        },
+        "required": [
+          "name",
+          "key",
+          "handlerFunction"
+        ],
+        "description": "Auto-generated updateInput for JobType"
+      },
+      "JobRun": {
+        "type": "object",
+        "properties": {
+          "jobId": {
+            "type": "string"
+          },
+          "jobTypeId": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "running",
+              "completed",
+              "failed",
+              "cancelled"
+            ]
+          },
+          "startedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "completedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "durationSeconds": {
+            "type": "number"
+          },
+          "result": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "error": {
+            "type": "string"
+          },
+          "workerNodeId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "jobId",
+          "status"
+        ]
+      },
+      "JobRunFilter": {
+        "type": "object",
+        "properties": {
+          "jobId": {
+            "type": "string"
+          },
+          "jobTypeId": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "running",
+              "completed",
+              "failed",
+              "cancelled"
+            ]
+          },
+          "startedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "completedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "durationSeconds": {
+            "type": "number"
+          },
+          "result": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "error": {
+            "type": "string"
+          },
+          "workerNodeId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "jobId",
+          "status"
+        ]
+      },
+      "CreateJobRunInput": {
+        "type": "object",
+        "properties": {
+          "jobId": {
+            "type": "string"
+          },
+          "jobTypeId": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "running",
+              "completed",
+              "failed",
+              "cancelled"
+            ]
+          },
+          "startedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "completedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "durationSeconds": {
+            "type": "number"
+          },
+          "result": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "error": {
+            "type": "string"
+          },
+          "workerNodeId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "jobId",
+          "status"
+        ],
+        "description": "Auto-generated createInput for JobRun"
+      },
+      "UpdateJobRunInput": {
+        "type": "object",
+        "properties": {
+          "jobId": {
+            "type": "string"
+          },
+          "jobTypeId": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "running",
+              "completed",
+              "failed",
+              "cancelled"
+            ]
+          },
+          "startedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "completedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "durationSeconds": {
+            "type": "number"
+          },
+          "result": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "error": {
+            "type": "string"
+          },
+          "workerNodeId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "jobId",
+          "status"
+        ],
+        "description": "Auto-generated updateInput for JobRun"
       }
     }
-  }
+  },
+  "x-fcg-warnings": [
+    "Unresolvable type '(req: Request, res: Response) => Promise<void>' → emitted permissive schema {}"
+  ]
 }

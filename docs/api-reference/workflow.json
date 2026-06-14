@@ -1,36 +1,243 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Workflow API",
-    "version": "0.0.0",
-    "description": "Aggregate OpenAPI 3.1 document for all enterprise modules, generated from FCG InterfaceSpecs."
+    "title": "workflow API",
+    "version": "1.0.10",
+    "description": "OpenAPI 3.1 document for the `workflow` module, generated from FCG InterfaceSpecs."
   },
-  "servers": [
-    {
-      "url": "/",
-      "description": "Current host"
-    }
-  ],
   "tags": [
     {
-      "name": "scheduledEvents"
+      "name": "workflow.scheduledevents"
     },
     {
-      "name": "scheduledevents"
+      "name": "workflow.scheduledEvents"
     },
     {
-      "name": "workflowStatusPipelineRecordStates"
+      "name": "workflow.workflowStatusPipelineRecordStates"
     },
     {
-      "name": "workflowStatusPipelines"
+      "name": "workflow.workflowStatusPipelines"
     }
   ],
   "paths": {
+    "/api/workflow/scheduled-events": {
+      "post": {
+        "operationId": "workflow.scheduledevents.apiScheduleEvent",
+        "tags": [
+          "workflow.scheduledevents"
+        ],
+        "summary": "POST /workflow/scheduled-events — schedule a generic event",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScheduledEvent"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ScheduleEventInput"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "workflow:scheduledevents:write",
+        "description": "POST /workflow/scheduled-events — schedule a generic event."
+      },
+      "get": {
+        "operationId": "workflow.scheduledevents.apiListScheduledEvents",
+        "tags": [
+          "workflow.scheduledevents"
+        ],
+        "summary": "GET /workflow/scheduled-events — list filtered events",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ScheduledEvent"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "allOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": true
+                },
+                {
+                  "$ref": "#/components/schemas/ListScheduledEventsFilters"
+                }
+              ]
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "workflow:scheduledevents:read",
+        "description": "GET /workflow/scheduled-events — list filtered events."
+      }
+    },
+    "/api/workflow/scheduled-events/workflow": {
+      "post": {
+        "operationId": "workflow.scheduledevents.apiScheduleWorkflow",
+        "tags": [
+          "workflow.scheduledevents"
+        ],
+        "summary": "POST /workflow/scheduled-events/workflow — schedule a workflow-on-record",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScheduledEvent"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ScheduleWorkflowInput"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "workflow:scheduledevents:write",
+        "description": "POST /workflow/scheduled-events/workflow — schedule a workflow-on-record."
+      }
+    },
+    "/api/workflow/scheduled-events/cancel": {
+      "post": {
+        "operationId": "workflow.scheduledevents.apiCancelScheduledEvent",
+        "tags": [
+          "workflow.scheduledevents"
+        ],
+        "summary": "POST /workflow/scheduled-events/cancel — cancel one event",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "workflow:scheduledevents:write",
+        "description": "POST /workflow/scheduled-events/cancel — cancel one event."
+      }
+    },
+    "/api/workflow/scheduled-events/dispatch": {
+      "post": {
+        "operationId": "workflow.scheduledevents.apiDispatchDueEvents",
+        "tags": [
+          "workflow.scheduledevents"
+        ],
+        "summary": "POST /workflow/scheduled-events/dispatch — manual tick (ops/tests)",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "workflow:scheduledevents:write",
+        "description": "POST /workflow/scheduled-events/dispatch — manual tick (ops/tests)."
+      }
+    },
     "/api/workflow/workflowStatusPipelines": {
       "get": {
         "operationId": "workflow.workflowStatusPipelines.query",
         "tags": [
-          "workflowStatusPipelines"
+          "workflow.workflowStatusPipelines"
         ],
         "summary": "Query",
         "responses": {
@@ -41,7 +248,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/data.WorkflowStatusPipeline"
+                    "$ref": "#/components/schemas/WorkflowStatusPipeline"
                   }
                 }
               }
@@ -60,7 +267,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "$ref": "#/components/schemas/data.WorkflowStatusPipelineFilter"
+              "$ref": "#/components/schemas/WorkflowStatusPipelineFilter"
             }
           }
         ],
@@ -70,7 +277,7 @@
       "post": {
         "operationId": "workflow.workflowStatusPipelines.create",
         "tags": [
-          "workflowStatusPipelines"
+          "workflow.workflowStatusPipelines"
         ],
         "summary": "Create",
         "responses": {
@@ -79,7 +286,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.WorkflowStatusPipeline"
+                  "$ref": "#/components/schemas/WorkflowStatusPipeline"
                 }
               }
             }
@@ -96,7 +303,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.CreateWorkflowStatusPipelineInput"
+                "$ref": "#/components/schemas/CreateWorkflowStatusPipelineInput"
               }
             }
           }
@@ -109,7 +316,7 @@
       "get": {
         "operationId": "workflow.workflowStatusPipelines.getById",
         "tags": [
-          "workflowStatusPipelines"
+          "workflow.workflowStatusPipelines"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -118,7 +325,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.WorkflowStatusPipeline"
+                  "$ref": "#/components/schemas/WorkflowStatusPipeline"
                 }
               }
             }
@@ -146,7 +353,7 @@
       "put": {
         "operationId": "workflow.workflowStatusPipelines.update",
         "tags": [
-          "workflowStatusPipelines"
+          "workflow.workflowStatusPipelines"
         ],
         "summary": "Update",
         "responses": {
@@ -155,7 +362,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.WorkflowStatusPipeline"
+                  "$ref": "#/components/schemas/WorkflowStatusPipeline"
                 }
               }
             }
@@ -182,7 +389,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.UpdateWorkflowStatusPipelineInput"
+                "$ref": "#/components/schemas/UpdateWorkflowStatusPipelineInput"
               }
             }
           }
@@ -193,7 +400,7 @@
       "delete": {
         "operationId": "workflow.workflowStatusPipelines.delete",
         "tags": [
-          "workflowStatusPipelines"
+          "workflow.workflowStatusPipelines"
         ],
         "summary": "Delete",
         "responses": {
@@ -225,7 +432,7 @@
       "get": {
         "operationId": "workflow.workflowStatusPipelineRecordStates.query",
         "tags": [
-          "workflowStatusPipelineRecordStates"
+          "workflow.workflowStatusPipelineRecordStates"
         ],
         "summary": "Query",
         "responses": {
@@ -236,7 +443,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/data.WorkflowStatusPipelineRecordState"
+                    "$ref": "#/components/schemas/WorkflowStatusPipelineRecordState"
                   }
                 }
               }
@@ -255,7 +462,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "$ref": "#/components/schemas/data.WorkflowStatusPipelineRecordStateFilter"
+              "$ref": "#/components/schemas/WorkflowStatusPipelineRecordStateFilter"
             }
           }
         ],
@@ -265,7 +472,7 @@
       "post": {
         "operationId": "workflow.workflowStatusPipelineRecordStates.create",
         "tags": [
-          "workflowStatusPipelineRecordStates"
+          "workflow.workflowStatusPipelineRecordStates"
         ],
         "summary": "Create",
         "responses": {
@@ -274,7 +481,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.WorkflowStatusPipelineRecordState"
+                  "$ref": "#/components/schemas/WorkflowStatusPipelineRecordState"
                 }
               }
             }
@@ -291,7 +498,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.CreateWorkflowStatusPipelineRecordStateInput"
+                "$ref": "#/components/schemas/CreateWorkflowStatusPipelineRecordStateInput"
               }
             }
           }
@@ -304,7 +511,7 @@
       "get": {
         "operationId": "workflow.workflowStatusPipelineRecordStates.getById",
         "tags": [
-          "workflowStatusPipelineRecordStates"
+          "workflow.workflowStatusPipelineRecordStates"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -313,7 +520,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.WorkflowStatusPipelineRecordState"
+                  "$ref": "#/components/schemas/WorkflowStatusPipelineRecordState"
                 }
               }
             }
@@ -341,7 +548,7 @@
       "put": {
         "operationId": "workflow.workflowStatusPipelineRecordStates.update",
         "tags": [
-          "workflowStatusPipelineRecordStates"
+          "workflow.workflowStatusPipelineRecordStates"
         ],
         "summary": "Update",
         "responses": {
@@ -350,7 +557,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.WorkflowStatusPipelineRecordState"
+                  "$ref": "#/components/schemas/WorkflowStatusPipelineRecordState"
                 }
               }
             }
@@ -377,7 +584,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.UpdateWorkflowStatusPipelineRecordStateInput"
+                "$ref": "#/components/schemas/UpdateWorkflowStatusPipelineRecordStateInput"
               }
             }
           }
@@ -388,7 +595,7 @@
       "delete": {
         "operationId": "workflow.workflowStatusPipelineRecordStates.delete",
         "tags": [
-          "workflowStatusPipelineRecordStates"
+          "workflow.workflowStatusPipelineRecordStates"
         ],
         "summary": "Delete",
         "responses": {
@@ -420,7 +627,7 @@
       "get": {
         "operationId": "workflow.scheduledEvents.query",
         "tags": [
-          "scheduledEvents"
+          "workflow.scheduledEvents"
         ],
         "summary": "Query",
         "responses": {
@@ -431,7 +638,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/data.ScheduledEvent"
+                    "$ref": "#/components/schemas/ScheduledEvent"
                   }
                 }
               }
@@ -450,7 +657,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "$ref": "#/components/schemas/data.ScheduledEventFilter"
+              "$ref": "#/components/schemas/ScheduledEventFilter"
             }
           }
         ],
@@ -460,7 +667,7 @@
       "post": {
         "operationId": "workflow.scheduledEvents.create",
         "tags": [
-          "scheduledEvents"
+          "workflow.scheduledEvents"
         ],
         "summary": "Create",
         "responses": {
@@ -469,7 +676,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.ScheduledEvent"
+                  "$ref": "#/components/schemas/ScheduledEvent"
                 }
               }
             }
@@ -486,7 +693,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.CreateScheduledEventInput"
+                "$ref": "#/components/schemas/CreateScheduledEventInput"
               }
             }
           }
@@ -499,7 +706,7 @@
       "get": {
         "operationId": "workflow.scheduledEvents.getById",
         "tags": [
-          "scheduledEvents"
+          "workflow.scheduledEvents"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -508,7 +715,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.ScheduledEvent"
+                  "$ref": "#/components/schemas/ScheduledEvent"
                 }
               }
             }
@@ -536,7 +743,7 @@
       "put": {
         "operationId": "workflow.scheduledEvents.update",
         "tags": [
-          "scheduledEvents"
+          "workflow.scheduledEvents"
         ],
         "summary": "Update",
         "responses": {
@@ -545,7 +752,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.ScheduledEvent"
+                  "$ref": "#/components/schemas/ScheduledEvent"
                 }
               }
             }
@@ -572,7 +779,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.UpdateScheduledEventInput"
+                "$ref": "#/components/schemas/UpdateScheduledEventInput"
               }
             }
           }
@@ -583,7 +790,7 @@
       "delete": {
         "operationId": "workflow.scheduledEvents.delete",
         "tags": [
-          "scheduledEvents"
+          "workflow.scheduledEvents"
         ],
         "summary": "Delete",
         "responses": {
@@ -610,224 +817,118 @@
         "x-scope": "clientServer",
         "x-permission": "workflow:scheduledEvents:delete"
       }
-    },
-    "/api/workflow/scheduled-events": {
-      "post": {
-        "operationId": "workflow.scheduledevents.apiScheduleEvent",
-        "tags": [
-          "scheduledevents"
-        ],
-        "summary": "POST /workflow/scheduled-events \u2014 schedule a generic event",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/workflow.ScheduledEvent"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/workflow.ScheduleEventInput"
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "workflow:scheduledevents:write",
-        "description": "POST /workflow/scheduled-events \u2014 schedule a generic event."
-      },
-      "get": {
-        "operationId": "workflow.scheduledevents.apiListScheduledEvents",
-        "tags": [
-          "scheduledevents"
-        ],
-        "summary": "GET /workflow/scheduled-events \u2014 list filtered events",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/workflow.ScheduledEvent"
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "query",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "allOf": [
-                {
-                  "type": "object",
-                  "additionalProperties": true
-                },
-                {
-                  "$ref": "#/components/schemas/workflow.ListScheduledEventsFilters"
-                }
-              ]
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "workflow:scheduledevents:read",
-        "description": "GET /workflow/scheduled-events \u2014 list filtered events."
-      }
-    },
-    "/api/workflow/scheduled-events/workflow": {
-      "post": {
-        "operationId": "workflow.scheduledevents.apiScheduleWorkflow",
-        "tags": [
-          "scheduledevents"
-        ],
-        "summary": "POST /workflow/scheduled-events/workflow \u2014 schedule a workflow-on-record",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/workflow.ScheduledEvent"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/workflow.ScheduleWorkflowInput"
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "workflow:scheduledevents:write",
-        "description": "POST /workflow/scheduled-events/workflow \u2014 schedule a workflow-on-record."
-      }
-    },
-    "/api/workflow/scheduled-events/cancel": {
-      "post": {
-        "operationId": "workflow.scheduledevents.apiCancelScheduledEvent",
-        "tags": [
-          "scheduledevents"
-        ],
-        "summary": "POST /workflow/scheduled-events/cancel \u2014 cancel one event",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": true
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "additionalProperties": true
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "workflow:scheduledevents:write",
-        "description": "POST /workflow/scheduled-events/cancel \u2014 cancel one event."
-      }
-    },
-    "/api/workflow/scheduled-events/dispatch": {
-      "post": {
-        "operationId": "workflow.scheduledevents.apiDispatchDueEvents",
-        "tags": [
-          "scheduledevents"
-        ],
-        "summary": "POST /workflow/scheduled-events/dispatch \u2014 manual tick (ops/tests)",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": true
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "additionalProperties": true
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "workflow:scheduledevents:write",
-        "description": "POST /workflow/scheduled-events/dispatch \u2014 manual tick (ops/tests)."
-      }
     }
   },
   "components": {
     "schemas": {
-      "data.ScheduledEvent": {
+      "ScheduledEvent": {
+        "type": "object",
+        "properties": {
+          "_id": {
+            "type": "string"
+          },
+          "accountId": {
+            "type": "string"
+          },
+          "eventTypeKey": {
+            "type": "string",
+            "description": "IEventType.key that will be published when the timer fires."
+          },
+          "eventTypeName": {
+            "type": "string",
+            "description": "Optional display name (defaults to eventTypeKey if absent)."
+          },
+          "source": {
+            "$ref": "#/components/schemas/IEventSource",
+            "description": "Optional event source override. Defaults to scheduledEvents source."
+          },
+          "payload": {
+            "description": "Arbitrary serialisable payload published with the event."
+          },
+          "workflow": {
+            "$ref": "#/components/schemas/ScheduledEventWorkflow",
+            "description": "Optional workflow-binding wrapper."
+          },
+          "triggerAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Single-shot trigger time. Mutually exclusive with `cron`."
+          },
+          "cron": {
+            "type": "string",
+            "description": "Cron expression (5- or 6-field syntax). Mutually exclusive with triggerAt."
+          },
+          "timezone": {
+            "type": "string",
+            "description": "IANA timezone for cron evaluation. Defaults to UTC."
+          },
+          "nextRunAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Always populated — the worker watches this column."
+          },
+          "lastRunAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "When the last fire actually happened."
+          },
+          "endAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Optional end-of-recurrence cutoff."
+          },
+          "maxRuns": {
+            "type": "number",
+            "description": "Optional maximum number of fires (cron only)."
+          },
+          "runCount": {
+            "type": "number",
+            "description": "Increments after each successful fire."
+          },
+          "status": {
+            "$ref": "#/components/schemas/ScheduledEventStatus"
+          },
+          "error": {
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "accountId",
+          "eventTypeKey",
+          "payload",
+          "nextRunAt",
+          "runCount",
+          "status",
+          "createdAt"
+        ]
+      },
+      "IEventSource": {},
+      "ScheduledEventWorkflow": {
+        "type": "object",
+        "properties": {
+          "modelKey": {
+            "type": "string"
+          },
+          "recordId": {
+            "type": "string"
+          },
+          "when": {
+            "type": "string",
+            "description": "Matches WorkflowDefinition.when — e.g. \"schedule\", \"follow-up\"."
+          }
+        },
+        "required": [
+          "modelKey",
+          "recordId",
+          "when"
+        ]
+      },
+      "ScheduledEventStatus": {},
+      "ScheduleEventInput": {
         "type": "object",
         "properties": {
           "eventTypeKey": {
@@ -836,82 +937,16 @@
           "eventTypeName": {
             "type": "string"
           },
-          "payload": {
-            "type": "object",
-            "additionalProperties": true
+          "source": {
+            "$ref": "#/components/schemas/IEventSource"
           },
-          "workflow": {
-            "type": "object",
-            "additionalProperties": true
-          },
-          "triggerAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "cron": {
-            "type": "string"
-          },
-          "timezone": {
-            "type": "string"
-          },
-          "nextRunAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "lastRunAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "endAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "maxRuns": {
-            "type": "number"
-          },
-          "runCount": {
-            "type": "number"
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "pending",
-              "processing",
-              "fired",
-              "cancelled",
-              "failed",
-              "completed"
-            ]
-          },
-          "error": {
-            "type": "string"
-          },
-          "accountId": {
-            "type": "string"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "createdByDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updatedByDate": {
-            "type": "string",
-            "format": "date-time"
-          }
+          "payload": {}
         },
         "required": [
-          "eventTypeKey",
-          "nextRunAt",
-          "status",
-          "accountId",
-          "createdByDate",
-          "updatedByDate"
+          "eventTypeKey"
         ]
       },
-      "workflow.ScheduleWorkflowInput": {
+      "ScheduleWorkflowInput": {
         "type": "object",
         "properties": {
           "modelKey": {
@@ -933,265 +968,11 @@
           "recordId"
         ]
       },
-      "workflow.ScheduledEvent": {
-        "type": "object",
-        "properties": {
-          "_id": {
-            "type": "string"
-          },
-          "accountId": {
-            "type": "string"
-          },
-          "eventTypeKey": {
-            "type": "string",
-            "description": "IEventType.key that will be published when the timer fires."
-          },
-          "eventTypeName": {
-            "type": "string",
-            "description": "Optional display name (defaults to eventTypeKey if absent)."
-          },
-          "source": {
-            "$ref": "#/components/schemas/workflow.IEventSource",
-            "description": "Optional event source override. Defaults to scheduledEvents source."
-          },
-          "payload": {
-            "description": "Arbitrary serialisable payload published with the event."
-          },
-          "workflow": {
-            "$ref": "#/components/schemas/workflow.ScheduledEventWorkflow",
-            "description": "Optional workflow-binding wrapper."
-          },
-          "triggerAt": {
-            "type": "string",
-            "format": "date-time",
-            "description": "Single-shot trigger time. Mutually exclusive with `cron`."
-          },
-          "cron": {
-            "type": "string",
-            "description": "Cron expression (5- or 6-field syntax). Mutually exclusive with triggerAt."
-          },
-          "timezone": {
-            "type": "string",
-            "description": "IANA timezone for cron evaluation. Defaults to UTC."
-          },
-          "nextRunAt": {
-            "type": "string",
-            "format": "date-time",
-            "description": "Always populated \u2014 the worker watches this column."
-          },
-          "lastRunAt": {
-            "type": "string",
-            "format": "date-time",
-            "description": "When the last fire actually happened."
-          },
-          "endAt": {
-            "type": "string",
-            "format": "date-time",
-            "description": "Optional end-of-recurrence cutoff."
-          },
-          "maxRuns": {
-            "type": "number",
-            "description": "Optional maximum number of fires (cron only)."
-          },
-          "runCount": {
-            "type": "number",
-            "description": "Increments after each successful fire."
-          },
-          "status": {
-            "$ref": "#/components/schemas/workflow.ScheduledEventStatus"
-          },
-          "error": {
-            "type": "string"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "required": [
-          "accountId",
-          "eventTypeKey",
-          "payload",
-          "nextRunAt",
-          "runCount",
-          "status",
-          "createdAt"
-        ]
-      },
-      "data.ScheduledEventFilter": {
-        "type": "object",
-        "properties": {
-          "eventTypeKey": {
-            "type": "string"
-          },
-          "eventTypeName": {
-            "type": "string"
-          },
-          "payload": {
-            "type": "object",
-            "additionalProperties": true
-          },
-          "workflow": {
-            "type": "object",
-            "additionalProperties": true
-          },
-          "triggerAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "cron": {
-            "type": "string"
-          },
-          "timezone": {
-            "type": "string"
-          },
-          "nextRunAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "lastRunAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "endAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "maxRuns": {
-            "type": "number"
-          },
-          "runCount": {
-            "type": "number"
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "pending",
-              "processing",
-              "fired",
-              "cancelled",
-              "failed",
-              "completed"
-            ]
-          },
-          "error": {
-            "type": "string"
-          },
-          "accountId": {
-            "type": "string"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "createdByDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updatedByDate": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "required": [
-          "eventTypeKey",
-          "nextRunAt",
-          "status",
-          "accountId",
-          "createdByDate",
-          "updatedByDate"
-        ]
-      },
-      "data.UpdateScheduledEventInput": {
-        "type": "object",
-        "properties": {
-          "eventTypeKey": {
-            "type": "string"
-          },
-          "eventTypeName": {
-            "type": "string"
-          },
-          "payload": {
-            "type": "object",
-            "additionalProperties": true
-          },
-          "workflow": {
-            "type": "object",
-            "additionalProperties": true
-          },
-          "triggerAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "cron": {
-            "type": "string"
-          },
-          "timezone": {
-            "type": "string"
-          },
-          "nextRunAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "lastRunAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "endAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "maxRuns": {
-            "type": "number"
-          },
-          "runCount": {
-            "type": "number"
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "pending",
-              "processing",
-              "fired",
-              "cancelled",
-              "failed",
-              "completed"
-            ]
-          },
-          "error": {
-            "type": "string"
-          },
-          "accountId": {
-            "type": "string"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "createdByDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updatedByDate": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "required": [
-          "eventTypeKey",
-          "nextRunAt",
-          "status",
-          "accountId",
-          "createdByDate",
-          "updatedByDate"
-        ],
-        "description": "Auto-generated updateInput for ScheduledEvent"
-      },
-      "workflow.ListScheduledEventsFilters": {
+      "ListScheduledEventsFilters": {
         "type": "object",
         "properties": {
           "status": {
-            "$ref": "#/components/schemas/workflow.ScheduledEventStatus"
+            "$ref": "#/components/schemas/ScheduledEventStatus"
           },
           "eventTypeKey": {
             "type": "string"
@@ -1228,27 +1009,153 @@
           }
         }
       },
-      "workflow.ScheduledEventWorkflow": {
+      "WorkflowStatusPipeline": {
         "type": "object",
         "properties": {
+          "name": {
+            "type": "string"
+          },
+          "key": {
+            "type": "string"
+          },
           "modelKey": {
+            "type": "string"
+          },
+          "statuses": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        },
+        "required": [
+          "name",
+          "key",
+          "modelKey"
+        ]
+      },
+      "WorkflowStatusPipelineFilter": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "key": {
+            "type": "string"
+          },
+          "modelKey": {
+            "type": "string"
+          },
+          "statuses": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        },
+        "required": [
+          "name",
+          "key",
+          "modelKey"
+        ]
+      },
+      "CreateWorkflowStatusPipelineInput": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "key": {
+            "type": "string"
+          },
+          "modelKey": {
+            "type": "string"
+          },
+          "statuses": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        },
+        "required": [
+          "name",
+          "key",
+          "modelKey"
+        ],
+        "description": "Auto-generated createInput for WorkflowStatusPipeline"
+      },
+      "UpdateWorkflowStatusPipelineInput": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "key": {
+            "type": "string"
+          },
+          "modelKey": {
+            "type": "string"
+          },
+          "statuses": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        },
+        "required": [
+          "name",
+          "key",
+          "modelKey"
+        ],
+        "description": "Auto-generated updateInput for WorkflowStatusPipeline"
+      },
+      "WorkflowStatusPipelineRecordState": {
+        "type": "object",
+        "properties": {
+          "workflowStatusPipeline": {
             "type": "string"
           },
           "recordId": {
             "type": "string"
           },
-          "when": {
-            "type": "string",
-            "description": "Matches WorkflowDefinition.when \u2014 e.g. \"schedule\", \"follow-up\"."
+          "modelKey": {
+            "type": "string"
+          },
+          "currentStatusId": {
+            "type": "string"
+          },
+          "statuses": {
+            "type": "object",
+            "additionalProperties": true
           }
         },
         "required": [
-          "modelKey",
+          "workflowStatusPipeline",
           "recordId",
-          "when"
+          "modelKey"
         ]
       },
-      "data.CreateWorkflowStatusPipelineRecordStateInput": {
+      "WorkflowStatusPipelineRecordStateFilter": {
+        "type": "object",
+        "properties": {
+          "workflowStatusPipeline": {
+            "type": "string"
+          },
+          "recordId": {
+            "type": "string"
+          },
+          "modelKey": {
+            "type": "string"
+          },
+          "currentStatusId": {
+            "type": "string"
+          },
+          "statuses": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        },
+        "required": [
+          "workflowStatusPipeline",
+          "recordId",
+          "modelKey"
+        ]
+      },
+      "CreateWorkflowStatusPipelineRecordStateInput": {
         "type": "object",
         "properties": {
           "workflowStatusPipeline": {
@@ -1275,7 +1182,34 @@
         ],
         "description": "Auto-generated createInput for WorkflowStatusPipelineRecordState"
       },
-      "workflow.ScheduleEventInput": {
+      "UpdateWorkflowStatusPipelineRecordStateInput": {
+        "type": "object",
+        "properties": {
+          "workflowStatusPipeline": {
+            "type": "string"
+          },
+          "recordId": {
+            "type": "string"
+          },
+          "modelKey": {
+            "type": "string"
+          },
+          "currentStatusId": {
+            "type": "string"
+          },
+          "statuses": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        },
+        "required": [
+          "workflowStatusPipeline",
+          "recordId",
+          "modelKey"
+        ],
+        "description": "Auto-generated updateInput for WorkflowStatusPipelineRecordState"
+      },
+      "ScheduledEventFilter": {
         "type": "object",
         "properties": {
           "eventTypeKey": {
@@ -1284,112 +1218,82 @@
           "eventTypeName": {
             "type": "string"
           },
-          "source": {
-            "$ref": "#/components/schemas/workflow.IEventSource"
+          "payload": {
+            "type": "object",
+            "additionalProperties": true
           },
-          "payload": {}
+          "workflow": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "triggerAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "cron": {
+            "type": "string"
+          },
+          "timezone": {
+            "type": "string"
+          },
+          "nextRunAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastRunAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "maxRuns": {
+            "type": "number"
+          },
+          "runCount": {
+            "type": "number"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "processing",
+              "fired",
+              "cancelled",
+              "failed",
+              "completed"
+            ]
+          },
+          "error": {
+            "type": "string"
+          },
+          "accountId": {
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createdByDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedByDate": {
+            "type": "string",
+            "format": "date-time"
+          }
         },
         "required": [
-          "eventTypeKey"
+          "eventTypeKey",
+          "nextRunAt",
+          "status",
+          "accountId",
+          "createdByDate",
+          "updatedByDate"
         ]
       },
-      "data.UpdateWorkflowStatusPipelineInput": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "key": {
-            "type": "string"
-          },
-          "modelKey": {
-            "type": "string"
-          },
-          "statuses": {
-            "type": "object",
-            "additionalProperties": true
-          }
-        },
-        "required": [
-          "name",
-          "key",
-          "modelKey"
-        ],
-        "description": "Auto-generated updateInput for WorkflowStatusPipeline"
-      },
-      "workflow.IEventSource": {},
-      "data.WorkflowStatusPipelineFilter": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "key": {
-            "type": "string"
-          },
-          "modelKey": {
-            "type": "string"
-          },
-          "statuses": {
-            "type": "object",
-            "additionalProperties": true
-          }
-        },
-        "required": [
-          "name",
-          "key",
-          "modelKey"
-        ]
-      },
-      "workflow.ScheduledEventStatus": {},
-      "data.CreateWorkflowStatusPipelineInput": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "key": {
-            "type": "string"
-          },
-          "modelKey": {
-            "type": "string"
-          },
-          "statuses": {
-            "type": "object",
-            "additionalProperties": true
-          }
-        },
-        "required": [
-          "name",
-          "key",
-          "modelKey"
-        ],
-        "description": "Auto-generated createInput for WorkflowStatusPipeline"
-      },
-      "data.WorkflowStatusPipeline": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "key": {
-            "type": "string"
-          },
-          "modelKey": {
-            "type": "string"
-          },
-          "statuses": {
-            "type": "object",
-            "additionalProperties": true
-          }
-        },
-        "required": [
-          "name",
-          "key",
-          "modelKey"
-        ]
-      },
-      "data.CreateScheduledEventInput": {
+      "CreateScheduledEventInput": {
         "type": "object",
         "properties": {
           "eventTypeKey": {
@@ -1474,85 +1378,95 @@
         ],
         "description": "Auto-generated createInput for ScheduledEvent"
       },
-      "data.UpdateWorkflowStatusPipelineRecordStateInput": {
+      "UpdateScheduledEventInput": {
         "type": "object",
         "properties": {
-          "workflowStatusPipeline": {
+          "eventTypeKey": {
             "type": "string"
           },
-          "recordId": {
+          "eventTypeName": {
             "type": "string"
           },
-          "modelKey": {
-            "type": "string"
-          },
-          "currentStatusId": {
-            "type": "string"
-          },
-          "statuses": {
+          "payload": {
             "type": "object",
             "additionalProperties": true
+          },
+          "workflow": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "triggerAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "cron": {
+            "type": "string"
+          },
+          "timezone": {
+            "type": "string"
+          },
+          "nextRunAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastRunAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "maxRuns": {
+            "type": "number"
+          },
+          "runCount": {
+            "type": "number"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "processing",
+              "fired",
+              "cancelled",
+              "failed",
+              "completed"
+            ]
+          },
+          "error": {
+            "type": "string"
+          },
+          "accountId": {
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createdByDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedByDate": {
+            "type": "string",
+            "format": "date-time"
           }
         },
         "required": [
-          "workflowStatusPipeline",
-          "recordId",
-          "modelKey"
+          "eventTypeKey",
+          "nextRunAt",
+          "status",
+          "accountId",
+          "createdByDate",
+          "updatedByDate"
         ],
-        "description": "Auto-generated updateInput for WorkflowStatusPipelineRecordState"
-      },
-      "data.WorkflowStatusPipelineRecordState": {
-        "type": "object",
-        "properties": {
-          "workflowStatusPipeline": {
-            "type": "string"
-          },
-          "recordId": {
-            "type": "string"
-          },
-          "modelKey": {
-            "type": "string"
-          },
-          "currentStatusId": {
-            "type": "string"
-          },
-          "statuses": {
-            "type": "object",
-            "additionalProperties": true
-          }
-        },
-        "required": [
-          "workflowStatusPipeline",
-          "recordId",
-          "modelKey"
-        ]
-      },
-      "data.WorkflowStatusPipelineRecordStateFilter": {
-        "type": "object",
-        "properties": {
-          "workflowStatusPipeline": {
-            "type": "string"
-          },
-          "recordId": {
-            "type": "string"
-          },
-          "modelKey": {
-            "type": "string"
-          },
-          "currentStatusId": {
-            "type": "string"
-          },
-          "statuses": {
-            "type": "object",
-            "additionalProperties": true
-          }
-        },
-        "required": [
-          "workflowStatusPipeline",
-          "recordId",
-          "modelKey"
-        ]
+        "description": "Auto-generated updateInput for ScheduledEvent"
       }
     }
-  }
+  },
+  "x-fcg-warnings": [
+    "Unresolved type 'IEventSource' → emitted permissive schema {}",
+    "Unresolved type 'ScheduledEventStatus' → emitted permissive schema {}"
+  ]
 }

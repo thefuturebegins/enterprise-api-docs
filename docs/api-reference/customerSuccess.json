@@ -1,36 +1,16 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Customersuccess API",
+    "title": "customerSuccess API",
     "version": "0.0.0",
-    "description": "Aggregate OpenAPI 3.1 document for all enterprise modules, generated from FCG InterfaceSpecs."
+    "description": "CRUD endpoints for models owned by the customerSuccess module."
   },
-  "servers": [
-    {
-      "url": "/",
-      "description": "Current host"
-    }
-  ],
-  "tags": [
-    {
-      "name": "renewalFiles"
-    },
-    {
-      "name": "renewalNotes"
-    },
-    {
-      "name": "renewalTasks"
-    },
-    {
-      "name": "renewals"
-    }
-  ],
   "paths": {
     "/api/customerSuccess/renewals": {
       "get": {
         "operationId": "customerSuccess.renewals.query",
         "tags": [
-          "renewals"
+          "customerSuccess.renewals"
         ],
         "summary": "Query",
         "responses": {
@@ -41,7 +21,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/data.Renewal"
+                    "$ref": "#/components/schemas/customerSuccess.Renewal"
                   }
                 }
               }
@@ -60,7 +40,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "$ref": "#/components/schemas/data.RenewalFilter"
+              "$ref": "#/components/schemas/customerSuccess.RenewalFilter"
             }
           }
         ],
@@ -70,7 +50,7 @@
       "post": {
         "operationId": "customerSuccess.renewals.create",
         "tags": [
-          "renewals"
+          "customerSuccess.renewals"
         ],
         "summary": "Create",
         "responses": {
@@ -79,7 +59,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.Renewal"
+                  "$ref": "#/components/schemas/customerSuccess.Renewal"
                 }
               }
             }
@@ -96,7 +76,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.CreateRenewalInput"
+                "$ref": "#/components/schemas/customerSuccess.CreateRenewalInput"
               }
             }
           }
@@ -109,7 +89,7 @@
       "get": {
         "operationId": "customerSuccess.renewals.getById",
         "tags": [
-          "renewals"
+          "customerSuccess.renewals"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -118,7 +98,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.Renewal"
+                  "$ref": "#/components/schemas/customerSuccess.Renewal"
                 }
               }
             }
@@ -146,7 +126,7 @@
       "put": {
         "operationId": "customerSuccess.renewals.update",
         "tags": [
-          "renewals"
+          "customerSuccess.renewals"
         ],
         "summary": "Update",
         "responses": {
@@ -155,7 +135,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.Renewal"
+                  "$ref": "#/components/schemas/customerSuccess.Renewal"
                 }
               }
             }
@@ -182,7 +162,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.UpdateRenewalInput"
+                "$ref": "#/components/schemas/customerSuccess.UpdateRenewalInput"
               }
             }
           }
@@ -193,7 +173,7 @@
       "delete": {
         "operationId": "customerSuccess.renewals.delete",
         "tags": [
-          "renewals"
+          "customerSuccess.renewals"
         ],
         "summary": "Delete",
         "responses": {
@@ -225,7 +205,7 @@
       "get": {
         "operationId": "customerSuccess.renewalNotes.query",
         "tags": [
-          "renewalNotes"
+          "customerSuccess.renewalNotes"
         ],
         "summary": "Query",
         "responses": {
@@ -236,7 +216,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/data.RenewalNote"
+                    "$ref": "#/components/schemas/customerSuccess.RenewalNote"
                   }
                 }
               }
@@ -255,7 +235,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "$ref": "#/components/schemas/data.RenewalNoteFilter"
+              "$ref": "#/components/schemas/customerSuccess.RenewalNoteFilter"
             }
           }
         ],
@@ -265,7 +245,7 @@
       "post": {
         "operationId": "customerSuccess.renewalNotes.create",
         "tags": [
-          "renewalNotes"
+          "customerSuccess.renewalNotes"
         ],
         "summary": "Create",
         "responses": {
@@ -274,7 +254,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.RenewalNote"
+                  "$ref": "#/components/schemas/customerSuccess.RenewalNote"
                 }
               }
             }
@@ -291,7 +271,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.CreateRenewalNoteInput"
+                "$ref": "#/components/schemas/customerSuccess.CreateRenewalNoteInput"
               }
             }
           }
@@ -304,7 +284,7 @@
       "get": {
         "operationId": "customerSuccess.renewalNotes.getById",
         "tags": [
-          "renewalNotes"
+          "customerSuccess.renewalNotes"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -313,7 +293,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.RenewalNote"
+                  "$ref": "#/components/schemas/customerSuccess.RenewalNote"
                 }
               }
             }
@@ -341,7 +321,7 @@
       "put": {
         "operationId": "customerSuccess.renewalNotes.update",
         "tags": [
-          "renewalNotes"
+          "customerSuccess.renewalNotes"
         ],
         "summary": "Update",
         "responses": {
@@ -350,7 +330,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.RenewalNote"
+                  "$ref": "#/components/schemas/customerSuccess.RenewalNote"
                 }
               }
             }
@@ -377,7 +357,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.UpdateRenewalNoteInput"
+                "$ref": "#/components/schemas/customerSuccess.UpdateRenewalNoteInput"
               }
             }
           }
@@ -388,7 +368,7 @@
       "delete": {
         "operationId": "customerSuccess.renewalNotes.delete",
         "tags": [
-          "renewalNotes"
+          "customerSuccess.renewalNotes"
         ],
         "summary": "Delete",
         "responses": {
@@ -420,7 +400,7 @@
       "get": {
         "operationId": "customerSuccess.renewalFiles.query",
         "tags": [
-          "renewalFiles"
+          "customerSuccess.renewalFiles"
         ],
         "summary": "Query",
         "responses": {
@@ -431,7 +411,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/data.RenewalFile"
+                    "$ref": "#/components/schemas/customerSuccess.RenewalFile"
                   }
                 }
               }
@@ -450,7 +430,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "$ref": "#/components/schemas/data.RenewalFileFilter"
+              "$ref": "#/components/schemas/customerSuccess.RenewalFileFilter"
             }
           }
         ],
@@ -460,7 +440,7 @@
       "post": {
         "operationId": "customerSuccess.renewalFiles.create",
         "tags": [
-          "renewalFiles"
+          "customerSuccess.renewalFiles"
         ],
         "summary": "Create",
         "responses": {
@@ -469,7 +449,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.RenewalFile"
+                  "$ref": "#/components/schemas/customerSuccess.RenewalFile"
                 }
               }
             }
@@ -486,7 +466,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.CreateRenewalFileInput"
+                "$ref": "#/components/schemas/customerSuccess.CreateRenewalFileInput"
               }
             }
           }
@@ -499,7 +479,7 @@
       "get": {
         "operationId": "customerSuccess.renewalFiles.getById",
         "tags": [
-          "renewalFiles"
+          "customerSuccess.renewalFiles"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -508,7 +488,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.RenewalFile"
+                  "$ref": "#/components/schemas/customerSuccess.RenewalFile"
                 }
               }
             }
@@ -536,7 +516,7 @@
       "put": {
         "operationId": "customerSuccess.renewalFiles.update",
         "tags": [
-          "renewalFiles"
+          "customerSuccess.renewalFiles"
         ],
         "summary": "Update",
         "responses": {
@@ -545,7 +525,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.RenewalFile"
+                  "$ref": "#/components/schemas/customerSuccess.RenewalFile"
                 }
               }
             }
@@ -572,7 +552,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.UpdateRenewalFileInput"
+                "$ref": "#/components/schemas/customerSuccess.UpdateRenewalFileInput"
               }
             }
           }
@@ -583,7 +563,7 @@
       "delete": {
         "operationId": "customerSuccess.renewalFiles.delete",
         "tags": [
-          "renewalFiles"
+          "customerSuccess.renewalFiles"
         ],
         "summary": "Delete",
         "responses": {
@@ -615,7 +595,7 @@
       "get": {
         "operationId": "customerSuccess.renewalTasks.query",
         "tags": [
-          "renewalTasks"
+          "customerSuccess.renewalTasks"
         ],
         "summary": "Query",
         "responses": {
@@ -626,7 +606,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/data.RenewalTask"
+                    "$ref": "#/components/schemas/customerSuccess.RenewalTask"
                   }
                 }
               }
@@ -645,7 +625,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "$ref": "#/components/schemas/data.RenewalTaskFilter"
+              "$ref": "#/components/schemas/customerSuccess.RenewalTaskFilter"
             }
           }
         ],
@@ -655,7 +635,7 @@
       "post": {
         "operationId": "customerSuccess.renewalTasks.create",
         "tags": [
-          "renewalTasks"
+          "customerSuccess.renewalTasks"
         ],
         "summary": "Create",
         "responses": {
@@ -664,7 +644,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.RenewalTask"
+                  "$ref": "#/components/schemas/customerSuccess.RenewalTask"
                 }
               }
             }
@@ -681,7 +661,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.CreateRenewalTaskInput"
+                "$ref": "#/components/schemas/customerSuccess.CreateRenewalTaskInput"
               }
             }
           }
@@ -694,7 +674,7 @@
       "get": {
         "operationId": "customerSuccess.renewalTasks.getById",
         "tags": [
-          "renewalTasks"
+          "customerSuccess.renewalTasks"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -703,7 +683,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.RenewalTask"
+                  "$ref": "#/components/schemas/customerSuccess.RenewalTask"
                 }
               }
             }
@@ -731,7 +711,7 @@
       "put": {
         "operationId": "customerSuccess.renewalTasks.update",
         "tags": [
-          "renewalTasks"
+          "customerSuccess.renewalTasks"
         ],
         "summary": "Update",
         "responses": {
@@ -740,7 +720,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.RenewalTask"
+                  "$ref": "#/components/schemas/customerSuccess.RenewalTask"
                 }
               }
             }
@@ -767,7 +747,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.UpdateRenewalTaskInput"
+                "$ref": "#/components/schemas/customerSuccess.UpdateRenewalTaskInput"
               }
             }
           }
@@ -778,7 +758,7 @@
       "delete": {
         "operationId": "customerSuccess.renewalTasks.delete",
         "tags": [
-          "renewalTasks"
+          "customerSuccess.renewalTasks"
         ],
         "summary": "Delete",
         "responses": {
@@ -809,29 +789,7 @@
   },
   "components": {
     "schemas": {
-      "data.CreateRenewalNoteInput": {
-        "type": "object",
-        "properties": {
-          "renewal": {
-            "type": "string",
-            "description": "Parent renewal this note link belongs to"
-          },
-          "note": {
-            "type": "string"
-          },
-          "createdByDate": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "required": [
-          "renewal",
-          "note",
-          "createdByDate"
-        ],
-        "description": "Auto-generated createInput for RenewalNote"
-      },
-      "data.Renewal": {
+      "Renewal": {
         "type": "object",
         "properties": {
           "name": {
@@ -950,51 +908,7 @@
           "updatedByDate"
         ]
       },
-      "data.UpdateRenewalTaskInput": {
-        "type": "object",
-        "properties": {
-          "renewal": {
-            "type": "string",
-            "description": "Parent renewal this task link belongs to"
-          },
-          "task": {
-            "type": "string"
-          },
-          "createdByDate": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "required": [
-          "renewal",
-          "task",
-          "createdByDate"
-        ],
-        "description": "Auto-generated updateInput for RenewalTask"
-      },
-      "data.CreateRenewalTaskInput": {
-        "type": "object",
-        "properties": {
-          "renewal": {
-            "type": "string",
-            "description": "Parent renewal this task link belongs to"
-          },
-          "task": {
-            "type": "string"
-          },
-          "createdByDate": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "required": [
-          "renewal",
-          "task",
-          "createdByDate"
-        ],
-        "description": "Auto-generated createInput for RenewalTask"
-      },
-      "data.UpdateRenewalInput": {
+      "RenewalFilter": {
         "type": "object",
         "properties": {
           "name": {
@@ -1111,118 +1025,9 @@
           "status",
           "createdByDate",
           "updatedByDate"
-        ],
-        "description": "Auto-generated updateInput for Renewal"
-      },
-      "data.UpdateRenewalFileInput": {
-        "type": "object",
-        "properties": {
-          "renewal": {
-            "type": "string",
-            "description": "Parent renewal this file link belongs to"
-          },
-          "file": {
-            "type": "string"
-          },
-          "createdByDate": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "required": [
-          "renewal",
-          "file",
-          "createdByDate"
-        ],
-        "description": "Auto-generated updateInput for RenewalFile"
-      },
-      "data.UpdateRenewalNoteInput": {
-        "type": "object",
-        "properties": {
-          "renewal": {
-            "type": "string",
-            "description": "Parent renewal this note link belongs to"
-          },
-          "note": {
-            "type": "string"
-          },
-          "createdByDate": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "required": [
-          "renewal",
-          "note",
-          "createdByDate"
-        ],
-        "description": "Auto-generated updateInput for RenewalNote"
-      },
-      "data.RenewalNote": {
-        "type": "object",
-        "properties": {
-          "renewal": {
-            "type": "string",
-            "description": "Parent renewal this note link belongs to"
-          },
-          "note": {
-            "type": "string"
-          },
-          "createdByDate": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "required": [
-          "renewal",
-          "note",
-          "createdByDate"
         ]
       },
-      "data.CreateRenewalFileInput": {
-        "type": "object",
-        "properties": {
-          "renewal": {
-            "type": "string",
-            "description": "Parent renewal this file link belongs to"
-          },
-          "file": {
-            "type": "string"
-          },
-          "createdByDate": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "required": [
-          "renewal",
-          "file",
-          "createdByDate"
-        ],
-        "description": "Auto-generated createInput for RenewalFile"
-      },
-      "data.RenewalNoteFilter": {
-        "type": "object",
-        "properties": {
-          "renewal": {
-            "type": "string",
-            "description": "Parent renewal this note link belongs to"
-          },
-          "note": {
-            "type": "string"
-          },
-          "createdByDate": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "required": [
-          "renewal",
-          "note",
-          "createdByDate"
-        ]
-      },
-      "data.CreateRenewalInput": {
+      "CreateRenewalInput": {
         "type": "object",
         "properties": {
           "name": {
@@ -1342,7 +1147,7 @@
         ],
         "description": "Auto-generated createInput for Renewal"
       },
-      "data.RenewalFilter": {
+      "UpdateRenewalInput": {
         "type": "object",
         "properties": {
           "name": {
@@ -1459,9 +1264,96 @@
           "status",
           "createdByDate",
           "updatedByDate"
+        ],
+        "description": "Auto-generated updateInput for Renewal"
+      },
+      "RenewalNote": {
+        "type": "object",
+        "properties": {
+          "renewal": {
+            "type": "string",
+            "description": "Parent renewal this note link belongs to"
+          },
+          "note": {
+            "type": "string"
+          },
+          "createdByDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "renewal",
+          "note",
+          "createdByDate"
         ]
       },
-      "data.RenewalFile": {
+      "RenewalNoteFilter": {
+        "type": "object",
+        "properties": {
+          "renewal": {
+            "type": "string",
+            "description": "Parent renewal this note link belongs to"
+          },
+          "note": {
+            "type": "string"
+          },
+          "createdByDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "renewal",
+          "note",
+          "createdByDate"
+        ]
+      },
+      "CreateRenewalNoteInput": {
+        "type": "object",
+        "properties": {
+          "renewal": {
+            "type": "string",
+            "description": "Parent renewal this note link belongs to"
+          },
+          "note": {
+            "type": "string"
+          },
+          "createdByDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "renewal",
+          "note",
+          "createdByDate"
+        ],
+        "description": "Auto-generated createInput for RenewalNote"
+      },
+      "UpdateRenewalNoteInput": {
+        "type": "object",
+        "properties": {
+          "renewal": {
+            "type": "string",
+            "description": "Parent renewal this note link belongs to"
+          },
+          "note": {
+            "type": "string"
+          },
+          "createdByDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "renewal",
+          "note",
+          "createdByDate"
+        ],
+        "description": "Auto-generated updateInput for RenewalNote"
+      },
+      "RenewalFile": {
         "type": "object",
         "properties": {
           "renewal": {
@@ -1482,28 +1374,7 @@
           "createdByDate"
         ]
       },
-      "data.RenewalTask": {
-        "type": "object",
-        "properties": {
-          "renewal": {
-            "type": "string",
-            "description": "Parent renewal this task link belongs to"
-          },
-          "task": {
-            "type": "string"
-          },
-          "createdByDate": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "required": [
-          "renewal",
-          "task",
-          "createdByDate"
-        ]
-      },
-      "data.RenewalFileFilter": {
+      "RenewalFileFilter": {
         "type": "object",
         "properties": {
           "renewal": {
@@ -1524,7 +1395,51 @@
           "createdByDate"
         ]
       },
-      "data.RenewalTaskFilter": {
+      "CreateRenewalFileInput": {
+        "type": "object",
+        "properties": {
+          "renewal": {
+            "type": "string",
+            "description": "Parent renewal this file link belongs to"
+          },
+          "file": {
+            "type": "string"
+          },
+          "createdByDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "renewal",
+          "file",
+          "createdByDate"
+        ],
+        "description": "Auto-generated createInput for RenewalFile"
+      },
+      "UpdateRenewalFileInput": {
+        "type": "object",
+        "properties": {
+          "renewal": {
+            "type": "string",
+            "description": "Parent renewal this file link belongs to"
+          },
+          "file": {
+            "type": "string"
+          },
+          "createdByDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "renewal",
+          "file",
+          "createdByDate"
+        ],
+        "description": "Auto-generated updateInput for RenewalFile"
+      },
+      "RenewalTask": {
         "type": "object",
         "properties": {
           "renewal": {
@@ -1544,6 +1459,71 @@
           "task",
           "createdByDate"
         ]
+      },
+      "RenewalTaskFilter": {
+        "type": "object",
+        "properties": {
+          "renewal": {
+            "type": "string",
+            "description": "Parent renewal this task link belongs to"
+          },
+          "task": {
+            "type": "string"
+          },
+          "createdByDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "renewal",
+          "task",
+          "createdByDate"
+        ]
+      },
+      "CreateRenewalTaskInput": {
+        "type": "object",
+        "properties": {
+          "renewal": {
+            "type": "string",
+            "description": "Parent renewal this task link belongs to"
+          },
+          "task": {
+            "type": "string"
+          },
+          "createdByDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "renewal",
+          "task",
+          "createdByDate"
+        ],
+        "description": "Auto-generated createInput for RenewalTask"
+      },
+      "UpdateRenewalTaskInput": {
+        "type": "object",
+        "properties": {
+          "renewal": {
+            "type": "string",
+            "description": "Parent renewal this task link belongs to"
+          },
+          "task": {
+            "type": "string"
+          },
+          "createdByDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "renewal",
+          "task",
+          "createdByDate"
+        ],
+        "description": "Auto-generated updateInput for RenewalTask"
       }
     }
   }
