@@ -102,18 +102,18 @@
             "icon": "phosphor/regular/chat-circle",
             "mode": "nested"
           },
-          "/workflow": {
-            "type": "openapi",
-            "title": "Workflow",
-            "filepath": "docs/api-reference/workflow.json",
-            "icon": "phosphor/regular/git-branch",
-            "mode": "nested"
-          },
           "/customerSuccess": {
             "type": "openapi",
             "title": "Customer Success",
             "filepath": "docs/api-reference/customerSuccess.json",
             "icon": "phosphor/regular/star",
+            "mode": "nested"
+          },
+          "/workflow": {
+            "type": "openapi",
+            "title": "Workflow",
+            "filepath": "docs/api-reference/workflow.json",
+            "icon": "phosphor/regular/git-branch",
             "mode": "nested"
           },
           "/finance": {
