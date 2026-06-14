@@ -1,15 +1,15 @@
-# Future Begins — Enterprise API Docs
+# Enterprise API Docs
 
-> Open-source API reference for the Future Begins Enterprise platform, built with [Scalar Docs](https://scalar.com).
+> Open-source API reference for the Enterprise platform, built with [Scalar Docs](https://scalar.com).
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 [![OpenAPI 3.1](https://img.shields.io/badge/OpenAPI-3.1-green.svg)](./docs/api-reference/openapi.all-modules.json)
 
 ## Overview
 
-This repository is the source of truth for the Future Begins Enterprise API documentation. It contains:
+This repository is the source of truth for the Enterprise API documentation. It contains:
 
-- **150 API operations** across **9 modules** (analytics, cache, finance, integrations, notifications, permissions, pipelines, sales, ui)
+- **1,236 API operations** across **20 modules**
 - Interactive [Scalar](https://scalar.com) API reference powered by the OpenAPI 3.1 spec
 - Guide pages for authentication, getting started, and each module
 
@@ -19,7 +19,8 @@ This repository is the source of truth for the Future Begins Enterprise API docu
 enterprise-api-docs/
 ├── docs/
 │   ├── api-reference/
-│   │   └── openapi.all-modules.json   # Aggregate OpenAPI 3.1 spec
+│   │   ├── openapi.all-modules.json   # Aggregate OpenAPI 3.1 spec
+│   │   └── *.json                     # Per-module spec files
 │   └── guides/
 │       ├── introduction.md
 │       ├── getting-started.md
@@ -41,7 +42,7 @@ enterprise-api-docs/
 npx @scalar/cli project preview
 ```
 
-The docs will be available at **http://localhost:7971** with live reload on every file change.
+The docs will be available at **http://localhost:7970** with live reload on every file change.
 
 ### Validate your config
 
@@ -69,7 +70,7 @@ COPY k8s/index.html /usr/share/nginx/html/index.html
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Future Begins API</title>
+    <title>Enterprise API</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
@@ -104,7 +105,7 @@ spec:
     spec:
       containers:
         - name: docs
-          image: ghcr.io/future-begins/enterprise-api-docs:latest
+          image: ghcr.io/thefuturebegins/enterprise-api-docs:latest
           ports:
             - containerPort: 80
           resources:
@@ -134,7 +135,7 @@ metadata:
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
 spec:
   rules:
-    - host: docs.futurebeg.in
+    - host: docs.enterprise.internal
       http:
         paths:
           - path: /
@@ -149,8 +150,8 @@ spec:
 ### 3. Build and push
 
 ```bash
-docker build -t ghcr.io/future-begins/enterprise-api-docs:latest .
-docker push ghcr.io/future-begins/enterprise-api-docs:latest
+docker build -t ghcr.io/thefuturebegins/enterprise-api-docs:latest .
+docker push ghcr.io/thefuturebegins/enterprise-api-docs:latest
 kubectl apply -f k8s/
 ```
 
@@ -163,4 +164,4 @@ kubectl apply -f k8s/
 
 ## License
 
-[MIT](./LICENSE) — © 2026 Future Begins
+[MIT](./LICENSE)

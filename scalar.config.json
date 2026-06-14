@@ -2,8 +2,8 @@
   "$schema": "https://registry.scalar.com/@scalar/schemas/config",
   "scalar": "2.0.0",
   "info": {
-    "title": "Future Begins — Enterprise API",
-    "description": "Interactive API reference for the Future Begins Enterprise platform. 1,236 operations across 20 modules."
+    "title": "Enterprise API",
+    "description": "1,236 operations across 20 modules — the complete backend platform reference."
   },
   "siteConfig": {
     "theme": "default"
@@ -12,7 +12,7 @@
     "header": [
       {
         "type": "link",
-        "title": "Future Begins",
+        "title": "Enterprise API",
         "to": "/"
       },
       { "type": "spacer" },

@@ -1,6 +1,6 @@
 # Getting Started
 
-This guide walks you through making your first request to the Future Begins Enterprise API.
+This guide walks you through making your first request to the Enterprise API.
 
 ## Prerequisites
 
@@ -10,13 +10,13 @@ This guide walks you through making your first request to the Future Begins Ente
 ## Base URL
 
 ```
-https://api.futurebeg.in
+https://api.enterprise.internal
 ```
 
 All endpoints use the `/api` prefix. For example:
 
 ```
-GET https://api.futurebeg.in/api/analytics/reporting/by-category/{category}
+GET https://api.enterprise.internal/api/analytics/reporting/by-category/{category}
 ```
 
 ## Your first request
@@ -24,7 +24,7 @@ GET https://api.futurebeg.in/api/analytics/reporting/by-category/{category}
 ### 1. Get a report by category
 
 ```bash
-curl -X GET "https://api.futurebeg.in/api/analytics/reporting/by-category/sales" \
+curl -X GET "https://api.enterprise.internal/api/analytics/reporting/by-category/sales" \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Accept: application/json"
 ```
@@ -32,17 +32,17 @@ curl -X GET "https://api.futurebeg.in/api/analytics/reporting/by-category/sales"
 ### 2. List cache entries
 
 ```bash
-curl -X GET "https://api.futurebeg.in/api/cache/cache" \
+curl -X GET "https://api.enterprise.internal/api/cache/cache" \
   -H "Authorization: Bearer YOUR_API_KEY"
 ```
 
 ### 3. Send a notification
 
 ```bash
-curl -X POST "https://api.futurebeg.in/api/notifications/send-notification" \
+curl -X POST "https://api.enterprise.internal/api/notifications/send-notification" \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
-  -d '{ "recipient": "user@example.com", "message": "Hello from Future Begins" }'
+  -d '{ "recipient": "user@example.com", "message": "Hello" }'
 ```
 
 ## Response format

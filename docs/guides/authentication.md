@@ -1,10 +1,10 @@
 # Authentication
 
-The Future Begins Enterprise API uses **Bearer token authentication** on all endpoints.
+The Enterprise API uses **Bearer token authentication** on all endpoints.
 
 ## Obtaining an API key
 
-API keys are issued through the Future Begins dashboard. Contact your organization administrator to generate or rotate keys.
+API keys are issued through the admin dashboard. Contact your organization administrator to generate or rotate keys.
 
 ## Sending requests
 
@@ -17,16 +17,16 @@ Authorization: Bearer YOUR_API_KEY
 ### Example with curl
 
 ```bash
-curl -X GET "https://api.futurebeg.in/api/sales/account-management/accounts" \
-  -H "Authorization: Bearer fb_live_xxxxxxxxxxxxxxxx"
+curl -X GET "https://api.enterprise.internal/api/sales/accounts" \
+  -H "Authorization: Bearer ent_live_xxxxxxxxxxxxxxxx"
 ```
 
 ### Example with JavaScript (fetch)
 
 ```js
-const response = await fetch('https://api.futurebeg.in/api/sales/account-management/accounts', {
+const response = await fetch('https://api.enterprise.internal/api/sales/accounts', {
   headers: {
-    Authorization: 'Bearer fb_live_xxxxxxxxxxxxxxxx',
+    Authorization: 'Bearer ent_live_xxxxxxxxxxxxxxxx',
     Accept: 'application/json',
   },
 })
@@ -38,8 +38,8 @@ const data = await response.json()
 ```python
 import httpx
 
-client = httpx.Client(headers={"Authorization": "Bearer fb_live_xxxxxxxxxxxxxxxx"})
-response = client.get("https://api.futurebeg.in/api/sales/account-management/accounts")
+client = httpx.Client(headers={"Authorization": "Bearer ent_live_xxxxxxxxxxxxxxxx"})
+response = client.get("https://api.enterprise.internal/api/sales/accounts")
 data = response.json()
 ```
 
@@ -47,8 +47,8 @@ data = response.json()
 
 | Prefix | Environment | Notes |
 |---|---|---|
-| `fb_live_` | Production | Treat as a secret; never commit to source control |
-| `fb_test_` | Sandbox | Safe to use in development; no real data |
+| `ent_live_` | Production | Treat as a secret; never commit to source control |
+| `ent_test_` | Sandbox | Safe to use in development; no real data |
 
 ## Security best practices
 
