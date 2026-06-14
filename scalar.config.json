@@ -74,88 +74,11 @@
         "title": "API Reference",
         "mode": "flat",
         "children": {
-          "/analytics": {
-            "type": "openapi",
-            "title": "Analytics",
-            "filepath": "docs/api-reference/analytics.json",
-            "icon": "phosphor/regular/chart-bar",
-            "mode": "nested"
-          },
-          "/cache": {
-            "type": "openapi",
-            "title": "Cache",
-            "filepath": "docs/api-reference/cache.json",
-            "icon": "phosphor/regular/database",
-            "mode": "nested"
-          },
-          "/finance": {
-            "type": "openapi",
-            "title": "Finance",
-            "filepath": "docs/api-reference/finance.json",
-            "icon": "phosphor/regular/currency-dollar",
-            "mode": "nested"
-          },
-          "/integrations": {
-            "type": "openapi",
-            "title": "Integrations",
-            "filepath": "docs/api-reference/integrations.json",
-            "icon": "phosphor/regular/plugs-connected",
-            "mode": "nested"
-          },
-          "/notifications": {
-            "type": "openapi",
-            "title": "Notifications",
-            "filepath": "docs/api-reference/notifications.json",
-            "icon": "phosphor/regular/bell",
-            "mode": "nested"
-          },
-          "/permissions": {
-            "type": "openapi",
-            "title": "Permissions",
-            "filepath": "docs/api-reference/permissions.json",
-            "icon": "phosphor/regular/lock",
-            "mode": "nested"
-          },
-          "/pipelines": {
-            "type": "openapi",
-            "title": "Pipelines",
-            "filepath": "docs/api-reference/pipelines.json",
-            "icon": "phosphor/regular/flow-arrow",
-            "mode": "nested"
-          },
           "/sales": {
             "type": "openapi",
             "title": "Sales",
             "filepath": "docs/api-reference/sales.json",
             "icon": "phosphor/regular/handshake",
-            "mode": "nested"
-          },
-          "/ui": {
-            "type": "openapi",
-            "title": "UI",
-            "filepath": "docs/api-reference/ui.json",
-            "icon": "phosphor/regular/desktop",
-            "mode": "nested"
-          },
-          "/data": {
-            "type": "openapi",
-            "title": "Data (All Models)",
-            "filepath": "docs/api-reference/data.json",
-            "icon": "phosphor/regular/database",
-            "mode": "nested"
-          },
-          "/identity": {
-            "type": "openapi",
-            "title": "Identity",
-            "filepath": "docs/api-reference/identity.json",
-            "icon": "phosphor/regular/user",
-            "mode": "nested"
-          },
-          "/communications": {
-            "type": "openapi",
-            "title": "Communications",
-            "filepath": "docs/api-reference/communications.json",
-            "icon": "phosphor/regular/chat-circle",
             "mode": "nested"
           },
           "/marketing": {
@@ -165,11 +88,18 @@
             "icon": "phosphor/regular/megaphone",
             "mode": "nested"
           },
-          "/system": {
+          "/analytics": {
             "type": "openapi",
-            "title": "System",
-            "filepath": "docs/api-reference/system.json",
-            "icon": "phosphor/regular/gear",
+            "title": "Analytics",
+            "filepath": "docs/api-reference/analytics.json",
+            "icon": "phosphor/regular/chart-bar",
+            "mode": "nested"
+          },
+          "/communications": {
+            "type": "openapi",
+            "title": "Communications",
+            "filepath": "docs/api-reference/communications.json",
+            "icon": "phosphor/regular/chat-circle",
             "mode": "nested"
           },
           "/workflow": {
@@ -186,6 +116,48 @@
             "icon": "phosphor/regular/star",
             "mode": "nested"
           },
+          "/finance": {
+            "type": "openapi",
+            "title": "Finance",
+            "filepath": "docs/api-reference/finance.json",
+            "icon": "phosphor/regular/currency-dollar",
+            "mode": "nested"
+          },
+          "/identity": {
+            "type": "openapi",
+            "title": "Identity",
+            "filepath": "docs/api-reference/identity.json",
+            "icon": "phosphor/regular/user",
+            "mode": "nested"
+          },
+          "/data": {
+            "type": "openapi",
+            "title": "Data",
+            "filepath": "docs/api-reference/data.json",
+            "icon": "phosphor/regular/database",
+            "mode": "nested"
+          },
+          "/integrations": {
+            "type": "openapi",
+            "title": "Integrations",
+            "filepath": "docs/api-reference/integrations.json",
+            "icon": "phosphor/regular/plugs-connected",
+            "mode": "nested"
+          },
+          "/notifications": {
+            "type": "openapi",
+            "title": "Notifications",
+            "filepath": "docs/api-reference/notifications.json",
+            "icon": "phosphor/regular/bell",
+            "mode": "nested"
+          },
+          "/ui": {
+            "type": "openapi",
+            "title": "UI",
+            "filepath": "docs/api-reference/ui.json",
+            "icon": "phosphor/regular/desktop",
+            "mode": "nested"
+          },
           "/forms": {
             "type": "openapi",
             "title": "Forms",
@@ -200,6 +172,27 @@
             "icon": "phosphor/regular/package",
             "mode": "nested"
           },
+          "/permissions": {
+            "type": "openapi",
+            "title": "Permissions",
+            "filepath": "docs/api-reference/permissions.json",
+            "icon": "phosphor/regular/lock",
+            "mode": "nested"
+          },
+          "/cache": {
+            "type": "openapi",
+            "title": "Cache",
+            "filepath": "docs/api-reference/cache.json",
+            "icon": "phosphor/regular/database",
+            "mode": "nested"
+          },
+          "/pipelines": {
+            "type": "openapi",
+            "title": "Pipelines",
+            "filepath": "docs/api-reference/pipelines.json",
+            "icon": "phosphor/regular/flow-arrow",
+            "mode": "nested"
+          },
           "/settings": {
             "type": "openapi",
             "title": "Settings",
@@ -212,6 +205,13 @@
             "title": "Support",
             "filepath": "docs/api-reference/support.json",
             "icon": "phosphor/regular/lifebuoy",
+            "mode": "nested"
+          },
+          "/system": {
+            "type": "openapi",
+            "title": "System",
+            "filepath": "docs/api-reference/system.json",
+            "icon": "phosphor/regular/gear",
             "mode": "nested"
           }
         }
