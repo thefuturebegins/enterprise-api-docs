@@ -53,11 +53,6 @@
         "icon": "phosphor/regular/book-open"
       },
       {
-        "title": "Module Guides",
-        "path": "/modules",
-        "icon": "phosphor/regular/squares-four"
-      },
-      {
         "title": "API Reference",
         "path": "/api",
         "icon": "phosphor/regular/plug"
@@ -86,135 +81,128 @@
             "title": "Authentication",
             "filepath": "docs/guides/authentication.md",
             "icon": "phosphor/regular/lock"
-          }
-        }
-      },
-      "/modules": {
-        "type": "group",
-        "title": "Module Guides",
-        "mode": "flat",
-        "children": {
-          "/ai": {
+          },
+          "/modules/ai": {
             "type": "page",
             "title": "AI",
             "filepath": "docs/guides/modules/ai.md",
             "icon": "phosphor/regular/brain"
           },
-          "/analytics": {
+          "/modules/analytics": {
             "type": "page",
             "title": "Analytics",
             "filepath": "docs/guides/modules/analytics.md",
             "icon": "phosphor/regular/chart-bar"
           },
-          "/cache": {
+          "/modules/cache": {
             "type": "page",
             "title": "Cache",
             "filepath": "docs/guides/modules/cache.md",
             "icon": "phosphor/regular/database"
           },
-          "/communications": {
+          "/modules/communications": {
             "type": "page",
             "title": "Communications",
             "filepath": "docs/guides/modules/communications.md",
             "icon": "phosphor/regular/chat-circle"
           },
-          "/customer-success": {
+          "/modules/customer-success": {
             "type": "page",
             "title": "Customer Success",
             "filepath": "docs/guides/modules/customer-success.md",
             "icon": "phosphor/regular/star"
           },
-          "/data": {
+          "/modules/data": {
             "type": "page",
             "title": "Data",
             "filepath": "docs/guides/modules/data.md",
             "icon": "phosphor/regular/database"
           },
-          "/finance": {
+          "/modules/finance": {
             "type": "page",
             "title": "Finance",
             "filepath": "docs/guides/modules/finance.md",
             "icon": "phosphor/regular/currency-dollar"
           },
-          "/forms": {
+          "/modules/forms": {
             "type": "page",
             "title": "Forms",
             "filepath": "docs/guides/modules/forms.md",
             "icon": "phosphor/regular/clipboard-text"
           },
-          "/identity": {
+          "/modules/identity": {
             "type": "page",
             "title": "Identity",
             "filepath": "docs/guides/modules/identity.md",
             "icon": "phosphor/regular/user"
           },
-          "/integrations": {
+          "/modules/integrations": {
             "type": "page",
             "title": "Integrations",
             "filepath": "docs/guides/modules/integrations.md",
             "icon": "phosphor/regular/plugs-connected"
           },
-          "/inventory": {
+          "/modules/inventory": {
             "type": "page",
             "title": "Inventory",
             "filepath": "docs/guides/modules/inventory.md",
             "icon": "phosphor/regular/package"
           },
-          "/marketing": {
+          "/modules/marketing": {
             "type": "page",
             "title": "Marketing",
             "filepath": "docs/guides/modules/marketing.md",
             "icon": "phosphor/regular/megaphone"
           },
-          "/notifications": {
+          "/modules/notifications": {
             "type": "page",
             "title": "Notifications",
             "filepath": "docs/guides/modules/notifications.md",
             "icon": "phosphor/regular/bell"
           },
-          "/permissions": {
+          "/modules/permissions": {
             "type": "page",
             "title": "Permissions",
             "filepath": "docs/guides/modules/permissions.md",
             "icon": "phosphor/regular/lock"
           },
-          "/pipelines": {
+          "/modules/pipelines": {
             "type": "page",
             "title": "Pipelines",
             "filepath": "docs/guides/modules/pipelines.md",
             "icon": "phosphor/regular/flow-arrow"
           },
-          "/sales": {
+          "/modules/sales": {
             "type": "page",
             "title": "Sales",
             "filepath": "docs/guides/modules/sales.md",
             "icon": "phosphor/regular/handshake"
           },
-          "/settings": {
+          "/modules/settings": {
             "type": "page",
             "title": "Settings",
             "filepath": "docs/guides/modules/settings.md",
             "icon": "phosphor/regular/sliders"
           },
-          "/support": {
+          "/modules/support": {
             "type": "page",
             "title": "Support",
             "filepath": "docs/guides/modules/support.md",
             "icon": "phosphor/regular/lifebuoy"
           },
-          "/system": {
+          "/modules/system": {
             "type": "page",
             "title": "System",
             "filepath": "docs/guides/modules/system.md",
             "icon": "phosphor/regular/gear"
           },
-          "/ui": {
+          "/modules/ui": {
             "type": "page",
             "title": "UI",
             "filepath": "docs/guides/modules/ui.md",
             "icon": "phosphor/regular/desktop"
           },
-          "/workflow": {
+          "/modules/workflow": {
             "type": "page",
             "title": "Workflow",
             "filepath": "docs/guides/modules/workflow.md",
