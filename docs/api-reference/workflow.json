@@ -1,0 +1,424 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "workflow API",
+    "version": "1.0.10",
+    "description": "OpenAPI 3.1 document for the `workflow` module, generated from FCG InterfaceSpecs."
+  },
+  "tags": [
+    {
+      "name": "workflow.scheduledevents"
+    }
+  ],
+  "paths": {
+    "/api/workflow/scheduled-events": {
+      "post": {
+        "operationId": "workflow.scheduledevents.apiScheduleEvent",
+        "tags": [
+          "workflow.scheduledevents"
+        ],
+        "summary": "POST /workflow/scheduled-events — schedule a generic event",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScheduledEvent"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ScheduleEventInput"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "workflow:scheduledevents:write",
+        "description": "POST /workflow/scheduled-events — schedule a generic event."
+      },
+      "get": {
+        "operationId": "workflow.scheduledevents.apiListScheduledEvents",
+        "tags": [
+          "workflow.scheduledevents"
+        ],
+        "summary": "GET /workflow/scheduled-events — list filtered events",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ScheduledEvent"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "allOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": true
+                },
+                {
+                  "$ref": "#/components/schemas/ListScheduledEventsFilters"
+                }
+              ]
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "workflow:scheduledevents:read",
+        "description": "GET /workflow/scheduled-events — list filtered events."
+      }
+    },
+    "/api/workflow/scheduled-events/workflow": {
+      "post": {
+        "operationId": "workflow.scheduledevents.apiScheduleWorkflow",
+        "tags": [
+          "workflow.scheduledevents"
+        ],
+        "summary": "POST /workflow/scheduled-events/workflow — schedule a workflow-on-record",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScheduledEvent"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ScheduleWorkflowInput"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "workflow:scheduledevents:write",
+        "description": "POST /workflow/scheduled-events/workflow — schedule a workflow-on-record."
+      }
+    },
+    "/api/workflow/scheduled-events/cancel": {
+      "post": {
+        "operationId": "workflow.scheduledevents.apiCancelScheduledEvent",
+        "tags": [
+          "workflow.scheduledevents"
+        ],
+        "summary": "POST /workflow/scheduled-events/cancel — cancel one event",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "workflow:scheduledevents:write",
+        "description": "POST /workflow/scheduled-events/cancel — cancel one event."
+      }
+    },
+    "/api/workflow/scheduled-events/dispatch": {
+      "post": {
+        "operationId": "workflow.scheduledevents.apiDispatchDueEvents",
+        "tags": [
+          "workflow.scheduledevents"
+        ],
+        "summary": "POST /workflow/scheduled-events/dispatch — manual tick (ops/tests)",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "workflow:scheduledevents:write",
+        "description": "POST /workflow/scheduled-events/dispatch — manual tick (ops/tests)."
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ScheduledEvent": {
+        "type": "object",
+        "properties": {
+          "_id": {
+            "type": "string"
+          },
+          "accountId": {
+            "type": "string"
+          },
+          "eventTypeKey": {
+            "type": "string",
+            "description": "IEventType.key that will be published when the timer fires."
+          },
+          "eventTypeName": {
+            "type": "string",
+            "description": "Optional display name (defaults to eventTypeKey if absent)."
+          },
+          "source": {
+            "$ref": "#/components/schemas/IEventSource",
+            "description": "Optional event source override. Defaults to scheduledEvents source."
+          },
+          "payload": {
+            "description": "Arbitrary serialisable payload published with the event."
+          },
+          "workflow": {
+            "$ref": "#/components/schemas/ScheduledEventWorkflow",
+            "description": "Optional workflow-binding wrapper."
+          },
+          "triggerAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Single-shot trigger time. Mutually exclusive with `cron`."
+          },
+          "cron": {
+            "type": "string",
+            "description": "Cron expression (5- or 6-field syntax). Mutually exclusive with triggerAt."
+          },
+          "timezone": {
+            "type": "string",
+            "description": "IANA timezone for cron evaluation. Defaults to UTC."
+          },
+          "nextRunAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Always populated — the worker watches this column."
+          },
+          "lastRunAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "When the last fire actually happened."
+          },
+          "endAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Optional end-of-recurrence cutoff."
+          },
+          "maxRuns": {
+            "type": "number",
+            "description": "Optional maximum number of fires (cron only)."
+          },
+          "runCount": {
+            "type": "number",
+            "description": "Increments after each successful fire."
+          },
+          "status": {
+            "$ref": "#/components/schemas/ScheduledEventStatus"
+          },
+          "error": {
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "accountId",
+          "eventTypeKey",
+          "payload",
+          "nextRunAt",
+          "runCount",
+          "status",
+          "createdAt"
+        ]
+      },
+      "IEventSource": {},
+      "ScheduledEventWorkflow": {
+        "type": "object",
+        "properties": {
+          "modelKey": {
+            "type": "string"
+          },
+          "recordId": {
+            "type": "string"
+          },
+          "when": {
+            "type": "string",
+            "description": "Matches WorkflowDefinition.when — e.g. \"schedule\", \"follow-up\"."
+          }
+        },
+        "required": [
+          "modelKey",
+          "recordId",
+          "when"
+        ]
+      },
+      "ScheduledEventStatus": {},
+      "ScheduleEventInput": {
+        "type": "object",
+        "properties": {
+          "eventTypeKey": {
+            "type": "string"
+          },
+          "eventTypeName": {
+            "type": "string"
+          },
+          "source": {
+            "$ref": "#/components/schemas/IEventSource"
+          },
+          "payload": {}
+        },
+        "required": [
+          "eventTypeKey"
+        ]
+      },
+      "ScheduleWorkflowInput": {
+        "type": "object",
+        "properties": {
+          "modelKey": {
+            "type": "string"
+          },
+          "recordId": {
+            "type": "string"
+          },
+          "when": {
+            "type": "string",
+            "description": "Workflow trigger key. Defaults to \"schedule\"."
+          },
+          "payload": {
+            "description": "Optional additional payload passed alongside the workflow invocation."
+          }
+        },
+        "required": [
+          "modelKey",
+          "recordId"
+        ]
+      },
+      "ListScheduledEventsFilters": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "$ref": "#/components/schemas/ScheduledEventStatus"
+          },
+          "eventTypeKey": {
+            "type": "string"
+          },
+          "modelKey": {
+            "type": "string"
+          },
+          "recordId": {
+            "type": "string"
+          },
+          "nextRunFrom": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "description": "Inclusive lower bound on nextRunAt."
+          },
+          "nextRunTo": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "description": "Inclusive upper bound on nextRunAt."
+          }
+        }
+      }
+    }
+  },
+  "x-fcg-warnings": [
+    "Unresolved type 'IEventSource' → emitted permissive schema {}",
+    "Unresolved type 'ScheduledEventStatus' → emitted permissive schema {}"
+  ]
+}

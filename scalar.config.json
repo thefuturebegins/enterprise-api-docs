@@ -3,7 +3,7 @@
   "scalar": "2.0.0",
   "info": {
     "title": "Future Begins — Enterprise API",
-    "description": "Interactive API reference for the Future Begins Enterprise platform. 150 operations across 9 modules."
+    "description": "Interactive API reference for the Future Begins Enterprise platform. 1,236 operations across 15 modules, including full CRUD for 192 data models."
   },
   "siteConfig": {
     "theme": "default"
@@ -135,6 +135,48 @@
             "title": "UI",
             "filepath": "docs/api-reference/ui.json",
             "icon": "phosphor/regular/desktop",
+            "mode": "nested"
+          },
+          "/data": {
+            "type": "openapi",
+            "title": "Data (All Models)",
+            "filepath": "docs/api-reference/data.json",
+            "icon": "phosphor/regular/database",
+            "mode": "nested"
+          },
+          "/identity": {
+            "type": "openapi",
+            "title": "Identity",
+            "filepath": "docs/api-reference/identity.json",
+            "icon": "phosphor/regular/user",
+            "mode": "nested"
+          },
+          "/communications": {
+            "type": "openapi",
+            "title": "Communications",
+            "filepath": "docs/api-reference/communications.json",
+            "icon": "phosphor/regular/chat-circle",
+            "mode": "nested"
+          },
+          "/marketing": {
+            "type": "openapi",
+            "title": "Marketing",
+            "filepath": "docs/api-reference/marketing.json",
+            "icon": "phosphor/regular/megaphone",
+            "mode": "nested"
+          },
+          "/system": {
+            "type": "openapi",
+            "title": "System",
+            "filepath": "docs/api-reference/system.json",
+            "icon": "phosphor/regular/gear",
+            "mode": "nested"
+          },
+          "/workflow": {
+            "type": "openapi",
+            "title": "Workflow",
+            "filepath": "docs/api-reference/workflow.json",
+            "icon": "phosphor/regular/git-branch",
             "mode": "nested"
           }
         }

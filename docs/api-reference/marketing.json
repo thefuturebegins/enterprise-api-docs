@@ -1,0 +1,2503 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "marketing API",
+    "version": "1.0.12",
+    "description": "OpenAPI 3.1 document for the `marketing` module, generated from FCG InterfaceSpecs."
+  },
+  "tags": [
+    {
+      "name": "marketing.sendmarketingemail"
+    },
+    {
+      "name": "marketing.socialanalytics"
+    },
+    {
+      "name": "marketing.socialconnection"
+    },
+    {
+      "name": "marketing.socialinbox"
+    },
+    {
+      "name": "marketing.socialpublishing"
+    },
+    {
+      "name": "marketing.socialpublishjob"
+    },
+    {
+      "name": "marketing.webpublishing"
+    }
+  ],
+  "paths": {
+    "/api/marketing/preview/{account}/{feature}/{id}": {
+      "get": {
+        "operationId": "marketing.webpublishing.getPreview",
+        "tags": [
+          "marketing.webpublishing"
+        ],
+        "summary": "Get Preview",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "account",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "feature",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "preview",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "marketing:webpublishing:read"
+      }
+    },
+    "/api/marketing/preview/{account}/{feature}/{id}/submit": {
+      "post": {
+        "operationId": "marketing.webpublishing.submitForm",
+        "tags": [
+          "marketing.webpublishing"
+        ],
+        "summary": "Public form submission → create a Lead",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "account",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "feature",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {}
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "marketing:webpublishing:write",
+        "description": "Public form submission → create a Lead.\n\nPOST /api/marketing/preview/:account/:feature/:id/submit\n\nThe public preview page posts the collected field values here. For the\n`forms` feature we resolve the form, then create a `leads` record from the\nsubmitted First Name / Last Name / Email (the default lead-capture fields\nseeded on every form). Every other lead field is optional (V20260603.1), so\na visitor only ever has to supply those three.\n\nBody shape: `{ values: { firstName, lastName, email, ... } }`. We also\naccept a bare values map for resilience."
+      }
+    },
+    "/api/marketing/social/auth/url": {
+      "post": {
+        "operationId": "marketing.socialconnection.getAuthUrl",
+        "tags": [
+          "marketing.socialconnection"
+        ],
+        "summary": "Get Auth Url",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConnectProviderAuthUrl"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "req",
+            "in": "query",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ConnectProviderRequest"
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": true
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "marketing:socialconnection:write"
+      }
+    },
+    "/api/marketing/social/auth/complete": {
+      "post": {
+        "operationId": "marketing.socialconnection.completeOAuth",
+        "tags": [
+          "marketing.socialconnection"
+        ],
+        "summary": "OAuth completion. Called by the SPA popup-callback page (`/auth/social-callback`),",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConnectProviderResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "req",
+            "in": "query",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "marketing:socialconnection:write",
+        "description": "OAuth completion. Called by the SPA popup-callback page (`/auth/social-callback`),\nNOT by the provider directly: the provider redirects the popup to the frontend\nroute, which reads `code` + `state` from the URL and POSTs them here. We\nexchange the code for tokens, list + persist the connectable profiles, register\nthe live adapter, and return a JSON result the popup relays to its opener via\npostMessage. This mirrors the identity OAuth flow (POST /auth/oauth/complete)\nand avoids needing raw Express `res` access, which the module-framework route\nlayer does not provide to service methods."
+      }
+    },
+    "/api/marketing/social/sync-profiles": {
+      "post": {
+        "operationId": "marketing.socialconnection.syncProfiles",
+        "tags": [
+          "marketing.socialconnection"
+        ],
+        "summary": "Sync Profiles",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConnectProviderResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "req",
+            "in": "query",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConnectProviderRequest"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "marketing:socialconnection:write"
+      }
+    },
+    "/api/marketing/social/disconnect": {
+      "post": {
+        "operationId": "marketing.socialconnection.disconnect",
+        "tags": [
+          "marketing.socialconnection"
+        ],
+        "summary": "Disconnect",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "req",
+            "in": "query",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConnectProviderRequest"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "marketing:socialconnection:write"
+      }
+    },
+    "/api/marketing/social/connection-status": {
+      "get": {
+        "operationId": "marketing.socialconnection.getConnectionStatus",
+        "tags": [
+          "marketing.socialconnection"
+        ],
+        "summary": "Get Connection Status",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConnectionStatus"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "request",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/ConnectProviderRequest"
+            }
+          },
+          {
+            "name": "req",
+            "in": "query",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "marketing:socialconnection:read"
+      }
+    },
+    "/api/marketing/social/posts": {
+      "post": {
+        "operationId": "marketing.socialpublishing.createPost",
+        "tags": [
+          "marketing.socialpublishing"
+        ],
+        "summary": "Create Post",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "input",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/CreateSocialPostInput"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "accountKey": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "accountKey"
+                ]
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "marketing:socialpublishing:write"
+      }
+    },
+    "/api/marketing/social/posts/{socialPostId}": {
+      "put": {
+        "operationId": "marketing.socialpublishing.updatePost",
+        "tags": [
+          "marketing.socialpublishing"
+        ],
+        "summary": "Update Post",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "socialPostId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "input",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/UpdateSocialPostInput"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "accountKey": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "accountKey"
+                ]
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "marketing:socialpublishing:write"
+      },
+      "delete": {
+        "operationId": "marketing.socialpublishing.deletePost",
+        "tags": [
+          "marketing.socialpublishing"
+        ],
+        "summary": "Delete Post",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "accountKey",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "socialPostId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "marketing:socialpublishing:delete"
+      }
+    },
+    "/api/marketing/social/posts/{socialPostId}/variants": {
+      "post": {
+        "operationId": "marketing.socialpublishing.upsertVariant",
+        "tags": [
+          "marketing.socialpublishing"
+        ],
+        "summary": "Upsert Variant",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "socialPostId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "variant",
+            "in": "query",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "accountKey": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "accountKey"
+                ]
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "marketing:socialpublishing:write"
+      }
+    },
+    "/api/marketing/social/post-variants/{socialPostVariantId}": {
+      "delete": {
+        "operationId": "marketing.socialpublishing.deleteVariant",
+        "tags": [
+          "marketing.socialpublishing"
+        ],
+        "summary": "Delete Variant",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "accountKey",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "socialPostVariantId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "marketing:socialpublishing:delete"
+      }
+    },
+    "/api/marketing/social/media/upload-to-provider": {
+      "post": {
+        "operationId": "marketing.socialpublishing.uploadMediaToProvider",
+        "tags": [
+          "marketing.socialpublishing"
+        ],
+        "summary": "Upload Media To Provider",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "fileId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "_providerKey",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "_accountKey": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "_accountKey"
+                ]
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "marketing:socialpublishing:write"
+      }
+    },
+    "/api/marketing/social/posts/{socialPostId}/validate": {
+      "post": {
+        "operationId": "marketing.socialpublishing.validatePost",
+        "tags": [
+          "marketing.socialpublishing"
+        ],
+        "summary": "Validate Post",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "socialPostId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "req",
+            "in": "query",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "marketing:socialpublishing:write"
+      }
+    },
+    "/api/marketing/social/posts/{socialPostId}/schedule": {
+      "post": {
+        "operationId": "marketing.socialpublishing.schedulePost",
+        "tags": [
+          "marketing.socialpublishing"
+        ],
+        "summary": "Schedule Post",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublishOutcome"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "socialPostId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "req",
+            "in": "query",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "marketing:socialpublishing:write"
+      }
+    },
+    "/api/marketing/social/posts/{socialPostId}/publish": {
+      "post": {
+        "operationId": "marketing.socialpublishing.publishNow",
+        "tags": [
+          "marketing.socialpublishing"
+        ],
+        "summary": "Publish Now",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublishOutcome"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "socialPostId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "req",
+            "in": "query",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "marketing:socialpublishing:write"
+      }
+    },
+    "/api/marketing/social/posts/{socialPostId}/cancel": {
+      "post": {
+        "operationId": "marketing.socialpublishing.cancelScheduledPost",
+        "tags": [
+          "marketing.socialpublishing"
+        ],
+        "summary": "Cancel Scheduled Post",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "socialPostId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "req",
+            "in": "query",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "marketing:socialpublishing:write"
+      }
+    },
+    "/api/marketing/social/posts/{socialPostId}/retry": {
+      "post": {
+        "operationId": "marketing.socialpublishing.retryFailedJobs",
+        "tags": [
+          "marketing.socialpublishing"
+        ],
+        "summary": "Retry Failed Jobs",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "socialPostId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "req",
+            "in": "query",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "marketing:socialpublishing:write"
+      }
+    },
+    "/api/marketing/social/posts/{socialPostId}/approve": {
+      "post": {
+        "operationId": "marketing.socialpublishing.approvePost",
+        "tags": [
+          "marketing.socialpublishing"
+        ],
+        "summary": "Approve Post",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "socialPostId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "approverUserId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "accountKey": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "accountKey"
+                ]
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "marketing:socialpublishing:write"
+      }
+    },
+    "/api/marketing/social/publish-jobs/claim": {
+      "post": {
+        "operationId": "marketing.socialpublishjob.claimDueJobs",
+        "tags": [
+          "marketing.socialpublishjob"
+        ],
+        "summary": "Claim Due Jobs",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "marketing:socialpublishjob:write"
+      }
+    },
+    "/api/marketing/social/publish-jobs/{jobId}/process": {
+      "post": {
+        "operationId": "marketing.socialpublishjob.processJob",
+        "tags": [
+          "marketing.socialpublishjob"
+        ],
+        "summary": "Process Job",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProcessJobResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "jobId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "marketing:socialpublishjob:write"
+      }
+    },
+    "/api/marketing/social/analytics/sync-post/{socialPostId}": {
+      "post": {
+        "operationId": "marketing.socialanalytics.syncPostAnalytics",
+        "tags": [
+          "marketing.socialanalytics"
+        ],
+        "summary": "Sync Post Analytics",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SyncPostAnalyticsResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "socialPostId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "marketing:socialanalytics:write"
+      }
+    },
+    "/api/marketing/social/analytics/sync-profile/{socialProfileId}": {
+      "post": {
+        "operationId": "marketing.socialanalytics.syncProfileAnalytics",
+        "tags": [
+          "marketing.socialanalytics"
+        ],
+        "summary": "Sync Profile Analytics",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SyncProfileAnalyticsResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "socialProfileId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "marketing:socialanalytics:write"
+      }
+    },
+    "/api/marketing/social/analytics/sync-all": {
+      "post": {
+        "operationId": "marketing.socialanalytics.syncAllDueAnalytics",
+        "tags": [
+          "marketing.socialanalytics"
+        ],
+        "summary": "Sync All Due Analytics",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "marketing:socialanalytics:write"
+      }
+    },
+    "/api/marketing/social/analytics/campaign/{campaignId}": {
+      "get": {
+        "operationId": "marketing.socialanalytics.getCampaignSocialPerformance",
+        "tags": [
+          "marketing.socialanalytics"
+        ],
+        "summary": "Get Campaign Social Performance",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CampaignSocialPerformance"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "campaignId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "req",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "additionalProperties": true
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "marketing:socialanalytics:read"
+      }
+    },
+    "/api/marketing/social/analytics/post/{socialPostId}": {
+      "get": {
+        "operationId": "marketing.socialanalytics.getPostPerformance",
+        "tags": [
+          "marketing.socialanalytics"
+        ],
+        "summary": "Get Post Performance",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {},
+                    {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "socialPostId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "req",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "additionalProperties": true
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "marketing:socialanalytics:read"
+      }
+    },
+    "/api/marketing/social/inbox/sync/{profileId}": {
+      "post": {
+        "operationId": "marketing.socialinbox.syncInboundMessages",
+        "tags": [
+          "marketing.socialinbox"
+        ],
+        "summary": "Sync Inbound Messages",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InboundSyncResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "profileId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "marketing:socialinbox:write"
+      }
+    },
+    "/api/marketing/social/inbox/sync-all": {
+      "post": {
+        "operationId": "marketing.socialinbox.syncAllInboundMessages",
+        "tags": [
+          "marketing.socialinbox"
+        ],
+        "summary": "Sync All Inbound Messages",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/InboundSyncResult"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "marketing:socialinbox:write"
+      }
+    },
+    "/api/marketing/social/inbox/webhook/{providerKey}": {
+      "post": {
+        "operationId": "marketing.socialinbox.handleWebhook",
+        "tags": [
+          "marketing.socialinbox"
+        ],
+        "summary": "Handle Webhook",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "providerKey",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/SocialProviderKey"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "marketing:socialinbox:write"
+      }
+    },
+    "/api/marketing/social/inbox/assign": {
+      "post": {
+        "operationId": "marketing.socialinbox.assignMessage",
+        "tags": [
+          "marketing.socialinbox"
+        ],
+        "summary": "Assign Message",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/AssignMessageInput"
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": true
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "marketing:socialinbox:write"
+      }
+    },
+    "/api/marketing/social/inbox/resolve": {
+      "post": {
+        "operationId": "marketing.socialinbox.resolveMessage",
+        "tags": [
+          "marketing.socialinbox"
+        ],
+        "summary": "Resolve Message",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ResolveMessageInput"
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": true
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "marketing:socialinbox:write"
+      }
+    },
+    "/api/marketing/social/inbox/mark-read/{socialMessageId}": {
+      "post": {
+        "operationId": "marketing.socialinbox.markRead",
+        "tags": [
+          "marketing.socialinbox"
+        ],
+        "summary": "Mark Read",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "socialMessageId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "marketing:socialinbox:write"
+      }
+    },
+    "/api/marketing/social/inbox/mark-spam/{socialMessageId}": {
+      "post": {
+        "operationId": "marketing.socialinbox.markSpam",
+        "tags": [
+          "marketing.socialinbox"
+        ],
+        "summary": "Mark Spam",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "socialMessageId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "marketing:socialinbox:write"
+      }
+    },
+    "/api/marketing/social/inbox/link-identity": {
+      "post": {
+        "operationId": "marketing.socialinbox.linkIdentityToContact",
+        "tags": [
+          "marketing.socialinbox"
+        ],
+        "summary": "Link Identity To Contact",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/LinkIdentityInput"
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": true
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "marketing:socialinbox:write"
+      }
+    },
+    "/api/marketing/social/inbox/create-activity/{id}": {
+      "post": {
+        "operationId": "marketing.socialinbox.createCrmActivityFromMessage",
+        "tags": [
+          "marketing.socialinbox"
+        ],
+        "summary": "Create Crm Activity From Message",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "_body",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "additionalProperties": true
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "_socialMessageId": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "_socialMessageId"
+                ]
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "marketing:socialinbox:write"
+      }
+    },
+    "/api/marketing/emails/{emailId}/send": {
+      "post": {
+        "operationId": "marketing.sendmarketingemail.sendMarketingEmail",
+        "tags": [
+          "marketing.sendmarketingemail"
+        ],
+        "summary": "Send Marketing Email",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ISendMarketingEmailResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "emailId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ISendMarketingEmailRequest"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "marketing:sendmarketingemail:write"
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ConnectProviderAuthUrl": {
+        "type": "object",
+        "properties": {
+          "authUrl": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "authUrl",
+          "state"
+        ]
+      },
+      "ConnectProviderRequest": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "string"
+          },
+          "accountKey": {
+            "type": "string"
+          },
+          "providerKey": {
+            "$ref": "#/components/schemas/SocialProviderKey"
+          }
+        },
+        "required": [
+          "userId",
+          "accountKey",
+          "providerKey"
+        ]
+      },
+      "SocialProviderKey": {
+        "type": "string",
+        "enum": [
+          "meta",
+          "instagram",
+          "linkedin",
+          "x",
+          "tiktok",
+          "youtube",
+          "pinterest",
+          "threads"
+        ]
+      },
+      "ConnectProviderResult": {
+        "type": "object",
+        "properties": {
+          "connected": {
+            "type": "boolean"
+          },
+          "provider": {
+            "$ref": "#/components/schemas/SocialProviderKey"
+          },
+          "profileCount": {
+            "type": "number"
+          },
+          "error": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "connected",
+          "provider",
+          "profileCount"
+        ]
+      },
+      "ConnectionStatus": {
+        "type": "object",
+        "properties": {
+          "connected": {
+            "type": "boolean"
+          },
+          "provider": {
+            "$ref": "#/components/schemas/SocialProviderKey"
+          },
+          "connectedAt": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "lastSyncAt": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "profileCount": {
+            "type": "number"
+          },
+          "tokenExpiresAt": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "connected",
+          "provider",
+          "connectedAt",
+          "lastSyncAt",
+          "profileCount",
+          "tokenExpiresAt"
+        ]
+      },
+      "CreateSocialPostInput": {
+        "type": "object",
+        "properties": {
+          "socialDripCampaignId": {
+            "type": "string"
+          },
+          "campaignId": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "defaultContent": {
+            "type": "string"
+          },
+          "linkUrl": {
+            "type": "string"
+          },
+          "hashtags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "mentions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "mediaFileIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "profileIds": {
+            "$ref": "#/components/schemas/NonEmptyArray"
+          },
+          "scheduledAt": {
+            "type": "string"
+          },
+          "approvalRequired": {
+            "type": "boolean"
+          },
+          "variants": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "platform": {
+                  "type": "string"
+                },
+                "text": {
+                  "type": "string"
+                },
+                "hashtags": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "linkUrl": {
+                  "type": "string"
+                },
+                "mediaFileIds": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "mentions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "platformOptions": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              },
+              "required": [
+                "platform"
+              ]
+            }
+          }
+        },
+        "required": [
+          "name",
+          "profileIds"
+        ]
+      },
+      "NonEmptyArray": {},
+      "UpdateSocialPostInput": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "defaultContent": {
+            "type": "string"
+          },
+          "linkUrl": {
+            "type": "string"
+          },
+          "hashtags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "mentions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "mediaFileIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "profileIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "scheduledAt": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "approvalRequired": {
+            "type": "boolean"
+          }
+        }
+      },
+      "PublishOutcome": {
+        "type": "object",
+        "properties": {
+          "socialPostId": {
+            "type": "string"
+          },
+          "jobsCreated": {
+            "type": "number"
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "socialPostId",
+          "jobsCreated",
+          "status"
+        ]
+      },
+      "ProcessJobResult": {
+        "type": "object",
+        "properties": {
+          "jobId": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "succeeded",
+              "failed",
+              "retry-pending",
+              "cancelled"
+            ]
+          },
+          "providerPostId": {
+            "type": "string"
+          },
+          "error": {
+            "type": "string"
+          },
+          "nextRetryAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "jobId",
+          "status"
+        ]
+      },
+      "SyncPostAnalyticsResult": {
+        "type": "object",
+        "properties": {
+          "socialPostId": {
+            "type": "string"
+          },
+          "snapshotsWritten": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "socialPostId",
+          "snapshotsWritten"
+        ]
+      },
+      "SyncProfileAnalyticsResult": {
+        "type": "object",
+        "properties": {
+          "socialProfileId": {
+            "type": "string"
+          },
+          "snapshotsWritten": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "socialProfileId",
+          "snapshotsWritten"
+        ]
+      },
+      "CampaignSocialPerformance": {
+        "type": "object",
+        "properties": {
+          "campaignId": {
+            "type": "string"
+          },
+          "totals": {
+            "type": "object",
+            "properties": {
+              "impressions": {
+                "type": "number"
+              },
+              "reach": {
+                "type": "number"
+              },
+              "clicks": {
+                "type": "number"
+              },
+              "likes": {
+                "type": "number"
+              },
+              "comments": {
+                "type": "number"
+              },
+              "shares": {
+                "type": "number"
+              },
+              "saves": {
+                "type": "number"
+              },
+              "videoViews": {
+                "type": "number"
+              },
+              "engagementRate": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "impressions",
+              "reach",
+              "clicks",
+              "likes",
+              "comments",
+              "shares",
+              "saves",
+              "videoViews",
+              "engagementRate"
+            ]
+          },
+          "byPlatform": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "properties": {
+                "impressions": {
+                  "type": "number"
+                },
+                "reach": {
+                  "type": "number"
+                },
+                "clicks": {
+                  "type": "number"
+                },
+                "likes": {
+                  "type": "number"
+                },
+                "comments": {
+                  "type": "number"
+                },
+                "shares": {
+                  "type": "number"
+                },
+                "saves": {
+                  "type": "number"
+                },
+                "videoViews": {
+                  "type": "number"
+                },
+                "engagementRate": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "impressions",
+                "reach",
+                "clicks",
+                "likes",
+                "comments",
+                "shares",
+                "saves",
+                "videoViews",
+                "engagementRate"
+              ]
+            }
+          },
+          "postCount": {
+            "type": "number"
+          },
+          "profileCount": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "campaignId",
+          "totals",
+          "byPlatform",
+          "postCount",
+          "profileCount"
+        ]
+      },
+      "InboundSyncResult": {
+        "type": "object",
+        "properties": {
+          "profileId": {
+            "type": "string"
+          },
+          "messagesAdded": {
+            "type": "number"
+          },
+          "messagesUpdated": {
+            "type": "number"
+          },
+          "identitiesLinked": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "profileId",
+          "messagesAdded",
+          "messagesUpdated",
+          "identitiesLinked"
+        ]
+      },
+      "AssignMessageInput": {
+        "type": "object",
+        "properties": {
+          "socialMessageId": {
+            "type": "string"
+          },
+          "assignedToUserId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "socialMessageId",
+          "assignedToUserId"
+        ]
+      },
+      "ResolveMessageInput": {
+        "type": "object",
+        "properties": {
+          "socialMessageId": {
+            "type": "string"
+          },
+          "resolvedByUserId": {
+            "type": "string"
+          },
+          "resolvedAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "socialMessageId",
+          "resolvedByUserId"
+        ]
+      },
+      "LinkIdentityInput": {
+        "type": "object",
+        "properties": {
+          "platform": {
+            "$ref": "#/components/schemas/SocialPlatform"
+          },
+          "externalUserId": {
+            "type": "string"
+          },
+          "handle": {
+            "type": "string"
+          },
+          "crmContactId": {
+            "type": "string"
+          },
+          "confidence": {
+            "type": "string",
+            "enum": [
+              "confirmed",
+              "high",
+              "medium",
+              "low"
+            ]
+          },
+          "linkSource": {
+            "type": "string",
+            "enum": [
+              "manual",
+              "oauth",
+              "email-match",
+              "name-match",
+              "contact-self-service",
+              "system"
+            ]
+          }
+        },
+        "required": [
+          "platform",
+          "externalUserId",
+          "crmContactId"
+        ]
+      },
+      "SocialPlatform": {
+        "type": "string",
+        "enum": [
+          "facebook",
+          "instagram",
+          "linkedin",
+          "x",
+          "tiktok",
+          "youtube",
+          "pinterest",
+          "threads"
+        ]
+      },
+      "ISendMarketingEmailResult": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "emailId": {
+            "type": "string"
+          },
+          "recipientCount": {
+            "type": "number"
+          },
+          "providerRecordID": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "providerKey": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "status": {
+            "type": "string"
+          },
+          "error": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "success",
+          "emailId",
+          "recipientCount"
+        ]
+      },
+      "ISendMarketingEmailRequest": {
+        "type": "object",
+        "properties": {
+          "html": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "sentByUserId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "sentByUserKey": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "audienceSegments": {
+            "type": "array",
+            "items": {}
+          }
+        }
+      }
+    }
+  },
+  "x-fcg-warnings": [
+    "Unresolved type 'NonEmptyArray' → emitted permissive schema {}",
+    "Unresolvable type 'NonNullable<CreateSocialPostInput['variants']>[number]' → emitted permissive schema {}",
+    "Unresolvable type 'CampaignSocialPerformance['totals']' → emitted permissive schema {}"
+  ]
+}

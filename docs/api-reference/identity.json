@@ -1,0 +1,1256 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "identity API",
+    "version": "1.0.38",
+    "description": "OpenAPI 3.1 document for the `identity` module, generated from FCG InterfaceSpecs."
+  },
+  "tags": [
+    {
+      "name": "identity.authentication"
+    },
+    {
+      "name": "identity.oauthhandlers"
+    },
+    {
+      "name": "identity.usermanagement"
+    }
+  ],
+  "paths": {
+    "/api/identity/users/{userId}/avatar": {
+      "post": {
+        "operationId": "identity.usermanagement.uploadUserAvatar",
+        "tags": [
+          "identity.usermanagement"
+        ],
+        "summary": "Upload or update user avatar",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AvatarUploadResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "accountId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AvatarUploadData"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "identity:usermanagement:write",
+        "description": "Upload or update user avatar\n\nThis is genuine business logic:\n- File validation and type checking\n- File storage and naming\n- Image processing (could be extended)"
+      },
+      "delete": {
+        "operationId": "identity.usermanagement.deleteUserAvatar",
+        "tags": [
+          "identity.usermanagement"
+        ],
+        "summary": "Delete user avatar and clean up files",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "accountId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "identity:usermanagement:delete",
+        "description": "Delete user avatar and clean up files\n\nThis is genuine business logic:\n- File system cleanup\n- Cascade deletion logic"
+      }
+    },
+    "/api/identity/auth/register": {
+      "post": {
+        "operationId": "identity.authentication.register",
+        "tags": [
+          "identity.authentication"
+        ],
+        "summary": "Register",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "_email",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "additionalProperties": true
+            }
+          },
+          {
+            "name": "_password",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "additionalProperties": true
+            }
+          },
+          {
+            "name": "_userData",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "additionalProperties": true
+            }
+          }
+        ],
+        "x-scope": "client",
+        "x-permission": "identity:authentication:write"
+      }
+    },
+    "/api/identity/auth/login": {
+      "post": {
+        "operationId": "identity.authentication.login",
+        "tags": [
+          "identity.authentication"
+        ],
+        "summary": "Login",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  },
+                  "accountKey": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "email",
+                  "password"
+                ]
+              }
+            }
+          }
+        },
+        "x-scope": "client",
+        "x-permission": "identity:authentication:write"
+      }
+    },
+    "/api/identity/auth/logout": {
+      "post": {
+        "operationId": "identity.authentication.logout",
+        "tags": [
+          "identity.authentication"
+        ],
+        "summary": "Logout",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            }
+          }
+        },
+        "x-scope": "client",
+        "x-permission": "identity:authentication:write"
+      }
+    },
+    "/api/identity/auth/verify-email": {
+      "get": {
+        "operationId": "identity.authentication.verifyEmail",
+        "tags": [
+          "identity.authentication"
+        ],
+        "summary": "Verify Email",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "token",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "accountKey",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "identity:authentication:read"
+      }
+    },
+    "/api/identity/auth/resend-verification": {
+      "post": {
+        "operationId": "identity.authentication.resendVerificationEmail",
+        "tags": [
+          "identity.authentication"
+        ],
+        "summary": "Resend Verification Email",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "email"
+                ]
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "identity:authentication:write"
+      }
+    },
+    "/api/identity/auth/forgot-password": {
+      "post": {
+        "operationId": "identity.authentication.requestPasswordReset",
+        "tags": [
+          "identity.authentication"
+        ],
+        "summary": "Request Password Reset",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "email"
+                ]
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "identity:authentication:write"
+      }
+    },
+    "/api/identity/auth/reset-password": {
+      "post": {
+        "operationId": "identity.authentication.resetPassword",
+        "tags": [
+          "identity.authentication"
+        ],
+        "summary": "Reset Password",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "newPassword",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "token": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "token"
+                ]
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "identity:authentication:write"
+      }
+    },
+    "/api/identity/auth/verify-token": {
+      "get": {
+        "operationId": "identity.authentication.verifyJWT",
+        "tags": [
+          "identity.authentication"
+        ],
+        "summary": "Verify JWT",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "token",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "client",
+        "x-permission": "identity:authentication:read"
+      }
+    },
+    "/api/identity/auth/discover-accounts": {
+      "post": {
+        "operationId": "identity.authentication.discoverAccounts",
+        "tags": [
+          "identity.authentication"
+        ],
+        "summary": "Discover Accounts",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            }
+          }
+        },
+        "x-scope": "client",
+        "x-permission": "identity:authentication:write"
+      }
+    },
+    "/api/identity/auth/me": {
+      "get": {
+        "operationId": "identity.authentication.getCurrentUser",
+        "tags": [
+          "identity.authentication"
+        ],
+        "summary": "Get Current User",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "token",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "client",
+        "x-permission": "identity:authentication:read"
+      }
+    },
+    "/api/identity/auth/oauth/broker-exchange": {
+      "post": {
+        "operationId": "identity.authentication.exchangeBrokerOAuth",
+        "tags": [
+          "identity.authentication"
+        ],
+        "summary": "Exchange Broker OAuth",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/AuthResult"
+                    },
+                    {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BrokerOAuthExchangeRequest"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "identity:authentication:write"
+      }
+    },
+    "/api/identity/auth/refresh": {
+      "post": {
+        "operationId": "identity.authentication.refreshSession",
+        "tags": [
+          "identity.authentication"
+        ],
+        "summary": "Refresh Session",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "identity:authentication:write"
+      }
+    },
+    "/api/identity/auth/oauth/complete": {
+      "post": {
+        "operationId": "identity.authentication.completeOAuth",
+        "tags": [
+          "identity.authentication"
+        ],
+        "summary": "Complete OAuth",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "identity:authentication:write"
+      }
+    },
+    "/api/identity/auth/sessions/revoke": {
+      "post": {
+        "operationId": "identity.authentication.revokeSessions",
+        "tags": [
+          "identity.authentication"
+        ],
+        "summary": "Revoke Sessions",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "identity:authentication:write"
+      }
+    },
+    "/api/identity/auth/sessions": {
+      "get": {
+        "operationId": "identity.authentication.listSessions",
+        "tags": [
+          "identity.authentication"
+        ],
+        "summary": "List Sessions",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "identity:authentication:read"
+      }
+    },
+    "/api/identity/auth/google": {
+      "get": {
+        "operationId": "identity.oauthhandlers.googleAuthHandler",
+        "tags": [
+          "identity.oauthhandlers"
+        ],
+        "summary": "Google Auth Handler",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "identity:oauthhandlers:read"
+      }
+    },
+    "/api/identity/auth/google/callback": {
+      "get": {
+        "operationId": "identity.oauthhandlers.googleCallbackHandler",
+        "tags": [
+          "identity.oauthhandlers"
+        ],
+        "summary": "Google Callback Handler",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "identity:oauthhandlers:read"
+      }
+    },
+    "/api/identity/auth/facebook": {
+      "get": {
+        "operationId": "identity.oauthhandlers.facebookAuthHandler",
+        "tags": [
+          "identity.oauthhandlers"
+        ],
+        "summary": "Facebook Auth Handler",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "identity:oauthhandlers:read"
+      }
+    },
+    "/api/identity/auth/facebook/callback": {
+      "get": {
+        "operationId": "identity.oauthhandlers.facebookCallbackHandler",
+        "tags": [
+          "identity.oauthhandlers"
+        ],
+        "summary": "Facebook Callback Handler",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "identity:oauthhandlers:read"
+      }
+    },
+    "/api/identity/auth/twitter": {
+      "get": {
+        "operationId": "identity.oauthhandlers.twitterAuthHandler",
+        "tags": [
+          "identity.oauthhandlers"
+        ],
+        "summary": "Twitter Auth Handler",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "identity:oauthhandlers:read"
+      }
+    },
+    "/api/identity/auth/twitter/callback": {
+      "get": {
+        "operationId": "identity.oauthhandlers.twitterCallbackHandler",
+        "tags": [
+          "identity.oauthhandlers"
+        ],
+        "summary": "Twitter Callback Handler",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "identity:oauthhandlers:read"
+      }
+    },
+    "/api/identity/auth/apple": {
+      "get": {
+        "operationId": "identity.oauthhandlers.appleAuthHandler",
+        "tags": [
+          "identity.oauthhandlers"
+        ],
+        "summary": "Apple Auth Handler",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "identity:oauthhandlers:read"
+      }
+    },
+    "/api/identity/auth/apple/callback": {
+      "post": {
+        "operationId": "identity.oauthhandlers.appleOAuthPostHandler",
+        "tags": [
+          "identity.oauthhandlers"
+        ],
+        "summary": "Apple sends the OAuth response as POST (form-urlencoded) to the redirect URI",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "identity:oauthhandlers:write",
+        "description": "Apple sends the OAuth response as POST (form-urlencoded) to the redirect URI.\nParse the body and continue as GET so Passport can complete the flow."
+      },
+      "get": {
+        "operationId": "identity.oauthhandlers.appleCallbackHandler",
+        "tags": [
+          "identity.oauthhandlers"
+        ],
+        "summary": "Apple Callback Handler",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "identity:oauthhandlers:read"
+      }
+    },
+    "/api/identity/auth/microsoft": {
+      "get": {
+        "operationId": "identity.oauthhandlers.microsoftAuthHandler",
+        "tags": [
+          "identity.oauthhandlers"
+        ],
+        "summary": "Microsoft Auth Handler",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "identity:oauthhandlers:read"
+      }
+    },
+    "/api/identity/auth/microsoft/callback": {
+      "get": {
+        "operationId": "identity.oauthhandlers.microsoftCallbackHandler",
+        "tags": [
+          "identity.oauthhandlers"
+        ],
+        "summary": "Microsoft Callback Handler",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "identity:oauthhandlers:read"
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AvatarUploadResult": {
+        "type": "object",
+        "properties": {
+          "avatarUrl": {
+            "type": "string"
+          },
+          "user": {
+            "$ref": "#/components/schemas/SafeUser"
+          }
+        },
+        "required": [
+          "avatarUrl",
+          "user"
+        ]
+      },
+      "SafeUser": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "_id": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "avatar": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "phone": {
+            "type": "string"
+          },
+          "emailVerified": {
+            "type": "boolean"
+          },
+          "authProvider": {
+            "type": "string"
+          },
+          "lastLogin": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "created": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updated": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isActive": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "email"
+        ]
+      },
+      "AvatarUploadData": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "string",
+                "format": "binary"
+              }
+            ]
+          },
+          "mimetype": {
+            "type": "string"
+          },
+          "filename": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "data",
+          "mimetype",
+          "filename"
+        ]
+      },
+      "MessageResult": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "message"
+        ]
+      },
+      "AuthResult": {
+        "type": "object",
+        "properties": {
+          "user": {
+            "$ref": "#/components/schemas/SafeUser"
+          },
+          "token": {
+            "type": "string"
+          },
+          "refreshToken": {
+            "type": "string"
+          },
+          "expiresIn": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "number"
+              }
+            ]
+          }
+        },
+        "required": [
+          "user",
+          "token"
+        ]
+      },
+      "BrokerOAuthExchangeRequest": {
+        "type": "object",
+        "properties": {
+          "provider": {
+            "$ref": "#/components/schemas/OAuthProvider"
+          },
+          "profile": {
+            "$ref": "#/components/schemas/OAuthProfile"
+          },
+          "timestamp": {
+            "type": "number",
+            "description": "Unix epoch milliseconds when the broker built the payload"
+          },
+          "signature": {
+            "type": "string",
+            "description": "hex-encoded HMAC-SHA256 of `${timestamp}.${canonicalPayload}` using OAUTH_BROKER_SHARED_SECRET; canonicalPayload = provider,id,email,name,given_name,family_name,picture joined with newline (see AuthenticationService)"
+          }
+        },
+        "required": [
+          "provider",
+          "profile",
+          "timestamp",
+          "signature"
+        ]
+      },
+      "OAuthProvider": {
+        "type": "string",
+        "enum": [
+          "google",
+          "facebook",
+          "twitter",
+          "apple",
+          "microsoft"
+        ]
+      },
+      "OAuthProfile": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "given_name": {
+            "type": "string"
+          },
+          "family_name": {
+            "type": "string"
+          },
+          "picture": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "email",
+          "name",
+          "given_name",
+          "family_name"
+        ]
+      }
+    }
+  }
+}

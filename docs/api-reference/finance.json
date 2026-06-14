@@ -1,35 +1,47 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Finance API",
-    "version": "0.1.0",
-    "description": "Aggregate OpenAPI 3.1 document generated from all Future Client Generator module interfaces (InterfaceSpec). Generated manually for reference."
+    "title": "finance API",
+    "version": "1.0.6",
+    "description": "OpenAPI 3.1 document for the `finance` module, generated from FCG InterfaceSpecs."
   },
-  "servers": [
-    {
-      "url": "/",
-      "description": "API root (paths are fully-qualified with /api prefix)"
-    }
-  ],
   "tags": [
     {
-      "name": "finance/contractorpaymentprocessing"
+      "name": "finance.contractorpaymentprocessing"
     },
     {
-      "name": "finance/customerpaymentprocessing"
+      "name": "finance.customerpaymentprocessing"
     },
     {
-      "name": "finance/stripeintegration"
+      "name": "finance.stripeintegration"
     }
   ],
   "paths": {
     "/api/finance/contractor-payments/process": {
       "post": {
         "operationId": "finance.contractorpaymentprocessing.processContractorPayment",
-        "summary": "contractorpaymentprocessing.processContractorPayment",
         "tags": [
-          "finance/contractorpaymentprocessing"
+          "finance.contractorpaymentprocessing"
         ],
+        "summary": "Process contractor payment",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ContractorPayment"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
         "parameters": [
           {
             "name": "accountKey",
@@ -40,8 +52,6 @@
             }
           }
         ],
-        "x-permission": "finance:contractorpaymentprocessing:write",
-        "x-scope": "clientServer",
         "requestBody": {
           "required": true,
           "content": {
@@ -52,27 +62,36 @@
             }
           }
         },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ContractorPayment"
-                }
-              }
-            }
-          }
-        }
+        "x-scope": "clientServer",
+        "x-permission": "finance:contractorpaymentprocessing:write",
+        "description": "Process contractor payment"
       }
     },
     "/api/finance/contractor-payments/sync-payment-method": {
       "post": {
         "operationId": "finance.contractorpaymentprocessing.syncContractorPaymentMethod",
-        "summary": "contractorpaymentprocessing.syncContractorPaymentMethod",
         "tags": [
-          "finance/contractorpaymentprocessing"
+          "finance.contractorpaymentprocessing"
         ],
+        "summary": "Sync payment method with payment provider",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ContractorPaymentMethod"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
         "parameters": [
           {
             "name": "contractorId",
@@ -91,39 +110,54 @@
             }
           }
         ],
-        "x-permission": "finance:contractorpaymentprocessing:write",
-        "x-scope": "clientServer",
         "requestBody": {
           "required": true,
           "content": {
             "application/json": {
               "schema": {
-                "type": "string"
+                "type": "object",
+                "properties": {
+                  "paymentMethodId": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "paymentMethodId"
+                ]
               }
             }
           }
         },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ContractorPaymentMethod"
-                }
-              }
-            }
-          }
-        }
+        "x-scope": "clientServer",
+        "x-permission": "finance:contractorpaymentprocessing:write",
+        "description": "Sync payment method with payment provider"
       }
     },
     "/api/finance/contractor-payments/update-status": {
       "post": {
         "operationId": "finance.contractorpaymentprocessing.updateContractorPaymentStatus",
-        "summary": "contractorpaymentprocessing.updateContractorPaymentStatus",
         "tags": [
-          "finance/contractorpaymentprocessing"
+          "finance.contractorpaymentprocessing"
         ],
+        "summary": "Update contractor payment status",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ContractorPayment"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
         "parameters": [
           {
             "name": "status",
@@ -142,133 +176,54 @@
             }
           }
         ],
-        "x-permission": "finance:contractorpaymentprocessing:write",
-        "x-scope": "clientServer",
         "requestBody": {
           "required": true,
           "content": {
             "application/json": {
               "schema": {
-                "type": "string"
+                "type": "object",
+                "properties": {
+                  "paymentId": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "paymentId"
+                ]
               }
             }
           }
         },
+        "x-scope": "clientServer",
+        "x-permission": "finance:contractorpaymentprocessing:write",
+        "description": "Update contractor payment status"
+      }
+    },
+    "/api/finance/stripe/payment-intent": {
+      "post": {
+        "operationId": "finance.stripeintegration.createPaymentIntent",
+        "tags": [
+          "finance.stripeintegration"
+        ],
+        "summary": "Create Stripe payment intent with automatic payment methods",
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Successful response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ContractorPayment"
+                  "$ref": "#/components/schemas/StripePaymentIntent"
                 }
               }
-            }
-          }
-        }
-      }
-    },
-    "/api/finance/customer-payments/link-payment-intent": {
-      "post": {
-        "operationId": "finance.customerpaymentprocessing.linkPaymentToStripeIntent",
-        "summary": "customerpaymentprocessing.linkPaymentToStripeIntent",
-        "tags": [
-          "finance/customerpaymentprocessing"
-        ],
-        "parameters": [
-          {
-            "name": "paymentIntentId",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
             }
           },
-          {
-            "name": "accountKey",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "x-permission": "finance:customerpaymentprocessing:write",
-        "x-scope": "clientServer",
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "string"
-              }
-            }
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
           }
         },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CustomerPayment"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/finance/customer-payments/process": {
-      "post": {
-        "operationId": "finance.customerpaymentprocessing.processCustomerPayment",
-        "summary": "customerpaymentprocessing.processCustomerPayment",
-        "tags": [
-          "finance/customerpaymentprocessing"
-        ],
-        "parameters": [
-          {
-            "name": "accountKey",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "x-permission": "finance:customerpaymentprocessing:write",
-        "x-scope": "clientServer",
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CustomerPaymentData"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CustomerPaymentProcessingResult"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/finance/customer-payments/sync-payment-method": {
-      "post": {
-        "operationId": "finance.customerpaymentprocessing.syncCustomerPaymentMethod",
-        "summary": "customerpaymentprocessing.syncCustomerPaymentMethod",
-        "tags": [
-          "finance/customerpaymentprocessing"
-        ],
         "parameters": [
           {
             "name": "customerId",
@@ -287,39 +242,54 @@
             }
           }
         ],
-        "x-permission": "finance:customerpaymentprocessing:write",
-        "x-scope": "clientServer",
         "requestBody": {
           "required": true,
           "content": {
             "application/json": {
               "schema": {
-                "type": "string"
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "amount"
+                ]
               }
             }
           }
         },
+        "x-scope": "clientServer",
+        "x-permission": "finance:stripeintegration:write",
+        "description": "Create Stripe payment intent with automatic payment methods"
+      }
+    },
+    "/api/finance/stripe/setup-intent": {
+      "post": {
+        "operationId": "finance.stripeintegration.createSetupIntent",
+        "tags": [
+          "finance.stripeintegration"
+        ],
+        "summary": "Create Stripe setup intent for saving payment methods",
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Successful response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CustomerPaymentMethod"
+                  "$ref": "#/components/schemas/StripeSetupIntent"
                 }
               }
             }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
           }
-        }
-      }
-    },
-    "/api/finance/customer-payments/webhook": {
-      "post": {
-        "operationId": "finance.customerpaymentprocessing.updatePaymentStatusFromWebhook",
-        "summary": "customerpaymentprocessing.updatePaymentStatusFromWebhook",
-        "tags": [
-          "finance/customerpaymentprocessing"
-        ],
+        },
         "parameters": [
           {
             "name": "accountKey",
@@ -330,39 +300,269 @@
             }
           }
         ],
-        "x-permission": "finance:customerpaymentprocessing:write",
-        "x-scope": "clientServer",
         "requestBody": {
           "required": true,
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/WebhookEventData"
+                "type": "object",
+                "properties": {
+                  "customerId": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "customerId"
+                ]
               }
             }
           }
         },
+        "x-scope": "clientServer",
+        "x-permission": "finance:stripeintegration:write",
+        "description": "Create Stripe setup intent for saving payment methods"
+      }
+    },
+    "/api/finance/stripe/payment-methods": {
+      "post": {
+        "operationId": "finance.stripeintegration.getAllPaymentMethods",
+        "tags": [
+          "finance.stripeintegration"
+        ],
+        "summary": "List all payment methods for a Stripe customer",
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Successful response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CustomerPayment"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/StripePaymentMethod"
+                  }
                 }
               }
             }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
           }
-        }
+        },
+        "parameters": [
+          {
+            "name": "accountKey",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "customerId": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "customerId"
+                ]
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "finance:stripeintegration:write",
+        "description": "List all payment methods for a Stripe customer"
+      }
+    },
+    "/api/finance/stripe/payment-method/{paymentMethodId}": {
+      "get": {
+        "operationId": "finance.stripeintegration.getPaymentMethod",
+        "tags": [
+          "finance.stripeintegration"
+        ],
+        "summary": "Retrieve specific payment method from Stripe",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StripePaymentMethod"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "paymentMethodId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "accountKey",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "finance:stripeintegration:read",
+        "description": "Retrieve specific payment method from Stripe"
+      }
+    },
+    "/api/finance/stripe/payment-method/{paymentMethodId}/delete": {
+      "post": {
+        "operationId": "finance.stripeintegration.deletePaymentMethod",
+        "tags": [
+          "finance.stripeintegration"
+        ],
+        "summary": "Detach payment method from Stripe customer",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeletePaymentMethodResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "paymentMethodId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "accountKey": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "accountKey"
+                ]
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "finance:stripeintegration:write",
+        "description": "Detach payment method from Stripe customer"
+      }
+    },
+    "/api/finance/stripe/customer/{customerId}": {
+      "get": {
+        "operationId": "finance.stripeintegration.getIntegrationCustomerRecord",
+        "tags": [
+          "finance.stripeintegration"
+        ],
+        "summary": "Retrieve Stripe customer record",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StripeCustomer"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "customerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "accountKey",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "finance:stripeintegration:read",
+        "description": "Retrieve Stripe customer record"
       }
     },
     "/api/finance/stripe/checkout-session": {
       "post": {
         "operationId": "finance.stripeintegration.createCheckoutSession",
-        "summary": "stripeintegration.createCheckoutSession",
         "tags": [
-          "finance/stripeintegration"
+          "finance.stripeintegration"
         ],
+        "summary": "Create embedded checkout session with line items",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StripeCheckoutSession"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
         "parameters": [
           {
             "name": "returnUrl",
@@ -381,8 +581,6 @@
             }
           }
         ],
-        "x-permission": "finance:stripeintegration:write",
-        "x-scope": "clientServer",
         "requestBody": {
           "required": true,
           "content": {
@@ -393,43 +591,21 @@
             }
           }
         },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/StripeCheckoutSession"
-                }
-              }
-            }
-          }
-        }
+        "x-scope": "clientServer",
+        "x-permission": "finance:stripeintegration:write",
+        "description": "Create embedded checkout session with line items"
       }
     },
     "/api/finance/stripe/customer": {
       "post": {
         "operationId": "finance.stripeintegration.createStripeCustomer",
-        "summary": "stripeintegration.createStripeCustomer",
         "tags": [
-          "finance/stripeintegration"
+          "finance.stripeintegration"
         ],
-        "parameters": [],
-        "x-permission": "finance:stripeintegration:write",
-        "x-scope": "clientServer",
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "string"
-              }
-            }
-          }
-        },
+        "summary": "Create new Stripe customer",
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Successful response",
             "content": {
               "application/json": {
                 "schema": {
@@ -437,239 +613,62 @@
                 }
               }
             }
-          }
-        }
-      }
-    },
-    "/api/finance/stripe/customer/{customerId}": {
-      "get": {
-        "operationId": "finance.stripeintegration.getIntegrationCustomerRecord",
-        "summary": "stripeintegration.getIntegrationCustomerRecord",
-        "tags": [
-          "finance/stripeintegration"
-        ],
-        "parameters": [
-          {
-            "name": "customerId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
           },
-          {
-            "name": "accountKey",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "x-permission": "finance:stripeintegration:read",
-        "x-scope": "clientServer",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/StripeCustomer"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/finance/stripe/payment-intent": {
-      "post": {
-        "operationId": "finance.stripeintegration.createPaymentIntent",
-        "summary": "stripeintegration.createPaymentIntent",
-        "tags": [
-          "finance/stripeintegration"
-        ],
-        "parameters": [
-          {
-            "name": "customerId",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+          "400": {
+            "description": "Bad request"
           },
-          {
-            "name": "accountKey",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+          "500": {
+            "description": "Internal server error"
           }
-        ],
-        "x-permission": "finance:stripeintegration:write",
-        "x-scope": "clientServer",
+        },
         "requestBody": {
           "required": true,
           "content": {
             "application/json": {
               "schema": {
-                "type": "number"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/StripePaymentIntent"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/finance/stripe/payment-method/{paymentMethodId}": {
-      "get": {
-        "operationId": "finance.stripeintegration.getPaymentMethod",
-        "summary": "stripeintegration.getPaymentMethod",
-        "tags": [
-          "finance/stripeintegration"
-        ],
-        "parameters": [
-          {
-            "name": "paymentMethodId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "accountKey",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "x-permission": "finance:stripeintegration:read",
-        "x-scope": "clientServer",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/StripePaymentMethod"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/finance/stripe/payment-method/{paymentMethodId}/delete": {
-      "post": {
-        "operationId": "finance.stripeintegration.deletePaymentMethod",
-        "summary": "stripeintegration.deletePaymentMethod",
-        "tags": [
-          "finance/stripeintegration"
-        ],
-        "parameters": [
-          {
-            "name": "paymentMethodId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "x-permission": "finance:stripeintegration:write",
-        "x-scope": "clientServer",
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "string"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/DeletePaymentMethodResult"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/finance/stripe/payment-methods": {
-      "post": {
-        "operationId": "finance.stripeintegration.getAllPaymentMethods",
-        "summary": "stripeintegration.getAllPaymentMethods",
-        "tags": [
-          "finance/stripeintegration"
-        ],
-        "parameters": [
-          {
-            "name": "accountKey",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "x-permission": "finance:stripeintegration:write",
-        "x-scope": "clientServer",
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "string"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/StripePaymentMethod"
+                "type": "object",
+                "properties": {
+                  "accountKey": {
+                    "type": "string"
                   }
-                }
+                },
+                "required": [
+                  "accountKey"
+                ]
               }
             }
           }
-        }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "finance:stripeintegration:write",
+        "description": "Create new Stripe customer"
       }
     },
-    "/api/finance/stripe/setup-intent": {
+    "/api/finance/customer-payments/process": {
       "post": {
-        "operationId": "finance.stripeintegration.createSetupIntent",
-        "summary": "stripeintegration.createSetupIntent",
+        "operationId": "finance.customerpaymentprocessing.processCustomerPayment",
         "tags": [
-          "finance/stripeintegration"
+          "finance.customerpaymentprocessing"
         ],
+        "summary": "Process customer payment with Stripe",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerPaymentProcessingResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
         "parameters": [
           {
             "name": "accountKey",
@@ -680,666 +679,725 @@
             }
           }
         ],
-        "x-permission": "finance:stripeintegration:write",
-        "x-scope": "clientServer",
         "requestBody": {
           "required": true,
           "content": {
             "application/json": {
               "schema": {
-                "type": "string"
+                "$ref": "#/components/schemas/CustomerPaymentData"
               }
             }
           }
         },
+        "x-scope": "clientServer",
+        "x-permission": "finance:customerpaymentprocessing:write",
+        "description": "Process customer payment with Stripe"
+      }
+    },
+    "/api/finance/customer-payments/sync-payment-method": {
+      "post": {
+        "operationId": "finance.customerpaymentprocessing.syncCustomerPaymentMethod",
+        "tags": [
+          "finance.customerpaymentprocessing"
+        ],
+        "summary": "Sync payment method with Stripe",
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Successful response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/StripeSetupIntent"
+                  "$ref": "#/components/schemas/CustomerPaymentMethod"
                 }
               }
             }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
           }
-        }
+        },
+        "parameters": [
+          {
+            "name": "customerId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "accountKey",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "paymentMethodId": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "paymentMethodId"
+                ]
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "finance:customerpaymentprocessing:write",
+        "description": "Sync payment method with Stripe"
+      }
+    },
+    "/api/finance/customer-payments/webhook": {
+      "post": {
+        "operationId": "finance.customerpaymentprocessing.updatePaymentStatusFromWebhook",
+        "tags": [
+          "finance.customerpaymentprocessing"
+        ],
+        "summary": "Update payment status from Stripe webhook",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerPayment"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "accountKey",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WebhookEventData"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "finance:customerpaymentprocessing:write",
+        "description": "Update payment status from Stripe webhook"
+      }
+    },
+    "/api/finance/customer-payments/link-payment-intent": {
+      "post": {
+        "operationId": "finance.customerpaymentprocessing.linkPaymentToStripeIntent",
+        "tags": [
+          "finance.customerpaymentprocessing"
+        ],
+        "summary": "Link payment record to Stripe payment intent",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerPayment"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "paymentIntentId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "accountKey",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "paymentId": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "paymentId"
+                ]
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "finance:customerpaymentprocessing:write",
+        "description": "Link payment record to Stripe payment intent"
       }
     }
   },
   "components": {
     "schemas": {
-      "(url: string) => Promise<IContentCacheResult>": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type (url: string) => Promise<IContentCacheResult> (see module TypeScript interfaces)."
-      },
-      "{\n\t\tsuccess: boolean\n\t\tfilename?: string\n\t\tfilepath?: string\n\t\tstats?: {\n\t\t\ttotalInserted: number\n\t\t\ttotalUpdated: number\n\t\t\ttotalDeleted: number\n\t\t\tbyCollection: Record<string, { inserted: number; updated: number; deleted: number }>\n\t\t}\n\t\ttestResult?: { success: boolean; message: string }\n\t\tmessage: string\n\t}": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type {\n\t\tsuccess: boolean\n\t\tfilename?: string\n\t\tfilepath?: string\n\t\tstats?: {\n\t\t\ttotalInserted: number\n\t\t\ttotalUpdated: number\n\t\t\ttotalDeleted: number\n\t\t\tbyCollection: Record<string, { inserted: number; updated: number; deleted: number }>\n\t\t}\n\t\ttestResult?: { success: boolean; message: string }\n\t\tmessage: string\n\t} (see module TypeScript interfaces)."
-      },
-      "{\n      html?: string | null;\n      markdown?: string | null;\n      text?: string | null;\n      status: 'success' | 'error';\n      error?: string | null;\n      metadata?: any;\n    }": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type {\n      html?: string | null;\n      markdown?: string | null;\n      text?: string | null;\n      status: 'success' | 'error';\n      error?: string | null;\n      metadata?: any;\n    } (see module TypeScript interfaces)."
-      },
-      "{\n    success: boolean;\n    data?: IImportRecord;\n    error?: string;\n  }": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type {\n    success: boolean;\n    data?: IImportRecord;\n    error?: string;\n  } (see module TypeScript interfaces)."
-      },
-      "{\n    totalEntries: number;\n    entriesByDataType: Record<string, number>;\n    expiredEntries: number;\n  }": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type {\n    totalEntries: number;\n    entriesByDataType: Record<string, number>;\n    expiredEntries: number;\n  } (see module TypeScript interfaces)."
-      },
-      "{ category?: string }": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type { category?: string } (see module TypeScript interfaces)."
-      },
-      "{ component: IScreenComponent; userScreen: IScreen }": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type { component: IScreenComponent; userScreen: IScreen } (see module TypeScript interfaces)."
-      },
-      "{ frequency: ScheduleFrequency; time?: Date; dayOfWeek?: number; dayOfMonth?: number }": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type { frequency: ScheduleFrequency; time?: Date; dayOfWeek?: number; dayOfMonth?: number } (see module TypeScript interfaces)."
-      },
-      "{ start: Date; end: Date }": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type { start: Date; end: Date } (see module TypeScript interfaces)."
-      },
-      "{ success: boolean }": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type { success: boolean } (see module TypeScript interfaces)."
-      },
-      "{ success: boolean; data?: IImportRecord; error?: string }": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type { success: boolean; data?: IImportRecord; error?: string } (see module TypeScript interfaces)."
-      },
-      "{ success: boolean; message: string }": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type { success: boolean; message: string } (see module TypeScript interfaces)."
-      },
-      "{ success: boolean; message: string; screen?: IScreen }": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type { success: boolean; message: string; screen?: IScreen } (see module TypeScript interfaces)."
-      },
-      "{ userId: string }": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type { userId: string } (see module TypeScript interfaces)."
-      },
-      "{ userId: string; componentId: string; config: Record<string, unknown>; accountKey?: string }": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type { userId: string; componentId: string; config: Record<string, unknown>; accountKey?: string } (see module TypeScript interfaces)."
-      },
-      "AccountFeatures": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type AccountFeatures (see module TypeScript interfaces)."
-      },
-      "AccountProvisionData": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type AccountProvisionData (see module TypeScript interfaces)."
-      },
-      "AccountScopedQueryParams": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type AccountScopedQueryParams (see module TypeScript interfaces)."
-      },
-      "AccountScopedQueryParams & Record<string, string>": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type AccountScopedQueryParams & Record<string, string> (see module TypeScript interfaces)."
-      },
-      "BatchResult": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type BatchResult (see module TypeScript interfaces)."
-      },
-      "CategoriesResponse": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type CategoriesResponse (see module TypeScript interfaces)."
-      },
-      "Conflict": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type Conflict (see module TypeScript interfaces)."
-      },
-      "ConflictResolution": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type ConflictResolution (see module TypeScript interfaces)."
-      },
-      "ConflictResolutionRule": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type ConflictResolutionRule (see module TypeScript interfaces)."
-      },
-      "ConflictResolutionStrategy": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type ConflictResolutionStrategy (see module TypeScript interfaces)."
-      },
       "ContractorPayment": {
         "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type ContractorPayment (see module TypeScript interfaces)."
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "createdByDate": {
+            "type": "string"
+          },
+          "updatedByDate": {
+            "type": "string"
+          },
+          "sentAt": {
+            "type": "string"
+          },
+          "deliveredAt": {
+            "type": "string"
+          },
+          "failedAt": {
+            "type": "string"
+          },
+          "cancelledAt": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id"
+        ]
       },
       "ContractorPaymentData": {
         "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type ContractorPaymentData (see module TypeScript interfaces)."
+        "properties": {
+          "contractor": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number"
+          },
+          "paymentMethod": {
+            "type": "string"
+          },
+          "paymentDate": {
+            "type": "string"
+          },
+          "status": {
+            "$ref": "#/components/schemas/PaymentStatus"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "paymentProviderReference": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "contractor",
+          "amount"
+        ]
+      },
+      "PaymentStatus": {
+        "type": "string",
+        "enum": [
+          "pending",
+          "processing",
+          "completed",
+          "failed",
+          "cancelled",
+          "refunded",
+          "partially_refunded"
+        ]
       },
       "ContractorPaymentMethod": {
         "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type ContractorPaymentMethod (see module TypeScript interfaces)."
-      },
-      "CreatePersonalViewBody": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type CreatePersonalViewBody (see module TypeScript interfaces)."
-      },
-      "CreateResolutionRuleInput": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type CreateResolutionRuleInput (see module TypeScript interfaces)."
-      },
-      "CreateUserScreenBody": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type CreateUserScreenBody (see module TypeScript interfaces)."
-      },
-      "CustomerPayment": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type CustomerPayment (see module TypeScript interfaces)."
-      },
-      "CustomerPaymentData": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type CustomerPaymentData (see module TypeScript interfaces)."
-      },
-      "CustomerPaymentMethod": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type CustomerPaymentMethod (see module TypeScript interfaces)."
-      },
-      "CustomerPaymentProcessingResult": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type CustomerPaymentProcessingResult (see module TypeScript interfaces)."
-      },
-      "DataType": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type DataType (see module TypeScript interfaces)."
-      },
-      "DateRange": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type DateRange (see module TypeScript interfaces)."
-      },
-      "DeletePaymentMethodResult": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type DeletePaymentMethodResult (see module TypeScript interfaces)."
-      },
-      "DeleteUserScreenBody": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type DeleteUserScreenBody (see module TypeScript interfaces)."
-      },
-      "EngagementMetrics": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type EngagementMetrics (see module TypeScript interfaces)."
-      },
-      "EnterpriseAccount": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type EnterpriseAccount (see module TypeScript interfaces)."
-      },
-      "ExtendTrialInput": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type ExtendTrialInput (see module TypeScript interfaces)."
-      },
-      "FieldMapping": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type FieldMapping (see module TypeScript interfaces)."
-      },
-      "FieldMappingTemplate": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type FieldMappingTemplate (see module TypeScript interfaces)."
-      },
-      "FieldValidationResult": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type FieldValidationResult (see module TypeScript interfaces)."
-      },
-      "FollowerStats": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type FollowerStats (see module TypeScript interfaces)."
-      },
-      "GoogleAuthenticationResult": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type GoogleAuthenticationResult (see module TypeScript interfaces)."
-      },
-      "GoogleAuthInput": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type GoogleAuthInput (see module TypeScript interfaces)."
-      },
-      "GoogleBusinessProfile": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type GoogleBusinessProfile (see module TypeScript interfaces)."
-      },
-      "GoogleConnectionStatus": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type GoogleConnectionStatus (see module TypeScript interfaces)."
-      },
-      "GoogleReview": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type GoogleReview (see module TypeScript interfaces)."
-      },
-      "GoogleReviewResponseInput": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type GoogleReviewResponseInput (see module TypeScript interfaces)."
-      },
-      "GoogleSyncInput": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type GoogleSyncInput (see module TypeScript interfaces)."
-      },
-      "GoogleSyncToInput": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type GoogleSyncToInput (see module TypeScript interfaces)."
-      },
-      "GoogleTokenData": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type GoogleTokenData (see module TypeScript interfaces)."
-      },
-      "HealthCheckResponse": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type HealthCheckResponse (see module TypeScript interfaces)."
-      },
-      "IBatchCacheCheckResult": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type IBatchCacheCheckResult (see module TypeScript interfaces)."
-      },
-      "ICacheCheckResult": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type ICacheCheckResult (see module TypeScript interfaces)."
-      },
-      "ICacheConfig": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type ICacheConfig (see module TypeScript interfaces)."
-      },
-      "IContentCacheResult": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type IContentCacheResult (see module TypeScript interfaces)."
-      },
-      "IDataCacheResult": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type IDataCacheResult (see module TypeScript interfaces)."
-      },
-      "INavigationItem": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type INavigationItem (see module TypeScript interfaces)."
-      },
-      "IScreen": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type IScreen (see module TypeScript interfaces)."
-      },
-      "IScreenComponent": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type IScreenComponent (see module TypeScript interfaces)."
-      },
-      "IWorkspace": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type IWorkspace (see module TypeScript interfaces)."
-      },
-      "KeyValidationResult": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type KeyValidationResult (see module TypeScript interfaces)."
-      },
-      "LimitStatus": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type LimitStatus (see module TypeScript interfaces)."
-      },
-      "LinkedInAuthInput": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type LinkedInAuthInput (see module TypeScript interfaces)."
-      },
-      "LinkedInAuthResult": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type LinkedInAuthResult (see module TypeScript interfaces)."
-      },
-      "LinkedInCompanyProfile": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type LinkedInCompanyProfile (see module TypeScript interfaces)."
-      },
-      "LinkedInConnectionStatus": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type LinkedInConnectionStatus (see module TypeScript interfaces)."
-      },
-      "LinkedInPost": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type LinkedInPost (see module TypeScript interfaces)."
-      },
-      "LinkedInPublishInput": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type LinkedInPublishInput (see module TypeScript interfaces)."
-      },
-      "LinkedInSyncInput": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type LinkedInSyncInput (see module TypeScript interfaces)."
-      },
-      "LinkedInTokenData": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type LinkedInTokenData (see module TypeScript interfaces)."
-      },
-      "MailgunSyncInstance": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type MailgunSyncInstance (see module TypeScript interfaces)."
-      },
-      "MailgunSyncResult": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type MailgunSyncResult (see module TypeScript interfaces)."
-      },
-      "Map<DataType, string[]>": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type Map<DataType, string[]> (see module TypeScript interfaces)."
-      },
-      "NavigationItem": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type NavigationItem (see module TypeScript interfaces)."
-      },
-      "NavigationOrder": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type NavigationOrder (see module TypeScript interfaces)."
-      },
-      "Notification": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type Notification (see module TypeScript interfaces)."
-      },
-      "NotificationChannel": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type NotificationChannel (see module TypeScript interfaces)."
-      },
-      "NotificationDeliveryStatus": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type NotificationDeliveryStatus (see module TypeScript interfaces)."
-      },
-      "Omit<FieldMapping, 'id'>": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type Omit<FieldMapping, 'id'> (see module TypeScript interfaces)."
-      },
-      "Omit<FieldMappingTemplate, 'id'>": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type Omit<FieldMappingTemplate, 'id'> (see module TypeScript interfaces)."
-      },
-      "OrderData": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type OrderData (see module TypeScript interfaces)."
-      },
-      "Partial<FieldMapping>": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type Partial<FieldMapping> (see module TypeScript interfaces)."
-      },
-      "Partial<IScreen>": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type Partial<IScreen> (see module TypeScript interfaces)."
-      },
-      "Partial<IScreenComponent>": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type Partial<IScreenComponent> (see module TypeScript interfaces)."
-      },
-      "Partial<IWorkspace>": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type Partial<IWorkspace> (see module TypeScript interfaces)."
-      },
-      "Partial<MigrationGeneratorOptions>": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type Partial<MigrationGeneratorOptions> (see module TypeScript interfaces)."
-      },
-      "Partial<ScheduledNotification>": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type Partial<ScheduledNotification> (see module TypeScript interfaces)."
-      },
-      "Partial<Workspace>": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type Partial<Workspace> (see module TypeScript interfaces)."
-      },
-      "PaymentStatus": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type PaymentStatus (see module TypeScript interfaces)."
-      },
-      "PermissionsCatalog": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type PermissionsCatalog (see module TypeScript interfaces)."
-      },
-      "PostQueryOptions": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type PostQueryOptions (see module TypeScript interfaces)."
-      },
-      "PostsResponse": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type PostsResponse (see module TypeScript interfaces)."
-      },
-      "ProfileInsights": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type ProfileInsights (see module TypeScript interfaces)."
-      },
-      "RecipientCriteria": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type RecipientCriteria (see module TypeScript interfaces)."
-      },
-      "Record<string, any>": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type Record<string, any> (see module TypeScript interfaces)."
-      },
-      "Report": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type Report (see module TypeScript interfaces)."
-      },
-      "ReportDataQueryParams": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type ReportDataQueryParams (see module TypeScript interfaces)."
-      },
-      "ReportDataResponse": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type ReportDataResponse (see module TypeScript interfaces)."
-      },
-      "ReportsByCategoryResponse": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type ReportsByCategoryResponse (see module TypeScript interfaces)."
-      },
-      "ResolutionRuleRecord": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type ResolutionRuleRecord (see module TypeScript interfaces)."
-      },
-      "ResourceType": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type ResourceType (see module TypeScript interfaces)."
-      },
-      "ReviewQueryOptions": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type ReviewQueryOptions (see module TypeScript interfaces)."
-      },
-      "ReviewsResponse": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type ReviewsResponse (see module TypeScript interfaces)."
-      },
-      "ScheduledNotification": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type ScheduledNotification (see module TypeScript interfaces)."
-      },
-      "StripeCheckoutSession": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type StripeCheckoutSession (see module TypeScript interfaces)."
-      },
-      "StripeCustomer": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type StripeCustomer (see module TypeScript interfaces)."
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "contractor": {
+            "type": "string"
+          },
+          "integrationPaymentMethodInformation": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "isDefault": {
+            "type": "boolean"
+          },
+          "createdByDate": {
+            "type": "string"
+          },
+          "updatedByDate": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "contractor",
+          "integrationPaymentMethodInformation"
+        ]
       },
       "StripePaymentIntent": {
         "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type StripePaymentIntent (see module TypeScript interfaces)."
-      },
-      "StripePaymentMethod": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type StripePaymentMethod (see module TypeScript interfaces)."
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "client_secret": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "customer": {
+            "type": "string"
+          },
+          "created": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "id",
+          "status",
+          "amount",
+          "currency",
+          "client_secret"
+        ]
       },
       "StripeSetupIntent": {
         "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type StripeSetupIntent (see module TypeScript interfaces)."
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "client_secret": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "customer": {
+            "type": "string"
+          },
+          "payment_method_types": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "created": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "id",
+          "status",
+          "client_secret"
+        ]
       },
-      "SuspendAccountInput": {
+      "StripePaymentMethod": {
         "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type SuspendAccountInput (see module TypeScript interfaces)."
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "card": {
+            "type": "object",
+            "properties": {
+              "brand": {
+                "type": "string"
+              },
+              "last4": {
+                "type": "string"
+              },
+              "exp_month": {
+                "type": "number"
+              },
+              "exp_year": {
+                "type": "number"
+              },
+              "fingerprint": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "brand",
+              "last4",
+              "exp_month",
+              "exp_year"
+            ]
+          },
+          "billing_details": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "created": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "id",
+          "type"
+        ]
       },
-      "SyncConfiguration": {
+      "DeletePaymentMethodResult": {
         "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type SyncConfiguration (see module TypeScript interfaces)."
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "paymentMethod": {
+            "$ref": "#/components/schemas/StripePaymentMethod"
+          }
+        },
+        "required": [
+          "success",
+          "paymentMethod"
+        ]
       },
-      "SyncResult": {
+      "StripeCustomer": {
         "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type SyncResult (see module TypeScript interfaces)."
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "created": {
+            "type": "number"
+          },
+          "metadata": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "id"
+        ]
       },
-      "SyncStatus": {
+      "StripeCheckoutSession": {
         "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type SyncStatus (see module TypeScript interfaces)."
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "client_secret": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "status": {
+            "type": "string"
+          },
+          "customer": {
+            "type": "string"
+          },
+          "payment_status": {
+            "type": "string"
+          },
+          "ui_mode": {
+            "type": "string"
+          },
+          "mode": {
+            "type": "string"
+          },
+          "return_url": {
+            "type": "string"
+          },
+          "created": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "id",
+          "client_secret"
+        ]
       },
-      "UpdateActiveWorkspaceInput": {
+      "OrderData": {
         "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type UpdateActiveWorkspaceInput (see module TypeScript interfaces)."
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "_id": {
+            "type": "string"
+          },
+          "customerId": {
+            "type": "string"
+          },
+          "lineItems": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OrderLineItem"
+            }
+          },
+          "currency": {
+            "type": "string"
+          },
+          "metadata": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "customerId",
+          "lineItems"
+        ]
       },
-      "UserScreenQuery": {
+      "OrderLineItem": {
         "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type UserScreenQuery (see module TypeScript interfaces)."
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "amount": {
+            "type": "number"
+          },
+          "quantity": {
+            "type": "number"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "metadata": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        },
+        "required": [
+          "name",
+          "price",
+          "quantity"
+        ]
       },
-      "ValidateKeyInput": {
+      "CustomerPaymentProcessingResult": {
         "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type ValidateKeyInput (see module TypeScript interfaces)."
+        "properties": {
+          "paymentIntent": {
+            "$ref": "#/components/schemas/StripePaymentIntent"
+          }
+        }
+      },
+      "CustomerPaymentData": {
+        "type": "object",
+        "properties": {
+          "customer": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number"
+          },
+          "paymentMethod": {
+            "type": "string"
+          },
+          "paymentDate": {
+            "type": "string"
+          },
+          "order": {
+            "type": "string"
+          },
+          "status": {
+            "$ref": "#/components/schemas/PaymentStatus"
+          },
+          "description": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "stripeCustomerId": {
+            "type": "string"
+          },
+          "stripePaymentIntentId": {
+            "type": "string"
+          },
+          "stripeClientSecret": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "customer",
+          "amount"
+        ]
+      },
+      "CustomerPaymentMethod": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "customer": {
+            "type": "string"
+          },
+          "integrationPaymentMethodInformation": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "isDefault": {
+            "type": "boolean"
+          },
+          "createdByDate": {
+            "type": "string"
+          },
+          "updatedByDate": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "customer",
+          "integrationPaymentMethodInformation"
+        ]
+      },
+      "CustomerPayment": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "createdByDate": {
+            "type": "string"
+          },
+          "updatedByDate": {
+            "type": "string"
+          },
+          "sentAt": {
+            "type": "string"
+          },
+          "deliveredAt": {
+            "type": "string"
+          },
+          "failedAt": {
+            "type": "string"
+          },
+          "cancelledAt": {
+            "type": "string"
+          },
+          "refundedAt": {
+            "type": "string"
+          },
+          "stripeTransactionReference": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id"
+        ]
       },
       "WebhookEventData": {
         "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type WebhookEventData (see module TypeScript interfaces)."
-      },
-      "Workspace": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type Workspace (see module TypeScript interfaces)."
-      },
-      "WorkspaceWithAccess": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "Unresolved type WorkspaceWithAccess (see module TypeScript interfaces)."
-      }
-    },
-    "securitySchemes": {
-      "bearerAuth": {
-        "type": "http",
-        "scheme": "bearer",
-        "bearerFormat": "JWT"
-      },
-      "cookieAuth": {
-        "type": "apiKey",
-        "in": "cookie",
-        "name": "enterprise_access"
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "object": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            },
+            "required": [
+              "object"
+            ]
+          },
+          "id": {
+            "type": "string"
+          },
+          "created": {
+            "type": "number"
+          },
+          "livemode": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "type",
+          "data"
+        ]
       }
     }
   }

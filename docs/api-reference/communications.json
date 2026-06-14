@@ -1,0 +1,2372 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "communications API",
+    "version": "1.0.19",
+    "description": "OpenAPI 3.1 document for the `communications` module, generated from FCG InterfaceSpecs."
+  },
+  "tags": [
+    {
+      "name": "communications.bulkemail"
+    },
+    {
+      "name": "communications.campaignemail"
+    },
+    {
+      "name": "communications.conversation"
+    },
+    {
+      "name": "communications.emailanalytics"
+    },
+    {
+      "name": "communications.emailscheduling"
+    },
+    {
+      "name": "communications.emailsnapshot"
+    },
+    {
+      "name": "communications.fileupload"
+    },
+    {
+      "name": "communications.gmailconnection"
+    },
+    {
+      "name": "communications.gmailsend"
+    },
+    {
+      "name": "communications.gmailsync"
+    },
+    {
+      "name": "communications.sendemail"
+    }
+  ],
+  "paths": {
+    "/api/communications/email/analytics/campaign/{campaignId}": {
+      "get": {
+        "operationId": "communications.emailanalytics.getCampaignAnalytics",
+        "tags": [
+          "communications.emailanalytics"
+        ],
+        "summary": "Get Campaign Analytics",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "campaignId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "communications:emailanalytics:read"
+      }
+    },
+    "/api/communications/email/analytics/email/{emailId}": {
+      "get": {
+        "operationId": "communications.emailanalytics.getEmailAnalytics",
+        "tags": [
+          "communications.emailanalytics"
+        ],
+        "summary": "Get Email Analytics",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "emailId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "communications:emailanalytics:read"
+      }
+    },
+    "/api/communications/email/analytics/instances/{instanceId}": {
+      "get": {
+        "operationId": "communications.emailanalytics.getEmailSendInstance",
+        "tags": [
+          "communications.emailanalytics"
+        ],
+        "summary": "Get Email Send Instance",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "instanceId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "communications:emailanalytics:read"
+      }
+    },
+    "/api/communications/email/analytics/performance": {
+      "get": {
+        "operationId": "communications.emailanalytics.getPerformanceMetrics",
+        "tags": [
+          "communications.emailanalytics"
+        ],
+        "summary": "Get Performance Metrics",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "timeRange",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "communications:emailanalytics:read"
+      }
+    },
+    "/api/communications/email/analytics/engagement": {
+      "get": {
+        "operationId": "communications.emailanalytics.getEngagementAnalytics",
+        "tags": [
+          "communications.emailanalytics"
+        ],
+        "summary": "Get Engagement Analytics",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "emailId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "communications:emailanalytics:read"
+      }
+    },
+    "/api/communications/api/email/bulk": {
+      "post": {
+        "operationId": "communications.bulkemail.sendBulkEmail",
+        "tags": [
+          "communications.bulkemail"
+        ],
+        "summary": "Send Bulk Email",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BulkEmailResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkEmailRequest"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "communications:bulkemail:write"
+      }
+    },
+    "/api/communications/api/email/bulk/status/{batchId}": {
+      "get": {
+        "operationId": "communications.bulkemail.getBulkEmailStatus",
+        "tags": [
+          "communications.bulkemail"
+        ],
+        "summary": "Get Bulk Email Status",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "batchId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "communications:bulkemail:read"
+      }
+    },
+    "/api/communications/bulk/send-optimized": {
+      "post": {
+        "operationId": "communications.bulkemail.sendBulkEmailOptimized",
+        "tags": [
+          "communications.bulkemail"
+        ],
+        "summary": "Send bulk email using Mailgun batch API with personalization",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "emailData",
+            "in": "query",
+            "required": true,
+            "schema": {}
+          },
+          {
+            "name": "emailRecord",
+            "in": "query",
+            "required": true,
+            "schema": {}
+          },
+          {
+            "name": "options",
+            "in": "query",
+            "required": true,
+            "schema": {}
+          },
+          {
+            "name": "accountId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {}
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "communications:bulkemail:write",
+        "description": "Send bulk email using Mailgun batch API with personalization"
+      }
+    },
+    "/api/communications/campaign-emails/send-optimized": {
+      "post": {
+        "operationId": "communications.campaignemail.sendCampaignEmailOptimized",
+        "tags": [
+          "communications.campaignemail"
+        ],
+        "summary": "Send campaign email using batch API",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "campaignEmailData",
+            "in": "query",
+            "required": true,
+            "schema": {}
+          },
+          {
+            "name": "campaignEmailRecord",
+            "in": "query",
+            "required": true,
+            "schema": {}
+          },
+          {
+            "name": "options",
+            "in": "query",
+            "required": true,
+            "schema": {}
+          },
+          {
+            "name": "accountId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {}
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "communications:campaignemail:write",
+        "description": "Send campaign email using batch API"
+      }
+    },
+    "/api/communications/campaign-emails/save": {
+      "post": {
+        "operationId": "communications.campaignemail.saveCampaignEmail",
+        "tags": [
+          "communications.campaignemail"
+        ],
+        "summary": "Save campaign email as draft",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "accountId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {}
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "communications:campaignemail:write",
+        "description": "Save campaign email as draft"
+      }
+    },
+    "/api/communications/campaign-emails/{campaignEmailId}": {
+      "put": {
+        "operationId": "communications.campaignemail.updateCampaignEmail",
+        "tags": [
+          "communications.campaignemail"
+        ],
+        "summary": "Update existing campaign email draft",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "campaignEmailId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "accountId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {}
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "communications:campaignemail:write",
+        "description": "Update existing campaign email draft"
+      }
+    },
+    "/api/communications/campaign-emails/{campaignEmailId}/send": {
+      "post": {
+        "operationId": "communications.campaignemail.updateAndSendCampaignEmail",
+        "tags": [
+          "communications.campaignemail"
+        ],
+        "summary": "Update and send campaign email immediately",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "campaignEmailId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "accountId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {}
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "communications:campaignemail:write",
+        "description": "Update and send campaign email immediately"
+      }
+    },
+    "/api/communications/campaign-emails/create-and-send": {
+      "post": {
+        "operationId": "communications.campaignemail.createAndSendCampaignEmail",
+        "tags": [
+          "communications.campaignemail"
+        ],
+        "summary": "Create and send campaign email immediately",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "accountId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {}
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "communications:campaignemail:write",
+        "description": "Create and send campaign email immediately"
+      }
+    },
+    "/api/communications/campaign-emails/create-and-schedule": {
+      "post": {
+        "operationId": "communications.campaignemail.createAndScheduleCampaignEmail",
+        "tags": [
+          "communications.campaignemail"
+        ],
+        "summary": "Create and schedule campaign email for future delivery",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "scheduledDate",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "accountId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {}
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "communications:campaignemail:write",
+        "description": "Create and schedule campaign email for future delivery"
+      }
+    },
+    "/api/communications/campaign-emails/{campaignEmailId}/schedule": {
+      "post": {
+        "operationId": "communications.campaignemail.updateAndScheduleCampaignEmail",
+        "tags": [
+          "communications.campaignemail"
+        ],
+        "summary": "Update and schedule existing campaign email",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "campaignEmailId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "scheduledDate",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "accountId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {}
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "communications:campaignemail:write",
+        "description": "Update and schedule existing campaign email"
+      }
+    },
+    "/api/communications/snapshots/email": {
+      "post": {
+        "operationId": "communications.emailsnapshot.createEmailSnapshot",
+        "tags": [
+          "communications.emailsnapshot"
+        ],
+        "summary": "Create email snapshot record",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "processedListData",
+            "in": "query",
+            "required": true,
+            "schema": {}
+          },
+          {
+            "name": "options",
+            "in": "query",
+            "required": true,
+            "schema": {}
+          },
+          {
+            "name": "accountId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "emailId": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "emailId"
+                ]
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "communications:emailsnapshot:write",
+        "description": "Create email snapshot record"
+      }
+    },
+    "/api/communications/snapshots/campaign-email": {
+      "post": {
+        "operationId": "communications.emailsnapshot.createCampaignEmailSnapshot",
+        "tags": [
+          "communications.emailsnapshot"
+        ],
+        "summary": "Create campaign email snapshot",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "processedListData",
+            "in": "query",
+            "required": true,
+            "schema": {}
+          },
+          {
+            "name": "options",
+            "in": "query",
+            "required": true,
+            "schema": {}
+          },
+          {
+            "name": "accountId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "campaignEmailId": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "campaignEmailId"
+                ]
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "communications:emailsnapshot:write",
+        "description": "Create campaign email snapshot"
+      }
+    },
+    "/api/communications/snapshots/{snapshotId}": {
+      "get": {
+        "operationId": "communications.emailsnapshot.getSnapshot",
+        "tags": [
+          "communications.emailsnapshot"
+        ],
+        "summary": "Get snapshot by ID",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "snapshotId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "accountId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "communications:emailsnapshot:read",
+        "description": "Get snapshot by ID"
+      }
+    },
+    "/api/communications/snapshots/{snapshotId}/in-use": {
+      "put": {
+        "operationId": "communications.emailsnapshot.markSnapshotInUse",
+        "tags": [
+          "communications.emailsnapshot"
+        ],
+        "summary": "Mark snapshot as in use",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "snapshotId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "accountId": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "accountId"
+                ]
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "communications:emailsnapshot:write",
+        "description": "Mark snapshot as in use"
+      }
+    },
+    "/api/communications/snapshots/{snapshotId}/completed": {
+      "put": {
+        "operationId": "communications.emailsnapshot.markSnapshotCompleted",
+        "tags": [
+          "communications.emailsnapshot"
+        ],
+        "summary": "Mark snapshot as completed",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "snapshotId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "accountId": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "accountId"
+                ]
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "communications:emailsnapshot:write",
+        "description": "Mark snapshot as completed"
+      }
+    },
+    "/api/communications/api/email/send": {
+      "post": {
+        "operationId": "communications.sendemail.sendEmail",
+        "tags": [
+          "communications.sendemail"
+        ],
+        "summary": "Send email through Gmail and log locally",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmailResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmailRequest"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "communications:sendemail:write",
+        "description": "Send email through Gmail and log locally"
+      }
+    },
+    "/api/communications/api/email/status/{id}": {
+      "get": {
+        "operationId": "communications.sendemail.getEmailStatus",
+        "tags": [
+          "communications.sendemail"
+        ],
+        "summary": "Get Email Status",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmailStatus"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "communications:sendemail:read"
+      }
+    },
+    "/api/communications/api/email/validate": {
+      "post": {
+        "operationId": "communications.sendemail.validateEmail",
+        "tags": [
+          "communications.sendemail"
+        ],
+        "summary": "Validate Email",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "email"
+                ]
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "communications:sendemail:write"
+      }
+    },
+    "/api/communications/scheduling/initialize": {
+      "post": {
+        "operationId": "communications.emailscheduling.initialize",
+        "tags": [
+          "communications.emailscheduling"
+        ],
+        "summary": "Initialize scheduling service with Agenda",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {}
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "communications:emailscheduling:write",
+        "description": "Initialize scheduling service with Agenda"
+      }
+    },
+    "/api/communications/scheduling/start": {
+      "post": {
+        "operationId": "communications.emailscheduling.start",
+        "tags": [
+          "communications.emailscheduling"
+        ],
+        "summary": "Start Agenda scheduler",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "communications:emailscheduling:write",
+        "description": "Start Agenda scheduler"
+      }
+    },
+    "/api/communications/scheduling/stop": {
+      "post": {
+        "operationId": "communications.emailscheduling.stop",
+        "tags": [
+          "communications.emailscheduling"
+        ],
+        "summary": "Stop Agenda scheduler",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "communications:emailscheduling:write",
+        "description": "Stop Agenda scheduler"
+      }
+    },
+    "/api/communications/scheduling/schedule": {
+      "post": {
+        "operationId": "communications.emailscheduling.scheduleEmail",
+        "tags": [
+          "communications.emailscheduling"
+        ],
+        "summary": "Schedule email for future delivery",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "scheduledDate",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "tenantId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {}
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "communications:emailscheduling:write",
+        "description": "Schedule email for future delivery"
+      }
+    },
+    "/api/communications/scheduling/cancel": {
+      "post": {
+        "operationId": "communications.emailscheduling.cancelScheduledEmail",
+        "tags": [
+          "communications.emailscheduling"
+        ],
+        "summary": "Cancel scheduled email",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "emailId": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "emailId"
+                ]
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "communications:emailscheduling:write",
+        "description": "Cancel scheduled email"
+      }
+    },
+    "/api/communications/scheduling/process-campaign/{campaignEmailId}": {
+      "post": {
+        "operationId": "communications.emailscheduling.processScheduledCampaignEmail",
+        "tags": [
+          "communications.emailscheduling"
+        ],
+        "summary": "Process scheduled campaign email",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "campaignEmailId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "tenantId": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "tenantId"
+                ]
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "communications:emailscheduling:write",
+        "description": "Process scheduled campaign email"
+      }
+    },
+    "/api/communications/scheduling/jobs": {
+      "get": {
+        "operationId": "communications.emailscheduling.getScheduledJobs",
+        "tags": [
+          "communications.emailscheduling"
+        ],
+        "summary": "Get scheduled jobs for tenant",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {}
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "communications:emailscheduling:read",
+        "description": "Get scheduled jobs for tenant"
+      }
+    },
+    "/api/communications/conversations/save": {
+      "post": {
+        "operationId": "communications.conversation.saveConversation",
+        "tags": [
+          "communications.conversation"
+        ],
+        "summary": "Save a new internal conversation (first message creates the thread)",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "accountId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Conversation"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "communications:conversation:write",
+        "description": "Save a new internal conversation (first message creates the thread)."
+      }
+    },
+    "/api/communications/conversations/{id}/messages": {
+      "post": {
+        "operationId": "communications.conversation.appendMessage",
+        "tags": [
+          "communications.conversation"
+        ],
+        "summary": "Append a message to an existing conversation",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "message",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/ConversationMessage"
+            }
+          },
+          {
+            "name": "accountId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "conversationId": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "conversationId"
+                ]
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "communications:conversation:write",
+        "description": "Append a message to an existing conversation."
+      }
+    },
+    "/api/communications/conversations/by-entity": {
+      "get": {
+        "operationId": "communications.conversation.getConversationsByEntity",
+        "tags": [
+          "communications.conversation"
+        ],
+        "summary": "Get conversations for a specific entity (contact, account, opportunity)",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {}
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "entityType",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entityId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "accountId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "communications:conversation:read",
+        "description": "Get conversations for a specific entity (contact, account, opportunity)."
+      }
+    },
+    "/api/communications/files/upload": {
+      "post": {
+        "operationId": "communications.fileupload.uploadFile",
+        "tags": [
+          "communications.fileupload"
+        ],
+        "summary": "Upload a file and save a record to the files collection",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "communications:fileupload:write",
+        "description": "Upload a file and save a record to the files collection.\nAlways creates a new record — use upsertFile for Gmail sync where\nthe same attachment may be downloaded more than once."
+      }
+    },
+    "/api/communications/files/{fileId}": {
+      "get": {
+        "operationId": "communications.fileupload.downloadFile",
+        "tags": [
+          "communications.fileupload"
+        ],
+        "summary": "Download a file by its record ID",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "request",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "additionalProperties": true
+            }
+          },
+          {
+            "name": "fileId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "communications:fileupload:read",
+        "description": "Download a file by its record ID.\nLooks up the files collection by id, reads the binary from disk, and\nreturns it base64-encoded so the route layer can stream it to the client."
+      }
+    },
+    "/api/communications/gmail/auth/url": {
+      "post": {
+        "operationId": "communications.gmailconnection.getAuthUrl",
+        "tags": [
+          "communications.gmailconnection"
+        ],
+        "summary": "Get OAuth authorization URL",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "communications:gmailconnection:write",
+        "description": "Get OAuth authorization URL"
+      }
+    },
+    "/api/communications/gmail/auth/callback": {
+      "get": {
+        "operationId": "communications.gmailconnection.gmailCallbackHandler",
+        "tags": [
+          "communications.gmailconnection"
+        ],
+        "summary": "Handle OAuth callback — stores tokens in syncVendors",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "communications:gmailconnection:read",
+        "description": "Handle OAuth callback — stores tokens in syncVendors"
+      }
+    },
+    "/api/communications/gmail/disconnect": {
+      "post": {
+        "operationId": "communications.gmailconnection.disconnect",
+        "tags": [
+          "communications.gmailconnection"
+        ],
+        "summary": "Disconnect Gmail — clears syncVendors record",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "communications:gmailconnection:write",
+        "description": "Disconnect Gmail — clears syncVendors record"
+      }
+    },
+    "/api/communications/gmail/connection-status": {
+      "get": {
+        "operationId": "communications.gmailconnection.getConnectionStatus",
+        "tags": [
+          "communications.gmailconnection"
+        ],
+        "summary": "Get connection status from syncVendors",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "request",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "additionalProperties": true
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "communications:gmailconnection:read",
+        "description": "Get connection status from syncVendors"
+      }
+    },
+    "/api/communications/gmail/send": {
+      "post": {
+        "operationId": "communications.gmailsend.sendEmail",
+        "tags": [
+          "communications.gmailsend"
+        ],
+        "summary": "Send email through Gmail and log locally",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "communications:gmailsend:write",
+        "description": "Send email through Gmail and log locally"
+      }
+    },
+    "/api/communications/gmail/sync": {
+      "post": {
+        "operationId": "communications.gmailsync.syncUserEmails",
+        "tags": [
+          "communications.gmailsync"
+        ],
+        "summary": "Sync user's Gmail messages",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "communications:gmailsync:write",
+        "description": "Sync user's Gmail messages"
+      }
+    },
+    "/api/communications/gmail/modify": {
+      "post": {
+        "operationId": "communications.gmailsync.modifyMessage",
+        "tags": [
+          "communications.gmailsync"
+        ],
+        "summary": "Modify message in Gmail to reflect local action (labels/read/trash)",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "communications:gmailsync:write",
+        "description": "Modify message in Gmail to reflect local action (labels/read/trash)"
+      }
+    },
+    "/api/communications/gmail/attachments/download": {
+      "post": {
+        "operationId": "communications.gmailsync.downloadMessageAttachments",
+        "tags": [
+          "communications.gmailsync"
+        ],
+        "summary": "Download attachments for a single message",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "communications:gmailsync:write",
+        "description": "Download attachments for a single message"
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "BulkEmailResult": {
+        "type": "object",
+        "properties": {
+          "batchId": {
+            "type": "string"
+          },
+          "totalEmails": {
+            "type": "number"
+          },
+          "successful": {
+            "type": "number"
+          },
+          "failed": {
+            "type": "number"
+          },
+          "results": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EmailResult"
+            }
+          }
+        },
+        "required": [
+          "batchId",
+          "totalEmails",
+          "successful",
+          "failed",
+          "results"
+        ]
+      },
+      "EmailResult": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "sent",
+              "failed",
+              "pending"
+            ]
+          },
+          "provider": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "messageId": {
+            "type": "string"
+          },
+          "error": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "status",
+          "provider",
+          "timestamp"
+        ]
+      },
+      "BulkEmailRequest": {
+        "type": "object",
+        "properties": {
+          "emails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EmailRequest"
+            }
+          },
+          "batchSize": {
+            "type": "number"
+          },
+          "delayBetweenBatches": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "emails"
+        ]
+      },
+      "EmailRequest": {
+        "type": "object",
+        "properties": {
+          "to": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "subject": {
+            "type": "string"
+          },
+          "body": {
+            "type": "string"
+          },
+          "html": {
+            "type": "string"
+          },
+          "from": {
+            "type": "string"
+          },
+          "cc": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "bcc": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "attachments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EmailAttachment"
+            }
+          }
+        },
+        "required": [
+          "to",
+          "subject",
+          "body"
+        ]
+      },
+      "EmailAttachment": {
+        "type": "object",
+        "properties": {
+          "filename": {
+            "type": "string"
+          },
+          "content": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "binary"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "contentType": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "filename",
+          "content",
+          "contentType"
+        ]
+      },
+      "EmailStatus": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "sent",
+              "delivered",
+              "failed",
+              "bounced"
+            ]
+          },
+          "provider": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "deliveredAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "error": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "status",
+          "provider",
+          "timestamp"
+        ]
+      },
+      "Conversation": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "platform": {
+            "type": "string",
+            "enum": [
+              "internal"
+            ]
+          },
+          "status": {
+            "type": "string"
+          },
+          "users": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "description": {
+            "type": "string"
+          },
+          "sourceUrl": {
+            "type": "string"
+          },
+          "fromContactId": {
+            "type": "string"
+          },
+          "fromAccountId": {
+            "type": "string"
+          },
+          "fromOpportunityId": {
+            "type": "string"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ConversationMessage"
+            }
+          },
+          "participants": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "email"
+              ]
+            }
+          },
+          "recipientUserId": {
+            "type": "string"
+          },
+          "senderUserId": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "platform",
+          "status",
+          "users",
+          "messages"
+        ]
+      },
+      "ConversationMessage": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "senderName": {
+            "type": "string"
+          },
+          "senderEmail": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          },
+          "contentHtml": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "senderName",
+          "timestamp",
+          "content"
+        ]
+      }
+    }
+  }
+}
