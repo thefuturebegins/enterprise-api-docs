@@ -71,6 +71,139 @@
           }
         }
       },
+      "/modules": {
+        "type": "group",
+        "title": "Module Guides",
+        "mode": "flat",
+        "children": {
+          "/modules/ai": {
+            "type": "page",
+            "title": "AI",
+            "filepath": "docs/guides/modules/ai.md",
+            "icon": "phosphor/regular/brain"
+          },
+          "/modules/analytics": {
+            "type": "page",
+            "title": "Analytics",
+            "filepath": "docs/guides/modules/analytics.md",
+            "icon": "phosphor/regular/chart-bar"
+          },
+          "/modules/cache": {
+            "type": "page",
+            "title": "Cache",
+            "filepath": "docs/guides/modules/cache.md",
+            "icon": "phosphor/regular/database"
+          },
+          "/modules/communications": {
+            "type": "page",
+            "title": "Communications",
+            "filepath": "docs/guides/modules/communications.md",
+            "icon": "phosphor/regular/chat-circle"
+          },
+          "/modules/customer-success": {
+            "type": "page",
+            "title": "Customer Success",
+            "filepath": "docs/guides/modules/customer-success.md",
+            "icon": "phosphor/regular/star"
+          },
+          "/modules/data": {
+            "type": "page",
+            "title": "Data",
+            "filepath": "docs/guides/modules/data.md",
+            "icon": "phosphor/regular/database"
+          },
+          "/modules/finance": {
+            "type": "page",
+            "title": "Finance",
+            "filepath": "docs/guides/modules/finance.md",
+            "icon": "phosphor/regular/currency-dollar"
+          },
+          "/modules/forms": {
+            "type": "page",
+            "title": "Forms",
+            "filepath": "docs/guides/modules/forms.md",
+            "icon": "phosphor/regular/clipboard-text"
+          },
+          "/modules/identity": {
+            "type": "page",
+            "title": "Identity",
+            "filepath": "docs/guides/modules/identity.md",
+            "icon": "phosphor/regular/user"
+          },
+          "/modules/integrations": {
+            "type": "page",
+            "title": "Integrations",
+            "filepath": "docs/guides/modules/integrations.md",
+            "icon": "phosphor/regular/plugs-connected"
+          },
+          "/modules/inventory": {
+            "type": "page",
+            "title": "Inventory",
+            "filepath": "docs/guides/modules/inventory.md",
+            "icon": "phosphor/regular/package"
+          },
+          "/modules/marketing": {
+            "type": "page",
+            "title": "Marketing",
+            "filepath": "docs/guides/modules/marketing.md",
+            "icon": "phosphor/regular/megaphone"
+          },
+          "/modules/notifications": {
+            "type": "page",
+            "title": "Notifications",
+            "filepath": "docs/guides/modules/notifications.md",
+            "icon": "phosphor/regular/bell"
+          },
+          "/modules/permissions": {
+            "type": "page",
+            "title": "Permissions",
+            "filepath": "docs/guides/modules/permissions.md",
+            "icon": "phosphor/regular/lock"
+          },
+          "/modules/pipelines": {
+            "type": "page",
+            "title": "Pipelines",
+            "filepath": "docs/guides/modules/pipelines.md",
+            "icon": "phosphor/regular/flow-arrow"
+          },
+          "/modules/sales": {
+            "type": "page",
+            "title": "Sales",
+            "filepath": "docs/guides/modules/sales.md",
+            "icon": "phosphor/regular/handshake"
+          },
+          "/modules/settings": {
+            "type": "page",
+            "title": "Settings",
+            "filepath": "docs/guides/modules/settings.md",
+            "icon": "phosphor/regular/sliders"
+          },
+          "/modules/support": {
+            "type": "page",
+            "title": "Support",
+            "filepath": "docs/guides/modules/support.md",
+            "icon": "phosphor/regular/lifebuoy"
+          },
+          "/modules/system": {
+            "type": "page",
+            "title": "System",
+            "filepath": "docs/guides/modules/system.md",
+            "icon": "phosphor/regular/gear"
+          },
+          "/modules/ui": {
+            "type": "page",
+            "title": "UI",
+            "filepath": "docs/guides/modules/ui.md",
+            "icon": "phosphor/regular/desktop"
+          },
+          "/modules/workflow": {
+            "type": "page",
+            "title": "Workflow",
+            "filepath": "docs/guides/modules/workflow.md",
+            "icon": "phosphor/regular/git-branch"
+          }
+        }
+      },
       "/api": {
         "type": "group",
         "title": "API Reference",
