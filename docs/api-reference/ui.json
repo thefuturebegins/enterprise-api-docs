@@ -7,79 +7,79 @@
   },
   "tags": [
     {
-      "name": "ui.components"
+      "name": "Ui: Components"
     },
     {
-      "name": "ui.dashboards"
+      "name": "Ui: Dashboards"
     },
     {
-      "name": "ui.screens"
+      "name": "Ui: Screens"
     },
     {
-      "name": "ui.userscreens"
+      "name": "Ui: Userscreens"
     },
     {
-      "name": "ui.workspaces"
+      "name": "Ui: Workspaces"
     },
     {
-      "name": "ui.drafts"
+      "name": "Ui: Drafts"
     },
     {
-      "name": "ui.enterpriseProductAnnouncementFiles"
+      "name": "Ui: Enterprise Product Announcement Files"
     },
     {
-      "name": "ui.enterpriseProductAnnouncementNotes"
+      "name": "Ui: Enterprise Product Announcement Notes"
     },
     {
-      "name": "ui.enterpriseProductAnnouncementTasks"
+      "name": "Ui: Enterprise Product Announcement Tasks"
     },
     {
-      "name": "ui.enterpriseProductAnnouncements"
+      "name": "Ui: Enterprise Product Announcements"
     },
     {
-      "name": "ui.recordRecentViews"
+      "name": "Ui: Record Recent Views"
     },
     {
-      "name": "ui.registeredComponents"
+      "name": "Ui: Registered Components"
     },
     {
-      "name": "ui.screenActions"
+      "name": "Ui: Screen Actions"
     },
     {
-      "name": "ui.screenComponents"
+      "name": "Ui: Screen Components"
     },
     {
-      "name": "ui.screenFiles"
+      "name": "Ui: Screen Files"
     },
     {
-      "name": "ui.screenNotes"
+      "name": "Ui: Screen Notes"
     },
     {
-      "name": "ui.screenStatuses"
+      "name": "Ui: Screen Statuses"
     },
     {
-      "name": "ui.screenTasks"
+      "name": "Ui: Screen Tasks"
     },
     {
-      "name": "ui.settings"
+      "name": "Ui: Settings"
     },
     {
-      "name": "ui.supportTicketFiles"
+      "name": "Ui: Support Ticket Files"
     },
     {
-      "name": "ui.supportTicketNotes"
+      "name": "Ui: Support Ticket Notes"
     },
     {
-      "name": "ui.supportTicketResolutions"
+      "name": "Ui: Support Ticket Resolutions"
     },
     {
-      "name": "ui.supportTicketTasks"
+      "name": "Ui: Support Ticket Tasks"
     },
     {
-      "name": "ui.supportTickets"
+      "name": "Ui: Support Tickets"
     },
     {
-      "name": "ui.userScreens"
+      "name": "Ui: User Screens"
     }
   ],
   "paths": {
@@ -87,7 +87,7 @@
       "get": {
         "operationId": "ui.workspaces.getUserWorkspaces",
         "tags": [
-          "ui.workspaces"
+          "Ui: Workspaces"
         ],
         "summary": "Get workspaces accessible to a user based on role assignments",
         "responses": {
@@ -138,7 +138,7 @@
       "get": {
         "operationId": "ui.workspaces.getUserActiveWorkspace",
         "tags": [
-          "ui.workspaces"
+          "Ui: Workspaces"
         ],
         "summary": "Get user's active workspace (with fallback to role default)",
         "responses": {
@@ -191,7 +191,7 @@
       "put": {
         "operationId": "ui.workspaces.updateUserActiveWorkspace",
         "tags": [
-          "ui.workspaces"
+          "Ui: Workspaces"
         ],
         "summary": "Update user's active workspace",
         "responses": {
@@ -247,7 +247,7 @@
       "get": {
         "operationId": "ui.workspaces.getWorkspaceNavigation",
         "tags": [
-          "ui.workspaces"
+          "Ui: Workspaces"
         ],
         "summary": "Get navigation items for a workspace (hierarchical tree building)",
         "responses": {
@@ -298,7 +298,7 @@
       "post": {
         "operationId": "ui.workspaces.cloneWorkspace",
         "tags": [
-          "ui.workspaces"
+          "Ui: Workspaces"
         ],
         "summary": "Clone workspace with navigation (deep cloning)",
         "responses": {
@@ -356,7 +356,7 @@
       "get": {
         "operationId": "ui.screens.getScreenByUrl",
         "tags": [
-          "ui.screens"
+          "Ui: Screens"
         ],
         "summary": "Get screen by URL with pattern matching",
         "responses": {
@@ -411,7 +411,7 @@
       "get": {
         "operationId": "ui.screens.getScreensByFeature",
         "tags": [
-          "ui.screens"
+          "Ui: Screens"
         ],
         "summary": "Get screens by feature (convenience query)",
         "responses": {
@@ -462,7 +462,7 @@
       "get": {
         "operationId": "ui.screens.getScreensBatch",
         "tags": [
-          "ui.screens"
+          "Ui: Screens"
         ],
         "summary": "Batch: all screens (optionally workspace-scoped) with their components",
         "responses": {
@@ -516,7 +516,7 @@
       "get": {
         "operationId": "ui.screens.getScreenById",
         "tags": [
-          "ui.screens"
+          "Ui: Screens"
         ],
         "summary": "Get screen by ID",
         "responses": {
@@ -569,7 +569,7 @@
       "put": {
         "operationId": "ui.screens.update",
         "tags": [
-          "ui.screens"
+          "Ui: Screens"
         ],
         "summary": "Update",
         "responses": {
@@ -616,7 +616,7 @@
       "delete": {
         "operationId": "ui.screens.delete",
         "tags": [
-          "ui.screens"
+          "Ui: Screens"
         ],
         "summary": "Delete",
         "responses": {
@@ -648,7 +648,7 @@
       "post": {
         "operationId": "ui.screens.cloneScreen",
         "tags": [
-          "ui.screens"
+          "Ui: Screens"
         ],
         "summary": "Clone a screen with all its components (deep cloning)",
         "responses": {
@@ -706,7 +706,7 @@
       "post": {
         "operationId": "ui.screens.saveScreenToAccount",
         "tags": [
-          "ui.screens"
+          "Ui: Screens"
         ],
         "summary": "Save screen and components to Account DB (master/backup state)",
         "responses": {
@@ -765,7 +765,7 @@
       "delete": {
         "operationId": "ui.screens.resetScreenCustomization",
         "tags": [
-          "ui.screens"
+          "Ui: Screens"
         ],
         "summary": "Reset screen customization (deletes user customization, falls back to Account DB)",
         "responses": {
@@ -814,7 +814,7 @@
       "post": {
         "operationId": "ui.screens.generateMigration",
         "tags": [
-          "ui.screens"
+          "Ui: Screens"
         ],
         "summary": "Generate a Flyway migration script by diffing local DB against the local reference DB",
         "responses": {
@@ -865,7 +865,7 @@
       "get": {
         "operationId": "ui.userscreens.getUserScreens",
         "tags": [
-          "ui.userscreens"
+          "Ui: Userscreens"
         ],
         "summary": "Get User Screens",
         "responses": {
@@ -909,7 +909,7 @@
       "post": {
         "operationId": "ui.userscreens.createUserScreen",
         "tags": [
-          "ui.userscreens"
+          "Ui: Userscreens"
         ],
         "summary": "Create User Screen",
         "responses": {
@@ -948,7 +948,7 @@
       "post": {
         "operationId": "ui.userscreens.ensureUserScreen",
         "tags": [
-          "ui.userscreens"
+          "Ui: Userscreens"
         ],
         "summary": "Ensure User Screen",
         "responses": {
@@ -987,7 +987,7 @@
       "delete": {
         "operationId": "ui.userscreens.deleteUserScreen",
         "tags": [
-          "ui.userscreens"
+          "Ui: Userscreens"
         ],
         "summary": "Delete User Screen",
         "responses": {
@@ -1035,7 +1035,7 @@
       "post": {
         "operationId": "ui.userscreens.createPersonalView",
         "tags": [
-          "ui.userscreens"
+          "Ui: Userscreens"
         ],
         "summary": "Create Personal View",
         "responses": {
@@ -1085,7 +1085,7 @@
       "post": {
         "operationId": "ui.components.addComponentToScreen",
         "tags": [
-          "ui.components"
+          "Ui: Components"
         ],
         "summary": "Add component to screen",
         "responses": {
@@ -1143,7 +1143,7 @@
       "put": {
         "operationId": "ui.components.updateComponentLayout",
         "tags": [
-          "ui.components"
+          "Ui: Components"
         ],
         "summary": "Update component layout (position, size, priority updates)",
         "responses": {
@@ -1199,7 +1199,7 @@
       "delete": {
         "operationId": "ui.components.removeComponentFromScreen",
         "tags": [
-          "ui.components"
+          "Ui: Components"
         ],
         "summary": "Remove component from screen",
         "responses": {
@@ -1247,7 +1247,7 @@
       "post": {
         "operationId": "ui.components.saveComponentForEveryone",
         "tags": [
-          "ui.components"
+          "Ui: Components"
         ],
         "summary": "Save a personal component for everyone (promote to shared scope on the base screen)",
         "responses": {
@@ -1306,7 +1306,7 @@
       "post": {
         "operationId": "ui.components.populateScreenComponents",
         "tags": [
-          "ui.components"
+          "Ui: Components"
         ],
         "summary": "Populate screen components",
         "responses": {
@@ -1364,7 +1364,7 @@
       "get": {
         "operationId": "ui.dashboards.getScreenTemplates",
         "tags": [
-          "ui.dashboards"
+          "Ui: Dashboards"
         ],
         "summary": "Get screen templates by type",
         "responses": {
@@ -1415,7 +1415,7 @@
       "get": {
         "operationId": "ui.screens.query",
         "tags": [
-          "ui.screens"
+          "Ui: Screens"
         ],
         "summary": "Query",
         "responses": {
@@ -1455,7 +1455,7 @@
       "post": {
         "operationId": "ui.screens.create",
         "tags": [
-          "ui.screens"
+          "Ui: Screens"
         ],
         "summary": "Create",
         "responses": {
@@ -1494,7 +1494,7 @@
       "get": {
         "operationId": "ui.workspaces.query",
         "tags": [
-          "ui.workspaces"
+          "Ui: Workspaces"
         ],
         "summary": "Query",
         "responses": {
@@ -1534,7 +1534,7 @@
       "post": {
         "operationId": "ui.workspaces.create",
         "tags": [
-          "ui.workspaces"
+          "Ui: Workspaces"
         ],
         "summary": "Create",
         "responses": {
@@ -1573,7 +1573,7 @@
       "get": {
         "operationId": "ui.workspaces.getById",
         "tags": [
-          "ui.workspaces"
+          "Ui: Workspaces"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -1610,7 +1610,7 @@
       "put": {
         "operationId": "ui.workspaces.update",
         "tags": [
-          "ui.workspaces"
+          "Ui: Workspaces"
         ],
         "summary": "Update",
         "responses": {
@@ -1657,7 +1657,7 @@
       "delete": {
         "operationId": "ui.workspaces.delete",
         "tags": [
-          "ui.workspaces"
+          "Ui: Workspaces"
         ],
         "summary": "Delete",
         "responses": {
@@ -1689,7 +1689,7 @@
       "get": {
         "operationId": "ui.registeredComponents.query",
         "tags": [
-          "ui.registeredComponents"
+          "Ui: Registered Components"
         ],
         "summary": "Query",
         "responses": {
@@ -1729,7 +1729,7 @@
       "post": {
         "operationId": "ui.registeredComponents.create",
         "tags": [
-          "ui.registeredComponents"
+          "Ui: Registered Components"
         ],
         "summary": "Create",
         "responses": {
@@ -1768,7 +1768,7 @@
       "get": {
         "operationId": "ui.registeredComponents.getById",
         "tags": [
-          "ui.registeredComponents"
+          "Ui: Registered Components"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -1805,7 +1805,7 @@
       "put": {
         "operationId": "ui.registeredComponents.update",
         "tags": [
-          "ui.registeredComponents"
+          "Ui: Registered Components"
         ],
         "summary": "Update",
         "responses": {
@@ -1852,7 +1852,7 @@
       "delete": {
         "operationId": "ui.registeredComponents.delete",
         "tags": [
-          "ui.registeredComponents"
+          "Ui: Registered Components"
         ],
         "summary": "Delete",
         "responses": {
@@ -1884,7 +1884,7 @@
       "get": {
         "operationId": "ui.screenStatuses.query",
         "tags": [
-          "ui.screenStatuses"
+          "Ui: Screen Statuses"
         ],
         "summary": "Query",
         "responses": {
@@ -1924,7 +1924,7 @@
       "post": {
         "operationId": "ui.screenStatuses.create",
         "tags": [
-          "ui.screenStatuses"
+          "Ui: Screen Statuses"
         ],
         "summary": "Create",
         "responses": {
@@ -1963,7 +1963,7 @@
       "get": {
         "operationId": "ui.screenStatuses.getById",
         "tags": [
-          "ui.screenStatuses"
+          "Ui: Screen Statuses"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2000,7 +2000,7 @@
       "put": {
         "operationId": "ui.screenStatuses.update",
         "tags": [
-          "ui.screenStatuses"
+          "Ui: Screen Statuses"
         ],
         "summary": "Update",
         "responses": {
@@ -2047,7 +2047,7 @@
       "delete": {
         "operationId": "ui.screenStatuses.delete",
         "tags": [
-          "ui.screenStatuses"
+          "Ui: Screen Statuses"
         ],
         "summary": "Delete",
         "responses": {
@@ -2079,7 +2079,7 @@
       "get": {
         "operationId": "ui.supportTickets.query",
         "tags": [
-          "ui.supportTickets"
+          "Ui: Support Tickets"
         ],
         "summary": "Query",
         "responses": {
@@ -2119,7 +2119,7 @@
       "post": {
         "operationId": "ui.supportTickets.create",
         "tags": [
-          "ui.supportTickets"
+          "Ui: Support Tickets"
         ],
         "summary": "Create",
         "responses": {
@@ -2158,7 +2158,7 @@
       "get": {
         "operationId": "ui.supportTickets.getById",
         "tags": [
-          "ui.supportTickets"
+          "Ui: Support Tickets"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2195,7 +2195,7 @@
       "put": {
         "operationId": "ui.supportTickets.update",
         "tags": [
-          "ui.supportTickets"
+          "Ui: Support Tickets"
         ],
         "summary": "Update",
         "responses": {
@@ -2242,7 +2242,7 @@
       "delete": {
         "operationId": "ui.supportTickets.delete",
         "tags": [
-          "ui.supportTickets"
+          "Ui: Support Tickets"
         ],
         "summary": "Delete",
         "responses": {
@@ -2274,7 +2274,7 @@
       "get": {
         "operationId": "ui.screenActions.query",
         "tags": [
-          "ui.screenActions"
+          "Ui: Screen Actions"
         ],
         "summary": "Query",
         "responses": {
@@ -2314,7 +2314,7 @@
       "post": {
         "operationId": "ui.screenActions.create",
         "tags": [
-          "ui.screenActions"
+          "Ui: Screen Actions"
         ],
         "summary": "Create",
         "responses": {
@@ -2353,7 +2353,7 @@
       "get": {
         "operationId": "ui.screenActions.getById",
         "tags": [
-          "ui.screenActions"
+          "Ui: Screen Actions"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2390,7 +2390,7 @@
       "put": {
         "operationId": "ui.screenActions.update",
         "tags": [
-          "ui.screenActions"
+          "Ui: Screen Actions"
         ],
         "summary": "Update",
         "responses": {
@@ -2437,7 +2437,7 @@
       "delete": {
         "operationId": "ui.screenActions.delete",
         "tags": [
-          "ui.screenActions"
+          "Ui: Screen Actions"
         ],
         "summary": "Delete",
         "responses": {
@@ -2469,7 +2469,7 @@
       "get": {
         "operationId": "ui.settings.query",
         "tags": [
-          "ui.settings"
+          "Ui: Settings"
         ],
         "summary": "Query",
         "responses": {
@@ -2509,7 +2509,7 @@
       "post": {
         "operationId": "ui.settings.create",
         "tags": [
-          "ui.settings"
+          "Ui: Settings"
         ],
         "summary": "Create",
         "responses": {
@@ -2548,7 +2548,7 @@
       "get": {
         "operationId": "ui.settings.getById",
         "tags": [
-          "ui.settings"
+          "Ui: Settings"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2585,7 +2585,7 @@
       "put": {
         "operationId": "ui.settings.update",
         "tags": [
-          "ui.settings"
+          "Ui: Settings"
         ],
         "summary": "Update",
         "responses": {
@@ -2632,7 +2632,7 @@
       "delete": {
         "operationId": "ui.settings.delete",
         "tags": [
-          "ui.settings"
+          "Ui: Settings"
         ],
         "summary": "Delete",
         "responses": {
@@ -2664,7 +2664,7 @@
       "get": {
         "operationId": "ui.supportTicketNotes.query",
         "tags": [
-          "ui.supportTicketNotes"
+          "Ui: Support Ticket Notes"
         ],
         "summary": "Query",
         "responses": {
@@ -2704,7 +2704,7 @@
       "post": {
         "operationId": "ui.supportTicketNotes.create",
         "tags": [
-          "ui.supportTicketNotes"
+          "Ui: Support Ticket Notes"
         ],
         "summary": "Create",
         "responses": {
@@ -2743,7 +2743,7 @@
       "get": {
         "operationId": "ui.supportTicketNotes.getById",
         "tags": [
-          "ui.supportTicketNotes"
+          "Ui: Support Ticket Notes"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2780,7 +2780,7 @@
       "put": {
         "operationId": "ui.supportTicketNotes.update",
         "tags": [
-          "ui.supportTicketNotes"
+          "Ui: Support Ticket Notes"
         ],
         "summary": "Update",
         "responses": {
@@ -2827,7 +2827,7 @@
       "delete": {
         "operationId": "ui.supportTicketNotes.delete",
         "tags": [
-          "ui.supportTicketNotes"
+          "Ui: Support Ticket Notes"
         ],
         "summary": "Delete",
         "responses": {
@@ -2859,7 +2859,7 @@
       "get": {
         "operationId": "ui.supportTicketFiles.query",
         "tags": [
-          "ui.supportTicketFiles"
+          "Ui: Support Ticket Files"
         ],
         "summary": "Query",
         "responses": {
@@ -2899,7 +2899,7 @@
       "post": {
         "operationId": "ui.supportTicketFiles.create",
         "tags": [
-          "ui.supportTicketFiles"
+          "Ui: Support Ticket Files"
         ],
         "summary": "Create",
         "responses": {
@@ -2938,7 +2938,7 @@
       "get": {
         "operationId": "ui.supportTicketFiles.getById",
         "tags": [
-          "ui.supportTicketFiles"
+          "Ui: Support Ticket Files"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2975,7 +2975,7 @@
       "put": {
         "operationId": "ui.supportTicketFiles.update",
         "tags": [
-          "ui.supportTicketFiles"
+          "Ui: Support Ticket Files"
         ],
         "summary": "Update",
         "responses": {
@@ -3022,7 +3022,7 @@
       "delete": {
         "operationId": "ui.supportTicketFiles.delete",
         "tags": [
-          "ui.supportTicketFiles"
+          "Ui: Support Ticket Files"
         ],
         "summary": "Delete",
         "responses": {
@@ -3054,7 +3054,7 @@
       "get": {
         "operationId": "ui.supportTicketTasks.query",
         "tags": [
-          "ui.supportTicketTasks"
+          "Ui: Support Ticket Tasks"
         ],
         "summary": "Query",
         "responses": {
@@ -3094,7 +3094,7 @@
       "post": {
         "operationId": "ui.supportTicketTasks.create",
         "tags": [
-          "ui.supportTicketTasks"
+          "Ui: Support Ticket Tasks"
         ],
         "summary": "Create",
         "responses": {
@@ -3133,7 +3133,7 @@
       "get": {
         "operationId": "ui.supportTicketTasks.getById",
         "tags": [
-          "ui.supportTicketTasks"
+          "Ui: Support Ticket Tasks"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -3170,7 +3170,7 @@
       "put": {
         "operationId": "ui.supportTicketTasks.update",
         "tags": [
-          "ui.supportTicketTasks"
+          "Ui: Support Ticket Tasks"
         ],
         "summary": "Update",
         "responses": {
@@ -3217,7 +3217,7 @@
       "delete": {
         "operationId": "ui.supportTicketTasks.delete",
         "tags": [
-          "ui.supportTicketTasks"
+          "Ui: Support Ticket Tasks"
         ],
         "summary": "Delete",
         "responses": {
@@ -3249,7 +3249,7 @@
       "get": {
         "operationId": "ui.recordRecentViews.query",
         "tags": [
-          "ui.recordRecentViews"
+          "Ui: Record Recent Views"
         ],
         "summary": "Query",
         "responses": {
@@ -3289,7 +3289,7 @@
       "post": {
         "operationId": "ui.recordRecentViews.create",
         "tags": [
-          "ui.recordRecentViews"
+          "Ui: Record Recent Views"
         ],
         "summary": "Create",
         "responses": {
@@ -3328,7 +3328,7 @@
       "get": {
         "operationId": "ui.recordRecentViews.getById",
         "tags": [
-          "ui.recordRecentViews"
+          "Ui: Record Recent Views"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -3365,7 +3365,7 @@
       "put": {
         "operationId": "ui.recordRecentViews.update",
         "tags": [
-          "ui.recordRecentViews"
+          "Ui: Record Recent Views"
         ],
         "summary": "Update",
         "responses": {
@@ -3412,7 +3412,7 @@
       "delete": {
         "operationId": "ui.recordRecentViews.delete",
         "tags": [
-          "ui.recordRecentViews"
+          "Ui: Record Recent Views"
         ],
         "summary": "Delete",
         "responses": {
@@ -3444,7 +3444,7 @@
       "get": {
         "operationId": "ui.enterpriseProductAnnouncements.query",
         "tags": [
-          "ui.enterpriseProductAnnouncements"
+          "Ui: Enterprise Product Announcements"
         ],
         "summary": "Query",
         "responses": {
@@ -3484,7 +3484,7 @@
       "post": {
         "operationId": "ui.enterpriseProductAnnouncements.create",
         "tags": [
-          "ui.enterpriseProductAnnouncements"
+          "Ui: Enterprise Product Announcements"
         ],
         "summary": "Create",
         "responses": {
@@ -3523,7 +3523,7 @@
       "get": {
         "operationId": "ui.enterpriseProductAnnouncements.getById",
         "tags": [
-          "ui.enterpriseProductAnnouncements"
+          "Ui: Enterprise Product Announcements"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -3560,7 +3560,7 @@
       "put": {
         "operationId": "ui.enterpriseProductAnnouncements.update",
         "tags": [
-          "ui.enterpriseProductAnnouncements"
+          "Ui: Enterprise Product Announcements"
         ],
         "summary": "Update",
         "responses": {
@@ -3607,7 +3607,7 @@
       "delete": {
         "operationId": "ui.enterpriseProductAnnouncements.delete",
         "tags": [
-          "ui.enterpriseProductAnnouncements"
+          "Ui: Enterprise Product Announcements"
         ],
         "summary": "Delete",
         "responses": {
@@ -3639,7 +3639,7 @@
       "get": {
         "operationId": "ui.drafts.query",
         "tags": [
-          "ui.drafts"
+          "Ui: Drafts"
         ],
         "summary": "Query",
         "responses": {
@@ -3679,7 +3679,7 @@
       "post": {
         "operationId": "ui.drafts.create",
         "tags": [
-          "ui.drafts"
+          "Ui: Drafts"
         ],
         "summary": "Create",
         "responses": {
@@ -3718,7 +3718,7 @@
       "get": {
         "operationId": "ui.drafts.getById",
         "tags": [
-          "ui.drafts"
+          "Ui: Drafts"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -3755,7 +3755,7 @@
       "put": {
         "operationId": "ui.drafts.update",
         "tags": [
-          "ui.drafts"
+          "Ui: Drafts"
         ],
         "summary": "Update",
         "responses": {
@@ -3802,7 +3802,7 @@
       "delete": {
         "operationId": "ui.drafts.delete",
         "tags": [
-          "ui.drafts"
+          "Ui: Drafts"
         ],
         "summary": "Delete",
         "responses": {
@@ -3834,7 +3834,7 @@
       "get": {
         "operationId": "ui.userScreens.query",
         "tags": [
-          "ui.userScreens"
+          "Ui: User Screens"
         ],
         "summary": "Query",
         "responses": {
@@ -3874,7 +3874,7 @@
       "post": {
         "operationId": "ui.userScreens.create",
         "tags": [
-          "ui.userScreens"
+          "Ui: User Screens"
         ],
         "summary": "Create",
         "responses": {
@@ -3913,7 +3913,7 @@
       "get": {
         "operationId": "ui.userScreens.getById",
         "tags": [
-          "ui.userScreens"
+          "Ui: User Screens"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -3950,7 +3950,7 @@
       "put": {
         "operationId": "ui.userScreens.update",
         "tags": [
-          "ui.userScreens"
+          "Ui: User Screens"
         ],
         "summary": "Update",
         "responses": {
@@ -3997,7 +3997,7 @@
       "delete": {
         "operationId": "ui.userScreens.delete",
         "tags": [
-          "ui.userScreens"
+          "Ui: User Screens"
         ],
         "summary": "Delete",
         "responses": {
@@ -4029,7 +4029,7 @@
       "get": {
         "operationId": "ui.supportTicketResolutions.query",
         "tags": [
-          "ui.supportTicketResolutions"
+          "Ui: Support Ticket Resolutions"
         ],
         "summary": "Query",
         "responses": {
@@ -4069,7 +4069,7 @@
       "post": {
         "operationId": "ui.supportTicketResolutions.create",
         "tags": [
-          "ui.supportTicketResolutions"
+          "Ui: Support Ticket Resolutions"
         ],
         "summary": "Create",
         "responses": {
@@ -4108,7 +4108,7 @@
       "get": {
         "operationId": "ui.supportTicketResolutions.getById",
         "tags": [
-          "ui.supportTicketResolutions"
+          "Ui: Support Ticket Resolutions"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -4145,7 +4145,7 @@
       "put": {
         "operationId": "ui.supportTicketResolutions.update",
         "tags": [
-          "ui.supportTicketResolutions"
+          "Ui: Support Ticket Resolutions"
         ],
         "summary": "Update",
         "responses": {
@@ -4192,7 +4192,7 @@
       "delete": {
         "operationId": "ui.supportTicketResolutions.delete",
         "tags": [
-          "ui.supportTicketResolutions"
+          "Ui: Support Ticket Resolutions"
         ],
         "summary": "Delete",
         "responses": {
@@ -4224,7 +4224,7 @@
       "get": {
         "operationId": "ui.screenNotes.query",
         "tags": [
-          "ui.screenNotes"
+          "Ui: Screen Notes"
         ],
         "summary": "Query",
         "responses": {
@@ -4264,7 +4264,7 @@
       "post": {
         "operationId": "ui.screenNotes.create",
         "tags": [
-          "ui.screenNotes"
+          "Ui: Screen Notes"
         ],
         "summary": "Create",
         "responses": {
@@ -4303,7 +4303,7 @@
       "get": {
         "operationId": "ui.screenNotes.getById",
         "tags": [
-          "ui.screenNotes"
+          "Ui: Screen Notes"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -4340,7 +4340,7 @@
       "put": {
         "operationId": "ui.screenNotes.update",
         "tags": [
-          "ui.screenNotes"
+          "Ui: Screen Notes"
         ],
         "summary": "Update",
         "responses": {
@@ -4387,7 +4387,7 @@
       "delete": {
         "operationId": "ui.screenNotes.delete",
         "tags": [
-          "ui.screenNotes"
+          "Ui: Screen Notes"
         ],
         "summary": "Delete",
         "responses": {
@@ -4419,7 +4419,7 @@
       "get": {
         "operationId": "ui.screenFiles.query",
         "tags": [
-          "ui.screenFiles"
+          "Ui: Screen Files"
         ],
         "summary": "Query",
         "responses": {
@@ -4459,7 +4459,7 @@
       "post": {
         "operationId": "ui.screenFiles.create",
         "tags": [
-          "ui.screenFiles"
+          "Ui: Screen Files"
         ],
         "summary": "Create",
         "responses": {
@@ -4498,7 +4498,7 @@
       "get": {
         "operationId": "ui.screenFiles.getById",
         "tags": [
-          "ui.screenFiles"
+          "Ui: Screen Files"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -4535,7 +4535,7 @@
       "put": {
         "operationId": "ui.screenFiles.update",
         "tags": [
-          "ui.screenFiles"
+          "Ui: Screen Files"
         ],
         "summary": "Update",
         "responses": {
@@ -4582,7 +4582,7 @@
       "delete": {
         "operationId": "ui.screenFiles.delete",
         "tags": [
-          "ui.screenFiles"
+          "Ui: Screen Files"
         ],
         "summary": "Delete",
         "responses": {
@@ -4614,7 +4614,7 @@
       "get": {
         "operationId": "ui.screenTasks.query",
         "tags": [
-          "ui.screenTasks"
+          "Ui: Screen Tasks"
         ],
         "summary": "Query",
         "responses": {
@@ -4654,7 +4654,7 @@
       "post": {
         "operationId": "ui.screenTasks.create",
         "tags": [
-          "ui.screenTasks"
+          "Ui: Screen Tasks"
         ],
         "summary": "Create",
         "responses": {
@@ -4693,7 +4693,7 @@
       "get": {
         "operationId": "ui.screenTasks.getById",
         "tags": [
-          "ui.screenTasks"
+          "Ui: Screen Tasks"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -4730,7 +4730,7 @@
       "put": {
         "operationId": "ui.screenTasks.update",
         "tags": [
-          "ui.screenTasks"
+          "Ui: Screen Tasks"
         ],
         "summary": "Update",
         "responses": {
@@ -4777,7 +4777,7 @@
       "delete": {
         "operationId": "ui.screenTasks.delete",
         "tags": [
-          "ui.screenTasks"
+          "Ui: Screen Tasks"
         ],
         "summary": "Delete",
         "responses": {
@@ -4809,7 +4809,7 @@
       "get": {
         "operationId": "ui.enterpriseProductAnnouncementNotes.query",
         "tags": [
-          "ui.enterpriseProductAnnouncementNotes"
+          "Ui: Enterprise Product Announcement Notes"
         ],
         "summary": "Query",
         "responses": {
@@ -4849,7 +4849,7 @@
       "post": {
         "operationId": "ui.enterpriseProductAnnouncementNotes.create",
         "tags": [
-          "ui.enterpriseProductAnnouncementNotes"
+          "Ui: Enterprise Product Announcement Notes"
         ],
         "summary": "Create",
         "responses": {
@@ -4888,7 +4888,7 @@
       "get": {
         "operationId": "ui.enterpriseProductAnnouncementNotes.getById",
         "tags": [
-          "ui.enterpriseProductAnnouncementNotes"
+          "Ui: Enterprise Product Announcement Notes"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -4925,7 +4925,7 @@
       "put": {
         "operationId": "ui.enterpriseProductAnnouncementNotes.update",
         "tags": [
-          "ui.enterpriseProductAnnouncementNotes"
+          "Ui: Enterprise Product Announcement Notes"
         ],
         "summary": "Update",
         "responses": {
@@ -4972,7 +4972,7 @@
       "delete": {
         "operationId": "ui.enterpriseProductAnnouncementNotes.delete",
         "tags": [
-          "ui.enterpriseProductAnnouncementNotes"
+          "Ui: Enterprise Product Announcement Notes"
         ],
         "summary": "Delete",
         "responses": {
@@ -5004,7 +5004,7 @@
       "get": {
         "operationId": "ui.enterpriseProductAnnouncementFiles.query",
         "tags": [
-          "ui.enterpriseProductAnnouncementFiles"
+          "Ui: Enterprise Product Announcement Files"
         ],
         "summary": "Query",
         "responses": {
@@ -5044,7 +5044,7 @@
       "post": {
         "operationId": "ui.enterpriseProductAnnouncementFiles.create",
         "tags": [
-          "ui.enterpriseProductAnnouncementFiles"
+          "Ui: Enterprise Product Announcement Files"
         ],
         "summary": "Create",
         "responses": {
@@ -5083,7 +5083,7 @@
       "get": {
         "operationId": "ui.enterpriseProductAnnouncementFiles.getById",
         "tags": [
-          "ui.enterpriseProductAnnouncementFiles"
+          "Ui: Enterprise Product Announcement Files"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -5120,7 +5120,7 @@
       "put": {
         "operationId": "ui.enterpriseProductAnnouncementFiles.update",
         "tags": [
-          "ui.enterpriseProductAnnouncementFiles"
+          "Ui: Enterprise Product Announcement Files"
         ],
         "summary": "Update",
         "responses": {
@@ -5167,7 +5167,7 @@
       "delete": {
         "operationId": "ui.enterpriseProductAnnouncementFiles.delete",
         "tags": [
-          "ui.enterpriseProductAnnouncementFiles"
+          "Ui: Enterprise Product Announcement Files"
         ],
         "summary": "Delete",
         "responses": {
@@ -5199,7 +5199,7 @@
       "get": {
         "operationId": "ui.enterpriseProductAnnouncementTasks.query",
         "tags": [
-          "ui.enterpriseProductAnnouncementTasks"
+          "Ui: Enterprise Product Announcement Tasks"
         ],
         "summary": "Query",
         "responses": {
@@ -5239,7 +5239,7 @@
       "post": {
         "operationId": "ui.enterpriseProductAnnouncementTasks.create",
         "tags": [
-          "ui.enterpriseProductAnnouncementTasks"
+          "Ui: Enterprise Product Announcement Tasks"
         ],
         "summary": "Create",
         "responses": {
@@ -5278,7 +5278,7 @@
       "get": {
         "operationId": "ui.enterpriseProductAnnouncementTasks.getById",
         "tags": [
-          "ui.enterpriseProductAnnouncementTasks"
+          "Ui: Enterprise Product Announcement Tasks"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -5315,7 +5315,7 @@
       "put": {
         "operationId": "ui.enterpriseProductAnnouncementTasks.update",
         "tags": [
-          "ui.enterpriseProductAnnouncementTasks"
+          "Ui: Enterprise Product Announcement Tasks"
         ],
         "summary": "Update",
         "responses": {
@@ -5362,7 +5362,7 @@
       "delete": {
         "operationId": "ui.enterpriseProductAnnouncementTasks.delete",
         "tags": [
-          "ui.enterpriseProductAnnouncementTasks"
+          "Ui: Enterprise Product Announcement Tasks"
         ],
         "summary": "Delete",
         "responses": {
@@ -5394,7 +5394,7 @@
       "get": {
         "operationId": "ui.screenComponents.query",
         "tags": [
-          "ui.screenComponents"
+          "Ui: Screen Components"
         ],
         "summary": "Query",
         "responses": {
@@ -5434,7 +5434,7 @@
       "post": {
         "operationId": "ui.screenComponents.create",
         "tags": [
-          "ui.screenComponents"
+          "Ui: Screen Components"
         ],
         "summary": "Create",
         "responses": {
@@ -5473,7 +5473,7 @@
       "get": {
         "operationId": "ui.screenComponents.getById",
         "tags": [
-          "ui.screenComponents"
+          "Ui: Screen Components"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -5510,7 +5510,7 @@
       "put": {
         "operationId": "ui.screenComponents.update",
         "tags": [
-          "ui.screenComponents"
+          "Ui: Screen Components"
         ],
         "summary": "Update",
         "responses": {
@@ -5557,7 +5557,7 @@
       "delete": {
         "operationId": "ui.screenComponents.delete",
         "tags": [
-          "ui.screenComponents"
+          "Ui: Screen Components"
         ],
         "summary": "Delete",
         "responses": {

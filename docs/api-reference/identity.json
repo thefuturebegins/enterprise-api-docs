@@ -7,37 +7,37 @@
   },
   "tags": [
     {
-      "name": "identity.authentication"
+      "name": "Identity: Authentication"
     },
     {
-      "name": "identity.oauthhandlers"
+      "name": "Identity: Oauthhandlers"
     },
     {
-      "name": "identity.usermanagement"
+      "name": "Identity: Usermanagement"
     },
     {
-      "name": "identity.contractors"
+      "name": "Identity: Contractors"
     },
     {
-      "name": "identity.departmentUsers"
+      "name": "Identity: Department Users"
     },
     {
-      "name": "identity.departments"
+      "name": "Identity: Departments"
     },
     {
-      "name": "identity.employees"
+      "name": "Identity: Employees"
     },
     {
-      "name": "identity.roles"
+      "name": "Identity: Roles"
     },
     {
-      "name": "identity.teamUsers"
+      "name": "Identity: Team Users"
     },
     {
-      "name": "identity.teams"
+      "name": "Identity: Teams"
     },
     {
-      "name": "identity.users"
+      "name": "Identity: Users"
     }
   ],
   "paths": {
@@ -45,7 +45,7 @@
       "post": {
         "operationId": "identity.usermanagement.uploadUserAvatar",
         "tags": [
-          "identity.usermanagement"
+          "Identity: Usermanagement"
         ],
         "summary": "Upload or update user avatar",
         "responses": {
@@ -101,7 +101,7 @@
       "delete": {
         "operationId": "identity.usermanagement.deleteUserAvatar",
         "tags": [
-          "identity.usermanagement"
+          "Identity: Usermanagement"
         ],
         "summary": "Delete user avatar and clean up files",
         "responses": {
@@ -149,7 +149,7 @@
       "post": {
         "operationId": "identity.authentication.register",
         "tags": [
-          "identity.authentication"
+          "Identity: Authentication"
         ],
         "summary": "Register",
         "responses": {
@@ -207,7 +207,7 @@
       "post": {
         "operationId": "identity.authentication.login",
         "tags": [
-          "identity.authentication"
+          "Identity: Authentication"
         ],
         "summary": "Login",
         "responses": {
@@ -261,7 +261,7 @@
       "post": {
         "operationId": "identity.authentication.logout",
         "tags": [
-          "identity.authentication"
+          "Identity: Authentication"
         ],
         "summary": "Logout",
         "responses": {
@@ -302,7 +302,7 @@
       "get": {
         "operationId": "identity.authentication.verifyEmail",
         "tags": [
-          "identity.authentication"
+          "Identity: Authentication"
         ],
         "summary": "Verify Email",
         "responses": {
@@ -350,7 +350,7 @@
       "post": {
         "operationId": "identity.authentication.resendVerificationEmail",
         "tags": [
-          "identity.authentication"
+          "Identity: Authentication"
         ],
         "summary": "Resend Verification Email",
         "responses": {
@@ -398,7 +398,7 @@
       "post": {
         "operationId": "identity.authentication.requestPasswordReset",
         "tags": [
-          "identity.authentication"
+          "Identity: Authentication"
         ],
         "summary": "Request Password Reset",
         "responses": {
@@ -446,7 +446,7 @@
       "post": {
         "operationId": "identity.authentication.resetPassword",
         "tags": [
-          "identity.authentication"
+          "Identity: Authentication"
         ],
         "summary": "Reset Password",
         "responses": {
@@ -504,7 +504,7 @@
       "get": {
         "operationId": "identity.authentication.verifyJWT",
         "tags": [
-          "identity.authentication"
+          "Identity: Authentication"
         ],
         "summary": "Verify JWT",
         "responses": {
@@ -544,7 +544,7 @@
       "post": {
         "operationId": "identity.authentication.discoverAccounts",
         "tags": [
-          "identity.authentication"
+          "Identity: Authentication"
         ],
         "summary": "Discover Accounts",
         "responses": {
@@ -585,7 +585,7 @@
       "get": {
         "operationId": "identity.authentication.getCurrentUser",
         "tags": [
-          "identity.authentication"
+          "Identity: Authentication"
         ],
         "summary": "Get Current User",
         "responses": {
@@ -625,7 +625,7 @@
       "post": {
         "operationId": "identity.authentication.exchangeBrokerOAuth",
         "tags": [
-          "identity.authentication"
+          "Identity: Authentication"
         ],
         "summary": "Exchange Broker OAuth",
         "responses": {
@@ -672,7 +672,7 @@
       "post": {
         "operationId": "identity.authentication.refreshSession",
         "tags": [
-          "identity.authentication"
+          "Identity: Authentication"
         ],
         "summary": "Refresh Session",
         "responses": {
@@ -710,7 +710,7 @@
       "post": {
         "operationId": "identity.authentication.completeOAuth",
         "tags": [
-          "identity.authentication"
+          "Identity: Authentication"
         ],
         "summary": "Complete OAuth",
         "responses": {
@@ -748,7 +748,7 @@
       "post": {
         "operationId": "identity.authentication.revokeSessions",
         "tags": [
-          "identity.authentication"
+          "Identity: Authentication"
         ],
         "summary": "Revoke Sessions",
         "responses": {
@@ -789,7 +789,7 @@
       "get": {
         "operationId": "identity.authentication.listSessions",
         "tags": [
-          "identity.authentication"
+          "Identity: Authentication"
         ],
         "summary": "List Sessions",
         "responses": {
@@ -829,7 +829,7 @@
       "get": {
         "operationId": "identity.oauthhandlers.googleAuthHandler",
         "tags": [
-          "identity.oauthhandlers"
+          "Identity: Oauthhandlers"
         ],
         "summary": "Google Auth Handler",
         "responses": {
@@ -851,7 +851,7 @@
       "get": {
         "operationId": "identity.oauthhandlers.googleCallbackHandler",
         "tags": [
-          "identity.oauthhandlers"
+          "Identity: Oauthhandlers"
         ],
         "summary": "Google Callback Handler",
         "responses": {
@@ -873,7 +873,7 @@
       "get": {
         "operationId": "identity.oauthhandlers.facebookAuthHandler",
         "tags": [
-          "identity.oauthhandlers"
+          "Identity: Oauthhandlers"
         ],
         "summary": "Facebook Auth Handler",
         "responses": {
@@ -895,7 +895,7 @@
       "get": {
         "operationId": "identity.oauthhandlers.facebookCallbackHandler",
         "tags": [
-          "identity.oauthhandlers"
+          "Identity: Oauthhandlers"
         ],
         "summary": "Facebook Callback Handler",
         "responses": {
@@ -917,7 +917,7 @@
       "get": {
         "operationId": "identity.oauthhandlers.twitterAuthHandler",
         "tags": [
-          "identity.oauthhandlers"
+          "Identity: Oauthhandlers"
         ],
         "summary": "Twitter Auth Handler",
         "responses": {
@@ -939,7 +939,7 @@
       "get": {
         "operationId": "identity.oauthhandlers.twitterCallbackHandler",
         "tags": [
-          "identity.oauthhandlers"
+          "Identity: Oauthhandlers"
         ],
         "summary": "Twitter Callback Handler",
         "responses": {
@@ -961,7 +961,7 @@
       "get": {
         "operationId": "identity.oauthhandlers.appleAuthHandler",
         "tags": [
-          "identity.oauthhandlers"
+          "Identity: Oauthhandlers"
         ],
         "summary": "Apple Auth Handler",
         "responses": {
@@ -983,7 +983,7 @@
       "post": {
         "operationId": "identity.oauthhandlers.appleOAuthPostHandler",
         "tags": [
-          "identity.oauthhandlers"
+          "Identity: Oauthhandlers"
         ],
         "summary": "Apple sends the OAuth response as POST (form-urlencoded) to the redirect URI",
         "responses": {
@@ -1004,7 +1004,7 @@
       "get": {
         "operationId": "identity.oauthhandlers.appleCallbackHandler",
         "tags": [
-          "identity.oauthhandlers"
+          "Identity: Oauthhandlers"
         ],
         "summary": "Apple Callback Handler",
         "responses": {
@@ -1026,7 +1026,7 @@
       "get": {
         "operationId": "identity.oauthhandlers.microsoftAuthHandler",
         "tags": [
-          "identity.oauthhandlers"
+          "Identity: Oauthhandlers"
         ],
         "summary": "Microsoft Auth Handler",
         "responses": {
@@ -1048,7 +1048,7 @@
       "get": {
         "operationId": "identity.oauthhandlers.microsoftCallbackHandler",
         "tags": [
-          "identity.oauthhandlers"
+          "Identity: Oauthhandlers"
         ],
         "summary": "Microsoft Callback Handler",
         "responses": {
@@ -1070,7 +1070,7 @@
       "get": {
         "operationId": "identity.users.query",
         "tags": [
-          "identity.users"
+          "Identity: Users"
         ],
         "summary": "Query",
         "responses": {
@@ -1110,7 +1110,7 @@
       "post": {
         "operationId": "identity.users.create",
         "tags": [
-          "identity.users"
+          "Identity: Users"
         ],
         "summary": "Create",
         "responses": {
@@ -1149,7 +1149,7 @@
       "get": {
         "operationId": "identity.users.getById",
         "tags": [
-          "identity.users"
+          "Identity: Users"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -1186,7 +1186,7 @@
       "put": {
         "operationId": "identity.users.update",
         "tags": [
-          "identity.users"
+          "Identity: Users"
         ],
         "summary": "Update",
         "responses": {
@@ -1233,7 +1233,7 @@
       "delete": {
         "operationId": "identity.users.delete",
         "tags": [
-          "identity.users"
+          "Identity: Users"
         ],
         "summary": "Delete",
         "responses": {
@@ -1265,7 +1265,7 @@
       "get": {
         "operationId": "identity.employees.query",
         "tags": [
-          "identity.employees"
+          "Identity: Employees"
         ],
         "summary": "Query",
         "responses": {
@@ -1305,7 +1305,7 @@
       "post": {
         "operationId": "identity.employees.create",
         "tags": [
-          "identity.employees"
+          "Identity: Employees"
         ],
         "summary": "Create",
         "responses": {
@@ -1344,7 +1344,7 @@
       "get": {
         "operationId": "identity.employees.getById",
         "tags": [
-          "identity.employees"
+          "Identity: Employees"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -1381,7 +1381,7 @@
       "put": {
         "operationId": "identity.employees.update",
         "tags": [
-          "identity.employees"
+          "Identity: Employees"
         ],
         "summary": "Update",
         "responses": {
@@ -1428,7 +1428,7 @@
       "delete": {
         "operationId": "identity.employees.delete",
         "tags": [
-          "identity.employees"
+          "Identity: Employees"
         ],
         "summary": "Delete",
         "responses": {
@@ -1460,7 +1460,7 @@
       "get": {
         "operationId": "identity.contractors.query",
         "tags": [
-          "identity.contractors"
+          "Identity: Contractors"
         ],
         "summary": "Query",
         "responses": {
@@ -1500,7 +1500,7 @@
       "post": {
         "operationId": "identity.contractors.create",
         "tags": [
-          "identity.contractors"
+          "Identity: Contractors"
         ],
         "summary": "Create",
         "responses": {
@@ -1539,7 +1539,7 @@
       "get": {
         "operationId": "identity.contractors.getById",
         "tags": [
-          "identity.contractors"
+          "Identity: Contractors"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -1576,7 +1576,7 @@
       "put": {
         "operationId": "identity.contractors.update",
         "tags": [
-          "identity.contractors"
+          "Identity: Contractors"
         ],
         "summary": "Update",
         "responses": {
@@ -1623,7 +1623,7 @@
       "delete": {
         "operationId": "identity.contractors.delete",
         "tags": [
-          "identity.contractors"
+          "Identity: Contractors"
         ],
         "summary": "Delete",
         "responses": {
@@ -1655,7 +1655,7 @@
       "get": {
         "operationId": "identity.roles.query",
         "tags": [
-          "identity.roles"
+          "Identity: Roles"
         ],
         "summary": "Query",
         "responses": {
@@ -1695,7 +1695,7 @@
       "post": {
         "operationId": "identity.roles.create",
         "tags": [
-          "identity.roles"
+          "Identity: Roles"
         ],
         "summary": "Create",
         "responses": {
@@ -1734,7 +1734,7 @@
       "get": {
         "operationId": "identity.roles.getById",
         "tags": [
-          "identity.roles"
+          "Identity: Roles"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -1771,7 +1771,7 @@
       "put": {
         "operationId": "identity.roles.update",
         "tags": [
-          "identity.roles"
+          "Identity: Roles"
         ],
         "summary": "Update",
         "responses": {
@@ -1818,7 +1818,7 @@
       "delete": {
         "operationId": "identity.roles.delete",
         "tags": [
-          "identity.roles"
+          "Identity: Roles"
         ],
         "summary": "Delete",
         "responses": {
@@ -1850,7 +1850,7 @@
       "get": {
         "operationId": "identity.departments.query",
         "tags": [
-          "identity.departments"
+          "Identity: Departments"
         ],
         "summary": "Query",
         "responses": {
@@ -1890,7 +1890,7 @@
       "post": {
         "operationId": "identity.departments.create",
         "tags": [
-          "identity.departments"
+          "Identity: Departments"
         ],
         "summary": "Create",
         "responses": {
@@ -1929,7 +1929,7 @@
       "get": {
         "operationId": "identity.departments.getById",
         "tags": [
-          "identity.departments"
+          "Identity: Departments"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -1966,7 +1966,7 @@
       "put": {
         "operationId": "identity.departments.update",
         "tags": [
-          "identity.departments"
+          "Identity: Departments"
         ],
         "summary": "Update",
         "responses": {
@@ -2013,7 +2013,7 @@
       "delete": {
         "operationId": "identity.departments.delete",
         "tags": [
-          "identity.departments"
+          "Identity: Departments"
         ],
         "summary": "Delete",
         "responses": {
@@ -2045,7 +2045,7 @@
       "get": {
         "operationId": "identity.teams.query",
         "tags": [
-          "identity.teams"
+          "Identity: Teams"
         ],
         "summary": "Query",
         "responses": {
@@ -2085,7 +2085,7 @@
       "post": {
         "operationId": "identity.teams.create",
         "tags": [
-          "identity.teams"
+          "Identity: Teams"
         ],
         "summary": "Create",
         "responses": {
@@ -2124,7 +2124,7 @@
       "get": {
         "operationId": "identity.teams.getById",
         "tags": [
-          "identity.teams"
+          "Identity: Teams"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2161,7 +2161,7 @@
       "put": {
         "operationId": "identity.teams.update",
         "tags": [
-          "identity.teams"
+          "Identity: Teams"
         ],
         "summary": "Update",
         "responses": {
@@ -2208,7 +2208,7 @@
       "delete": {
         "operationId": "identity.teams.delete",
         "tags": [
-          "identity.teams"
+          "Identity: Teams"
         ],
         "summary": "Delete",
         "responses": {
@@ -2240,7 +2240,7 @@
       "get": {
         "operationId": "identity.teamUsers.query",
         "tags": [
-          "identity.teamUsers"
+          "Identity: Team Users"
         ],
         "summary": "Query",
         "responses": {
@@ -2280,7 +2280,7 @@
       "post": {
         "operationId": "identity.teamUsers.create",
         "tags": [
-          "identity.teamUsers"
+          "Identity: Team Users"
         ],
         "summary": "Create",
         "responses": {
@@ -2319,7 +2319,7 @@
       "get": {
         "operationId": "identity.teamUsers.getById",
         "tags": [
-          "identity.teamUsers"
+          "Identity: Team Users"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2356,7 +2356,7 @@
       "put": {
         "operationId": "identity.teamUsers.update",
         "tags": [
-          "identity.teamUsers"
+          "Identity: Team Users"
         ],
         "summary": "Update",
         "responses": {
@@ -2403,7 +2403,7 @@
       "delete": {
         "operationId": "identity.teamUsers.delete",
         "tags": [
-          "identity.teamUsers"
+          "Identity: Team Users"
         ],
         "summary": "Delete",
         "responses": {
@@ -2435,7 +2435,7 @@
       "get": {
         "operationId": "identity.departmentUsers.query",
         "tags": [
-          "identity.departmentUsers"
+          "Identity: Department Users"
         ],
         "summary": "Query",
         "responses": {
@@ -2475,7 +2475,7 @@
       "post": {
         "operationId": "identity.departmentUsers.create",
         "tags": [
-          "identity.departmentUsers"
+          "Identity: Department Users"
         ],
         "summary": "Create",
         "responses": {
@@ -2514,7 +2514,7 @@
       "get": {
         "operationId": "identity.departmentUsers.getById",
         "tags": [
-          "identity.departmentUsers"
+          "Identity: Department Users"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2551,7 +2551,7 @@
       "put": {
         "operationId": "identity.departmentUsers.update",
         "tags": [
-          "identity.departmentUsers"
+          "Identity: Department Users"
         ],
         "summary": "Update",
         "responses": {
@@ -2598,7 +2598,7 @@
       "delete": {
         "operationId": "identity.departmentUsers.delete",
         "tags": [
-          "identity.departmentUsers"
+          "Identity: Department Users"
         ],
         "summary": "Delete",
         "responses": {

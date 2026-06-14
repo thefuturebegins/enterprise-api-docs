@@ -10,7 +10,7 @@
       "get": {
         "operationId": "customerSuccess.renewals.query",
         "tags": [
-          "customerSuccess.renewals"
+          "Customer Success: Renewals"
         ],
         "summary": "Query",
         "responses": {
@@ -50,7 +50,7 @@
       "post": {
         "operationId": "customerSuccess.renewals.create",
         "tags": [
-          "customerSuccess.renewals"
+          "Customer Success: Renewals"
         ],
         "summary": "Create",
         "responses": {
@@ -89,7 +89,7 @@
       "get": {
         "operationId": "customerSuccess.renewals.getById",
         "tags": [
-          "customerSuccess.renewals"
+          "Customer Success: Renewals"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -126,7 +126,7 @@
       "put": {
         "operationId": "customerSuccess.renewals.update",
         "tags": [
-          "customerSuccess.renewals"
+          "Customer Success: Renewals"
         ],
         "summary": "Update",
         "responses": {
@@ -173,7 +173,7 @@
       "delete": {
         "operationId": "customerSuccess.renewals.delete",
         "tags": [
-          "customerSuccess.renewals"
+          "Customer Success: Renewals"
         ],
         "summary": "Delete",
         "responses": {
@@ -205,7 +205,7 @@
       "get": {
         "operationId": "customerSuccess.renewalNotes.query",
         "tags": [
-          "customerSuccess.renewalNotes"
+          "Customer Success: Renewal Notes"
         ],
         "summary": "Query",
         "responses": {
@@ -245,7 +245,7 @@
       "post": {
         "operationId": "customerSuccess.renewalNotes.create",
         "tags": [
-          "customerSuccess.renewalNotes"
+          "Customer Success: Renewal Notes"
         ],
         "summary": "Create",
         "responses": {
@@ -284,7 +284,7 @@
       "get": {
         "operationId": "customerSuccess.renewalNotes.getById",
         "tags": [
-          "customerSuccess.renewalNotes"
+          "Customer Success: Renewal Notes"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -321,7 +321,7 @@
       "put": {
         "operationId": "customerSuccess.renewalNotes.update",
         "tags": [
-          "customerSuccess.renewalNotes"
+          "Customer Success: Renewal Notes"
         ],
         "summary": "Update",
         "responses": {
@@ -368,7 +368,7 @@
       "delete": {
         "operationId": "customerSuccess.renewalNotes.delete",
         "tags": [
-          "customerSuccess.renewalNotes"
+          "Customer Success: Renewal Notes"
         ],
         "summary": "Delete",
         "responses": {
@@ -400,7 +400,7 @@
       "get": {
         "operationId": "customerSuccess.renewalFiles.query",
         "tags": [
-          "customerSuccess.renewalFiles"
+          "Customer Success: Renewal Files"
         ],
         "summary": "Query",
         "responses": {
@@ -440,7 +440,7 @@
       "post": {
         "operationId": "customerSuccess.renewalFiles.create",
         "tags": [
-          "customerSuccess.renewalFiles"
+          "Customer Success: Renewal Files"
         ],
         "summary": "Create",
         "responses": {
@@ -479,7 +479,7 @@
       "get": {
         "operationId": "customerSuccess.renewalFiles.getById",
         "tags": [
-          "customerSuccess.renewalFiles"
+          "Customer Success: Renewal Files"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -516,7 +516,7 @@
       "put": {
         "operationId": "customerSuccess.renewalFiles.update",
         "tags": [
-          "customerSuccess.renewalFiles"
+          "Customer Success: Renewal Files"
         ],
         "summary": "Update",
         "responses": {
@@ -563,7 +563,7 @@
       "delete": {
         "operationId": "customerSuccess.renewalFiles.delete",
         "tags": [
-          "customerSuccess.renewalFiles"
+          "Customer Success: Renewal Files"
         ],
         "summary": "Delete",
         "responses": {
@@ -595,7 +595,7 @@
       "get": {
         "operationId": "customerSuccess.renewalTasks.query",
         "tags": [
-          "customerSuccess.renewalTasks"
+          "Customer Success: Renewal Tasks"
         ],
         "summary": "Query",
         "responses": {
@@ -635,7 +635,7 @@
       "post": {
         "operationId": "customerSuccess.renewalTasks.create",
         "tags": [
-          "customerSuccess.renewalTasks"
+          "Customer Success: Renewal Tasks"
         ],
         "summary": "Create",
         "responses": {
@@ -674,7 +674,7 @@
       "get": {
         "operationId": "customerSuccess.renewalTasks.getById",
         "tags": [
-          "customerSuccess.renewalTasks"
+          "Customer Success: Renewal Tasks"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -711,7 +711,7 @@
       "put": {
         "operationId": "customerSuccess.renewalTasks.update",
         "tags": [
-          "customerSuccess.renewalTasks"
+          "Customer Success: Renewal Tasks"
         ],
         "summary": "Update",
         "responses": {
@@ -758,7 +758,7 @@
       "delete": {
         "operationId": "customerSuccess.renewalTasks.delete",
         "tags": [
-          "customerSuccess.renewalTasks"
+          "Customer Success: Renewal Tasks"
         ],
         "summary": "Delete",
         "responses": {

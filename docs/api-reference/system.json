@@ -7,22 +7,22 @@
   },
   "tags": [
     {
-      "name": "system.multitenantdatabase"
+      "name": "System: Multitenantdatabase"
     },
     {
-      "name": "system.settings"
+      "name": "System: Settings"
     },
     {
-      "name": "system.tenantresolution"
+      "name": "System: Tenantresolution"
     },
     {
-      "name": "system.jobHistories"
+      "name": "System: Job Histories"
     },
     {
-      "name": "system.jobTypes"
+      "name": "System: Job Types"
     },
     {
-      "name": "system.jobs"
+      "name": "System: Jobs"
     }
   ],
   "paths": {
@@ -30,7 +30,7 @@
       "get": {
         "operationId": "system.tenantresolution.healthCheckHandler",
         "tags": [
-          "system.tenantresolution"
+          "System: Tenantresolution"
         ],
         "summary": "Health check endpoint handler",
         "responses": {
@@ -58,7 +58,7 @@
       "post": {
         "operationId": "system.tenantresolution.clearCacheHandler",
         "tags": [
-          "system.tenantresolution"
+          "System: Tenantresolution"
         ],
         "summary": "Admin endpoint to clear caches",
         "responses": {
@@ -86,7 +86,7 @@
       "get": {
         "operationId": "system.multitenantdatabase.getConnectionStatus",
         "tags": [
-          "system.multitenantdatabase"
+          "System: Multitenantdatabase"
         ],
         "summary": "Get connection status for health checks",
         "responses": {
@@ -114,7 +114,7 @@
       "get": {
         "operationId": "system.settings.getUserSettings",
         "tags": [
-          "system.settings"
+          "System: Settings"
         ],
         "summary": "Get User Settings",
         "responses": {
@@ -153,7 +153,7 @@
       "put": {
         "operationId": "system.settings.saveUserSettings",
         "tags": [
-          "system.settings"
+          "System: Settings"
         ],
         "summary": "Save User Settings",
         "responses": {
@@ -194,7 +194,7 @@
       "get": {
         "operationId": "system.settings.getAccountSettings",
         "tags": [
-          "system.settings"
+          "System: Settings"
         ],
         "summary": "Get Account Settings",
         "responses": {
@@ -233,7 +233,7 @@
       "put": {
         "operationId": "system.settings.saveAccountSettings",
         "tags": [
-          "system.settings"
+          "System: Settings"
         ],
         "summary": "Save Account Settings",
         "responses": {
@@ -274,7 +274,7 @@
       "get": {
         "operationId": "system.settings.getScopedSettings",
         "tags": [
-          "system.settings"
+          "System: Settings"
         ],
         "summary": "Get Scoped Settings",
         "responses": {
@@ -313,7 +313,7 @@
       "put": {
         "operationId": "system.settings.saveScopedSettings",
         "tags": [
-          "system.settings"
+          "System: Settings"
         ],
         "summary": "Save Scoped Settings",
         "responses": {
@@ -354,7 +354,7 @@
       "get": {
         "operationId": "system.settings.getUserFieldValue",
         "tags": [
-          "system.settings"
+          "System: Settings"
         ],
         "summary": "Get User Field Value",
         "responses": {
@@ -395,7 +395,7 @@
       "get": {
         "operationId": "system.jobs.query",
         "tags": [
-          "system.jobs"
+          "System: Jobs"
         ],
         "summary": "Query",
         "responses": {
@@ -435,7 +435,7 @@
       "post": {
         "operationId": "system.jobs.create",
         "tags": [
-          "system.jobs"
+          "System: Jobs"
         ],
         "summary": "Create",
         "responses": {
@@ -474,7 +474,7 @@
       "get": {
         "operationId": "system.jobs.getById",
         "tags": [
-          "system.jobs"
+          "System: Jobs"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -511,7 +511,7 @@
       "put": {
         "operationId": "system.jobs.update",
         "tags": [
-          "system.jobs"
+          "System: Jobs"
         ],
         "summary": "Update",
         "responses": {
@@ -558,7 +558,7 @@
       "delete": {
         "operationId": "system.jobs.delete",
         "tags": [
-          "system.jobs"
+          "System: Jobs"
         ],
         "summary": "Delete",
         "responses": {
@@ -590,7 +590,7 @@
       "get": {
         "operationId": "system.jobTypes.query",
         "tags": [
-          "system.jobTypes"
+          "System: Job Types"
         ],
         "summary": "Query",
         "responses": {
@@ -630,7 +630,7 @@
       "post": {
         "operationId": "system.jobTypes.create",
         "tags": [
-          "system.jobTypes"
+          "System: Job Types"
         ],
         "summary": "Create",
         "responses": {
@@ -669,7 +669,7 @@
       "get": {
         "operationId": "system.jobTypes.getById",
         "tags": [
-          "system.jobTypes"
+          "System: Job Types"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -706,7 +706,7 @@
       "put": {
         "operationId": "system.jobTypes.update",
         "tags": [
-          "system.jobTypes"
+          "System: Job Types"
         ],
         "summary": "Update",
         "responses": {
@@ -753,7 +753,7 @@
       "delete": {
         "operationId": "system.jobTypes.delete",
         "tags": [
-          "system.jobTypes"
+          "System: Job Types"
         ],
         "summary": "Delete",
         "responses": {
@@ -785,7 +785,7 @@
       "get": {
         "operationId": "system.jobHistories.query",
         "tags": [
-          "system.jobHistories"
+          "System: Job Histories"
         ],
         "summary": "Query",
         "responses": {
@@ -825,7 +825,7 @@
       "post": {
         "operationId": "system.jobHistories.create",
         "tags": [
-          "system.jobHistories"
+          "System: Job Histories"
         ],
         "summary": "Create",
         "responses": {
@@ -864,7 +864,7 @@
       "get": {
         "operationId": "system.jobHistories.getById",
         "tags": [
-          "system.jobHistories"
+          "System: Job Histories"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -901,7 +901,7 @@
       "put": {
         "operationId": "system.jobHistories.update",
         "tags": [
-          "system.jobHistories"
+          "System: Job Histories"
         ],
         "summary": "Update",
         "responses": {
@@ -948,7 +948,7 @@
       "delete": {
         "operationId": "system.jobHistories.delete",
         "tags": [
-          "system.jobHistories"
+          "System: Job Histories"
         ],
         "summary": "Delete",
         "responses": {

@@ -7,19 +7,19 @@
   },
   "tags": [
     {
-      "name": "analytics.reporting"
+      "name": "Analytics: Reporting"
     },
     {
-      "name": "analytics.componentsAllowedInReportsSelection"
+      "name": "Analytics: Components Allowed In Reports Selection"
     },
     {
-      "name": "analytics.reportCategory"
+      "name": "Analytics: Report Category"
     },
     {
-      "name": "analytics.reportShare"
+      "name": "Analytics: Report Share"
     },
     {
-      "name": "analytics.reports"
+      "name": "Analytics: Reports"
     }
   ],
   "paths": {
@@ -27,7 +27,7 @@
       "get": {
         "operationId": "analytics.reporting.getData",
         "tags": [
-          "analytics.reporting"
+          "Analytics: Reporting"
         ],
         "summary": "Get Data",
         "responses": {
@@ -66,7 +66,7 @@
       "get": {
         "operationId": "analytics.reporting.getAllReports",
         "tags": [
-          "analytics.reporting"
+          "Analytics: Reporting"
         ],
         "summary": "Get All Reports",
         "responses": {
@@ -118,7 +118,7 @@
       "get": {
         "operationId": "analytics.reporting.getReportsByCategory",
         "tags": [
-          "analytics.reporting"
+          "Analytics: Reporting"
         ],
         "summary": "Get Reports By Category",
         "responses": {
@@ -174,7 +174,7 @@
       "get": {
         "operationId": "analytics.reporting.getCategories",
         "tags": [
-          "analytics.reporting"
+          "Analytics: Reporting"
         ],
         "summary": "Get Categories",
         "responses": {
@@ -213,7 +213,7 @@
       "get": {
         "operationId": "analytics.reporting.healthCheck",
         "tags": [
-          "analytics.reporting"
+          "Analytics: Reporting"
         ],
         "summary": "Health Check",
         "responses": {
@@ -242,7 +242,7 @@
       "get": {
         "operationId": "analytics.reports.query",
         "tags": [
-          "analytics.reports"
+          "Analytics: Reports"
         ],
         "summary": "Query",
         "responses": {
@@ -282,7 +282,7 @@
       "post": {
         "operationId": "analytics.reports.create",
         "tags": [
-          "analytics.reports"
+          "Analytics: Reports"
         ],
         "summary": "Create",
         "responses": {
@@ -321,7 +321,7 @@
       "get": {
         "operationId": "analytics.reports.getById",
         "tags": [
-          "analytics.reports"
+          "Analytics: Reports"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -358,7 +358,7 @@
       "put": {
         "operationId": "analytics.reports.update",
         "tags": [
-          "analytics.reports"
+          "Analytics: Reports"
         ],
         "summary": "Update",
         "responses": {
@@ -405,7 +405,7 @@
       "delete": {
         "operationId": "analytics.reports.delete",
         "tags": [
-          "analytics.reports"
+          "Analytics: Reports"
         ],
         "summary": "Delete",
         "responses": {
@@ -437,7 +437,7 @@
       "get": {
         "operationId": "analytics.reportCategory.query",
         "tags": [
-          "analytics.reportCategory"
+          "Analytics: Report Category"
         ],
         "summary": "Query",
         "responses": {
@@ -477,7 +477,7 @@
       "post": {
         "operationId": "analytics.reportCategory.create",
         "tags": [
-          "analytics.reportCategory"
+          "Analytics: Report Category"
         ],
         "summary": "Create",
         "responses": {
@@ -516,7 +516,7 @@
       "get": {
         "operationId": "analytics.reportCategory.getById",
         "tags": [
-          "analytics.reportCategory"
+          "Analytics: Report Category"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -553,7 +553,7 @@
       "put": {
         "operationId": "analytics.reportCategory.update",
         "tags": [
-          "analytics.reportCategory"
+          "Analytics: Report Category"
         ],
         "summary": "Update",
         "responses": {
@@ -600,7 +600,7 @@
       "delete": {
         "operationId": "analytics.reportCategory.delete",
         "tags": [
-          "analytics.reportCategory"
+          "Analytics: Report Category"
         ],
         "summary": "Delete",
         "responses": {
@@ -632,7 +632,7 @@
       "get": {
         "operationId": "analytics.reportShare.query",
         "tags": [
-          "analytics.reportShare"
+          "Analytics: Report Share"
         ],
         "summary": "Query",
         "responses": {
@@ -672,7 +672,7 @@
       "post": {
         "operationId": "analytics.reportShare.create",
         "tags": [
-          "analytics.reportShare"
+          "Analytics: Report Share"
         ],
         "summary": "Create",
         "responses": {
@@ -711,7 +711,7 @@
       "get": {
         "operationId": "analytics.reportShare.getById",
         "tags": [
-          "analytics.reportShare"
+          "Analytics: Report Share"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -748,7 +748,7 @@
       "put": {
         "operationId": "analytics.reportShare.update",
         "tags": [
-          "analytics.reportShare"
+          "Analytics: Report Share"
         ],
         "summary": "Update",
         "responses": {
@@ -795,7 +795,7 @@
       "delete": {
         "operationId": "analytics.reportShare.delete",
         "tags": [
-          "analytics.reportShare"
+          "Analytics: Report Share"
         ],
         "summary": "Delete",
         "responses": {
@@ -827,7 +827,7 @@
       "get": {
         "operationId": "analytics.componentsAllowedInReportsSelection.query",
         "tags": [
-          "analytics.componentsAllowedInReportsSelection"
+          "Analytics: Components Allowed In Reports Selection"
         ],
         "summary": "Query",
         "responses": {
@@ -867,7 +867,7 @@
       "post": {
         "operationId": "analytics.componentsAllowedInReportsSelection.create",
         "tags": [
-          "analytics.componentsAllowedInReportsSelection"
+          "Analytics: Components Allowed In Reports Selection"
         ],
         "summary": "Create",
         "responses": {
@@ -906,7 +906,7 @@
       "get": {
         "operationId": "analytics.componentsAllowedInReportsSelection.getById",
         "tags": [
-          "analytics.componentsAllowedInReportsSelection"
+          "Analytics: Components Allowed In Reports Selection"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -943,7 +943,7 @@
       "put": {
         "operationId": "analytics.componentsAllowedInReportsSelection.update",
         "tags": [
-          "analytics.componentsAllowedInReportsSelection"
+          "Analytics: Components Allowed In Reports Selection"
         ],
         "summary": "Update",
         "responses": {
@@ -990,7 +990,7 @@
       "delete": {
         "operationId": "analytics.componentsAllowedInReportsSelection.delete",
         "tags": [
-          "analytics.componentsAllowedInReportsSelection"
+          "Analytics: Components Allowed In Reports Selection"
         ],
         "summary": "Delete",
         "responses": {

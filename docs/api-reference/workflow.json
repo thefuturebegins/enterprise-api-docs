@@ -7,16 +7,16 @@
   },
   "tags": [
     {
-      "name": "workflow.scheduledevents"
+      "name": "Workflow: Scheduledevents"
     },
     {
-      "name": "workflow.scheduledEvents"
+      "name": "Workflow: Scheduled Events"
     },
     {
-      "name": "workflow.workflowStatusPipelineRecordStates"
+      "name": "Workflow: Workflow Status Pipeline Record States"
     },
     {
-      "name": "workflow.workflowStatusPipelines"
+      "name": "Workflow: Workflow Status Pipelines"
     }
   ],
   "paths": {
@@ -24,7 +24,7 @@
       "post": {
         "operationId": "workflow.scheduledevents.apiScheduleEvent",
         "tags": [
-          "workflow.scheduledevents"
+          "Workflow: Scheduledevents"
         ],
         "summary": "POST /workflow/scheduled-events — schedule a generic event",
         "responses": {
@@ -62,7 +62,7 @@
       "get": {
         "operationId": "workflow.scheduledevents.apiListScheduledEvents",
         "tags": [
-          "workflow.scheduledevents"
+          "Workflow: Scheduledevents"
         ],
         "summary": "GET /workflow/scheduled-events — list filtered events",
         "responses": {
@@ -113,7 +113,7 @@
       "post": {
         "operationId": "workflow.scheduledevents.apiScheduleWorkflow",
         "tags": [
-          "workflow.scheduledevents"
+          "Workflow: Scheduledevents"
         ],
         "summary": "POST /workflow/scheduled-events/workflow — schedule a workflow-on-record",
         "responses": {
@@ -153,7 +153,7 @@
       "post": {
         "operationId": "workflow.scheduledevents.apiCancelScheduledEvent",
         "tags": [
-          "workflow.scheduledevents"
+          "Workflow: Scheduledevents"
         ],
         "summary": "POST /workflow/scheduled-events/cancel — cancel one event",
         "responses": {
@@ -195,7 +195,7 @@
       "post": {
         "operationId": "workflow.scheduledevents.apiDispatchDueEvents",
         "tags": [
-          "workflow.scheduledevents"
+          "Workflow: Scheduledevents"
         ],
         "summary": "POST /workflow/scheduled-events/dispatch — manual tick (ops/tests)",
         "responses": {
@@ -237,7 +237,7 @@
       "get": {
         "operationId": "workflow.workflowStatusPipelines.query",
         "tags": [
-          "workflow.workflowStatusPipelines"
+          "Workflow: Workflow Status Pipelines"
         ],
         "summary": "Query",
         "responses": {
@@ -277,7 +277,7 @@
       "post": {
         "operationId": "workflow.workflowStatusPipelines.create",
         "tags": [
-          "workflow.workflowStatusPipelines"
+          "Workflow: Workflow Status Pipelines"
         ],
         "summary": "Create",
         "responses": {
@@ -316,7 +316,7 @@
       "get": {
         "operationId": "workflow.workflowStatusPipelines.getById",
         "tags": [
-          "workflow.workflowStatusPipelines"
+          "Workflow: Workflow Status Pipelines"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -353,7 +353,7 @@
       "put": {
         "operationId": "workflow.workflowStatusPipelines.update",
         "tags": [
-          "workflow.workflowStatusPipelines"
+          "Workflow: Workflow Status Pipelines"
         ],
         "summary": "Update",
         "responses": {
@@ -400,7 +400,7 @@
       "delete": {
         "operationId": "workflow.workflowStatusPipelines.delete",
         "tags": [
-          "workflow.workflowStatusPipelines"
+          "Workflow: Workflow Status Pipelines"
         ],
         "summary": "Delete",
         "responses": {
@@ -432,7 +432,7 @@
       "get": {
         "operationId": "workflow.workflowStatusPipelineRecordStates.query",
         "tags": [
-          "workflow.workflowStatusPipelineRecordStates"
+          "Workflow: Workflow Status Pipeline Record States"
         ],
         "summary": "Query",
         "responses": {
@@ -472,7 +472,7 @@
       "post": {
         "operationId": "workflow.workflowStatusPipelineRecordStates.create",
         "tags": [
-          "workflow.workflowStatusPipelineRecordStates"
+          "Workflow: Workflow Status Pipeline Record States"
         ],
         "summary": "Create",
         "responses": {
@@ -511,7 +511,7 @@
       "get": {
         "operationId": "workflow.workflowStatusPipelineRecordStates.getById",
         "tags": [
-          "workflow.workflowStatusPipelineRecordStates"
+          "Workflow: Workflow Status Pipeline Record States"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -548,7 +548,7 @@
       "put": {
         "operationId": "workflow.workflowStatusPipelineRecordStates.update",
         "tags": [
-          "workflow.workflowStatusPipelineRecordStates"
+          "Workflow: Workflow Status Pipeline Record States"
         ],
         "summary": "Update",
         "responses": {
@@ -595,7 +595,7 @@
       "delete": {
         "operationId": "workflow.workflowStatusPipelineRecordStates.delete",
         "tags": [
-          "workflow.workflowStatusPipelineRecordStates"
+          "Workflow: Workflow Status Pipeline Record States"
         ],
         "summary": "Delete",
         "responses": {
@@ -627,7 +627,7 @@
       "get": {
         "operationId": "workflow.scheduledEvents.query",
         "tags": [
-          "workflow.scheduledEvents"
+          "Workflow: Scheduled Events"
         ],
         "summary": "Query",
         "responses": {
@@ -667,7 +667,7 @@
       "post": {
         "operationId": "workflow.scheduledEvents.create",
         "tags": [
-          "workflow.scheduledEvents"
+          "Workflow: Scheduled Events"
         ],
         "summary": "Create",
         "responses": {
@@ -706,7 +706,7 @@
       "get": {
         "operationId": "workflow.scheduledEvents.getById",
         "tags": [
-          "workflow.scheduledEvents"
+          "Workflow: Scheduled Events"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -743,7 +743,7 @@
       "put": {
         "operationId": "workflow.scheduledEvents.update",
         "tags": [
-          "workflow.scheduledEvents"
+          "Workflow: Scheduled Events"
         ],
         "summary": "Update",
         "responses": {
@@ -790,7 +790,7 @@
       "delete": {
         "operationId": "workflow.scheduledEvents.delete",
         "tags": [
-          "workflow.scheduledEvents"
+          "Workflow: Scheduled Events"
         ],
         "summary": "Delete",
         "responses": {

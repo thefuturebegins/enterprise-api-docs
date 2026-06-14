@@ -7,46 +7,46 @@
   },
   "tags": [
     {
-      "name": "data.avatar"
+      "name": "Data: Avatar"
     },
     {
-      "name": "data.data"
+      "name": "Data: Data"
     },
     {
-      "name": "data.features"
+      "name": "Data: Features"
     },
     {
-      "name": "data.fieldTypes"
+      "name": "Data: Field Types"
     },
     {
-      "name": "data.icons"
+      "name": "Data: Icons"
     },
     {
-      "name": "data.modelFields"
+      "name": "Data: Model Fields"
     },
     {
-      "name": "data.modelFiles"
+      "name": "Data: Model Files"
     },
     {
-      "name": "data.modelLayouts"
+      "name": "Data: Model Layouts"
     },
     {
-      "name": "data.modelNotes"
+      "name": "Data: Model Notes"
     },
     {
-      "name": "data.modelTasks"
+      "name": "Data: Model Tasks"
     },
     {
-      "name": "data.models"
+      "name": "Data: Models"
     },
     {
-      "name": "data.navigationItems"
+      "name": "Data: Navigation Items"
     },
     {
-      "name": "data.previewimage"
+      "name": "Data: Previewimage"
     },
     {
-      "name": "data.query"
+      "name": "Data: Query"
     }
   ],
   "paths": {
@@ -54,7 +54,7 @@
       "get": {
         "operationId": "data.data.healthCheck",
         "tags": [
-          "data.data"
+          "Data: Data"
         ],
         "summary": "Health Check",
         "responses": {
@@ -83,7 +83,7 @@
       "get": {
         "operationId": "data.models.query",
         "tags": [
-          "data.models"
+          "Data: Models"
         ],
         "summary": "Query",
         "responses": {
@@ -123,7 +123,7 @@
       "post": {
         "operationId": "data.models.create",
         "tags": [
-          "data.models"
+          "Data: Models"
         ],
         "summary": "Create",
         "responses": {
@@ -162,7 +162,7 @@
       "get": {
         "operationId": "data.data.getDataSources",
         "tags": [
-          "data.data"
+          "Data: Data"
         ],
         "summary": "Get Data Sources",
         "responses": {
@@ -192,7 +192,7 @@
       "get": {
         "operationId": "data.data.getRouteInfo",
         "tags": [
-          "data.data"
+          "Data: Data"
         ],
         "summary": "Get Route Info",
         "responses": {
@@ -221,7 +221,7 @@
       "post": {
         "operationId": "data.data.reloadModels",
         "tags": [
-          "data.data"
+          "Data: Data"
         ],
         "summary": "Reload Models",
         "responses": {
@@ -250,7 +250,7 @@
       "post": {
         "operationId": "data.avatar.generate",
         "tags": [
-          "data.avatar"
+          "Data: Avatar"
         ],
         "summary": "Generate",
         "responses": {
@@ -289,7 +289,7 @@
       "post": {
         "operationId": "data.previewimage.generate",
         "tags": [
-          "data.previewimage"
+          "Data: Previewimage"
         ],
         "summary": "Generate",
         "responses": {
@@ -328,7 +328,7 @@
       "post": {
         "operationId": "data.query.queryPaginated",
         "tags": [
-          "data.query"
+          "Data: Query"
         ],
         "summary": "Query Paginated",
         "responses": {
@@ -367,7 +367,7 @@
       "get": {
         "operationId": "data.features.query",
         "tags": [
-          "data.features"
+          "Data: Features"
         ],
         "summary": "Query",
         "responses": {
@@ -407,7 +407,7 @@
       "post": {
         "operationId": "data.features.create",
         "tags": [
-          "data.features"
+          "Data: Features"
         ],
         "summary": "Create",
         "responses": {
@@ -446,7 +446,7 @@
       "get": {
         "operationId": "data.features.getById",
         "tags": [
-          "data.features"
+          "Data: Features"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -483,7 +483,7 @@
       "put": {
         "operationId": "data.features.update",
         "tags": [
-          "data.features"
+          "Data: Features"
         ],
         "summary": "Update",
         "responses": {
@@ -530,7 +530,7 @@
       "delete": {
         "operationId": "data.features.delete",
         "tags": [
-          "data.features"
+          "Data: Features"
         ],
         "summary": "Delete",
         "responses": {
@@ -562,7 +562,7 @@
       "get": {
         "operationId": "data.icons.query",
         "tags": [
-          "data.icons"
+          "Data: Icons"
         ],
         "summary": "Query",
         "responses": {
@@ -602,7 +602,7 @@
       "post": {
         "operationId": "data.icons.create",
         "tags": [
-          "data.icons"
+          "Data: Icons"
         ],
         "summary": "Create",
         "responses": {
@@ -641,7 +641,7 @@
       "get": {
         "operationId": "data.icons.getById",
         "tags": [
-          "data.icons"
+          "Data: Icons"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -678,7 +678,7 @@
       "put": {
         "operationId": "data.icons.update",
         "tags": [
-          "data.icons"
+          "Data: Icons"
         ],
         "summary": "Update",
         "responses": {
@@ -725,7 +725,7 @@
       "delete": {
         "operationId": "data.icons.delete",
         "tags": [
-          "data.icons"
+          "Data: Icons"
         ],
         "summary": "Delete",
         "responses": {
@@ -757,7 +757,7 @@
       "get": {
         "operationId": "data.models.getById",
         "tags": [
-          "data.models"
+          "Data: Models"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -794,7 +794,7 @@
       "put": {
         "operationId": "data.models.update",
         "tags": [
-          "data.models"
+          "Data: Models"
         ],
         "summary": "Update",
         "responses": {
@@ -841,7 +841,7 @@
       "delete": {
         "operationId": "data.models.delete",
         "tags": [
-          "data.models"
+          "Data: Models"
         ],
         "summary": "Delete",
         "responses": {
@@ -873,7 +873,7 @@
       "get": {
         "operationId": "data.navigationItems.query",
         "tags": [
-          "data.navigationItems"
+          "Data: Navigation Items"
         ],
         "summary": "Query",
         "responses": {
@@ -913,7 +913,7 @@
       "post": {
         "operationId": "data.navigationItems.create",
         "tags": [
-          "data.navigationItems"
+          "Data: Navigation Items"
         ],
         "summary": "Create",
         "responses": {
@@ -952,7 +952,7 @@
       "get": {
         "operationId": "data.navigationItems.getById",
         "tags": [
-          "data.navigationItems"
+          "Data: Navigation Items"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -989,7 +989,7 @@
       "put": {
         "operationId": "data.navigationItems.update",
         "tags": [
-          "data.navigationItems"
+          "Data: Navigation Items"
         ],
         "summary": "Update",
         "responses": {
@@ -1036,7 +1036,7 @@
       "delete": {
         "operationId": "data.navigationItems.delete",
         "tags": [
-          "data.navigationItems"
+          "Data: Navigation Items"
         ],
         "summary": "Delete",
         "responses": {
@@ -1068,7 +1068,7 @@
       "get": {
         "operationId": "data.modelFields.query",
         "tags": [
-          "data.modelFields"
+          "Data: Model Fields"
         ],
         "summary": "Query",
         "responses": {
@@ -1108,7 +1108,7 @@
       "post": {
         "operationId": "data.modelFields.create",
         "tags": [
-          "data.modelFields"
+          "Data: Model Fields"
         ],
         "summary": "Create",
         "responses": {
@@ -1147,7 +1147,7 @@
       "get": {
         "operationId": "data.modelFields.getById",
         "tags": [
-          "data.modelFields"
+          "Data: Model Fields"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -1184,7 +1184,7 @@
       "put": {
         "operationId": "data.modelFields.update",
         "tags": [
-          "data.modelFields"
+          "Data: Model Fields"
         ],
         "summary": "Update",
         "responses": {
@@ -1231,7 +1231,7 @@
       "delete": {
         "operationId": "data.modelFields.delete",
         "tags": [
-          "data.modelFields"
+          "Data: Model Fields"
         ],
         "summary": "Delete",
         "responses": {
@@ -1263,7 +1263,7 @@
       "get": {
         "operationId": "data.modelLayouts.query",
         "tags": [
-          "data.modelLayouts"
+          "Data: Model Layouts"
         ],
         "summary": "Query",
         "responses": {
@@ -1303,7 +1303,7 @@
       "post": {
         "operationId": "data.modelLayouts.create",
         "tags": [
-          "data.modelLayouts"
+          "Data: Model Layouts"
         ],
         "summary": "Create",
         "responses": {
@@ -1342,7 +1342,7 @@
       "get": {
         "operationId": "data.modelLayouts.getById",
         "tags": [
-          "data.modelLayouts"
+          "Data: Model Layouts"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -1379,7 +1379,7 @@
       "put": {
         "operationId": "data.modelLayouts.update",
         "tags": [
-          "data.modelLayouts"
+          "Data: Model Layouts"
         ],
         "summary": "Update",
         "responses": {
@@ -1426,7 +1426,7 @@
       "delete": {
         "operationId": "data.modelLayouts.delete",
         "tags": [
-          "data.modelLayouts"
+          "Data: Model Layouts"
         ],
         "summary": "Delete",
         "responses": {
@@ -1458,7 +1458,7 @@
       "get": {
         "operationId": "data.fieldTypes.query",
         "tags": [
-          "data.fieldTypes"
+          "Data: Field Types"
         ],
         "summary": "Query",
         "responses": {
@@ -1498,7 +1498,7 @@
       "post": {
         "operationId": "data.fieldTypes.create",
         "tags": [
-          "data.fieldTypes"
+          "Data: Field Types"
         ],
         "summary": "Create",
         "responses": {
@@ -1537,7 +1537,7 @@
       "get": {
         "operationId": "data.fieldTypes.getById",
         "tags": [
-          "data.fieldTypes"
+          "Data: Field Types"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -1574,7 +1574,7 @@
       "put": {
         "operationId": "data.fieldTypes.update",
         "tags": [
-          "data.fieldTypes"
+          "Data: Field Types"
         ],
         "summary": "Update",
         "responses": {
@@ -1621,7 +1621,7 @@
       "delete": {
         "operationId": "data.fieldTypes.delete",
         "tags": [
-          "data.fieldTypes"
+          "Data: Field Types"
         ],
         "summary": "Delete",
         "responses": {
@@ -1653,7 +1653,7 @@
       "get": {
         "operationId": "data.modelNotes.query",
         "tags": [
-          "data.modelNotes"
+          "Data: Model Notes"
         ],
         "summary": "Query",
         "responses": {
@@ -1693,7 +1693,7 @@
       "post": {
         "operationId": "data.modelNotes.create",
         "tags": [
-          "data.modelNotes"
+          "Data: Model Notes"
         ],
         "summary": "Create",
         "responses": {
@@ -1732,7 +1732,7 @@
       "get": {
         "operationId": "data.modelNotes.getById",
         "tags": [
-          "data.modelNotes"
+          "Data: Model Notes"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -1769,7 +1769,7 @@
       "put": {
         "operationId": "data.modelNotes.update",
         "tags": [
-          "data.modelNotes"
+          "Data: Model Notes"
         ],
         "summary": "Update",
         "responses": {
@@ -1816,7 +1816,7 @@
       "delete": {
         "operationId": "data.modelNotes.delete",
         "tags": [
-          "data.modelNotes"
+          "Data: Model Notes"
         ],
         "summary": "Delete",
         "responses": {
@@ -1848,7 +1848,7 @@
       "get": {
         "operationId": "data.modelFiles.query",
         "tags": [
-          "data.modelFiles"
+          "Data: Model Files"
         ],
         "summary": "Query",
         "responses": {
@@ -1888,7 +1888,7 @@
       "post": {
         "operationId": "data.modelFiles.create",
         "tags": [
-          "data.modelFiles"
+          "Data: Model Files"
         ],
         "summary": "Create",
         "responses": {
@@ -1927,7 +1927,7 @@
       "get": {
         "operationId": "data.modelFiles.getById",
         "tags": [
-          "data.modelFiles"
+          "Data: Model Files"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -1964,7 +1964,7 @@
       "put": {
         "operationId": "data.modelFiles.update",
         "tags": [
-          "data.modelFiles"
+          "Data: Model Files"
         ],
         "summary": "Update",
         "responses": {
@@ -2011,7 +2011,7 @@
       "delete": {
         "operationId": "data.modelFiles.delete",
         "tags": [
-          "data.modelFiles"
+          "Data: Model Files"
         ],
         "summary": "Delete",
         "responses": {
@@ -2043,7 +2043,7 @@
       "get": {
         "operationId": "data.modelTasks.query",
         "tags": [
-          "data.modelTasks"
+          "Data: Model Tasks"
         ],
         "summary": "Query",
         "responses": {
@@ -2083,7 +2083,7 @@
       "post": {
         "operationId": "data.modelTasks.create",
         "tags": [
-          "data.modelTasks"
+          "Data: Model Tasks"
         ],
         "summary": "Create",
         "responses": {
@@ -2122,7 +2122,7 @@
       "get": {
         "operationId": "data.modelTasks.getById",
         "tags": [
-          "data.modelTasks"
+          "Data: Model Tasks"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2159,7 +2159,7 @@
       "put": {
         "operationId": "data.modelTasks.update",
         "tags": [
-          "data.modelTasks"
+          "Data: Model Tasks"
         ],
         "summary": "Update",
         "responses": {
@@ -2206,7 +2206,7 @@
       "delete": {
         "operationId": "data.modelTasks.delete",
         "tags": [
-          "data.modelTasks"
+          "Data: Model Tasks"
         ],
         "summary": "Delete",
         "responses": {
