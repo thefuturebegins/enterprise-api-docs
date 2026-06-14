@@ -3,7 +3,7 @@
   "info": {
     "title": "cache API",
     "version": "1.0.7",
-    "description": "OpenAPI 3.1 document for the `cache` module, generated from FCG InterfaceSpecs."
+    "description": "OpenAPI 3.1 document for the `cache` module, generated from Enterprise module interface specifications."
   },
   "tags": [
     {
@@ -628,7 +628,7 @@
       "ICacheCheckResult": {}
     }
   },
-  "x-fcg-warnings": [
+  "x-warnings": [
     "Unresolved type 'ICacheConfig' → emitted permissive schema {}",
     "Unresolved type 'IContentCacheResult' → emitted permissive schema {}",
     "Unresolved type 'IDataCacheResult' → emitted permissive schema {}",

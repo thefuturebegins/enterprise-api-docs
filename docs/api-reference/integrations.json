@@ -3,7 +3,7 @@
   "info": {
     "title": "integrations API",
     "version": "1.0.9",
-    "description": "OpenAPI 3.1 document for the `integrations` module, generated from FCG InterfaceSpecs."
+    "description": "OpenAPI 3.1 document for the `integrations` module, generated from Enterprise module interface specifications."
   },
   "tags": [
     {
@@ -7625,7 +7625,7 @@
       }
     }
   },
-  "x-fcg-warnings": [
+  "x-warnings": [
     "Unknown field type 'fileUpload' on field 'csvFile', emitting permissive schema {}"
   ]
 }

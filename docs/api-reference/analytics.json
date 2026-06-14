@@ -3,7 +3,7 @@
   "info": {
     "title": "analytics API",
     "version": "1.0.12",
-    "description": "OpenAPI 3.1 document for the `analytics` module, generated from FCG InterfaceSpecs."
+    "description": "OpenAPI 3.1 document for the `analytics` module, generated from Enterprise module interface specifications."
   },
   "tags": [
     {
@@ -1825,7 +1825,7 @@
       }
     }
   },
-  "x-fcg-warnings": [
+  "x-warnings": [
     "Unresolved type 'Report' → emitted permissive schema {}"
   ]
 }

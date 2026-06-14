@@ -3,7 +3,7 @@
   "info": {
     "title": "identity API",
     "version": "1.0.38",
-    "description": "OpenAPI 3.1 document for the `identity` module, generated from FCG InterfaceSpecs."
+    "description": "OpenAPI 3.1 document for the `identity` module, generated from Enterprise module interface specifications."
   },
   "tags": [
     {

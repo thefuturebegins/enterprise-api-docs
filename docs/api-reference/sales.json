@@ -3,7 +3,7 @@
   "info": {
     "title": "sales API",
     "version": "1.0.7",
-    "description": "OpenAPI 3.1 document for the `sales` module, generated from FCG InterfaceSpecs."
+    "description": "OpenAPI 3.1 document for the `sales` module, generated from Enterprise module interface specifications."
   },
   "tags": [
     {
@@ -22724,7 +22724,7 @@
       }
     }
   },
-  "x-fcg-warnings": [
+  "x-warnings": [
     "Duplicate operation for GET /api/sales/exampleMethod (sales.opportunities.exampleMethod vs sales.contacts.exampleMethod); keeping the latter",
     "Duplicate operation for GET /api/sales/exampleMethod (sales.contacts.exampleMethod vs sales.leadmanagement.exampleMethod); keeping the latter",
     "Duplicate operation for GET /api/sales/exampleMethod (sales.leadmanagement.exampleMethod vs sales.leadnurturing.exampleMethod); keeping the latter",

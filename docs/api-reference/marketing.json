@@ -3,7 +3,7 @@
   "info": {
     "title": "marketing API",
     "version": "1.0.12",
-    "description": "OpenAPI 3.1 document for the `marketing` module, generated from FCG InterfaceSpecs."
+    "description": "OpenAPI 3.1 document for the `marketing` module, generated from Enterprise module interface specifications."
   },
   "tags": [
     {
@@ -16307,7 +16307,7 @@
       }
     }
   },
-  "x-fcg-warnings": [
+  "x-warnings": [
     "Unresolved type 'NonEmptyArray' → emitted permissive schema {}",
     "Unresolvable type 'NonNullable<CreateSocialPostInput['variants']>[number]' → emitted permissive schema {}",
     "Unresolvable type 'CampaignSocialPerformance['totals']' → emitted permissive schema {}",

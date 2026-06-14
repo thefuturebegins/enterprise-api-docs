@@ -3,7 +3,7 @@
   "info": {
     "title": "ui API",
     "version": "1.0.8",
-    "description": "OpenAPI 3.1 document for the `ui` module, generated from FCG InterfaceSpecs."
+    "description": "OpenAPI 3.1 document for the `ui` module, generated from Enterprise module interface specifications."
   },
   "tags": [
     {

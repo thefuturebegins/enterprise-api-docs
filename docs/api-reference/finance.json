@@ -3,7 +3,7 @@
   "info": {
     "title": "finance API",
     "version": "1.0.6",
-    "description": "OpenAPI 3.1 document for the `finance` module, generated from FCG InterfaceSpecs."
+    "description": "OpenAPI 3.1 document for the `finance` module, generated from Enterprise module interface specifications."
   },
   "tags": [
     {

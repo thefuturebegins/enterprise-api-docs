@@ -3,7 +3,7 @@
   "info": {
     "title": "Enterprise API",
     "version": "0.0.0",
-    "description": "Aggregate OpenAPI 3.1 document for all enterprise modules, generated from FCG InterfaceSpecs."
+    "description": "Aggregate OpenAPI 3.1 document for all enterprise modules, generated from Enterprise module interface specifications."
   },
   "servers": [
     {
@@ -94887,7 +94887,7 @@
       "cookieAuth": []
     }
   ],
-  "x-fcg-warnings": [
+  "x-warnings": [
     "[data] Unresolved type 'DataHealthResponse' → emitted permissive schema {}",
     "[data] Unresolved type 'CrudModelDef' → emitted permissive schema {}",
     "[data] Unresolved type 'RouteInfoResponse' → emitted permissive schema {}",

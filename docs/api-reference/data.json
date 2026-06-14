@@ -3,7 +3,7 @@
   "info": {
     "title": "data API",
     "version": "1.0.38",
-    "description": "OpenAPI 3.1 document for the `data` module, generated from FCG InterfaceSpecs."
+    "description": "OpenAPI 3.1 document for the `data` module, generated from Enterprise module interface specifications."
   },
   "tags": [
     {
@@ -4889,7 +4889,7 @@
       }
     }
   },
-  "x-fcg-warnings": [
+  "x-warnings": [
     "Unresolved type 'DataHealthResponse' → emitted permissive schema {}",
     "Unresolved type 'CrudModelDef' → emitted permissive schema {}",
     "Unresolved type 'RouteInfoResponse' → emitted permissive schema {}",

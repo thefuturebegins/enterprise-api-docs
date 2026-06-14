@@ -3,7 +3,7 @@
   "info": {
     "title": "system API",
     "version": "1.0.13",
-    "description": "OpenAPI 3.1 document for the `system` module, generated from FCG InterfaceSpecs."
+    "description": "OpenAPI 3.1 document for the `system` module, generated from Enterprise module interface specifications."
   },
   "tags": [
     {
@@ -1583,7 +1583,7 @@
       }
     }
   },
-  "x-fcg-warnings": [
+  "x-warnings": [
     "Unresolvable type '(req: Request, res: Response) => Promise<void>' → emitted permissive schema {}"
   ]
 }

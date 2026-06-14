@@ -3,7 +3,7 @@
   "info": {
     "title": "workflow API",
     "version": "1.0.10",
-    "description": "OpenAPI 3.1 document for the `workflow` module, generated from FCG InterfaceSpecs."
+    "description": "OpenAPI 3.1 document for the `workflow` module, generated from Enterprise module interface specifications."
   },
   "tags": [
     {
@@ -1462,7 +1462,7 @@
       }
     }
   },
-  "x-fcg-warnings": [
+  "x-warnings": [
     "Unresolved type 'IEventSource' → emitted permissive schema {}",
     "Unresolved type 'ScheduledEventStatus' → emitted permissive schema {}"
   ]

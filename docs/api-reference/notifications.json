@@ -3,7 +3,7 @@
   "info": {
     "title": "notifications API",
     "version": "1.0.7",
-    "description": "OpenAPI 3.1 document for the `notifications` module, generated from FCG InterfaceSpecs."
+    "description": "OpenAPI 3.1 document for the `notifications` module, generated from Enterprise module interface specifications."
   },
   "tags": [
     {
@@ -1809,7 +1809,7 @@
       }
     }
   },
-  "x-fcg-warnings": [
+  "x-warnings": [
     "Unresolved type 'NotificationChannel' → emitted permissive schema {}",
     "Unresolved type 'NotificationDeliveryStatus' → emitted permissive schema {}",
     "Unresolved type 'ScheduledNotificationStatus' → emitted permissive schema {}",
