@@ -7,13 +7,13 @@
   },
   "tags": [
     {
-      "name": "Finance: Contractorpaymentprocessing"
+      "name": "Finance: Contractor Payment Processing"
     },
     {
-      "name": "Finance: Customerpaymentprocessing"
+      "name": "Finance: Customer Payment Processing"
     },
     {
-      "name": "Finance: Stripeintegration"
+      "name": "Finance: Stripe Integration"
     },
     {
       "name": "Finance: Customer Payments"
@@ -60,7 +60,7 @@
       "post": {
         "operationId": "finance.contractorpaymentprocessing.processContractorPayment",
         "tags": [
-          "Finance: Contractorpaymentprocessing"
+          "Finance: Contractor Payment Processing"
         ],
         "summary": "Process contractor payment",
         "responses": {
@@ -110,7 +110,7 @@
       "post": {
         "operationId": "finance.contractorpaymentprocessing.syncContractorPaymentMethod",
         "tags": [
-          "Finance: Contractorpaymentprocessing"
+          "Finance: Contractor Payment Processing"
         ],
         "summary": "Sync payment method with payment provider",
         "responses": {
@@ -176,7 +176,7 @@
       "post": {
         "operationId": "finance.contractorpaymentprocessing.updateContractorPaymentStatus",
         "tags": [
-          "Finance: Contractorpaymentprocessing"
+          "Finance: Contractor Payment Processing"
         ],
         "summary": "Update contractor payment status",
         "responses": {
@@ -242,7 +242,7 @@
       "post": {
         "operationId": "finance.stripeintegration.createPaymentIntent",
         "tags": [
-          "Finance: Stripeintegration"
+          "Finance: Stripe Integration"
         ],
         "summary": "Create Stripe payment intent with automatic payment methods",
         "responses": {
@@ -308,7 +308,7 @@
       "post": {
         "operationId": "finance.stripeintegration.createSetupIntent",
         "tags": [
-          "Finance: Stripeintegration"
+          "Finance: Stripe Integration"
         ],
         "summary": "Create Stripe setup intent for saving payment methods",
         "responses": {
@@ -366,7 +366,7 @@
       "post": {
         "operationId": "finance.stripeintegration.getAllPaymentMethods",
         "tags": [
-          "Finance: Stripeintegration"
+          "Finance: Stripe Integration"
         ],
         "summary": "List all payment methods for a Stripe customer",
         "responses": {
@@ -427,7 +427,7 @@
       "get": {
         "operationId": "finance.stripeintegration.getPaymentMethod",
         "tags": [
-          "Finance: Stripeintegration"
+          "Finance: Stripe Integration"
         ],
         "summary": "Retrieve specific payment method from Stripe",
         "responses": {
@@ -475,7 +475,7 @@
       "post": {
         "operationId": "finance.stripeintegration.deletePaymentMethod",
         "tags": [
-          "Finance: Stripeintegration"
+          "Finance: Stripe Integration"
         ],
         "summary": "Detach payment method from Stripe customer",
         "responses": {
@@ -533,7 +533,7 @@
       "get": {
         "operationId": "finance.stripeintegration.getIntegrationCustomerRecord",
         "tags": [
-          "Finance: Stripeintegration"
+          "Finance: Stripe Integration"
         ],
         "summary": "Retrieve Stripe customer record",
         "responses": {
@@ -581,7 +581,7 @@
       "post": {
         "operationId": "finance.stripeintegration.createCheckoutSession",
         "tags": [
-          "Finance: Stripeintegration"
+          "Finance: Stripe Integration"
         ],
         "summary": "Create embedded checkout session with line items",
         "responses": {
@@ -639,7 +639,7 @@
       "post": {
         "operationId": "finance.stripeintegration.createStripeCustomer",
         "tags": [
-          "Finance: Stripeintegration"
+          "Finance: Stripe Integration"
         ],
         "summary": "Create new Stripe customer",
         "responses": {
@@ -687,7 +687,7 @@
       "post": {
         "operationId": "finance.customerpaymentprocessing.processCustomerPayment",
         "tags": [
-          "Finance: Customerpaymentprocessing"
+          "Finance: Customer Payment Processing"
         ],
         "summary": "Process customer payment with Stripe",
         "responses": {
@@ -737,7 +737,7 @@
       "post": {
         "operationId": "finance.customerpaymentprocessing.syncCustomerPaymentMethod",
         "tags": [
-          "Finance: Customerpaymentprocessing"
+          "Finance: Customer Payment Processing"
         ],
         "summary": "Sync payment method with Stripe",
         "responses": {
@@ -803,7 +803,7 @@
       "post": {
         "operationId": "finance.customerpaymentprocessing.updatePaymentStatusFromWebhook",
         "tags": [
-          "Finance: Customerpaymentprocessing"
+          "Finance: Customer Payment Processing"
         ],
         "summary": "Update payment status from Stripe webhook",
         "responses": {
@@ -853,7 +853,7 @@
       "post": {
         "operationId": "finance.customerpaymentprocessing.linkPaymentToStripeIntent",
         "tags": [
-          "Finance: Customerpaymentprocessing"
+          "Finance: Customer Payment Processing"
         ],
         "summary": "Link payment record to Stripe payment intent",
         "responses": {

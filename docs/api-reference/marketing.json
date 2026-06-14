@@ -7,25 +7,25 @@
   },
   "tags": [
     {
-      "name": "Marketing: Sendmarketingemail"
+      "name": "Marketing: Send Marketing Email"
     },
     {
-      "name": "Marketing: Socialanalytics"
+      "name": "Marketing: Social Analytics"
     },
     {
-      "name": "Marketing: Socialconnection"
+      "name": "Marketing: Social Connection"
     },
     {
-      "name": "Marketing: Socialinbox"
+      "name": "Marketing: Social Inbox"
     },
     {
-      "name": "Marketing: Socialpublishing"
+      "name": "Marketing: Social Publish Job"
     },
     {
-      "name": "Marketing: Socialpublishjob"
+      "name": "Marketing: Social Publishing"
     },
     {
-      "name": "Marketing: Webpublishing"
+      "name": "Marketing: Web Publishing"
     },
     {
       "name": "Marketing: Campaign Channel Ads"
@@ -156,7 +156,7 @@
       "get": {
         "operationId": "marketing.webpublishing.getPreview",
         "tags": [
-          "Marketing: Webpublishing"
+          "Marketing: Web Publishing"
         ],
         "summary": "Get Preview",
         "responses": {
@@ -217,7 +217,7 @@
       "post": {
         "operationId": "marketing.webpublishing.submitForm",
         "tags": [
-          "Marketing: Webpublishing"
+          "Marketing: Web Publishing"
         ],
         "summary": "Public form submission → create a Lead",
         "responses": {
@@ -279,7 +279,7 @@
       "post": {
         "operationId": "marketing.socialconnection.getAuthUrl",
         "tags": [
-          "Marketing: Socialconnection"
+          "Marketing: Social Connection"
         ],
         "summary": "Get Auth Url",
         "responses": {
@@ -334,7 +334,7 @@
       "post": {
         "operationId": "marketing.socialconnection.completeOAuth",
         "tags": [
-          "Marketing: Socialconnection"
+          "Marketing: Social Connection"
         ],
         "summary": "OAuth completion. Called by the SPA popup-callback page (`/auth/social-callback`),",
         "responses": {
@@ -383,7 +383,7 @@
       "post": {
         "operationId": "marketing.socialconnection.syncProfiles",
         "tags": [
-          "Marketing: Socialconnection"
+          "Marketing: Social Connection"
         ],
         "summary": "Sync Profiles",
         "responses": {
@@ -430,7 +430,7 @@
       "post": {
         "operationId": "marketing.socialconnection.disconnect",
         "tags": [
-          "Marketing: Socialconnection"
+          "Marketing: Social Connection"
         ],
         "summary": "Disconnect",
         "responses": {
@@ -478,7 +478,7 @@
       "get": {
         "operationId": "marketing.socialconnection.getConnectionStatus",
         "tags": [
-          "Marketing: Socialconnection"
+          "Marketing: Social Connection"
         ],
         "summary": "Get Connection Status",
         "responses": {
@@ -523,7 +523,7 @@
       "post": {
         "operationId": "marketing.socialpublishing.createPost",
         "tags": [
-          "Marketing: Socialpublishing"
+          "Marketing: Social Publishing"
         ],
         "summary": "Create Post",
         "responses": {
@@ -581,7 +581,7 @@
       "put": {
         "operationId": "marketing.socialpublishing.updatePost",
         "tags": [
-          "Marketing: Socialpublishing"
+          "Marketing: Social Publishing"
         ],
         "summary": "Update Post",
         "responses": {
@@ -637,7 +637,7 @@
       "delete": {
         "operationId": "marketing.socialpublishing.deletePost",
         "tags": [
-          "Marketing: Socialpublishing"
+          "Marketing: Social Publishing"
         ],
         "summary": "Delete Post",
         "responses": {
@@ -677,7 +677,7 @@
       "post": {
         "operationId": "marketing.socialpublishing.upsertVariant",
         "tags": [
-          "Marketing: Socialpublishing"
+          "Marketing: Social Publishing"
         ],
         "summary": "Upsert Variant",
         "responses": {
@@ -741,7 +741,7 @@
       "delete": {
         "operationId": "marketing.socialpublishing.deleteVariant",
         "tags": [
-          "Marketing: Socialpublishing"
+          "Marketing: Social Publishing"
         ],
         "summary": "Delete Variant",
         "responses": {
@@ -781,7 +781,7 @@
       "post": {
         "operationId": "marketing.socialpublishing.uploadMediaToProvider",
         "tags": [
-          "Marketing: Socialpublishing"
+          "Marketing: Social Publishing"
         ],
         "summary": "Upload Media To Provider",
         "responses": {
@@ -847,7 +847,7 @@
       "post": {
         "operationId": "marketing.socialpublishing.validatePost",
         "tags": [
-          "Marketing: Socialpublishing"
+          "Marketing: Social Publishing"
         ],
         "summary": "Validate Post",
         "responses": {
@@ -904,7 +904,7 @@
       "post": {
         "operationId": "marketing.socialpublishing.schedulePost",
         "tags": [
-          "Marketing: Socialpublishing"
+          "Marketing: Social Publishing"
         ],
         "summary": "Schedule Post",
         "responses": {
@@ -960,7 +960,7 @@
       "post": {
         "operationId": "marketing.socialpublishing.publishNow",
         "tags": [
-          "Marketing: Socialpublishing"
+          "Marketing: Social Publishing"
         ],
         "summary": "Publish Now",
         "responses": {
@@ -1016,7 +1016,7 @@
       "post": {
         "operationId": "marketing.socialpublishing.cancelScheduledPost",
         "tags": [
-          "Marketing: Socialpublishing"
+          "Marketing: Social Publishing"
         ],
         "summary": "Cancel Scheduled Post",
         "responses": {
@@ -1073,7 +1073,7 @@
       "post": {
         "operationId": "marketing.socialpublishing.retryFailedJobs",
         "tags": [
-          "Marketing: Socialpublishing"
+          "Marketing: Social Publishing"
         ],
         "summary": "Retry Failed Jobs",
         "responses": {
@@ -1130,7 +1130,7 @@
       "post": {
         "operationId": "marketing.socialpublishing.approvePost",
         "tags": [
-          "Marketing: Socialpublishing"
+          "Marketing: Social Publishing"
         ],
         "summary": "Approve Post",
         "responses": {
@@ -1188,7 +1188,7 @@
       "post": {
         "operationId": "marketing.socialpublishjob.claimDueJobs",
         "tags": [
-          "Marketing: Socialpublishjob"
+          "Marketing: Social Publish Job"
         ],
         "summary": "Claim Due Jobs",
         "responses": {
@@ -1231,7 +1231,7 @@
       "post": {
         "operationId": "marketing.socialpublishjob.processJob",
         "tags": [
-          "Marketing: Socialpublishjob"
+          "Marketing: Social Publish Job"
         ],
         "summary": "Process Job",
         "responses": {
@@ -1281,7 +1281,7 @@
       "post": {
         "operationId": "marketing.socialanalytics.syncPostAnalytics",
         "tags": [
-          "Marketing: Socialanalytics"
+          "Marketing: Social Analytics"
         ],
         "summary": "Sync Post Analytics",
         "responses": {
@@ -1331,7 +1331,7 @@
       "post": {
         "operationId": "marketing.socialanalytics.syncProfileAnalytics",
         "tags": [
-          "Marketing: Socialanalytics"
+          "Marketing: Social Analytics"
         ],
         "summary": "Sync Profile Analytics",
         "responses": {
@@ -1381,7 +1381,7 @@
       "post": {
         "operationId": "marketing.socialanalytics.syncAllDueAnalytics",
         "tags": [
-          "Marketing: Socialanalytics"
+          "Marketing: Social Analytics"
         ],
         "summary": "Sync All Due Analytics",
         "responses": {
@@ -1422,7 +1422,7 @@
       "get": {
         "operationId": "marketing.socialanalytics.getCampaignSocialPerformance",
         "tags": [
-          "Marketing: Socialanalytics"
+          "Marketing: Social Analytics"
         ],
         "summary": "Get Campaign Social Performance",
         "responses": {
@@ -1470,7 +1470,7 @@
       "get": {
         "operationId": "marketing.socialanalytics.getPostPerformance",
         "tags": [
-          "Marketing: Socialanalytics"
+          "Marketing: Social Analytics"
         ],
         "summary": "Get Post Performance",
         "responses": {
@@ -1524,7 +1524,7 @@
       "post": {
         "operationId": "marketing.socialinbox.syncInboundMessages",
         "tags": [
-          "Marketing: Socialinbox"
+          "Marketing: Social Inbox"
         ],
         "summary": "Sync Inbound Messages",
         "responses": {
@@ -1574,7 +1574,7 @@
       "post": {
         "operationId": "marketing.socialinbox.syncAllInboundMessages",
         "tags": [
-          "Marketing: Socialinbox"
+          "Marketing: Social Inbox"
         ],
         "summary": "Sync All Inbound Messages",
         "responses": {
@@ -1617,7 +1617,7 @@
       "post": {
         "operationId": "marketing.socialinbox.handleWebhook",
         "tags": [
-          "Marketing: Socialinbox"
+          "Marketing: Social Inbox"
         ],
         "summary": "Handle Webhook",
         "responses": {
@@ -1668,7 +1668,7 @@
       "post": {
         "operationId": "marketing.socialinbox.assignMessage",
         "tags": [
-          "Marketing: Socialinbox"
+          "Marketing: Social Inbox"
         ],
         "summary": "Assign Message",
         "responses": {
@@ -1708,7 +1708,7 @@
       "post": {
         "operationId": "marketing.socialinbox.resolveMessage",
         "tags": [
-          "Marketing: Socialinbox"
+          "Marketing: Social Inbox"
         ],
         "summary": "Resolve Message",
         "responses": {
@@ -1748,7 +1748,7 @@
       "post": {
         "operationId": "marketing.socialinbox.markRead",
         "tags": [
-          "Marketing: Socialinbox"
+          "Marketing: Social Inbox"
         ],
         "summary": "Mark Read",
         "responses": {
@@ -1791,7 +1791,7 @@
       "post": {
         "operationId": "marketing.socialinbox.markSpam",
         "tags": [
-          "Marketing: Socialinbox"
+          "Marketing: Social Inbox"
         ],
         "summary": "Mark Spam",
         "responses": {
@@ -1834,7 +1834,7 @@
       "post": {
         "operationId": "marketing.socialinbox.linkIdentityToContact",
         "tags": [
-          "Marketing: Socialinbox"
+          "Marketing: Social Inbox"
         ],
         "summary": "Link Identity To Contact",
         "responses": {
@@ -1882,7 +1882,7 @@
       "post": {
         "operationId": "marketing.socialinbox.createCrmActivityFromMessage",
         "tags": [
-          "Marketing: Socialinbox"
+          "Marketing: Social Inbox"
         ],
         "summary": "Create Crm Activity From Message",
         "responses": {
@@ -1949,7 +1949,7 @@
       "post": {
         "operationId": "marketing.sendmarketingemail.sendMarketingEmail",
         "tags": [
-          "Marketing: Sendmarketingemail"
+          "Marketing: Send Marketing Email"
         ],
         "summary": "Send Marketing Email",
         "responses": {

@@ -7,37 +7,37 @@
   },
   "tags": [
     {
-      "name": "Communications: Bulkemail"
+      "name": "Communications: Bulk Email"
     },
     {
-      "name": "Communications: Campaignemail"
+      "name": "Communications: Campaign Email"
     },
     {
       "name": "Communications: Conversation"
     },
     {
-      "name": "Communications: Emailanalytics"
+      "name": "Communications: Email Analytics"
     },
     {
-      "name": "Communications: Emailscheduling"
+      "name": "Communications: Email Scheduling"
     },
     {
-      "name": "Communications: Emailsnapshot"
+      "name": "Communications: Email Snapshot"
     },
     {
-      "name": "Communications: Fileupload"
+      "name": "Communications: File Upload"
     },
     {
-      "name": "Communications: Gmailconnection"
+      "name": "Communications: Gmail Connection"
     },
     {
-      "name": "Communications: Gmailsend"
+      "name": "Communications: Gmail Send"
     },
     {
-      "name": "Communications: Gmailsync"
+      "name": "Communications: Gmail Sync"
     },
     {
-      "name": "Communications: Sendemail"
+      "name": "Communications: Send Email"
     },
     {
       "name": "Communications: Campaign Emails"
@@ -87,7 +87,7 @@
       "get": {
         "operationId": "communications.emailanalytics.getCampaignAnalytics",
         "tags": [
-          "Communications: Emailanalytics"
+          "Communications: Email Analytics"
         ],
         "summary": "Get Campaign Analytics",
         "responses": {
@@ -124,7 +124,7 @@
       "get": {
         "operationId": "communications.emailanalytics.getEmailAnalytics",
         "tags": [
-          "Communications: Emailanalytics"
+          "Communications: Email Analytics"
         ],
         "summary": "Get Email Analytics",
         "responses": {
@@ -161,7 +161,7 @@
       "get": {
         "operationId": "communications.emailanalytics.getEmailSendInstance",
         "tags": [
-          "Communications: Emailanalytics"
+          "Communications: Email Analytics"
         ],
         "summary": "Get Email Send Instance",
         "responses": {
@@ -198,7 +198,7 @@
       "get": {
         "operationId": "communications.emailanalytics.getPerformanceMetrics",
         "tags": [
-          "Communications: Emailanalytics"
+          "Communications: Email Analytics"
         ],
         "summary": "Get Performance Metrics",
         "responses": {
@@ -235,7 +235,7 @@
       "get": {
         "operationId": "communications.emailanalytics.getEngagementAnalytics",
         "tags": [
-          "Communications: Emailanalytics"
+          "Communications: Email Analytics"
         ],
         "summary": "Get Engagement Analytics",
         "responses": {
@@ -272,7 +272,7 @@
       "post": {
         "operationId": "communications.bulkemail.sendBulkEmail",
         "tags": [
-          "Communications: Bulkemail"
+          "Communications: Bulk Email"
         ],
         "summary": "Send Bulk Email",
         "responses": {
@@ -311,7 +311,7 @@
       "get": {
         "operationId": "communications.bulkemail.getBulkEmailStatus",
         "tags": [
-          "Communications: Bulkemail"
+          "Communications: Bulk Email"
         ],
         "summary": "Get Bulk Email Status",
         "responses": {
@@ -351,7 +351,7 @@
       "post": {
         "operationId": "communications.bulkemail.sendBulkEmailOptimized",
         "tags": [
-          "Communications: Bulkemail"
+          "Communications: Bulk Email"
         ],
         "summary": "Send bulk email using Mailgun batch API with personalization",
         "responses": {
@@ -418,7 +418,7 @@
       "post": {
         "operationId": "communications.campaignemail.sendCampaignEmailOptimized",
         "tags": [
-          "Communications: Campaignemail"
+          "Communications: Campaign Email"
         ],
         "summary": "Send campaign email using batch API",
         "responses": {
@@ -485,7 +485,7 @@
       "post": {
         "operationId": "communications.campaignemail.saveCampaignEmail",
         "tags": [
-          "Communications: Campaignemail"
+          "Communications: Campaign Email"
         ],
         "summary": "Save campaign email as draft",
         "responses": {
@@ -531,7 +531,7 @@
       "put": {
         "operationId": "communications.campaignemail.updateCampaignEmail",
         "tags": [
-          "Communications: Campaignemail"
+          "Communications: Campaign Email"
         ],
         "summary": "Update existing campaign email draft",
         "responses": {
@@ -585,7 +585,7 @@
       "post": {
         "operationId": "communications.campaignemail.updateAndSendCampaignEmail",
         "tags": [
-          "Communications: Campaignemail"
+          "Communications: Campaign Email"
         ],
         "summary": "Update and send campaign email immediately",
         "responses": {
@@ -639,7 +639,7 @@
       "post": {
         "operationId": "communications.campaignemail.createAndSendCampaignEmail",
         "tags": [
-          "Communications: Campaignemail"
+          "Communications: Campaign Email"
         ],
         "summary": "Create and send campaign email immediately",
         "responses": {
@@ -685,7 +685,7 @@
       "post": {
         "operationId": "communications.campaignemail.createAndScheduleCampaignEmail",
         "tags": [
-          "Communications: Campaignemail"
+          "Communications: Campaign Email"
         ],
         "summary": "Create and schedule campaign email for future delivery",
         "responses": {
@@ -740,7 +740,7 @@
       "post": {
         "operationId": "communications.campaignemail.updateAndScheduleCampaignEmail",
         "tags": [
-          "Communications: Campaignemail"
+          "Communications: Campaign Email"
         ],
         "summary": "Update and schedule existing campaign email",
         "responses": {
@@ -803,7 +803,7 @@
       "post": {
         "operationId": "communications.emailsnapshot.createEmailSnapshot",
         "tags": [
-          "Communications: Emailsnapshot"
+          "Communications: Email Snapshot"
         ],
         "summary": "Create email snapshot record",
         "responses": {
@@ -871,7 +871,7 @@
       "post": {
         "operationId": "communications.emailsnapshot.createCampaignEmailSnapshot",
         "tags": [
-          "Communications: Emailsnapshot"
+          "Communications: Email Snapshot"
         ],
         "summary": "Create campaign email snapshot",
         "responses": {
@@ -939,7 +939,7 @@
       "get": {
         "operationId": "communications.emailsnapshot.getSnapshot",
         "tags": [
-          "Communications: Emailsnapshot"
+          "Communications: Email Snapshot"
         ],
         "summary": "Get snapshot by ID",
         "responses": {
@@ -985,7 +985,7 @@
       "put": {
         "operationId": "communications.emailsnapshot.markSnapshotInUse",
         "tags": [
-          "Communications: Emailsnapshot"
+          "Communications: Email Snapshot"
         ],
         "summary": "Mark snapshot as in use",
         "responses": {
@@ -1041,7 +1041,7 @@
       "put": {
         "operationId": "communications.emailsnapshot.markSnapshotCompleted",
         "tags": [
-          "Communications: Emailsnapshot"
+          "Communications: Email Snapshot"
         ],
         "summary": "Mark snapshot as completed",
         "responses": {
@@ -1097,7 +1097,7 @@
       "post": {
         "operationId": "communications.sendemail.sendEmail",
         "tags": [
-          "Communications: Sendemail"
+          "Communications: Send Email"
         ],
         "summary": "Send email through Gmail and log locally",
         "responses": {
@@ -1137,7 +1137,7 @@
       "get": {
         "operationId": "communications.sendemail.getEmailStatus",
         "tags": [
-          "Communications: Sendemail"
+          "Communications: Send Email"
         ],
         "summary": "Get Email Status",
         "responses": {
@@ -1176,7 +1176,7 @@
       "post": {
         "operationId": "communications.sendemail.validateEmail",
         "tags": [
-          "Communications: Sendemail"
+          "Communications: Send Email"
         ],
         "summary": "Validate Email",
         "responses": {
@@ -1224,7 +1224,7 @@
       "post": {
         "operationId": "communications.emailscheduling.initialize",
         "tags": [
-          "Communications: Emailscheduling"
+          "Communications: Email Scheduling"
         ],
         "summary": "Initialize scheduling service with Agenda",
         "responses": {
@@ -1255,7 +1255,7 @@
       "post": {
         "operationId": "communications.emailscheduling.start",
         "tags": [
-          "Communications: Emailscheduling"
+          "Communications: Email Scheduling"
         ],
         "summary": "Start Agenda scheduler",
         "responses": {
@@ -1278,7 +1278,7 @@
       "post": {
         "operationId": "communications.emailscheduling.stop",
         "tags": [
-          "Communications: Emailscheduling"
+          "Communications: Email Scheduling"
         ],
         "summary": "Stop Agenda scheduler",
         "responses": {
@@ -1301,7 +1301,7 @@
       "post": {
         "operationId": "communications.emailscheduling.scheduleEmail",
         "tags": [
-          "Communications: Emailscheduling"
+          "Communications: Email Scheduling"
         ],
         "summary": "Schedule email for future delivery",
         "responses": {
@@ -1356,7 +1356,7 @@
       "post": {
         "operationId": "communications.emailscheduling.cancelScheduledEmail",
         "tags": [
-          "Communications: Emailscheduling"
+          "Communications: Email Scheduling"
         ],
         "summary": "Cancel scheduled email",
         "responses": {
@@ -1414,7 +1414,7 @@
       "post": {
         "operationId": "communications.emailscheduling.processScheduledCampaignEmail",
         "tags": [
-          "Communications: Emailscheduling"
+          "Communications: Email Scheduling"
         ],
         "summary": "Process scheduled campaign email",
         "responses": {
@@ -1470,7 +1470,7 @@
       "get": {
         "operationId": "communications.emailscheduling.getScheduledJobs",
         "tags": [
-          "Communications: Emailscheduling"
+          "Communications: Email Scheduling"
         ],
         "summary": "Get scheduled jobs for tenant",
         "responses": {
@@ -1688,7 +1688,7 @@
       "post": {
         "operationId": "communications.fileupload.uploadFile",
         "tags": [
-          "Communications: Fileupload"
+          "Communications: File Upload"
         ],
         "summary": "Upload a file and save a record to the files collection",
         "responses": {
@@ -1730,7 +1730,7 @@
       "get": {
         "operationId": "communications.fileupload.downloadFile",
         "tags": [
-          "Communications: Fileupload"
+          "Communications: File Upload"
         ],
         "summary": "Download a file by its record ID",
         "responses": {
@@ -1780,7 +1780,7 @@
       "post": {
         "operationId": "communications.gmailconnection.getAuthUrl",
         "tags": [
-          "Communications: Gmailconnection"
+          "Communications: Gmail Connection"
         ],
         "summary": "Get OAuth authorization URL",
         "responses": {
@@ -1822,7 +1822,7 @@
       "get": {
         "operationId": "communications.gmailconnection.gmailCallbackHandler",
         "tags": [
-          "Communications: Gmailconnection"
+          "Communications: Gmail Connection"
         ],
         "summary": "Handle OAuth callback — stores tokens in syncVendors",
         "responses": {
@@ -1845,7 +1845,7 @@
       "post": {
         "operationId": "communications.gmailconnection.disconnect",
         "tags": [
-          "Communications: Gmailconnection"
+          "Communications: Gmail Connection"
         ],
         "summary": "Disconnect Gmail — clears syncVendors record",
         "responses": {
@@ -1887,7 +1887,7 @@
       "get": {
         "operationId": "communications.gmailconnection.getConnectionStatus",
         "tags": [
-          "Communications: Gmailconnection"
+          "Communications: Gmail Connection"
         ],
         "summary": "Get connection status from syncVendors",
         "responses": {
@@ -1929,7 +1929,7 @@
       "post": {
         "operationId": "communications.gmailsend.sendEmail",
         "tags": [
-          "Communications: Gmailsend"
+          "Communications: Gmail Send"
         ],
         "summary": "Send email through Gmail and log locally",
         "responses": {
@@ -1971,7 +1971,7 @@
       "post": {
         "operationId": "communications.gmailsync.syncUserEmails",
         "tags": [
-          "Communications: Gmailsync"
+          "Communications: Gmail Sync"
         ],
         "summary": "Sync user's Gmail messages",
         "responses": {
@@ -2013,7 +2013,7 @@
       "post": {
         "operationId": "communications.gmailsync.modifyMessage",
         "tags": [
-          "Communications: Gmailsync"
+          "Communications: Gmail Sync"
         ],
         "summary": "Modify message in Gmail to reflect local action (labels/read/trash)",
         "responses": {
@@ -2055,7 +2055,7 @@
       "post": {
         "operationId": "communications.gmailsync.downloadMessageAttachments",
         "tags": [
-          "Communications: Gmailsync"
+          "Communications: Gmail Sync"
         ],
         "summary": "Download attachments for a single message",
         "responses": {

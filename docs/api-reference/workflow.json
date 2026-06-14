@@ -7,9 +7,6 @@
   },
   "tags": [
     {
-      "name": "Workflow: Scheduledevents"
-    },
-    {
       "name": "Workflow: Scheduled Events"
     },
     {
@@ -24,7 +21,7 @@
       "post": {
         "operationId": "workflow.scheduledevents.apiScheduleEvent",
         "tags": [
-          "Workflow: Scheduledevents"
+          "Workflow: Scheduled Events"
         ],
         "summary": "POST /workflow/scheduled-events — schedule a generic event",
         "responses": {
@@ -62,7 +59,7 @@
       "get": {
         "operationId": "workflow.scheduledevents.apiListScheduledEvents",
         "tags": [
-          "Workflow: Scheduledevents"
+          "Workflow: Scheduled Events"
         ],
         "summary": "GET /workflow/scheduled-events — list filtered events",
         "responses": {
@@ -113,7 +110,7 @@
       "post": {
         "operationId": "workflow.scheduledevents.apiScheduleWorkflow",
         "tags": [
-          "Workflow: Scheduledevents"
+          "Workflow: Scheduled Events"
         ],
         "summary": "POST /workflow/scheduled-events/workflow — schedule a workflow-on-record",
         "responses": {
@@ -153,7 +150,7 @@
       "post": {
         "operationId": "workflow.scheduledevents.apiCancelScheduledEvent",
         "tags": [
-          "Workflow: Scheduledevents"
+          "Workflow: Scheduled Events"
         ],
         "summary": "POST /workflow/scheduled-events/cancel — cancel one event",
         "responses": {
@@ -195,7 +192,7 @@
       "post": {
         "operationId": "workflow.scheduledevents.apiDispatchDueEvents",
         "tags": [
-          "Workflow: Scheduledevents"
+          "Workflow: Scheduled Events"
         ],
         "summary": "POST /workflow/scheduled-events/dispatch — manual tick (ops/tests)",
         "responses": {

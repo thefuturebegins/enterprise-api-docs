@@ -31,7 +31,10 @@
       "name": "Cache: Cache"
     },
     {
-      "name": "Communications: Bulkemail"
+      "name": "Communications: Bulk Email"
+    },
+    {
+      "name": "Communications: Campaign Email"
     },
     {
       "name": "Communications: Campaign Emails"
@@ -46,9 +49,6 @@
       "name": "Communications: Campaign Tasks"
     },
     {
-      "name": "Communications: Campaignemail"
-    },
-    {
       "name": "Communications: Campaigns"
     },
     {
@@ -61,10 +61,19 @@
       "name": "Communications: Conversations"
     },
     {
+      "name": "Communications: Email Analytics"
+    },
+    {
       "name": "Communications: Email Files"
     },
     {
       "name": "Communications: Email Lists"
+    },
+    {
+      "name": "Communications: Email Scheduling"
+    },
+    {
+      "name": "Communications: Email Snapshot"
     },
     {
       "name": "Communications: Email Snapshot Contacts"
@@ -76,34 +85,25 @@
       "name": "Communications: Email Templates"
     },
     {
-      "name": "Communications: Emailanalytics"
-    },
-    {
       "name": "Communications: Emails"
     },
     {
-      "name": "Communications: Emailscheduling"
+      "name": "Communications: File Upload"
     },
     {
-      "name": "Communications: Emailsnapshot"
+      "name": "Communications: Gmail Connection"
     },
     {
-      "name": "Communications: Fileupload"
+      "name": "Communications: Gmail Send"
     },
     {
-      "name": "Communications: Gmailconnection"
-    },
-    {
-      "name": "Communications: Gmailsend"
-    },
-    {
-      "name": "Communications: Gmailsync"
+      "name": "Communications: Gmail Sync"
     },
     {
       "name": "Communications: Referrals"
     },
     {
-      "name": "Communications: Sendemail"
+      "name": "Communications: Send Email"
     },
     {
       "name": "Customer Success: Renewal Files"
@@ -160,13 +160,13 @@
       "name": "Data: Query"
     },
     {
-      "name": "Finance: Contractorpaymentprocessing"
+      "name": "Finance: Contractor Payment Processing"
+    },
+    {
+      "name": "Finance: Customer Payment Processing"
     },
     {
       "name": "Finance: Customer Payments"
-    },
-    {
-      "name": "Finance: Customerpaymentprocessing"
     },
     {
       "name": "Finance: Finance Accounts"
@@ -205,7 +205,7 @@
       "name": "Finance: Finance Vendors"
     },
     {
-      "name": "Finance: Stripeintegration"
+      "name": "Finance: Stripe Integration"
     },
     {
       "name": "Forms: Form Fields"
@@ -241,16 +241,16 @@
       "name": "Identity: Teams"
     },
     {
-      "name": "Identity: Usermanagement"
+      "name": "Identity: User Management"
     },
     {
       "name": "Identity: Users"
     },
     {
-      "name": "Integrations: Conflictresolution"
+      "name": "Integrations: Conflict Resolution"
     },
     {
-      "name": "Integrations: Datasync"
+      "name": "Integrations: Data Sync"
     },
     {
       "name": "Integrations: Export Field Mappings"
@@ -265,10 +265,13 @@
       "name": "Integrations: Exports"
     },
     {
-      "name": "Integrations: Fieldmapping"
+      "name": "Integrations: Field Mapping"
     },
     {
       "name": "Integrations: Import Field Mappings"
+    },
+    {
+      "name": "Integrations: Import Management"
     },
     {
       "name": "Integrations: Import Profiles"
@@ -277,19 +280,16 @@
       "name": "Integrations: Import Schedules"
     },
     {
-      "name": "Integrations: Importmanagement"
+      "name": "Integrations: Imports"
     },
     {
-      "name": "Integrations: Imports"
+      "name": "Integrations: Sync Engine"
     },
     {
       "name": "Integrations: Sync Vendor Model Field Mappings"
     },
     {
       "name": "Integrations: Sync Vendors"
-    },
-    {
-      "name": "Integrations: Syncengine"
     },
     {
       "name": "Integrations: Synchronizations"
@@ -403,28 +403,28 @@
       "name": "Marketing: Segments"
     },
     {
-      "name": "Marketing: Sendmarketingemail"
+      "name": "Marketing: Send Marketing Email"
     },
     {
-      "name": "Marketing: Socialanalytics"
+      "name": "Marketing: Social Analytics"
     },
     {
-      "name": "Marketing: Socialconnection"
+      "name": "Marketing: Social Connection"
     },
     {
-      "name": "Marketing: Socialinbox"
+      "name": "Marketing: Social Inbox"
     },
     {
-      "name": "Marketing: Socialpublishing"
+      "name": "Marketing: Social Publish Job"
     },
     {
-      "name": "Marketing: Socialpublishjob"
+      "name": "Marketing: Social Publishing"
     },
     {
       "name": "Marketing: Web Pages"
     },
     {
-      "name": "Marketing: Webpublishing"
+      "name": "Marketing: Web Publishing"
     },
     {
       "name": "Marketing: Website Statuses"
@@ -445,13 +445,13 @@
       "name": "Marketing: Workflows"
     },
     {
+      "name": "Notifications: Notification Scheduling"
+    },
+    {
       "name": "Notifications: Notifications"
     },
     {
-      "name": "Notifications: Notificationscheduling"
-    },
-    {
-      "name": "Notifications: Sendnotification"
+      "name": "Notifications: Send Notification"
     },
     {
       "name": "Permissions: Authorization"
@@ -461,6 +461,9 @@
     },
     {
       "name": "Sales: Account Files"
+    },
+    {
+      "name": "Sales: Account Management"
     },
     {
       "name": "Sales: Account Notes"
@@ -482,9 +485,6 @@
     },
     {
       "name": "Sales: Account Types"
-    },
-    {
-      "name": "Sales: Accountmanagement"
     },
     {
       "name": "Sales: Accounts"
@@ -511,7 +511,7 @@
       "name": "Sales: Files"
     },
     {
-      "name": "Sales: Googlebusinessprofiles"
+      "name": "Sales: Google Business Profiles"
     },
     {
       "name": "Sales: Industries"
@@ -541,16 +541,16 @@
       "name": "Sales: Insights"
     },
     {
-      "name": "Sales: Leadmanagement"
+      "name": "Sales: Lead Management"
     },
     {
-      "name": "Sales: Leadnurturing"
+      "name": "Sales: Lead Nurturing"
     },
     {
       "name": "Sales: Leads"
     },
     {
-      "name": "Sales: Linkedinprofiles"
+      "name": "Sales: Linkedin Profiles"
     },
     {
       "name": "Sales: Notes"
@@ -628,7 +628,7 @@
       "name": "Sales: Tasks"
     },
     {
-      "name": "Sales: Workspacemanagement"
+      "name": "Sales: Workspace Management"
     },
     {
       "name": "Settings: Notification Settings"
@@ -652,13 +652,13 @@
       "name": "System: Jobs"
     },
     {
-      "name": "System: Multitenantdatabase"
+      "name": "System: Multi Tenant Database"
     },
     {
       "name": "System: Settings"
     },
     {
-      "name": "System: Tenantresolution"
+      "name": "System: Tenant Resolution"
     },
     {
       "name": "Ui: Components"
@@ -730,16 +730,10 @@
       "name": "Ui: User Screens"
     },
     {
-      "name": "Ui: Userscreens"
-    },
-    {
       "name": "Ui: Workspaces"
     },
     {
       "name": "Workflow: Scheduled Events"
-    },
-    {
-      "name": "Workflow: Scheduledevents"
     },
     {
       "name": "Workflow: Workflow Status Pipeline Record States"
@@ -4538,7 +4532,7 @@
       "get": {
         "operationId": "communications.emailanalytics.getCampaignAnalytics",
         "tags": [
-          "Communications: Emailanalytics"
+          "Communications: Email Analytics"
         ],
         "summary": "Get Campaign Analytics",
         "responses": {
@@ -4575,7 +4569,7 @@
       "get": {
         "operationId": "communications.emailanalytics.getEmailAnalytics",
         "tags": [
-          "Communications: Emailanalytics"
+          "Communications: Email Analytics"
         ],
         "summary": "Get Email Analytics",
         "responses": {
@@ -4612,7 +4606,7 @@
       "get": {
         "operationId": "communications.emailanalytics.getEmailSendInstance",
         "tags": [
-          "Communications: Emailanalytics"
+          "Communications: Email Analytics"
         ],
         "summary": "Get Email Send Instance",
         "responses": {
@@ -4649,7 +4643,7 @@
       "get": {
         "operationId": "communications.emailanalytics.getPerformanceMetrics",
         "tags": [
-          "Communications: Emailanalytics"
+          "Communications: Email Analytics"
         ],
         "summary": "Get Performance Metrics",
         "responses": {
@@ -4686,7 +4680,7 @@
       "get": {
         "operationId": "communications.emailanalytics.getEngagementAnalytics",
         "tags": [
-          "Communications: Emailanalytics"
+          "Communications: Email Analytics"
         ],
         "summary": "Get Engagement Analytics",
         "responses": {
@@ -4723,7 +4717,7 @@
       "post": {
         "operationId": "communications.bulkemail.sendBulkEmail",
         "tags": [
-          "Communications: Bulkemail"
+          "Communications: Bulk Email"
         ],
         "summary": "Send Bulk Email",
         "responses": {
@@ -4762,7 +4756,7 @@
       "get": {
         "operationId": "communications.bulkemail.getBulkEmailStatus",
         "tags": [
-          "Communications: Bulkemail"
+          "Communications: Bulk Email"
         ],
         "summary": "Get Bulk Email Status",
         "responses": {
@@ -4802,7 +4796,7 @@
       "post": {
         "operationId": "communications.bulkemail.sendBulkEmailOptimized",
         "tags": [
-          "Communications: Bulkemail"
+          "Communications: Bulk Email"
         ],
         "summary": "Send bulk email using Mailgun batch API with personalization",
         "responses": {
@@ -4869,7 +4863,7 @@
       "post": {
         "operationId": "communications.campaignemail.sendCampaignEmailOptimized",
         "tags": [
-          "Communications: Campaignemail"
+          "Communications: Campaign Email"
         ],
         "summary": "Send campaign email using batch API",
         "responses": {
@@ -4936,7 +4930,7 @@
       "post": {
         "operationId": "communications.campaignemail.saveCampaignEmail",
         "tags": [
-          "Communications: Campaignemail"
+          "Communications: Campaign Email"
         ],
         "summary": "Save campaign email as draft",
         "responses": {
@@ -4982,7 +4976,7 @@
       "put": {
         "operationId": "communications.campaignemail.updateCampaignEmail",
         "tags": [
-          "Communications: Campaignemail"
+          "Communications: Campaign Email"
         ],
         "summary": "Update existing campaign email draft",
         "responses": {
@@ -5036,7 +5030,7 @@
       "post": {
         "operationId": "communications.campaignemail.updateAndSendCampaignEmail",
         "tags": [
-          "Communications: Campaignemail"
+          "Communications: Campaign Email"
         ],
         "summary": "Update and send campaign email immediately",
         "responses": {
@@ -5090,7 +5084,7 @@
       "post": {
         "operationId": "communications.campaignemail.createAndSendCampaignEmail",
         "tags": [
-          "Communications: Campaignemail"
+          "Communications: Campaign Email"
         ],
         "summary": "Create and send campaign email immediately",
         "responses": {
@@ -5136,7 +5130,7 @@
       "post": {
         "operationId": "communications.campaignemail.createAndScheduleCampaignEmail",
         "tags": [
-          "Communications: Campaignemail"
+          "Communications: Campaign Email"
         ],
         "summary": "Create and schedule campaign email for future delivery",
         "responses": {
@@ -5191,7 +5185,7 @@
       "post": {
         "operationId": "communications.campaignemail.updateAndScheduleCampaignEmail",
         "tags": [
-          "Communications: Campaignemail"
+          "Communications: Campaign Email"
         ],
         "summary": "Update and schedule existing campaign email",
         "responses": {
@@ -5254,7 +5248,7 @@
       "post": {
         "operationId": "communications.emailsnapshot.createEmailSnapshot",
         "tags": [
-          "Communications: Emailsnapshot"
+          "Communications: Email Snapshot"
         ],
         "summary": "Create email snapshot record",
         "responses": {
@@ -5322,7 +5316,7 @@
       "post": {
         "operationId": "communications.emailsnapshot.createCampaignEmailSnapshot",
         "tags": [
-          "Communications: Emailsnapshot"
+          "Communications: Email Snapshot"
         ],
         "summary": "Create campaign email snapshot",
         "responses": {
@@ -5390,7 +5384,7 @@
       "get": {
         "operationId": "communications.emailsnapshot.getSnapshot",
         "tags": [
-          "Communications: Emailsnapshot"
+          "Communications: Email Snapshot"
         ],
         "summary": "Get snapshot by ID",
         "responses": {
@@ -5436,7 +5430,7 @@
       "put": {
         "operationId": "communications.emailsnapshot.markSnapshotInUse",
         "tags": [
-          "Communications: Emailsnapshot"
+          "Communications: Email Snapshot"
         ],
         "summary": "Mark snapshot as in use",
         "responses": {
@@ -5492,7 +5486,7 @@
       "put": {
         "operationId": "communications.emailsnapshot.markSnapshotCompleted",
         "tags": [
-          "Communications: Emailsnapshot"
+          "Communications: Email Snapshot"
         ],
         "summary": "Mark snapshot as completed",
         "responses": {
@@ -5548,7 +5542,7 @@
       "post": {
         "operationId": "communications.sendemail.sendEmail",
         "tags": [
-          "Communications: Sendemail"
+          "Communications: Send Email"
         ],
         "summary": "Send email through Gmail and log locally",
         "responses": {
@@ -5588,7 +5582,7 @@
       "get": {
         "operationId": "communications.sendemail.getEmailStatus",
         "tags": [
-          "Communications: Sendemail"
+          "Communications: Send Email"
         ],
         "summary": "Get Email Status",
         "responses": {
@@ -5627,7 +5621,7 @@
       "post": {
         "operationId": "communications.sendemail.validateEmail",
         "tags": [
-          "Communications: Sendemail"
+          "Communications: Send Email"
         ],
         "summary": "Validate Email",
         "responses": {
@@ -5675,7 +5669,7 @@
       "post": {
         "operationId": "communications.emailscheduling.initialize",
         "tags": [
-          "Communications: Emailscheduling"
+          "Communications: Email Scheduling"
         ],
         "summary": "Initialize scheduling service with Agenda",
         "responses": {
@@ -5706,7 +5700,7 @@
       "post": {
         "operationId": "communications.emailscheduling.start",
         "tags": [
-          "Communications: Emailscheduling"
+          "Communications: Email Scheduling"
         ],
         "summary": "Start Agenda scheduler",
         "responses": {
@@ -5729,7 +5723,7 @@
       "post": {
         "operationId": "communications.emailscheduling.stop",
         "tags": [
-          "Communications: Emailscheduling"
+          "Communications: Email Scheduling"
         ],
         "summary": "Stop Agenda scheduler",
         "responses": {
@@ -5752,7 +5746,7 @@
       "post": {
         "operationId": "communications.emailscheduling.scheduleEmail",
         "tags": [
-          "Communications: Emailscheduling"
+          "Communications: Email Scheduling"
         ],
         "summary": "Schedule email for future delivery",
         "responses": {
@@ -5807,7 +5801,7 @@
       "post": {
         "operationId": "communications.emailscheduling.cancelScheduledEmail",
         "tags": [
-          "Communications: Emailscheduling"
+          "Communications: Email Scheduling"
         ],
         "summary": "Cancel scheduled email",
         "responses": {
@@ -5865,7 +5859,7 @@
       "post": {
         "operationId": "communications.emailscheduling.processScheduledCampaignEmail",
         "tags": [
-          "Communications: Emailscheduling"
+          "Communications: Email Scheduling"
         ],
         "summary": "Process scheduled campaign email",
         "responses": {
@@ -5921,7 +5915,7 @@
       "get": {
         "operationId": "communications.emailscheduling.getScheduledJobs",
         "tags": [
-          "Communications: Emailscheduling"
+          "Communications: Email Scheduling"
         ],
         "summary": "Get scheduled jobs for tenant",
         "responses": {
@@ -6139,7 +6133,7 @@
       "post": {
         "operationId": "communications.fileupload.uploadFile",
         "tags": [
-          "Communications: Fileupload"
+          "Communications: File Upload"
         ],
         "summary": "Upload a file and save a record to the files collection",
         "responses": {
@@ -6181,7 +6175,7 @@
       "get": {
         "operationId": "communications.fileupload.downloadFile",
         "tags": [
-          "Communications: Fileupload"
+          "Communications: File Upload"
         ],
         "summary": "Download a file by its record ID",
         "responses": {
@@ -6231,7 +6225,7 @@
       "post": {
         "operationId": "communications.gmailconnection.getAuthUrl",
         "tags": [
-          "Communications: Gmailconnection"
+          "Communications: Gmail Connection"
         ],
         "summary": "Get OAuth authorization URL",
         "responses": {
@@ -6273,7 +6267,7 @@
       "get": {
         "operationId": "communications.gmailconnection.gmailCallbackHandler",
         "tags": [
-          "Communications: Gmailconnection"
+          "Communications: Gmail Connection"
         ],
         "summary": "Handle OAuth callback — stores tokens in syncVendors",
         "responses": {
@@ -6296,7 +6290,7 @@
       "post": {
         "operationId": "communications.gmailconnection.disconnect",
         "tags": [
-          "Communications: Gmailconnection"
+          "Communications: Gmail Connection"
         ],
         "summary": "Disconnect Gmail — clears syncVendors record",
         "responses": {
@@ -6338,7 +6332,7 @@
       "get": {
         "operationId": "communications.gmailconnection.getConnectionStatus",
         "tags": [
-          "Communications: Gmailconnection"
+          "Communications: Gmail Connection"
         ],
         "summary": "Get connection status from syncVendors",
         "responses": {
@@ -6380,7 +6374,7 @@
       "post": {
         "operationId": "communications.gmailsend.sendEmail",
         "tags": [
-          "Communications: Gmailsend"
+          "Communications: Gmail Send"
         ],
         "summary": "Send email through Gmail and log locally",
         "responses": {
@@ -6422,7 +6416,7 @@
       "post": {
         "operationId": "communications.gmailsync.syncUserEmails",
         "tags": [
-          "Communications: Gmailsync"
+          "Communications: Gmail Sync"
         ],
         "summary": "Sync user's Gmail messages",
         "responses": {
@@ -6464,7 +6458,7 @@
       "post": {
         "operationId": "communications.gmailsync.modifyMessage",
         "tags": [
-          "Communications: Gmailsync"
+          "Communications: Gmail Sync"
         ],
         "summary": "Modify message in Gmail to reflect local action (labels/read/trash)",
         "responses": {
@@ -6506,7 +6500,7 @@
       "post": {
         "operationId": "communications.gmailsync.downloadMessageAttachments",
         "tags": [
-          "Communications: Gmailsync"
+          "Communications: Gmail Sync"
         ],
         "summary": "Download attachments for a single message",
         "responses": {
@@ -9278,7 +9272,7 @@
       "post": {
         "operationId": "identity.usermanagement.uploadUserAvatar",
         "tags": [
-          "Identity: Usermanagement"
+          "Identity: User Management"
         ],
         "summary": "Upload or update user avatar",
         "responses": {
@@ -9334,7 +9328,7 @@
       "delete": {
         "operationId": "identity.usermanagement.deleteUserAvatar",
         "tags": [
-          "Identity: Usermanagement"
+          "Identity: User Management"
         ],
         "summary": "Delete user avatar and clean up files",
         "responses": {
@@ -11863,7 +11857,7 @@
       "post": {
         "operationId": "integrations.datasync.syncMailgunDeliveryStatus",
         "tags": [
-          "Integrations: Datasync"
+          "Integrations: Data Sync"
         ],
         "summary": "Sync Mailgun delivery status for email send instances",
         "responses": {
@@ -11932,7 +11926,7 @@
       "post": {
         "operationId": "integrations.syncengine.startSync",
         "tags": [
-          "Integrations: Syncengine"
+          "Integrations: Sync Engine"
         ],
         "summary": "Start Sync",
         "responses": {
@@ -11989,7 +11983,7 @@
       "post": {
         "operationId": "integrations.syncengine.stopSync",
         "tags": [
-          "Integrations: Syncengine"
+          "Integrations: Sync Engine"
         ],
         "summary": "Stop Sync",
         "responses": {
@@ -12029,7 +12023,7 @@
       "post": {
         "operationId": "integrations.syncengine.pauseSync",
         "tags": [
-          "Integrations: Syncengine"
+          "Integrations: Sync Engine"
         ],
         "summary": "Pause Sync",
         "responses": {
@@ -12069,7 +12063,7 @@
       "post": {
         "operationId": "integrations.syncengine.resumeSync",
         "tags": [
-          "Integrations: Syncengine"
+          "Integrations: Sync Engine"
         ],
         "summary": "Resume Sync",
         "responses": {
@@ -12109,7 +12103,7 @@
       "post": {
         "operationId": "integrations.syncengine.processBatch",
         "tags": [
-          "Integrations: Syncengine"
+          "Integrations: Sync Engine"
         ],
         "summary": "Process Batch",
         "responses": {
@@ -12167,7 +12161,7 @@
       "get": {
         "operationId": "integrations.syncengine.getSyncStatus",
         "tags": [
-          "Integrations: Syncengine"
+          "Integrations: Sync Engine"
         ],
         "summary": "Get Sync Status",
         "responses": {
@@ -12214,7 +12208,7 @@
       "get": {
         "operationId": "integrations.syncengine.getActiveSyncs",
         "tags": [
-          "Integrations: Syncengine"
+          "Integrations: Sync Engine"
         ],
         "summary": "Get Active Syncs",
         "responses": {
@@ -12246,7 +12240,7 @@
       "post": {
         "operationId": "integrations.syncengine.validateConfiguration",
         "tags": [
-          "Integrations: Syncengine"
+          "Integrations: Sync Engine"
         ],
         "summary": "Validate Configuration",
         "responses": {
@@ -12285,7 +12279,7 @@
       "get": {
         "operationId": "integrations.syncengine.estimateSyncTime",
         "tags": [
-          "Integrations: Syncengine"
+          "Integrations: Sync Engine"
         ],
         "summary": "Estimate Sync Time",
         "responses": {
@@ -12340,7 +12334,7 @@
       "post": {
         "operationId": "integrations.importmanagement.runImport",
         "tags": [
-          "Integrations: Importmanagement"
+          "Integrations: Import Management"
         ],
         "summary": "Run import for an existing import record (manual execution from details screen)",
         "responses": {
@@ -12392,7 +12386,7 @@
       "post": {
         "operationId": "integrations.importmanagement.cancelImport",
         "tags": [
-          "Integrations: Importmanagement"
+          "Integrations: Import Management"
         ],
         "summary": "Cancel a running import (manual action from admin UI)",
         "responses": {
@@ -12433,7 +12427,7 @@
       "post": {
         "operationId": "integrations.conflictresolution.detectConflicts",
         "tags": [
-          "Integrations: Conflictresolution"
+          "Integrations: Conflict Resolution"
         ],
         "summary": "Detect Conflicts",
         "responses": {
@@ -12487,7 +12481,7 @@
       "post": {
         "operationId": "integrations.conflictresolution.resolveConflict",
         "tags": [
-          "Integrations: Conflictresolution"
+          "Integrations: Conflict Resolution"
         ],
         "summary": "Resolve Conflict",
         "responses": {
@@ -12545,7 +12539,7 @@
       "get": {
         "operationId": "integrations.conflictresolution.getPendingConflicts",
         "tags": [
-          "Integrations: Conflictresolution"
+          "Integrations: Conflict Resolution"
         ],
         "summary": "Get Pending Conflicts",
         "responses": {
@@ -12577,7 +12571,7 @@
       "get": {
         "operationId": "integrations.conflictresolution.getConflictsForRecord",
         "tags": [
-          "Integrations: Conflictresolution"
+          "Integrations: Conflict Resolution"
         ],
         "summary": "Get Conflicts For Record",
         "responses": {
@@ -12627,7 +12621,7 @@
       "get": {
         "operationId": "integrations.conflictresolution.getConflict",
         "tags": [
-          "Integrations: Conflictresolution"
+          "Integrations: Conflict Resolution"
         ],
         "summary": "Get Conflict",
         "responses": {
@@ -12674,7 +12668,7 @@
       "put": {
         "operationId": "integrations.conflictresolution.updateResolutionStrategy",
         "tags": [
-          "Integrations: Conflictresolution"
+          "Integrations: Conflict Resolution"
         ],
         "summary": "Update Resolution Strategy",
         "responses": {
@@ -12732,7 +12726,7 @@
       "get": {
         "operationId": "integrations.conflictresolution.getResolutionHistory",
         "tags": [
-          "Integrations: Conflictresolution"
+          "Integrations: Conflict Resolution"
         ],
         "summary": "Get Resolution History",
         "responses": {
@@ -12782,7 +12776,7 @@
       "post": {
         "operationId": "integrations.conflictresolution.autoResolveConflicts",
         "tags": [
-          "Integrations: Conflictresolution"
+          "Integrations: Conflict Resolution"
         ],
         "summary": "Auto Resolve Conflicts",
         "responses": {
@@ -12817,7 +12811,7 @@
       "post": {
         "operationId": "integrations.conflictresolution.validateResolution",
         "tags": [
-          "Integrations: Conflictresolution"
+          "Integrations: Conflict Resolution"
         ],
         "summary": "Validate Resolution",
         "responses": {
@@ -12882,7 +12876,7 @@
       "post": {
         "operationId": "integrations.conflictresolution.createResolutionRule",
         "tags": [
-          "Integrations: Conflictresolution"
+          "Integrations: Conflict Resolution"
         ],
         "summary": "Create Resolution Rule",
         "responses": {
@@ -12921,7 +12915,7 @@
       "get": {
         "operationId": "integrations.conflictresolution.listResolutionRules",
         "tags": [
-          "Integrations: Conflictresolution"
+          "Integrations: Conflict Resolution"
         ],
         "summary": "List Resolution Rules",
         "responses": {
@@ -12971,7 +12965,7 @@
       "post": {
         "operationId": "integrations.fieldmapping.createMapping",
         "tags": [
-          "Integrations: Fieldmapping"
+          "Integrations: Field Mapping"
         ],
         "summary": "Create Mapping",
         "responses": {
@@ -13010,7 +13004,7 @@
       "get": {
         "operationId": "integrations.fieldmapping.getMapping",
         "tags": [
-          "Integrations: Fieldmapping"
+          "Integrations: Field Mapping"
         ],
         "summary": "Get Mapping",
         "responses": {
@@ -13055,7 +13049,7 @@
       "put": {
         "operationId": "integrations.fieldmapping.updateMapping",
         "tags": [
-          "Integrations: Fieldmapping"
+          "Integrations: Field Mapping"
         ],
         "summary": "Update Mapping",
         "responses": {
@@ -13118,7 +13112,7 @@
       "delete": {
         "operationId": "integrations.fieldmapping.deleteMapping",
         "tags": [
-          "Integrations: Fieldmapping"
+          "Integrations: Field Mapping"
         ],
         "summary": "Delete Mapping",
         "responses": {
@@ -13158,7 +13152,7 @@
       "get": {
         "operationId": "integrations.fieldmapping.getMappingsForConfiguration",
         "tags": [
-          "Integrations: Fieldmapping"
+          "Integrations: Field Mapping"
         ],
         "summary": "Get Mappings For Configuration",
         "responses": {
@@ -13208,7 +13202,7 @@
       "post": {
         "operationId": "integrations.fieldmapping.validateMapping",
         "tags": [
-          "Integrations: Fieldmapping"
+          "Integrations: Field Mapping"
         ],
         "summary": "Validate Mapping",
         "responses": {
@@ -13247,7 +13241,7 @@
       "post": {
         "operationId": "integrations.fieldmapping.testMapping",
         "tags": [
-          "Integrations: Fieldmapping"
+          "Integrations: Field Mapping"
         ],
         "summary": "Test Mapping",
         "responses": {
@@ -13292,7 +13286,7 @@
       "post": {
         "operationId": "integrations.fieldmapping.createTemplate",
         "tags": [
-          "Integrations: Fieldmapping"
+          "Integrations: Field Mapping"
         ],
         "summary": "Create Template",
         "responses": {
@@ -13329,7 +13323,7 @@
       "get": {
         "operationId": "integrations.fieldmapping.getTemplates",
         "tags": [
-          "Integrations: Fieldmapping"
+          "Integrations: Field Mapping"
         ],
         "summary": "Get Templates",
         "responses": {
@@ -13361,7 +13355,7 @@
       "post": {
         "operationId": "integrations.fieldmapping.applyTemplate",
         "tags": [
-          "Integrations: Fieldmapping"
+          "Integrations: Field Mapping"
         ],
         "summary": "Apply Template",
         "responses": {
@@ -13421,7 +13415,7 @@
       "get": {
         "operationId": "integrations.fieldmapping.getMappingStatistics",
         "tags": [
-          "Integrations: Fieldmapping"
+          "Integrations: Field Mapping"
         ],
         "summary": "Get Mapping Statistics",
         "responses": {
@@ -15611,7 +15605,7 @@
       "post": {
         "operationId": "notifications.sendnotification.sendNotification",
         "tags": [
-          "Notifications: Sendnotification"
+          "Notifications: Send Notification"
         ],
         "summary": "Send notification to user with channel routing",
         "responses": {
@@ -15659,7 +15653,7 @@
       "post": {
         "operationId": "notifications.sendnotification.sendBulkNotifications",
         "tags": [
-          "Notifications: Sendnotification"
+          "Notifications: Send Notification"
         ],
         "summary": "Send multiple notifications in batch",
         "responses": {
@@ -15713,7 +15707,7 @@
       "post": {
         "operationId": "notifications.sendnotification.determineRecipients",
         "tags": [
-          "Notifications: Sendnotification"
+          "Notifications: Send Notification"
         ],
         "summary": "Resolve recipients from criteria (role, group, filter)",
         "responses": {
@@ -15766,7 +15760,7 @@
       "post": {
         "operationId": "notifications.sendnotification.trackDeliveryStatus",
         "tags": [
-          "Notifications: Sendnotification"
+          "Notifications: Send Notification"
         ],
         "summary": "Update delivery status for specific channel",
         "responses": {
@@ -15841,7 +15835,7 @@
       "post": {
         "operationId": "notifications.sendnotification.retryFailedNotification",
         "tags": [
-          "Notifications: Sendnotification"
+          "Notifications: Send Notification"
         ],
         "summary": "Retry failed notification delivery",
         "responses": {
@@ -15899,7 +15893,7 @@
       "put": {
         "operationId": "notifications.sendnotification.dismissNotification",
         "tags": [
-          "Notifications: Sendnotification"
+          "Notifications: Send Notification"
         ],
         "summary": "Mark notification as dismissed",
         "responses": {
@@ -15958,7 +15952,7 @@
       "put": {
         "operationId": "notifications.sendnotification.markAsRead",
         "tags": [
-          "Notifications: Sendnotification"
+          "Notifications: Send Notification"
         ],
         "summary": "Mark notification as read with timestamp",
         "responses": {
@@ -16017,7 +16011,7 @@
       "post": {
         "operationId": "notifications.sendnotification.executeNotificationAction",
         "tags": [
-          "Notifications: Sendnotification"
+          "Notifications: Send Notification"
         ],
         "summary": "Handle action button clicks",
         "responses": {
@@ -16081,7 +16075,7 @@
       "get": {
         "operationId": "notifications.sendnotification.getUnreadCount",
         "tags": [
-          "Notifications: Sendnotification"
+          "Notifications: Send Notification"
         ],
         "summary": "Get count of unread notifications for user",
         "responses": {
@@ -16138,7 +16132,7 @@
       "post": {
         "operationId": "notifications.sendnotification.cleanupExpiredNotifications",
         "tags": [
-          "Notifications: Sendnotification"
+          "Notifications: Send Notification"
         ],
         "summary": "Remove expired notifications based on expiry date",
         "responses": {
@@ -16186,7 +16180,7 @@
       "post": {
         "operationId": "notifications.sendnotification.generateNotificationFromTemplate",
         "tags": [
-          "Notifications: Sendnotification"
+          "Notifications: Send Notification"
         ],
         "summary": "Create notification from template with variable substitution",
         "responses": {
@@ -16253,7 +16247,7 @@
       "post": {
         "operationId": "notifications.notificationscheduling.scheduleNotification",
         "tags": [
-          "Notifications: Notificationscheduling"
+          "Notifications: Notification Scheduling"
         ],
         "summary": "Schedule notification for specific time",
         "responses": {
@@ -16320,7 +16314,7 @@
       "post": {
         "operationId": "notifications.notificationscheduling.scheduleRecurringNotification",
         "tags": [
-          "Notifications: Notificationscheduling"
+          "Notifications: Notification Scheduling"
         ],
         "summary": "Set up recurring notification schedule",
         "responses": {
@@ -16391,7 +16385,7 @@
       "post": {
         "operationId": "notifications.notificationscheduling.optimizeDeliveryTime",
         "tags": [
-          "Notifications: Notificationscheduling"
+          "Notifications: Notification Scheduling"
         ],
         "summary": "Determine optimal delivery time based on user engagement",
         "responses": {
@@ -16458,7 +16452,7 @@
       "get": {
         "operationId": "notifications.notificationscheduling.batchScheduledNotifications",
         "tags": [
-          "Notifications: Notificationscheduling"
+          "Notifications: Notification Scheduling"
         ],
         "summary": "Group scheduled notifications for efficient processing",
         "responses": {
@@ -16510,7 +16504,7 @@
       "post": {
         "operationId": "notifications.notificationscheduling.convertToUserTimezone",
         "tags": [
-          "Notifications: Notificationscheduling"
+          "Notifications: Notification Scheduling"
         ],
         "summary": "Convert scheduled time to user's timezone",
         "responses": {
@@ -16578,7 +16572,7 @@
       "delete": {
         "operationId": "notifications.notificationscheduling.cancelScheduledNotification",
         "tags": [
-          "Notifications: Notificationscheduling"
+          "Notifications: Notification Scheduling"
         ],
         "summary": "Cancel scheduled notification before delivery",
         "responses": {
@@ -16617,7 +16611,7 @@
       "put": {
         "operationId": "notifications.notificationscheduling.updateScheduledNotification",
         "tags": [
-          "Notifications: Notificationscheduling"
+          "Notifications: Notification Scheduling"
         ],
         "summary": "Modify scheduled notification",
         "responses": {
@@ -16675,7 +16669,7 @@
       "get": {
         "operationId": "notifications.notificationscheduling.getScheduledNotifications",
         "tags": [
-          "Notifications: Notificationscheduling"
+          "Notifications: Notification Scheduling"
         ],
         "summary": "Get user's scheduled notifications",
         "responses": {
@@ -16735,7 +16729,7 @@
       "post": {
         "operationId": "notifications.notificationscheduling.processScheduledNotifications",
         "tags": [
-          "Notifications: Notificationscheduling"
+          "Notifications: Notification Scheduling"
         ],
         "summary": "Process and send due notifications",
         "responses": {
@@ -16794,7 +16788,7 @@
       "get": {
         "operationId": "notifications.notificationscheduling.previewScheduledNotification",
         "tags": [
-          "Notifications: Notificationscheduling"
+          "Notifications: Notification Scheduling"
         ],
         "summary": "Generate preview of scheduled notification",
         "responses": {
@@ -17212,7 +17206,7 @@
       "get": {
         "operationId": "system.tenantresolution.healthCheckHandler",
         "tags": [
-          "System: Tenantresolution"
+          "System: Tenant Resolution"
         ],
         "summary": "Health check endpoint handler",
         "responses": {
@@ -17240,7 +17234,7 @@
       "post": {
         "operationId": "system.tenantresolution.clearCacheHandler",
         "tags": [
-          "System: Tenantresolution"
+          "System: Tenant Resolution"
         ],
         "summary": "Admin endpoint to clear caches",
         "responses": {
@@ -17268,7 +17262,7 @@
       "get": {
         "operationId": "system.multitenantdatabase.getConnectionStatus",
         "tags": [
-          "System: Multitenantdatabase"
+          "System: Multi Tenant Database"
         ],
         "summary": "Get connection status for health checks",
         "responses": {
@@ -18940,7 +18934,7 @@
       "get": {
         "operationId": "ui.userscreens.getUserScreens",
         "tags": [
-          "Ui: Userscreens"
+          "Ui: User Screens"
         ],
         "summary": "Get User Screens",
         "responses": {
@@ -18984,7 +18978,7 @@
       "post": {
         "operationId": "ui.userscreens.createUserScreen",
         "tags": [
-          "Ui: Userscreens"
+          "Ui: User Screens"
         ],
         "summary": "Create User Screen",
         "responses": {
@@ -19023,7 +19017,7 @@
       "post": {
         "operationId": "ui.userscreens.ensureUserScreen",
         "tags": [
-          "Ui: Userscreens"
+          "Ui: User Screens"
         ],
         "summary": "Ensure User Screen",
         "responses": {
@@ -19062,7 +19056,7 @@
       "delete": {
         "operationId": "ui.userscreens.deleteUserScreen",
         "tags": [
-          "Ui: Userscreens"
+          "Ui: User Screens"
         ],
         "summary": "Delete User Screen",
         "responses": {
@@ -19110,7 +19104,7 @@
       "post": {
         "operationId": "ui.userscreens.createPersonalView",
         "tags": [
-          "Ui: Userscreens"
+          "Ui: User Screens"
         ],
         "summary": "Create Personal View",
         "responses": {
@@ -23664,7 +23658,7 @@
       "post": {
         "operationId": "workflow.scheduledevents.apiScheduleEvent",
         "tags": [
-          "Workflow: Scheduledevents"
+          "Workflow: Scheduled Events"
         ],
         "summary": "POST /workflow/scheduled-events — schedule a generic event",
         "responses": {
@@ -23702,7 +23696,7 @@
       "get": {
         "operationId": "workflow.scheduledevents.apiListScheduledEvents",
         "tags": [
-          "Workflow: Scheduledevents"
+          "Workflow: Scheduled Events"
         ],
         "summary": "GET /workflow/scheduled-events — list filtered events",
         "responses": {
@@ -23753,7 +23747,7 @@
       "post": {
         "operationId": "workflow.scheduledevents.apiScheduleWorkflow",
         "tags": [
-          "Workflow: Scheduledevents"
+          "Workflow: Scheduled Events"
         ],
         "summary": "POST /workflow/scheduled-events/workflow — schedule a workflow-on-record",
         "responses": {
@@ -23793,7 +23787,7 @@
       "post": {
         "operationId": "workflow.scheduledevents.apiCancelScheduledEvent",
         "tags": [
-          "Workflow: Scheduledevents"
+          "Workflow: Scheduled Events"
         ],
         "summary": "POST /workflow/scheduled-events/cancel — cancel one event",
         "responses": {
@@ -23835,7 +23829,7 @@
       "post": {
         "operationId": "workflow.scheduledevents.apiDispatchDueEvents",
         "tags": [
-          "Workflow: Scheduledevents"
+          "Workflow: Scheduled Events"
         ],
         "summary": "POST /workflow/scheduled-events/dispatch — manual tick (ops/tests)",
         "responses": {
@@ -24462,7 +24456,7 @@
       "post": {
         "operationId": "finance.contractorpaymentprocessing.processContractorPayment",
         "tags": [
-          "Finance: Contractorpaymentprocessing"
+          "Finance: Contractor Payment Processing"
         ],
         "summary": "Process contractor payment",
         "responses": {
@@ -24512,7 +24506,7 @@
       "post": {
         "operationId": "finance.contractorpaymentprocessing.syncContractorPaymentMethod",
         "tags": [
-          "Finance: Contractorpaymentprocessing"
+          "Finance: Contractor Payment Processing"
         ],
         "summary": "Sync payment method with payment provider",
         "responses": {
@@ -24578,7 +24572,7 @@
       "post": {
         "operationId": "finance.contractorpaymentprocessing.updateContractorPaymentStatus",
         "tags": [
-          "Finance: Contractorpaymentprocessing"
+          "Finance: Contractor Payment Processing"
         ],
         "summary": "Update contractor payment status",
         "responses": {
@@ -24644,7 +24638,7 @@
       "post": {
         "operationId": "finance.stripeintegration.createPaymentIntent",
         "tags": [
-          "Finance: Stripeintegration"
+          "Finance: Stripe Integration"
         ],
         "summary": "Create Stripe payment intent with automatic payment methods",
         "responses": {
@@ -24710,7 +24704,7 @@
       "post": {
         "operationId": "finance.stripeintegration.createSetupIntent",
         "tags": [
-          "Finance: Stripeintegration"
+          "Finance: Stripe Integration"
         ],
         "summary": "Create Stripe setup intent for saving payment methods",
         "responses": {
@@ -24768,7 +24762,7 @@
       "post": {
         "operationId": "finance.stripeintegration.getAllPaymentMethods",
         "tags": [
-          "Finance: Stripeintegration"
+          "Finance: Stripe Integration"
         ],
         "summary": "List all payment methods for a Stripe customer",
         "responses": {
@@ -24829,7 +24823,7 @@
       "get": {
         "operationId": "finance.stripeintegration.getPaymentMethod",
         "tags": [
-          "Finance: Stripeintegration"
+          "Finance: Stripe Integration"
         ],
         "summary": "Retrieve specific payment method from Stripe",
         "responses": {
@@ -24877,7 +24871,7 @@
       "post": {
         "operationId": "finance.stripeintegration.deletePaymentMethod",
         "tags": [
-          "Finance: Stripeintegration"
+          "Finance: Stripe Integration"
         ],
         "summary": "Detach payment method from Stripe customer",
         "responses": {
@@ -24935,7 +24929,7 @@
       "get": {
         "operationId": "finance.stripeintegration.getIntegrationCustomerRecord",
         "tags": [
-          "Finance: Stripeintegration"
+          "Finance: Stripe Integration"
         ],
         "summary": "Retrieve Stripe customer record",
         "responses": {
@@ -24983,7 +24977,7 @@
       "post": {
         "operationId": "finance.stripeintegration.createCheckoutSession",
         "tags": [
-          "Finance: Stripeintegration"
+          "Finance: Stripe Integration"
         ],
         "summary": "Create embedded checkout session with line items",
         "responses": {
@@ -25041,7 +25035,7 @@
       "post": {
         "operationId": "finance.stripeintegration.createStripeCustomer",
         "tags": [
-          "Finance: Stripeintegration"
+          "Finance: Stripe Integration"
         ],
         "summary": "Create new Stripe customer",
         "responses": {
@@ -25089,7 +25083,7 @@
       "post": {
         "operationId": "finance.customerpaymentprocessing.processCustomerPayment",
         "tags": [
-          "Finance: Customerpaymentprocessing"
+          "Finance: Customer Payment Processing"
         ],
         "summary": "Process customer payment with Stripe",
         "responses": {
@@ -25139,7 +25133,7 @@
       "post": {
         "operationId": "finance.customerpaymentprocessing.syncCustomerPaymentMethod",
         "tags": [
-          "Finance: Customerpaymentprocessing"
+          "Finance: Customer Payment Processing"
         ],
         "summary": "Sync payment method with Stripe",
         "responses": {
@@ -25205,7 +25199,7 @@
       "post": {
         "operationId": "finance.customerpaymentprocessing.updatePaymentStatusFromWebhook",
         "tags": [
-          "Finance: Customerpaymentprocessing"
+          "Finance: Customer Payment Processing"
         ],
         "summary": "Update payment status from Stripe webhook",
         "responses": {
@@ -25255,7 +25249,7 @@
       "post": {
         "operationId": "finance.customerpaymentprocessing.linkPaymentToStripeIntent",
         "tags": [
-          "Finance: Customerpaymentprocessing"
+          "Finance: Customer Payment Processing"
         ],
         "summary": "Link payment record to Stripe payment intent",
         "responses": {
@@ -27856,7 +27850,7 @@
       "get": {
         "operationId": "marketing.webpublishing.getPreview",
         "tags": [
-          "Marketing: Webpublishing"
+          "Marketing: Web Publishing"
         ],
         "summary": "Get Preview",
         "responses": {
@@ -27917,7 +27911,7 @@
       "post": {
         "operationId": "marketing.webpublishing.submitForm",
         "tags": [
-          "Marketing: Webpublishing"
+          "Marketing: Web Publishing"
         ],
         "summary": "Public form submission → create a Lead",
         "responses": {
@@ -27979,7 +27973,7 @@
       "post": {
         "operationId": "marketing.socialconnection.getAuthUrl",
         "tags": [
-          "Marketing: Socialconnection"
+          "Marketing: Social Connection"
         ],
         "summary": "Get Auth Url",
         "responses": {
@@ -28034,7 +28028,7 @@
       "post": {
         "operationId": "marketing.socialconnection.completeOAuth",
         "tags": [
-          "Marketing: Socialconnection"
+          "Marketing: Social Connection"
         ],
         "summary": "OAuth completion. Called by the SPA popup-callback page (`/auth/social-callback`),",
         "responses": {
@@ -28083,7 +28077,7 @@
       "post": {
         "operationId": "marketing.socialconnection.syncProfiles",
         "tags": [
-          "Marketing: Socialconnection"
+          "Marketing: Social Connection"
         ],
         "summary": "Sync Profiles",
         "responses": {
@@ -28130,7 +28124,7 @@
       "post": {
         "operationId": "marketing.socialconnection.disconnect",
         "tags": [
-          "Marketing: Socialconnection"
+          "Marketing: Social Connection"
         ],
         "summary": "Disconnect",
         "responses": {
@@ -28178,7 +28172,7 @@
       "get": {
         "operationId": "marketing.socialconnection.getConnectionStatus",
         "tags": [
-          "Marketing: Socialconnection"
+          "Marketing: Social Connection"
         ],
         "summary": "Get Connection Status",
         "responses": {
@@ -28223,7 +28217,7 @@
       "post": {
         "operationId": "marketing.socialpublishing.createPost",
         "tags": [
-          "Marketing: Socialpublishing"
+          "Marketing: Social Publishing"
         ],
         "summary": "Create Post",
         "responses": {
@@ -28281,7 +28275,7 @@
       "put": {
         "operationId": "marketing.socialpublishing.updatePost",
         "tags": [
-          "Marketing: Socialpublishing"
+          "Marketing: Social Publishing"
         ],
         "summary": "Update Post",
         "responses": {
@@ -28337,7 +28331,7 @@
       "delete": {
         "operationId": "marketing.socialpublishing.deletePost",
         "tags": [
-          "Marketing: Socialpublishing"
+          "Marketing: Social Publishing"
         ],
         "summary": "Delete Post",
         "responses": {
@@ -28377,7 +28371,7 @@
       "post": {
         "operationId": "marketing.socialpublishing.upsertVariant",
         "tags": [
-          "Marketing: Socialpublishing"
+          "Marketing: Social Publishing"
         ],
         "summary": "Upsert Variant",
         "responses": {
@@ -28441,7 +28435,7 @@
       "delete": {
         "operationId": "marketing.socialpublishing.deleteVariant",
         "tags": [
-          "Marketing: Socialpublishing"
+          "Marketing: Social Publishing"
         ],
         "summary": "Delete Variant",
         "responses": {
@@ -28481,7 +28475,7 @@
       "post": {
         "operationId": "marketing.socialpublishing.uploadMediaToProvider",
         "tags": [
-          "Marketing: Socialpublishing"
+          "Marketing: Social Publishing"
         ],
         "summary": "Upload Media To Provider",
         "responses": {
@@ -28547,7 +28541,7 @@
       "post": {
         "operationId": "marketing.socialpublishing.validatePost",
         "tags": [
-          "Marketing: Socialpublishing"
+          "Marketing: Social Publishing"
         ],
         "summary": "Validate Post",
         "responses": {
@@ -28604,7 +28598,7 @@
       "post": {
         "operationId": "marketing.socialpublishing.schedulePost",
         "tags": [
-          "Marketing: Socialpublishing"
+          "Marketing: Social Publishing"
         ],
         "summary": "Schedule Post",
         "responses": {
@@ -28660,7 +28654,7 @@
       "post": {
         "operationId": "marketing.socialpublishing.publishNow",
         "tags": [
-          "Marketing: Socialpublishing"
+          "Marketing: Social Publishing"
         ],
         "summary": "Publish Now",
         "responses": {
@@ -28716,7 +28710,7 @@
       "post": {
         "operationId": "marketing.socialpublishing.cancelScheduledPost",
         "tags": [
-          "Marketing: Socialpublishing"
+          "Marketing: Social Publishing"
         ],
         "summary": "Cancel Scheduled Post",
         "responses": {
@@ -28773,7 +28767,7 @@
       "post": {
         "operationId": "marketing.socialpublishing.retryFailedJobs",
         "tags": [
-          "Marketing: Socialpublishing"
+          "Marketing: Social Publishing"
         ],
         "summary": "Retry Failed Jobs",
         "responses": {
@@ -28830,7 +28824,7 @@
       "post": {
         "operationId": "marketing.socialpublishing.approvePost",
         "tags": [
-          "Marketing: Socialpublishing"
+          "Marketing: Social Publishing"
         ],
         "summary": "Approve Post",
         "responses": {
@@ -28888,7 +28882,7 @@
       "post": {
         "operationId": "marketing.socialpublishjob.claimDueJobs",
         "tags": [
-          "Marketing: Socialpublishjob"
+          "Marketing: Social Publish Job"
         ],
         "summary": "Claim Due Jobs",
         "responses": {
@@ -28931,7 +28925,7 @@
       "post": {
         "operationId": "marketing.socialpublishjob.processJob",
         "tags": [
-          "Marketing: Socialpublishjob"
+          "Marketing: Social Publish Job"
         ],
         "summary": "Process Job",
         "responses": {
@@ -28981,7 +28975,7 @@
       "post": {
         "operationId": "marketing.socialanalytics.syncPostAnalytics",
         "tags": [
-          "Marketing: Socialanalytics"
+          "Marketing: Social Analytics"
         ],
         "summary": "Sync Post Analytics",
         "responses": {
@@ -29031,7 +29025,7 @@
       "post": {
         "operationId": "marketing.socialanalytics.syncProfileAnalytics",
         "tags": [
-          "Marketing: Socialanalytics"
+          "Marketing: Social Analytics"
         ],
         "summary": "Sync Profile Analytics",
         "responses": {
@@ -29081,7 +29075,7 @@
       "post": {
         "operationId": "marketing.socialanalytics.syncAllDueAnalytics",
         "tags": [
-          "Marketing: Socialanalytics"
+          "Marketing: Social Analytics"
         ],
         "summary": "Sync All Due Analytics",
         "responses": {
@@ -29122,7 +29116,7 @@
       "get": {
         "operationId": "marketing.socialanalytics.getCampaignSocialPerformance",
         "tags": [
-          "Marketing: Socialanalytics"
+          "Marketing: Social Analytics"
         ],
         "summary": "Get Campaign Social Performance",
         "responses": {
@@ -29170,7 +29164,7 @@
       "get": {
         "operationId": "marketing.socialanalytics.getPostPerformance",
         "tags": [
-          "Marketing: Socialanalytics"
+          "Marketing: Social Analytics"
         ],
         "summary": "Get Post Performance",
         "responses": {
@@ -29224,7 +29218,7 @@
       "post": {
         "operationId": "marketing.socialinbox.syncInboundMessages",
         "tags": [
-          "Marketing: Socialinbox"
+          "Marketing: Social Inbox"
         ],
         "summary": "Sync Inbound Messages",
         "responses": {
@@ -29274,7 +29268,7 @@
       "post": {
         "operationId": "marketing.socialinbox.syncAllInboundMessages",
         "tags": [
-          "Marketing: Socialinbox"
+          "Marketing: Social Inbox"
         ],
         "summary": "Sync All Inbound Messages",
         "responses": {
@@ -29317,7 +29311,7 @@
       "post": {
         "operationId": "marketing.socialinbox.handleWebhook",
         "tags": [
-          "Marketing: Socialinbox"
+          "Marketing: Social Inbox"
         ],
         "summary": "Handle Webhook",
         "responses": {
@@ -29368,7 +29362,7 @@
       "post": {
         "operationId": "marketing.socialinbox.assignMessage",
         "tags": [
-          "Marketing: Socialinbox"
+          "Marketing: Social Inbox"
         ],
         "summary": "Assign Message",
         "responses": {
@@ -29408,7 +29402,7 @@
       "post": {
         "operationId": "marketing.socialinbox.resolveMessage",
         "tags": [
-          "Marketing: Socialinbox"
+          "Marketing: Social Inbox"
         ],
         "summary": "Resolve Message",
         "responses": {
@@ -29448,7 +29442,7 @@
       "post": {
         "operationId": "marketing.socialinbox.markRead",
         "tags": [
-          "Marketing: Socialinbox"
+          "Marketing: Social Inbox"
         ],
         "summary": "Mark Read",
         "responses": {
@@ -29491,7 +29485,7 @@
       "post": {
         "operationId": "marketing.socialinbox.markSpam",
         "tags": [
-          "Marketing: Socialinbox"
+          "Marketing: Social Inbox"
         ],
         "summary": "Mark Spam",
         "responses": {
@@ -29534,7 +29528,7 @@
       "post": {
         "operationId": "marketing.socialinbox.linkIdentityToContact",
         "tags": [
-          "Marketing: Socialinbox"
+          "Marketing: Social Inbox"
         ],
         "summary": "Link Identity To Contact",
         "responses": {
@@ -29582,7 +29576,7 @@
       "post": {
         "operationId": "marketing.socialinbox.createCrmActivityFromMessage",
         "tags": [
-          "Marketing: Socialinbox"
+          "Marketing: Social Inbox"
         ],
         "summary": "Create Crm Activity From Message",
         "responses": {
@@ -29649,7 +29643,7 @@
       "post": {
         "operationId": "marketing.sendmarketingemail.sendMarketingEmail",
         "tags": [
-          "Marketing: Sendmarketingemail"
+          "Marketing: Send Marketing Email"
         ],
         "summary": "Send Marketing Email",
         "responses": {
@@ -37693,7 +37687,7 @@
       "post": {
         "operationId": "sales.accountmanagement.provisionEnterpriseAccount",
         "tags": [
-          "Sales: Accountmanagement"
+          "Sales: Account Management"
         ],
         "summary": "Provision new enterprise account",
         "responses": {
@@ -37733,7 +37727,7 @@
       "post": {
         "operationId": "sales.accountmanagement.suspendAccount",
         "tags": [
-          "Sales: Accountmanagement"
+          "Sales: Account Management"
         ],
         "summary": "Suspend enterprise account",
         "responses": {
@@ -37783,7 +37777,7 @@
       "post": {
         "operationId": "sales.accountmanagement.reactivateAccount",
         "tags": [
-          "Sales: Accountmanagement"
+          "Sales: Account Management"
         ],
         "summary": "Reactivate suspended account",
         "responses": {
@@ -37823,7 +37817,7 @@
       "post": {
         "operationId": "sales.accountmanagement.terminateAccount",
         "tags": [
-          "Sales: Accountmanagement"
+          "Sales: Account Management"
         ],
         "summary": "Terminate enterprise account",
         "responses": {
@@ -37863,7 +37857,7 @@
       "put": {
         "operationId": "sales.accountmanagement.updateAccountFeatures",
         "tags": [
-          "Sales: Accountmanagement"
+          "Sales: Account Management"
         ],
         "summary": "Update account feature flags",
         "responses": {
@@ -37913,7 +37907,7 @@
       "get": {
         "operationId": "sales.accountmanagement.checkAccountLimits",
         "tags": [
-          "Sales: Accountmanagement"
+          "Sales: Account Management"
         ],
         "summary": "Check account resource limits",
         "responses": {
@@ -37961,7 +37955,7 @@
       "post": {
         "operationId": "sales.accountmanagement.extendTrial",
         "tags": [
-          "Sales: Accountmanagement"
+          "Sales: Account Management"
         ],
         "summary": "Extend trial period",
         "responses": {
@@ -38011,7 +38005,7 @@
       "post": {
         "operationId": "sales.accountmanagement.validateAccountKey",
         "tags": [
-          "Sales: Accountmanagement"
+          "Sales: Account Management"
         ],
         "summary": "Validate account key",
         "responses": {
@@ -38051,7 +38045,7 @@
       "get": {
         "operationId": "sales.workspacemanagement.getUserWorkspaces",
         "tags": [
-          "Sales: Workspacemanagement"
+          "Sales: Workspace Management"
         ],
         "summary": "Get workspaces accessible to a user based on their role assignments",
         "responses": {
@@ -38102,7 +38096,7 @@
       "get": {
         "operationId": "sales.workspacemanagement.getUserActiveWorkspace",
         "tags": [
-          "Sales: Workspacemanagement"
+          "Sales: Workspace Management"
         ],
         "summary": "Get user's active workspace",
         "responses": {
@@ -38155,7 +38149,7 @@
       "put": {
         "operationId": "sales.workspacemanagement.updateUserActiveWorkspace",
         "tags": [
-          "Sales: Workspacemanagement"
+          "Sales: Workspace Management"
         ],
         "summary": "Update user's active workspace",
         "responses": {
@@ -38217,7 +38211,7 @@
       "get": {
         "operationId": "sales.workspacemanagement.getWorkspaceNavigation",
         "tags": [
-          "Sales: Workspacemanagement"
+          "Sales: Workspace Management"
         ],
         "summary": "Get workspace navigation as hierarchical tree",
         "responses": {
@@ -38268,7 +38262,7 @@
       "post": {
         "operationId": "sales.workspacemanagement.cloneWorkspace",
         "tags": [
-          "Sales: Workspacemanagement"
+          "Sales: Workspace Management"
         ],
         "summary": "Clone workspace with navigation",
         "responses": {
@@ -38326,7 +38320,7 @@
       "put": {
         "operationId": "sales.workspacemanagement.reorderNavigationItems",
         "tags": [
-          "Sales: Workspacemanagement"
+          "Sales: Workspace Management"
         ],
         "summary": "Reorder navigation items",
         "responses": {
@@ -38379,7 +38373,7 @@
       "get": {
         "operationId": "sales.workspacemanagement.getUserRoleDefaultWorkspace",
         "tags": [
-          "Sales: Workspacemanagement"
+          "Sales: Workspace Management"
         ],
         "summary": "Get user's role default workspace",
         "responses": {
@@ -38434,7 +38428,7 @@
       "post": {
         "operationId": "sales.linkedinprofiles.authenticateWithLinkedIn",
         "tags": [
-          "Sales: Linkedinprofiles"
+          "Sales: Linkedin Profiles"
         ],
         "summary": "Authenticate with LinkedIn API",
         "responses": {
@@ -38474,7 +38468,7 @@
       "post": {
         "operationId": "sales.linkedinprofiles.syncProfileFromLinkedIn",
         "tags": [
-          "Sales: Linkedinprofiles"
+          "Sales: Linkedin Profiles"
         ],
         "summary": "Sync profile from LinkedIn",
         "responses": {
@@ -38514,7 +38508,7 @@
       "get": {
         "operationId": "sales.linkedinprofiles.getLinkedInPosts",
         "tags": [
-          "Sales: Linkedinprofiles"
+          "Sales: Linkedin Profiles"
         ],
         "summary": "Get LinkedIn posts",
         "responses": {
@@ -38560,7 +38554,7 @@
       "post": {
         "operationId": "sales.linkedinprofiles.publishLinkedInPost",
         "tags": [
-          "Sales: Linkedinprofiles"
+          "Sales: Linkedin Profiles"
         ],
         "summary": "Publish LinkedIn post",
         "responses": {
@@ -38600,7 +38594,7 @@
       "get": {
         "operationId": "sales.linkedinprofiles.getLinkedInFollowers",
         "tags": [
-          "Sales: Linkedinprofiles"
+          "Sales: Linkedin Profiles"
         ],
         "summary": "Get LinkedIn followers",
         "responses": {
@@ -38640,7 +38634,7 @@
       "get": {
         "operationId": "sales.linkedinprofiles.getLinkedInEngagementMetrics",
         "tags": [
-          "Sales: Linkedinprofiles"
+          "Sales: Linkedin Profiles"
         ],
         "summary": "Get LinkedIn engagement metrics",
         "responses": {
@@ -38688,7 +38682,7 @@
       "post": {
         "operationId": "sales.linkedinprofiles.refreshLinkedInToken",
         "tags": [
-          "Sales: Linkedinprofiles"
+          "Sales: Linkedin Profiles"
         ],
         "summary": "Refresh LinkedIn token",
         "responses": {
@@ -38728,7 +38722,7 @@
       "get": {
         "operationId": "sales.linkedinprofiles.validateLinkedInConnection",
         "tags": [
-          "Sales: Linkedinprofiles"
+          "Sales: Linkedin Profiles"
         ],
         "summary": "Validate LinkedIn connection",
         "responses": {
@@ -38768,7 +38762,7 @@
       "post": {
         "operationId": "sales.googlebusinessprofiles.authenticateWithGoogle",
         "tags": [
-          "Sales: Googlebusinessprofiles"
+          "Sales: Google Business Profiles"
         ],
         "summary": "Authenticate with Google Business API",
         "responses": {
@@ -38808,7 +38802,7 @@
       "post": {
         "operationId": "sales.googlebusinessprofiles.syncProfileFromGoogle",
         "tags": [
-          "Sales: Googlebusinessprofiles"
+          "Sales: Google Business Profiles"
         ],
         "summary": "Sync profile from Google",
         "responses": {
@@ -38848,7 +38842,7 @@
       "post": {
         "operationId": "sales.googlebusinessprofiles.syncProfileToGoogle",
         "tags": [
-          "Sales: Googlebusinessprofiles"
+          "Sales: Google Business Profiles"
         ],
         "summary": "Sync profile to Google",
         "responses": {
@@ -38888,7 +38882,7 @@
       "get": {
         "operationId": "sales.googlebusinessprofiles.getGoogleReviews",
         "tags": [
-          "Sales: Googlebusinessprofiles"
+          "Sales: Google Business Profiles"
         ],
         "summary": "Get Google reviews",
         "responses": {
@@ -38936,7 +38930,7 @@
       "post": {
         "operationId": "sales.googlebusinessprofiles.respondToGoogleReview",
         "tags": [
-          "Sales: Googlebusinessprofiles"
+          "Sales: Google Business Profiles"
         ],
         "summary": "Respond to Google review",
         "responses": {
@@ -38986,7 +38980,7 @@
       "get": {
         "operationId": "sales.googlebusinessprofiles.getProfileInsights",
         "tags": [
-          "Sales: Googlebusinessprofiles"
+          "Sales: Google Business Profiles"
         ],
         "summary": "Get profile insights",
         "responses": {
@@ -39034,7 +39028,7 @@
       "post": {
         "operationId": "sales.googlebusinessprofiles.refreshGoogleToken",
         "tags": [
-          "Sales: Googlebusinessprofiles"
+          "Sales: Google Business Profiles"
         ],
         "summary": "Refresh Google token",
         "responses": {
@@ -39074,7 +39068,7 @@
       "get": {
         "operationId": "sales.googlebusinessprofiles.validateGoogleConnection",
         "tags": [
-          "Sales: Googlebusinessprofiles"
+          "Sales: Google Business Profiles"
         ],
         "summary": "Validate Google connection",
         "responses": {

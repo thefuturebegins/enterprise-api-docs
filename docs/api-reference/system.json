@@ -7,13 +7,13 @@
   },
   "tags": [
     {
-      "name": "System: Multitenantdatabase"
+      "name": "System: Multi Tenant Database"
     },
     {
       "name": "System: Settings"
     },
     {
-      "name": "System: Tenantresolution"
+      "name": "System: Tenant Resolution"
     },
     {
       "name": "System: Job Histories"
@@ -30,7 +30,7 @@
       "get": {
         "operationId": "system.tenantresolution.healthCheckHandler",
         "tags": [
-          "System: Tenantresolution"
+          "System: Tenant Resolution"
         ],
         "summary": "Health check endpoint handler",
         "responses": {
@@ -58,7 +58,7 @@
       "post": {
         "operationId": "system.tenantresolution.clearCacheHandler",
         "tags": [
-          "System: Tenantresolution"
+          "System: Tenant Resolution"
         ],
         "summary": "Admin endpoint to clear caches",
         "responses": {
@@ -86,7 +86,7 @@
       "get": {
         "operationId": "system.multitenantdatabase.getConnectionStatus",
         "tags": [
-          "System: Multitenantdatabase"
+          "System: Multi Tenant Database"
         ],
         "summary": "Get connection status for health checks",
         "responses": {

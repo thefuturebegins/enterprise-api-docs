@@ -13,7 +13,7 @@
       "name": "Identity: Oauthhandlers"
     },
     {
-      "name": "Identity: Usermanagement"
+      "name": "Identity: User Management"
     },
     {
       "name": "Identity: Contractors"
@@ -45,7 +45,7 @@
       "post": {
         "operationId": "identity.usermanagement.uploadUserAvatar",
         "tags": [
-          "Identity: Usermanagement"
+          "Identity: User Management"
         ],
         "summary": "Upload or update user avatar",
         "responses": {
@@ -101,7 +101,7 @@
       "delete": {
         "operationId": "identity.usermanagement.deleteUserAvatar",
         "tags": [
-          "Identity: Usermanagement"
+          "Identity: User Management"
         ],
         "summary": "Delete user avatar and clean up files",
         "responses": {

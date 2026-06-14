@@ -16,7 +16,7 @@
       "name": "Ui: Screens"
     },
     {
-      "name": "Ui: Userscreens"
+      "name": "Ui: User Screens"
     },
     {
       "name": "Ui: Workspaces"
@@ -77,9 +77,6 @@
     },
     {
       "name": "Ui: Support Tickets"
-    },
-    {
-      "name": "Ui: User Screens"
     }
   ],
   "paths": {
@@ -865,7 +862,7 @@
       "get": {
         "operationId": "ui.userscreens.getUserScreens",
         "tags": [
-          "Ui: Userscreens"
+          "Ui: User Screens"
         ],
         "summary": "Get User Screens",
         "responses": {
@@ -909,7 +906,7 @@
       "post": {
         "operationId": "ui.userscreens.createUserScreen",
         "tags": [
-          "Ui: Userscreens"
+          "Ui: User Screens"
         ],
         "summary": "Create User Screen",
         "responses": {
@@ -948,7 +945,7 @@
       "post": {
         "operationId": "ui.userscreens.ensureUserScreen",
         "tags": [
-          "Ui: Userscreens"
+          "Ui: User Screens"
         ],
         "summary": "Ensure User Screen",
         "responses": {
@@ -987,7 +984,7 @@
       "delete": {
         "operationId": "ui.userscreens.deleteUserScreen",
         "tags": [
-          "Ui: Userscreens"
+          "Ui: User Screens"
         ],
         "summary": "Delete User Screen",
         "responses": {
@@ -1035,7 +1032,7 @@
       "post": {
         "operationId": "ui.userscreens.createPersonalView",
         "tags": [
-          "Ui: Userscreens"
+          "Ui: User Screens"
         ],
         "summary": "Create Personal View",
         "responses": {

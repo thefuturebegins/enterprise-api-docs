@@ -7,7 +7,7 @@
   },
   "tags": [
     {
-      "name": "Sales: Accountmanagement"
+      "name": "Sales: Account Management"
     },
     {
       "name": "Sales: Campaigns"
@@ -16,22 +16,22 @@
       "name": "Sales: Contacts"
     },
     {
-      "name": "Sales: Googlebusinessprofiles"
+      "name": "Sales: Google Business Profiles"
     },
     {
-      "name": "Sales: Leadmanagement"
+      "name": "Sales: Lead Management"
     },
     {
-      "name": "Sales: Leadnurturing"
+      "name": "Sales: Lead Nurturing"
     },
     {
-      "name": "Sales: Linkedinprofiles"
+      "name": "Sales: Linkedin Profiles"
     },
     {
       "name": "Sales: Opportunities"
     },
     {
-      "name": "Sales: Workspacemanagement"
+      "name": "Sales: Workspace Management"
     },
     {
       "name": "Sales: Account Files"
@@ -183,7 +183,7 @@
       "post": {
         "operationId": "sales.accountmanagement.provisionEnterpriseAccount",
         "tags": [
-          "Sales: Accountmanagement"
+          "Sales: Account Management"
         ],
         "summary": "Provision new enterprise account",
         "responses": {
@@ -223,7 +223,7 @@
       "post": {
         "operationId": "sales.accountmanagement.suspendAccount",
         "tags": [
-          "Sales: Accountmanagement"
+          "Sales: Account Management"
         ],
         "summary": "Suspend enterprise account",
         "responses": {
@@ -273,7 +273,7 @@
       "post": {
         "operationId": "sales.accountmanagement.reactivateAccount",
         "tags": [
-          "Sales: Accountmanagement"
+          "Sales: Account Management"
         ],
         "summary": "Reactivate suspended account",
         "responses": {
@@ -313,7 +313,7 @@
       "post": {
         "operationId": "sales.accountmanagement.terminateAccount",
         "tags": [
-          "Sales: Accountmanagement"
+          "Sales: Account Management"
         ],
         "summary": "Terminate enterprise account",
         "responses": {
@@ -353,7 +353,7 @@
       "put": {
         "operationId": "sales.accountmanagement.updateAccountFeatures",
         "tags": [
-          "Sales: Accountmanagement"
+          "Sales: Account Management"
         ],
         "summary": "Update account feature flags",
         "responses": {
@@ -403,7 +403,7 @@
       "get": {
         "operationId": "sales.accountmanagement.checkAccountLimits",
         "tags": [
-          "Sales: Accountmanagement"
+          "Sales: Account Management"
         ],
         "summary": "Check account resource limits",
         "responses": {
@@ -451,7 +451,7 @@
       "post": {
         "operationId": "sales.accountmanagement.extendTrial",
         "tags": [
-          "Sales: Accountmanagement"
+          "Sales: Account Management"
         ],
         "summary": "Extend trial period",
         "responses": {
@@ -501,7 +501,7 @@
       "post": {
         "operationId": "sales.accountmanagement.validateAccountKey",
         "tags": [
-          "Sales: Accountmanagement"
+          "Sales: Account Management"
         ],
         "summary": "Validate account key",
         "responses": {
@@ -541,7 +541,7 @@
       "get": {
         "operationId": "sales.workspacemanagement.getUserWorkspaces",
         "tags": [
-          "Sales: Workspacemanagement"
+          "Sales: Workspace Management"
         ],
         "summary": "Get workspaces accessible to a user based on their role assignments",
         "responses": {
@@ -592,7 +592,7 @@
       "get": {
         "operationId": "sales.workspacemanagement.getUserActiveWorkspace",
         "tags": [
-          "Sales: Workspacemanagement"
+          "Sales: Workspace Management"
         ],
         "summary": "Get user's active workspace",
         "responses": {
@@ -645,7 +645,7 @@
       "put": {
         "operationId": "sales.workspacemanagement.updateUserActiveWorkspace",
         "tags": [
-          "Sales: Workspacemanagement"
+          "Sales: Workspace Management"
         ],
         "summary": "Update user's active workspace",
         "responses": {
@@ -707,7 +707,7 @@
       "get": {
         "operationId": "sales.workspacemanagement.getWorkspaceNavigation",
         "tags": [
-          "Sales: Workspacemanagement"
+          "Sales: Workspace Management"
         ],
         "summary": "Get workspace navigation as hierarchical tree",
         "responses": {
@@ -758,7 +758,7 @@
       "post": {
         "operationId": "sales.workspacemanagement.cloneWorkspace",
         "tags": [
-          "Sales: Workspacemanagement"
+          "Sales: Workspace Management"
         ],
         "summary": "Clone workspace with navigation",
         "responses": {
@@ -816,7 +816,7 @@
       "put": {
         "operationId": "sales.workspacemanagement.reorderNavigationItems",
         "tags": [
-          "Sales: Workspacemanagement"
+          "Sales: Workspace Management"
         ],
         "summary": "Reorder navigation items",
         "responses": {
@@ -869,7 +869,7 @@
       "get": {
         "operationId": "sales.workspacemanagement.getUserRoleDefaultWorkspace",
         "tags": [
-          "Sales: Workspacemanagement"
+          "Sales: Workspace Management"
         ],
         "summary": "Get user's role default workspace",
         "responses": {
@@ -924,7 +924,7 @@
       "post": {
         "operationId": "sales.linkedinprofiles.authenticateWithLinkedIn",
         "tags": [
-          "Sales: Linkedinprofiles"
+          "Sales: Linkedin Profiles"
         ],
         "summary": "Authenticate with LinkedIn API",
         "responses": {
@@ -964,7 +964,7 @@
       "post": {
         "operationId": "sales.linkedinprofiles.syncProfileFromLinkedIn",
         "tags": [
-          "Sales: Linkedinprofiles"
+          "Sales: Linkedin Profiles"
         ],
         "summary": "Sync profile from LinkedIn",
         "responses": {
@@ -1004,7 +1004,7 @@
       "get": {
         "operationId": "sales.linkedinprofiles.getLinkedInPosts",
         "tags": [
-          "Sales: Linkedinprofiles"
+          "Sales: Linkedin Profiles"
         ],
         "summary": "Get LinkedIn posts",
         "responses": {
@@ -1050,7 +1050,7 @@
       "post": {
         "operationId": "sales.linkedinprofiles.publishLinkedInPost",
         "tags": [
-          "Sales: Linkedinprofiles"
+          "Sales: Linkedin Profiles"
         ],
         "summary": "Publish LinkedIn post",
         "responses": {
@@ -1090,7 +1090,7 @@
       "get": {
         "operationId": "sales.linkedinprofiles.getLinkedInFollowers",
         "tags": [
-          "Sales: Linkedinprofiles"
+          "Sales: Linkedin Profiles"
         ],
         "summary": "Get LinkedIn followers",
         "responses": {
@@ -1130,7 +1130,7 @@
       "get": {
         "operationId": "sales.linkedinprofiles.getLinkedInEngagementMetrics",
         "tags": [
-          "Sales: Linkedinprofiles"
+          "Sales: Linkedin Profiles"
         ],
         "summary": "Get LinkedIn engagement metrics",
         "responses": {
@@ -1178,7 +1178,7 @@
       "post": {
         "operationId": "sales.linkedinprofiles.refreshLinkedInToken",
         "tags": [
-          "Sales: Linkedinprofiles"
+          "Sales: Linkedin Profiles"
         ],
         "summary": "Refresh LinkedIn token",
         "responses": {
@@ -1218,7 +1218,7 @@
       "get": {
         "operationId": "sales.linkedinprofiles.validateLinkedInConnection",
         "tags": [
-          "Sales: Linkedinprofiles"
+          "Sales: Linkedin Profiles"
         ],
         "summary": "Validate LinkedIn connection",
         "responses": {
@@ -1258,7 +1258,7 @@
       "post": {
         "operationId": "sales.googlebusinessprofiles.authenticateWithGoogle",
         "tags": [
-          "Sales: Googlebusinessprofiles"
+          "Sales: Google Business Profiles"
         ],
         "summary": "Authenticate with Google Business API",
         "responses": {
@@ -1298,7 +1298,7 @@
       "post": {
         "operationId": "sales.googlebusinessprofiles.syncProfileFromGoogle",
         "tags": [
-          "Sales: Googlebusinessprofiles"
+          "Sales: Google Business Profiles"
         ],
         "summary": "Sync profile from Google",
         "responses": {
@@ -1338,7 +1338,7 @@
       "post": {
         "operationId": "sales.googlebusinessprofiles.syncProfileToGoogle",
         "tags": [
-          "Sales: Googlebusinessprofiles"
+          "Sales: Google Business Profiles"
         ],
         "summary": "Sync profile to Google",
         "responses": {
@@ -1378,7 +1378,7 @@
       "get": {
         "operationId": "sales.googlebusinessprofiles.getGoogleReviews",
         "tags": [
-          "Sales: Googlebusinessprofiles"
+          "Sales: Google Business Profiles"
         ],
         "summary": "Get Google reviews",
         "responses": {
@@ -1426,7 +1426,7 @@
       "post": {
         "operationId": "sales.googlebusinessprofiles.respondToGoogleReview",
         "tags": [
-          "Sales: Googlebusinessprofiles"
+          "Sales: Google Business Profiles"
         ],
         "summary": "Respond to Google review",
         "responses": {
@@ -1476,7 +1476,7 @@
       "get": {
         "operationId": "sales.googlebusinessprofiles.getProfileInsights",
         "tags": [
-          "Sales: Googlebusinessprofiles"
+          "Sales: Google Business Profiles"
         ],
         "summary": "Get profile insights",
         "responses": {
@@ -1524,7 +1524,7 @@
       "post": {
         "operationId": "sales.googlebusinessprofiles.refreshGoogleToken",
         "tags": [
-          "Sales: Googlebusinessprofiles"
+          "Sales: Google Business Profiles"
         ],
         "summary": "Refresh Google token",
         "responses": {
@@ -1564,7 +1564,7 @@
       "get": {
         "operationId": "sales.googlebusinessprofiles.validateGoogleConnection",
         "tags": [
-          "Sales: Googlebusinessprofiles"
+          "Sales: Google Business Profiles"
         ],
         "summary": "Validate Google connection",
         "responses": {
