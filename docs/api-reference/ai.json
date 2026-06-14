@@ -1,7 +1,7 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "ai API",
+    "title": "AI API",
     "version": "1.0.7",
     "description": "Language model completions, streaming chat, image generation, and image search across OpenAI, Anthropic, and Gemini providers."
   },

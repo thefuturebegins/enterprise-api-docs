@@ -1,7 +1,7 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Enterprise API",
+    "title": "Enterprise API \u2014 All Modules",
     "version": "0.0.0",
     "description": "Complete API reference for the Enterprise platform \u2014 all modules, all endpoints, all schemas in a single document.\n\nFor per-module documentation with introductions and section lists, use the individual module API references in the API Reference tab."
   },

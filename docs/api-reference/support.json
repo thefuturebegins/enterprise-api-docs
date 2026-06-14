@@ -1,7 +1,7 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "support API",
+    "title": "Support API",
     "version": "0.0.0",
     "description": "Support documentation management \u2014 articles, FAQs, and knowledge base content."
   },

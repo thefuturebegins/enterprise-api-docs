@@ -1,7 +1,7 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "pipelines API",
+    "title": "Pipelines API",
     "version": "1.0.6",
     "description": "Pipeline orchestration infrastructure for defining and monitoring data processing pipelines.\n\n## Sections\n\n- [Pipelines](#pipelines)"
   },

@@ -1,7 +1,7 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "customerSuccess API",
+    "title": "Customer Success API",
     "version": "0.0.0",
     "description": "Post-sale customer relationship management: renewals, health scores, success plans, and escalation tracking."
   },

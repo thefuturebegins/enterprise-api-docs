@@ -1,7 +1,7 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "notifications API",
+    "title": "Notifications API",
     "version": "1.0.7",
     "description": "In-app and push notification delivery \u2014 immediate sends, scheduled dispatches, and per-user inbox management.\n\n## Sections\n\n- [Notification Scheduling](#notification-scheduling)\n- [Notifications](#notifications)\n- [Send Notification](#send-notification)"
   },

@@ -1,7 +1,7 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "ui API",
+    "title": "UI API",
     "version": "1.0.8",
     "description": "Application shell management: screens, workspaces, dashboards, components, support tickets, and product announcements.\n\n## Sections\n\n- [Components](#components)\n- [Dashboards](#dashboards)\n- [Drafts](#drafts)\n- [Enterprise Product Announcement Files](#enterprise-product-announcement-files)\n- [Enterprise Product Announcement Notes](#enterprise-product-announcement-notes)\n- [Enterprise Product Announcement Tasks](#enterprise-product-announcement-tasks)\n- [Enterprise Product Announcements](#enterprise-product-announcements)\n- [Record Recent Views](#record-recent-views)\n- [Registered Components](#registered-components)\n- [Screen Actions](#screen-actions)\n- [Screen Components](#screen-components)\n- [Screen Files](#screen-files)\n- [Screen Notes](#screen-notes)\n- [Screen Statuses](#screen-statuses)\n- [Screen Tasks](#screen-tasks)\n- [Screens](#screens)\n- [Settings](#settings)\n- [Support Ticket Files](#support-ticket-files)\n- [Support Ticket Notes](#support-ticket-notes)\n- [Support Ticket Resolutions](#support-ticket-resolutions)\n- [Support Ticket Tasks](#support-ticket-tasks)\n- [Support Tickets](#support-tickets)\n- [User Screens](#user-screens)\n- [Workspaces](#workspaces)"
   },

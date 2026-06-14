@@ -1,7 +1,7 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "settings API",
+    "title": "Settings API",
     "version": "0.0.0",
     "description": "Per-account configuration \u2014 notification preferences, security policies, and feature-scoping rules."
   },

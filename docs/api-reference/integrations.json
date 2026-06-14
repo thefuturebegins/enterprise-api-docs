@@ -1,7 +1,7 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "integrations API",
+    "title": "Integrations API",
     "version": "1.0.9",
     "description": "Unified data exchange: bidirectional sync with external systems, import/export pipelines, field mapping, and conflict resolution.\n\n## Sections\n\n- [Conflict Resolution](#conflict-resolution)\n- [Data Sync](#data-sync)\n- [Export Field Mappings](#export-field-mappings)\n- [Export Profiles](#export-profiles)\n- [Export Schedules](#export-schedules)\n- [Exports](#exports)\n- [Field Mapping](#field-mapping)\n- [Import Field Mappings](#import-field-mappings)\n- [Import Management](#import-management)\n- [Import Profiles](#import-profiles)\n- [Import Schedules](#import-schedules)\n- [Imports](#imports)\n- [Sync Engine](#sync-engine)\n- [Sync Vendor Model Field Mappings](#sync-vendor-model-field-mappings)\n- [Sync Vendors](#sync-vendors)\n- [Synchronizations](#synchronizations)"
   },

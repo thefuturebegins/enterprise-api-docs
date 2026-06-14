@@ -1,7 +1,7 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "analytics API",
+    "title": "Analytics API",
     "version": "1.0.12",
     "description": "Configurable reporting engine for surfacing business metrics \u2014 saved report definitions, categories, shares, and result execution.\n\n## Sections\n\n- [Components Allowed In Reports Selection](#components-allowed-in-reports-selection)\n- [Report Category](#report-category)\n- [Report Share](#report-share)\n- [Reporting](#reporting)\n- [Reports](#reports)"
   },

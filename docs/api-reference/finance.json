@@ -1,7 +1,7 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "finance API",
+    "title": "Finance API",
     "version": "1.0.6",
     "description": "Monetary transactions and accounting: invoices, payments, bills, credit memos, Stripe integration, and contractor payouts.\n\n## Sections\n\n- [Contractor Payment Processing](#contractor-payment-processing)\n- [Customer Payment Processing](#customer-payment-processing)\n- [Customer Payments](#customer-payments)\n- [Finance Accounts](#finance-accounts)\n- [Finance Bills](#finance-bills)\n- [Finance Credit Memos](#finance-credit-memos)\n- [Finance Customers](#finance-customers)\n- [Finance Employees](#finance-employees)\n- [Finance Estimates](#finance-estimates)\n- [Finance Invoices](#finance-invoices)\n- [Finance Journal Entries](#finance-journal-entries)\n- [Finance Payments](#finance-payments)\n- [Finance Product Services](#finance-product-services)\n- [Finance Sales Receipts](#finance-sales-receipts)\n- [Finance Vendors](#finance-vendors)\n- [Stripe Integration](#stripe-integration)"
   },

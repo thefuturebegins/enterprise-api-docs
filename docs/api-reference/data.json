@@ -1,7 +1,7 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "data API",
+    "title": "Data API",
     "version": "1.0.38",
     "description": "Foundation of the platform \u2014 model registry, auto-CRUD for all registered models, avatar generation, image preview, and real-time change streaming.\n\n## Sections\n\n- [Avatar](#avatar)\n- [Data](#data)\n- [Features](#features)\n- [Field Types](#field-types)\n- [Icons](#icons)\n- [Model Fields](#model-fields)\n- [Model Files](#model-files)\n- [Model Layouts](#model-layouts)\n- [Model Notes](#model-notes)\n- [Model Tasks](#model-tasks)\n- [Models](#models)\n- [Navigation Items](#navigation-items)\n- [Previewimage](#previewimage)\n- [Query](#query)"
   },

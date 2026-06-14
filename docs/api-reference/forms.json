@@ -1,7 +1,7 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "forms API",
+    "title": "Forms API",
     "version": "0.0.0",
     "description": "Dynamic form definitions and field configurations tied to any Enterprise model."
   },

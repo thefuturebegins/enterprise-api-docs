@@ -1,7 +1,7 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "education API",
+    "title": "Education API",
     "version": "1.0.8",
     "description": "Education-specific module \u2014 data enrichment and content management for educational organisations."
   },

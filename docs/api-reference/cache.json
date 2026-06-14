@@ -1,7 +1,7 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "cache API",
+    "title": "Cache API",
     "version": "1.0.7",
     "description": "Shared caching layer \u2014 read, write, invalidate, and configure TTLs for cached entries across the platform.\n\n## Sections\n\n- [Cache](#cache)"
   },

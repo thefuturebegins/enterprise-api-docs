@@ -1,7 +1,7 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "communications API",
+    "title": "Communications API",
     "version": "1.0.19",
     "description": "All outbound and inbound messaging: transactional email, bulk sends, campaign email, Gmail integration, conversations, and file uploads.\n\n## Sections\n\n- [Bulk Email](#bulk-email)\n- [Campaign Email](#campaign-email)\n- [Campaign Emails](#campaign-emails)\n- [Campaign Files](#campaign-files)\n- [Campaign Notes](#campaign-notes)\n- [Campaign Tasks](#campaign-tasks)\n- [Campaigns](#campaigns)\n- [Comments](#comments)\n- [Conversation](#conversation)\n- [Conversations](#conversations)\n- [Email Analytics](#email-analytics)\n- [Email Files](#email-files)\n- [Email Lists](#email-lists)\n- [Email Scheduling](#email-scheduling)\n- [Email Snapshot](#email-snapshot)\n- [Email Snapshot Contacts](#email-snapshot-contacts)\n- [Email Snapshots](#email-snapshots)\n- [Email Templates](#email-templates)\n- [Emails](#emails)\n- [File Upload](#file-upload)\n- [Gmail Connection](#gmail-connection)\n- [Gmail Send](#gmail-send)\n- [Gmail Sync](#gmail-sync)\n- [Referrals](#referrals)\n- [Send Email](#send-email)"
   },

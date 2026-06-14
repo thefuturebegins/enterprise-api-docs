@@ -1,7 +1,7 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "inventory API",
+    "title": "Inventory API",
     "version": "0.0.0",
     "description": "Physical asset tracking \u2014 equipment, stock, and storage locations."
   },
