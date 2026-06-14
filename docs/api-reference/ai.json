@@ -1,0 +1,13 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "ai API",
+    "version": "1.0.7",
+    "description": "OpenAPI 3.1 document for the `ai` module, generated from FCG InterfaceSpecs."
+  },
+  "tags": [],
+  "paths": {},
+  "components": {
+    "schemas": {}
+  }
+}

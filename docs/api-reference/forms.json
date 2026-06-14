@@ -3,7 +3,7 @@
   "info": {
     "title": "forms API",
     "version": "0.0.0",
-    "description": "CRUD endpoints for models owned by the forms module."
+    "description": "CRUD endpoints for models owned by the `forms` module."
   },
   "paths": {
     "/api/forms/forms": {

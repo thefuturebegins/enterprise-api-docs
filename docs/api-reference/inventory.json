@@ -3,7 +3,7 @@
   "info": {
     "title": "inventory API",
     "version": "0.0.0",
-    "description": "CRUD endpoints for models owned by the inventory module."
+    "description": "CRUD endpoints for models owned by the `inventory` module."
   },
   "paths": {
     "/api/inventory/equipment": {

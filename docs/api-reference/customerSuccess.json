@@ -3,7 +3,7 @@
   "info": {
     "title": "customerSuccess API",
     "version": "0.0.0",
-    "description": "CRUD endpoints for models owned by the customerSuccess module."
+    "description": "CRUD endpoints for models owned by the `customerSuccess` module."
   },
   "paths": {
     "/api/customerSuccess/renewals": {

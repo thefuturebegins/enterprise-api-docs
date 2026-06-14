@@ -3,7 +3,7 @@
   "info": {
     "title": "settings API",
     "version": "0.0.0",
-    "description": "CRUD endpoints for models owned by the settings module."
+    "description": "CRUD endpoints for models owned by the `settings` module."
   },
   "paths": {
     "/api/settings/notificationSettings": {
