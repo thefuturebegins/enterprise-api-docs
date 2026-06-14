@@ -3,7 +3,7 @@
   "info": {
     "title": "Identity API",
     "version": "1.0.38",
-    "description": "Authentication, OAuth 2.0, user management, roles, teams, departments, and multi-tenant account provisioning.\n\n## Sections\n\n- [Authentication](#authentication)\n- [Contractors](#contractors)\n- [Department Users](#department-users)\n- [Departments](#departments)\n- [Employees](#employees)\n- [Oauthhandlers](#oauthhandlers)\n- [Roles](#roles)\n- [Team Users](#team-users)\n- [Teams](#teams)\n- [User Management](#user-management)\n- [Users](#users)"
+    "description": "Authentication, OAuth 2.0, user management, roles, teams, departments, and multi-tenant account provisioning.\n\n## Sections\n\n- [Authentication](/api/identity/tag/authentication)\n- [Contractors](/api/identity/tag/contractors)\n- [Department Users](/api/identity/tag/department-users)\n- [Departments](/api/identity/tag/departments)\n- [Employees](/api/identity/tag/employees)\n- [Oauthhandlers](/api/identity/tag/oauthhandlers)\n- [Roles](/api/identity/tag/roles)\n- [Team Users](/api/identity/tag/team-users)\n- [Teams](/api/identity/tag/teams)\n- [User Management](/api/identity/tag/user-management)\n- [Users](/api/identity/tag/users)"
   },
   "tags": [
     {

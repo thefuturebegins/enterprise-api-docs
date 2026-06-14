@@ -3,7 +3,7 @@
   "info": {
     "title": "System API",
     "version": "1.0.13",
-    "description": "Operational backbone: tenant resolution, settings, background jobs, multi-tenant database provisioning, record history, and PDF generation.\n\n## Sections\n\n- [Job Histories](#job-histories)\n- [Job Types](#job-types)\n- [Jobs](#jobs)\n- [Multi Tenant Database](#multi-tenant-database)\n- [Settings](#settings)\n- [Tenant Resolution](#tenant-resolution)"
+    "description": "Operational backbone: tenant resolution, settings, background jobs, multi-tenant database provisioning, record history, and PDF generation.\n\n## Sections\n\n- [Job Histories](/api/system/tag/job-histories)\n- [Job Types](/api/system/tag/job-types)\n- [Jobs](/api/system/tag/jobs)\n- [Multi Tenant Database](/api/system/tag/multi-tenant-database)\n- [Settings](/api/system/tag/settings)\n- [Tenant Resolution](/api/system/tag/tenant-resolution)"
   },
   "tags": [
     {

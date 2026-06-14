@@ -3,7 +3,7 @@
   "info": {
     "title": "Workflow API",
     "version": "1.0.10",
-    "description": "Automation infrastructure: scheduled events, status pipeline management, and rule-based workflow execution.\n\n## Sections\n\n- [Scheduled Events](#scheduled-events)\n- [Workflow Status Pipeline Record States](#workflow-status-pipeline-record-states)\n- [Workflow Status Pipelines](#workflow-status-pipelines)"
+    "description": "Automation infrastructure: scheduled events, status pipeline management, and rule-based workflow execution.\n\n## Sections\n\n- [Scheduled Events](/api/workflow/tag/scheduled-events)\n- [Workflow Status Pipeline Record States](/api/workflow/tag/workflow-status-pipeline-record-states)\n- [Workflow Status Pipelines](/api/workflow/tag/workflow-status-pipelines)"
   },
   "tags": [
     {

@@ -3,7 +3,7 @@
   "info": {
     "title": "Pipelines API",
     "version": "1.0.6",
-    "description": "Pipeline orchestration infrastructure for defining and monitoring data processing pipelines.\n\n## Sections\n\n- [Pipelines](#pipelines)"
+    "description": "Pipeline orchestration infrastructure for defining and monitoring data processing pipelines.\n\n## Sections\n\n- [Pipelines](/api/pipelines/tag/pipelines)"
   },
   "tags": [
     {

@@ -3,7 +3,7 @@
   "info": {
     "title": "Analytics API",
     "version": "1.0.12",
-    "description": "Configurable reporting engine for surfacing business metrics \u2014 saved report definitions, categories, shares, and result execution.\n\n## Sections\n\n- [Components Allowed In Reports Selection](#components-allowed-in-reports-selection)\n- [Report Category](#report-category)\n- [Report Share](#report-share)\n- [Reporting](#reporting)\n- [Reports](#reports)"
+    "description": "Configurable reporting engine for surfacing business metrics \u2014 saved report definitions, categories, shares, and result execution.\n\n## Sections\n\n- [Components Allowed In Reports Selection](/api/analytics/tag/components-allowed-in-reports-selection)\n- [Report Category](/api/analytics/tag/report-category)\n- [Report Share](/api/analytics/tag/report-share)\n- [Reporting](/api/analytics/tag/reporting)\n- [Reports](/api/analytics/tag/reports)"
   },
   "tags": [
     {
