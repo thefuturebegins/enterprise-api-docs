@@ -13,52 +13,52 @@
   ],
   "tags": [
     {
-      "name": "integrations.conflictresolution"
+      "name": "conflictresolution"
     },
     {
-      "name": "integrations.datasync"
+      "name": "datasync"
     },
     {
-      "name": "integrations.exportFieldMappings"
+      "name": "exportFieldMappings"
     },
     {
-      "name": "integrations.exportProfiles"
+      "name": "exportProfiles"
     },
     {
-      "name": "integrations.exportSchedules"
+      "name": "exportSchedules"
     },
     {
-      "name": "integrations.exports"
+      "name": "exports"
     },
     {
-      "name": "integrations.fieldmapping"
+      "name": "fieldmapping"
     },
     {
-      "name": "integrations.importFieldMappings"
+      "name": "importFieldMappings"
     },
     {
-      "name": "integrations.importProfiles"
+      "name": "importProfiles"
     },
     {
-      "name": "integrations.importSchedules"
+      "name": "importSchedules"
     },
     {
-      "name": "integrations.importmanagement"
+      "name": "importmanagement"
     },
     {
-      "name": "integrations.imports"
+      "name": "imports"
     },
     {
-      "name": "integrations.syncVendorModelFieldMappings"
+      "name": "syncVendorModelFieldMappings"
     },
     {
-      "name": "integrations.syncVendors"
+      "name": "syncVendors"
     },
     {
-      "name": "integrations.syncengine"
+      "name": "syncengine"
     },
     {
-      "name": "integrations.synchronizations"
+      "name": "synchronizations"
     }
   ],
   "paths": {
@@ -66,7 +66,7 @@
       "get": {
         "operationId": "integrations.imports.query",
         "tags": [
-          "integrations.imports"
+          "imports"
         ],
         "summary": "Query",
         "responses": {
@@ -106,7 +106,7 @@
       "post": {
         "operationId": "integrations.imports.create",
         "tags": [
-          "integrations.imports"
+          "imports"
         ],
         "summary": "Create",
         "responses": {
@@ -145,7 +145,7 @@
       "get": {
         "operationId": "integrations.imports.getById",
         "tags": [
-          "integrations.imports"
+          "imports"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -182,7 +182,7 @@
       "put": {
         "operationId": "integrations.imports.update",
         "tags": [
-          "integrations.imports"
+          "imports"
         ],
         "summary": "Update",
         "responses": {
@@ -229,7 +229,7 @@
       "delete": {
         "operationId": "integrations.imports.delete",
         "tags": [
-          "integrations.imports"
+          "imports"
         ],
         "summary": "Delete",
         "responses": {
@@ -261,7 +261,7 @@
       "get": {
         "operationId": "integrations.importProfiles.query",
         "tags": [
-          "integrations.importProfiles"
+          "importProfiles"
         ],
         "summary": "Query",
         "responses": {
@@ -301,7 +301,7 @@
       "post": {
         "operationId": "integrations.importProfiles.create",
         "tags": [
-          "integrations.importProfiles"
+          "importProfiles"
         ],
         "summary": "Create",
         "responses": {
@@ -340,7 +340,7 @@
       "get": {
         "operationId": "integrations.importProfiles.getById",
         "tags": [
-          "integrations.importProfiles"
+          "importProfiles"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -377,7 +377,7 @@
       "put": {
         "operationId": "integrations.importProfiles.update",
         "tags": [
-          "integrations.importProfiles"
+          "importProfiles"
         ],
         "summary": "Update",
         "responses": {
@@ -424,7 +424,7 @@
       "delete": {
         "operationId": "integrations.importProfiles.delete",
         "tags": [
-          "integrations.importProfiles"
+          "importProfiles"
         ],
         "summary": "Delete",
         "responses": {
@@ -456,7 +456,7 @@
       "get": {
         "operationId": "integrations.importSchedules.query",
         "tags": [
-          "integrations.importSchedules"
+          "importSchedules"
         ],
         "summary": "Query",
         "responses": {
@@ -496,7 +496,7 @@
       "post": {
         "operationId": "integrations.importSchedules.create",
         "tags": [
-          "integrations.importSchedules"
+          "importSchedules"
         ],
         "summary": "Create",
         "responses": {
@@ -535,7 +535,7 @@
       "get": {
         "operationId": "integrations.importSchedules.getById",
         "tags": [
-          "integrations.importSchedules"
+          "importSchedules"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -572,7 +572,7 @@
       "put": {
         "operationId": "integrations.importSchedules.update",
         "tags": [
-          "integrations.importSchedules"
+          "importSchedules"
         ],
         "summary": "Update",
         "responses": {
@@ -619,7 +619,7 @@
       "delete": {
         "operationId": "integrations.importSchedules.delete",
         "tags": [
-          "integrations.importSchedules"
+          "importSchedules"
         ],
         "summary": "Delete",
         "responses": {
@@ -651,7 +651,7 @@
       "get": {
         "operationId": "integrations.importFieldMappings.query",
         "tags": [
-          "integrations.importFieldMappings"
+          "importFieldMappings"
         ],
         "summary": "Query",
         "responses": {
@@ -691,7 +691,7 @@
       "post": {
         "operationId": "integrations.importFieldMappings.create",
         "tags": [
-          "integrations.importFieldMappings"
+          "importFieldMappings"
         ],
         "summary": "Create",
         "responses": {
@@ -730,7 +730,7 @@
       "get": {
         "operationId": "integrations.importFieldMappings.getById",
         "tags": [
-          "integrations.importFieldMappings"
+          "importFieldMappings"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -767,7 +767,7 @@
       "put": {
         "operationId": "integrations.importFieldMappings.update",
         "tags": [
-          "integrations.importFieldMappings"
+          "importFieldMappings"
         ],
         "summary": "Update",
         "responses": {
@@ -814,7 +814,7 @@
       "delete": {
         "operationId": "integrations.importFieldMappings.delete",
         "tags": [
-          "integrations.importFieldMappings"
+          "importFieldMappings"
         ],
         "summary": "Delete",
         "responses": {
@@ -846,7 +846,7 @@
       "get": {
         "operationId": "integrations.exports.query",
         "tags": [
-          "integrations.exports"
+          "exports"
         ],
         "summary": "Query",
         "responses": {
@@ -886,7 +886,7 @@
       "post": {
         "operationId": "integrations.exports.create",
         "tags": [
-          "integrations.exports"
+          "exports"
         ],
         "summary": "Create",
         "responses": {
@@ -925,7 +925,7 @@
       "get": {
         "operationId": "integrations.exports.getById",
         "tags": [
-          "integrations.exports"
+          "exports"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -962,7 +962,7 @@
       "put": {
         "operationId": "integrations.exports.update",
         "tags": [
-          "integrations.exports"
+          "exports"
         ],
         "summary": "Update",
         "responses": {
@@ -1009,7 +1009,7 @@
       "delete": {
         "operationId": "integrations.exports.delete",
         "tags": [
-          "integrations.exports"
+          "exports"
         ],
         "summary": "Delete",
         "responses": {
@@ -1041,7 +1041,7 @@
       "get": {
         "operationId": "integrations.exportProfiles.query",
         "tags": [
-          "integrations.exportProfiles"
+          "exportProfiles"
         ],
         "summary": "Query",
         "responses": {
@@ -1081,7 +1081,7 @@
       "post": {
         "operationId": "integrations.exportProfiles.create",
         "tags": [
-          "integrations.exportProfiles"
+          "exportProfiles"
         ],
         "summary": "Create",
         "responses": {
@@ -1120,7 +1120,7 @@
       "get": {
         "operationId": "integrations.exportProfiles.getById",
         "tags": [
-          "integrations.exportProfiles"
+          "exportProfiles"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -1157,7 +1157,7 @@
       "put": {
         "operationId": "integrations.exportProfiles.update",
         "tags": [
-          "integrations.exportProfiles"
+          "exportProfiles"
         ],
         "summary": "Update",
         "responses": {
@@ -1204,7 +1204,7 @@
       "delete": {
         "operationId": "integrations.exportProfiles.delete",
         "tags": [
-          "integrations.exportProfiles"
+          "exportProfiles"
         ],
         "summary": "Delete",
         "responses": {
@@ -1236,7 +1236,7 @@
       "get": {
         "operationId": "integrations.exportSchedules.query",
         "tags": [
-          "integrations.exportSchedules"
+          "exportSchedules"
         ],
         "summary": "Query",
         "responses": {
@@ -1276,7 +1276,7 @@
       "post": {
         "operationId": "integrations.exportSchedules.create",
         "tags": [
-          "integrations.exportSchedules"
+          "exportSchedules"
         ],
         "summary": "Create",
         "responses": {
@@ -1315,7 +1315,7 @@
       "get": {
         "operationId": "integrations.exportSchedules.getById",
         "tags": [
-          "integrations.exportSchedules"
+          "exportSchedules"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -1352,7 +1352,7 @@
       "put": {
         "operationId": "integrations.exportSchedules.update",
         "tags": [
-          "integrations.exportSchedules"
+          "exportSchedules"
         ],
         "summary": "Update",
         "responses": {
@@ -1399,7 +1399,7 @@
       "delete": {
         "operationId": "integrations.exportSchedules.delete",
         "tags": [
-          "integrations.exportSchedules"
+          "exportSchedules"
         ],
         "summary": "Delete",
         "responses": {
@@ -1431,7 +1431,7 @@
       "get": {
         "operationId": "integrations.exportFieldMappings.query",
         "tags": [
-          "integrations.exportFieldMappings"
+          "exportFieldMappings"
         ],
         "summary": "Query",
         "responses": {
@@ -1471,7 +1471,7 @@
       "post": {
         "operationId": "integrations.exportFieldMappings.create",
         "tags": [
-          "integrations.exportFieldMappings"
+          "exportFieldMappings"
         ],
         "summary": "Create",
         "responses": {
@@ -1510,7 +1510,7 @@
       "get": {
         "operationId": "integrations.exportFieldMappings.getById",
         "tags": [
-          "integrations.exportFieldMappings"
+          "exportFieldMappings"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -1547,7 +1547,7 @@
       "put": {
         "operationId": "integrations.exportFieldMappings.update",
         "tags": [
-          "integrations.exportFieldMappings"
+          "exportFieldMappings"
         ],
         "summary": "Update",
         "responses": {
@@ -1594,7 +1594,7 @@
       "delete": {
         "operationId": "integrations.exportFieldMappings.delete",
         "tags": [
-          "integrations.exportFieldMappings"
+          "exportFieldMappings"
         ],
         "summary": "Delete",
         "responses": {
@@ -1626,7 +1626,7 @@
       "get": {
         "operationId": "integrations.syncVendors.query",
         "tags": [
-          "integrations.syncVendors"
+          "syncVendors"
         ],
         "summary": "Query",
         "responses": {
@@ -1666,7 +1666,7 @@
       "post": {
         "operationId": "integrations.syncVendors.create",
         "tags": [
-          "integrations.syncVendors"
+          "syncVendors"
         ],
         "summary": "Create",
         "responses": {
@@ -1705,7 +1705,7 @@
       "get": {
         "operationId": "integrations.syncVendors.getById",
         "tags": [
-          "integrations.syncVendors"
+          "syncVendors"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -1742,7 +1742,7 @@
       "put": {
         "operationId": "integrations.syncVendors.update",
         "tags": [
-          "integrations.syncVendors"
+          "syncVendors"
         ],
         "summary": "Update",
         "responses": {
@@ -1789,7 +1789,7 @@
       "delete": {
         "operationId": "integrations.syncVendors.delete",
         "tags": [
-          "integrations.syncVendors"
+          "syncVendors"
         ],
         "summary": "Delete",
         "responses": {
@@ -1821,7 +1821,7 @@
       "get": {
         "operationId": "integrations.synchronizations.query",
         "tags": [
-          "integrations.synchronizations"
+          "synchronizations"
         ],
         "summary": "Query",
         "responses": {
@@ -1861,7 +1861,7 @@
       "post": {
         "operationId": "integrations.synchronizations.create",
         "tags": [
-          "integrations.synchronizations"
+          "synchronizations"
         ],
         "summary": "Create",
         "responses": {
@@ -1900,7 +1900,7 @@
       "get": {
         "operationId": "integrations.synchronizations.getById",
         "tags": [
-          "integrations.synchronizations"
+          "synchronizations"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -1937,7 +1937,7 @@
       "put": {
         "operationId": "integrations.synchronizations.update",
         "tags": [
-          "integrations.synchronizations"
+          "synchronizations"
         ],
         "summary": "Update",
         "responses": {
@@ -1984,7 +1984,7 @@
       "delete": {
         "operationId": "integrations.synchronizations.delete",
         "tags": [
-          "integrations.synchronizations"
+          "synchronizations"
         ],
         "summary": "Delete",
         "responses": {
@@ -2016,7 +2016,7 @@
       "get": {
         "operationId": "integrations.syncVendorModelFieldMappings.query",
         "tags": [
-          "integrations.syncVendorModelFieldMappings"
+          "syncVendorModelFieldMappings"
         ],
         "summary": "Query",
         "responses": {
@@ -2056,7 +2056,7 @@
       "post": {
         "operationId": "integrations.syncVendorModelFieldMappings.create",
         "tags": [
-          "integrations.syncVendorModelFieldMappings"
+          "syncVendorModelFieldMappings"
         ],
         "summary": "Create",
         "responses": {
@@ -2095,7 +2095,7 @@
       "get": {
         "operationId": "integrations.syncVendorModelFieldMappings.getById",
         "tags": [
-          "integrations.syncVendorModelFieldMappings"
+          "syncVendorModelFieldMappings"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2132,7 +2132,7 @@
       "put": {
         "operationId": "integrations.syncVendorModelFieldMappings.update",
         "tags": [
-          "integrations.syncVendorModelFieldMappings"
+          "syncVendorModelFieldMappings"
         ],
         "summary": "Update",
         "responses": {
@@ -2179,7 +2179,7 @@
       "delete": {
         "operationId": "integrations.syncVendorModelFieldMappings.delete",
         "tags": [
-          "integrations.syncVendorModelFieldMappings"
+          "syncVendorModelFieldMappings"
         ],
         "summary": "Delete",
         "responses": {
@@ -2211,7 +2211,7 @@
       "post": {
         "operationId": "integrations.datasync.syncMailgunDeliveryStatus",
         "tags": [
-          "integrations.datasync"
+          "datasync"
         ],
         "summary": "Sync Mailgun delivery status for email send instances",
         "responses": {
@@ -2280,7 +2280,7 @@
       "post": {
         "operationId": "integrations.syncengine.startSync",
         "tags": [
-          "integrations.syncengine"
+          "syncengine"
         ],
         "summary": "Start Sync",
         "responses": {
@@ -2337,7 +2337,7 @@
       "post": {
         "operationId": "integrations.syncengine.stopSync",
         "tags": [
-          "integrations.syncengine"
+          "syncengine"
         ],
         "summary": "Stop Sync",
         "responses": {
@@ -2377,7 +2377,7 @@
       "post": {
         "operationId": "integrations.syncengine.pauseSync",
         "tags": [
-          "integrations.syncengine"
+          "syncengine"
         ],
         "summary": "Pause Sync",
         "responses": {
@@ -2417,7 +2417,7 @@
       "post": {
         "operationId": "integrations.syncengine.resumeSync",
         "tags": [
-          "integrations.syncengine"
+          "syncengine"
         ],
         "summary": "Resume Sync",
         "responses": {
@@ -2457,7 +2457,7 @@
       "post": {
         "operationId": "integrations.syncengine.processBatch",
         "tags": [
-          "integrations.syncengine"
+          "syncengine"
         ],
         "summary": "Process Batch",
         "responses": {
@@ -2515,7 +2515,7 @@
       "get": {
         "operationId": "integrations.syncengine.getSyncStatus",
         "tags": [
-          "integrations.syncengine"
+          "syncengine"
         ],
         "summary": "Get Sync Status",
         "responses": {
@@ -2562,7 +2562,7 @@
       "get": {
         "operationId": "integrations.syncengine.getActiveSyncs",
         "tags": [
-          "integrations.syncengine"
+          "syncengine"
         ],
         "summary": "Get Active Syncs",
         "responses": {
@@ -2594,7 +2594,7 @@
       "post": {
         "operationId": "integrations.syncengine.validateConfiguration",
         "tags": [
-          "integrations.syncengine"
+          "syncengine"
         ],
         "summary": "Validate Configuration",
         "responses": {
@@ -2633,7 +2633,7 @@
       "get": {
         "operationId": "integrations.syncengine.estimateSyncTime",
         "tags": [
-          "integrations.syncengine"
+          "syncengine"
         ],
         "summary": "Estimate Sync Time",
         "responses": {
@@ -2688,7 +2688,7 @@
       "post": {
         "operationId": "integrations.importmanagement.runImport",
         "tags": [
-          "integrations.importmanagement"
+          "importmanagement"
         ],
         "summary": "Run import for an existing import record (manual execution from details screen)",
         "responses": {
@@ -2740,7 +2740,7 @@
       "post": {
         "operationId": "integrations.importmanagement.cancelImport",
         "tags": [
-          "integrations.importmanagement"
+          "importmanagement"
         ],
         "summary": "Cancel a running import (manual action from admin UI)",
         "responses": {
@@ -2781,7 +2781,7 @@
       "post": {
         "operationId": "integrations.conflictresolution.detectConflicts",
         "tags": [
-          "integrations.conflictresolution"
+          "conflictresolution"
         ],
         "summary": "Detect Conflicts",
         "responses": {
@@ -2835,7 +2835,7 @@
       "post": {
         "operationId": "integrations.conflictresolution.resolveConflict",
         "tags": [
-          "integrations.conflictresolution"
+          "conflictresolution"
         ],
         "summary": "Resolve Conflict",
         "responses": {
@@ -2893,7 +2893,7 @@
       "get": {
         "operationId": "integrations.conflictresolution.getPendingConflicts",
         "tags": [
-          "integrations.conflictresolution"
+          "conflictresolution"
         ],
         "summary": "Get Pending Conflicts",
         "responses": {
@@ -2925,7 +2925,7 @@
       "get": {
         "operationId": "integrations.conflictresolution.getConflictsForRecord",
         "tags": [
-          "integrations.conflictresolution"
+          "conflictresolution"
         ],
         "summary": "Get Conflicts For Record",
         "responses": {
@@ -2975,7 +2975,7 @@
       "get": {
         "operationId": "integrations.conflictresolution.getConflict",
         "tags": [
-          "integrations.conflictresolution"
+          "conflictresolution"
         ],
         "summary": "Get Conflict",
         "responses": {
@@ -3022,7 +3022,7 @@
       "put": {
         "operationId": "integrations.conflictresolution.updateResolutionStrategy",
         "tags": [
-          "integrations.conflictresolution"
+          "conflictresolution"
         ],
         "summary": "Update Resolution Strategy",
         "responses": {
@@ -3080,7 +3080,7 @@
       "get": {
         "operationId": "integrations.conflictresolution.getResolutionHistory",
         "tags": [
-          "integrations.conflictresolution"
+          "conflictresolution"
         ],
         "summary": "Get Resolution History",
         "responses": {
@@ -3130,7 +3130,7 @@
       "post": {
         "operationId": "integrations.conflictresolution.autoResolveConflicts",
         "tags": [
-          "integrations.conflictresolution"
+          "conflictresolution"
         ],
         "summary": "Auto Resolve Conflicts",
         "responses": {
@@ -3165,7 +3165,7 @@
       "post": {
         "operationId": "integrations.conflictresolution.validateResolution",
         "tags": [
-          "integrations.conflictresolution"
+          "conflictresolution"
         ],
         "summary": "Validate Resolution",
         "responses": {
@@ -3230,7 +3230,7 @@
       "post": {
         "operationId": "integrations.conflictresolution.createResolutionRule",
         "tags": [
-          "integrations.conflictresolution"
+          "conflictresolution"
         ],
         "summary": "Create Resolution Rule",
         "responses": {
@@ -3269,7 +3269,7 @@
       "get": {
         "operationId": "integrations.conflictresolution.listResolutionRules",
         "tags": [
-          "integrations.conflictresolution"
+          "conflictresolution"
         ],
         "summary": "List Resolution Rules",
         "responses": {
@@ -3319,7 +3319,7 @@
       "post": {
         "operationId": "integrations.fieldmapping.createMapping",
         "tags": [
-          "integrations.fieldmapping"
+          "fieldmapping"
         ],
         "summary": "Create Mapping",
         "responses": {
@@ -3358,7 +3358,7 @@
       "get": {
         "operationId": "integrations.fieldmapping.getMapping",
         "tags": [
-          "integrations.fieldmapping"
+          "fieldmapping"
         ],
         "summary": "Get Mapping",
         "responses": {
@@ -3403,7 +3403,7 @@
       "put": {
         "operationId": "integrations.fieldmapping.updateMapping",
         "tags": [
-          "integrations.fieldmapping"
+          "fieldmapping"
         ],
         "summary": "Update Mapping",
         "responses": {
@@ -3466,7 +3466,7 @@
       "delete": {
         "operationId": "integrations.fieldmapping.deleteMapping",
         "tags": [
-          "integrations.fieldmapping"
+          "fieldmapping"
         ],
         "summary": "Delete Mapping",
         "responses": {
@@ -3506,7 +3506,7 @@
       "get": {
         "operationId": "integrations.fieldmapping.getMappingsForConfiguration",
         "tags": [
-          "integrations.fieldmapping"
+          "fieldmapping"
         ],
         "summary": "Get Mappings For Configuration",
         "responses": {
@@ -3556,7 +3556,7 @@
       "post": {
         "operationId": "integrations.fieldmapping.validateMapping",
         "tags": [
-          "integrations.fieldmapping"
+          "fieldmapping"
         ],
         "summary": "Validate Mapping",
         "responses": {
@@ -3595,7 +3595,7 @@
       "post": {
         "operationId": "integrations.fieldmapping.testMapping",
         "tags": [
-          "integrations.fieldmapping"
+          "fieldmapping"
         ],
         "summary": "Test Mapping",
         "responses": {
@@ -3640,7 +3640,7 @@
       "post": {
         "operationId": "integrations.fieldmapping.createTemplate",
         "tags": [
-          "integrations.fieldmapping"
+          "fieldmapping"
         ],
         "summary": "Create Template",
         "responses": {
@@ -3677,7 +3677,7 @@
       "get": {
         "operationId": "integrations.fieldmapping.getTemplates",
         "tags": [
-          "integrations.fieldmapping"
+          "fieldmapping"
         ],
         "summary": "Get Templates",
         "responses": {
@@ -3709,7 +3709,7 @@
       "post": {
         "operationId": "integrations.fieldmapping.applyTemplate",
         "tags": [
-          "integrations.fieldmapping"
+          "fieldmapping"
         ],
         "summary": "Apply Template",
         "responses": {
@@ -3769,7 +3769,7 @@
       "get": {
         "operationId": "integrations.fieldmapping.getMappingStatistics",
         "tags": [
-          "integrations.fieldmapping"
+          "fieldmapping"
         ],
         "summary": "Get Mapping Statistics",
         "responses": {

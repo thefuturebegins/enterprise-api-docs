@@ -13,16 +13,16 @@
   ],
   "tags": [
     {
-      "name": "customerSuccess.renewalFiles"
+      "name": "renewalFiles"
     },
     {
-      "name": "customerSuccess.renewalNotes"
+      "name": "renewalNotes"
     },
     {
-      "name": "customerSuccess.renewalTasks"
+      "name": "renewalTasks"
     },
     {
-      "name": "customerSuccess.renewals"
+      "name": "renewals"
     }
   ],
   "paths": {
@@ -30,7 +30,7 @@
       "get": {
         "operationId": "customerSuccess.renewals.query",
         "tags": [
-          "customerSuccess.renewals"
+          "renewals"
         ],
         "summary": "Query",
         "responses": {
@@ -70,7 +70,7 @@
       "post": {
         "operationId": "customerSuccess.renewals.create",
         "tags": [
-          "customerSuccess.renewals"
+          "renewals"
         ],
         "summary": "Create",
         "responses": {
@@ -109,7 +109,7 @@
       "get": {
         "operationId": "customerSuccess.renewals.getById",
         "tags": [
-          "customerSuccess.renewals"
+          "renewals"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -146,7 +146,7 @@
       "put": {
         "operationId": "customerSuccess.renewals.update",
         "tags": [
-          "customerSuccess.renewals"
+          "renewals"
         ],
         "summary": "Update",
         "responses": {
@@ -193,7 +193,7 @@
       "delete": {
         "operationId": "customerSuccess.renewals.delete",
         "tags": [
-          "customerSuccess.renewals"
+          "renewals"
         ],
         "summary": "Delete",
         "responses": {
@@ -225,7 +225,7 @@
       "get": {
         "operationId": "customerSuccess.renewalNotes.query",
         "tags": [
-          "customerSuccess.renewalNotes"
+          "renewalNotes"
         ],
         "summary": "Query",
         "responses": {
@@ -265,7 +265,7 @@
       "post": {
         "operationId": "customerSuccess.renewalNotes.create",
         "tags": [
-          "customerSuccess.renewalNotes"
+          "renewalNotes"
         ],
         "summary": "Create",
         "responses": {
@@ -304,7 +304,7 @@
       "get": {
         "operationId": "customerSuccess.renewalNotes.getById",
         "tags": [
-          "customerSuccess.renewalNotes"
+          "renewalNotes"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -341,7 +341,7 @@
       "put": {
         "operationId": "customerSuccess.renewalNotes.update",
         "tags": [
-          "customerSuccess.renewalNotes"
+          "renewalNotes"
         ],
         "summary": "Update",
         "responses": {
@@ -388,7 +388,7 @@
       "delete": {
         "operationId": "customerSuccess.renewalNotes.delete",
         "tags": [
-          "customerSuccess.renewalNotes"
+          "renewalNotes"
         ],
         "summary": "Delete",
         "responses": {
@@ -420,7 +420,7 @@
       "get": {
         "operationId": "customerSuccess.renewalFiles.query",
         "tags": [
-          "customerSuccess.renewalFiles"
+          "renewalFiles"
         ],
         "summary": "Query",
         "responses": {
@@ -460,7 +460,7 @@
       "post": {
         "operationId": "customerSuccess.renewalFiles.create",
         "tags": [
-          "customerSuccess.renewalFiles"
+          "renewalFiles"
         ],
         "summary": "Create",
         "responses": {
@@ -499,7 +499,7 @@
       "get": {
         "operationId": "customerSuccess.renewalFiles.getById",
         "tags": [
-          "customerSuccess.renewalFiles"
+          "renewalFiles"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -536,7 +536,7 @@
       "put": {
         "operationId": "customerSuccess.renewalFiles.update",
         "tags": [
-          "customerSuccess.renewalFiles"
+          "renewalFiles"
         ],
         "summary": "Update",
         "responses": {
@@ -583,7 +583,7 @@
       "delete": {
         "operationId": "customerSuccess.renewalFiles.delete",
         "tags": [
-          "customerSuccess.renewalFiles"
+          "renewalFiles"
         ],
         "summary": "Delete",
         "responses": {
@@ -615,7 +615,7 @@
       "get": {
         "operationId": "customerSuccess.renewalTasks.query",
         "tags": [
-          "customerSuccess.renewalTasks"
+          "renewalTasks"
         ],
         "summary": "Query",
         "responses": {
@@ -655,7 +655,7 @@
       "post": {
         "operationId": "customerSuccess.renewalTasks.create",
         "tags": [
-          "customerSuccess.renewalTasks"
+          "renewalTasks"
         ],
         "summary": "Create",
         "responses": {
@@ -694,7 +694,7 @@
       "get": {
         "operationId": "customerSuccess.renewalTasks.getById",
         "tags": [
-          "customerSuccess.renewalTasks"
+          "renewalTasks"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -731,7 +731,7 @@
       "put": {
         "operationId": "customerSuccess.renewalTasks.update",
         "tags": [
-          "customerSuccess.renewalTasks"
+          "renewalTasks"
         ],
         "summary": "Update",
         "responses": {
@@ -778,7 +778,7 @@
       "delete": {
         "operationId": "customerSuccess.renewalTasks.delete",
         "tags": [
-          "customerSuccess.renewalTasks"
+          "renewalTasks"
         ],
         "summary": "Delete",
         "responses": {

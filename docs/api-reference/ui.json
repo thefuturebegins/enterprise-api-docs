@@ -13,79 +13,79 @@
   ],
   "tags": [
     {
-      "name": "ui.components"
+      "name": "components"
     },
     {
-      "name": "ui.dashboards"
+      "name": "dashboards"
     },
     {
-      "name": "ui.drafts"
+      "name": "drafts"
     },
     {
-      "name": "ui.enterpriseProductAnnouncementFiles"
+      "name": "enterpriseProductAnnouncementFiles"
     },
     {
-      "name": "ui.enterpriseProductAnnouncementNotes"
+      "name": "enterpriseProductAnnouncementNotes"
     },
     {
-      "name": "ui.enterpriseProductAnnouncementTasks"
+      "name": "enterpriseProductAnnouncementTasks"
     },
     {
-      "name": "ui.enterpriseProductAnnouncements"
+      "name": "enterpriseProductAnnouncements"
     },
     {
-      "name": "ui.recordRecentViews"
+      "name": "recordRecentViews"
     },
     {
-      "name": "ui.registeredComponents"
+      "name": "registeredComponents"
     },
     {
-      "name": "ui.screenActions"
+      "name": "screenActions"
     },
     {
-      "name": "ui.screenComponents"
+      "name": "screenComponents"
     },
     {
-      "name": "ui.screenFiles"
+      "name": "screenFiles"
     },
     {
-      "name": "ui.screenNotes"
+      "name": "screenNotes"
     },
     {
-      "name": "ui.screenStatuses"
+      "name": "screenStatuses"
     },
     {
-      "name": "ui.screenTasks"
+      "name": "screenTasks"
     },
     {
-      "name": "ui.screens"
+      "name": "screens"
     },
     {
-      "name": "ui.settings"
+      "name": "settings"
     },
     {
-      "name": "ui.supportTicketFiles"
+      "name": "supportTicketFiles"
     },
     {
-      "name": "ui.supportTicketNotes"
+      "name": "supportTicketNotes"
     },
     {
-      "name": "ui.supportTicketResolutions"
+      "name": "supportTicketResolutions"
     },
     {
-      "name": "ui.supportTicketTasks"
+      "name": "supportTicketTasks"
     },
     {
-      "name": "ui.supportTickets"
+      "name": "supportTickets"
     },
     {
-      "name": "ui.userScreens"
+      "name": "userScreens"
     },
     {
-      "name": "ui.userscreens"
+      "name": "userscreens"
     },
     {
-      "name": "ui.workspaces"
+      "name": "workspaces"
     }
   ],
   "paths": {
@@ -93,7 +93,7 @@
       "get": {
         "operationId": "ui.screens.query",
         "tags": [
-          "ui.screens"
+          "screens"
         ],
         "summary": "Query",
         "responses": {
@@ -133,7 +133,7 @@
       "post": {
         "operationId": "ui.screens.create",
         "tags": [
-          "ui.screens"
+          "screens"
         ],
         "summary": "Create",
         "responses": {
@@ -172,7 +172,7 @@
       "get": {
         "operationId": "ui.screens.getScreenById",
         "tags": [
-          "ui.screens"
+          "screens"
         ],
         "summary": "Get screen by ID",
         "responses": {
@@ -225,7 +225,7 @@
       "put": {
         "operationId": "ui.screens.update",
         "tags": [
-          "ui.screens"
+          "screens"
         ],
         "summary": "Update",
         "responses": {
@@ -272,7 +272,7 @@
       "delete": {
         "operationId": "ui.screens.delete",
         "tags": [
-          "ui.screens"
+          "screens"
         ],
         "summary": "Delete",
         "responses": {
@@ -304,7 +304,7 @@
       "get": {
         "operationId": "ui.workspaces.query",
         "tags": [
-          "ui.workspaces"
+          "workspaces"
         ],
         "summary": "Query",
         "responses": {
@@ -344,7 +344,7 @@
       "post": {
         "operationId": "ui.workspaces.create",
         "tags": [
-          "ui.workspaces"
+          "workspaces"
         ],
         "summary": "Create",
         "responses": {
@@ -383,7 +383,7 @@
       "get": {
         "operationId": "ui.workspaces.getById",
         "tags": [
-          "ui.workspaces"
+          "workspaces"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -420,7 +420,7 @@
       "put": {
         "operationId": "ui.workspaces.update",
         "tags": [
-          "ui.workspaces"
+          "workspaces"
         ],
         "summary": "Update",
         "responses": {
@@ -467,7 +467,7 @@
       "delete": {
         "operationId": "ui.workspaces.delete",
         "tags": [
-          "ui.workspaces"
+          "workspaces"
         ],
         "summary": "Delete",
         "responses": {
@@ -499,7 +499,7 @@
       "get": {
         "operationId": "ui.registeredComponents.query",
         "tags": [
-          "ui.registeredComponents"
+          "registeredComponents"
         ],
         "summary": "Query",
         "responses": {
@@ -539,7 +539,7 @@
       "post": {
         "operationId": "ui.registeredComponents.create",
         "tags": [
-          "ui.registeredComponents"
+          "registeredComponents"
         ],
         "summary": "Create",
         "responses": {
@@ -578,7 +578,7 @@
       "get": {
         "operationId": "ui.registeredComponents.getById",
         "tags": [
-          "ui.registeredComponents"
+          "registeredComponents"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -615,7 +615,7 @@
       "put": {
         "operationId": "ui.registeredComponents.update",
         "tags": [
-          "ui.registeredComponents"
+          "registeredComponents"
         ],
         "summary": "Update",
         "responses": {
@@ -662,7 +662,7 @@
       "delete": {
         "operationId": "ui.registeredComponents.delete",
         "tags": [
-          "ui.registeredComponents"
+          "registeredComponents"
         ],
         "summary": "Delete",
         "responses": {
@@ -694,7 +694,7 @@
       "get": {
         "operationId": "ui.screenStatuses.query",
         "tags": [
-          "ui.screenStatuses"
+          "screenStatuses"
         ],
         "summary": "Query",
         "responses": {
@@ -734,7 +734,7 @@
       "post": {
         "operationId": "ui.screenStatuses.create",
         "tags": [
-          "ui.screenStatuses"
+          "screenStatuses"
         ],
         "summary": "Create",
         "responses": {
@@ -773,7 +773,7 @@
       "get": {
         "operationId": "ui.screenStatuses.getById",
         "tags": [
-          "ui.screenStatuses"
+          "screenStatuses"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -810,7 +810,7 @@
       "put": {
         "operationId": "ui.screenStatuses.update",
         "tags": [
-          "ui.screenStatuses"
+          "screenStatuses"
         ],
         "summary": "Update",
         "responses": {
@@ -857,7 +857,7 @@
       "delete": {
         "operationId": "ui.screenStatuses.delete",
         "tags": [
-          "ui.screenStatuses"
+          "screenStatuses"
         ],
         "summary": "Delete",
         "responses": {
@@ -889,7 +889,7 @@
       "get": {
         "operationId": "ui.supportTickets.query",
         "tags": [
-          "ui.supportTickets"
+          "supportTickets"
         ],
         "summary": "Query",
         "responses": {
@@ -929,7 +929,7 @@
       "post": {
         "operationId": "ui.supportTickets.create",
         "tags": [
-          "ui.supportTickets"
+          "supportTickets"
         ],
         "summary": "Create",
         "responses": {
@@ -968,7 +968,7 @@
       "get": {
         "operationId": "ui.supportTickets.getById",
         "tags": [
-          "ui.supportTickets"
+          "supportTickets"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -1005,7 +1005,7 @@
       "put": {
         "operationId": "ui.supportTickets.update",
         "tags": [
-          "ui.supportTickets"
+          "supportTickets"
         ],
         "summary": "Update",
         "responses": {
@@ -1052,7 +1052,7 @@
       "delete": {
         "operationId": "ui.supportTickets.delete",
         "tags": [
-          "ui.supportTickets"
+          "supportTickets"
         ],
         "summary": "Delete",
         "responses": {
@@ -1084,7 +1084,7 @@
       "get": {
         "operationId": "ui.screenActions.query",
         "tags": [
-          "ui.screenActions"
+          "screenActions"
         ],
         "summary": "Query",
         "responses": {
@@ -1124,7 +1124,7 @@
       "post": {
         "operationId": "ui.screenActions.create",
         "tags": [
-          "ui.screenActions"
+          "screenActions"
         ],
         "summary": "Create",
         "responses": {
@@ -1163,7 +1163,7 @@
       "get": {
         "operationId": "ui.screenActions.getById",
         "tags": [
-          "ui.screenActions"
+          "screenActions"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -1200,7 +1200,7 @@
       "put": {
         "operationId": "ui.screenActions.update",
         "tags": [
-          "ui.screenActions"
+          "screenActions"
         ],
         "summary": "Update",
         "responses": {
@@ -1247,7 +1247,7 @@
       "delete": {
         "operationId": "ui.screenActions.delete",
         "tags": [
-          "ui.screenActions"
+          "screenActions"
         ],
         "summary": "Delete",
         "responses": {
@@ -1279,7 +1279,7 @@
       "get": {
         "operationId": "ui.settings.query",
         "tags": [
-          "ui.settings"
+          "settings"
         ],
         "summary": "Query",
         "responses": {
@@ -1319,7 +1319,7 @@
       "post": {
         "operationId": "ui.settings.create",
         "tags": [
-          "ui.settings"
+          "settings"
         ],
         "summary": "Create",
         "responses": {
@@ -1358,7 +1358,7 @@
       "get": {
         "operationId": "ui.settings.getById",
         "tags": [
-          "ui.settings"
+          "settings"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -1395,7 +1395,7 @@
       "put": {
         "operationId": "ui.settings.update",
         "tags": [
-          "ui.settings"
+          "settings"
         ],
         "summary": "Update",
         "responses": {
@@ -1442,7 +1442,7 @@
       "delete": {
         "operationId": "ui.settings.delete",
         "tags": [
-          "ui.settings"
+          "settings"
         ],
         "summary": "Delete",
         "responses": {
@@ -1474,7 +1474,7 @@
       "get": {
         "operationId": "ui.supportTicketNotes.query",
         "tags": [
-          "ui.supportTicketNotes"
+          "supportTicketNotes"
         ],
         "summary": "Query",
         "responses": {
@@ -1514,7 +1514,7 @@
       "post": {
         "operationId": "ui.supportTicketNotes.create",
         "tags": [
-          "ui.supportTicketNotes"
+          "supportTicketNotes"
         ],
         "summary": "Create",
         "responses": {
@@ -1553,7 +1553,7 @@
       "get": {
         "operationId": "ui.supportTicketNotes.getById",
         "tags": [
-          "ui.supportTicketNotes"
+          "supportTicketNotes"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -1590,7 +1590,7 @@
       "put": {
         "operationId": "ui.supportTicketNotes.update",
         "tags": [
-          "ui.supportTicketNotes"
+          "supportTicketNotes"
         ],
         "summary": "Update",
         "responses": {
@@ -1637,7 +1637,7 @@
       "delete": {
         "operationId": "ui.supportTicketNotes.delete",
         "tags": [
-          "ui.supportTicketNotes"
+          "supportTicketNotes"
         ],
         "summary": "Delete",
         "responses": {
@@ -1669,7 +1669,7 @@
       "get": {
         "operationId": "ui.supportTicketFiles.query",
         "tags": [
-          "ui.supportTicketFiles"
+          "supportTicketFiles"
         ],
         "summary": "Query",
         "responses": {
@@ -1709,7 +1709,7 @@
       "post": {
         "operationId": "ui.supportTicketFiles.create",
         "tags": [
-          "ui.supportTicketFiles"
+          "supportTicketFiles"
         ],
         "summary": "Create",
         "responses": {
@@ -1748,7 +1748,7 @@
       "get": {
         "operationId": "ui.supportTicketFiles.getById",
         "tags": [
-          "ui.supportTicketFiles"
+          "supportTicketFiles"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -1785,7 +1785,7 @@
       "put": {
         "operationId": "ui.supportTicketFiles.update",
         "tags": [
-          "ui.supportTicketFiles"
+          "supportTicketFiles"
         ],
         "summary": "Update",
         "responses": {
@@ -1832,7 +1832,7 @@
       "delete": {
         "operationId": "ui.supportTicketFiles.delete",
         "tags": [
-          "ui.supportTicketFiles"
+          "supportTicketFiles"
         ],
         "summary": "Delete",
         "responses": {
@@ -1864,7 +1864,7 @@
       "get": {
         "operationId": "ui.supportTicketTasks.query",
         "tags": [
-          "ui.supportTicketTasks"
+          "supportTicketTasks"
         ],
         "summary": "Query",
         "responses": {
@@ -1904,7 +1904,7 @@
       "post": {
         "operationId": "ui.supportTicketTasks.create",
         "tags": [
-          "ui.supportTicketTasks"
+          "supportTicketTasks"
         ],
         "summary": "Create",
         "responses": {
@@ -1943,7 +1943,7 @@
       "get": {
         "operationId": "ui.supportTicketTasks.getById",
         "tags": [
-          "ui.supportTicketTasks"
+          "supportTicketTasks"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -1980,7 +1980,7 @@
       "put": {
         "operationId": "ui.supportTicketTasks.update",
         "tags": [
-          "ui.supportTicketTasks"
+          "supportTicketTasks"
         ],
         "summary": "Update",
         "responses": {
@@ -2027,7 +2027,7 @@
       "delete": {
         "operationId": "ui.supportTicketTasks.delete",
         "tags": [
-          "ui.supportTicketTasks"
+          "supportTicketTasks"
         ],
         "summary": "Delete",
         "responses": {
@@ -2059,7 +2059,7 @@
       "get": {
         "operationId": "ui.recordRecentViews.query",
         "tags": [
-          "ui.recordRecentViews"
+          "recordRecentViews"
         ],
         "summary": "Query",
         "responses": {
@@ -2099,7 +2099,7 @@
       "post": {
         "operationId": "ui.recordRecentViews.create",
         "tags": [
-          "ui.recordRecentViews"
+          "recordRecentViews"
         ],
         "summary": "Create",
         "responses": {
@@ -2138,7 +2138,7 @@
       "get": {
         "operationId": "ui.recordRecentViews.getById",
         "tags": [
-          "ui.recordRecentViews"
+          "recordRecentViews"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2175,7 +2175,7 @@
       "put": {
         "operationId": "ui.recordRecentViews.update",
         "tags": [
-          "ui.recordRecentViews"
+          "recordRecentViews"
         ],
         "summary": "Update",
         "responses": {
@@ -2222,7 +2222,7 @@
       "delete": {
         "operationId": "ui.recordRecentViews.delete",
         "tags": [
-          "ui.recordRecentViews"
+          "recordRecentViews"
         ],
         "summary": "Delete",
         "responses": {
@@ -2254,7 +2254,7 @@
       "get": {
         "operationId": "ui.enterpriseProductAnnouncements.query",
         "tags": [
-          "ui.enterpriseProductAnnouncements"
+          "enterpriseProductAnnouncements"
         ],
         "summary": "Query",
         "responses": {
@@ -2294,7 +2294,7 @@
       "post": {
         "operationId": "ui.enterpriseProductAnnouncements.create",
         "tags": [
-          "ui.enterpriseProductAnnouncements"
+          "enterpriseProductAnnouncements"
         ],
         "summary": "Create",
         "responses": {
@@ -2333,7 +2333,7 @@
       "get": {
         "operationId": "ui.enterpriseProductAnnouncements.getById",
         "tags": [
-          "ui.enterpriseProductAnnouncements"
+          "enterpriseProductAnnouncements"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2370,7 +2370,7 @@
       "put": {
         "operationId": "ui.enterpriseProductAnnouncements.update",
         "tags": [
-          "ui.enterpriseProductAnnouncements"
+          "enterpriseProductAnnouncements"
         ],
         "summary": "Update",
         "responses": {
@@ -2417,7 +2417,7 @@
       "delete": {
         "operationId": "ui.enterpriseProductAnnouncements.delete",
         "tags": [
-          "ui.enterpriseProductAnnouncements"
+          "enterpriseProductAnnouncements"
         ],
         "summary": "Delete",
         "responses": {
@@ -2449,7 +2449,7 @@
       "get": {
         "operationId": "ui.drafts.query",
         "tags": [
-          "ui.drafts"
+          "drafts"
         ],
         "summary": "Query",
         "responses": {
@@ -2489,7 +2489,7 @@
       "post": {
         "operationId": "ui.drafts.create",
         "tags": [
-          "ui.drafts"
+          "drafts"
         ],
         "summary": "Create",
         "responses": {
@@ -2528,7 +2528,7 @@
       "get": {
         "operationId": "ui.drafts.getById",
         "tags": [
-          "ui.drafts"
+          "drafts"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2565,7 +2565,7 @@
       "put": {
         "operationId": "ui.drafts.update",
         "tags": [
-          "ui.drafts"
+          "drafts"
         ],
         "summary": "Update",
         "responses": {
@@ -2612,7 +2612,7 @@
       "delete": {
         "operationId": "ui.drafts.delete",
         "tags": [
-          "ui.drafts"
+          "drafts"
         ],
         "summary": "Delete",
         "responses": {
@@ -2644,7 +2644,7 @@
       "get": {
         "operationId": "ui.userScreens.query",
         "tags": [
-          "ui.userScreens"
+          "userScreens"
         ],
         "summary": "Query",
         "responses": {
@@ -2684,7 +2684,7 @@
       "post": {
         "operationId": "ui.userScreens.create",
         "tags": [
-          "ui.userScreens"
+          "userScreens"
         ],
         "summary": "Create",
         "responses": {
@@ -2723,7 +2723,7 @@
       "get": {
         "operationId": "ui.userScreens.getById",
         "tags": [
-          "ui.userScreens"
+          "userScreens"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2760,7 +2760,7 @@
       "put": {
         "operationId": "ui.userScreens.update",
         "tags": [
-          "ui.userScreens"
+          "userScreens"
         ],
         "summary": "Update",
         "responses": {
@@ -2807,7 +2807,7 @@
       "delete": {
         "operationId": "ui.userScreens.delete",
         "tags": [
-          "ui.userScreens"
+          "userScreens"
         ],
         "summary": "Delete",
         "responses": {
@@ -2839,7 +2839,7 @@
       "get": {
         "operationId": "ui.supportTicketResolutions.query",
         "tags": [
-          "ui.supportTicketResolutions"
+          "supportTicketResolutions"
         ],
         "summary": "Query",
         "responses": {
@@ -2879,7 +2879,7 @@
       "post": {
         "operationId": "ui.supportTicketResolutions.create",
         "tags": [
-          "ui.supportTicketResolutions"
+          "supportTicketResolutions"
         ],
         "summary": "Create",
         "responses": {
@@ -2918,7 +2918,7 @@
       "get": {
         "operationId": "ui.supportTicketResolutions.getById",
         "tags": [
-          "ui.supportTicketResolutions"
+          "supportTicketResolutions"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2955,7 +2955,7 @@
       "put": {
         "operationId": "ui.supportTicketResolutions.update",
         "tags": [
-          "ui.supportTicketResolutions"
+          "supportTicketResolutions"
         ],
         "summary": "Update",
         "responses": {
@@ -3002,7 +3002,7 @@
       "delete": {
         "operationId": "ui.supportTicketResolutions.delete",
         "tags": [
-          "ui.supportTicketResolutions"
+          "supportTicketResolutions"
         ],
         "summary": "Delete",
         "responses": {
@@ -3034,7 +3034,7 @@
       "get": {
         "operationId": "ui.screenNotes.query",
         "tags": [
-          "ui.screenNotes"
+          "screenNotes"
         ],
         "summary": "Query",
         "responses": {
@@ -3074,7 +3074,7 @@
       "post": {
         "operationId": "ui.screenNotes.create",
         "tags": [
-          "ui.screenNotes"
+          "screenNotes"
         ],
         "summary": "Create",
         "responses": {
@@ -3113,7 +3113,7 @@
       "get": {
         "operationId": "ui.screenNotes.getById",
         "tags": [
-          "ui.screenNotes"
+          "screenNotes"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -3150,7 +3150,7 @@
       "put": {
         "operationId": "ui.screenNotes.update",
         "tags": [
-          "ui.screenNotes"
+          "screenNotes"
         ],
         "summary": "Update",
         "responses": {
@@ -3197,7 +3197,7 @@
       "delete": {
         "operationId": "ui.screenNotes.delete",
         "tags": [
-          "ui.screenNotes"
+          "screenNotes"
         ],
         "summary": "Delete",
         "responses": {
@@ -3229,7 +3229,7 @@
       "get": {
         "operationId": "ui.screenFiles.query",
         "tags": [
-          "ui.screenFiles"
+          "screenFiles"
         ],
         "summary": "Query",
         "responses": {
@@ -3269,7 +3269,7 @@
       "post": {
         "operationId": "ui.screenFiles.create",
         "tags": [
-          "ui.screenFiles"
+          "screenFiles"
         ],
         "summary": "Create",
         "responses": {
@@ -3308,7 +3308,7 @@
       "get": {
         "operationId": "ui.screenFiles.getById",
         "tags": [
-          "ui.screenFiles"
+          "screenFiles"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -3345,7 +3345,7 @@
       "put": {
         "operationId": "ui.screenFiles.update",
         "tags": [
-          "ui.screenFiles"
+          "screenFiles"
         ],
         "summary": "Update",
         "responses": {
@@ -3392,7 +3392,7 @@
       "delete": {
         "operationId": "ui.screenFiles.delete",
         "tags": [
-          "ui.screenFiles"
+          "screenFiles"
         ],
         "summary": "Delete",
         "responses": {
@@ -3424,7 +3424,7 @@
       "get": {
         "operationId": "ui.screenTasks.query",
         "tags": [
-          "ui.screenTasks"
+          "screenTasks"
         ],
         "summary": "Query",
         "responses": {
@@ -3464,7 +3464,7 @@
       "post": {
         "operationId": "ui.screenTasks.create",
         "tags": [
-          "ui.screenTasks"
+          "screenTasks"
         ],
         "summary": "Create",
         "responses": {
@@ -3503,7 +3503,7 @@
       "get": {
         "operationId": "ui.screenTasks.getById",
         "tags": [
-          "ui.screenTasks"
+          "screenTasks"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -3540,7 +3540,7 @@
       "put": {
         "operationId": "ui.screenTasks.update",
         "tags": [
-          "ui.screenTasks"
+          "screenTasks"
         ],
         "summary": "Update",
         "responses": {
@@ -3587,7 +3587,7 @@
       "delete": {
         "operationId": "ui.screenTasks.delete",
         "tags": [
-          "ui.screenTasks"
+          "screenTasks"
         ],
         "summary": "Delete",
         "responses": {
@@ -3619,7 +3619,7 @@
       "get": {
         "operationId": "ui.enterpriseProductAnnouncementNotes.query",
         "tags": [
-          "ui.enterpriseProductAnnouncementNotes"
+          "enterpriseProductAnnouncementNotes"
         ],
         "summary": "Query",
         "responses": {
@@ -3659,7 +3659,7 @@
       "post": {
         "operationId": "ui.enterpriseProductAnnouncementNotes.create",
         "tags": [
-          "ui.enterpriseProductAnnouncementNotes"
+          "enterpriseProductAnnouncementNotes"
         ],
         "summary": "Create",
         "responses": {
@@ -3698,7 +3698,7 @@
       "get": {
         "operationId": "ui.enterpriseProductAnnouncementNotes.getById",
         "tags": [
-          "ui.enterpriseProductAnnouncementNotes"
+          "enterpriseProductAnnouncementNotes"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -3735,7 +3735,7 @@
       "put": {
         "operationId": "ui.enterpriseProductAnnouncementNotes.update",
         "tags": [
-          "ui.enterpriseProductAnnouncementNotes"
+          "enterpriseProductAnnouncementNotes"
         ],
         "summary": "Update",
         "responses": {
@@ -3782,7 +3782,7 @@
       "delete": {
         "operationId": "ui.enterpriseProductAnnouncementNotes.delete",
         "tags": [
-          "ui.enterpriseProductAnnouncementNotes"
+          "enterpriseProductAnnouncementNotes"
         ],
         "summary": "Delete",
         "responses": {
@@ -3814,7 +3814,7 @@
       "get": {
         "operationId": "ui.enterpriseProductAnnouncementFiles.query",
         "tags": [
-          "ui.enterpriseProductAnnouncementFiles"
+          "enterpriseProductAnnouncementFiles"
         ],
         "summary": "Query",
         "responses": {
@@ -3854,7 +3854,7 @@
       "post": {
         "operationId": "ui.enterpriseProductAnnouncementFiles.create",
         "tags": [
-          "ui.enterpriseProductAnnouncementFiles"
+          "enterpriseProductAnnouncementFiles"
         ],
         "summary": "Create",
         "responses": {
@@ -3893,7 +3893,7 @@
       "get": {
         "operationId": "ui.enterpriseProductAnnouncementFiles.getById",
         "tags": [
-          "ui.enterpriseProductAnnouncementFiles"
+          "enterpriseProductAnnouncementFiles"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -3930,7 +3930,7 @@
       "put": {
         "operationId": "ui.enterpriseProductAnnouncementFiles.update",
         "tags": [
-          "ui.enterpriseProductAnnouncementFiles"
+          "enterpriseProductAnnouncementFiles"
         ],
         "summary": "Update",
         "responses": {
@@ -3977,7 +3977,7 @@
       "delete": {
         "operationId": "ui.enterpriseProductAnnouncementFiles.delete",
         "tags": [
-          "ui.enterpriseProductAnnouncementFiles"
+          "enterpriseProductAnnouncementFiles"
         ],
         "summary": "Delete",
         "responses": {
@@ -4009,7 +4009,7 @@
       "get": {
         "operationId": "ui.enterpriseProductAnnouncementTasks.query",
         "tags": [
-          "ui.enterpriseProductAnnouncementTasks"
+          "enterpriseProductAnnouncementTasks"
         ],
         "summary": "Query",
         "responses": {
@@ -4049,7 +4049,7 @@
       "post": {
         "operationId": "ui.enterpriseProductAnnouncementTasks.create",
         "tags": [
-          "ui.enterpriseProductAnnouncementTasks"
+          "enterpriseProductAnnouncementTasks"
         ],
         "summary": "Create",
         "responses": {
@@ -4088,7 +4088,7 @@
       "get": {
         "operationId": "ui.enterpriseProductAnnouncementTasks.getById",
         "tags": [
-          "ui.enterpriseProductAnnouncementTasks"
+          "enterpriseProductAnnouncementTasks"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -4125,7 +4125,7 @@
       "put": {
         "operationId": "ui.enterpriseProductAnnouncementTasks.update",
         "tags": [
-          "ui.enterpriseProductAnnouncementTasks"
+          "enterpriseProductAnnouncementTasks"
         ],
         "summary": "Update",
         "responses": {
@@ -4172,7 +4172,7 @@
       "delete": {
         "operationId": "ui.enterpriseProductAnnouncementTasks.delete",
         "tags": [
-          "ui.enterpriseProductAnnouncementTasks"
+          "enterpriseProductAnnouncementTasks"
         ],
         "summary": "Delete",
         "responses": {
@@ -4204,7 +4204,7 @@
       "get": {
         "operationId": "ui.screenComponents.query",
         "tags": [
-          "ui.screenComponents"
+          "screenComponents"
         ],
         "summary": "Query",
         "responses": {
@@ -4244,7 +4244,7 @@
       "post": {
         "operationId": "ui.screenComponents.create",
         "tags": [
-          "ui.screenComponents"
+          "screenComponents"
         ],
         "summary": "Create",
         "responses": {
@@ -4283,7 +4283,7 @@
       "get": {
         "operationId": "ui.screenComponents.getById",
         "tags": [
-          "ui.screenComponents"
+          "screenComponents"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -4320,7 +4320,7 @@
       "put": {
         "operationId": "ui.screenComponents.update",
         "tags": [
-          "ui.screenComponents"
+          "screenComponents"
         ],
         "summary": "Update",
         "responses": {
@@ -4367,7 +4367,7 @@
       "delete": {
         "operationId": "ui.screenComponents.delete",
         "tags": [
-          "ui.screenComponents"
+          "screenComponents"
         ],
         "summary": "Delete",
         "responses": {
@@ -4399,7 +4399,7 @@
       "get": {
         "operationId": "ui.workspaces.getUserWorkspaces",
         "tags": [
-          "ui.workspaces"
+          "workspaces"
         ],
         "summary": "Get workspaces accessible to a user based on role assignments",
         "responses": {
@@ -4450,7 +4450,7 @@
       "get": {
         "operationId": "ui.workspaces.getUserActiveWorkspace",
         "tags": [
-          "ui.workspaces"
+          "workspaces"
         ],
         "summary": "Get user's active workspace (with fallback to role default)",
         "responses": {
@@ -4503,7 +4503,7 @@
       "put": {
         "operationId": "ui.workspaces.updateUserActiveWorkspace",
         "tags": [
-          "ui.workspaces"
+          "workspaces"
         ],
         "summary": "Update user's active workspace",
         "responses": {
@@ -4559,7 +4559,7 @@
       "get": {
         "operationId": "ui.workspaces.getWorkspaceNavigation",
         "tags": [
-          "ui.workspaces"
+          "workspaces"
         ],
         "summary": "Get navigation items for a workspace (hierarchical tree building)",
         "responses": {
@@ -4610,7 +4610,7 @@
       "post": {
         "operationId": "ui.workspaces.cloneWorkspace",
         "tags": [
-          "ui.workspaces"
+          "workspaces"
         ],
         "summary": "Clone workspace with navigation (deep cloning)",
         "responses": {
@@ -4668,7 +4668,7 @@
       "get": {
         "operationId": "ui.screens.getScreenByUrl",
         "tags": [
-          "ui.screens"
+          "screens"
         ],
         "summary": "Get screen by URL with pattern matching",
         "responses": {
@@ -4723,7 +4723,7 @@
       "get": {
         "operationId": "ui.screens.getScreensByFeature",
         "tags": [
-          "ui.screens"
+          "screens"
         ],
         "summary": "Get screens by feature (convenience query)",
         "responses": {
@@ -4774,7 +4774,7 @@
       "get": {
         "operationId": "ui.screens.getScreensBatch",
         "tags": [
-          "ui.screens"
+          "screens"
         ],
         "summary": "Batch: all screens (optionally workspace-scoped) with their components",
         "responses": {
@@ -4828,7 +4828,7 @@
       "post": {
         "operationId": "ui.screens.cloneScreen",
         "tags": [
-          "ui.screens"
+          "screens"
         ],
         "summary": "Clone a screen with all its components (deep cloning)",
         "responses": {
@@ -4886,7 +4886,7 @@
       "post": {
         "operationId": "ui.screens.saveScreenToAccount",
         "tags": [
-          "ui.screens"
+          "screens"
         ],
         "summary": "Save screen and components to Account DB (master/backup state)",
         "responses": {
@@ -4945,7 +4945,7 @@
       "delete": {
         "operationId": "ui.screens.resetScreenCustomization",
         "tags": [
-          "ui.screens"
+          "screens"
         ],
         "summary": "Reset screen customization (deletes user customization, falls back to Account DB)",
         "responses": {
@@ -4994,7 +4994,7 @@
       "post": {
         "operationId": "ui.screens.generateMigration",
         "tags": [
-          "ui.screens"
+          "screens"
         ],
         "summary": "Generate a Flyway migration script by diffing local DB against the local reference DB",
         "responses": {
@@ -5045,7 +5045,7 @@
       "get": {
         "operationId": "ui.userscreens.getUserScreens",
         "tags": [
-          "ui.userscreens"
+          "userscreens"
         ],
         "summary": "Get User Screens",
         "responses": {
@@ -5089,7 +5089,7 @@
       "post": {
         "operationId": "ui.userscreens.createUserScreen",
         "tags": [
-          "ui.userscreens"
+          "userscreens"
         ],
         "summary": "Create User Screen",
         "responses": {
@@ -5128,7 +5128,7 @@
       "post": {
         "operationId": "ui.userscreens.ensureUserScreen",
         "tags": [
-          "ui.userscreens"
+          "userscreens"
         ],
         "summary": "Ensure User Screen",
         "responses": {
@@ -5167,7 +5167,7 @@
       "delete": {
         "operationId": "ui.userscreens.deleteUserScreen",
         "tags": [
-          "ui.userscreens"
+          "userscreens"
         ],
         "summary": "Delete User Screen",
         "responses": {
@@ -5215,7 +5215,7 @@
       "post": {
         "operationId": "ui.userscreens.createPersonalView",
         "tags": [
-          "ui.userscreens"
+          "userscreens"
         ],
         "summary": "Create Personal View",
         "responses": {
@@ -5265,7 +5265,7 @@
       "post": {
         "operationId": "ui.components.addComponentToScreen",
         "tags": [
-          "ui.components"
+          "components"
         ],
         "summary": "Add component to screen",
         "responses": {
@@ -5323,7 +5323,7 @@
       "put": {
         "operationId": "ui.components.updateComponentLayout",
         "tags": [
-          "ui.components"
+          "components"
         ],
         "summary": "Update component layout (position, size, priority updates)",
         "responses": {
@@ -5379,7 +5379,7 @@
       "delete": {
         "operationId": "ui.components.removeComponentFromScreen",
         "tags": [
-          "ui.components"
+          "components"
         ],
         "summary": "Remove component from screen",
         "responses": {
@@ -5427,7 +5427,7 @@
       "post": {
         "operationId": "ui.components.saveComponentForEveryone",
         "tags": [
-          "ui.components"
+          "components"
         ],
         "summary": "Save a personal component for everyone (promote to shared scope on the base screen)",
         "responses": {
@@ -5486,7 +5486,7 @@
       "post": {
         "operationId": "ui.components.populateScreenComponents",
         "tags": [
-          "ui.components"
+          "components"
         ],
         "summary": "Populate screen components",
         "responses": {
@@ -5544,7 +5544,7 @@
       "get": {
         "operationId": "ui.dashboards.getScreenTemplates",
         "tags": [
-          "ui.dashboards"
+          "dashboards"
         ],
         "summary": "Get screen templates by type",
         "responses": {

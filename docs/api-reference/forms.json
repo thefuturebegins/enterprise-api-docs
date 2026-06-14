@@ -13,10 +13,10 @@
   ],
   "tags": [
     {
-      "name": "forms.formFields"
+      "name": "formFields"
     },
     {
-      "name": "forms.forms"
+      "name": "forms"
     }
   ],
   "paths": {
@@ -24,7 +24,7 @@
       "get": {
         "operationId": "forms.forms.query",
         "tags": [
-          "forms.forms"
+          "forms"
         ],
         "summary": "Query",
         "responses": {
@@ -64,7 +64,7 @@
       "post": {
         "operationId": "forms.forms.create",
         "tags": [
-          "forms.forms"
+          "forms"
         ],
         "summary": "Create",
         "responses": {
@@ -103,7 +103,7 @@
       "get": {
         "operationId": "forms.forms.getById",
         "tags": [
-          "forms.forms"
+          "forms"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -140,7 +140,7 @@
       "put": {
         "operationId": "forms.forms.update",
         "tags": [
-          "forms.forms"
+          "forms"
         ],
         "summary": "Update",
         "responses": {
@@ -187,7 +187,7 @@
       "delete": {
         "operationId": "forms.forms.delete",
         "tags": [
-          "forms.forms"
+          "forms"
         ],
         "summary": "Delete",
         "responses": {
@@ -219,7 +219,7 @@
       "get": {
         "operationId": "forms.formFields.query",
         "tags": [
-          "forms.formFields"
+          "formFields"
         ],
         "summary": "Query",
         "responses": {
@@ -259,7 +259,7 @@
       "post": {
         "operationId": "forms.formFields.create",
         "tags": [
-          "forms.formFields"
+          "formFields"
         ],
         "summary": "Create",
         "responses": {
@@ -298,7 +298,7 @@
       "get": {
         "operationId": "forms.formFields.getById",
         "tags": [
-          "forms.formFields"
+          "formFields"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -335,7 +335,7 @@
       "put": {
         "operationId": "forms.formFields.update",
         "tags": [
-          "forms.formFields"
+          "formFields"
         ],
         "summary": "Update",
         "responses": {
@@ -382,7 +382,7 @@
       "delete": {
         "operationId": "forms.formFields.delete",
         "tags": [
-          "forms.formFields"
+          "formFields"
         ],
         "summary": "Delete",
         "responses": {

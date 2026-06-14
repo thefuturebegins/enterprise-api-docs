@@ -13,13 +13,13 @@
   ],
   "tags": [
     {
-      "name": "notifications.notifications"
+      "name": "notifications"
     },
     {
-      "name": "notifications.notificationscheduling"
+      "name": "notificationscheduling"
     },
     {
-      "name": "notifications.sendnotification"
+      "name": "sendnotification"
     }
   ],
   "paths": {
@@ -27,7 +27,7 @@
       "get": {
         "operationId": "notifications.notifications.query",
         "tags": [
-          "notifications.notifications"
+          "notifications"
         ],
         "summary": "Query",
         "responses": {
@@ -67,7 +67,7 @@
       "post": {
         "operationId": "notifications.notifications.create",
         "tags": [
-          "notifications.notifications"
+          "notifications"
         ],
         "summary": "Create",
         "responses": {
@@ -106,7 +106,7 @@
       "get": {
         "operationId": "notifications.notifications.getById",
         "tags": [
-          "notifications.notifications"
+          "notifications"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -143,7 +143,7 @@
       "put": {
         "operationId": "notifications.notifications.update",
         "tags": [
-          "notifications.notifications"
+          "notifications"
         ],
         "summary": "Update",
         "responses": {
@@ -190,7 +190,7 @@
       "delete": {
         "operationId": "notifications.notifications.delete",
         "tags": [
-          "notifications.notifications"
+          "notifications"
         ],
         "summary": "Delete",
         "responses": {
@@ -222,7 +222,7 @@
       "post": {
         "operationId": "notifications.sendnotification.sendNotification",
         "tags": [
-          "notifications.sendnotification"
+          "sendnotification"
         ],
         "summary": "Send notification to user with channel routing",
         "responses": {
@@ -270,7 +270,7 @@
       "post": {
         "operationId": "notifications.sendnotification.sendBulkNotifications",
         "tags": [
-          "notifications.sendnotification"
+          "sendnotification"
         ],
         "summary": "Send multiple notifications in batch",
         "responses": {
@@ -324,7 +324,7 @@
       "post": {
         "operationId": "notifications.sendnotification.determineRecipients",
         "tags": [
-          "notifications.sendnotification"
+          "sendnotification"
         ],
         "summary": "Resolve recipients from criteria (role, group, filter)",
         "responses": {
@@ -377,7 +377,7 @@
       "post": {
         "operationId": "notifications.sendnotification.trackDeliveryStatus",
         "tags": [
-          "notifications.sendnotification"
+          "sendnotification"
         ],
         "summary": "Update delivery status for specific channel",
         "responses": {
@@ -452,7 +452,7 @@
       "post": {
         "operationId": "notifications.sendnotification.retryFailedNotification",
         "tags": [
-          "notifications.sendnotification"
+          "sendnotification"
         ],
         "summary": "Retry failed notification delivery",
         "responses": {
@@ -510,7 +510,7 @@
       "put": {
         "operationId": "notifications.sendnotification.dismissNotification",
         "tags": [
-          "notifications.sendnotification"
+          "sendnotification"
         ],
         "summary": "Mark notification as dismissed",
         "responses": {
@@ -569,7 +569,7 @@
       "put": {
         "operationId": "notifications.sendnotification.markAsRead",
         "tags": [
-          "notifications.sendnotification"
+          "sendnotification"
         ],
         "summary": "Mark notification as read with timestamp",
         "responses": {
@@ -628,7 +628,7 @@
       "post": {
         "operationId": "notifications.sendnotification.executeNotificationAction",
         "tags": [
-          "notifications.sendnotification"
+          "sendnotification"
         ],
         "summary": "Handle action button clicks",
         "responses": {
@@ -692,7 +692,7 @@
       "get": {
         "operationId": "notifications.sendnotification.getUnreadCount",
         "tags": [
-          "notifications.sendnotification"
+          "sendnotification"
         ],
         "summary": "Get count of unread notifications for user",
         "responses": {
@@ -749,7 +749,7 @@
       "post": {
         "operationId": "notifications.sendnotification.cleanupExpiredNotifications",
         "tags": [
-          "notifications.sendnotification"
+          "sendnotification"
         ],
         "summary": "Remove expired notifications based on expiry date",
         "responses": {
@@ -797,7 +797,7 @@
       "post": {
         "operationId": "notifications.sendnotification.generateNotificationFromTemplate",
         "tags": [
-          "notifications.sendnotification"
+          "sendnotification"
         ],
         "summary": "Create notification from template with variable substitution",
         "responses": {
@@ -864,7 +864,7 @@
       "post": {
         "operationId": "notifications.notificationscheduling.scheduleNotification",
         "tags": [
-          "notifications.notificationscheduling"
+          "notificationscheduling"
         ],
         "summary": "Schedule notification for specific time",
         "responses": {
@@ -931,7 +931,7 @@
       "post": {
         "operationId": "notifications.notificationscheduling.scheduleRecurringNotification",
         "tags": [
-          "notifications.notificationscheduling"
+          "notificationscheduling"
         ],
         "summary": "Set up recurring notification schedule",
         "responses": {
@@ -1002,7 +1002,7 @@
       "post": {
         "operationId": "notifications.notificationscheduling.optimizeDeliveryTime",
         "tags": [
-          "notifications.notificationscheduling"
+          "notificationscheduling"
         ],
         "summary": "Determine optimal delivery time based on user engagement",
         "responses": {
@@ -1069,7 +1069,7 @@
       "get": {
         "operationId": "notifications.notificationscheduling.batchScheduledNotifications",
         "tags": [
-          "notifications.notificationscheduling"
+          "notificationscheduling"
         ],
         "summary": "Group scheduled notifications for efficient processing",
         "responses": {
@@ -1121,7 +1121,7 @@
       "post": {
         "operationId": "notifications.notificationscheduling.convertToUserTimezone",
         "tags": [
-          "notifications.notificationscheduling"
+          "notificationscheduling"
         ],
         "summary": "Convert scheduled time to user's timezone",
         "responses": {
@@ -1189,7 +1189,7 @@
       "delete": {
         "operationId": "notifications.notificationscheduling.cancelScheduledNotification",
         "tags": [
-          "notifications.notificationscheduling"
+          "notificationscheduling"
         ],
         "summary": "Cancel scheduled notification before delivery",
         "responses": {
@@ -1228,7 +1228,7 @@
       "put": {
         "operationId": "notifications.notificationscheduling.updateScheduledNotification",
         "tags": [
-          "notifications.notificationscheduling"
+          "notificationscheduling"
         ],
         "summary": "Modify scheduled notification",
         "responses": {
@@ -1286,7 +1286,7 @@
       "get": {
         "operationId": "notifications.notificationscheduling.getScheduledNotifications",
         "tags": [
-          "notifications.notificationscheduling"
+          "notificationscheduling"
         ],
         "summary": "Get user's scheduled notifications",
         "responses": {
@@ -1346,7 +1346,7 @@
       "post": {
         "operationId": "notifications.notificationscheduling.processScheduledNotifications",
         "tags": [
-          "notifications.notificationscheduling"
+          "notificationscheduling"
         ],
         "summary": "Process and send due notifications",
         "responses": {
@@ -1405,7 +1405,7 @@
       "get": {
         "operationId": "notifications.notificationscheduling.previewScheduledNotification",
         "tags": [
-          "notifications.notificationscheduling"
+          "notificationscheduling"
         ],
         "summary": "Generate preview of scheduled notification",
         "responses": {

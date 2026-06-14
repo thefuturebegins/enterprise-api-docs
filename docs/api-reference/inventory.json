@@ -13,10 +13,10 @@
   ],
   "tags": [
     {
-      "name": "inventory.equipment"
+      "name": "equipment"
     },
     {
-      "name": "inventory.inventoryLocations"
+      "name": "inventoryLocations"
     }
   ],
   "paths": {
@@ -24,7 +24,7 @@
       "get": {
         "operationId": "inventory.equipment.query",
         "tags": [
-          "inventory.equipment"
+          "equipment"
         ],
         "summary": "Query",
         "responses": {
@@ -64,7 +64,7 @@
       "post": {
         "operationId": "inventory.equipment.create",
         "tags": [
-          "inventory.equipment"
+          "equipment"
         ],
         "summary": "Create",
         "responses": {
@@ -103,7 +103,7 @@
       "get": {
         "operationId": "inventory.equipment.getById",
         "tags": [
-          "inventory.equipment"
+          "equipment"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -140,7 +140,7 @@
       "put": {
         "operationId": "inventory.equipment.update",
         "tags": [
-          "inventory.equipment"
+          "equipment"
         ],
         "summary": "Update",
         "responses": {
@@ -187,7 +187,7 @@
       "delete": {
         "operationId": "inventory.equipment.delete",
         "tags": [
-          "inventory.equipment"
+          "equipment"
         ],
         "summary": "Delete",
         "responses": {
@@ -219,7 +219,7 @@
       "get": {
         "operationId": "inventory.inventoryLocations.query",
         "tags": [
-          "inventory.inventoryLocations"
+          "inventoryLocations"
         ],
         "summary": "Query",
         "responses": {
@@ -259,7 +259,7 @@
       "post": {
         "operationId": "inventory.inventoryLocations.create",
         "tags": [
-          "inventory.inventoryLocations"
+          "inventoryLocations"
         ],
         "summary": "Create",
         "responses": {
@@ -298,7 +298,7 @@
       "get": {
         "operationId": "inventory.inventoryLocations.getById",
         "tags": [
-          "inventory.inventoryLocations"
+          "inventoryLocations"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -335,7 +335,7 @@
       "put": {
         "operationId": "inventory.inventoryLocations.update",
         "tags": [
-          "inventory.inventoryLocations"
+          "inventoryLocations"
         ],
         "summary": "Update",
         "responses": {
@@ -382,7 +382,7 @@
       "delete": {
         "operationId": "inventory.inventoryLocations.delete",
         "tags": [
-          "inventory.inventoryLocations"
+          "inventoryLocations"
         ],
         "summary": "Delete",
         "responses": {

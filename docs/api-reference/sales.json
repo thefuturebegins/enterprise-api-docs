@@ -13,175 +13,175 @@
   ],
   "tags": [
     {
-      "name": "sales.accountFiles"
+      "name": "accountFiles"
     },
     {
-      "name": "sales.accountNotes"
+      "name": "accountNotes"
     },
     {
-      "name": "sales.accountOwnerships"
+      "name": "accountOwnerships"
     },
     {
-      "name": "sales.accountProducts"
+      "name": "accountProducts"
     },
     {
-      "name": "sales.accountSources"
+      "name": "accountSources"
     },
     {
-      "name": "sales.accountStatuses"
+      "name": "accountStatuses"
     },
     {
-      "name": "sales.accountTasks"
+      "name": "accountTasks"
     },
     {
-      "name": "sales.accountTypes"
+      "name": "accountTypes"
     },
     {
-      "name": "sales.accountmanagement"
+      "name": "accountmanagement"
     },
     {
-      "name": "sales.accounts"
+      "name": "accounts"
     },
     {
-      "name": "sales.campaigns"
+      "name": "campaigns"
     },
     {
-      "name": "sales.contactFiles"
+      "name": "contactFiles"
     },
     {
-      "name": "sales.contactNotes"
+      "name": "contactNotes"
     },
     {
-      "name": "sales.contactStatuses"
+      "name": "contactStatuses"
     },
     {
-      "name": "sales.contactTasks"
+      "name": "contactTasks"
     },
     {
-      "name": "sales.contacts"
+      "name": "contacts"
     },
     {
-      "name": "sales.files"
+      "name": "files"
     },
     {
-      "name": "sales.googlebusinessprofiles"
+      "name": "googlebusinessprofiles"
     },
     {
-      "name": "sales.industries"
+      "name": "industries"
     },
     {
-      "name": "sales.insightFiles"
+      "name": "insightFiles"
     },
     {
-      "name": "sales.insightFilterFiles"
+      "name": "insightFilterFiles"
     },
     {
-      "name": "sales.insightFilterNotes"
+      "name": "insightFilterNotes"
     },
     {
-      "name": "sales.insightFilterTasks"
+      "name": "insightFilterTasks"
     },
     {
-      "name": "sales.insightFilters"
+      "name": "insightFilters"
     },
     {
-      "name": "sales.insightNotes"
+      "name": "insightNotes"
     },
     {
-      "name": "sales.insightTasks"
+      "name": "insightTasks"
     },
     {
-      "name": "sales.insights"
+      "name": "insights"
     },
     {
-      "name": "sales.leadmanagement"
+      "name": "leadmanagement"
     },
     {
-      "name": "sales.leadnurturing"
+      "name": "leadnurturing"
     },
     {
-      "name": "sales.leads"
+      "name": "leads"
     },
     {
-      "name": "sales.linkedinprofiles"
+      "name": "linkedinprofiles"
     },
     {
-      "name": "sales.notes"
+      "name": "notes"
     },
     {
-      "name": "sales.opportunities"
+      "name": "opportunities"
     },
     {
-      "name": "sales.opportunityFiles"
+      "name": "opportunityFiles"
     },
     {
-      "name": "sales.opportunityNotes"
+      "name": "opportunityNotes"
     },
     {
-      "name": "sales.opportunityProducts"
+      "name": "opportunityProducts"
     },
     {
-      "name": "sales.opportunityStatuses"
+      "name": "opportunityStatuses"
     },
     {
-      "name": "sales.opportunityTasks"
+      "name": "opportunityTasks"
     },
     {
-      "name": "sales.orders"
+      "name": "orders"
     },
     {
-      "name": "sales.organizationBoardMeetings"
+      "name": "organizationBoardMeetings"
     },
     {
-      "name": "sales.organizationContacts"
+      "name": "organizationContacts"
     },
     {
-      "name": "sales.organizationNews"
+      "name": "organizationNews"
     },
     {
-      "name": "sales.organizationTypes"
+      "name": "organizationTypes"
     },
     {
-      "name": "sales.organizations"
+      "name": "organizations"
     },
     {
-      "name": "sales.productFiles"
+      "name": "productFiles"
     },
     {
-      "name": "sales.productNotes"
+      "name": "productNotes"
     },
     {
-      "name": "sales.productStatuses"
+      "name": "productStatuses"
     },
     {
-      "name": "sales.productTasks"
+      "name": "productTasks"
     },
     {
-      "name": "sales.products"
+      "name": "products"
     },
     {
-      "name": "sales.quoteStatuses"
+      "name": "quoteStatuses"
     },
     {
-      "name": "sales.quotes"
+      "name": "quotes"
     },
     {
-      "name": "sales.regions"
+      "name": "regions"
     },
     {
-      "name": "sales.salesTargets"
+      "name": "salesTargets"
     },
     {
-      "name": "sales.slaTypes"
+      "name": "slaTypes"
     },
     {
-      "name": "sales.studentHistory"
+      "name": "studentHistory"
     },
     {
-      "name": "sales.tasks"
+      "name": "tasks"
     },
     {
-      "name": "sales.workspacemanagement"
+      "name": "workspacemanagement"
     }
   ],
   "paths": {
@@ -189,7 +189,7 @@
       "get": {
         "operationId": "sales.accounts.query",
         "tags": [
-          "sales.accounts"
+          "accounts"
         ],
         "summary": "Query",
         "responses": {
@@ -229,7 +229,7 @@
       "post": {
         "operationId": "sales.accounts.create",
         "tags": [
-          "sales.accounts"
+          "accounts"
         ],
         "summary": "Create",
         "responses": {
@@ -268,7 +268,7 @@
       "get": {
         "operationId": "sales.accounts.getById",
         "tags": [
-          "sales.accounts"
+          "accounts"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -305,7 +305,7 @@
       "put": {
         "operationId": "sales.accounts.update",
         "tags": [
-          "sales.accounts"
+          "accounts"
         ],
         "summary": "Update",
         "responses": {
@@ -352,7 +352,7 @@
       "delete": {
         "operationId": "sales.accounts.delete",
         "tags": [
-          "sales.accounts"
+          "accounts"
         ],
         "summary": "Delete",
         "responses": {
@@ -384,7 +384,7 @@
       "get": {
         "operationId": "sales.accountTypes.query",
         "tags": [
-          "sales.accountTypes"
+          "accountTypes"
         ],
         "summary": "Query",
         "responses": {
@@ -424,7 +424,7 @@
       "post": {
         "operationId": "sales.accountTypes.create",
         "tags": [
-          "sales.accountTypes"
+          "accountTypes"
         ],
         "summary": "Create",
         "responses": {
@@ -463,7 +463,7 @@
       "get": {
         "operationId": "sales.accountTypes.getById",
         "tags": [
-          "sales.accountTypes"
+          "accountTypes"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -500,7 +500,7 @@
       "put": {
         "operationId": "sales.accountTypes.update",
         "tags": [
-          "sales.accountTypes"
+          "accountTypes"
         ],
         "summary": "Update",
         "responses": {
@@ -547,7 +547,7 @@
       "delete": {
         "operationId": "sales.accountTypes.delete",
         "tags": [
-          "sales.accountTypes"
+          "accountTypes"
         ],
         "summary": "Delete",
         "responses": {
@@ -579,7 +579,7 @@
       "get": {
         "operationId": "sales.accountOwnerships.query",
         "tags": [
-          "sales.accountOwnerships"
+          "accountOwnerships"
         ],
         "summary": "Query",
         "responses": {
@@ -619,7 +619,7 @@
       "post": {
         "operationId": "sales.accountOwnerships.create",
         "tags": [
-          "sales.accountOwnerships"
+          "accountOwnerships"
         ],
         "summary": "Create",
         "responses": {
@@ -658,7 +658,7 @@
       "get": {
         "operationId": "sales.accountOwnerships.getById",
         "tags": [
-          "sales.accountOwnerships"
+          "accountOwnerships"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -695,7 +695,7 @@
       "put": {
         "operationId": "sales.accountOwnerships.update",
         "tags": [
-          "sales.accountOwnerships"
+          "accountOwnerships"
         ],
         "summary": "Update",
         "responses": {
@@ -742,7 +742,7 @@
       "delete": {
         "operationId": "sales.accountOwnerships.delete",
         "tags": [
-          "sales.accountOwnerships"
+          "accountOwnerships"
         ],
         "summary": "Delete",
         "responses": {
@@ -774,7 +774,7 @@
       "get": {
         "operationId": "sales.accountSources.query",
         "tags": [
-          "sales.accountSources"
+          "accountSources"
         ],
         "summary": "Query",
         "responses": {
@@ -814,7 +814,7 @@
       "post": {
         "operationId": "sales.accountSources.create",
         "tags": [
-          "sales.accountSources"
+          "accountSources"
         ],
         "summary": "Create",
         "responses": {
@@ -853,7 +853,7 @@
       "get": {
         "operationId": "sales.accountSources.getById",
         "tags": [
-          "sales.accountSources"
+          "accountSources"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -890,7 +890,7 @@
       "put": {
         "operationId": "sales.accountSources.update",
         "tags": [
-          "sales.accountSources"
+          "accountSources"
         ],
         "summary": "Update",
         "responses": {
@@ -937,7 +937,7 @@
       "delete": {
         "operationId": "sales.accountSources.delete",
         "tags": [
-          "sales.accountSources"
+          "accountSources"
         ],
         "summary": "Delete",
         "responses": {
@@ -969,7 +969,7 @@
       "get": {
         "operationId": "sales.regions.query",
         "tags": [
-          "sales.regions"
+          "regions"
         ],
         "summary": "Query",
         "responses": {
@@ -1009,7 +1009,7 @@
       "post": {
         "operationId": "sales.regions.create",
         "tags": [
-          "sales.regions"
+          "regions"
         ],
         "summary": "Create",
         "responses": {
@@ -1048,7 +1048,7 @@
       "get": {
         "operationId": "sales.regions.getById",
         "tags": [
-          "sales.regions"
+          "regions"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -1085,7 +1085,7 @@
       "put": {
         "operationId": "sales.regions.update",
         "tags": [
-          "sales.regions"
+          "regions"
         ],
         "summary": "Update",
         "responses": {
@@ -1132,7 +1132,7 @@
       "delete": {
         "operationId": "sales.regions.delete",
         "tags": [
-          "sales.regions"
+          "regions"
         ],
         "summary": "Delete",
         "responses": {
@@ -1164,7 +1164,7 @@
       "get": {
         "operationId": "sales.slaTypes.query",
         "tags": [
-          "sales.slaTypes"
+          "slaTypes"
         ],
         "summary": "Query",
         "responses": {
@@ -1204,7 +1204,7 @@
       "post": {
         "operationId": "sales.slaTypes.create",
         "tags": [
-          "sales.slaTypes"
+          "slaTypes"
         ],
         "summary": "Create",
         "responses": {
@@ -1243,7 +1243,7 @@
       "get": {
         "operationId": "sales.slaTypes.getById",
         "tags": [
-          "sales.slaTypes"
+          "slaTypes"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -1280,7 +1280,7 @@
       "put": {
         "operationId": "sales.slaTypes.update",
         "tags": [
-          "sales.slaTypes"
+          "slaTypes"
         ],
         "summary": "Update",
         "responses": {
@@ -1327,7 +1327,7 @@
       "delete": {
         "operationId": "sales.slaTypes.delete",
         "tags": [
-          "sales.slaTypes"
+          "slaTypes"
         ],
         "summary": "Delete",
         "responses": {
@@ -1359,7 +1359,7 @@
       "get": {
         "operationId": "sales.industries.query",
         "tags": [
-          "sales.industries"
+          "industries"
         ],
         "summary": "Query",
         "responses": {
@@ -1399,7 +1399,7 @@
       "post": {
         "operationId": "sales.industries.create",
         "tags": [
-          "sales.industries"
+          "industries"
         ],
         "summary": "Create",
         "responses": {
@@ -1438,7 +1438,7 @@
       "get": {
         "operationId": "sales.industries.getById",
         "tags": [
-          "sales.industries"
+          "industries"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -1475,7 +1475,7 @@
       "put": {
         "operationId": "sales.industries.update",
         "tags": [
-          "sales.industries"
+          "industries"
         ],
         "summary": "Update",
         "responses": {
@@ -1522,7 +1522,7 @@
       "delete": {
         "operationId": "sales.industries.delete",
         "tags": [
-          "sales.industries"
+          "industries"
         ],
         "summary": "Delete",
         "responses": {
@@ -1554,7 +1554,7 @@
       "get": {
         "operationId": "sales.accountProducts.query",
         "tags": [
-          "sales.accountProducts"
+          "accountProducts"
         ],
         "summary": "Query",
         "responses": {
@@ -1594,7 +1594,7 @@
       "post": {
         "operationId": "sales.accountProducts.create",
         "tags": [
-          "sales.accountProducts"
+          "accountProducts"
         ],
         "summary": "Create",
         "responses": {
@@ -1633,7 +1633,7 @@
       "get": {
         "operationId": "sales.accountProducts.getById",
         "tags": [
-          "sales.accountProducts"
+          "accountProducts"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -1670,7 +1670,7 @@
       "put": {
         "operationId": "sales.accountProducts.update",
         "tags": [
-          "sales.accountProducts"
+          "accountProducts"
         ],
         "summary": "Update",
         "responses": {
@@ -1717,7 +1717,7 @@
       "delete": {
         "operationId": "sales.accountProducts.delete",
         "tags": [
-          "sales.accountProducts"
+          "accountProducts"
         ],
         "summary": "Delete",
         "responses": {
@@ -1749,7 +1749,7 @@
       "get": {
         "operationId": "sales.accountNotes.query",
         "tags": [
-          "sales.accountNotes"
+          "accountNotes"
         ],
         "summary": "Query",
         "responses": {
@@ -1789,7 +1789,7 @@
       "post": {
         "operationId": "sales.accountNotes.create",
         "tags": [
-          "sales.accountNotes"
+          "accountNotes"
         ],
         "summary": "Create",
         "responses": {
@@ -1828,7 +1828,7 @@
       "get": {
         "operationId": "sales.accountNotes.getById",
         "tags": [
-          "sales.accountNotes"
+          "accountNotes"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -1865,7 +1865,7 @@
       "put": {
         "operationId": "sales.accountNotes.update",
         "tags": [
-          "sales.accountNotes"
+          "accountNotes"
         ],
         "summary": "Update",
         "responses": {
@@ -1912,7 +1912,7 @@
       "delete": {
         "operationId": "sales.accountNotes.delete",
         "tags": [
-          "sales.accountNotes"
+          "accountNotes"
         ],
         "summary": "Delete",
         "responses": {
@@ -1944,7 +1944,7 @@
       "get": {
         "operationId": "sales.accountFiles.query",
         "tags": [
-          "sales.accountFiles"
+          "accountFiles"
         ],
         "summary": "Query",
         "responses": {
@@ -1984,7 +1984,7 @@
       "post": {
         "operationId": "sales.accountFiles.create",
         "tags": [
-          "sales.accountFiles"
+          "accountFiles"
         ],
         "summary": "Create",
         "responses": {
@@ -2023,7 +2023,7 @@
       "get": {
         "operationId": "sales.accountFiles.getById",
         "tags": [
-          "sales.accountFiles"
+          "accountFiles"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2060,7 +2060,7 @@
       "put": {
         "operationId": "sales.accountFiles.update",
         "tags": [
-          "sales.accountFiles"
+          "accountFiles"
         ],
         "summary": "Update",
         "responses": {
@@ -2107,7 +2107,7 @@
       "delete": {
         "operationId": "sales.accountFiles.delete",
         "tags": [
-          "sales.accountFiles"
+          "accountFiles"
         ],
         "summary": "Delete",
         "responses": {
@@ -2139,7 +2139,7 @@
       "get": {
         "operationId": "sales.accountTasks.query",
         "tags": [
-          "sales.accountTasks"
+          "accountTasks"
         ],
         "summary": "Query",
         "responses": {
@@ -2179,7 +2179,7 @@
       "post": {
         "operationId": "sales.accountTasks.create",
         "tags": [
-          "sales.accountTasks"
+          "accountTasks"
         ],
         "summary": "Create",
         "responses": {
@@ -2218,7 +2218,7 @@
       "get": {
         "operationId": "sales.accountTasks.getById",
         "tags": [
-          "sales.accountTasks"
+          "accountTasks"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2255,7 +2255,7 @@
       "put": {
         "operationId": "sales.accountTasks.update",
         "tags": [
-          "sales.accountTasks"
+          "accountTasks"
         ],
         "summary": "Update",
         "responses": {
@@ -2302,7 +2302,7 @@
       "delete": {
         "operationId": "sales.accountTasks.delete",
         "tags": [
-          "sales.accountTasks"
+          "accountTasks"
         ],
         "summary": "Delete",
         "responses": {
@@ -2334,7 +2334,7 @@
       "get": {
         "operationId": "sales.accountStatuses.query",
         "tags": [
-          "sales.accountStatuses"
+          "accountStatuses"
         ],
         "summary": "Query",
         "responses": {
@@ -2374,7 +2374,7 @@
       "post": {
         "operationId": "sales.accountStatuses.create",
         "tags": [
-          "sales.accountStatuses"
+          "accountStatuses"
         ],
         "summary": "Create",
         "responses": {
@@ -2413,7 +2413,7 @@
       "get": {
         "operationId": "sales.accountStatuses.getById",
         "tags": [
-          "sales.accountStatuses"
+          "accountStatuses"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2450,7 +2450,7 @@
       "put": {
         "operationId": "sales.accountStatuses.update",
         "tags": [
-          "sales.accountStatuses"
+          "accountStatuses"
         ],
         "summary": "Update",
         "responses": {
@@ -2497,7 +2497,7 @@
       "delete": {
         "operationId": "sales.accountStatuses.delete",
         "tags": [
-          "sales.accountStatuses"
+          "accountStatuses"
         ],
         "summary": "Delete",
         "responses": {
@@ -2529,7 +2529,7 @@
       "get": {
         "operationId": "sales.opportunities.query",
         "tags": [
-          "sales.opportunities"
+          "opportunities"
         ],
         "summary": "Query",
         "responses": {
@@ -2569,7 +2569,7 @@
       "post": {
         "operationId": "sales.opportunities.create",
         "tags": [
-          "sales.opportunities"
+          "opportunities"
         ],
         "summary": "Create",
         "responses": {
@@ -2608,7 +2608,7 @@
       "get": {
         "operationId": "sales.opportunities.getById",
         "tags": [
-          "sales.opportunities"
+          "opportunities"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2645,7 +2645,7 @@
       "put": {
         "operationId": "sales.opportunities.update",
         "tags": [
-          "sales.opportunities"
+          "opportunities"
         ],
         "summary": "Update",
         "responses": {
@@ -2692,7 +2692,7 @@
       "delete": {
         "operationId": "sales.opportunities.delete",
         "tags": [
-          "sales.opportunities"
+          "opportunities"
         ],
         "summary": "Delete",
         "responses": {
@@ -2724,7 +2724,7 @@
       "get": {
         "operationId": "sales.opportunityNotes.query",
         "tags": [
-          "sales.opportunityNotes"
+          "opportunityNotes"
         ],
         "summary": "Query",
         "responses": {
@@ -2764,7 +2764,7 @@
       "post": {
         "operationId": "sales.opportunityNotes.create",
         "tags": [
-          "sales.opportunityNotes"
+          "opportunityNotes"
         ],
         "summary": "Create",
         "responses": {
@@ -2803,7 +2803,7 @@
       "get": {
         "operationId": "sales.opportunityNotes.getById",
         "tags": [
-          "sales.opportunityNotes"
+          "opportunityNotes"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -2840,7 +2840,7 @@
       "put": {
         "operationId": "sales.opportunityNotes.update",
         "tags": [
-          "sales.opportunityNotes"
+          "opportunityNotes"
         ],
         "summary": "Update",
         "responses": {
@@ -2887,7 +2887,7 @@
       "delete": {
         "operationId": "sales.opportunityNotes.delete",
         "tags": [
-          "sales.opportunityNotes"
+          "opportunityNotes"
         ],
         "summary": "Delete",
         "responses": {
@@ -2919,7 +2919,7 @@
       "get": {
         "operationId": "sales.opportunityFiles.query",
         "tags": [
-          "sales.opportunityFiles"
+          "opportunityFiles"
         ],
         "summary": "Query",
         "responses": {
@@ -2959,7 +2959,7 @@
       "post": {
         "operationId": "sales.opportunityFiles.create",
         "tags": [
-          "sales.opportunityFiles"
+          "opportunityFiles"
         ],
         "summary": "Create",
         "responses": {
@@ -2998,7 +2998,7 @@
       "get": {
         "operationId": "sales.opportunityFiles.getById",
         "tags": [
-          "sales.opportunityFiles"
+          "opportunityFiles"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -3035,7 +3035,7 @@
       "put": {
         "operationId": "sales.opportunityFiles.update",
         "tags": [
-          "sales.opportunityFiles"
+          "opportunityFiles"
         ],
         "summary": "Update",
         "responses": {
@@ -3082,7 +3082,7 @@
       "delete": {
         "operationId": "sales.opportunityFiles.delete",
         "tags": [
-          "sales.opportunityFiles"
+          "opportunityFiles"
         ],
         "summary": "Delete",
         "responses": {
@@ -3114,7 +3114,7 @@
       "get": {
         "operationId": "sales.opportunityTasks.query",
         "tags": [
-          "sales.opportunityTasks"
+          "opportunityTasks"
         ],
         "summary": "Query",
         "responses": {
@@ -3154,7 +3154,7 @@
       "post": {
         "operationId": "sales.opportunityTasks.create",
         "tags": [
-          "sales.opportunityTasks"
+          "opportunityTasks"
         ],
         "summary": "Create",
         "responses": {
@@ -3193,7 +3193,7 @@
       "get": {
         "operationId": "sales.opportunityTasks.getById",
         "tags": [
-          "sales.opportunityTasks"
+          "opportunityTasks"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -3230,7 +3230,7 @@
       "put": {
         "operationId": "sales.opportunityTasks.update",
         "tags": [
-          "sales.opportunityTasks"
+          "opportunityTasks"
         ],
         "summary": "Update",
         "responses": {
@@ -3277,7 +3277,7 @@
       "delete": {
         "operationId": "sales.opportunityTasks.delete",
         "tags": [
-          "sales.opportunityTasks"
+          "opportunityTasks"
         ],
         "summary": "Delete",
         "responses": {
@@ -3309,7 +3309,7 @@
       "get": {
         "operationId": "sales.opportunityProducts.query",
         "tags": [
-          "sales.opportunityProducts"
+          "opportunityProducts"
         ],
         "summary": "Query",
         "responses": {
@@ -3349,7 +3349,7 @@
       "post": {
         "operationId": "sales.opportunityProducts.create",
         "tags": [
-          "sales.opportunityProducts"
+          "opportunityProducts"
         ],
         "summary": "Create",
         "responses": {
@@ -3388,7 +3388,7 @@
       "get": {
         "operationId": "sales.opportunityProducts.getById",
         "tags": [
-          "sales.opportunityProducts"
+          "opportunityProducts"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -3425,7 +3425,7 @@
       "put": {
         "operationId": "sales.opportunityProducts.update",
         "tags": [
-          "sales.opportunityProducts"
+          "opportunityProducts"
         ],
         "summary": "Update",
         "responses": {
@@ -3472,7 +3472,7 @@
       "delete": {
         "operationId": "sales.opportunityProducts.delete",
         "tags": [
-          "sales.opportunityProducts"
+          "opportunityProducts"
         ],
         "summary": "Delete",
         "responses": {
@@ -3504,7 +3504,7 @@
       "get": {
         "operationId": "sales.opportunityStatuses.query",
         "tags": [
-          "sales.opportunityStatuses"
+          "opportunityStatuses"
         ],
         "summary": "Query",
         "responses": {
@@ -3544,7 +3544,7 @@
       "post": {
         "operationId": "sales.opportunityStatuses.create",
         "tags": [
-          "sales.opportunityStatuses"
+          "opportunityStatuses"
         ],
         "summary": "Create",
         "responses": {
@@ -3583,7 +3583,7 @@
       "get": {
         "operationId": "sales.opportunityStatuses.getById",
         "tags": [
-          "sales.opportunityStatuses"
+          "opportunityStatuses"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -3620,7 +3620,7 @@
       "put": {
         "operationId": "sales.opportunityStatuses.update",
         "tags": [
-          "sales.opportunityStatuses"
+          "opportunityStatuses"
         ],
         "summary": "Update",
         "responses": {
@@ -3667,7 +3667,7 @@
       "delete": {
         "operationId": "sales.opportunityStatuses.delete",
         "tags": [
-          "sales.opportunityStatuses"
+          "opportunityStatuses"
         ],
         "summary": "Delete",
         "responses": {
@@ -3699,7 +3699,7 @@
       "get": {
         "operationId": "sales.leads.query",
         "tags": [
-          "sales.leads"
+          "leads"
         ],
         "summary": "Query",
         "responses": {
@@ -3739,7 +3739,7 @@
       "post": {
         "operationId": "sales.leads.create",
         "tags": [
-          "sales.leads"
+          "leads"
         ],
         "summary": "Create",
         "responses": {
@@ -3778,7 +3778,7 @@
       "get": {
         "operationId": "sales.leads.getById",
         "tags": [
-          "sales.leads"
+          "leads"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -3815,7 +3815,7 @@
       "put": {
         "operationId": "sales.leads.update",
         "tags": [
-          "sales.leads"
+          "leads"
         ],
         "summary": "Update",
         "responses": {
@@ -3862,7 +3862,7 @@
       "delete": {
         "operationId": "sales.leads.delete",
         "tags": [
-          "sales.leads"
+          "leads"
         ],
         "summary": "Delete",
         "responses": {
@@ -3894,7 +3894,7 @@
       "get": {
         "operationId": "sales.contacts.query",
         "tags": [
-          "sales.contacts"
+          "contacts"
         ],
         "summary": "Query",
         "responses": {
@@ -3934,7 +3934,7 @@
       "post": {
         "operationId": "sales.contacts.create",
         "tags": [
-          "sales.contacts"
+          "contacts"
         ],
         "summary": "Create",
         "responses": {
@@ -3973,7 +3973,7 @@
       "get": {
         "operationId": "sales.contacts.getById",
         "tags": [
-          "sales.contacts"
+          "contacts"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -4010,7 +4010,7 @@
       "put": {
         "operationId": "sales.contacts.update",
         "tags": [
-          "sales.contacts"
+          "contacts"
         ],
         "summary": "Update",
         "responses": {
@@ -4057,7 +4057,7 @@
       "delete": {
         "operationId": "sales.contacts.delete",
         "tags": [
-          "sales.contacts"
+          "contacts"
         ],
         "summary": "Delete",
         "responses": {
@@ -4089,7 +4089,7 @@
       "get": {
         "operationId": "sales.contactNotes.query",
         "tags": [
-          "sales.contactNotes"
+          "contactNotes"
         ],
         "summary": "Query",
         "responses": {
@@ -4129,7 +4129,7 @@
       "post": {
         "operationId": "sales.contactNotes.create",
         "tags": [
-          "sales.contactNotes"
+          "contactNotes"
         ],
         "summary": "Create",
         "responses": {
@@ -4168,7 +4168,7 @@
       "get": {
         "operationId": "sales.contactNotes.getById",
         "tags": [
-          "sales.contactNotes"
+          "contactNotes"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -4205,7 +4205,7 @@
       "put": {
         "operationId": "sales.contactNotes.update",
         "tags": [
-          "sales.contactNotes"
+          "contactNotes"
         ],
         "summary": "Update",
         "responses": {
@@ -4252,7 +4252,7 @@
       "delete": {
         "operationId": "sales.contactNotes.delete",
         "tags": [
-          "sales.contactNotes"
+          "contactNotes"
         ],
         "summary": "Delete",
         "responses": {
@@ -4284,7 +4284,7 @@
       "get": {
         "operationId": "sales.contactFiles.query",
         "tags": [
-          "sales.contactFiles"
+          "contactFiles"
         ],
         "summary": "Query",
         "responses": {
@@ -4324,7 +4324,7 @@
       "post": {
         "operationId": "sales.contactFiles.create",
         "tags": [
-          "sales.contactFiles"
+          "contactFiles"
         ],
         "summary": "Create",
         "responses": {
@@ -4363,7 +4363,7 @@
       "get": {
         "operationId": "sales.contactFiles.getById",
         "tags": [
-          "sales.contactFiles"
+          "contactFiles"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -4400,7 +4400,7 @@
       "put": {
         "operationId": "sales.contactFiles.update",
         "tags": [
-          "sales.contactFiles"
+          "contactFiles"
         ],
         "summary": "Update",
         "responses": {
@@ -4447,7 +4447,7 @@
       "delete": {
         "operationId": "sales.contactFiles.delete",
         "tags": [
-          "sales.contactFiles"
+          "contactFiles"
         ],
         "summary": "Delete",
         "responses": {
@@ -4479,7 +4479,7 @@
       "get": {
         "operationId": "sales.contactTasks.query",
         "tags": [
-          "sales.contactTasks"
+          "contactTasks"
         ],
         "summary": "Query",
         "responses": {
@@ -4519,7 +4519,7 @@
       "post": {
         "operationId": "sales.contactTasks.create",
         "tags": [
-          "sales.contactTasks"
+          "contactTasks"
         ],
         "summary": "Create",
         "responses": {
@@ -4558,7 +4558,7 @@
       "get": {
         "operationId": "sales.contactTasks.getById",
         "tags": [
-          "sales.contactTasks"
+          "contactTasks"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -4595,7 +4595,7 @@
       "put": {
         "operationId": "sales.contactTasks.update",
         "tags": [
-          "sales.contactTasks"
+          "contactTasks"
         ],
         "summary": "Update",
         "responses": {
@@ -4642,7 +4642,7 @@
       "delete": {
         "operationId": "sales.contactTasks.delete",
         "tags": [
-          "sales.contactTasks"
+          "contactTasks"
         ],
         "summary": "Delete",
         "responses": {
@@ -4674,7 +4674,7 @@
       "get": {
         "operationId": "sales.contactStatuses.query",
         "tags": [
-          "sales.contactStatuses"
+          "contactStatuses"
         ],
         "summary": "Query",
         "responses": {
@@ -4714,7 +4714,7 @@
       "post": {
         "operationId": "sales.contactStatuses.create",
         "tags": [
-          "sales.contactStatuses"
+          "contactStatuses"
         ],
         "summary": "Create",
         "responses": {
@@ -4753,7 +4753,7 @@
       "get": {
         "operationId": "sales.contactStatuses.getById",
         "tags": [
-          "sales.contactStatuses"
+          "contactStatuses"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -4790,7 +4790,7 @@
       "put": {
         "operationId": "sales.contactStatuses.update",
         "tags": [
-          "sales.contactStatuses"
+          "contactStatuses"
         ],
         "summary": "Update",
         "responses": {
@@ -4837,7 +4837,7 @@
       "delete": {
         "operationId": "sales.contactStatuses.delete",
         "tags": [
-          "sales.contactStatuses"
+          "contactStatuses"
         ],
         "summary": "Delete",
         "responses": {
@@ -4869,7 +4869,7 @@
       "get": {
         "operationId": "sales.orders.query",
         "tags": [
-          "sales.orders"
+          "orders"
         ],
         "summary": "Query",
         "responses": {
@@ -4909,7 +4909,7 @@
       "post": {
         "operationId": "sales.orders.create",
         "tags": [
-          "sales.orders"
+          "orders"
         ],
         "summary": "Create",
         "responses": {
@@ -4948,7 +4948,7 @@
       "get": {
         "operationId": "sales.orders.getById",
         "tags": [
-          "sales.orders"
+          "orders"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -4985,7 +4985,7 @@
       "put": {
         "operationId": "sales.orders.update",
         "tags": [
-          "sales.orders"
+          "orders"
         ],
         "summary": "Update",
         "responses": {
@@ -5032,7 +5032,7 @@
       "delete": {
         "operationId": "sales.orders.delete",
         "tags": [
-          "sales.orders"
+          "orders"
         ],
         "summary": "Delete",
         "responses": {
@@ -5064,7 +5064,7 @@
       "get": {
         "operationId": "sales.products.query",
         "tags": [
-          "sales.products"
+          "products"
         ],
         "summary": "Query",
         "responses": {
@@ -5104,7 +5104,7 @@
       "post": {
         "operationId": "sales.products.create",
         "tags": [
-          "sales.products"
+          "products"
         ],
         "summary": "Create",
         "responses": {
@@ -5143,7 +5143,7 @@
       "get": {
         "operationId": "sales.products.getById",
         "tags": [
-          "sales.products"
+          "products"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -5180,7 +5180,7 @@
       "put": {
         "operationId": "sales.products.update",
         "tags": [
-          "sales.products"
+          "products"
         ],
         "summary": "Update",
         "responses": {
@@ -5227,7 +5227,7 @@
       "delete": {
         "operationId": "sales.products.delete",
         "tags": [
-          "sales.products"
+          "products"
         ],
         "summary": "Delete",
         "responses": {
@@ -5259,7 +5259,7 @@
       "get": {
         "operationId": "sales.productNotes.query",
         "tags": [
-          "sales.productNotes"
+          "productNotes"
         ],
         "summary": "Query",
         "responses": {
@@ -5299,7 +5299,7 @@
       "post": {
         "operationId": "sales.productNotes.create",
         "tags": [
-          "sales.productNotes"
+          "productNotes"
         ],
         "summary": "Create",
         "responses": {
@@ -5338,7 +5338,7 @@
       "get": {
         "operationId": "sales.productNotes.getById",
         "tags": [
-          "sales.productNotes"
+          "productNotes"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -5375,7 +5375,7 @@
       "put": {
         "operationId": "sales.productNotes.update",
         "tags": [
-          "sales.productNotes"
+          "productNotes"
         ],
         "summary": "Update",
         "responses": {
@@ -5422,7 +5422,7 @@
       "delete": {
         "operationId": "sales.productNotes.delete",
         "tags": [
-          "sales.productNotes"
+          "productNotes"
         ],
         "summary": "Delete",
         "responses": {
@@ -5454,7 +5454,7 @@
       "get": {
         "operationId": "sales.productFiles.query",
         "tags": [
-          "sales.productFiles"
+          "productFiles"
         ],
         "summary": "Query",
         "responses": {
@@ -5494,7 +5494,7 @@
       "post": {
         "operationId": "sales.productFiles.create",
         "tags": [
-          "sales.productFiles"
+          "productFiles"
         ],
         "summary": "Create",
         "responses": {
@@ -5533,7 +5533,7 @@
       "get": {
         "operationId": "sales.productFiles.getById",
         "tags": [
-          "sales.productFiles"
+          "productFiles"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -5570,7 +5570,7 @@
       "put": {
         "operationId": "sales.productFiles.update",
         "tags": [
-          "sales.productFiles"
+          "productFiles"
         ],
         "summary": "Update",
         "responses": {
@@ -5617,7 +5617,7 @@
       "delete": {
         "operationId": "sales.productFiles.delete",
         "tags": [
-          "sales.productFiles"
+          "productFiles"
         ],
         "summary": "Delete",
         "responses": {
@@ -5649,7 +5649,7 @@
       "get": {
         "operationId": "sales.productTasks.query",
         "tags": [
-          "sales.productTasks"
+          "productTasks"
         ],
         "summary": "Query",
         "responses": {
@@ -5689,7 +5689,7 @@
       "post": {
         "operationId": "sales.productTasks.create",
         "tags": [
-          "sales.productTasks"
+          "productTasks"
         ],
         "summary": "Create",
         "responses": {
@@ -5728,7 +5728,7 @@
       "get": {
         "operationId": "sales.productTasks.getById",
         "tags": [
-          "sales.productTasks"
+          "productTasks"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -5765,7 +5765,7 @@
       "put": {
         "operationId": "sales.productTasks.update",
         "tags": [
-          "sales.productTasks"
+          "productTasks"
         ],
         "summary": "Update",
         "responses": {
@@ -5812,7 +5812,7 @@
       "delete": {
         "operationId": "sales.productTasks.delete",
         "tags": [
-          "sales.productTasks"
+          "productTasks"
         ],
         "summary": "Delete",
         "responses": {
@@ -5844,7 +5844,7 @@
       "get": {
         "operationId": "sales.productStatuses.query",
         "tags": [
-          "sales.productStatuses"
+          "productStatuses"
         ],
         "summary": "Query",
         "responses": {
@@ -5884,7 +5884,7 @@
       "post": {
         "operationId": "sales.productStatuses.create",
         "tags": [
-          "sales.productStatuses"
+          "productStatuses"
         ],
         "summary": "Create",
         "responses": {
@@ -5923,7 +5923,7 @@
       "get": {
         "operationId": "sales.productStatuses.getById",
         "tags": [
-          "sales.productStatuses"
+          "productStatuses"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -5960,7 +5960,7 @@
       "put": {
         "operationId": "sales.productStatuses.update",
         "tags": [
-          "sales.productStatuses"
+          "productStatuses"
         ],
         "summary": "Update",
         "responses": {
@@ -6007,7 +6007,7 @@
       "delete": {
         "operationId": "sales.productStatuses.delete",
         "tags": [
-          "sales.productStatuses"
+          "productStatuses"
         ],
         "summary": "Delete",
         "responses": {
@@ -6039,7 +6039,7 @@
       "get": {
         "operationId": "sales.studentHistory.query",
         "tags": [
-          "sales.studentHistory"
+          "studentHistory"
         ],
         "summary": "Query",
         "responses": {
@@ -6079,7 +6079,7 @@
       "post": {
         "operationId": "sales.studentHistory.create",
         "tags": [
-          "sales.studentHistory"
+          "studentHistory"
         ],
         "summary": "Create",
         "responses": {
@@ -6118,7 +6118,7 @@
       "get": {
         "operationId": "sales.studentHistory.getById",
         "tags": [
-          "sales.studentHistory"
+          "studentHistory"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -6155,7 +6155,7 @@
       "put": {
         "operationId": "sales.studentHistory.update",
         "tags": [
-          "sales.studentHistory"
+          "studentHistory"
         ],
         "summary": "Update",
         "responses": {
@@ -6202,7 +6202,7 @@
       "delete": {
         "operationId": "sales.studentHistory.delete",
         "tags": [
-          "sales.studentHistory"
+          "studentHistory"
         ],
         "summary": "Delete",
         "responses": {
@@ -6234,7 +6234,7 @@
       "get": {
         "operationId": "sales.insights.query",
         "tags": [
-          "sales.insights"
+          "insights"
         ],
         "summary": "Query",
         "responses": {
@@ -6274,7 +6274,7 @@
       "post": {
         "operationId": "sales.insights.create",
         "tags": [
-          "sales.insights"
+          "insights"
         ],
         "summary": "Create",
         "responses": {
@@ -6313,7 +6313,7 @@
       "get": {
         "operationId": "sales.insights.getById",
         "tags": [
-          "sales.insights"
+          "insights"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -6350,7 +6350,7 @@
       "put": {
         "operationId": "sales.insights.update",
         "tags": [
-          "sales.insights"
+          "insights"
         ],
         "summary": "Update",
         "responses": {
@@ -6397,7 +6397,7 @@
       "delete": {
         "operationId": "sales.insights.delete",
         "tags": [
-          "sales.insights"
+          "insights"
         ],
         "summary": "Delete",
         "responses": {
@@ -6429,7 +6429,7 @@
       "get": {
         "operationId": "sales.notes.query",
         "tags": [
-          "sales.notes"
+          "notes"
         ],
         "summary": "Query",
         "responses": {
@@ -6469,7 +6469,7 @@
       "post": {
         "operationId": "sales.notes.create",
         "tags": [
-          "sales.notes"
+          "notes"
         ],
         "summary": "Create",
         "responses": {
@@ -6508,7 +6508,7 @@
       "get": {
         "operationId": "sales.notes.getById",
         "tags": [
-          "sales.notes"
+          "notes"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -6545,7 +6545,7 @@
       "put": {
         "operationId": "sales.notes.update",
         "tags": [
-          "sales.notes"
+          "notes"
         ],
         "summary": "Update",
         "responses": {
@@ -6592,7 +6592,7 @@
       "delete": {
         "operationId": "sales.notes.delete",
         "tags": [
-          "sales.notes"
+          "notes"
         ],
         "summary": "Delete",
         "responses": {
@@ -6624,7 +6624,7 @@
       "get": {
         "operationId": "sales.files.query",
         "tags": [
-          "sales.files"
+          "files"
         ],
         "summary": "Query",
         "responses": {
@@ -6664,7 +6664,7 @@
       "post": {
         "operationId": "sales.files.create",
         "tags": [
-          "sales.files"
+          "files"
         ],
         "summary": "Create",
         "responses": {
@@ -6703,7 +6703,7 @@
       "get": {
         "operationId": "sales.files.getById",
         "tags": [
-          "sales.files"
+          "files"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -6740,7 +6740,7 @@
       "put": {
         "operationId": "sales.files.update",
         "tags": [
-          "sales.files"
+          "files"
         ],
         "summary": "Update",
         "responses": {
@@ -6787,7 +6787,7 @@
       "delete": {
         "operationId": "sales.files.delete",
         "tags": [
-          "sales.files"
+          "files"
         ],
         "summary": "Delete",
         "responses": {
@@ -6819,7 +6819,7 @@
       "get": {
         "operationId": "sales.tasks.query",
         "tags": [
-          "sales.tasks"
+          "tasks"
         ],
         "summary": "Query",
         "responses": {
@@ -6859,7 +6859,7 @@
       "post": {
         "operationId": "sales.tasks.create",
         "tags": [
-          "sales.tasks"
+          "tasks"
         ],
         "summary": "Create",
         "responses": {
@@ -6898,7 +6898,7 @@
       "get": {
         "operationId": "sales.tasks.getById",
         "tags": [
-          "sales.tasks"
+          "tasks"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -6935,7 +6935,7 @@
       "put": {
         "operationId": "sales.tasks.update",
         "tags": [
-          "sales.tasks"
+          "tasks"
         ],
         "summary": "Update",
         "responses": {
@@ -6982,7 +6982,7 @@
       "delete": {
         "operationId": "sales.tasks.delete",
         "tags": [
-          "sales.tasks"
+          "tasks"
         ],
         "summary": "Delete",
         "responses": {
@@ -7014,7 +7014,7 @@
       "get": {
         "operationId": "sales.quotes.query",
         "tags": [
-          "sales.quotes"
+          "quotes"
         ],
         "summary": "Query",
         "responses": {
@@ -7054,7 +7054,7 @@
       "post": {
         "operationId": "sales.quotes.create",
         "tags": [
-          "sales.quotes"
+          "quotes"
         ],
         "summary": "Create",
         "responses": {
@@ -7093,7 +7093,7 @@
       "get": {
         "operationId": "sales.quotes.getById",
         "tags": [
-          "sales.quotes"
+          "quotes"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -7130,7 +7130,7 @@
       "put": {
         "operationId": "sales.quotes.update",
         "tags": [
-          "sales.quotes"
+          "quotes"
         ],
         "summary": "Update",
         "responses": {
@@ -7177,7 +7177,7 @@
       "delete": {
         "operationId": "sales.quotes.delete",
         "tags": [
-          "sales.quotes"
+          "quotes"
         ],
         "summary": "Delete",
         "responses": {
@@ -7209,7 +7209,7 @@
       "get": {
         "operationId": "sales.quoteStatuses.query",
         "tags": [
-          "sales.quoteStatuses"
+          "quoteStatuses"
         ],
         "summary": "Query",
         "responses": {
@@ -7249,7 +7249,7 @@
       "post": {
         "operationId": "sales.quoteStatuses.create",
         "tags": [
-          "sales.quoteStatuses"
+          "quoteStatuses"
         ],
         "summary": "Create",
         "responses": {
@@ -7288,7 +7288,7 @@
       "get": {
         "operationId": "sales.quoteStatuses.getById",
         "tags": [
-          "sales.quoteStatuses"
+          "quoteStatuses"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -7325,7 +7325,7 @@
       "put": {
         "operationId": "sales.quoteStatuses.update",
         "tags": [
-          "sales.quoteStatuses"
+          "quoteStatuses"
         ],
         "summary": "Update",
         "responses": {
@@ -7372,7 +7372,7 @@
       "delete": {
         "operationId": "sales.quoteStatuses.delete",
         "tags": [
-          "sales.quoteStatuses"
+          "quoteStatuses"
         ],
         "summary": "Delete",
         "responses": {
@@ -7404,7 +7404,7 @@
       "get": {
         "operationId": "sales.salesTargets.query",
         "tags": [
-          "sales.salesTargets"
+          "salesTargets"
         ],
         "summary": "Query",
         "responses": {
@@ -7444,7 +7444,7 @@
       "post": {
         "operationId": "sales.salesTargets.create",
         "tags": [
-          "sales.salesTargets"
+          "salesTargets"
         ],
         "summary": "Create",
         "responses": {
@@ -7483,7 +7483,7 @@
       "get": {
         "operationId": "sales.salesTargets.getById",
         "tags": [
-          "sales.salesTargets"
+          "salesTargets"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -7520,7 +7520,7 @@
       "put": {
         "operationId": "sales.salesTargets.update",
         "tags": [
-          "sales.salesTargets"
+          "salesTargets"
         ],
         "summary": "Update",
         "responses": {
@@ -7567,7 +7567,7 @@
       "delete": {
         "operationId": "sales.salesTargets.delete",
         "tags": [
-          "sales.salesTargets"
+          "salesTargets"
         ],
         "summary": "Delete",
         "responses": {
@@ -7599,7 +7599,7 @@
       "get": {
         "operationId": "sales.organizations.query",
         "tags": [
-          "sales.organizations"
+          "organizations"
         ],
         "summary": "Query",
         "responses": {
@@ -7639,7 +7639,7 @@
       "post": {
         "operationId": "sales.organizations.create",
         "tags": [
-          "sales.organizations"
+          "organizations"
         ],
         "summary": "Create",
         "responses": {
@@ -7678,7 +7678,7 @@
       "get": {
         "operationId": "sales.organizations.getById",
         "tags": [
-          "sales.organizations"
+          "organizations"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -7715,7 +7715,7 @@
       "put": {
         "operationId": "sales.organizations.update",
         "tags": [
-          "sales.organizations"
+          "organizations"
         ],
         "summary": "Update",
         "responses": {
@@ -7762,7 +7762,7 @@
       "delete": {
         "operationId": "sales.organizations.delete",
         "tags": [
-          "sales.organizations"
+          "organizations"
         ],
         "summary": "Delete",
         "responses": {
@@ -7794,7 +7794,7 @@
       "get": {
         "operationId": "sales.organizationTypes.query",
         "tags": [
-          "sales.organizationTypes"
+          "organizationTypes"
         ],
         "summary": "Query",
         "responses": {
@@ -7834,7 +7834,7 @@
       "post": {
         "operationId": "sales.organizationTypes.create",
         "tags": [
-          "sales.organizationTypes"
+          "organizationTypes"
         ],
         "summary": "Create",
         "responses": {
@@ -7873,7 +7873,7 @@
       "get": {
         "operationId": "sales.organizationTypes.getById",
         "tags": [
-          "sales.organizationTypes"
+          "organizationTypes"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -7910,7 +7910,7 @@
       "put": {
         "operationId": "sales.organizationTypes.update",
         "tags": [
-          "sales.organizationTypes"
+          "organizationTypes"
         ],
         "summary": "Update",
         "responses": {
@@ -7957,7 +7957,7 @@
       "delete": {
         "operationId": "sales.organizationTypes.delete",
         "tags": [
-          "sales.organizationTypes"
+          "organizationTypes"
         ],
         "summary": "Delete",
         "responses": {
@@ -7989,7 +7989,7 @@
       "get": {
         "operationId": "sales.organizationNews.query",
         "tags": [
-          "sales.organizationNews"
+          "organizationNews"
         ],
         "summary": "Query",
         "responses": {
@@ -8029,7 +8029,7 @@
       "post": {
         "operationId": "sales.organizationNews.create",
         "tags": [
-          "sales.organizationNews"
+          "organizationNews"
         ],
         "summary": "Create",
         "responses": {
@@ -8068,7 +8068,7 @@
       "get": {
         "operationId": "sales.organizationNews.getById",
         "tags": [
-          "sales.organizationNews"
+          "organizationNews"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -8105,7 +8105,7 @@
       "put": {
         "operationId": "sales.organizationNews.update",
         "tags": [
-          "sales.organizationNews"
+          "organizationNews"
         ],
         "summary": "Update",
         "responses": {
@@ -8152,7 +8152,7 @@
       "delete": {
         "operationId": "sales.organizationNews.delete",
         "tags": [
-          "sales.organizationNews"
+          "organizationNews"
         ],
         "summary": "Delete",
         "responses": {
@@ -8184,7 +8184,7 @@
       "get": {
         "operationId": "sales.organizationBoardMeetings.query",
         "tags": [
-          "sales.organizationBoardMeetings"
+          "organizationBoardMeetings"
         ],
         "summary": "Query",
         "responses": {
@@ -8224,7 +8224,7 @@
       "post": {
         "operationId": "sales.organizationBoardMeetings.create",
         "tags": [
-          "sales.organizationBoardMeetings"
+          "organizationBoardMeetings"
         ],
         "summary": "Create",
         "responses": {
@@ -8263,7 +8263,7 @@
       "get": {
         "operationId": "sales.organizationBoardMeetings.getById",
         "tags": [
-          "sales.organizationBoardMeetings"
+          "organizationBoardMeetings"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -8300,7 +8300,7 @@
       "put": {
         "operationId": "sales.organizationBoardMeetings.update",
         "tags": [
-          "sales.organizationBoardMeetings"
+          "organizationBoardMeetings"
         ],
         "summary": "Update",
         "responses": {
@@ -8347,7 +8347,7 @@
       "delete": {
         "operationId": "sales.organizationBoardMeetings.delete",
         "tags": [
-          "sales.organizationBoardMeetings"
+          "organizationBoardMeetings"
         ],
         "summary": "Delete",
         "responses": {
@@ -8379,7 +8379,7 @@
       "get": {
         "operationId": "sales.insightFilters.query",
         "tags": [
-          "sales.insightFilters"
+          "insightFilters"
         ],
         "summary": "Query",
         "responses": {
@@ -8419,7 +8419,7 @@
       "post": {
         "operationId": "sales.insightFilters.create",
         "tags": [
-          "sales.insightFilters"
+          "insightFilters"
         ],
         "summary": "Create",
         "responses": {
@@ -8458,7 +8458,7 @@
       "get": {
         "operationId": "sales.insightFilters.getById",
         "tags": [
-          "sales.insightFilters"
+          "insightFilters"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -8495,7 +8495,7 @@
       "put": {
         "operationId": "sales.insightFilters.update",
         "tags": [
-          "sales.insightFilters"
+          "insightFilters"
         ],
         "summary": "Update",
         "responses": {
@@ -8542,7 +8542,7 @@
       "delete": {
         "operationId": "sales.insightFilters.delete",
         "tags": [
-          "sales.insightFilters"
+          "insightFilters"
         ],
         "summary": "Delete",
         "responses": {
@@ -8574,7 +8574,7 @@
       "get": {
         "operationId": "sales.organizationContacts.query",
         "tags": [
-          "sales.organizationContacts"
+          "organizationContacts"
         ],
         "summary": "Query",
         "responses": {
@@ -8614,7 +8614,7 @@
       "post": {
         "operationId": "sales.organizationContacts.create",
         "tags": [
-          "sales.organizationContacts"
+          "organizationContacts"
         ],
         "summary": "Create",
         "responses": {
@@ -8653,7 +8653,7 @@
       "get": {
         "operationId": "sales.organizationContacts.getById",
         "tags": [
-          "sales.organizationContacts"
+          "organizationContacts"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -8690,7 +8690,7 @@
       "put": {
         "operationId": "sales.organizationContacts.update",
         "tags": [
-          "sales.organizationContacts"
+          "organizationContacts"
         ],
         "summary": "Update",
         "responses": {
@@ -8737,7 +8737,7 @@
       "delete": {
         "operationId": "sales.organizationContacts.delete",
         "tags": [
-          "sales.organizationContacts"
+          "organizationContacts"
         ],
         "summary": "Delete",
         "responses": {
@@ -8769,7 +8769,7 @@
       "get": {
         "operationId": "sales.insightFilterNotes.query",
         "tags": [
-          "sales.insightFilterNotes"
+          "insightFilterNotes"
         ],
         "summary": "Query",
         "responses": {
@@ -8809,7 +8809,7 @@
       "post": {
         "operationId": "sales.insightFilterNotes.create",
         "tags": [
-          "sales.insightFilterNotes"
+          "insightFilterNotes"
         ],
         "summary": "Create",
         "responses": {
@@ -8848,7 +8848,7 @@
       "get": {
         "operationId": "sales.insightFilterNotes.getById",
         "tags": [
-          "sales.insightFilterNotes"
+          "insightFilterNotes"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -8885,7 +8885,7 @@
       "put": {
         "operationId": "sales.insightFilterNotes.update",
         "tags": [
-          "sales.insightFilterNotes"
+          "insightFilterNotes"
         ],
         "summary": "Update",
         "responses": {
@@ -8932,7 +8932,7 @@
       "delete": {
         "operationId": "sales.insightFilterNotes.delete",
         "tags": [
-          "sales.insightFilterNotes"
+          "insightFilterNotes"
         ],
         "summary": "Delete",
         "responses": {
@@ -8964,7 +8964,7 @@
       "get": {
         "operationId": "sales.insightFilterFiles.query",
         "tags": [
-          "sales.insightFilterFiles"
+          "insightFilterFiles"
         ],
         "summary": "Query",
         "responses": {
@@ -9004,7 +9004,7 @@
       "post": {
         "operationId": "sales.insightFilterFiles.create",
         "tags": [
-          "sales.insightFilterFiles"
+          "insightFilterFiles"
         ],
         "summary": "Create",
         "responses": {
@@ -9043,7 +9043,7 @@
       "get": {
         "operationId": "sales.insightFilterFiles.getById",
         "tags": [
-          "sales.insightFilterFiles"
+          "insightFilterFiles"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -9080,7 +9080,7 @@
       "put": {
         "operationId": "sales.insightFilterFiles.update",
         "tags": [
-          "sales.insightFilterFiles"
+          "insightFilterFiles"
         ],
         "summary": "Update",
         "responses": {
@@ -9127,7 +9127,7 @@
       "delete": {
         "operationId": "sales.insightFilterFiles.delete",
         "tags": [
-          "sales.insightFilterFiles"
+          "insightFilterFiles"
         ],
         "summary": "Delete",
         "responses": {
@@ -9159,7 +9159,7 @@
       "get": {
         "operationId": "sales.insightFilterTasks.query",
         "tags": [
-          "sales.insightFilterTasks"
+          "insightFilterTasks"
         ],
         "summary": "Query",
         "responses": {
@@ -9199,7 +9199,7 @@
       "post": {
         "operationId": "sales.insightFilterTasks.create",
         "tags": [
-          "sales.insightFilterTasks"
+          "insightFilterTasks"
         ],
         "summary": "Create",
         "responses": {
@@ -9238,7 +9238,7 @@
       "get": {
         "operationId": "sales.insightFilterTasks.getById",
         "tags": [
-          "sales.insightFilterTasks"
+          "insightFilterTasks"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -9275,7 +9275,7 @@
       "put": {
         "operationId": "sales.insightFilterTasks.update",
         "tags": [
-          "sales.insightFilterTasks"
+          "insightFilterTasks"
         ],
         "summary": "Update",
         "responses": {
@@ -9322,7 +9322,7 @@
       "delete": {
         "operationId": "sales.insightFilterTasks.delete",
         "tags": [
-          "sales.insightFilterTasks"
+          "insightFilterTasks"
         ],
         "summary": "Delete",
         "responses": {
@@ -9354,7 +9354,7 @@
       "get": {
         "operationId": "sales.insightNotes.query",
         "tags": [
-          "sales.insightNotes"
+          "insightNotes"
         ],
         "summary": "Query",
         "responses": {
@@ -9394,7 +9394,7 @@
       "post": {
         "operationId": "sales.insightNotes.create",
         "tags": [
-          "sales.insightNotes"
+          "insightNotes"
         ],
         "summary": "Create",
         "responses": {
@@ -9433,7 +9433,7 @@
       "get": {
         "operationId": "sales.insightNotes.getById",
         "tags": [
-          "sales.insightNotes"
+          "insightNotes"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -9470,7 +9470,7 @@
       "put": {
         "operationId": "sales.insightNotes.update",
         "tags": [
-          "sales.insightNotes"
+          "insightNotes"
         ],
         "summary": "Update",
         "responses": {
@@ -9517,7 +9517,7 @@
       "delete": {
         "operationId": "sales.insightNotes.delete",
         "tags": [
-          "sales.insightNotes"
+          "insightNotes"
         ],
         "summary": "Delete",
         "responses": {
@@ -9549,7 +9549,7 @@
       "get": {
         "operationId": "sales.insightFiles.query",
         "tags": [
-          "sales.insightFiles"
+          "insightFiles"
         ],
         "summary": "Query",
         "responses": {
@@ -9589,7 +9589,7 @@
       "post": {
         "operationId": "sales.insightFiles.create",
         "tags": [
-          "sales.insightFiles"
+          "insightFiles"
         ],
         "summary": "Create",
         "responses": {
@@ -9628,7 +9628,7 @@
       "get": {
         "operationId": "sales.insightFiles.getById",
         "tags": [
-          "sales.insightFiles"
+          "insightFiles"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -9665,7 +9665,7 @@
       "put": {
         "operationId": "sales.insightFiles.update",
         "tags": [
-          "sales.insightFiles"
+          "insightFiles"
         ],
         "summary": "Update",
         "responses": {
@@ -9712,7 +9712,7 @@
       "delete": {
         "operationId": "sales.insightFiles.delete",
         "tags": [
-          "sales.insightFiles"
+          "insightFiles"
         ],
         "summary": "Delete",
         "responses": {
@@ -9744,7 +9744,7 @@
       "get": {
         "operationId": "sales.insightTasks.query",
         "tags": [
-          "sales.insightTasks"
+          "insightTasks"
         ],
         "summary": "Query",
         "responses": {
@@ -9784,7 +9784,7 @@
       "post": {
         "operationId": "sales.insightTasks.create",
         "tags": [
-          "sales.insightTasks"
+          "insightTasks"
         ],
         "summary": "Create",
         "responses": {
@@ -9823,7 +9823,7 @@
       "get": {
         "operationId": "sales.insightTasks.getById",
         "tags": [
-          "sales.insightTasks"
+          "insightTasks"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -9860,7 +9860,7 @@
       "put": {
         "operationId": "sales.insightTasks.update",
         "tags": [
-          "sales.insightTasks"
+          "insightTasks"
         ],
         "summary": "Update",
         "responses": {
@@ -9907,7 +9907,7 @@
       "delete": {
         "operationId": "sales.insightTasks.delete",
         "tags": [
-          "sales.insightTasks"
+          "insightTasks"
         ],
         "summary": "Delete",
         "responses": {
@@ -9939,7 +9939,7 @@
       "post": {
         "operationId": "sales.accountmanagement.provisionEnterpriseAccount",
         "tags": [
-          "sales.accountmanagement"
+          "accountmanagement"
         ],
         "summary": "Provision new enterprise account",
         "responses": {
@@ -9979,7 +9979,7 @@
       "post": {
         "operationId": "sales.accountmanagement.suspendAccount",
         "tags": [
-          "sales.accountmanagement"
+          "accountmanagement"
         ],
         "summary": "Suspend enterprise account",
         "responses": {
@@ -10029,7 +10029,7 @@
       "post": {
         "operationId": "sales.accountmanagement.reactivateAccount",
         "tags": [
-          "sales.accountmanagement"
+          "accountmanagement"
         ],
         "summary": "Reactivate suspended account",
         "responses": {
@@ -10069,7 +10069,7 @@
       "post": {
         "operationId": "sales.accountmanagement.terminateAccount",
         "tags": [
-          "sales.accountmanagement"
+          "accountmanagement"
         ],
         "summary": "Terminate enterprise account",
         "responses": {
@@ -10109,7 +10109,7 @@
       "put": {
         "operationId": "sales.accountmanagement.updateAccountFeatures",
         "tags": [
-          "sales.accountmanagement"
+          "accountmanagement"
         ],
         "summary": "Update account feature flags",
         "responses": {
@@ -10159,7 +10159,7 @@
       "get": {
         "operationId": "sales.accountmanagement.checkAccountLimits",
         "tags": [
-          "sales.accountmanagement"
+          "accountmanagement"
         ],
         "summary": "Check account resource limits",
         "responses": {
@@ -10207,7 +10207,7 @@
       "post": {
         "operationId": "sales.accountmanagement.extendTrial",
         "tags": [
-          "sales.accountmanagement"
+          "accountmanagement"
         ],
         "summary": "Extend trial period",
         "responses": {
@@ -10257,7 +10257,7 @@
       "post": {
         "operationId": "sales.accountmanagement.validateAccountKey",
         "tags": [
-          "sales.accountmanagement"
+          "accountmanagement"
         ],
         "summary": "Validate account key",
         "responses": {
@@ -10297,7 +10297,7 @@
       "get": {
         "operationId": "sales.workspacemanagement.getUserWorkspaces",
         "tags": [
-          "sales.workspacemanagement"
+          "workspacemanagement"
         ],
         "summary": "Get workspaces accessible to a user based on their role assignments",
         "responses": {
@@ -10348,7 +10348,7 @@
       "get": {
         "operationId": "sales.workspacemanagement.getUserActiveWorkspace",
         "tags": [
-          "sales.workspacemanagement"
+          "workspacemanagement"
         ],
         "summary": "Get user's active workspace",
         "responses": {
@@ -10401,7 +10401,7 @@
       "put": {
         "operationId": "sales.workspacemanagement.updateUserActiveWorkspace",
         "tags": [
-          "sales.workspacemanagement"
+          "workspacemanagement"
         ],
         "summary": "Update user's active workspace",
         "responses": {
@@ -10463,7 +10463,7 @@
       "get": {
         "operationId": "sales.workspacemanagement.getWorkspaceNavigation",
         "tags": [
-          "sales.workspacemanagement"
+          "workspacemanagement"
         ],
         "summary": "Get workspace navigation as hierarchical tree",
         "responses": {
@@ -10514,7 +10514,7 @@
       "post": {
         "operationId": "sales.workspacemanagement.cloneWorkspace",
         "tags": [
-          "sales.workspacemanagement"
+          "workspacemanagement"
         ],
         "summary": "Clone workspace with navigation",
         "responses": {
@@ -10572,7 +10572,7 @@
       "put": {
         "operationId": "sales.workspacemanagement.reorderNavigationItems",
         "tags": [
-          "sales.workspacemanagement"
+          "workspacemanagement"
         ],
         "summary": "Reorder navigation items",
         "responses": {
@@ -10625,7 +10625,7 @@
       "get": {
         "operationId": "sales.workspacemanagement.getUserRoleDefaultWorkspace",
         "tags": [
-          "sales.workspacemanagement"
+          "workspacemanagement"
         ],
         "summary": "Get user's role default workspace",
         "responses": {
@@ -10680,7 +10680,7 @@
       "post": {
         "operationId": "sales.linkedinprofiles.authenticateWithLinkedIn",
         "tags": [
-          "sales.linkedinprofiles"
+          "linkedinprofiles"
         ],
         "summary": "Authenticate with LinkedIn API",
         "responses": {
@@ -10720,7 +10720,7 @@
       "post": {
         "operationId": "sales.linkedinprofiles.syncProfileFromLinkedIn",
         "tags": [
-          "sales.linkedinprofiles"
+          "linkedinprofiles"
         ],
         "summary": "Sync profile from LinkedIn",
         "responses": {
@@ -10760,7 +10760,7 @@
       "get": {
         "operationId": "sales.linkedinprofiles.getLinkedInPosts",
         "tags": [
-          "sales.linkedinprofiles"
+          "linkedinprofiles"
         ],
         "summary": "Get LinkedIn posts",
         "responses": {
@@ -10806,7 +10806,7 @@
       "post": {
         "operationId": "sales.linkedinprofiles.publishLinkedInPost",
         "tags": [
-          "sales.linkedinprofiles"
+          "linkedinprofiles"
         ],
         "summary": "Publish LinkedIn post",
         "responses": {
@@ -10846,7 +10846,7 @@
       "get": {
         "operationId": "sales.linkedinprofiles.getLinkedInFollowers",
         "tags": [
-          "sales.linkedinprofiles"
+          "linkedinprofiles"
         ],
         "summary": "Get LinkedIn followers",
         "responses": {
@@ -10886,7 +10886,7 @@
       "get": {
         "operationId": "sales.linkedinprofiles.getLinkedInEngagementMetrics",
         "tags": [
-          "sales.linkedinprofiles"
+          "linkedinprofiles"
         ],
         "summary": "Get LinkedIn engagement metrics",
         "responses": {
@@ -10934,7 +10934,7 @@
       "post": {
         "operationId": "sales.linkedinprofiles.refreshLinkedInToken",
         "tags": [
-          "sales.linkedinprofiles"
+          "linkedinprofiles"
         ],
         "summary": "Refresh LinkedIn token",
         "responses": {
@@ -10974,7 +10974,7 @@
       "get": {
         "operationId": "sales.linkedinprofiles.validateLinkedInConnection",
         "tags": [
-          "sales.linkedinprofiles"
+          "linkedinprofiles"
         ],
         "summary": "Validate LinkedIn connection",
         "responses": {
@@ -11014,7 +11014,7 @@
       "post": {
         "operationId": "sales.googlebusinessprofiles.authenticateWithGoogle",
         "tags": [
-          "sales.googlebusinessprofiles"
+          "googlebusinessprofiles"
         ],
         "summary": "Authenticate with Google Business API",
         "responses": {
@@ -11054,7 +11054,7 @@
       "post": {
         "operationId": "sales.googlebusinessprofiles.syncProfileFromGoogle",
         "tags": [
-          "sales.googlebusinessprofiles"
+          "googlebusinessprofiles"
         ],
         "summary": "Sync profile from Google",
         "responses": {
@@ -11094,7 +11094,7 @@
       "post": {
         "operationId": "sales.googlebusinessprofiles.syncProfileToGoogle",
         "tags": [
-          "sales.googlebusinessprofiles"
+          "googlebusinessprofiles"
         ],
         "summary": "Sync profile to Google",
         "responses": {
@@ -11134,7 +11134,7 @@
       "get": {
         "operationId": "sales.googlebusinessprofiles.getGoogleReviews",
         "tags": [
-          "sales.googlebusinessprofiles"
+          "googlebusinessprofiles"
         ],
         "summary": "Get Google reviews",
         "responses": {
@@ -11182,7 +11182,7 @@
       "post": {
         "operationId": "sales.googlebusinessprofiles.respondToGoogleReview",
         "tags": [
-          "sales.googlebusinessprofiles"
+          "googlebusinessprofiles"
         ],
         "summary": "Respond to Google review",
         "responses": {
@@ -11232,7 +11232,7 @@
       "get": {
         "operationId": "sales.googlebusinessprofiles.getProfileInsights",
         "tags": [
-          "sales.googlebusinessprofiles"
+          "googlebusinessprofiles"
         ],
         "summary": "Get profile insights",
         "responses": {
@@ -11280,7 +11280,7 @@
       "post": {
         "operationId": "sales.googlebusinessprofiles.refreshGoogleToken",
         "tags": [
-          "sales.googlebusinessprofiles"
+          "googlebusinessprofiles"
         ],
         "summary": "Refresh Google token",
         "responses": {
@@ -11320,7 +11320,7 @@
       "get": {
         "operationId": "sales.googlebusinessprofiles.validateGoogleConnection",
         "tags": [
-          "sales.googlebusinessprofiles"
+          "googlebusinessprofiles"
         ],
         "summary": "Validate Google connection",
         "responses": {
@@ -11360,7 +11360,7 @@
       "get": {
         "operationId": "sales.campaigns.exampleMethod",
         "tags": [
-          "sales.campaigns"
+          "campaigns"
         ],
         "summary": "Example Method",
         "responses": {

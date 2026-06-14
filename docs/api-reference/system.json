@@ -13,22 +13,22 @@
   ],
   "tags": [
     {
-      "name": "system.jobHistories"
+      "name": "jobHistories"
     },
     {
-      "name": "system.jobTypes"
+      "name": "jobTypes"
     },
     {
-      "name": "system.jobs"
+      "name": "jobs"
     },
     {
-      "name": "system.multitenantdatabase"
+      "name": "multitenantdatabase"
     },
     {
-      "name": "system.settings"
+      "name": "settings"
     },
     {
-      "name": "system.tenantresolution"
+      "name": "tenantresolution"
     }
   ],
   "paths": {
@@ -36,7 +36,7 @@
       "get": {
         "operationId": "system.jobs.query",
         "tags": [
-          "system.jobs"
+          "jobs"
         ],
         "summary": "Query",
         "responses": {
@@ -76,7 +76,7 @@
       "post": {
         "operationId": "system.jobs.create",
         "tags": [
-          "system.jobs"
+          "jobs"
         ],
         "summary": "Create",
         "responses": {
@@ -115,7 +115,7 @@
       "get": {
         "operationId": "system.jobs.getById",
         "tags": [
-          "system.jobs"
+          "jobs"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -152,7 +152,7 @@
       "put": {
         "operationId": "system.jobs.update",
         "tags": [
-          "system.jobs"
+          "jobs"
         ],
         "summary": "Update",
         "responses": {
@@ -199,7 +199,7 @@
       "delete": {
         "operationId": "system.jobs.delete",
         "tags": [
-          "system.jobs"
+          "jobs"
         ],
         "summary": "Delete",
         "responses": {
@@ -231,7 +231,7 @@
       "get": {
         "operationId": "system.jobTypes.query",
         "tags": [
-          "system.jobTypes"
+          "jobTypes"
         ],
         "summary": "Query",
         "responses": {
@@ -271,7 +271,7 @@
       "post": {
         "operationId": "system.jobTypes.create",
         "tags": [
-          "system.jobTypes"
+          "jobTypes"
         ],
         "summary": "Create",
         "responses": {
@@ -310,7 +310,7 @@
       "get": {
         "operationId": "system.jobTypes.getById",
         "tags": [
-          "system.jobTypes"
+          "jobTypes"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -347,7 +347,7 @@
       "put": {
         "operationId": "system.jobTypes.update",
         "tags": [
-          "system.jobTypes"
+          "jobTypes"
         ],
         "summary": "Update",
         "responses": {
@@ -394,7 +394,7 @@
       "delete": {
         "operationId": "system.jobTypes.delete",
         "tags": [
-          "system.jobTypes"
+          "jobTypes"
         ],
         "summary": "Delete",
         "responses": {
@@ -426,7 +426,7 @@
       "get": {
         "operationId": "system.jobHistories.query",
         "tags": [
-          "system.jobHistories"
+          "jobHistories"
         ],
         "summary": "Query",
         "responses": {
@@ -466,7 +466,7 @@
       "post": {
         "operationId": "system.jobHistories.create",
         "tags": [
-          "system.jobHistories"
+          "jobHistories"
         ],
         "summary": "Create",
         "responses": {
@@ -505,7 +505,7 @@
       "get": {
         "operationId": "system.jobHistories.getById",
         "tags": [
-          "system.jobHistories"
+          "jobHistories"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -542,7 +542,7 @@
       "put": {
         "operationId": "system.jobHistories.update",
         "tags": [
-          "system.jobHistories"
+          "jobHistories"
         ],
         "summary": "Update",
         "responses": {
@@ -589,7 +589,7 @@
       "delete": {
         "operationId": "system.jobHistories.delete",
         "tags": [
-          "system.jobHistories"
+          "jobHistories"
         ],
         "summary": "Delete",
         "responses": {
@@ -621,7 +621,7 @@
       "get": {
         "operationId": "system.tenantresolution.healthCheckHandler",
         "tags": [
-          "system.tenantresolution"
+          "tenantresolution"
         ],
         "summary": "Health check endpoint handler",
         "responses": {
@@ -649,7 +649,7 @@
       "post": {
         "operationId": "system.tenantresolution.clearCacheHandler",
         "tags": [
-          "system.tenantresolution"
+          "tenantresolution"
         ],
         "summary": "Admin endpoint to clear caches",
         "responses": {
@@ -677,7 +677,7 @@
       "get": {
         "operationId": "system.multitenantdatabase.getConnectionStatus",
         "tags": [
-          "system.multitenantdatabase"
+          "multitenantdatabase"
         ],
         "summary": "Get connection status for health checks",
         "responses": {
@@ -705,7 +705,7 @@
       "get": {
         "operationId": "system.settings.getUserSettings",
         "tags": [
-          "system.settings"
+          "settings"
         ],
         "summary": "Get User Settings",
         "responses": {
@@ -744,7 +744,7 @@
       "put": {
         "operationId": "system.settings.saveUserSettings",
         "tags": [
-          "system.settings"
+          "settings"
         ],
         "summary": "Save User Settings",
         "responses": {
@@ -785,7 +785,7 @@
       "get": {
         "operationId": "system.settings.getAccountSettings",
         "tags": [
-          "system.settings"
+          "settings"
         ],
         "summary": "Get Account Settings",
         "responses": {
@@ -824,7 +824,7 @@
       "put": {
         "operationId": "system.settings.saveAccountSettings",
         "tags": [
-          "system.settings"
+          "settings"
         ],
         "summary": "Save Account Settings",
         "responses": {
@@ -865,7 +865,7 @@
       "get": {
         "operationId": "system.settings.getScopedSettings",
         "tags": [
-          "system.settings"
+          "settings"
         ],
         "summary": "Get Scoped Settings",
         "responses": {
@@ -904,7 +904,7 @@
       "put": {
         "operationId": "system.settings.saveScopedSettings",
         "tags": [
-          "system.settings"
+          "settings"
         ],
         "summary": "Save Scoped Settings",
         "responses": {
@@ -945,7 +945,7 @@
       "get": {
         "operationId": "system.settings.getUserFieldValue",
         "tags": [
-          "system.settings"
+          "settings"
         ],
         "summary": "Get User Field Value",
         "responses": {

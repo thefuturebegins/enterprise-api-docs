@@ -13,7 +13,7 @@
   ],
   "tags": [
     {
-      "name": "permissions.authorization"
+      "name": "authorization"
     }
   ],
   "paths": {
@@ -21,7 +21,7 @@
       "get": {
         "operationId": "permissions.authorization.hasPermission",
         "tags": [
-          "permissions.authorization"
+          "authorization"
         ],
         "summary": "Check if user has a specific permission",
         "responses": {
@@ -77,7 +77,7 @@
       "get": {
         "operationId": "permissions.authorization.getEffectivePermissionsForUser",
         "tags": [
-          "permissions.authorization"
+          "authorization"
         ],
         "summary": "Get effective permissions for a user",
         "responses": {
@@ -128,7 +128,7 @@
       "get": {
         "operationId": "permissions.authorization.getPermissionsCatalog",
         "tags": [
-          "permissions.authorization"
+          "authorization"
         ],
         "summary": "Get complete permissions catalog",
         "responses": {

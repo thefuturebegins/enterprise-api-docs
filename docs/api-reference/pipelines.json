@@ -13,7 +13,7 @@
   ],
   "tags": [
     {
-      "name": "pipelines.pipelines"
+      "name": "pipelines"
     }
   ],
   "paths": {
@@ -21,7 +21,7 @@
       "get": {
         "operationId": "pipelines.pipelines.exampleMethod",
         "tags": [
-          "pipelines.pipelines"
+          "pipelines"
         ],
         "summary": "Example method - replace with actual implementation",
         "responses": {

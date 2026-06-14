@@ -13,16 +13,16 @@
   ],
   "tags": [
     {
-      "name": "workflow.scheduledEvents"
+      "name": "scheduledEvents"
     },
     {
-      "name": "workflow.scheduledevents"
+      "name": "scheduledevents"
     },
     {
-      "name": "workflow.workflowStatusPipelineRecordStates"
+      "name": "workflowStatusPipelineRecordStates"
     },
     {
-      "name": "workflow.workflowStatusPipelines"
+      "name": "workflowStatusPipelines"
     }
   ],
   "paths": {
@@ -30,7 +30,7 @@
       "get": {
         "operationId": "workflow.workflowStatusPipelines.query",
         "tags": [
-          "workflow.workflowStatusPipelines"
+          "workflowStatusPipelines"
         ],
         "summary": "Query",
         "responses": {
@@ -70,7 +70,7 @@
       "post": {
         "operationId": "workflow.workflowStatusPipelines.create",
         "tags": [
-          "workflow.workflowStatusPipelines"
+          "workflowStatusPipelines"
         ],
         "summary": "Create",
         "responses": {
@@ -109,7 +109,7 @@
       "get": {
         "operationId": "workflow.workflowStatusPipelines.getById",
         "tags": [
-          "workflow.workflowStatusPipelines"
+          "workflowStatusPipelines"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -146,7 +146,7 @@
       "put": {
         "operationId": "workflow.workflowStatusPipelines.update",
         "tags": [
-          "workflow.workflowStatusPipelines"
+          "workflowStatusPipelines"
         ],
         "summary": "Update",
         "responses": {
@@ -193,7 +193,7 @@
       "delete": {
         "operationId": "workflow.workflowStatusPipelines.delete",
         "tags": [
-          "workflow.workflowStatusPipelines"
+          "workflowStatusPipelines"
         ],
         "summary": "Delete",
         "responses": {
@@ -225,7 +225,7 @@
       "get": {
         "operationId": "workflow.workflowStatusPipelineRecordStates.query",
         "tags": [
-          "workflow.workflowStatusPipelineRecordStates"
+          "workflowStatusPipelineRecordStates"
         ],
         "summary": "Query",
         "responses": {
@@ -265,7 +265,7 @@
       "post": {
         "operationId": "workflow.workflowStatusPipelineRecordStates.create",
         "tags": [
-          "workflow.workflowStatusPipelineRecordStates"
+          "workflowStatusPipelineRecordStates"
         ],
         "summary": "Create",
         "responses": {
@@ -304,7 +304,7 @@
       "get": {
         "operationId": "workflow.workflowStatusPipelineRecordStates.getById",
         "tags": [
-          "workflow.workflowStatusPipelineRecordStates"
+          "workflowStatusPipelineRecordStates"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -341,7 +341,7 @@
       "put": {
         "operationId": "workflow.workflowStatusPipelineRecordStates.update",
         "tags": [
-          "workflow.workflowStatusPipelineRecordStates"
+          "workflowStatusPipelineRecordStates"
         ],
         "summary": "Update",
         "responses": {
@@ -388,7 +388,7 @@
       "delete": {
         "operationId": "workflow.workflowStatusPipelineRecordStates.delete",
         "tags": [
-          "workflow.workflowStatusPipelineRecordStates"
+          "workflowStatusPipelineRecordStates"
         ],
         "summary": "Delete",
         "responses": {
@@ -420,7 +420,7 @@
       "get": {
         "operationId": "workflow.scheduledEvents.query",
         "tags": [
-          "workflow.scheduledEvents"
+          "scheduledEvents"
         ],
         "summary": "Query",
         "responses": {
@@ -460,7 +460,7 @@
       "post": {
         "operationId": "workflow.scheduledEvents.create",
         "tags": [
-          "workflow.scheduledEvents"
+          "scheduledEvents"
         ],
         "summary": "Create",
         "responses": {
@@ -499,7 +499,7 @@
       "get": {
         "operationId": "workflow.scheduledEvents.getById",
         "tags": [
-          "workflow.scheduledEvents"
+          "scheduledEvents"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -536,7 +536,7 @@
       "put": {
         "operationId": "workflow.scheduledEvents.update",
         "tags": [
-          "workflow.scheduledEvents"
+          "scheduledEvents"
         ],
         "summary": "Update",
         "responses": {
@@ -583,7 +583,7 @@
       "delete": {
         "operationId": "workflow.scheduledEvents.delete",
         "tags": [
-          "workflow.scheduledEvents"
+          "scheduledEvents"
         ],
         "summary": "Delete",
         "responses": {
@@ -615,7 +615,7 @@
       "post": {
         "operationId": "workflow.scheduledevents.apiScheduleEvent",
         "tags": [
-          "workflow.scheduledevents"
+          "scheduledevents"
         ],
         "summary": "POST /workflow/scheduled-events \u2014 schedule a generic event",
         "responses": {
@@ -653,7 +653,7 @@
       "get": {
         "operationId": "workflow.scheduledevents.apiListScheduledEvents",
         "tags": [
-          "workflow.scheduledevents"
+          "scheduledevents"
         ],
         "summary": "GET /workflow/scheduled-events \u2014 list filtered events",
         "responses": {
@@ -704,7 +704,7 @@
       "post": {
         "operationId": "workflow.scheduledevents.apiScheduleWorkflow",
         "tags": [
-          "workflow.scheduledevents"
+          "scheduledevents"
         ],
         "summary": "POST /workflow/scheduled-events/workflow \u2014 schedule a workflow-on-record",
         "responses": {
@@ -744,7 +744,7 @@
       "post": {
         "operationId": "workflow.scheduledevents.apiCancelScheduledEvent",
         "tags": [
-          "workflow.scheduledevents"
+          "scheduledevents"
         ],
         "summary": "POST /workflow/scheduled-events/cancel \u2014 cancel one event",
         "responses": {
@@ -786,7 +786,7 @@
       "post": {
         "operationId": "workflow.scheduledevents.apiDispatchDueEvents",
         "tags": [
-          "workflow.scheduledevents"
+          "scheduledevents"
         ],
         "summary": "POST /workflow/scheduled-events/dispatch \u2014 manual tick (ops/tests)",
         "responses": {

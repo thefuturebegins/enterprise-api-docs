@@ -13,13 +13,13 @@
   ],
   "tags": [
     {
-      "name": "settings.notificationSettings"
+      "name": "notificationSettings"
     },
     {
-      "name": "settings.securitySettings"
+      "name": "securitySettings"
     },
     {
-      "name": "settings.settingsScopes"
+      "name": "settingsScopes"
     }
   ],
   "paths": {
@@ -27,7 +27,7 @@
       "get": {
         "operationId": "settings.notificationSettings.query",
         "tags": [
-          "settings.notificationSettings"
+          "notificationSettings"
         ],
         "summary": "Query",
         "responses": {
@@ -67,7 +67,7 @@
       "post": {
         "operationId": "settings.notificationSettings.create",
         "tags": [
-          "settings.notificationSettings"
+          "notificationSettings"
         ],
         "summary": "Create",
         "responses": {
@@ -106,7 +106,7 @@
       "get": {
         "operationId": "settings.notificationSettings.getById",
         "tags": [
-          "settings.notificationSettings"
+          "notificationSettings"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -143,7 +143,7 @@
       "put": {
         "operationId": "settings.notificationSettings.update",
         "tags": [
-          "settings.notificationSettings"
+          "notificationSettings"
         ],
         "summary": "Update",
         "responses": {
@@ -190,7 +190,7 @@
       "delete": {
         "operationId": "settings.notificationSettings.delete",
         "tags": [
-          "settings.notificationSettings"
+          "notificationSettings"
         ],
         "summary": "Delete",
         "responses": {
@@ -222,7 +222,7 @@
       "get": {
         "operationId": "settings.securitySettings.query",
         "tags": [
-          "settings.securitySettings"
+          "securitySettings"
         ],
         "summary": "Query",
         "responses": {
@@ -262,7 +262,7 @@
       "post": {
         "operationId": "settings.securitySettings.create",
         "tags": [
-          "settings.securitySettings"
+          "securitySettings"
         ],
         "summary": "Create",
         "responses": {
@@ -301,7 +301,7 @@
       "get": {
         "operationId": "settings.securitySettings.getById",
         "tags": [
-          "settings.securitySettings"
+          "securitySettings"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -338,7 +338,7 @@
       "put": {
         "operationId": "settings.securitySettings.update",
         "tags": [
-          "settings.securitySettings"
+          "securitySettings"
         ],
         "summary": "Update",
         "responses": {
@@ -385,7 +385,7 @@
       "delete": {
         "operationId": "settings.securitySettings.delete",
         "tags": [
-          "settings.securitySettings"
+          "securitySettings"
         ],
         "summary": "Delete",
         "responses": {
@@ -417,7 +417,7 @@
       "get": {
         "operationId": "settings.settingsScopes.query",
         "tags": [
-          "settings.settingsScopes"
+          "settingsScopes"
         ],
         "summary": "Query",
         "responses": {
@@ -457,7 +457,7 @@
       "post": {
         "operationId": "settings.settingsScopes.create",
         "tags": [
-          "settings.settingsScopes"
+          "settingsScopes"
         ],
         "summary": "Create",
         "responses": {
@@ -496,7 +496,7 @@
       "get": {
         "operationId": "settings.settingsScopes.getById",
         "tags": [
-          "settings.settingsScopes"
+          "settingsScopes"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -533,7 +533,7 @@
       "put": {
         "operationId": "settings.settingsScopes.update",
         "tags": [
-          "settings.settingsScopes"
+          "settingsScopes"
         ],
         "summary": "Update",
         "responses": {
@@ -580,7 +580,7 @@
       "delete": {
         "operationId": "settings.settingsScopes.delete",
         "tags": [
-          "settings.settingsScopes"
+          "settingsScopes"
         ],
         "summary": "Delete",
         "responses": {
