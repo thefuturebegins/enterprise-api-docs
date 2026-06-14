@@ -6,7 +6,20 @@
     "description": "\ud83d\udcd6 Complete reference for the Enterprise CRM platform \u2014 1,236 operations across 20 modules."
   },
   "siteConfig": {
-    "theme": "default"
+    "theme": "default",
+    "head": {
+      "links": [
+        {
+          "rel": "stylesheet",
+          "href": "/assets/custom.css"
+        }
+      ],
+      "scripts": [
+        {
+          "path": "assets/inject-styles.js"
+        }
+      ]
+    }
   },
   "navigation": {
     "header": [
@@ -38,6 +51,11 @@
         "title": "Guides",
         "path": "/",
         "icon": "phosphor/regular/book-open"
+      },
+      {
+        "title": "Module Guides",
+        "path": "/modules",
+        "icon": "phosphor/regular/squares-four"
       },
       {
         "title": "API Reference",
@@ -76,127 +94,127 @@
         "title": "Module Guides",
         "mode": "flat",
         "children": {
-          "/modules/ai": {
+          "/ai": {
             "type": "page",
             "title": "AI",
             "filepath": "docs/guides/modules/ai.md",
             "icon": "phosphor/regular/brain"
           },
-          "/modules/analytics": {
+          "/analytics": {
             "type": "page",
             "title": "Analytics",
             "filepath": "docs/guides/modules/analytics.md",
             "icon": "phosphor/regular/chart-bar"
           },
-          "/modules/cache": {
+          "/cache": {
             "type": "page",
             "title": "Cache",
             "filepath": "docs/guides/modules/cache.md",
             "icon": "phosphor/regular/database"
           },
-          "/modules/communications": {
+          "/communications": {
             "type": "page",
             "title": "Communications",
             "filepath": "docs/guides/modules/communications.md",
             "icon": "phosphor/regular/chat-circle"
           },
-          "/modules/customer-success": {
+          "/customer-success": {
             "type": "page",
             "title": "Customer Success",
             "filepath": "docs/guides/modules/customer-success.md",
             "icon": "phosphor/regular/star"
           },
-          "/modules/data": {
+          "/data": {
             "type": "page",
             "title": "Data",
             "filepath": "docs/guides/modules/data.md",
             "icon": "phosphor/regular/database"
           },
-          "/modules/finance": {
+          "/finance": {
             "type": "page",
             "title": "Finance",
             "filepath": "docs/guides/modules/finance.md",
             "icon": "phosphor/regular/currency-dollar"
           },
-          "/modules/forms": {
+          "/forms": {
             "type": "page",
             "title": "Forms",
             "filepath": "docs/guides/modules/forms.md",
             "icon": "phosphor/regular/clipboard-text"
           },
-          "/modules/identity": {
+          "/identity": {
             "type": "page",
             "title": "Identity",
             "filepath": "docs/guides/modules/identity.md",
             "icon": "phosphor/regular/user"
           },
-          "/modules/integrations": {
+          "/integrations": {
             "type": "page",
             "title": "Integrations",
             "filepath": "docs/guides/modules/integrations.md",
             "icon": "phosphor/regular/plugs-connected"
           },
-          "/modules/inventory": {
+          "/inventory": {
             "type": "page",
             "title": "Inventory",
             "filepath": "docs/guides/modules/inventory.md",
             "icon": "phosphor/regular/package"
           },
-          "/modules/marketing": {
+          "/marketing": {
             "type": "page",
             "title": "Marketing",
             "filepath": "docs/guides/modules/marketing.md",
             "icon": "phosphor/regular/megaphone"
           },
-          "/modules/notifications": {
+          "/notifications": {
             "type": "page",
             "title": "Notifications",
             "filepath": "docs/guides/modules/notifications.md",
             "icon": "phosphor/regular/bell"
           },
-          "/modules/permissions": {
+          "/permissions": {
             "type": "page",
             "title": "Permissions",
             "filepath": "docs/guides/modules/permissions.md",
             "icon": "phosphor/regular/lock"
           },
-          "/modules/pipelines": {
+          "/pipelines": {
             "type": "page",
             "title": "Pipelines",
             "filepath": "docs/guides/modules/pipelines.md",
             "icon": "phosphor/regular/flow-arrow"
           },
-          "/modules/sales": {
+          "/sales": {
             "type": "page",
             "title": "Sales",
             "filepath": "docs/guides/modules/sales.md",
             "icon": "phosphor/regular/handshake"
           },
-          "/modules/settings": {
+          "/settings": {
             "type": "page",
             "title": "Settings",
             "filepath": "docs/guides/modules/settings.md",
             "icon": "phosphor/regular/sliders"
           },
-          "/modules/support": {
+          "/support": {
             "type": "page",
             "title": "Support",
             "filepath": "docs/guides/modules/support.md",
             "icon": "phosphor/regular/lifebuoy"
           },
-          "/modules/system": {
+          "/system": {
             "type": "page",
             "title": "System",
             "filepath": "docs/guides/modules/system.md",
             "icon": "phosphor/regular/gear"
           },
-          "/modules/ui": {
+          "/ui": {
             "type": "page",
             "title": "UI",
             "filepath": "docs/guides/modules/ui.md",
             "icon": "phosphor/regular/desktop"
           },
-          "/modules/workflow": {
+          "/workflow": {
             "type": "page",
             "title": "Workflow",
             "filepath": "docs/guides/modules/workflow.md",
