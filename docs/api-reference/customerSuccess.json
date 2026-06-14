@@ -1526,11 +1526,5 @@
         "description": "Auto-generated updateInput for RenewalTask"
       }
     }
-  },
-  "servers": [
-    {
-      "url": "https://api.enterprisecrm.com",
-      "description": "Production API"
-    }
-  ]
+  }
 }

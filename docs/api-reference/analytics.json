@@ -1826,12 +1826,6 @@
     }
   },
   "x-fcg-warnings": [
-    "Unresolved type 'Report' \u2192 emitted permissive schema {}"
-  ],
-  "servers": [
-    {
-      "url": "https://api.enterprisecrm.com",
-      "description": "Production API"
-    }
+    "Unresolved type 'Report' → emitted permissive schema {}"
   ]
 }

@@ -1584,12 +1584,6 @@
     }
   },
   "x-fcg-warnings": [
-    "Unresolvable type '(req: Request, res: Response) => Promise<void>' \u2192 emitted permissive schema {}"
-  ],
-  "servers": [
-    {
-      "url": "https://api.enterprisecrm.com",
-      "description": "Production API"
-    }
+    "Unresolvable type '(req: Request, res: Response) => Promise<void>' → emitted permissive schema {}"
   ]
 }

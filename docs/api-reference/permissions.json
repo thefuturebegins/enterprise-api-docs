@@ -64,7 +64,7 @@
         ],
         "x-scope": "clientServer",
         "x-permission": "permissions:authorization:read",
-        "description": "Check if user has a specific permission\n\nCustom logic: Resolves user \u2192 roles \u2192 permissions chain"
+        "description": "Check if user has a specific permission\n\nCustom logic: Resolves user → roles → permissions chain"
       }
     },
     "/api/permissions/user/{userId}": {
@@ -381,11 +381,5 @@
         ]
       }
     }
-  },
-  "servers": [
-    {
-      "url": "https://api.enterprisecrm.com",
-      "description": "Production API"
-    }
-  ]
+  }
 }

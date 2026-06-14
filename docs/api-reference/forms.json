@@ -621,7 +621,7 @@
           },
           "fieldType": {
             "type": "string",
-            "description": "Which input is rendered for this form field. Links to fieldTypes (V20260526.1). Stored as `fieldType` (ObjectId). The details form uses `fieldTypeId` / `fieldTypeKey` in UI state (denormalizeKey); normalizeLinkFieldsForSave maps Id \u2192 `fieldType` and does not persist companions. Choice Options visibility compares `fieldTypeKey` in form state (hydrated on load). The Form Details Fields listing reads `fieldType` and hydrates the link for display."
+            "description": "Which input is rendered for this form field. Links to fieldTypes (V20260526.1). Stored as `fieldType` (ObjectId). The details form uses `fieldTypeId` / `fieldTypeKey` in UI state (denormalizeKey); normalizeLinkFieldsForSave maps Id → `fieldType` and does not persist companions. Choice Options visibility compares `fieldTypeKey` in form state (hydrated on load). The Form Details Fields listing reads `fieldType` and hydrates the link for display."
           },
           "order": {
             "type": "number",
@@ -680,7 +680,7 @@
           },
           "fieldType": {
             "type": "string",
-            "description": "Which input is rendered for this form field. Links to fieldTypes (V20260526.1). Stored as `fieldType` (ObjectId). The details form uses `fieldTypeId` / `fieldTypeKey` in UI state (denormalizeKey); normalizeLinkFieldsForSave maps Id \u2192 `fieldType` and does not persist companions. Choice Options visibility compares `fieldTypeKey` in form state (hydrated on load). The Form Details Fields listing reads `fieldType` and hydrates the link for display."
+            "description": "Which input is rendered for this form field. Links to fieldTypes (V20260526.1). Stored as `fieldType` (ObjectId). The details form uses `fieldTypeId` / `fieldTypeKey` in UI state (denormalizeKey); normalizeLinkFieldsForSave maps Id → `fieldType` and does not persist companions. Choice Options visibility compares `fieldTypeKey` in form state (hydrated on load). The Form Details Fields listing reads `fieldType` and hydrates the link for display."
           },
           "order": {
             "type": "number",
@@ -739,7 +739,7 @@
           },
           "fieldType": {
             "type": "string",
-            "description": "Which input is rendered for this form field. Links to fieldTypes (V20260526.1). Stored as `fieldType` (ObjectId). The details form uses `fieldTypeId` / `fieldTypeKey` in UI state (denormalizeKey); normalizeLinkFieldsForSave maps Id \u2192 `fieldType` and does not persist companions. Choice Options visibility compares `fieldTypeKey` in form state (hydrated on load). The Form Details Fields listing reads `fieldType` and hydrates the link for display."
+            "description": "Which input is rendered for this form field. Links to fieldTypes (V20260526.1). Stored as `fieldType` (ObjectId). The details form uses `fieldTypeId` / `fieldTypeKey` in UI state (denormalizeKey); normalizeLinkFieldsForSave maps Id → `fieldType` and does not persist companions. Choice Options visibility compares `fieldTypeKey` in form state (hydrated on load). The Form Details Fields listing reads `fieldType` and hydrates the link for display."
           },
           "order": {
             "type": "number",
@@ -799,7 +799,7 @@
           },
           "fieldType": {
             "type": "string",
-            "description": "Which input is rendered for this form field. Links to fieldTypes (V20260526.1). Stored as `fieldType` (ObjectId). The details form uses `fieldTypeId` / `fieldTypeKey` in UI state (denormalizeKey); normalizeLinkFieldsForSave maps Id \u2192 `fieldType` and does not persist companions. Choice Options visibility compares `fieldTypeKey` in form state (hydrated on load). The Form Details Fields listing reads `fieldType` and hydrates the link for display."
+            "description": "Which input is rendered for this form field. Links to fieldTypes (V20260526.1). Stored as `fieldType` (ObjectId). The details form uses `fieldTypeId` / `fieldTypeKey` in UI state (denormalizeKey); normalizeLinkFieldsForSave maps Id → `fieldType` and does not persist companions. Choice Options visibility compares `fieldTypeKey` in form state (hydrated on load). The Form Details Fields listing reads `fieldType` and hydrates the link for display."
           },
           "order": {
             "type": "number",
@@ -844,11 +844,5 @@
         "description": "Auto-generated updateInput for FormField"
       }
     }
-  },
-  "servers": [
-    {
-      "url": "https://api.enterprisecrm.com",
-      "description": "Production API"
-    }
-  ]
+  }
 }

@@ -7627,11 +7627,5 @@
   },
   "x-fcg-warnings": [
     "Unknown field type 'fileUpload' on field 'csvFile', emitting permissive schema {}"
-  ],
-  "servers": [
-    {
-      "url": "https://api.enterprisecrm.com",
-      "description": "Production API"
-    }
   ]
 }

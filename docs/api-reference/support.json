@@ -507,11 +507,5 @@
         "description": "Auto-generated updateInput for SupportDocumentationPage"
       }
     }
-  },
-  "servers": [
-    {
-      "url": "https://api.enterprisecrm.com",
-      "description": "Production API"
-    }
-  ]
+  }
 }

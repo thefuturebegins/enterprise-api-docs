@@ -219,7 +219,7 @@
         "tags": [
           "Marketing: Web Publishing"
         ],
-        "summary": "Public form submission \u2192 create a Lead",
+        "summary": "Public form submission → create a Lead",
         "responses": {
           "200": {
             "description": "Successful response",
@@ -272,7 +272,7 @@
         },
         "x-scope": "clientServer",
         "x-permission": "marketing:webpublishing:write",
-        "description": "Public form submission \u2192 create a Lead.\n\nPOST /api/marketing/preview/:account/:feature/:id/submit\n\nThe public preview page posts the collected field values here. For the\n`forms` feature we resolve the form, then create a `leads` record from the\nsubmitted First Name / Last Name / Email (the default lead-capture fields\nseeded on every form). Every other lead field is optional (V20260603.1), so\na visitor only ever has to supply those three.\n\nBody shape: `{ values: { firstName, lastName, email, ... } }`. We also\naccept a bare values map for resilience."
+        "description": "Public form submission → create a Lead.\n\nPOST /api/marketing/preview/:account/:feature/:id/submit\n\nThe public preview page posts the collected field values here. For the\n`forms` feature we resolve the form, then create a `leads` record from the\nsubmitted First Name / Last Name / Email (the default lead-capture fields\nseeded on every form). Every other lead field is optional (V20260603.1), so\na visitor only ever has to supply those three.\n\nBody shape: `{ values: { firstName, lastName, email, ... } }`. We also\naccept a bare values map for resilience."
       }
     },
     "/api/marketing/social/auth/url": {
@@ -11618,7 +11618,7 @@
           },
           "contactFilters": {
             "type": "string",
-            "description": "Legacy JSON filters \u2014 prefer embedded filters[] array"
+            "description": "Legacy JSON filters — prefer embedded filters[] array"
           },
           "filters": {
             "type": "array",
@@ -11660,7 +11660,7 @@
           },
           "contactFilters": {
             "type": "string",
-            "description": "Legacy JSON filters \u2014 prefer embedded filters[] array"
+            "description": "Legacy JSON filters — prefer embedded filters[] array"
           },
           "filters": {
             "type": "array",
@@ -11702,7 +11702,7 @@
           },
           "contactFilters": {
             "type": "string",
-            "description": "Legacy JSON filters \u2014 prefer embedded filters[] array"
+            "description": "Legacy JSON filters — prefer embedded filters[] array"
           },
           "filters": {
             "type": "array",
@@ -11745,7 +11745,7 @@
           },
           "contactFilters": {
             "type": "string",
-            "description": "Legacy JSON filters \u2014 prefer embedded filters[] array"
+            "description": "Legacy JSON filters — prefer embedded filters[] array"
           },
           "filters": {
             "type": "array",
@@ -12298,7 +12298,7 @@
           "rootStepIds": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Workflow-engine entry points. Step IDs with no previousStepIds \u2014 branching graphs may have more than one root."
+            "description": "Workflow-engine entry points. Step IDs with no previousStepIds — branching graphs may have more than one root."
           },
           "ownerModelKey": {
             "type": "string",
@@ -12371,7 +12371,7 @@
           "rootStepIds": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Workflow-engine entry points. Step IDs with no previousStepIds \u2014 branching graphs may have more than one root."
+            "description": "Workflow-engine entry points. Step IDs with no previousStepIds — branching graphs may have more than one root."
           },
           "ownerModelKey": {
             "type": "string",
@@ -12444,7 +12444,7 @@
           "rootStepIds": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Workflow-engine entry points. Step IDs with no previousStepIds \u2014 branching graphs may have more than one root."
+            "description": "Workflow-engine entry points. Step IDs with no previousStepIds — branching graphs may have more than one root."
           },
           "ownerModelKey": {
             "type": "string",
@@ -12518,7 +12518,7 @@
           "rootStepIds": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Workflow-engine entry points. Step IDs with no previousStepIds \u2014 branching graphs may have more than one root."
+            "description": "Workflow-engine entry points. Step IDs with no previousStepIds — branching graphs may have more than one root."
           },
           "ownerModelKey": {
             "type": "string",
@@ -12616,7 +12616,7 @@
           },
           "workflow": {
             "type": "string",
-            "description": "Parent workflow. Optional during the schema-bridge phase \u2014 legacy steps link to campaignSequence instead."
+            "description": "Parent workflow. Optional during the schema-bridge phase — legacy steps link to campaignSequence instead."
           },
           "nextStepIds": {
             "type": "object",
@@ -12642,7 +12642,7 @@
           },
           "socialSequence": {
             "type": "string",
-            "description": "Parent social sequence \u2014 set for steps owned by a Social Drip Campaign. Mutually exclusive with emailSequence / workflow."
+            "description": "Parent social sequence — set for steps owned by a Social Drip Campaign. Mutually exclusive with emailSequence / workflow."
           },
           "createdByDate": {
             "type": "string",
@@ -12719,7 +12719,7 @@
           },
           "workflow": {
             "type": "string",
-            "description": "Parent workflow. Optional during the schema-bridge phase \u2014 legacy steps link to campaignSequence instead."
+            "description": "Parent workflow. Optional during the schema-bridge phase — legacy steps link to campaignSequence instead."
           },
           "nextStepIds": {
             "type": "object",
@@ -12745,7 +12745,7 @@
           },
           "socialSequence": {
             "type": "string",
-            "description": "Parent social sequence \u2014 set for steps owned by a Social Drip Campaign. Mutually exclusive with emailSequence / workflow."
+            "description": "Parent social sequence — set for steps owned by a Social Drip Campaign. Mutually exclusive with emailSequence / workflow."
           },
           "createdByDate": {
             "type": "string",
@@ -12822,7 +12822,7 @@
           },
           "workflow": {
             "type": "string",
-            "description": "Parent workflow. Optional during the schema-bridge phase \u2014 legacy steps link to campaignSequence instead."
+            "description": "Parent workflow. Optional during the schema-bridge phase — legacy steps link to campaignSequence instead."
           },
           "nextStepIds": {
             "type": "object",
@@ -12848,7 +12848,7 @@
           },
           "socialSequence": {
             "type": "string",
-            "description": "Parent social sequence \u2014 set for steps owned by a Social Drip Campaign. Mutually exclusive with emailSequence / workflow."
+            "description": "Parent social sequence — set for steps owned by a Social Drip Campaign. Mutually exclusive with emailSequence / workflow."
           },
           "createdByDate": {
             "type": "string",
@@ -12926,7 +12926,7 @@
           },
           "workflow": {
             "type": "string",
-            "description": "Parent workflow. Optional during the schema-bridge phase \u2014 legacy steps link to campaignSequence instead."
+            "description": "Parent workflow. Optional during the schema-bridge phase — legacy steps link to campaignSequence instead."
           },
           "nextStepIds": {
             "type": "object",
@@ -12952,7 +12952,7 @@
           },
           "socialSequence": {
             "type": "string",
-            "description": "Parent social sequence \u2014 set for steps owned by a Social Drip Campaign. Mutually exclusive with emailSequence / workflow."
+            "description": "Parent social sequence — set for steps owned by a Social Drip Campaign. Mutually exclusive with emailSequence / workflow."
           },
           "createdByDate": {
             "type": "string",
@@ -13133,7 +13133,7 @@
           "emailLists": {
             "type": "array",
             "items": {},
-            "description": "Legacy segment id array \u2014 prefer audienceSegments. type:array (not json) so the module-framework sanitizer persists the string[] instead of dropping it."
+            "description": "Legacy segment id array — prefer audienceSegments. type:array (not json) so the module-framework sanitizer persists the string[] instead of dropping it."
           },
           "audienceSegments": {
             "type": "array",
@@ -13189,7 +13189,7 @@
           "emailLists": {
             "type": "array",
             "items": {},
-            "description": "Legacy segment id array \u2014 prefer audienceSegments. type:array (not json) so the module-framework sanitizer persists the string[] instead of dropping it."
+            "description": "Legacy segment id array — prefer audienceSegments. type:array (not json) so the module-framework sanitizer persists the string[] instead of dropping it."
           },
           "audienceSegments": {
             "type": "array",
@@ -13245,7 +13245,7 @@
           "emailLists": {
             "type": "array",
             "items": {},
-            "description": "Legacy segment id array \u2014 prefer audienceSegments. type:array (not json) so the module-framework sanitizer persists the string[] instead of dropping it."
+            "description": "Legacy segment id array — prefer audienceSegments. type:array (not json) so the module-framework sanitizer persists the string[] instead of dropping it."
           },
           "audienceSegments": {
             "type": "array",
@@ -13302,7 +13302,7 @@
           "emailLists": {
             "type": "array",
             "items": {},
-            "description": "Legacy segment id array \u2014 prefer audienceSegments. type:array (not json) so the module-framework sanitizer persists the string[] instead of dropping it."
+            "description": "Legacy segment id array — prefer audienceSegments. type:array (not json) so the module-framework sanitizer persists the string[] instead of dropping it."
           },
           "audienceSegments": {
             "type": "array",
@@ -13341,11 +13341,11 @@
           },
           "subjectModelKey": {
             "type": "string",
-            "description": "Polymorphic subject pointer \u2014 the model the enrolled record lives in (e.g. \"contacts\")."
+            "description": "Polymorphic subject pointer — the model the enrolled record lives in (e.g. \"contacts\")."
           },
           "subjectRecordId": {
             "type": "string",
-            "description": "Polymorphic subject pointer \u2014 the ID of the enrolled record (e.g. the contact id)."
+            "description": "Polymorphic subject pointer — the ID of the enrolled record (e.g. the contact id)."
           },
           "status": {
             "type": "string",
@@ -13409,11 +13409,11 @@
           },
           "subjectModelKey": {
             "type": "string",
-            "description": "Polymorphic subject pointer \u2014 the model the enrolled record lives in (e.g. \"contacts\")."
+            "description": "Polymorphic subject pointer — the model the enrolled record lives in (e.g. \"contacts\")."
           },
           "subjectRecordId": {
             "type": "string",
-            "description": "Polymorphic subject pointer \u2014 the ID of the enrolled record (e.g. the contact id)."
+            "description": "Polymorphic subject pointer — the ID of the enrolled record (e.g. the contact id)."
           },
           "status": {
             "type": "string",
@@ -13477,11 +13477,11 @@
           },
           "subjectModelKey": {
             "type": "string",
-            "description": "Polymorphic subject pointer \u2014 the model the enrolled record lives in (e.g. \"contacts\")."
+            "description": "Polymorphic subject pointer — the model the enrolled record lives in (e.g. \"contacts\")."
           },
           "subjectRecordId": {
             "type": "string",
-            "description": "Polymorphic subject pointer \u2014 the ID of the enrolled record (e.g. the contact id)."
+            "description": "Polymorphic subject pointer — the ID of the enrolled record (e.g. the contact id)."
           },
           "status": {
             "type": "string",
@@ -13546,11 +13546,11 @@
           },
           "subjectModelKey": {
             "type": "string",
-            "description": "Polymorphic subject pointer \u2014 the model the enrolled record lives in (e.g. \"contacts\")."
+            "description": "Polymorphic subject pointer — the model the enrolled record lives in (e.g. \"contacts\")."
           },
           "subjectRecordId": {
             "type": "string",
-            "description": "Polymorphic subject pointer \u2014 the ID of the enrolled record (e.g. the contact id)."
+            "description": "Polymorphic subject pointer — the ID of the enrolled record (e.g. the contact id)."
           },
           "status": {
             "type": "string",
@@ -16308,15 +16308,9 @@
     }
   },
   "x-fcg-warnings": [
-    "Unresolved type 'NonEmptyArray' \u2192 emitted permissive schema {}",
-    "Unresolvable type 'NonNullable<CreateSocialPostInput['variants']>[number]' \u2192 emitted permissive schema {}",
-    "Unresolvable type 'CampaignSocialPerformance['totals']' \u2192 emitted permissive schema {}",
+    "Unresolved type 'NonEmptyArray' → emitted permissive schema {}",
+    "Unresolvable type 'NonNullable<CreateSocialPostInput['variants']>[number]' → emitted permissive schema {}",
+    "Unresolvable type 'CampaignSocialPerformance['totals']' → emitted permissive schema {}",
     "Unknown field type 'richText' on field 'content', emitting permissive schema {}"
-  ],
-  "servers": [
-    {
-      "url": "https://api.enterprisecrm.com",
-      "description": "Production API"
-    }
   ]
 }

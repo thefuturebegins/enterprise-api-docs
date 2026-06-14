@@ -506,7 +506,7 @@
         ],
         "x-scope": "clientServer",
         "x-permission": "ui:screens:read",
-        "description": "Batch: all screens (optionally workspace-scoped) with their components\npopulated in a single round trip. One screens query + one screenComponents\n$in query, regardless of how many screens are in the workspace. The SPA's\nprefetcher calls this on login instead of issuing N parallel getScreenById\nrequests.\n\nMust come before /ui/screens/:id to avoid route conflicts \u2014 declaration\norder matters here."
+        "description": "Batch: all screens (optionally workspace-scoped) with their components\npopulated in a single round trip. One screens query + one screenComponents\n$in query, regardless of how many screens are in the workspace. The SPA's\nprefetcher calls this on login instead of issuing N parallel getScreenById\nrequests.\n\nMust come before /ui/screens/:id to avoid route conflicts — declaration\norder matters here."
       }
     },
     "/api/ui/screens/{id}": {
@@ -855,7 +855,7 @@
         },
         "x-scope": "clientServer",
         "x-permission": "ui:screens:write",
-        "description": "Generate a Flyway migration script by diffing local DB against the local reference DB.\n\nOnly available in local environments \u2014 the reference DB (Enterprise_ref / <tenant>_ref)\nis populated by running 'npm run db:sync-ref' which dumps from DEV.\n\nReturns the filename and path written to db/migration/, plus validation result."
+        "description": "Generate a Flyway migration script by diffing local DB against the local reference DB.\n\nOnly available in local environments — the reference DB (Enterprise_ref / <tenant>_ref)\nis populated by running 'npm run db:sync-ref' which dumps from DEV.\n\nReturns the filename and path written to db/migration/, plus validation result."
       }
     },
     "/api/ui/user-screens": {
@@ -8995,7 +8995,7 @@
           "emoji": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Avatar/emoji shown on the thumbnail card \u2014 { type: \"image\", value: \"/avatars/1.jpeg\" }"
+            "description": "Avatar/emoji shown on the thumbnail card — { type: \"image\", value: \"/avatars/1.jpeg\" }"
           },
           "url": {
             "type": "string",
@@ -9055,7 +9055,7 @@
           "emoji": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Avatar/emoji shown on the thumbnail card \u2014 { type: \"image\", value: \"/avatars/1.jpeg\" }"
+            "description": "Avatar/emoji shown on the thumbnail card — { type: \"image\", value: \"/avatars/1.jpeg\" }"
           },
           "url": {
             "type": "string",
@@ -9115,7 +9115,7 @@
           "emoji": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Avatar/emoji shown on the thumbnail card \u2014 { type: \"image\", value: \"/avatars/1.jpeg\" }"
+            "description": "Avatar/emoji shown on the thumbnail card — { type: \"image\", value: \"/avatars/1.jpeg\" }"
           },
           "url": {
             "type": "string",
@@ -9176,7 +9176,7 @@
           "emoji": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Avatar/emoji shown on the thumbnail card \u2014 { type: \"image\", value: \"/avatars/1.jpeg\" }"
+            "description": "Avatar/emoji shown on the thumbnail card — { type: \"image\", value: \"/avatars/1.jpeg\" }"
           },
           "url": {
             "type": "string",
@@ -9405,7 +9405,7 @@
               "account",
               "campaign"
             ],
-            "description": "Category of the draft \u2014 matches the source model"
+            "description": "Category of the draft — matches the source model"
           },
           "modelKey": {
             "type": "string",
@@ -9413,7 +9413,7 @@
           },
           "referenceId": {
             "type": "string",
-            "description": "ID of the source record \u2014 null if not yet saved"
+            "description": "ID of the source record — null if not yet saved"
           },
           "navigateTo": {
             "type": "string",
@@ -9447,7 +9447,7 @@
               "account",
               "campaign"
             ],
-            "description": "Category of the draft \u2014 matches the source model"
+            "description": "Category of the draft — matches the source model"
           },
           "modelKey": {
             "type": "string",
@@ -9455,7 +9455,7 @@
           },
           "referenceId": {
             "type": "string",
-            "description": "ID of the source record \u2014 null if not yet saved"
+            "description": "ID of the source record — null if not yet saved"
           },
           "navigateTo": {
             "type": "string",
@@ -9489,7 +9489,7 @@
               "account",
               "campaign"
             ],
-            "description": "Category of the draft \u2014 matches the source model"
+            "description": "Category of the draft — matches the source model"
           },
           "modelKey": {
             "type": "string",
@@ -9497,7 +9497,7 @@
           },
           "referenceId": {
             "type": "string",
-            "description": "ID of the source record \u2014 null if not yet saved"
+            "description": "ID of the source record — null if not yet saved"
           },
           "navigateTo": {
             "type": "string",
@@ -9532,7 +9532,7 @@
               "account",
               "campaign"
             ],
-            "description": "Category of the draft \u2014 matches the source model"
+            "description": "Category of the draft — matches the source model"
           },
           "modelKey": {
             "type": "string",
@@ -9540,7 +9540,7 @@
           },
           "referenceId": {
             "type": "string",
-            "description": "ID of the source record \u2014 null if not yet saved"
+            "description": "ID of the source record — null if not yet saved"
           },
           "navigateTo": {
             "type": "string",
@@ -11119,11 +11119,5 @@
         "description": "Auto-generated updateInput for ScreenComponent"
       }
     }
-  },
-  "servers": [
-    {
-      "url": "https://api.enterprisecrm.com",
-      "description": "Production API"
-    }
-  ]
+  }
 }
