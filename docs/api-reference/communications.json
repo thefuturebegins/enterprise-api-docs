@@ -1723,7 +1723,7 @@
         },
         "x-scope": "clientServer",
         "x-permission": "communications:fileupload:write",
-        "description": "Upload a file and save a record to the files collection.\nAlways creates a new record — use upsertFile for Gmail sync where\nthe same attachment may be downloaded more than once."
+        "description": "Upload a file and save a record to the files collection.\nAlways creates a new record \u2014 use upsertFile for Gmail sync where\nthe same attachment may be downloaded more than once."
       }
     },
     "/api/communications/files/{fileId}": {
@@ -1824,7 +1824,7 @@
         "tags": [
           "Communications: Gmail Connection"
         ],
-        "summary": "Handle OAuth callback — stores tokens in syncVendors",
+        "summary": "Handle OAuth callback \u2014 stores tokens in syncVendors",
         "responses": {
           "204": {
             "description": "No content"
@@ -1838,7 +1838,7 @@
         },
         "x-scope": "clientServer",
         "x-permission": "communications:gmailconnection:read",
-        "description": "Handle OAuth callback — stores tokens in syncVendors"
+        "description": "Handle OAuth callback \u2014 stores tokens in syncVendors"
       }
     },
     "/api/communications/gmail/disconnect": {
@@ -1847,7 +1847,7 @@
         "tags": [
           "Communications: Gmail Connection"
         ],
-        "summary": "Disconnect Gmail — clears syncVendors record",
+        "summary": "Disconnect Gmail \u2014 clears syncVendors record",
         "responses": {
           "200": {
             "description": "Successful response",
@@ -1880,7 +1880,7 @@
         },
         "x-scope": "clientServer",
         "x-permission": "communications:gmailconnection:write",
-        "description": "Disconnect Gmail — clears syncVendors record"
+        "description": "Disconnect Gmail \u2014 clears syncVendors record"
       }
     },
     "/api/communications/gmail/connection-status": {
@@ -8773,5 +8773,11 @@
   },
   "x-warnings": [
     "Unknown field type 'richText' on field 'content', emitting permissive schema {}"
+  ],
+  "servers": [
+    {
+      "url": "https://api.enterprisecrm.com",
+      "description": "Production API"
+    }
   ]
 }

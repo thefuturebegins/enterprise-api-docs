@@ -9,5 +9,11 @@
   "paths": {},
   "components": {
     "schemas": {}
-  }
+  },
+  "servers": [
+    {
+      "url": "https://api.enterprisecrm.com",
+      "description": "Production API"
+    }
+  ]
 }

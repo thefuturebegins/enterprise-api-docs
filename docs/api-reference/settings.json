@@ -1117,5 +1117,11 @@
         "description": "Auto-generated updateInput for SettingScope"
       }
     }
-  }
+  },
+  "servers": [
+    {
+      "url": "https://api.enterprisecrm.com",
+      "description": "Production API"
+    }
+  ]
 }

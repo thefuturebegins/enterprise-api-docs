@@ -2896,7 +2896,7 @@
           },
           "icon": {
             "type": "string",
-            "description": "Icon used to represent this model in the UI — links to the icons collection"
+            "description": "Icon used to represent this model in the UI \u2014 links to the icons collection"
           },
           "fields": {
             "type": "array",
@@ -3002,7 +3002,7 @@
           },
           "icon": {
             "type": "string",
-            "description": "Icon used to represent this model in the UI — links to the icons collection"
+            "description": "Icon used to represent this model in the UI \u2014 links to the icons collection"
           },
           "fields": {
             "type": "array",
@@ -3108,7 +3108,7 @@
           },
           "icon": {
             "type": "string",
-            "description": "Icon used to represent this model in the UI — links to the icons collection"
+            "description": "Icon used to represent this model in the UI \u2014 links to the icons collection"
           },
           "fields": {
             "type": "array",
@@ -3215,7 +3215,7 @@
           },
           "icon": {
             "type": "string",
-            "description": "Icon used to represent this model in the UI — links to the icons collection"
+            "description": "Icon used to represent this model in the UI \u2014 links to the icons collection"
           },
           "fields": {
             "type": "array",
@@ -4131,7 +4131,7 @@
               "type": "object",
               "additionalProperties": true
             },
-            "description": "Tab definitions for details-type layouts. Each tab has sections → fields."
+            "description": "Tab definitions for details-type layouts. Each tab has sections \u2192 fields."
           },
           "fields": {
             "type": "array",
@@ -4192,7 +4192,7 @@
               "type": "object",
               "additionalProperties": true
             },
-            "description": "Tab definitions for details-type layouts. Each tab has sections → fields."
+            "description": "Tab definitions for details-type layouts. Each tab has sections \u2192 fields."
           },
           "fields": {
             "type": "array",
@@ -4253,7 +4253,7 @@
               "type": "object",
               "additionalProperties": true
             },
-            "description": "Tab definitions for details-type layouts. Each tab has sections → fields."
+            "description": "Tab definitions for details-type layouts. Each tab has sections \u2192 fields."
           },
           "fields": {
             "type": "array",
@@ -4315,7 +4315,7 @@
               "type": "object",
               "additionalProperties": true
             },
-            "description": "Tab definitions for details-type layouts. Each tab has sections → fields."
+            "description": "Tab definitions for details-type layouts. Each tab has sections \u2192 fields."
           },
           "fields": {
             "type": "array",
@@ -4890,17 +4890,23 @@
     }
   },
   "x-warnings": [
-    "Unresolved type 'DataHealthResponse' → emitted permissive schema {}",
-    "Unresolved type 'CrudModelDef' → emitted permissive schema {}",
-    "Unresolved type 'RouteInfoResponse' → emitted permissive schema {}",
-    "Unresolved type 'ReloadModelsResponse' → emitted permissive schema {}",
-    "Unresolved type 'AvatarGenerateResult' → emitted permissive schema {}",
-    "Unresolved type 'AvatarGenerateRequest' → emitted permissive schema {}",
-    "Unresolved type 'PreviewImageGenerateResult' → emitted permissive schema {}",
-    "Unresolved type 'PreviewImageGenerateRequest' → emitted permissive schema {}",
-    "Unresolved type 'PaginatedQueryResult' → emitted permissive schema {}",
-    "Unresolved type 'PaginatedQueryRequest' → emitted permissive schema {}",
+    "Unresolved type 'DataHealthResponse' \u2192 emitted permissive schema {}",
+    "Unresolved type 'CrudModelDef' \u2192 emitted permissive schema {}",
+    "Unresolved type 'RouteInfoResponse' \u2192 emitted permissive schema {}",
+    "Unresolved type 'ReloadModelsResponse' \u2192 emitted permissive schema {}",
+    "Unresolved type 'AvatarGenerateResult' \u2192 emitted permissive schema {}",
+    "Unresolved type 'AvatarGenerateRequest' \u2192 emitted permissive schema {}",
+    "Unresolved type 'PreviewImageGenerateResult' \u2192 emitted permissive schema {}",
+    "Unresolved type 'PreviewImageGenerateRequest' \u2192 emitted permissive schema {}",
+    "Unresolved type 'PaginatedQueryResult' \u2192 emitted permissive schema {}",
+    "Unresolved type 'PaginatedQueryRequest' \u2192 emitted permissive schema {}",
     "Duplicate operation for GET /api/data/models (data.data.getAvailableModels vs data.models.query); keeping the latter",
     "Unknown field type 'textarea' on field 'description', emitting permissive schema {}"
+  ],
+  "servers": [
+    {
+      "url": "https://api.enterprisecrm.com",
+      "description": "Production API"
+    }
   ]
 }

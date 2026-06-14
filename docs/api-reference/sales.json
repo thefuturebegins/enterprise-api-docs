@@ -585,7 +585,7 @@
         ],
         "x-scope": "clientServer",
         "x-permission": "sales:workspacemanagement:read",
-        "description": "Get workspaces accessible to a user based on their role assignments\nFlow: user → userRoleSelections → roleWorkspaceSelections → workspaces"
+        "description": "Get workspaces accessible to a user based on their role assignments\nFlow: user \u2192 userRoleSelections \u2192 roleWorkspaceSelections \u2192 workspaces"
       }
     },
     "/api/sales/workspaces/user/{userId}/active": {
@@ -640,7 +640,7 @@
         ],
         "x-scope": "clientServer",
         "x-permission": "sales:workspacemanagement:read",
-        "description": "Get user's active workspace\nLogic: lastActiveWorkspaceId → role default workspace → null"
+        "description": "Get user's active workspace\nLogic: lastActiveWorkspaceId \u2192 role default workspace \u2192 null"
       },
       "put": {
         "operationId": "sales.workspacemanagement.updateUserActiveWorkspace",
@@ -16876,7 +16876,7 @@
           },
           "emailSource": {
             "type": "string",
-            "description": "Provenance of the contact's email address — drives the listing/filter affordance that warns reps when an address was synthesized rather than scraped."
+            "description": "Provenance of the contact's email address \u2014 drives the listing/filter affordance that warns reps when an address was synthesized rather than scraped."
           },
           "source": {
             "type": "string",
@@ -17034,7 +17034,7 @@
           },
           "emailSource": {
             "type": "string",
-            "description": "Provenance of the contact's email address — drives the listing/filter affordance that warns reps when an address was synthesized rather than scraped."
+            "description": "Provenance of the contact's email address \u2014 drives the listing/filter affordance that warns reps when an address was synthesized rather than scraped."
           },
           "source": {
             "type": "string",
@@ -17192,7 +17192,7 @@
           },
           "emailSource": {
             "type": "string",
-            "description": "Provenance of the contact's email address — drives the listing/filter affordance that warns reps when an address was synthesized rather than scraped."
+            "description": "Provenance of the contact's email address \u2014 drives the listing/filter affordance that warns reps when an address was synthesized rather than scraped."
           },
           "source": {
             "type": "string",
@@ -17351,7 +17351,7 @@
           },
           "emailSource": {
             "type": "string",
-            "description": "Provenance of the contact's email address — drives the listing/filter affordance that warns reps when an address was synthesized rather than scraped."
+            "description": "Provenance of the contact's email address \u2014 drives the listing/filter affordance that warns reps when an address was synthesized rather than scraped."
           },
           "source": {
             "type": "string",
@@ -20303,12 +20303,12 @@
           },
           "currencySymbol": {
             "type": "string",
-            "description": "Currency symbol to display (e.g. $, €)"
+            "description": "Currency symbol to display (e.g. $, \u20ac)"
           },
           "lineItems": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Array of product references: [{ productId }] — price and quantity resolved from the products catalog"
+            "description": "Array of product references: [{ productId }] \u2014 price and quantity resolved from the products catalog"
           },
           "subtotal": {
             "type": "number",
@@ -20411,12 +20411,12 @@
           },
           "currencySymbol": {
             "type": "string",
-            "description": "Currency symbol to display (e.g. $, €)"
+            "description": "Currency symbol to display (e.g. $, \u20ac)"
           },
           "lineItems": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Array of product references: [{ productId }] — price and quantity resolved from the products catalog"
+            "description": "Array of product references: [{ productId }] \u2014 price and quantity resolved from the products catalog"
           },
           "subtotal": {
             "type": "number",
@@ -20519,12 +20519,12 @@
           },
           "currencySymbol": {
             "type": "string",
-            "description": "Currency symbol to display (e.g. $, €)"
+            "description": "Currency symbol to display (e.g. $, \u20ac)"
           },
           "lineItems": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Array of product references: [{ productId }] — price and quantity resolved from the products catalog"
+            "description": "Array of product references: [{ productId }] \u2014 price and quantity resolved from the products catalog"
           },
           "subtotal": {
             "type": "number",
@@ -20628,12 +20628,12 @@
           },
           "currencySymbol": {
             "type": "string",
-            "description": "Currency symbol to display (e.g. $, €)"
+            "description": "Currency symbol to display (e.g. $, \u20ac)"
           },
           "lineItems": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Array of product references: [{ productId }] — price and quantity resolved from the products catalog"
+            "description": "Array of product references: [{ productId }] \u2014 price and quantity resolved from the products catalog"
           },
           "subtotal": {
             "type": "number",
@@ -22737,5 +22737,11 @@
     "Unknown field type 'fileUpload' on field 'file', emitting permissive schema {}",
     "Unknown field type 'address' on field 'billToFullAddress', emitting permissive schema {}",
     "Unknown field type 'address' on field 'shipToFullAddress', emitting permissive schema {}"
+  ],
+  "servers": [
+    {
+      "url": "https://api.enterprisecrm.com",
+      "description": "Production API"
+    }
   ]
 }
