@@ -3,7 +3,7 @@
   "scalar": "2.0.0",
   "info": {
     "title": "Future Begins — Enterprise API",
-    "description": "Interactive API reference for the Future Begins Enterprise platform. 1,236 operations across 15 modules, including full CRUD for 192 data models."
+    "description": "Interactive API reference for the Future Begins Enterprise platform. 1,236 operations across 20 modules."
   },
   "siteConfig": {
     "theme": "default"
@@ -20,14 +20,14 @@
         "type": "link",
         "title": "GitHub",
         "icon": "phosphor/regular/github-logo",
-        "to": "https://github.com/future-begins/enterprise-api-docs",
+        "to": "https://github.com/thefuturebegins/enterprise-api-docs",
         "newTab": true
       }
     ],
     "sidebar": [
       {
         "title": "GitHub",
-        "url": "https://github.com/future-begins/enterprise-api-docs",
+        "url": "https://github.com/thefuturebegins/enterprise-api-docs",
         "icon": "phosphor/regular/github-logo"
       }
     ],
@@ -177,6 +177,41 @@
             "title": "Workflow",
             "filepath": "docs/api-reference/workflow.json",
             "icon": "phosphor/regular/git-branch",
+            "mode": "nested"
+          },
+          "/customerSuccess": {
+            "type": "openapi",
+            "title": "Customer Success",
+            "filepath": "docs/api-reference/customerSuccess.json",
+            "icon": "phosphor/regular/star",
+            "mode": "nested"
+          },
+          "/forms": {
+            "type": "openapi",
+            "title": "Forms",
+            "filepath": "docs/api-reference/forms.json",
+            "icon": "phosphor/regular/clipboard-text",
+            "mode": "nested"
+          },
+          "/inventory": {
+            "type": "openapi",
+            "title": "Inventory",
+            "filepath": "docs/api-reference/inventory.json",
+            "icon": "phosphor/regular/package",
+            "mode": "nested"
+          },
+          "/settings": {
+            "type": "openapi",
+            "title": "Settings",
+            "filepath": "docs/api-reference/settings.json",
+            "icon": "phosphor/regular/sliders",
+            "mode": "nested"
+          },
+          "/support": {
+            "type": "openapi",
+            "title": "Support",
+            "filepath": "docs/api-reference/support.json",
+            "icon": "phosphor/regular/lifebuoy",
             "mode": "nested"
           }
         }

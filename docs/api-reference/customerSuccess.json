@@ -1,7 +1,7 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Notifications API",
+    "title": "Customersuccess API",
     "version": "0.0.0",
     "description": "Aggregate OpenAPI 3.1 document for all enterprise modules, generated from FCG InterfaceSpecs."
   },
@@ -13,21 +13,24 @@
   ],
   "tags": [
     {
-      "name": "notifications.notifications"
+      "name": "customerSuccess.renewalFiles"
     },
     {
-      "name": "notifications.notificationscheduling"
+      "name": "customerSuccess.renewalNotes"
     },
     {
-      "name": "notifications.sendnotification"
+      "name": "customerSuccess.renewalTasks"
+    },
+    {
+      "name": "customerSuccess.renewals"
     }
   ],
   "paths": {
-    "/api/notifications/notifications": {
+    "/api/customerSuccess/renewals": {
       "get": {
-        "operationId": "notifications.notifications.query",
+        "operationId": "customerSuccess.renewals.query",
         "tags": [
-          "notifications.notifications"
+          "customerSuccess.renewals"
         ],
         "summary": "Query",
         "responses": {
@@ -38,7 +41,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/data.Notification"
+                    "$ref": "#/components/schemas/data.Renewal"
                   }
                 }
               }
@@ -57,17 +60,17 @@
             "in": "query",
             "required": false,
             "schema": {
-              "$ref": "#/components/schemas/data.NotificationFilter"
+              "$ref": "#/components/schemas/data.RenewalFilter"
             }
           }
         ],
         "x-scope": "clientServer",
-        "x-permission": "notifications:notifications:read"
+        "x-permission": "customerSuccess:renewals:read"
       },
       "post": {
-        "operationId": "notifications.notifications.create",
+        "operationId": "customerSuccess.renewals.create",
         "tags": [
-          "notifications.notifications"
+          "customerSuccess.renewals"
         ],
         "summary": "Create",
         "responses": {
@@ -76,7 +79,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.Notification"
+                  "$ref": "#/components/schemas/data.Renewal"
                 }
               }
             }
@@ -93,20 +96,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.CreateNotificationInput"
+                "$ref": "#/components/schemas/data.CreateRenewalInput"
               }
             }
           }
         },
         "x-scope": "clientServer",
-        "x-permission": "notifications:notifications:write"
+        "x-permission": "customerSuccess:renewals:write"
       }
     },
-    "/api/notifications/notifications/{id}": {
+    "/api/customerSuccess/renewals/{id}": {
       "get": {
-        "operationId": "notifications.notifications.getById",
+        "operationId": "customerSuccess.renewals.getById",
         "tags": [
-          "notifications.notifications"
+          "customerSuccess.renewals"
         ],
         "summary": "Get By Id",
         "responses": {
@@ -115,7 +118,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.Notification"
+                  "$ref": "#/components/schemas/data.Renewal"
                 }
               }
             }
@@ -138,12 +141,12 @@
           }
         ],
         "x-scope": "clientServer",
-        "x-permission": "notifications:notifications:read"
+        "x-permission": "customerSuccess:renewals:read"
       },
       "put": {
-        "operationId": "notifications.notifications.update",
+        "operationId": "customerSuccess.renewals.update",
         "tags": [
-          "notifications.notifications"
+          "customerSuccess.renewals"
         ],
         "summary": "Update",
         "responses": {
@@ -152,7 +155,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/data.Notification"
+                  "$ref": "#/components/schemas/data.Renewal"
                 }
               }
             }
@@ -179,18 +182,18 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/data.UpdateNotificationInput"
+                "$ref": "#/components/schemas/data.UpdateRenewalInput"
               }
             }
           }
         },
         "x-scope": "clientServer",
-        "x-permission": "notifications:notifications:write"
+        "x-permission": "customerSuccess:renewals:write"
       },
       "delete": {
-        "operationId": "notifications.notifications.delete",
+        "operationId": "customerSuccess.renewals.delete",
         "tags": [
-          "notifications.notifications"
+          "customerSuccess.renewals"
         ],
         "summary": "Delete",
         "responses": {
@@ -215,118 +218,16 @@
           }
         ],
         "x-scope": "clientServer",
-        "x-permission": "notifications:notifications:delete"
+        "x-permission": "customerSuccess:renewals:delete"
       }
     },
-    "/api/notifications/send": {
-      "post": {
-        "operationId": "notifications.sendnotification.sendNotification",
+    "/api/customerSuccess/renewalNotes": {
+      "get": {
+        "operationId": "customerSuccess.renewalNotes.query",
         "tags": [
-          "notifications.sendnotification"
+          "customerSuccess.renewalNotes"
         ],
-        "summary": "Send notification to user with channel routing",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "accountId",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/notifications.Notification"
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "notifications:sendnotification:write",
-        "description": "Send notification to user with channel routing"
-      }
-    },
-    "/api/notifications/send-bulk": {
-      "post": {
-        "operationId": "notifications.sendnotification.sendBulkNotifications",
-        "tags": [
-          "notifications.sendnotification"
-        ],
-        "summary": "Send multiple notifications in batch",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {}
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "accountId",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/notifications.Notification"
-                }
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "notifications:sendnotification:write",
-        "description": "Send multiple notifications in batch"
-      }
-    },
-    "/api/notifications/resolve-recipients": {
-      "post": {
-        "operationId": "notifications.sendnotification.determineRecipients",
-        "tags": [
-          "notifications.sendnotification"
-        ],
-        "summary": "Resolve recipients from criteria (role, group, filter)",
+        "summary": "Query",
         "responses": {
           "200": {
             "description": "Successful response",
@@ -335,7 +236,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "type": "string"
+                    "$ref": "#/components/schemas/data.RenewalNote"
                   }
                 }
               }
@@ -350,118 +251,30 @@
         },
         "parameters": [
           {
-            "name": "accountId",
+            "name": "filter",
             "in": "query",
-            "required": true,
+            "required": false,
             "schema": {
-              "type": "string"
+              "$ref": "#/components/schemas/data.RenewalNoteFilter"
             }
           }
         ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/notifications.RecipientCriteria"
-              }
-            }
-          }
-        },
         "x-scope": "clientServer",
-        "x-permission": "notifications:sendnotification:write",
-        "description": "Resolve recipients from criteria (role, group, filter)"
-      }
-    },
-    "/api/notifications/track-delivery": {
+        "x-permission": "customerSuccess:renewalNotes:read"
+      },
       "post": {
-        "operationId": "notifications.sendnotification.trackDeliveryStatus",
+        "operationId": "customerSuccess.renewalNotes.create",
         "tags": [
-          "notifications.sendnotification"
+          "customerSuccess.renewalNotes"
         ],
-        "summary": "Update delivery status for specific channel",
-        "responses": {
-          "204": {
-            "description": "No content"
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "channel",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/notifications.NotificationChannel"
-            }
-          },
-          {
-            "name": "status",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/notifications.NotificationDeliveryStatus"
-            }
-          },
-          {
-            "name": "accountId",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "errorMessage",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "notificationId": {
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "notificationId"
-                ]
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "notifications:sendnotification:write",
-        "description": "Update delivery status for specific channel"
-      }
-    },
-    "/api/notifications/retry/{notificationId}": {
-      "post": {
-        "operationId": "notifications.sendnotification.retryFailedNotification",
-        "tags": [
-          "notifications.sendnotification"
-        ],
-        "summary": "Retry failed notification delivery",
+        "summary": "Create",
         "responses": {
           "200": {
             "description": "Successful response",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "boolean"
+                  "$ref": "#/components/schemas/data.RenewalNote"
                 }
               }
             }
@@ -473,235 +286,34 @@
             "description": "Internal server error"
           }
         },
-        "parameters": [
-          {
-            "name": "notificationId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "accountId",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
         "requestBody": {
           "required": true,
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/notifications.NotificationChannel"
+                "$ref": "#/components/schemas/data.CreateRenewalNoteInput"
               }
             }
           }
         },
         "x-scope": "clientServer",
-        "x-permission": "notifications:sendnotification:write",
-        "description": "Retry failed notification delivery"
+        "x-permission": "customerSuccess:renewalNotes:write"
       }
     },
-    "/api/notifications/{notificationId}/dismiss": {
-      "put": {
-        "operationId": "notifications.sendnotification.dismissNotification",
-        "tags": [
-          "notifications.sendnotification"
-        ],
-        "summary": "Mark notification as dismissed",
-        "responses": {
-          "204": {
-            "description": "No content"
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "notificationId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "accountId",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "userId": {
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "userId"
-                ]
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "notifications:sendnotification:write",
-        "description": "Mark notification as dismissed"
-      }
-    },
-    "/api/notifications/{notificationId}/mark-read": {
-      "put": {
-        "operationId": "notifications.sendnotification.markAsRead",
-        "tags": [
-          "notifications.sendnotification"
-        ],
-        "summary": "Mark notification as read with timestamp",
-        "responses": {
-          "204": {
-            "description": "No content"
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "notificationId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "accountId",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "userId": {
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "userId"
-                ]
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "notifications:sendnotification:write",
-        "description": "Mark notification as read with timestamp"
-      }
-    },
-    "/api/notifications/{notificationId}/action": {
-      "post": {
-        "operationId": "notifications.sendnotification.executeNotificationAction",
-        "tags": [
-          "notifications.sendnotification"
-        ],
-        "summary": "Handle action button clicks",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "notificationId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "accountId",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "action": {
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "action"
-                ]
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "notifications:sendnotification:write",
-        "description": "Handle action button clicks"
-      }
-    },
-    "/api/notifications/unread-count": {
+    "/api/customerSuccess/renewalNotes/{id}": {
       "get": {
-        "operationId": "notifications.sendnotification.getUnreadCount",
+        "operationId": "customerSuccess.renewalNotes.getById",
         "tags": [
-          "notifications.sendnotification"
+          "customerSuccess.renewalNotes"
         ],
-        "summary": "Get count of unread notifications for user",
+        "summary": "Get By Id",
         "responses": {
           "200": {
             "description": "Successful response",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "number"
+                  "$ref": "#/components/schemas/data.RenewalNote"
                 }
               }
             }
@@ -715,529 +327,30 @@
         },
         "parameters": [
           {
-            "name": "userId",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "filters",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "additionalProperties": true
-            }
-          },
-          {
-            "name": "accountId",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "notifications:sendnotification:read",
-        "description": "Get count of unread notifications for user"
-      }
-    },
-    "/api/notifications/cleanup-expired": {
-      "post": {
-        "operationId": "notifications.sendnotification.cleanupExpiredNotifications",
-        "tags": [
-          "notifications.sendnotification"
-        ],
-        "summary": "Remove expired notifications based on expiry date",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "number"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "accountId": {
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "accountId"
-                ]
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "notifications:sendnotification:write",
-        "description": "Remove expired notifications based on expiry date"
-      }
-    },
-    "/api/notifications/generate-from-template": {
-      "post": {
-        "operationId": "notifications.sendnotification.generateNotificationFromTemplate",
-        "tags": [
-          "notifications.sendnotification"
-        ],
-        "summary": "Create notification from template with variable substitution",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/notifications.Notification"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "variables",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "additionalProperties": true
-            }
-          },
-          {
-            "name": "accountId",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "templateId": {
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "templateId"
-                ]
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "notifications:sendnotification:write",
-        "description": "Create notification from template with variable substitution"
-      }
-    },
-    "/api/notifications/schedule": {
-      "post": {
-        "operationId": "notifications.notificationscheduling.scheduleNotification",
-        "tags": [
-          "notifications.notificationscheduling"
-        ],
-        "summary": "Schedule notification for specific time",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/notifications.ScheduledNotification"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "deliveryTime",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "format": "date-time"
-            }
-          },
-          {
-            "name": "options",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/notifications.ScheduledNotification"
-            }
-          },
-          {
-            "name": "accountId",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/notifications.Notification"
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "notifications:notificationscheduling:write",
-        "description": "Schedule notification for specific time"
-      }
-    },
-    "/api/notifications/schedule-recurring": {
-      "post": {
-        "operationId": "notifications.notificationscheduling.scheduleRecurringNotification",
-        "tags": [
-          "notifications.notificationscheduling"
-        ],
-        "summary": "Set up recurring notification schedule",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/notifications.ScheduledNotification"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "schedule",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "additionalProperties": true
-            }
-          },
-          {
-            "name": "endDate",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": [
-                "string",
-                "null"
-              ],
-              "format": "date-time"
-            }
-          },
-          {
-            "name": "accountId",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/notifications.Notification"
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "notifications:notificationscheduling:write",
-        "description": "Set up recurring notification schedule"
-      }
-    },
-    "/api/notifications/optimize-delivery-time": {
-      "post": {
-        "operationId": "notifications.notificationscheduling.optimizeDeliveryTime",
-        "tags": [
-          "notifications.notificationscheduling"
-        ],
-        "summary": "Determine optimal delivery time based on user engagement",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string",
-                  "format": "date-time"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "notificationType",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "accountId",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "userId": {
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "userId"
-                ]
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "notifications:notificationscheduling:write",
-        "description": "Determine optimal delivery time based on user engagement"
-      }
-    },
-    "/api/notifications/scheduled/batch": {
-      "get": {
-        "operationId": "notifications.notificationscheduling.batchScheduledNotifications",
-        "tags": [
-          "notifications.notificationscheduling"
-        ],
-        "summary": "Group scheduled notifications for efficient processing",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/notifications.ScheduledNotification"
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "dateRange",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "additionalProperties": true
-            }
-          },
-          {
-            "name": "accountId",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "x-scope": "clientServer",
-        "x-permission": "notifications:notificationscheduling:read",
-        "description": "Group scheduled notifications for efficient processing"
-      }
-    },
-    "/api/notifications/convert-timezone": {
-      "post": {
-        "operationId": "notifications.notificationscheduling.convertToUserTimezone",
-        "tags": [
-          "notifications.notificationscheduling"
-        ],
-        "summary": "Convert scheduled time to user's timezone",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string",
-                  "format": "date-time"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "userId",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "accountId",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "deliveryTime": {
-                    "type": "string",
-                    "format": "date-time"
-                  }
-                },
-                "required": [
-                  "deliveryTime"
-                ]
-              }
-            }
-          }
-        },
-        "x-scope": "clientServer",
-        "x-permission": "notifications:notificationscheduling:write",
-        "description": "Convert scheduled time to user's timezone"
-      }
-    },
-    "/api/notifications/scheduled/{scheduledNotificationId}": {
-      "delete": {
-        "operationId": "notifications.notificationscheduling.cancelScheduledNotification",
-        "tags": [
-          "notifications.notificationscheduling"
-        ],
-        "summary": "Cancel scheduled notification before delivery",
-        "responses": {
-          "204": {
-            "description": "No content"
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        },
-        "parameters": [
-          {
-            "name": "scheduledNotificationId",
+            "name": "id",
             "in": "path",
             "required": true,
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "name": "accountId",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
           }
         ],
         "x-scope": "clientServer",
-        "x-permission": "notifications:notificationscheduling:delete",
-        "description": "Cancel scheduled notification before delivery"
+        "x-permission": "customerSuccess:renewalNotes:read"
       },
       "put": {
-        "operationId": "notifications.notificationscheduling.updateScheduledNotification",
+        "operationId": "customerSuccess.renewalNotes.update",
         "tags": [
-          "notifications.notificationscheduling"
+          "customerSuccess.renewalNotes"
         ],
-        "summary": "Modify scheduled notification",
+        "summary": "Update",
         "responses": {
           "200": {
             "description": "Successful response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/notifications.ScheduledNotification"
+                  "$ref": "#/components/schemas/data.RenewalNote"
                 }
               }
             }
@@ -1251,16 +364,8 @@
         },
         "parameters": [
           {
-            "name": "scheduledNotificationId",
+            "name": "id",
             "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "accountId",
-            "in": "query",
             "required": true,
             "schema": {
               "type": "string"
@@ -1272,23 +377,52 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/notifications.ScheduledNotification"
+                "$ref": "#/components/schemas/data.UpdateRenewalNoteInput"
               }
             }
           }
         },
         "x-scope": "clientServer",
-        "x-permission": "notifications:notificationscheduling:write",
-        "description": "Modify scheduled notification"
+        "x-permission": "customerSuccess:renewalNotes:write"
+      },
+      "delete": {
+        "operationId": "customerSuccess.renewalNotes.delete",
+        "tags": [
+          "customerSuccess.renewalNotes"
+        ],
+        "summary": "Delete",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "customerSuccess:renewalNotes:delete"
       }
     },
-    "/api/notifications/scheduled/user/{userId}": {
+    "/api/customerSuccess/renewalFiles": {
       "get": {
-        "operationId": "notifications.notificationscheduling.getScheduledNotifications",
+        "operationId": "customerSuccess.renewalFiles.query",
         "tags": [
-          "notifications.notificationscheduling"
+          "customerSuccess.renewalFiles"
         ],
-        "summary": "Get user's scheduled notifications",
+        "summary": "Query",
         "responses": {
           "200": {
             "description": "Successful response",
@@ -1297,7 +431,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/notifications.ScheduledNotification"
+                    "$ref": "#/components/schemas/data.RenewalFile"
                   }
                 }
               }
@@ -1312,50 +446,69 @@
         },
         "parameters": [
           {
-            "name": "userId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "dateRange",
+            "name": "filter",
             "in": "query",
-            "required": true,
+            "required": false,
             "schema": {
-              "type": "object",
-              "additionalProperties": true
-            }
-          },
-          {
-            "name": "accountId",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
+              "$ref": "#/components/schemas/data.RenewalFileFilter"
             }
           }
         ],
         "x-scope": "clientServer",
-        "x-permission": "notifications:notificationscheduling:read",
-        "description": "Get user's scheduled notifications"
-      }
-    },
-    "/api/notifications/scheduled/process": {
+        "x-permission": "customerSuccess:renewalFiles:read"
+      },
       "post": {
-        "operationId": "notifications.notificationscheduling.processScheduledNotifications",
+        "operationId": "customerSuccess.renewalFiles.create",
         "tags": [
-          "notifications.notificationscheduling"
+          "customerSuccess.renewalFiles"
         ],
-        "summary": "Process and send due notifications",
+        "summary": "Create",
         "responses": {
           "200": {
             "description": "Successful response",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "number"
+                  "$ref": "#/components/schemas/data.RenewalFile"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/data.CreateRenewalFileInput"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "customerSuccess:renewalFiles:write"
+      }
+    },
+    "/api/customerSuccess/renewalFiles/{id}": {
+      "get": {
+        "operationId": "customerSuccess.renewalFiles.getById",
+        "tags": [
+          "customerSuccess.renewalFiles"
+        ],
+        "summary": "Get By Id",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/data.RenewalFile"
                 }
               }
             }
@@ -1369,8 +522,45 @@
         },
         "parameters": [
           {
-            "name": "accountId",
-            "in": "query",
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "customerSuccess:renewalFiles:read"
+      },
+      "put": {
+        "operationId": "customerSuccess.renewalFiles.update",
+        "tags": [
+          "customerSuccess.renewalFiles"
+        ],
+        "summary": "Update",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/data.RenewalFile"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
             "required": true,
             "schema": {
               "type": "string"
@@ -1382,38 +572,63 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object",
-                "properties": {
-                  "currentTime": {
-                    "type": "string",
-                    "format": "date-time"
-                  }
-                },
-                "required": [
-                  "currentTime"
-                ]
+                "$ref": "#/components/schemas/data.UpdateRenewalFileInput"
               }
             }
           }
         },
         "x-scope": "clientServer",
-        "x-permission": "notifications:notificationscheduling:write",
-        "description": "Process and send due notifications"
+        "x-permission": "customerSuccess:renewalFiles:write"
+      },
+      "delete": {
+        "operationId": "customerSuccess.renewalFiles.delete",
+        "tags": [
+          "customerSuccess.renewalFiles"
+        ],
+        "summary": "Delete",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "customerSuccess:renewalFiles:delete"
       }
     },
-    "/api/notifications/scheduled/{scheduledNotificationId}/preview": {
+    "/api/customerSuccess/renewalTasks": {
       "get": {
-        "operationId": "notifications.notificationscheduling.previewScheduledNotification",
+        "operationId": "customerSuccess.renewalTasks.query",
         "tags": [
-          "notifications.notificationscheduling"
+          "customerSuccess.renewalTasks"
         ],
-        "summary": "Generate preview of scheduled notification",
+        "summary": "Query",
         "responses": {
           "200": {
             "description": "Successful response",
             "content": {
               "application/json": {
-                "schema": {}
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/data.RenewalTask"
+                  }
+                }
               }
             }
           },
@@ -1426,16 +641,84 @@
         },
         "parameters": [
           {
-            "name": "scheduledNotificationId",
-            "in": "path",
-            "required": true,
+            "name": "filter",
+            "in": "query",
+            "required": false,
             "schema": {
-              "type": "string"
+              "$ref": "#/components/schemas/data.RenewalTaskFilter"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "customerSuccess:renewalTasks:read"
+      },
+      "post": {
+        "operationId": "customerSuccess.renewalTasks.create",
+        "tags": [
+          "customerSuccess.renewalTasks"
+        ],
+        "summary": "Create",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/data.RenewalTask"
+                }
+              }
             }
           },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/data.CreateRenewalTaskInput"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "customerSuccess:renewalTasks:write"
+      }
+    },
+    "/api/customerSuccess/renewalTasks/{id}": {
+      "get": {
+        "operationId": "customerSuccess.renewalTasks.getById",
+        "tags": [
+          "customerSuccess.renewalTasks"
+        ],
+        "summary": "Get By Id",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/data.RenewalTask"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
           {
-            "name": "accountId",
-            "in": "query",
+            "name": "id",
+            "in": "path",
             "required": true,
             "schema": {
               "type": "string"
@@ -1443,8 +726,84 @@
           }
         ],
         "x-scope": "clientServer",
-        "x-permission": "notifications:notificationscheduling:read",
-        "description": "Generate preview of scheduled notification"
+        "x-permission": "customerSuccess:renewalTasks:read"
+      },
+      "put": {
+        "operationId": "customerSuccess.renewalTasks.update",
+        "tags": [
+          "customerSuccess.renewalTasks"
+        ],
+        "summary": "Update",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/data.RenewalTask"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/data.UpdateRenewalTaskInput"
+              }
+            }
+          }
+        },
+        "x-scope": "clientServer",
+        "x-permission": "customerSuccess:renewalTasks:write"
+      },
+      "delete": {
+        "operationId": "customerSuccess.renewalTasks.delete",
+        "tags": [
+          "customerSuccess.renewalTasks"
+        ],
+        "summary": "Delete",
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-scope": "clientServer",
+        "x-permission": "customerSuccess:renewalTasks:delete"
       }
     }
   },
