@@ -932,5 +932,11 @@
         "description": "Auto-generated updateInput for InventoryLocation"
       }
     }
-  }
+  },
+  "servers": [
+    {
+      "url": "https://api.enterprisecrm.com",
+      "description": "Production API"
+    }
+  ]
 }

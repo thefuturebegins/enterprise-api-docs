@@ -1810,9 +1810,15 @@
     }
   },
   "x-fcg-warnings": [
-    "Unresolved type 'NotificationChannel' → emitted permissive schema {}",
-    "Unresolved type 'NotificationDeliveryStatus' → emitted permissive schema {}",
-    "Unresolved type 'ScheduledNotificationStatus' → emitted permissive schema {}",
-    "Unresolved type 'ScheduleFrequency' → emitted permissive schema {}"
+    "Unresolved type 'NotificationChannel' \u2192 emitted permissive schema {}",
+    "Unresolved type 'NotificationDeliveryStatus' \u2192 emitted permissive schema {}",
+    "Unresolved type 'ScheduledNotificationStatus' \u2192 emitted permissive schema {}",
+    "Unresolved type 'ScheduleFrequency' \u2192 emitted permissive schema {}"
+  ],
+  "servers": [
+    {
+      "url": "https://api.enterprisecrm.com",
+      "description": "Production API"
+    }
   ]
 }

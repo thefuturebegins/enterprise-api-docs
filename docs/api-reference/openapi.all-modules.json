@@ -7,8 +7,8 @@
   },
   "servers": [
     {
-      "url": "/",
-      "description": "Current host"
+      "url": "https://api.enterprisecrm.com",
+      "description": "Production API"
     }
   ],
   "tags": [
@@ -6168,7 +6168,7 @@
         },
         "x-scope": "clientServer",
         "x-permission": "communications:fileupload:write",
-        "description": "Upload a file and save a record to the files collection.\nAlways creates a new record — use upsertFile for Gmail sync where\nthe same attachment may be downloaded more than once."
+        "description": "Upload a file and save a record to the files collection.\nAlways creates a new record \u2014 use upsertFile for Gmail sync where\nthe same attachment may be downloaded more than once."
       }
     },
     "/api/communications/files/{fileId}": {
@@ -6269,7 +6269,7 @@
         "tags": [
           "Communications: Gmail Connection"
         ],
-        "summary": "Handle OAuth callback — stores tokens in syncVendors",
+        "summary": "Handle OAuth callback \u2014 stores tokens in syncVendors",
         "responses": {
           "204": {
             "description": "No content"
@@ -6283,7 +6283,7 @@
         },
         "x-scope": "clientServer",
         "x-permission": "communications:gmailconnection:read",
-        "description": "Handle OAuth callback — stores tokens in syncVendors"
+        "description": "Handle OAuth callback \u2014 stores tokens in syncVendors"
       }
     },
     "/api/communications/gmail/disconnect": {
@@ -6292,7 +6292,7 @@
         "tags": [
           "Communications: Gmail Connection"
         ],
-        "summary": "Disconnect Gmail — clears syncVendors record",
+        "summary": "Disconnect Gmail \u2014 clears syncVendors record",
         "responses": {
           "200": {
             "description": "Successful response",
@@ -6325,7 +6325,7 @@
         },
         "x-scope": "clientServer",
         "x-permission": "communications:gmailconnection:write",
-        "description": "Disconnect Gmail — clears syncVendors record"
+        "description": "Disconnect Gmail \u2014 clears syncVendors record"
       }
     },
     "/api/communications/gmail/connection-status": {
@@ -17078,7 +17078,7 @@
         ],
         "x-scope": "clientServer",
         "x-permission": "permissions:authorization:read",
-        "description": "Check if user has a specific permission\n\nCustom logic: Resolves user → roles → permissions chain"
+        "description": "Check if user has a specific permission\n\nCustom logic: Resolves user \u2192 roles \u2192 permissions chain"
       }
     },
     "/api/permissions/user/{userId}": {
@@ -18578,7 +18578,7 @@
         ],
         "x-scope": "clientServer",
         "x-permission": "ui:screens:read",
-        "description": "Batch: all screens (optionally workspace-scoped) with their components\npopulated in a single round trip. One screens query + one screenComponents\n$in query, regardless of how many screens are in the workspace. The SPA's\nprefetcher calls this on login instead of issuing N parallel getScreenById\nrequests.\n\nMust come before /ui/screens/:id to avoid route conflicts — declaration\norder matters here."
+        "description": "Batch: all screens (optionally workspace-scoped) with their components\npopulated in a single round trip. One screens query + one screenComponents\n$in query, regardless of how many screens are in the workspace. The SPA's\nprefetcher calls this on login instead of issuing N parallel getScreenById\nrequests.\n\nMust come before /ui/screens/:id to avoid route conflicts \u2014 declaration\norder matters here."
       }
     },
     "/api/ui/screens/{id}": {
@@ -18927,7 +18927,7 @@
         },
         "x-scope": "clientServer",
         "x-permission": "ui:screens:write",
-        "description": "Generate a Flyway migration script by diffing local DB against the local reference DB.\n\nOnly available in local environments — the reference DB (Enterprise_ref / <tenant>_ref)\nis populated by running 'npm run db:sync-ref' which dumps from DEV.\n\nReturns the filename and path written to db/migration/, plus validation result."
+        "description": "Generate a Flyway migration script by diffing local DB against the local reference DB.\n\nOnly available in local environments \u2014 the reference DB (Enterprise_ref / <tenant>_ref)\nis populated by running 'npm run db:sync-ref' which dumps from DEV.\n\nReturns the filename and path written to db/migration/, plus validation result."
       }
     },
     "/api/ui/user-screens": {
@@ -23660,7 +23660,7 @@
         "tags": [
           "Workflow: Scheduled Events"
         ],
-        "summary": "POST /workflow/scheduled-events — schedule a generic event",
+        "summary": "POST /workflow/scheduled-events \u2014 schedule a generic event",
         "responses": {
           "200": {
             "description": "Successful response",
@@ -23691,14 +23691,14 @@
         },
         "x-scope": "clientServer",
         "x-permission": "workflow:scheduledevents:write",
-        "description": "POST /workflow/scheduled-events — schedule a generic event."
+        "description": "POST /workflow/scheduled-events \u2014 schedule a generic event."
       },
       "get": {
         "operationId": "workflow.scheduledevents.apiListScheduledEvents",
         "tags": [
           "Workflow: Scheduled Events"
         ],
-        "summary": "GET /workflow/scheduled-events — list filtered events",
+        "summary": "GET /workflow/scheduled-events \u2014 list filtered events",
         "responses": {
           "200": {
             "description": "Successful response",
@@ -23740,7 +23740,7 @@
         ],
         "x-scope": "clientServer",
         "x-permission": "workflow:scheduledevents:read",
-        "description": "GET /workflow/scheduled-events — list filtered events."
+        "description": "GET /workflow/scheduled-events \u2014 list filtered events."
       }
     },
     "/api/workflow/scheduled-events/workflow": {
@@ -23749,7 +23749,7 @@
         "tags": [
           "Workflow: Scheduled Events"
         ],
-        "summary": "POST /workflow/scheduled-events/workflow — schedule a workflow-on-record",
+        "summary": "POST /workflow/scheduled-events/workflow \u2014 schedule a workflow-on-record",
         "responses": {
           "200": {
             "description": "Successful response",
@@ -23780,7 +23780,7 @@
         },
         "x-scope": "clientServer",
         "x-permission": "workflow:scheduledevents:write",
-        "description": "POST /workflow/scheduled-events/workflow — schedule a workflow-on-record."
+        "description": "POST /workflow/scheduled-events/workflow \u2014 schedule a workflow-on-record."
       }
     },
     "/api/workflow/scheduled-events/cancel": {
@@ -23789,7 +23789,7 @@
         "tags": [
           "Workflow: Scheduled Events"
         ],
-        "summary": "POST /workflow/scheduled-events/cancel — cancel one event",
+        "summary": "POST /workflow/scheduled-events/cancel \u2014 cancel one event",
         "responses": {
           "200": {
             "description": "Successful response",
@@ -23822,7 +23822,7 @@
         },
         "x-scope": "clientServer",
         "x-permission": "workflow:scheduledevents:write",
-        "description": "POST /workflow/scheduled-events/cancel — cancel one event."
+        "description": "POST /workflow/scheduled-events/cancel \u2014 cancel one event."
       }
     },
     "/api/workflow/scheduled-events/dispatch": {
@@ -23831,7 +23831,7 @@
         "tags": [
           "Workflow: Scheduled Events"
         ],
-        "summary": "POST /workflow/scheduled-events/dispatch — manual tick (ops/tests)",
+        "summary": "POST /workflow/scheduled-events/dispatch \u2014 manual tick (ops/tests)",
         "responses": {
           "200": {
             "description": "Successful response",
@@ -23864,7 +23864,7 @@
         },
         "x-scope": "clientServer",
         "x-permission": "workflow:scheduledevents:write",
-        "description": "POST /workflow/scheduled-events/dispatch — manual tick (ops/tests)."
+        "description": "POST /workflow/scheduled-events/dispatch \u2014 manual tick (ops/tests)."
       }
     },
     "/api/workflow/workflowStatusPipelines": {
@@ -27913,7 +27913,7 @@
         "tags": [
           "Marketing: Web Publishing"
         ],
-        "summary": "Public form submission → create a Lead",
+        "summary": "Public form submission \u2192 create a Lead",
         "responses": {
           "200": {
             "description": "Successful response",
@@ -27966,7 +27966,7 @@
         },
         "x-scope": "clientServer",
         "x-permission": "marketing:webpublishing:write",
-        "description": "Public form submission → create a Lead.\n\nPOST /api/marketing/preview/:account/:feature/:id/submit\n\nThe public preview page posts the collected field values here. For the\n`forms` feature we resolve the form, then create a `leads` record from the\nsubmitted First Name / Last Name / Email (the default lead-capture fields\nseeded on every form). Every other lead field is optional (V20260603.1), so\na visitor only ever has to supply those three.\n\nBody shape: `{ values: { firstName, lastName, email, ... } }`. We also\naccept a bare values map for resilience."
+        "description": "Public form submission \u2192 create a Lead.\n\nPOST /api/marketing/preview/:account/:feature/:id/submit\n\nThe public preview page posts the collected field values here. For the\n`forms` feature we resolve the form, then create a `leads` record from the\nsubmitted First Name / Last Name / Email (the default lead-capture fields\nseeded on every form). Every other lead field is optional (V20260603.1), so\na visitor only ever has to supply those three.\n\nBody shape: `{ values: { firstName, lastName, email, ... } }`. We also\naccept a bare values map for resilience."
       }
     },
     "/api/marketing/social/auth/url": {
@@ -38089,7 +38089,7 @@
         ],
         "x-scope": "clientServer",
         "x-permission": "sales:workspacemanagement:read",
-        "description": "Get workspaces accessible to a user based on their role assignments\nFlow: user → userRoleSelections → roleWorkspaceSelections → workspaces"
+        "description": "Get workspaces accessible to a user based on their role assignments\nFlow: user \u2192 userRoleSelections \u2192 roleWorkspaceSelections \u2192 workspaces"
       }
     },
     "/api/sales/workspaces/user/{userId}/active": {
@@ -38144,7 +38144,7 @@
         ],
         "x-scope": "clientServer",
         "x-permission": "sales:workspacemanagement:read",
-        "description": "Get user's active workspace\nLogic: lastActiveWorkspaceId → role default workspace → null"
+        "description": "Get user's active workspace\nLogic: lastActiveWorkspaceId \u2192 role default workspace \u2192 null"
       },
       "put": {
         "operationId": "sales.workspacemanagement.updateUserActiveWorkspace",
@@ -51885,7 +51885,7 @@
           },
           "icon": {
             "type": "string",
-            "description": "Icon used to represent this model in the UI — links to the icons collection"
+            "description": "Icon used to represent this model in the UI \u2014 links to the icons collection"
           },
           "fields": {
             "type": "array",
@@ -51991,7 +51991,7 @@
           },
           "icon": {
             "type": "string",
-            "description": "Icon used to represent this model in the UI — links to the icons collection"
+            "description": "Icon used to represent this model in the UI \u2014 links to the icons collection"
           },
           "fields": {
             "type": "array",
@@ -52097,7 +52097,7 @@
           },
           "icon": {
             "type": "string",
-            "description": "Icon used to represent this model in the UI — links to the icons collection"
+            "description": "Icon used to represent this model in the UI \u2014 links to the icons collection"
           },
           "fields": {
             "type": "array",
@@ -52204,7 +52204,7 @@
           },
           "icon": {
             "type": "string",
-            "description": "Icon used to represent this model in the UI — links to the icons collection"
+            "description": "Icon used to represent this model in the UI \u2014 links to the icons collection"
           },
           "fields": {
             "type": "array",
@@ -53120,7 +53120,7 @@
               "type": "object",
               "additionalProperties": true
             },
-            "description": "Tab definitions for details-type layouts. Each tab has sections → fields."
+            "description": "Tab definitions for details-type layouts. Each tab has sections \u2192 fields."
           },
           "fields": {
             "type": "array",
@@ -53181,7 +53181,7 @@
               "type": "object",
               "additionalProperties": true
             },
-            "description": "Tab definitions for details-type layouts. Each tab has sections → fields."
+            "description": "Tab definitions for details-type layouts. Each tab has sections \u2192 fields."
           },
           "fields": {
             "type": "array",
@@ -53242,7 +53242,7 @@
               "type": "object",
               "additionalProperties": true
             },
-            "description": "Tab definitions for details-type layouts. Each tab has sections → fields."
+            "description": "Tab definitions for details-type layouts. Each tab has sections \u2192 fields."
           },
           "fields": {
             "type": "array",
@@ -53304,7 +53304,7 @@
               "type": "object",
               "additionalProperties": true
             },
-            "description": "Tab definitions for details-type layouts. Each tab has sections → fields."
+            "description": "Tab definitions for details-type layouts. Each tab has sections \u2192 fields."
           },
           "fields": {
             "type": "array",
@@ -59934,7 +59934,7 @@
           },
           "departmentName": {
             "type": "string",
-            "description": "Denormalized name of the linked department — do not edit directly"
+            "description": "Denormalized name of the linked department \u2014 do not edit directly"
           },
           "description": {
             "type": "string"
@@ -59978,7 +59978,7 @@
           },
           "departmentName": {
             "type": "string",
-            "description": "Denormalized name of the linked department — do not edit directly"
+            "description": "Denormalized name of the linked department \u2014 do not edit directly"
           },
           "description": {
             "type": "string"
@@ -60022,7 +60022,7 @@
           },
           "departmentName": {
             "type": "string",
-            "description": "Denormalized name of the linked department — do not edit directly"
+            "description": "Denormalized name of the linked department \u2014 do not edit directly"
           },
           "description": {
             "type": "string"
@@ -60067,7 +60067,7 @@
           },
           "departmentName": {
             "type": "string",
-            "description": "Denormalized name of the linked department — do not edit directly"
+            "description": "Denormalized name of the linked department \u2014 do not edit directly"
           },
           "description": {
             "type": "string"
@@ -68727,7 +68727,7 @@
           "emoji": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Avatar/emoji shown on the thumbnail card — { type: \"image\", value: \"/avatars/1.jpeg\" }"
+            "description": "Avatar/emoji shown on the thumbnail card \u2014 { type: \"image\", value: \"/avatars/1.jpeg\" }"
           },
           "url": {
             "type": "string",
@@ -68787,7 +68787,7 @@
           "emoji": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Avatar/emoji shown on the thumbnail card — { type: \"image\", value: \"/avatars/1.jpeg\" }"
+            "description": "Avatar/emoji shown on the thumbnail card \u2014 { type: \"image\", value: \"/avatars/1.jpeg\" }"
           },
           "url": {
             "type": "string",
@@ -68847,7 +68847,7 @@
           "emoji": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Avatar/emoji shown on the thumbnail card — { type: \"image\", value: \"/avatars/1.jpeg\" }"
+            "description": "Avatar/emoji shown on the thumbnail card \u2014 { type: \"image\", value: \"/avatars/1.jpeg\" }"
           },
           "url": {
             "type": "string",
@@ -68908,7 +68908,7 @@
           "emoji": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Avatar/emoji shown on the thumbnail card — { type: \"image\", value: \"/avatars/1.jpeg\" }"
+            "description": "Avatar/emoji shown on the thumbnail card \u2014 { type: \"image\", value: \"/avatars/1.jpeg\" }"
           },
           "url": {
             "type": "string",
@@ -69137,7 +69137,7 @@
               "account",
               "campaign"
             ],
-            "description": "Category of the draft — matches the source model"
+            "description": "Category of the draft \u2014 matches the source model"
           },
           "modelKey": {
             "type": "string",
@@ -69145,7 +69145,7 @@
           },
           "referenceId": {
             "type": "string",
-            "description": "ID of the source record — null if not yet saved"
+            "description": "ID of the source record \u2014 null if not yet saved"
           },
           "navigateTo": {
             "type": "string",
@@ -69179,7 +69179,7 @@
               "account",
               "campaign"
             ],
-            "description": "Category of the draft — matches the source model"
+            "description": "Category of the draft \u2014 matches the source model"
           },
           "modelKey": {
             "type": "string",
@@ -69187,7 +69187,7 @@
           },
           "referenceId": {
             "type": "string",
-            "description": "ID of the source record — null if not yet saved"
+            "description": "ID of the source record \u2014 null if not yet saved"
           },
           "navigateTo": {
             "type": "string",
@@ -69221,7 +69221,7 @@
               "account",
               "campaign"
             ],
-            "description": "Category of the draft — matches the source model"
+            "description": "Category of the draft \u2014 matches the source model"
           },
           "modelKey": {
             "type": "string",
@@ -69229,7 +69229,7 @@
           },
           "referenceId": {
             "type": "string",
-            "description": "ID of the source record — null if not yet saved"
+            "description": "ID of the source record \u2014 null if not yet saved"
           },
           "navigateTo": {
             "type": "string",
@@ -69264,7 +69264,7 @@
               "account",
               "campaign"
             ],
-            "description": "Category of the draft — matches the source model"
+            "description": "Category of the draft \u2014 matches the source model"
           },
           "modelKey": {
             "type": "string",
@@ -69272,7 +69272,7 @@
           },
           "referenceId": {
             "type": "string",
-            "description": "ID of the source record — null if not yet saved"
+            "description": "ID of the source record \u2014 null if not yet saved"
           },
           "navigateTo": {
             "type": "string",
@@ -70894,7 +70894,7 @@
           "nextRunAt": {
             "type": "string",
             "format": "date-time",
-            "description": "Always populated — the worker watches this column."
+            "description": "Always populated \u2014 the worker watches this column."
           },
           "lastRunAt": {
             "type": "string",
@@ -70947,7 +70947,7 @@
           },
           "when": {
             "type": "string",
-            "description": "Matches WorkflowDefinition.when — e.g. \"schedule\", \"follow-up\"."
+            "description": "Matches WorkflowDefinition.when \u2014 e.g. \"schedule\", \"follow-up\"."
           }
         },
         "required": [
@@ -76300,7 +76300,7 @@
           },
           "contactFilters": {
             "type": "string",
-            "description": "Legacy JSON filters — prefer embedded filters[] array"
+            "description": "Legacy JSON filters \u2014 prefer embedded filters[] array"
           },
           "filters": {
             "type": "array",
@@ -76342,7 +76342,7 @@
           },
           "contactFilters": {
             "type": "string",
-            "description": "Legacy JSON filters — prefer embedded filters[] array"
+            "description": "Legacy JSON filters \u2014 prefer embedded filters[] array"
           },
           "filters": {
             "type": "array",
@@ -76384,7 +76384,7 @@
           },
           "contactFilters": {
             "type": "string",
-            "description": "Legacy JSON filters — prefer embedded filters[] array"
+            "description": "Legacy JSON filters \u2014 prefer embedded filters[] array"
           },
           "filters": {
             "type": "array",
@@ -76427,7 +76427,7 @@
           },
           "contactFilters": {
             "type": "string",
-            "description": "Legacy JSON filters — prefer embedded filters[] array"
+            "description": "Legacy JSON filters \u2014 prefer embedded filters[] array"
           },
           "filters": {
             "type": "array",
@@ -76980,7 +76980,7 @@
           "rootStepIds": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Workflow-engine entry points. Step IDs with no previousStepIds — branching graphs may have more than one root."
+            "description": "Workflow-engine entry points. Step IDs with no previousStepIds \u2014 branching graphs may have more than one root."
           },
           "ownerModelKey": {
             "type": "string",
@@ -77053,7 +77053,7 @@
           "rootStepIds": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Workflow-engine entry points. Step IDs with no previousStepIds — branching graphs may have more than one root."
+            "description": "Workflow-engine entry points. Step IDs with no previousStepIds \u2014 branching graphs may have more than one root."
           },
           "ownerModelKey": {
             "type": "string",
@@ -77126,7 +77126,7 @@
           "rootStepIds": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Workflow-engine entry points. Step IDs with no previousStepIds — branching graphs may have more than one root."
+            "description": "Workflow-engine entry points. Step IDs with no previousStepIds \u2014 branching graphs may have more than one root."
           },
           "ownerModelKey": {
             "type": "string",
@@ -77200,7 +77200,7 @@
           "rootStepIds": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Workflow-engine entry points. Step IDs with no previousStepIds — branching graphs may have more than one root."
+            "description": "Workflow-engine entry points. Step IDs with no previousStepIds \u2014 branching graphs may have more than one root."
           },
           "ownerModelKey": {
             "type": "string",
@@ -77298,7 +77298,7 @@
           },
           "workflow": {
             "type": "string",
-            "description": "Parent workflow. Optional during the schema-bridge phase — legacy steps link to campaignSequence instead."
+            "description": "Parent workflow. Optional during the schema-bridge phase \u2014 legacy steps link to campaignSequence instead."
           },
           "nextStepIds": {
             "type": "object",
@@ -77324,7 +77324,7 @@
           },
           "socialSequence": {
             "type": "string",
-            "description": "Parent social sequence — set for steps owned by a Social Drip Campaign. Mutually exclusive with emailSequence / workflow."
+            "description": "Parent social sequence \u2014 set for steps owned by a Social Drip Campaign. Mutually exclusive with emailSequence / workflow."
           },
           "createdByDate": {
             "type": "string",
@@ -77401,7 +77401,7 @@
           },
           "workflow": {
             "type": "string",
-            "description": "Parent workflow. Optional during the schema-bridge phase — legacy steps link to campaignSequence instead."
+            "description": "Parent workflow. Optional during the schema-bridge phase \u2014 legacy steps link to campaignSequence instead."
           },
           "nextStepIds": {
             "type": "object",
@@ -77427,7 +77427,7 @@
           },
           "socialSequence": {
             "type": "string",
-            "description": "Parent social sequence — set for steps owned by a Social Drip Campaign. Mutually exclusive with emailSequence / workflow."
+            "description": "Parent social sequence \u2014 set for steps owned by a Social Drip Campaign. Mutually exclusive with emailSequence / workflow."
           },
           "createdByDate": {
             "type": "string",
@@ -77504,7 +77504,7 @@
           },
           "workflow": {
             "type": "string",
-            "description": "Parent workflow. Optional during the schema-bridge phase — legacy steps link to campaignSequence instead."
+            "description": "Parent workflow. Optional during the schema-bridge phase \u2014 legacy steps link to campaignSequence instead."
           },
           "nextStepIds": {
             "type": "object",
@@ -77530,7 +77530,7 @@
           },
           "socialSequence": {
             "type": "string",
-            "description": "Parent social sequence — set for steps owned by a Social Drip Campaign. Mutually exclusive with emailSequence / workflow."
+            "description": "Parent social sequence \u2014 set for steps owned by a Social Drip Campaign. Mutually exclusive with emailSequence / workflow."
           },
           "createdByDate": {
             "type": "string",
@@ -77608,7 +77608,7 @@
           },
           "workflow": {
             "type": "string",
-            "description": "Parent workflow. Optional during the schema-bridge phase — legacy steps link to campaignSequence instead."
+            "description": "Parent workflow. Optional during the schema-bridge phase \u2014 legacy steps link to campaignSequence instead."
           },
           "nextStepIds": {
             "type": "object",
@@ -77634,7 +77634,7 @@
           },
           "socialSequence": {
             "type": "string",
-            "description": "Parent social sequence — set for steps owned by a Social Drip Campaign. Mutually exclusive with emailSequence / workflow."
+            "description": "Parent social sequence \u2014 set for steps owned by a Social Drip Campaign. Mutually exclusive with emailSequence / workflow."
           },
           "createdByDate": {
             "type": "string",
@@ -77815,7 +77815,7 @@
           "emailLists": {
             "type": "array",
             "items": {},
-            "description": "Legacy segment id array — prefer audienceSegments. type:array (not json) so the module-framework sanitizer persists the string[] instead of dropping it."
+            "description": "Legacy segment id array \u2014 prefer audienceSegments. type:array (not json) so the module-framework sanitizer persists the string[] instead of dropping it."
           },
           "audienceSegments": {
             "type": "array",
@@ -77871,7 +77871,7 @@
           "emailLists": {
             "type": "array",
             "items": {},
-            "description": "Legacy segment id array — prefer audienceSegments. type:array (not json) so the module-framework sanitizer persists the string[] instead of dropping it."
+            "description": "Legacy segment id array \u2014 prefer audienceSegments. type:array (not json) so the module-framework sanitizer persists the string[] instead of dropping it."
           },
           "audienceSegments": {
             "type": "array",
@@ -77927,7 +77927,7 @@
           "emailLists": {
             "type": "array",
             "items": {},
-            "description": "Legacy segment id array — prefer audienceSegments. type:array (not json) so the module-framework sanitizer persists the string[] instead of dropping it."
+            "description": "Legacy segment id array \u2014 prefer audienceSegments. type:array (not json) so the module-framework sanitizer persists the string[] instead of dropping it."
           },
           "audienceSegments": {
             "type": "array",
@@ -77984,7 +77984,7 @@
           "emailLists": {
             "type": "array",
             "items": {},
-            "description": "Legacy segment id array — prefer audienceSegments. type:array (not json) so the module-framework sanitizer persists the string[] instead of dropping it."
+            "description": "Legacy segment id array \u2014 prefer audienceSegments. type:array (not json) so the module-framework sanitizer persists the string[] instead of dropping it."
           },
           "audienceSegments": {
             "type": "array",
@@ -78023,11 +78023,11 @@
           },
           "subjectModelKey": {
             "type": "string",
-            "description": "Polymorphic subject pointer — the model the enrolled record lives in (e.g. \"contacts\")."
+            "description": "Polymorphic subject pointer \u2014 the model the enrolled record lives in (e.g. \"contacts\")."
           },
           "subjectRecordId": {
             "type": "string",
-            "description": "Polymorphic subject pointer — the ID of the enrolled record (e.g. the contact id)."
+            "description": "Polymorphic subject pointer \u2014 the ID of the enrolled record (e.g. the contact id)."
           },
           "status": {
             "type": "string",
@@ -78091,11 +78091,11 @@
           },
           "subjectModelKey": {
             "type": "string",
-            "description": "Polymorphic subject pointer — the model the enrolled record lives in (e.g. \"contacts\")."
+            "description": "Polymorphic subject pointer \u2014 the model the enrolled record lives in (e.g. \"contacts\")."
           },
           "subjectRecordId": {
             "type": "string",
-            "description": "Polymorphic subject pointer — the ID of the enrolled record (e.g. the contact id)."
+            "description": "Polymorphic subject pointer \u2014 the ID of the enrolled record (e.g. the contact id)."
           },
           "status": {
             "type": "string",
@@ -78159,11 +78159,11 @@
           },
           "subjectModelKey": {
             "type": "string",
-            "description": "Polymorphic subject pointer — the model the enrolled record lives in (e.g. \"contacts\")."
+            "description": "Polymorphic subject pointer \u2014 the model the enrolled record lives in (e.g. \"contacts\")."
           },
           "subjectRecordId": {
             "type": "string",
-            "description": "Polymorphic subject pointer — the ID of the enrolled record (e.g. the contact id)."
+            "description": "Polymorphic subject pointer \u2014 the ID of the enrolled record (e.g. the contact id)."
           },
           "status": {
             "type": "string",
@@ -78228,11 +78228,11 @@
           },
           "subjectModelKey": {
             "type": "string",
-            "description": "Polymorphic subject pointer — the model the enrolled record lives in (e.g. \"contacts\")."
+            "description": "Polymorphic subject pointer \u2014 the model the enrolled record lives in (e.g. \"contacts\")."
           },
           "subjectRecordId": {
             "type": "string",
-            "description": "Polymorphic subject pointer — the ID of the enrolled record (e.g. the contact id)."
+            "description": "Polymorphic subject pointer \u2014 the ID of the enrolled record (e.g. the contact id)."
           },
           "status": {
             "type": "string",
@@ -86481,7 +86481,7 @@
           },
           "emailSource": {
             "type": "string",
-            "description": "Provenance of the contact's email address — drives the listing/filter affordance that warns reps when an address was synthesized rather than scraped."
+            "description": "Provenance of the contact's email address \u2014 drives the listing/filter affordance that warns reps when an address was synthesized rather than scraped."
           },
           "source": {
             "type": "string",
@@ -86639,7 +86639,7 @@
           },
           "emailSource": {
             "type": "string",
-            "description": "Provenance of the contact's email address — drives the listing/filter affordance that warns reps when an address was synthesized rather than scraped."
+            "description": "Provenance of the contact's email address \u2014 drives the listing/filter affordance that warns reps when an address was synthesized rather than scraped."
           },
           "source": {
             "type": "string",
@@ -86797,7 +86797,7 @@
           },
           "emailSource": {
             "type": "string",
-            "description": "Provenance of the contact's email address — drives the listing/filter affordance that warns reps when an address was synthesized rather than scraped."
+            "description": "Provenance of the contact's email address \u2014 drives the listing/filter affordance that warns reps when an address was synthesized rather than scraped."
           },
           "source": {
             "type": "string",
@@ -86956,7 +86956,7 @@
           },
           "emailSource": {
             "type": "string",
-            "description": "Provenance of the contact's email address — drives the listing/filter affordance that warns reps when an address was synthesized rather than scraped."
+            "description": "Provenance of the contact's email address \u2014 drives the listing/filter affordance that warns reps when an address was synthesized rather than scraped."
           },
           "source": {
             "type": "string",
@@ -89908,12 +89908,12 @@
           },
           "currencySymbol": {
             "type": "string",
-            "description": "Currency symbol to display (e.g. $, €)"
+            "description": "Currency symbol to display (e.g. $, \u20ac)"
           },
           "lineItems": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Array of product references: [{ productId }] — price and quantity resolved from the products catalog"
+            "description": "Array of product references: [{ productId }] \u2014 price and quantity resolved from the products catalog"
           },
           "subtotal": {
             "type": "number",
@@ -90016,12 +90016,12 @@
           },
           "currencySymbol": {
             "type": "string",
-            "description": "Currency symbol to display (e.g. $, €)"
+            "description": "Currency symbol to display (e.g. $, \u20ac)"
           },
           "lineItems": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Array of product references: [{ productId }] — price and quantity resolved from the products catalog"
+            "description": "Array of product references: [{ productId }] \u2014 price and quantity resolved from the products catalog"
           },
           "subtotal": {
             "type": "number",
@@ -90124,12 +90124,12 @@
           },
           "currencySymbol": {
             "type": "string",
-            "description": "Currency symbol to display (e.g. $, €)"
+            "description": "Currency symbol to display (e.g. $, \u20ac)"
           },
           "lineItems": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Array of product references: [{ productId }] — price and quantity resolved from the products catalog"
+            "description": "Array of product references: [{ productId }] \u2014 price and quantity resolved from the products catalog"
           },
           "subtotal": {
             "type": "number",
@@ -90233,12 +90233,12 @@
           },
           "currencySymbol": {
             "type": "string",
-            "description": "Currency symbol to display (e.g. $, €)"
+            "description": "Currency symbol to display (e.g. $, \u20ac)"
           },
           "lineItems": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Array of product references: [{ productId }] — price and quantity resolved from the products catalog"
+            "description": "Array of product references: [{ productId }] \u2014 price and quantity resolved from the products catalog"
           },
           "subtotal": {
             "type": "number",
@@ -93905,7 +93905,7 @@
           },
           "fieldType": {
             "type": "string",
-            "description": "Which input is rendered for this form field. Links to fieldTypes (V20260526.1). Stored as `fieldType` (ObjectId). The details form uses `fieldTypeId` / `fieldTypeKey` in UI state (denormalizeKey); normalizeLinkFieldsForSave maps Id → `fieldType` and does not persist companions. Choice Options visibility compares `fieldTypeKey` in form state (hydrated on load). The Form Details Fields listing reads `fieldType` and hydrates the link for display."
+            "description": "Which input is rendered for this form field. Links to fieldTypes (V20260526.1). Stored as `fieldType` (ObjectId). The details form uses `fieldTypeId` / `fieldTypeKey` in UI state (denormalizeKey); normalizeLinkFieldsForSave maps Id \u2192 `fieldType` and does not persist companions. Choice Options visibility compares `fieldTypeKey` in form state (hydrated on load). The Form Details Fields listing reads `fieldType` and hydrates the link for display."
           },
           "order": {
             "type": "number",
@@ -93964,7 +93964,7 @@
           },
           "fieldType": {
             "type": "string",
-            "description": "Which input is rendered for this form field. Links to fieldTypes (V20260526.1). Stored as `fieldType` (ObjectId). The details form uses `fieldTypeId` / `fieldTypeKey` in UI state (denormalizeKey); normalizeLinkFieldsForSave maps Id → `fieldType` and does not persist companions. Choice Options visibility compares `fieldTypeKey` in form state (hydrated on load). The Form Details Fields listing reads `fieldType` and hydrates the link for display."
+            "description": "Which input is rendered for this form field. Links to fieldTypes (V20260526.1). Stored as `fieldType` (ObjectId). The details form uses `fieldTypeId` / `fieldTypeKey` in UI state (denormalizeKey); normalizeLinkFieldsForSave maps Id \u2192 `fieldType` and does not persist companions. Choice Options visibility compares `fieldTypeKey` in form state (hydrated on load). The Form Details Fields listing reads `fieldType` and hydrates the link for display."
           },
           "order": {
             "type": "number",
@@ -94023,7 +94023,7 @@
           },
           "fieldType": {
             "type": "string",
-            "description": "Which input is rendered for this form field. Links to fieldTypes (V20260526.1). Stored as `fieldType` (ObjectId). The details form uses `fieldTypeId` / `fieldTypeKey` in UI state (denormalizeKey); normalizeLinkFieldsForSave maps Id → `fieldType` and does not persist companions. Choice Options visibility compares `fieldTypeKey` in form state (hydrated on load). The Form Details Fields listing reads `fieldType` and hydrates the link for display."
+            "description": "Which input is rendered for this form field. Links to fieldTypes (V20260526.1). Stored as `fieldType` (ObjectId). The details form uses `fieldTypeId` / `fieldTypeKey` in UI state (denormalizeKey); normalizeLinkFieldsForSave maps Id \u2192 `fieldType` and does not persist companions. Choice Options visibility compares `fieldTypeKey` in form state (hydrated on load). The Form Details Fields listing reads `fieldType` and hydrates the link for display."
           },
           "order": {
             "type": "number",
@@ -94083,7 +94083,7 @@
           },
           "fieldType": {
             "type": "string",
-            "description": "Which input is rendered for this form field. Links to fieldTypes (V20260526.1). Stored as `fieldType` (ObjectId). The details form uses `fieldTypeId` / `fieldTypeKey` in UI state (denormalizeKey); normalizeLinkFieldsForSave maps Id → `fieldType` and does not persist companions. Choice Options visibility compares `fieldTypeKey` in form state (hydrated on load). The Form Details Fields listing reads `fieldType` and hydrates the link for display."
+            "description": "Which input is rendered for this form field. Links to fieldTypes (V20260526.1). Stored as `fieldType` (ObjectId). The details form uses `fieldTypeId` / `fieldTypeKey` in UI state (denormalizeKey); normalizeLinkFieldsForSave maps Id \u2192 `fieldType` and does not persist companions. Choice Options visibility compares `fieldTypeKey` in form state (hydrated on load). The Form Details Fields listing reads `fieldType` and hydrates the link for display."
           },
           "order": {
             "type": "number",
@@ -94888,39 +94888,39 @@
     }
   ],
   "x-fcg-warnings": [
-    "[data] Unresolved type 'DataHealthResponse' → emitted permissive schema {}",
-    "[data] Unresolved type 'CrudModelDef' → emitted permissive schema {}",
-    "[data] Unresolved type 'RouteInfoResponse' → emitted permissive schema {}",
-    "[data] Unresolved type 'ReloadModelsResponse' → emitted permissive schema {}",
-    "[data] Unresolved type 'AvatarGenerateResult' → emitted permissive schema {}",
-    "[data] Unresolved type 'AvatarGenerateRequest' → emitted permissive schema {}",
-    "[data] Unresolved type 'PreviewImageGenerateResult' → emitted permissive schema {}",
-    "[data] Unresolved type 'PreviewImageGenerateRequest' → emitted permissive schema {}",
-    "[data] Unresolved type 'PaginatedQueryResult' → emitted permissive schema {}",
-    "[data] Unresolved type 'PaginatedQueryRequest' → emitted permissive schema {}",
+    "[data] Unresolved type 'DataHealthResponse' \u2192 emitted permissive schema {}",
+    "[data] Unresolved type 'CrudModelDef' \u2192 emitted permissive schema {}",
+    "[data] Unresolved type 'RouteInfoResponse' \u2192 emitted permissive schema {}",
+    "[data] Unresolved type 'ReloadModelsResponse' \u2192 emitted permissive schema {}",
+    "[data] Unresolved type 'AvatarGenerateResult' \u2192 emitted permissive schema {}",
+    "[data] Unresolved type 'AvatarGenerateRequest' \u2192 emitted permissive schema {}",
+    "[data] Unresolved type 'PreviewImageGenerateResult' \u2192 emitted permissive schema {}",
+    "[data] Unresolved type 'PreviewImageGenerateRequest' \u2192 emitted permissive schema {}",
+    "[data] Unresolved type 'PaginatedQueryResult' \u2192 emitted permissive schema {}",
+    "[data] Unresolved type 'PaginatedQueryRequest' \u2192 emitted permissive schema {}",
     "[data] Duplicate operation for GET /api/data/models (data.data.getAvailableModels vs data.models.query); keeping the latter",
     "[data] Unknown field type 'textarea' on field 'description', emitting permissive schema {}",
-    "[analytics] Unresolved type 'Report' → emitted permissive schema {}",
-    "[cache] Unresolved type 'ICacheConfig' → emitted permissive schema {}",
-    "[cache] Unresolved type 'IContentCacheResult' → emitted permissive schema {}",
-    "[cache] Unresolved type 'IDataCacheResult' → emitted permissive schema {}",
-    "[cache] Unresolved type 'DataType' → emitted permissive schema {}",
-    "[cache] Unresolved type 'IBatchCacheCheckResult' → emitted permissive schema {}",
-    "[cache] Unresolved type 'ICacheCheckResult' → emitted permissive schema {}",
-    "[cache] Unresolvable type '(url: string) => Promise<IContentCacheResult>' → emitted permissive schema {}",
-    "[cache] Unsupported generic 'Map<DataType, string[]>' → emitted permissive schema {}",
+    "[analytics] Unresolved type 'Report' \u2192 emitted permissive schema {}",
+    "[cache] Unresolved type 'ICacheConfig' \u2192 emitted permissive schema {}",
+    "[cache] Unresolved type 'IContentCacheResult' \u2192 emitted permissive schema {}",
+    "[cache] Unresolved type 'IDataCacheResult' \u2192 emitted permissive schema {}",
+    "[cache] Unresolved type 'DataType' \u2192 emitted permissive schema {}",
+    "[cache] Unresolved type 'IBatchCacheCheckResult' \u2192 emitted permissive schema {}",
+    "[cache] Unresolved type 'ICacheCheckResult' \u2192 emitted permissive schema {}",
+    "[cache] Unresolvable type '(url: string) => Promise<IContentCacheResult>' \u2192 emitted permissive schema {}",
+    "[cache] Unsupported generic 'Map<DataType, string[]>' \u2192 emitted permissive schema {}",
     "[communications] Unknown field type 'richText' on field 'content', emitting permissive schema {}",
     "[integrations] Unknown field type 'fileUpload' on field 'csvFile', emitting permissive schema {}",
-    "[notifications] Unresolved type 'NotificationChannel' → emitted permissive schema {}",
-    "[notifications] Unresolved type 'NotificationDeliveryStatus' → emitted permissive schema {}",
-    "[notifications] Unresolved type 'ScheduledNotificationStatus' → emitted permissive schema {}",
-    "[notifications] Unresolved type 'ScheduleFrequency' → emitted permissive schema {}",
-    "[system] Unresolvable type '(req: Request, res: Response) => Promise<void>' → emitted permissive schema {}",
-    "[workflow] Unresolved type 'IEventSource' → emitted permissive schema {}",
-    "[workflow] Unresolved type 'ScheduledEventStatus' → emitted permissive schema {}",
-    "[marketing] Unresolved type 'NonEmptyArray' → emitted permissive schema {}",
-    "[marketing] Unresolvable type 'NonNullable<CreateSocialPostInput['variants']>[number]' → emitted permissive schema {}",
-    "[marketing] Unresolvable type 'CampaignSocialPerformance['totals']' → emitted permissive schema {}",
+    "[notifications] Unresolved type 'NotificationChannel' \u2192 emitted permissive schema {}",
+    "[notifications] Unresolved type 'NotificationDeliveryStatus' \u2192 emitted permissive schema {}",
+    "[notifications] Unresolved type 'ScheduledNotificationStatus' \u2192 emitted permissive schema {}",
+    "[notifications] Unresolved type 'ScheduleFrequency' \u2192 emitted permissive schema {}",
+    "[system] Unresolvable type '(req: Request, res: Response) => Promise<void>' \u2192 emitted permissive schema {}",
+    "[workflow] Unresolved type 'IEventSource' \u2192 emitted permissive schema {}",
+    "[workflow] Unresolved type 'ScheduledEventStatus' \u2192 emitted permissive schema {}",
+    "[marketing] Unresolved type 'NonEmptyArray' \u2192 emitted permissive schema {}",
+    "[marketing] Unresolvable type 'NonNullable<CreateSocialPostInput['variants']>[number]' \u2192 emitted permissive schema {}",
+    "[marketing] Unresolvable type 'CampaignSocialPerformance['totals']' \u2192 emitted permissive schema {}",
     "[marketing] Unknown field type 'richText' on field 'content', emitting permissive schema {}",
     "[sales] Duplicate operation for GET /api/sales/exampleMethod (sales.opportunities.exampleMethod vs sales.contacts.exampleMethod); keeping the latter",
     "[sales] Duplicate operation for GET /api/sales/exampleMethod (sales.contacts.exampleMethod vs sales.leadmanagement.exampleMethod); keeping the latter",

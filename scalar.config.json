@@ -3,7 +3,7 @@
   "scalar": "2.0.0",
   "info": {
     "title": "Enterprise API",
-    "description": "1,236 operations across 20 modules — the complete backend platform reference."
+    "description": "1,236 operations across 20 modules \u2014 the complete backend platform reference."
   },
   "siteConfig": {
     "theme": "default"
@@ -15,7 +15,9 @@
         "title": "Enterprise API",
         "to": "/"
       },
-      { "type": "spacer" },
+      {
+        "type": "spacer"
+      },
       {
         "type": "link",
         "title": "GitHub",
@@ -79,140 +81,240 @@
             "title": "Sales",
             "filepath": "docs/api-reference/sales.json",
             "icon": "phosphor/regular/handshake",
-            "mode": "nested"
+            "mode": "nested",
+            "config": {
+              "authentication": {
+                "preferredSecurityScheme": "bearerAuth"
+              }
+            }
           },
           "/marketing": {
             "type": "openapi",
             "title": "Marketing",
             "filepath": "docs/api-reference/marketing.json",
             "icon": "phosphor/regular/megaphone",
-            "mode": "nested"
+            "mode": "nested",
+            "config": {
+              "authentication": {
+                "preferredSecurityScheme": "bearerAuth"
+              }
+            }
           },
           "/analytics": {
             "type": "openapi",
             "title": "Analytics",
             "filepath": "docs/api-reference/analytics.json",
             "icon": "phosphor/regular/chart-bar",
-            "mode": "nested"
+            "mode": "nested",
+            "config": {
+              "authentication": {
+                "preferredSecurityScheme": "bearerAuth"
+              }
+            }
           },
           "/communications": {
             "type": "openapi",
             "title": "Communications",
             "filepath": "docs/api-reference/communications.json",
             "icon": "phosphor/regular/chat-circle",
-            "mode": "nested"
+            "mode": "nested",
+            "config": {
+              "authentication": {
+                "preferredSecurityScheme": "bearerAuth"
+              }
+            }
           },
           "/customerSuccess": {
             "type": "openapi",
             "title": "Customer Success",
             "filepath": "docs/api-reference/customerSuccess.json",
             "icon": "phosphor/regular/star",
-            "mode": "nested"
+            "mode": "nested",
+            "config": {
+              "authentication": {
+                "preferredSecurityScheme": "bearerAuth"
+              }
+            }
           },
           "/workflow": {
             "type": "openapi",
             "title": "Workflow",
             "filepath": "docs/api-reference/workflow.json",
             "icon": "phosphor/regular/git-branch",
-            "mode": "nested"
+            "mode": "nested",
+            "config": {
+              "authentication": {
+                "preferredSecurityScheme": "bearerAuth"
+              }
+            }
           },
           "/finance": {
             "type": "openapi",
             "title": "Finance",
             "filepath": "docs/api-reference/finance.json",
             "icon": "phosphor/regular/currency-dollar",
-            "mode": "nested"
+            "mode": "nested",
+            "config": {
+              "authentication": {
+                "preferredSecurityScheme": "bearerAuth"
+              }
+            }
           },
           "/identity": {
             "type": "openapi",
             "title": "Identity",
             "filepath": "docs/api-reference/identity.json",
             "icon": "phosphor/regular/user",
-            "mode": "nested"
+            "mode": "nested",
+            "config": {
+              "authentication": {
+                "preferredSecurityScheme": "bearerAuth"
+              }
+            }
           },
           "/data": {
             "type": "openapi",
             "title": "Data",
             "filepath": "docs/api-reference/data.json",
             "icon": "phosphor/regular/database",
-            "mode": "nested"
+            "mode": "nested",
+            "config": {
+              "authentication": {
+                "preferredSecurityScheme": "bearerAuth"
+              }
+            }
           },
           "/integrations": {
             "type": "openapi",
             "title": "Integrations",
             "filepath": "docs/api-reference/integrations.json",
             "icon": "phosphor/regular/plugs-connected",
-            "mode": "nested"
+            "mode": "nested",
+            "config": {
+              "authentication": {
+                "preferredSecurityScheme": "bearerAuth"
+              }
+            }
           },
           "/notifications": {
             "type": "openapi",
             "title": "Notifications",
             "filepath": "docs/api-reference/notifications.json",
             "icon": "phosphor/regular/bell",
-            "mode": "nested"
+            "mode": "nested",
+            "config": {
+              "authentication": {
+                "preferredSecurityScheme": "bearerAuth"
+              }
+            }
           },
           "/ui": {
             "type": "openapi",
             "title": "UI",
             "filepath": "docs/api-reference/ui.json",
             "icon": "phosphor/regular/desktop",
-            "mode": "nested"
+            "mode": "nested",
+            "config": {
+              "authentication": {
+                "preferredSecurityScheme": "bearerAuth"
+              }
+            }
           },
           "/forms": {
             "type": "openapi",
             "title": "Forms",
             "filepath": "docs/api-reference/forms.json",
             "icon": "phosphor/regular/clipboard-text",
-            "mode": "nested"
+            "mode": "nested",
+            "config": {
+              "authentication": {
+                "preferredSecurityScheme": "bearerAuth"
+              }
+            }
           },
           "/inventory": {
             "type": "openapi",
             "title": "Inventory",
             "filepath": "docs/api-reference/inventory.json",
             "icon": "phosphor/regular/package",
-            "mode": "nested"
+            "mode": "nested",
+            "config": {
+              "authentication": {
+                "preferredSecurityScheme": "bearerAuth"
+              }
+            }
           },
           "/permissions": {
             "type": "openapi",
             "title": "Permissions",
             "filepath": "docs/api-reference/permissions.json",
             "icon": "phosphor/regular/lock",
-            "mode": "nested"
+            "mode": "nested",
+            "config": {
+              "authentication": {
+                "preferredSecurityScheme": "bearerAuth"
+              }
+            }
           },
           "/cache": {
             "type": "openapi",
             "title": "Cache",
             "filepath": "docs/api-reference/cache.json",
             "icon": "phosphor/regular/database",
-            "mode": "nested"
+            "mode": "nested",
+            "config": {
+              "authentication": {
+                "preferredSecurityScheme": "bearerAuth"
+              }
+            }
           },
           "/pipelines": {
             "type": "openapi",
             "title": "Pipelines",
             "filepath": "docs/api-reference/pipelines.json",
             "icon": "phosphor/regular/flow-arrow",
-            "mode": "nested"
+            "mode": "nested",
+            "config": {
+              "authentication": {
+                "preferredSecurityScheme": "bearerAuth"
+              }
+            }
           },
           "/settings": {
             "type": "openapi",
             "title": "Settings",
             "filepath": "docs/api-reference/settings.json",
             "icon": "phosphor/regular/sliders",
-            "mode": "nested"
+            "mode": "nested",
+            "config": {
+              "authentication": {
+                "preferredSecurityScheme": "bearerAuth"
+              }
+            }
           },
           "/support": {
             "type": "openapi",
             "title": "Support",
             "filepath": "docs/api-reference/support.json",
             "icon": "phosphor/regular/lifebuoy",
-            "mode": "nested"
+            "mode": "nested",
+            "config": {
+              "authentication": {
+                "preferredSecurityScheme": "bearerAuth"
+              }
+            }
           },
           "/system": {
             "type": "openapi",
             "title": "System",
             "filepath": "docs/api-reference/system.json",
             "icon": "phosphor/regular/gear",
-            "mode": "nested"
+            "mode": "nested",
+            "config": {
+              "authentication": {
+                "preferredSecurityScheme": "bearerAuth"
+              }
+            }
           }
         }
       }

@@ -23,7 +23,7 @@
         "tags": [
           "Workflow: Scheduled Events"
         ],
-        "summary": "POST /workflow/scheduled-events — schedule a generic event",
+        "summary": "POST /workflow/scheduled-events \u2014 schedule a generic event",
         "responses": {
           "200": {
             "description": "Successful response",
@@ -54,14 +54,14 @@
         },
         "x-scope": "clientServer",
         "x-permission": "workflow:scheduledevents:write",
-        "description": "POST /workflow/scheduled-events — schedule a generic event."
+        "description": "POST /workflow/scheduled-events \u2014 schedule a generic event."
       },
       "get": {
         "operationId": "workflow.scheduledevents.apiListScheduledEvents",
         "tags": [
           "Workflow: Scheduled Events"
         ],
-        "summary": "GET /workflow/scheduled-events — list filtered events",
+        "summary": "GET /workflow/scheduled-events \u2014 list filtered events",
         "responses": {
           "200": {
             "description": "Successful response",
@@ -103,7 +103,7 @@
         ],
         "x-scope": "clientServer",
         "x-permission": "workflow:scheduledevents:read",
-        "description": "GET /workflow/scheduled-events — list filtered events."
+        "description": "GET /workflow/scheduled-events \u2014 list filtered events."
       }
     },
     "/api/workflow/scheduled-events/workflow": {
@@ -112,7 +112,7 @@
         "tags": [
           "Workflow: Scheduled Events"
         ],
-        "summary": "POST /workflow/scheduled-events/workflow — schedule a workflow-on-record",
+        "summary": "POST /workflow/scheduled-events/workflow \u2014 schedule a workflow-on-record",
         "responses": {
           "200": {
             "description": "Successful response",
@@ -143,7 +143,7 @@
         },
         "x-scope": "clientServer",
         "x-permission": "workflow:scheduledevents:write",
-        "description": "POST /workflow/scheduled-events/workflow — schedule a workflow-on-record."
+        "description": "POST /workflow/scheduled-events/workflow \u2014 schedule a workflow-on-record."
       }
     },
     "/api/workflow/scheduled-events/cancel": {
@@ -152,7 +152,7 @@
         "tags": [
           "Workflow: Scheduled Events"
         ],
-        "summary": "POST /workflow/scheduled-events/cancel — cancel one event",
+        "summary": "POST /workflow/scheduled-events/cancel \u2014 cancel one event",
         "responses": {
           "200": {
             "description": "Successful response",
@@ -185,7 +185,7 @@
         },
         "x-scope": "clientServer",
         "x-permission": "workflow:scheduledevents:write",
-        "description": "POST /workflow/scheduled-events/cancel — cancel one event."
+        "description": "POST /workflow/scheduled-events/cancel \u2014 cancel one event."
       }
     },
     "/api/workflow/scheduled-events/dispatch": {
@@ -194,7 +194,7 @@
         "tags": [
           "Workflow: Scheduled Events"
         ],
-        "summary": "POST /workflow/scheduled-events/dispatch — manual tick (ops/tests)",
+        "summary": "POST /workflow/scheduled-events/dispatch \u2014 manual tick (ops/tests)",
         "responses": {
           "200": {
             "description": "Successful response",
@@ -227,7 +227,7 @@
         },
         "x-scope": "clientServer",
         "x-permission": "workflow:scheduledevents:write",
-        "description": "POST /workflow/scheduled-events/dispatch — manual tick (ops/tests)."
+        "description": "POST /workflow/scheduled-events/dispatch \u2014 manual tick (ops/tests)."
       }
     },
     "/api/workflow/workflowStatusPipelines": {
@@ -862,7 +862,7 @@
           "nextRunAt": {
             "type": "string",
             "format": "date-time",
-            "description": "Always populated — the worker watches this column."
+            "description": "Always populated \u2014 the worker watches this column."
           },
           "lastRunAt": {
             "type": "string",
@@ -915,7 +915,7 @@
           },
           "when": {
             "type": "string",
-            "description": "Matches WorkflowDefinition.when — e.g. \"schedule\", \"follow-up\"."
+            "description": "Matches WorkflowDefinition.when \u2014 e.g. \"schedule\", \"follow-up\"."
           }
         },
         "required": [
@@ -1463,7 +1463,13 @@
     }
   },
   "x-fcg-warnings": [
-    "Unresolved type 'IEventSource' → emitted permissive schema {}",
-    "Unresolved type 'ScheduledEventStatus' → emitted permissive schema {}"
+    "Unresolved type 'IEventSource' \u2192 emitted permissive schema {}",
+    "Unresolved type 'ScheduledEventStatus' \u2192 emitted permissive schema {}"
+  ],
+  "servers": [
+    {
+      "url": "https://api.enterprisecrm.com",
+      "description": "Production API"
+    }
   ]
 }
