@@ -5,7 +5,7 @@ This guide walks you through making your first request to the Enterprise API.
 ## Prerequisites
 
 - An API key (see [Authentication](./authentication.md))
-- `curl`, an HTTP client like [Scalar API Client](https://scalar.com), or your language's HTTP library
+- `curl`, an HTTP client like [Postman](https://www.postman.com), or your language's HTTP library
 
 ## Base URL
 
