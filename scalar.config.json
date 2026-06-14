@@ -1,0 +1,81 @@
+{
+  "$schema": "https://registry.scalar.com/@scalar/schemas/config",
+  "scalar": "2.0.0",
+  "info": {
+    "title": "Future Begins — Enterprise API",
+    "description": "Interactive API reference for the Future Begins Enterprise platform. 150 operations across 9 modules."
+  },
+  "siteConfig": {
+    "theme": "default"
+  },
+  "navigation": {
+    "header": [
+      {
+        "type": "link",
+        "title": "Future Begins",
+        "to": "/"
+      },
+      { "type": "spacer" },
+      {
+        "type": "link",
+        "title": "GitHub",
+        "icon": "phosphor/regular/github-logo",
+        "to": "https://github.com/future-begins/enterprise-api-docs",
+        "newTab": true
+      }
+    ],
+    "sidebar": [
+      {
+        "title": "GitHub",
+        "url": "https://github.com/future-begins/enterprise-api-docs",
+        "icon": "phosphor/regular/github-logo"
+      }
+    ],
+    "tabs": [
+      {
+        "title": "Guides",
+        "path": "/",
+        "icon": "phosphor/regular/book-open"
+      },
+      {
+        "title": "API Reference",
+        "path": "/api",
+        "icon": "phosphor/regular/plug"
+      }
+    ],
+    "routes": {
+      "/": {
+        "type": "group",
+        "title": "Overview",
+        "mode": "flat",
+        "children": {
+          "/": {
+            "type": "page",
+            "title": "Introduction",
+            "filepath": "docs/guides/introduction.md",
+            "icon": "phosphor/regular/house"
+          },
+          "/getting-started": {
+            "type": "page",
+            "title": "Getting Started",
+            "filepath": "docs/guides/getting-started.md",
+            "icon": "phosphor/regular/rocket"
+          },
+          "/authentication": {
+            "type": "page",
+            "title": "Authentication",
+            "filepath": "docs/guides/authentication.md",
+            "icon": "phosphor/regular/lock"
+          }
+        }
+      },
+      "/api": {
+        "type": "openapi",
+        "title": "API Reference",
+        "filepath": "docs/api-reference/openapi.all-modules.json",
+        "icon": "phosphor/regular/plug",
+        "mode": "nested"
+      }
+    }
+  }
+}
