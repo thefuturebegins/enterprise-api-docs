@@ -32,3 +32,11 @@ The Pipelines module is designed to handle:
 - **Pipeline monitoring** — execution logs, error reporting, and retry handling via System `JobHistories`
 
 For time-based triggers today, use the Workflow module's `scheduledEvents`. For data import/export pipelines, use the Integrations module.
+
+<!-- api-sections-start -->
+## API sections
+
+These sections are available in the **Pipelines API Reference**:
+
+- [Pipelines](/api/pipelines)
+<!-- api-sections-end -->

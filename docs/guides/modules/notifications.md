@@ -119,3 +119,13 @@ POST /api/notifications/notification-scheduling/schedule
   "referenceModel": "tasks"
 }
 ```
+
+<!-- api-sections-start -->
+## API sections
+
+These sections are available in the **Notifications API Reference**:
+
+- [Notification Scheduling](/api/notifications)
+- [Notifications](/api/notifications)
+- [Send Notification](/api/notifications)
+<!-- api-sections-end -->

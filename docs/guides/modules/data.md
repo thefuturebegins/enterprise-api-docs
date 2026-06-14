@@ -151,3 +151,24 @@ GET  /api/{moduleKey}/{projectionKey}/{id}
 ```
 
 Projections are defined in model configuration and can combine data from multiple collections.
+
+<!-- api-sections-start -->
+## API sections
+
+These sections are available in the **Data API Reference**:
+
+- [Avatar](/api/data)
+- [Data](/api/data)
+- [Features](/api/data)
+- [Field Types](/api/data)
+- [Icons](/api/data)
+- [Model Fields](/api/data)
+- [Model Files](/api/data)
+- [Model Layouts](/api/data)
+- [Model Notes](/api/data)
+- [Model Tasks](/api/data)
+- [Models](/api/data)
+- [Navigation Items](/api/data)
+- [Previewimage](/api/data)
+- [Query](/api/data)
+<!-- api-sections-end -->

@@ -126,3 +126,58 @@ POST /api/marketing/workflowEnrollments
   "enrolledAt": "2026-06-15T00:00:00Z"
 }
 ```
+
+<!-- api-sections-start -->
+## API sections
+
+These sections are available in the **Marketing API Reference**:
+
+- [Campaign Channel Ads](/api/marketing)
+- [Campaign Channel Ads Files](/api/marketing)
+- [Campaign Channel Ads Notes](/api/marketing)
+- [Campaign Channel Ads Tasks](/api/marketing)
+- [Campaign Channel Emails](/api/marketing)
+- [Campaign Channel Emails Files](/api/marketing)
+- [Campaign Channel Emails Notes](/api/marketing)
+- [Campaign Channel Emails Tasks](/api/marketing)
+- [Campaign Channel Ppc](/api/marketing)
+- [Campaign Channel Ppc Files](/api/marketing)
+- [Campaign Channel Ppc Notes](/api/marketing)
+- [Campaign Channel Ppc Tasks](/api/marketing)
+- [Campaign Channel Sms](/api/marketing)
+- [Campaign Channel Sms Files](/api/marketing)
+- [Campaign Channel Sms Notes](/api/marketing)
+- [Campaign Channel Sms Tasks](/api/marketing)
+- [Campaign Channel Social](/api/marketing)
+- [Campaign Channel Social Files](/api/marketing)
+- [Campaign Channel Social Notes](/api/marketing)
+- [Campaign Channel Social Tasks](/api/marketing)
+- [Campaign Channel Web Content](/api/marketing)
+- [Campaign Channel Web Content Files](/api/marketing)
+- [Campaign Channel Web Content Notes](/api/marketing)
+- [Campaign Channel Web Content Tasks](/api/marketing)
+- [Campaign Sequence Snapshot Contacts](/api/marketing)
+- [Campaign Sequence Snapshots](/api/marketing)
+- [Campaign Sequences](/api/marketing)
+- [Campaign Stakeholder Users](/api/marketing)
+- [Email Drip Campaign Notes](/api/marketing)
+- [Email Drip Campaigns](/api/marketing)
+- [Email Sequence Workflows](/api/marketing)
+- [Segment Files](/api/marketing)
+- [Segment Notes](/api/marketing)
+- [Segments](/api/marketing)
+- [Send Marketing Email](/api/marketing)
+- [Social Analytics](/api/marketing)
+- [Social Connection](/api/marketing)
+- [Social Inbox](/api/marketing)
+- [Social Publish Job](/api/marketing)
+- [Social Publishing](/api/marketing)
+- [Web Pages](/api/marketing)
+- [Web Publishing](/api/marketing)
+- [Website Statuses](/api/marketing)
+- [Website Types](/api/marketing)
+- [Websites](/api/marketing)
+- [Workflow Enrollments](/api/marketing)
+- [Workflow Steps](/api/marketing)
+- [Workflows](/api/marketing)
+<!-- api-sections-end -->

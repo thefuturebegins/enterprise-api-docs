@@ -97,3 +97,11 @@ GET /api/cache/cache?key=industries
 # 200 → cached (returns value)
 # 404 → not in cache
 ```
+
+<!-- api-sections-start -->
+## API sections
+
+These sections are available in the **Cache API Reference**:
+
+- [Cache](/api/cache)
+<!-- api-sections-end -->

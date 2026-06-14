@@ -151,3 +151,35 @@ POST /api/communications/email-scheduling/schedule
 ```http
 GET /api/communications/email-analytics?filter[campaignId]=<campaign_id>
 ```
+
+<!-- api-sections-start -->
+## API sections
+
+These sections are available in the **Communications API Reference**:
+
+- [Bulk Email](/api/communications)
+- [Campaign Email](/api/communications)
+- [Campaign Emails](/api/communications)
+- [Campaign Files](/api/communications)
+- [Campaign Notes](/api/communications)
+- [Campaign Tasks](/api/communications)
+- [Campaigns](/api/communications)
+- [Comments](/api/communications)
+- [Conversation](/api/communications)
+- [Conversations](/api/communications)
+- [Email Analytics](/api/communications)
+- [Email Files](/api/communications)
+- [Email Lists](/api/communications)
+- [Email Scheduling](/api/communications)
+- [Email Snapshot](/api/communications)
+- [Email Snapshot Contacts](/api/communications)
+- [Email Snapshots](/api/communications)
+- [Email Templates](/api/communications)
+- [Emails](/api/communications)
+- [File Upload](/api/communications)
+- [Gmail Connection](/api/communications)
+- [Gmail Send](/api/communications)
+- [Gmail Sync](/api/communications)
+- [Referrals](/api/communications)
+- [Send Email](/api/communications)
+<!-- api-sections-end -->

@@ -41,3 +41,11 @@ POST /api/forms/forms
   "submitAction": "create"
 }
 ```
+
+<!-- api-sections-start -->
+## API sections
+
+This module's service layer is in active development. Use the [Data module](/api/data) model registry to explore its current models:
+
+- [Browse Forms models via the Query API](/api/data)
+<!-- api-sections-end -->

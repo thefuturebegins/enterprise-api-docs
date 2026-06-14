@@ -142,3 +142,21 @@ POST /api/identity/account-provisioning/provision
   "plan": "enterprise"
 }
 ```
+
+<!-- api-sections-start -->
+## API sections
+
+These sections are available in the **Identity API Reference**:
+
+- [Authentication](/api/identity)
+- [Contractors](/api/identity)
+- [Department Users](/api/identity)
+- [Departments](/api/identity)
+- [Employees](/api/identity)
+- [Oauthhandlers](/api/identity)
+- [Roles](/api/identity)
+- [Team Users](/api/identity)
+- [Teams](/api/identity)
+- [User Management](/api/identity)
+- [Users](/api/identity)
+<!-- api-sections-end -->

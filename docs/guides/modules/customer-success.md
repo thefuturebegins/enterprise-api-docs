@@ -35,3 +35,11 @@ GET /api/data/models?filter[moduleKey]=customerSuccess
 ```http
 GET /api/customerSuccess/{model}?filter[status]=active&sort=-createdAt&limit=50
 ```
+
+<!-- api-sections-start -->
+## API sections
+
+This module's service layer is in active development. Use the [Data module](/api/data) model registry to explore its current models:
+
+- [Browse Customer Success models via the Query API](/api/data)
+<!-- api-sections-end -->

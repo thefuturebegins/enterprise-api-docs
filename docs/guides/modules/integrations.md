@@ -165,3 +165,26 @@ POST /api/integrations/syncVendorModelFieldMappings
 POST /api/integrations/data-sync/trigger
 { "vendorId": "<vendor_id>", "direction": "pull", "modelKey": "contacts" }
 ```
+
+<!-- api-sections-start -->
+## API sections
+
+These sections are available in the **Integrations API Reference**:
+
+- [Conflict Resolution](/api/integrations)
+- [Data Sync](/api/integrations)
+- [Export Field Mappings](/api/integrations)
+- [Export Profiles](/api/integrations)
+- [Export Schedules](/api/integrations)
+- [Exports](/api/integrations)
+- [Field Mapping](/api/integrations)
+- [Import Field Mappings](/api/integrations)
+- [Import Management](/api/integrations)
+- [Import Profiles](/api/integrations)
+- [Import Schedules](/api/integrations)
+- [Imports](/api/integrations)
+- [Sync Engine](/api/integrations)
+- [Sync Vendor Model Field Mappings](/api/integrations)
+- [Sync Vendors](/api/integrations)
+- [Synchronizations](/api/integrations)
+<!-- api-sections-end -->

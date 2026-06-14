@@ -108,3 +108,15 @@ POST /api/analytics/reportShares
 ```http
 GET /api/analytics/reports?filter[categoryId]=<category_id>&sort=name
 ```
+
+<!-- api-sections-start -->
+## API sections
+
+These sections are available in the **Analytics API Reference**:
+
+- [Components Allowed In Reports Selection](/api/analytics)
+- [Report Category](/api/analytics)
+- [Report Share](/api/analytics)
+- [Reporting](/api/analytics)
+- [Reports](/api/analytics)
+<!-- api-sections-end -->

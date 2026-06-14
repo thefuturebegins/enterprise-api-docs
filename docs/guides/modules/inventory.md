@@ -43,3 +43,11 @@ POST /api/inventory/equipment
   "status": "in-use"
 }
 ```
+
+<!-- api-sections-start -->
+## API sections
+
+This module's service layer is in active development. Use the [Data module](/api/data) model registry to explore its current models:
+
+- [Browse Inventory models via the Query API](/api/data)
+<!-- api-sections-end -->

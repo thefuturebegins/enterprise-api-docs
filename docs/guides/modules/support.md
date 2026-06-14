@@ -37,3 +37,11 @@ POST /api/ui/supportTickets
 ```
 
 Ticket resolution and notes are also managed via the UI module at `/api/ui/supportTicketResolutions` and `/api/ui/supportTicketNotes`.
+
+<!-- api-sections-start -->
+## API sections
+
+This module's service layer is in active development. Use the [Data module](/api/data) model registry to explore its current models:
+
+- [Browse Support models via the Query API](/api/data)
+<!-- api-sections-end -->

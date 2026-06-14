@@ -146,3 +146,11 @@ Use these logs for cost tracking, debugging, and compliance.
 | `GOOGLE_AI_API_KEY` | Default Gemini key |
 | `STABLE_DIFFUSION_API_KEY` | Stable Diffusion image generation key |
 | `SERPER_API_KEY` | Serper image search key |
+
+<!-- api-sections-start -->
+## API sections
+
+This module's service layer is in active development. Use the [Data module](/api/data) model registry to explore its current models:
+
+- [Browse AI models via the Query API](/api/data)
+<!-- api-sections-end -->

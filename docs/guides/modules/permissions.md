@@ -93,3 +93,11 @@ if (!allowed) {
 
 // Proceed with the finance action
 ```
+
+<!-- api-sections-start -->
+## API sections
+
+These sections are available in the **Permissions API Reference**:
+
+- [Authorization](/api/permissions)
+<!-- api-sections-end -->

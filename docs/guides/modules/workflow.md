@@ -118,3 +118,13 @@ POST /api/workflow/scheduledEvents
   "scheduledAt": "2026-06-21T10:00:00Z"
 }
 ```
+
+<!-- api-sections-start -->
+## API sections
+
+These sections are available in the **Workflow API Reference**:
+
+- [Scheduled Events](/api/workflow)
+- [Workflow Status Pipeline Record States](/api/workflow)
+- [Workflow Status Pipelines](/api/workflow)
+<!-- api-sections-end -->

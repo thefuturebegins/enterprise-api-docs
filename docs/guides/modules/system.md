@@ -158,3 +158,16 @@ GET /api/system/record-history
 GET /api/system/settings?filter[key]=stripe.secret_key
 # value is masked unless you have system:admin permission
 ```
+
+<!-- api-sections-start -->
+## API sections
+
+These sections are available in the **System API Reference**:
+
+- [Job Histories](/api/system)
+- [Job Types](/api/system)
+- [Jobs](/api/system)
+- [Multi Tenant Database](/api/system)
+- [Settings](/api/system)
+- [Tenant Resolution](/api/system)
+<!-- api-sections-end -->

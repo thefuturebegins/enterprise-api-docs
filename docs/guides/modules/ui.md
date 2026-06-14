@@ -167,3 +167,34 @@ PUT /api/ui/workspaces/<workspace_id>
 POST /api/ui/record-recent-views
 { "modelKey": "opportunities", "recordId": "<opp_id>" }
 ```
+
+<!-- api-sections-start -->
+## API sections
+
+These sections are available in the **Ui API Reference**:
+
+- [Components](/api/ui)
+- [Dashboards](/api/ui)
+- [Drafts](/api/ui)
+- [Enterprise Product Announcement Files](/api/ui)
+- [Enterprise Product Announcement Notes](/api/ui)
+- [Enterprise Product Announcement Tasks](/api/ui)
+- [Enterprise Product Announcements](/api/ui)
+- [Record Recent Views](/api/ui)
+- [Registered Components](/api/ui)
+- [Screen Actions](/api/ui)
+- [Screen Components](/api/ui)
+- [Screen Files](/api/ui)
+- [Screen Notes](/api/ui)
+- [Screen Statuses](/api/ui)
+- [Screen Tasks](/api/ui)
+- [Screens](/api/ui)
+- [Settings](/api/ui)
+- [Support Ticket Files](/api/ui)
+- [Support Ticket Notes](/api/ui)
+- [Support Ticket Resolutions](/api/ui)
+- [Support Ticket Tasks](/api/ui)
+- [Support Tickets](/api/ui)
+- [User Screens](/api/ui)
+- [Workspaces](/api/ui)
+<!-- api-sections-end -->

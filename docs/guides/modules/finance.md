@@ -127,3 +127,26 @@ POST /api/finance/customer-payments/process
 ```http
 GET /api/finance/financeInvoices?filter[status]=unpaid&sort=dueDate
 ```
+
+<!-- api-sections-start -->
+## API sections
+
+These sections are available in the **Finance API Reference**:
+
+- [Contractor Payment Processing](/api/finance)
+- [Customer Payment Processing](/api/finance)
+- [Customer Payments](/api/finance)
+- [Finance Accounts](/api/finance)
+- [Finance Bills](/api/finance)
+- [Finance Credit Memos](/api/finance)
+- [Finance Customers](/api/finance)
+- [Finance Employees](/api/finance)
+- [Finance Estimates](/api/finance)
+- [Finance Invoices](/api/finance)
+- [Finance Journal Entries](/api/finance)
+- [Finance Payments](/api/finance)
+- [Finance Product Services](/api/finance)
+- [Finance Sales Receipts](/api/finance)
+- [Finance Vendors](/api/finance)
+- [Stripe Integration](/api/finance)
+<!-- api-sections-end -->
