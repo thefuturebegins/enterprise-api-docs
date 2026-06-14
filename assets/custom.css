@@ -1,0 +1,27 @@
+/* Add 1rem gap between the site title and the subtitle nav link */
+.t-header .header-right {
+  margin-left: 1rem;
+}
+
+/* 0.5rem left padding on the "Enterprise API" title — click target covers the padding */
+.t-header .header-left a[href="/"] {
+  padding-left: 0.5rem;
+  display: block;
+}
+
+/* Uniform link color on content pages — visited and unvisited identical */
+.page-content a:link,
+.page-content a:visited {
+  color: #0f66d3;
+}
+
+/* TOC links — gray, uniform across states */
+aside.toc a.anchor,
+aside.toc a.anchor:visited {
+  color: #6b7280 !important;
+}
+
+/* TOC active indicator line — blue */
+aside.toc .outline-marker {
+  background-color: #0f66d3;
+}

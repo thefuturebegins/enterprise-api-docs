@@ -1,0 +1,8 @@
+{
+  "name": "enterprise-api-docs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "preview": "npx @scalar/cli project preview & node patch-preview.mjs"
+  }
+}

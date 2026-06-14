@@ -4,30 +4,28 @@ Welcome to the **Enterprise API** — the backend platform powering the full pro
 
 This reference covers **1,236 API operations** across **20 modules**, all described with [OpenAPI 3.1](https://spec.openapis.org/oas/v3.1.0) and rendered interactively so you can explore and test every endpoint directly from the browser.
 
-## API Modules
+## API modules
 
-| Module | Operations | Description |
-|---|---|---|
-| **sales** | 282 | Contacts, accounts, opportunities, leads, organizations, quotes, orders |
-| **marketing** | 241 | Campaigns, segments, workflows, social publishing, web content |
-| **customerSuccess** | 20 | Renewals and customer success management |
-| **analytics** | 25 | Reporting and data aggregation |
-| **communications** | 113 | Email, conversations, Gmail sync, referrals |
-| **workflow** | 20 | Scheduled events and workflow status pipelines |
-| **finance** | 80 | Payments, invoices, estimates, Stripe integration |
-| **identity** | 68 | Authentication, users, roles, teams, departments |
-| **data** | 57 | Models, fields, layouts, navigation |
-| **integrations** | 89 | Sync, imports, exports, field mapping |
-| **notifications** | 26 | Notification scheduling and sending |
-| **ui** | 133 | Screens, components, dashboards, workspaces |
-| **forms** | 10 | Form and field management |
-| **inventory** | 10 | Equipment and inventory locations |
-| **permissions** | 3 | Authorization and access control |
-| **cache** | 13 | Cache management and invalidation |
-| **pipelines** | 1 | Pipeline orchestration |
-| **settings** | 15 | Notification, security, and scope settings |
-| **support** | 5 | Support documentation |
-| **system** | 25 | Jobs, settings, tenant resolution |
+- [Sales](/api/sales) — Contacts, accounts, opportunities, leads, organizations, quotes, and orders
+- [Marketing](/api/marketing) — Campaigns, segments, workflows, social publishing, and web content
+- [Customer success](/api/customerSuccess) — Renewals and customer success management
+- [Analytics](/api/analytics) — Reporting and data aggregation
+- [Communications](/api/communications) — Email, conversations, Gmail sync, and referrals
+- [Workflow](/api/workflow) — Scheduled events and workflow status pipelines
+- [Finance](/api/finance) — Payments, invoices, estimates, and Stripe integration
+- [Identity](/api/identity) — Authentication, users, roles, teams, and departments
+- [Data](/api/data) — Models, fields, layouts, and navigation
+- [Integrations](/api/integrations) — Sync, imports, exports, and field mapping
+- [Notifications](/api/notifications) — Notification scheduling and sending
+- [UI](/api/ui) — Screens, components, dashboards, and workspaces
+- [Forms](/api/forms) — Form and field management
+- [Inventory](/api/inventory) — Equipment and inventory locations
+- [Permissions](/api/permissions) — Authorization and access control
+- [Cache](/api/cache) — Cache management and invalidation
+- [Pipelines](/api/pipelines) — Pipeline orchestration
+- [Settings](/api/settings) — Notification, security, and scope settings
+- [Support](/api/support) — Support documentation
+- [System](/api/system) — Jobs, settings, and tenant resolution
 
 ## Base URL
 

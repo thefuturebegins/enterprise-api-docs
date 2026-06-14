@@ -12,6 +12,28 @@
         {
           "rel": "stylesheet",
           "href": "/assets/custom.css"
+        },
+        {
+          "rel": "icon",
+          "type": "image/svg+xml",
+          "href": "/favicon.svg"
+        },
+        {
+          "rel": "icon",
+          "type": "image/png",
+          "sizes": "32x32",
+          "href": "/favicon-32x32.png"
+        },
+        {
+          "rel": "icon",
+          "type": "image/png",
+          "sizes": "16x16",
+          "href": "/favicon-16x16.png"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "sizes": "180x180",
+          "href": "/favicon-180x180.png"
         }
       ],
       "scripts": [
@@ -25,7 +47,7 @@
     "header": [
       {
         "type": "link",
-        "title": "Enterprise API",
+        "title": "\ud83d\udcd6 Complete API reference for the Enterprise CRM platform",
         "to": "/"
       },
       {
@@ -81,6 +103,18 @@
             "title": "Authentication",
             "filepath": "docs/guides/authentication.md",
             "icon": "phosphor/regular/lock"
+          },
+          "/sse-events": {
+            "type": "page",
+            "title": "Real-time Updates (SSE)",
+            "filepath": "docs/guides/sse-events.md",
+            "icon": "phosphor/regular/broadcast"
+          },
+          "/webhooks": {
+            "type": "page",
+            "title": "Webhooks",
+            "filepath": "docs/guides/webhooks.md",
+            "icon": "phosphor/regular/webhooks-logo"
           },
           "/modules/ai": {
             "type": "page",

@@ -3,7 +3,7 @@
   "info": {
     "title": "permissions API",
     "version": "1.0.6",
-    "description": "Authorisation layer \u2014 check and enforce permission rules based on user roles and explicit grants.\n\n## Sections\n\n- Authorization"
+    "description": "Authorisation layer \u2014 check and enforce permission rules based on user roles and explicit grants.\n\n## Sections\n\n- [Authorization](#authorization)"
   },
   "tags": [
     {
