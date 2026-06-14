@@ -10,12 +10,6 @@
       "name": "Identity: Authentication"
     },
     {
-      "name": "Identity: Oauthhandlers"
-    },
-    {
-      "name": "Identity: User Management"
-    },
-    {
       "name": "Identity: Contractors"
     },
     {
@@ -28,6 +22,9 @@
       "name": "Identity: Employees"
     },
     {
+      "name": "Identity: Oauthhandlers"
+    },
+    {
       "name": "Identity: Roles"
     },
     {
@@ -35,6 +32,9 @@
     },
     {
       "name": "Identity: Teams"
+    },
+    {
+      "name": "Identity: User Management"
     },
     {
       "name": "Identity: Users"

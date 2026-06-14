@@ -13,15 +13,6 @@
       "name": "Integrations: Data Sync"
     },
     {
-      "name": "Integrations: Field Mapping"
-    },
-    {
-      "name": "Integrations: Import Management"
-    },
-    {
-      "name": "Integrations: Sync Engine"
-    },
-    {
       "name": "Integrations: Export Field Mappings"
     },
     {
@@ -34,7 +25,13 @@
       "name": "Integrations: Exports"
     },
     {
+      "name": "Integrations: Field Mapping"
+    },
+    {
       "name": "Integrations: Import Field Mappings"
+    },
+    {
+      "name": "Integrations: Import Management"
     },
     {
       "name": "Integrations: Import Profiles"
@@ -44,6 +41,9 @@
     },
     {
       "name": "Integrations: Imports"
+    },
+    {
+      "name": "Integrations: Sync Engine"
     },
     {
       "name": "Integrations: Sync Vendor Model Field Mappings"

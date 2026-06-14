@@ -7,34 +7,10 @@
   },
   "tags": [
     {
-      "name": "Sales: Account Management"
-    },
-    {
-      "name": "Sales: Campaigns"
-    },
-    {
-      "name": "Sales: Contacts"
-    },
-    {
-      "name": "Sales: Google Business Profiles"
-    },
-    {
-      "name": "Sales: Lead Management"
-    },
-    {
-      "name": "Sales: Lead Nurturing"
-    },
-    {
-      "name": "Sales: Linkedin Profiles"
-    },
-    {
-      "name": "Sales: Opportunities"
-    },
-    {
-      "name": "Sales: Workspace Management"
-    },
-    {
       "name": "Sales: Account Files"
+    },
+    {
+      "name": "Sales: Account Management"
     },
     {
       "name": "Sales: Account Notes"
@@ -61,6 +37,9 @@
       "name": "Sales: Accounts"
     },
     {
+      "name": "Sales: Campaigns"
+    },
+    {
       "name": "Sales: Contact Files"
     },
     {
@@ -73,7 +52,13 @@
       "name": "Sales: Contact Tasks"
     },
     {
+      "name": "Sales: Contacts"
+    },
+    {
       "name": "Sales: Files"
+    },
+    {
+      "name": "Sales: Google Business Profiles"
     },
     {
       "name": "Sales: Industries"
@@ -103,10 +88,22 @@
       "name": "Sales: Insights"
     },
     {
+      "name": "Sales: Lead Management"
+    },
+    {
+      "name": "Sales: Lead Nurturing"
+    },
+    {
       "name": "Sales: Leads"
     },
     {
+      "name": "Sales: Linkedin Profiles"
+    },
+    {
       "name": "Sales: Notes"
+    },
+    {
+      "name": "Sales: Opportunities"
     },
     {
       "name": "Sales: Opportunity Files"
@@ -176,6 +173,9 @@
     },
     {
       "name": "Sales: Tasks"
+    },
+    {
+      "name": "Sales: Workspace Management"
     }
   ],
   "paths": {

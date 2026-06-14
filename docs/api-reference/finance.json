@@ -13,9 +13,6 @@
       "name": "Finance: Customer Payment Processing"
     },
     {
-      "name": "Finance: Stripe Integration"
-    },
-    {
       "name": "Finance: Customer Payments"
     },
     {
@@ -53,6 +50,9 @@
     },
     {
       "name": "Finance: Finance Vendors"
+    },
+    {
+      "name": "Finance: Stripe Integration"
     }
   ],
   "paths": {

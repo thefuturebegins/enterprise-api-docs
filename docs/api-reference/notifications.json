@@ -10,10 +10,10 @@
       "name": "Notifications: Notification Scheduling"
     },
     {
-      "name": "Notifications: Send Notification"
+      "name": "Notifications: Notifications"
     },
     {
-      "name": "Notifications: Notifications"
+      "name": "Notifications: Send Notification"
     }
   ],
   "paths": {

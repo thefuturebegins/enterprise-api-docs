@@ -7,9 +7,6 @@
   },
   "tags": [
     {
-      "name": "Analytics: Reporting"
-    },
-    {
       "name": "Analytics: Components Allowed In Reports Selection"
     },
     {
@@ -17,6 +14,9 @@
     },
     {
       "name": "Analytics: Report Share"
+    },
+    {
+      "name": "Analytics: Reporting"
     },
     {
       "name": "Analytics: Reports"

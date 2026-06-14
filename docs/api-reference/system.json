@@ -7,15 +7,6 @@
   },
   "tags": [
     {
-      "name": "System: Multi Tenant Database"
-    },
-    {
-      "name": "System: Settings"
-    },
-    {
-      "name": "System: Tenant Resolution"
-    },
-    {
       "name": "System: Job Histories"
     },
     {
@@ -23,6 +14,15 @@
     },
     {
       "name": "System: Jobs"
+    },
+    {
+      "name": "System: Multi Tenant Database"
+    },
+    {
+      "name": "System: Settings"
+    },
+    {
+      "name": "System: Tenant Resolution"
     }
   ],
   "paths": {

@@ -7,27 +7,6 @@
   },
   "tags": [
     {
-      "name": "Marketing: Send Marketing Email"
-    },
-    {
-      "name": "Marketing: Social Analytics"
-    },
-    {
-      "name": "Marketing: Social Connection"
-    },
-    {
-      "name": "Marketing: Social Inbox"
-    },
-    {
-      "name": "Marketing: Social Publish Job"
-    },
-    {
-      "name": "Marketing: Social Publishing"
-    },
-    {
-      "name": "Marketing: Web Publishing"
-    },
-    {
       "name": "Marketing: Campaign Channel Ads"
     },
     {
@@ -130,7 +109,28 @@
       "name": "Marketing: Segments"
     },
     {
+      "name": "Marketing: Send Marketing Email"
+    },
+    {
+      "name": "Marketing: Social Analytics"
+    },
+    {
+      "name": "Marketing: Social Connection"
+    },
+    {
+      "name": "Marketing: Social Inbox"
+    },
+    {
+      "name": "Marketing: Social Publish Job"
+    },
+    {
+      "name": "Marketing: Social Publishing"
+    },
+    {
       "name": "Marketing: Web Pages"
+    },
+    {
+      "name": "Marketing: Web Publishing"
     },
     {
       "name": "Marketing: Website Statuses"

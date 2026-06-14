@@ -13,33 +13,6 @@
       "name": "Communications: Campaign Email"
     },
     {
-      "name": "Communications: Conversation"
-    },
-    {
-      "name": "Communications: Email Analytics"
-    },
-    {
-      "name": "Communications: Email Scheduling"
-    },
-    {
-      "name": "Communications: Email Snapshot"
-    },
-    {
-      "name": "Communications: File Upload"
-    },
-    {
-      "name": "Communications: Gmail Connection"
-    },
-    {
-      "name": "Communications: Gmail Send"
-    },
-    {
-      "name": "Communications: Gmail Sync"
-    },
-    {
-      "name": "Communications: Send Email"
-    },
-    {
       "name": "Communications: Campaign Emails"
     },
     {
@@ -58,13 +31,25 @@
       "name": "Communications: Comments"
     },
     {
+      "name": "Communications: Conversation"
+    },
+    {
       "name": "Communications: Conversations"
+    },
+    {
+      "name": "Communications: Email Analytics"
     },
     {
       "name": "Communications: Email Files"
     },
     {
       "name": "Communications: Email Lists"
+    },
+    {
+      "name": "Communications: Email Scheduling"
+    },
+    {
+      "name": "Communications: Email Snapshot"
     },
     {
       "name": "Communications: Email Snapshot Contacts"
@@ -79,7 +64,22 @@
       "name": "Communications: Emails"
     },
     {
+      "name": "Communications: File Upload"
+    },
+    {
+      "name": "Communications: Gmail Connection"
+    },
+    {
+      "name": "Communications: Gmail Send"
+    },
+    {
+      "name": "Communications: Gmail Sync"
+    },
+    {
       "name": "Communications: Referrals"
+    },
+    {
+      "name": "Communications: Send Email"
     }
   ],
   "paths": {

@@ -13,15 +13,6 @@
       "name": "Ui: Dashboards"
     },
     {
-      "name": "Ui: Screens"
-    },
-    {
-      "name": "Ui: User Screens"
-    },
-    {
-      "name": "Ui: Workspaces"
-    },
-    {
       "name": "Ui: Drafts"
     },
     {
@@ -61,6 +52,9 @@
       "name": "Ui: Screen Tasks"
     },
     {
+      "name": "Ui: Screens"
+    },
+    {
       "name": "Ui: Settings"
     },
     {
@@ -77,6 +71,12 @@
     },
     {
       "name": "Ui: Support Tickets"
+    },
+    {
+      "name": "Ui: User Screens"
+    },
+    {
+      "name": "Ui: Workspaces"
     }
   ],
   "paths": {
