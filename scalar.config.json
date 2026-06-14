@@ -39,6 +39,9 @@
       "scripts": [
         {
           "path": "assets/inject-styles.js"
+        },
+        {
+          "path": "assets/spa-nav.js"
         }
       ]
     }
