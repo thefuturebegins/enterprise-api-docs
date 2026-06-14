@@ -43,6 +43,8 @@ The full machine-readable OpenAPI document is available at:
 
 - [openapi.all-modules.json](https://github.com/thefuturebegins/enterprise-api-docs/blob/main/docs/api-reference/openapi.all-modules.json)
 
-## Open Source
+## Legal
 
-This documentation is published under the [MIT License](https://github.com/thefuturebegins/enterprise-api-docs/blob/main/LICENSE) and is open to contributions.
+This documentation is proprietary and confidential. Copyright © 2026 Enterprise Marketplace Ltd. All rights reserved.
+
+Use of this documentation and the APIs described herein is governed by the [Enterprise Master Services Agreement](https://enterprisecrm.com/legal/msa). Unauthorized reproduction, distribution, or disclosure is strictly prohibited.

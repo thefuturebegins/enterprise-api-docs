@@ -1,8 +1,7 @@
 # Enterprise API Docs
 
-> Open-source API reference for the Enterprise platform, built with [Scalar Docs](https://scalar.com).
+> Proprietary API reference for the Enterprise platform, built with [Scalar Docs](https://scalar.com).
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 [![OpenAPI 3.1](https://img.shields.io/badge/OpenAPI-3.1-green.svg)](./docs/api-reference/openapi.all-modules.json)
 
 ## Overview
@@ -26,7 +25,7 @@ enterprise-api-docs/
 │       ├── getting-started.md
 │       └── authentication.md
 ├── scalar.config.json                 # Scalar Docs 2.0 configuration
-├── LICENSE                            # MIT
+├── LICENSE                            # Proprietary
 └── README.md
 ```
 
@@ -155,13 +154,8 @@ docker push ghcr.io/thefuturebegins/enterprise-api-docs:latest
 kubectl apply -f k8s/
 ```
 
-## Contributing
+## Legal
 
-1. Fork this repository
-2. Make your changes in a new branch
-3. Run `npx @scalar/cli project check-config` to validate
-4. Open a pull request
+Copyright © 2026 Enterprise Marketplace Ltd. All rights reserved.
 
-## License
-
-[MIT](./LICENSE)
+This documentation is proprietary and confidential. Use is governed by the [Enterprise Master Services Agreement](https://enterprisecrm.com/legal/msa). Unauthorized reproduction, distribution, or disclosure is strictly prohibited.

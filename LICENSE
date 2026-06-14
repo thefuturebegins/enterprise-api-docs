@@ -1,21 +1,11 @@
-MIT License
+Copyright © 2026 Enterprise Marketplace Ltd. All rights reserved.
 
-Copyright (c) 2026 Future Begins
+PROPRIETARY AND CONFIDENTIAL
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This documentation, including all API specifications, descriptions, examples, and associated materials contained herein, is the exclusive proprietary information of Enterprise Marketplace Ltd. ("Company").
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Access to and use of this documentation is strictly governed by the Enterprise Master Services Agreement ("MSA") between the Company and the authorized party. No part of this documentation may be reproduced, distributed, transmitted, disclosed, or used in any form or by any means without the prior written consent of the Company, except as expressly permitted under the MSA.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Any unauthorized access, reproduction, distribution, or disclosure of this documentation or the APIs described herein is strictly prohibited and may result in civil and criminal penalties.
+
+Enterprise Master Services Agreement: https://enterprisecrm.com/legal/msa
